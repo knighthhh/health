@@ -641,20 +641,12 @@
 				"refer": [],
 				"priority": 0
 			},
-<<<<<<< HEAD
-			"healthfile/medDiary.html": {
-				"resources": [
-					"js/mui.min.js",
-					"fonts/mui.ttf",
-					"css/mui.min.css"
-=======
 			"login/reg.html": {
 				"resources": [
 					"js/mui.min.js",
 					"css/mui.min.css",
 					"fonts/mui.ttf",
 					"js/common.js"
->>>>>>> 58592cc3edfe37dad5e61ac77b771df97f10d21a
 				],
 				"refer": [],
 				"priority": 0

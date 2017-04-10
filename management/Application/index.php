@@ -4,7 +4,7 @@
 define("APP_DEBUG",true); 
 
 //定义前台CSS、JS、img的路径常量
-define("SITE_URL", "http://localhost:88");
+define("SITE_URL", "http://localhost:80");
 define("CSS_URL", "/health/management/Application/Public/Home/css/");
 define("IMAGES_URL", SITE_URL . "/health/management/Application/Public/Home/images/");
 define("JS_URL", SITE_URL . "/health/management/Application/Public/Home/js/");
