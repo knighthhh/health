@@ -1,6 +1,6 @@
 //轮播图自动播放
 	//mui.init();
-	
+	var aaaa=123;
 	window.onload=function(){
 		var gallery = mui('.mui-slider');
 		gallery.slider({
