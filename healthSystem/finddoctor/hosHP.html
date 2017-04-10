@@ -73,7 +73,7 @@
 						});
 				  	},'json');
 				  //根据id向服务器请求医院详情
-				  mui.get('http://'+serverName+'/healthSystem/Application/index.php/Home/index/getHosDetail',{
+				  mui.get('http://'+serverName+'/health/management/Application/index.php/Home/index/getHosDetail',{
             			hos_id:hos_id
             		},function(data){
             			var hosTitle = document.getElementById("hosTitle");
