@@ -28,7 +28,7 @@ return array(
     'IMAGE_CONFIG'        => array(
         'ext'      => array('jpg', 'jpeg', 'png', 'gif'),
         'rootPath' => './Public/Uploads/',
-        'viewPath' => SITE_URL.'/management/Application/Public/Uploads/',
+        'viewPath' => SITE_URL.'/health/management/Application/Public/Uploads/',
     ),
 
     /*过滤设置*/

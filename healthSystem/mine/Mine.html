@@ -19,92 +19,116 @@
 	<script type="text/javascript" src="../js/mui.min.js" ></script>
 	<script type="text/javascript">
 		mui.plusReady(function() {
-					var account = document.getElementById('account');
-					var recharge = document.getElementById('recharge');
-					var follow = document.getElementById('follow');
-					var feedback = document.getElementById('feedback');
-					var about = document.getElementById('about');
-					var general = document.getElementById('general');
-					account.addEventListener('tap',function(event){
-						mui.openWindow({
-							url: 'account.html',
-							id: 'account',
-							preload: true,
-							show: {
-								aniShow: 'pop-in'
-							},
-							waiting: {
-								autoShow: false
-							}
-						});
-					},false);
-					recharge.addEventListener('tap',function(event){
-						mui.openWindow({
-							url: 'recharge.html',
-							id: 'recharge',
-							preload: true,
-							show: {
-								aniShow: 'pop-in'
-							},
-							waiting: {
-								autoShow: false
-							}
-						});
-					},false);
-					follow.addEventListener('tap',function(event){
-						mui.openWindow({
-							url: 'follow.html',
-							id: 'follow',
-							preload: true,
-							show: {
-								aniShow: 'pop-in'
-							},
-							waiting: {
-								autoShow: false
-							}
-						});
-					},false);
-					feedback.addEventListener('tap',function(event){
-						mui.openWindow({
-							url: 'feedback.html',
-							id: 'feedback',
-							preload: true,
-							show: {
-								aniShow: 'pop-in'
-							},
-							waiting: {
-								autoShow: false
-							}
-						});
-					},false);
-					about.addEventListener('tap',function(event){
-						mui.openWindow({
-							url: 'about.html',
-							id: 'about',
-							preload: true,
-							show: {
-								aniShow: 'pop-in'
-							},
-							waiting: {
-								autoShow: false
-							}
-						});
-					},false);
-					general.addEventListener('tap',function(event){
-						mui.openWindow({
-							url: 'general.html',
-							id: 'general',
-							preload: true,
-							show: {
-								aniShow: 'pop-in'
-							},
-							waiting: {
-								autoShow: false
-							}
-						});
-					},false);
-					
+			var account = document.getElementById('account');
+			var recharge = document.getElementById('recharge');
+			var follow = document.getElementById('follow');
+			var feedback = document.getElementById('feedback');
+			var about = document.getElementById('about');
+			var general = document.getElementById('general');
+			account.addEventListener('tap',function(event){
+				mui.openWindow({
+					url: 'account.html',
+					id: 'account',
+					preload: true,
+					show: {
+						aniShow: 'pop-in'
+					},
+					waiting: {
+						autoShow: false
+					}
 				});
+			},false);
+			recharge.addEventListener('tap',function(event){
+				mui.openWindow({
+					url: 'recharge.html',
+					id: 'recharge',
+					preload: true,
+					show: {
+						aniShow: 'pop-in'
+					},
+					waiting: {
+						autoShow: false
+					}
+				});
+			},false);
+			follow.addEventListener('tap',function(event){
+				mui.openWindow({
+					url: 'follow.html',
+					id: 'follow',
+					preload: true,
+					show: {
+						aniShow: 'pop-in'
+					},
+					waiting: {
+						autoShow: false
+					}
+				});
+			},false);
+			feedback.addEventListener('tap',function(event){
+				mui.openWindow({
+					url: 'feedback.html',
+					id: 'feedback',
+					preload: true,
+					show: {
+						aniShow: 'pop-in'
+					},
+					waiting: {
+						autoShow: false
+					}
+				});
+			},false);
+			about.addEventListener('tap',function(event){
+				mui.openWindow({
+					url: 'about.html',
+					id: 'about',
+					preload: true,
+					show: {
+						aniShow: 'pop-in'
+					},
+					waiting: {
+						autoShow: false
+					}
+				});
+			},false);
+			general.addEventListener('tap',function(event){
+				mui.openWindow({
+					url: 'general.html',
+					id: 'general',
+					preload: true,
+					show: {
+						aniShow: 'pop-in'
+					},
+					waiting: {
+						autoShow: false
+					}
+				});
+			},false);
+			
+			//退出登录 事件监听
+			var logout = document.getElementById('logout');
+			logout.addEventListener('tap',function(event){
+				var btnArray = ['否', '是'];
+				mui.confirm('您是否确认退出？', 'healthsystem', btnArray, function(e) {
+                    if (e.index == 1) {
+                        plus.storage.clear();
+						plus.ui.toast("您已成功退出");
+						mui.openWindow({
+							url: '/login/login.html',
+							id: 'login',
+							preload: true,
+							show: {
+								aniShow: 'pop-in'
+							},
+							waiting: {
+								autoShow: false
+							}
+						});
+                    } else {
+                       
+                    }
+                })
+			},false);
+		});
 	</script>
 	<body>	
 		<header class="mui-bar mui-bar-nav">
@@ -145,7 +169,7 @@
 						</ul>
 						
 						<ul class="mui-table-view">
-							<li class="mui-table-view-cell" style="text-align: center;">
+							<li id="logout" class="mui-table-view-cell" style="text-align: center;">
 								<a>退出登录</a>
 							</li>
 						</ul>
