@@ -65,7 +65,7 @@
 					<table>
 					<tr>
 					<td>
-						<input id='user_password2' type="password" class="mui-input-password mui-input" placeholder="请输入密码">
+						<input id='password_confirm' type="password" class="mui-input-password mui-input" placeholder="请输入密码">
 					</td>
 					</tr>
 					</table>
@@ -92,7 +92,61 @@
 			
 		</div>
 		<script src="../js/mui.min.js"></script>
-		
+		<script src="../js/common.js"></script>
+		<script type="text/javascript" charset="utf-8">
+			
+			//验证码暂时不做
+			
+			mui.init();
+	      	mui.plusReady(function(){
+	      		var phone=document.getElementById("user_phone");
+	      		var password=document.getElementById("user_password");
+	      		var pwdconfirm=document.getElementById("password_confirm");
+	      		var reg=document.getElementById("reg");
+	      		
+	      		//后面在做设置用户输入的手机号只能为数字
+	      		//onkeyup="this.value=this.value.replace(/[^\d]/g,'') "
+	      		
+	      		reg.addEventListener('tap',function(){
+	      			if(phone.value.length!=11){
+	      				plus.ui.toast("手机号码格式不正确");
+	      				return;
+	      			}
+	      			if(password.value.length < 6){
+	      				plus.ui.toast("密码长度不能小于6位数");
+	      				return;
+	      			}
+	      			if (pwdconfirm.value != password.value) {
+						plus.nativeUI.toast('密码两次输入不一致');
+						return;
+					}
+	      			mui.ajax('http://'+serverName+'/health/management/Application/index.php/Connector/User/reg',{
+	      				data:{
+	      					user_phone:phone.value,
+	      					user_password:password.value
+	      				},
+	      				dataType:'json',//数据格式类型
+	      				type:'POST',//http请求类型
+	      				timeout:10000,//超时设置
+	      				success:function(data){
+	      					//处理成功返回的数据
+	      					//{'result':1,'data':"注册成功"}
+	      					if(data.result==1){
+	      						plus.ui.toast(data.data);
+	      						mui.back();
+	      					}else{
+	      						//提示注册失败的信息
+	      						plus.ui.toast(data.data);
+	      					}
+	      				},
+	      				error:function(xhr,type,errorThrown){
+	      					plus.nativeUI.toast('请检查您的网络');
+	      				}
+	      			})
+	      		});
+	      	});
+
+		</script>
 	</body>
 
 </html>

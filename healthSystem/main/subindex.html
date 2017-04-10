@@ -17,7 +17,7 @@
 	<script src="../js/common.js"></script>
 	<script type="text/javascript">
 			mui.init(
-				{
+			{
 			  preloadPages:[
 //			  {
 //			    id:'hosHP.html',
@@ -62,7 +62,7 @@
 						});
 					},false);
 				//获取热门医院信息
-				mui.getJSON('http://'+serverName+'/healthSystem/Application/index.php/Home/index/getHotHos',{category:'news'},function(data){
+				mui.getJSON('http://'+serverName+'/health/management/Application/index.php/Home/Index/getHotHos',{category:'news'},function(data){
 						//获得服务器响应
 						var demo4 = document.getElementById("demo4");
 						var item = '';
@@ -141,7 +141,7 @@
 							});  
 					});
 					//获取热门医生信息
-					mui.get('http://'+serverName+'/healthSystem/Application/index.php/Home/index/getHotDoc',{
+					mui.get('http://'+serverName+'/health/management/Application/index.php/Home/Index/getHotDoc',{
 							
 						},function(data){
 							var demo1 = document.getElementById("demo1");
