@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "index.html": {
     "resources": [
       "fonts/iconfont_money.ttf",
@@ -157,4 +158,200 @@
     ],
     "refer": []
   }
+=======
+	"index.html": {
+		"resources": [
+			"fonts/iconfont_money.ttf",
+			"css/souye.css",
+			"main/subindex.html",
+			"fonts/iconfont_foot.ttf",
+			"css/iconfont.css",
+<<<<<<< HEAD
+			"css/iconfont_money.css",
+			"css/iconfont_foot.css",
+			"js/common.js",
+			"js/mui.min.js",
+			"css/mui.min.css"
+=======
+			"fonts/iconfont.ttf",
+			"css/iconfont_money.css",
+			"css/iconfont_foot.css"
+>>>>>>> b1e2aa807bd2b2be3e1495e46cefe66df34c03a7
+		],
+		"refer": [
+			"main/subindex.html",
+			"mine/Mine.html",
+			"healthfile/Health_File.html",
+			"inquiry/Inquiry.html"
+		]
+	},
+	"main/subindex.html": {
+		"resources": [
+			"img/test.jpg",
+			"img/lookonline.jpg",
+			"img/jiankang2.jpeg",
+			"img/findHp.jpg",
+			"img/finddoctor.jpg",
+<<<<<<< HEAD
+			"fonts/iconfont.ttf",
+			"js/souye.js",
+			"img/jiankang.jpeg",
+			"js/common.js",
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"css/iconfont_money.css"
+		],
+		"refer": []
+=======
+			"js/souye.js",
+			"img/jiankang.jpeg"
+		],
+		"refer": [
+			"finddoctor/docHP.html",
+			"finddoctor/search_doctor.html",
+			"finddoctor/hosHP.html"
+		]
+>>>>>>> b1e2aa807bd2b2be3e1495e46cefe66df34c03a7
+	},
+	"login/login.html": {
+		"resources": [
+			"js/common.js",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css"
+		],
+		"refer": [
+			"index.html",
+			"login/reg.html"
+		]
+	},
+	"healthfile/Health_File.html": {
+		"resources": [
+			"img/healthfile.jpg",
+			"css/iconfont_health_file.css",
+			"fonts/iconfont_health_file.ttf",
+			"css/health_file.css",
+			"img/doctor.jpeg"
+		],
+		"refer": []
+	},
+	"inquiry/Inquiry.html": {
+		"resources": [
+			"css/iconfont_inquiry.css",
+			"img/inquiry2.jpg",
+			"css/inquiry.css",
+			"fonts/iconfont_inquiry.ttf",
+<<<<<<< HEAD
+			"css/header.css",
+			"fonts/mui.ttf"
+		],
+		"refer": []
+	},
+	"mine/Mine.html": {
+		"resources": [
+			"fonts/mui.ttf"
+		],
+		"refer": [
+			"login/login.html"
+		]
+	},
+	"login/reg.html": {
+		"resources": [
+			"js/common.js",
+			"js/mui.min.js",
+			"css/mui.min.css"
+		]
+=======
+			"css/header.css"
+		],
+		"refer": []
+	},
+	"login/reg.html": {
+		"resources": [
+			"js/common.js"
+		],
+		"refer": []
+	},
+	"finddoctor/docHP.html": {
+		"resources": [
+			"js/mui.min.js",
+			"js/common.js",
+			"css/souye.css",
+			"fonts/mui.ttf",
+			"css/iconfont.css",
+			"css/mui.min.css",
+			"css/iconfont_money.css",
+			"img/doctor.jpeg",
+			"css/iconfont_foot.css"
+		],
+		"refer": []
+	},
+	"finddoctor/search_doctor.html": {
+		"resources": [
+			"css/find_doctor.css",
+			"css/app.css",
+			"js/mui.min.js"
+		],
+		"refer": [
+			"finddoctor/search_doctor_jb.html",
+			"finddoctor/search_doctor_xm.html",
+			"finddoctor/search_doctor_yy.html"
+		]
+	},
+	"finddoctor/search_doctor_xm.html": {
+		"resources": [
+			"css/mui.indexedlist.css",
+			"js/mui.indexedlist.js",
+			"js/mui.min.js",
+			"js/common.js",
+			"css/app.css",
+			"fonts/mui.ttf",
+			"css/mui.min.css"
+		],
+		"refer": []
+	},
+	"finddoctor/search_doctor_yy.html": {
+		"resources": [
+			"js/mui.picker.min.js",
+			"js/city.data.js",
+			"css/mui.picker.min.css",
+			"css/iconfont_se.css",
+			"css/search_info.css",
+			"js/common.js",
+			"js/mui.min.js",
+			"css/app.css",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"fonts/iconfont_se.ttf"
+		],
+		"refer": []
+	},
+	"finddoctor/search_doctor_jb.html": {
+		"resources": [
+			"js/common.js",
+			"js/mui.min.js",
+			"css/app.css",
+			"fonts/mui.ttf",
+			"css/mui.min.css"
+		],
+		"refer": []
+	},
+	"finddoctor/hosHP.html": {
+		"resources": [
+			"js/common.js",
+			"js/mui.min.js",
+			"fonts/iconfont_money.ttf",
+			"fonts/iconfont_foot.ttf",
+			"fonts/iconfont.ttf",
+			"css/souye.css",
+			"fonts/mui.ttf",
+			"css/iconfont.css",
+			"css/mui.min.css",
+			"css/iconfont_money.css",
+			"css/iconfont_foot.css"
+		],
+		"refer": []
+>>>>>>> b1e2aa807bd2b2be3e1495e46cefe66df34c03a7
+	}
+>>>>>>> 39051c936ee97382cfaae49b44bc6add3a98a88c
 }
