@@ -223,7 +223,8 @@
 					"css/iconfont_money.css",
 					"css/iconfont_foot.css",
 					"main/subindex.html",
-					"fonts/iconfont.ttf"
+					"fonts/iconfont.ttf",
+					"js/common.js"
 				],
 				"refer": [
 					"Mine.html",
@@ -326,7 +327,8 @@
 					"js/feedback.js",
 					"js/mui.view.js",
 					"js/mui.min.js",
-					"css/mui.min.css"
+					"css/mui.min.css",
+					"fonts/mui.ttf"
 				],
 				"refer": [
 					"mine/account.html",
