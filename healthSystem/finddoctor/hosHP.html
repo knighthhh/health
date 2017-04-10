@@ -45,7 +45,8 @@
 				  //获得医生ID参数
 				  //var hos_id = event.detail.hos_id;
 				  //根据id向服务器请求医院轮播图片
-				  mui.get('http://'+serverName+'/healthSystem/Application/index.php/Home/index/getHosImg',{
+				  console.log("hosimg");
+				  mui.get('http://'+serverName+'/health/management/Application/index.php/Connector/Hos/getHosImg',{
 				  		hos_id:hos_id
 				  },function(data){
 				  		var slider1 = document.getElementById("slider1");
@@ -55,6 +56,7 @@
             			for(i=0;i<data.length;i++){
             				hosimg = hosimg +'<div class="mui-slider-item"><a href="#"><img src="'+data[i].hos_img+'"></a></div>';
             			}
+            			console.log("hosimg");
             			slider1.innerHTML = hosimg ;
             			//轮播图下面的圆点
             			var item = ''
@@ -73,7 +75,7 @@
 						});
 				  	},'json');
 				  //根据id向服务器请求医院详情
-				  mui.get('http://'+serverName+'/healthSystem/Application/index.php/Home/index/getHosDetail',{
+				  mui.get('http://'+serverName+'/health/management/Application/index.php/Connector/hos/getHosDetail',{
             			hos_id:hos_id
             		},function(data){
             			var hosTitle = document.getElementById("hosTitle");
