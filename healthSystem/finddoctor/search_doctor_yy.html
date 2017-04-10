@@ -16,7 +16,7 @@
 	<script type="text/javascript">
 		mui.init();
 		mui.plusReady(function() {
-					mui.getJSON('http://'+serverName+'/health/management/Application/index.php/Home/index/getHos',{},function(data){
+					mui.getJSON('http://'+serverName+'/health/management/Application/index.php/Connector/Hos/getHos',{},function(data){
 						//获得服务器响应
 						var listHos = document.getElementById("listHos");
 						var item = '';

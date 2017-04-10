@@ -37,7 +37,7 @@
 				 	//获得医生ID参数
 				 	//var doc_id = event.detail.doc_id;
 				  	//根据id向服务器请求医生详情
-				  	mui.get('http://'+serverName+'/health/management/Application/index.php/Home/index/getDocDetail',{
+				  	mui.get('http://'+serverName+'/health/management/Application/index.php/Connector/Doc/getDocDetail',{
             			doc_id:doc_id
             		},function(data){
             			var docInfo = document.getElementById('docInfo');

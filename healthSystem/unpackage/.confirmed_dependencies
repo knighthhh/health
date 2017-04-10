@@ -132,12 +132,23 @@
 			"css/app.css",
 			"fonts/mui.ttf",
 			"css/mui.min.css"
-		]
+		],
+		"refer": []
 	},
 	"finddoctor/hosHP.html": {
 		"resources": [
 			"js/common.js",
-			"js/mui.min.js"
-		]
+			"js/mui.min.js",
+			"fonts/iconfont_money.ttf",
+			"fonts/iconfont_foot.ttf",
+			"fonts/iconfont.ttf",
+			"css/souye.css",
+			"fonts/mui.ttf",
+			"css/iconfont.css",
+			"css/mui.min.css",
+			"css/iconfont_money.css",
+			"css/iconfont_foot.css"
+		],
+		"refer": []
 	}
 }
