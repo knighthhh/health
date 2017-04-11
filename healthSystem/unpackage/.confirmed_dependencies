@@ -1,81 +1,124 @@
 {
-	"index.html": {
-		"resources": [
-			"fonts/iconfont_money.ttf",
-			"css/souye.css",
-			"main/subindex.html",
-			"js/common.js",
-			"fonts/iconfont_foot.ttf",
-			"js/mui.min.js",
-			"css/iconfont.css",
-			"css/mui.min.css",
-			"fonts/iconfont.ttf",
-			"css/iconfont_money.css",
-			"css/iconfont_foot.css"
-		],
-		"refer": [
-			"main/subindex.html",
-			"mine/Mine.html",
-			"healthfile/Health_File.html",
-			"inquiry/Inquiry.html"
-		]
-	},
-	"main/subindex.html": {
-		"resources": [
-			"img/test.jpg",
-			"img/lookonline.jpg",
-			"img/jiankang2.jpeg",
-			"img/findHp.jpg",
-			"img/finddoctor.jpg",
-			"js/souye.js",
-			"img/jiankang.jpeg"
-		],
-		"refer": [
-			"finddoctor/docHP.html",
-			"finddoctor/search_doctor.html"
-		]
-	},
-	"mine/Mine.html": {
-		"resources": [
-			"fonts/mui.ttf"
-		]
-	},
-	"healthfile/Health_File.html": {
-		"resources": [
-			"img/healthfile.jpg",
-			"css/iconfont_health_file.css",
-			"fonts/iconfont_health_file.ttf",
-			"css/health_file.css",
-			"img/doctor.jpeg"
-		]
-	},
-	"inquiry/Inquiry.html": {
-		"resources": [
-			"css/iconfont_inquiry.css",
-			"img/inquiry2.jpg",
-			"css/inquiry.css",
-			"fonts/iconfont_inquiry.ttf",
-			"css/header.css"
-		]
-	},
-	"finddoctor/docHP.html": {
-		"resources": [
-			"js/common.js"
-		]
-	},
-	"finddoctor/search_doctor_jb.html": {
-		"resources": [
-			"js/common.js"
-		]
-	},
-	"finddoctor/search_doctor.html": {
-		"resources": [
-			"css/find_doctor.css",
-			"js/mui.min.js",
-			"css/app.css"
-		],
-		"refer": [
-			"finddoctor/search_doctor_jb.html"
-		]
-	}
+  "index.html": {
+    "resources": [
+      "fonts/iconfont_money.ttf",
+      "css/souye.css",
+      "main/subindex.html",
+      "js/common.js",
+      "fonts/iconfont_foot.ttf",
+      "js/mui.min.js",
+      "css/iconfont.css",
+      "css/mui.min.css",
+      "fonts/iconfont.ttf",
+      "css/iconfont_money.css",
+      "css/iconfont_foot.css"
+    ],
+    "refer": [
+      "main/subindex.html",
+      "mine/Mine.html",
+      "healthfile/Health_File.html",
+      "inquiry/Inquiry.html"
+    ]
+  },
+  "main/subindex.html": {
+    "resources": [
+      "img/test.jpg",
+      "img/lookonline.jpg",
+      "img/jiankang2.jpeg",
+      "img/findHp.jpg",
+      "img/finddoctor.jpg",
+      "js/souye.js",
+      "img/jiankang.jpeg",
+      "fonts/iconfont.ttf",
+      "css/souye.css",
+      "css/iconfont.css",
+      "css/mui.min.css",
+      "css/iconfont_money.css",
+      "css/iconfont_foot.css",
+      "fonts/mui.ttf",
+      "js/common.js"
+    ],
+    "refer": [
+      "finddoctor/docHP.html",
+      "finddoctor/search_doctor.html"
+    ]
+  },
+  "mine/Mine.html": {
+    "resources": [
+      "fonts/mui.ttf",
+      "js/mui.min.js",
+      "css/mui.min.css"
+    ],
+    "refer": [
+      "login/login.html"
+    ]
+  },
+  "healthfile/Health_File.html": {
+    "resources": [
+      "img/healthfile.jpg",
+      "css/iconfont_health_file.css",
+      "fonts/iconfont_health_file.ttf",
+      "css/health_file.css",
+      "img/doctor.jpeg",
+      "js/mui.min.js",
+      "css/mui.min.css"
+    ],
+    "refer": []
+  },
+  "inquiry/Inquiry.html": {
+    "resources": [
+      "css/iconfont_inquiry.css",
+      "img/inquiry2.jpg",
+      "css/inquiry.css",
+      "fonts/iconfont_inquiry.ttf",
+      "css/header.css",
+      "css/iconfont_foot.css",
+      "fonts/mui.ttf",
+      "css/mui.min.css",
+      "js/mui.min.js"
+    ],
+    "refer": []
+  },
+  "finddoctor/docHP.html": {
+    "resources": [
+      "js/common.js"
+    ],
+    "refer": []
+  },
+  "finddoctor/search_doctor_jb.html": {
+    "resources": [
+      "js/common.js"
+    ],
+    "refer": []
+  },
+  "finddoctor/search_doctor.html": {
+    "resources": [
+      "css/find_doctor.css",
+      "js/mui.min.js",
+      "css/app.css"
+    ],
+    "refer": [
+      "finddoctor/search_doctor_jb.html"
+    ]
+  },
+  "login/login.html": {
+    "resources": [
+      "js/common.js",
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "css/mui.min.css"
+    ],
+    "refer": [
+      "index.html",
+      "login/forget_password.html",
+      "login/reg.html"
+    ]
+  },
+  "login/forget_password.html": {
+    "resources": [
+      "js/app.js",
+      "js/yzm.js"
+    ],
+    "refer": []
+  }
 }

@@ -2,7 +2,9 @@
 namespace Admin\Controller;
 
 use Think\Controller;
-
+/*
+*  健康知识管理
+*/
 class KnowledgeController extends Controller
 {
 	public function listKnow()
