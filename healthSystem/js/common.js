@@ -1,2 +1,2 @@
 
-var serverName = '10.77.117.237:88';
+var serverName = '10.77.115.200:80';

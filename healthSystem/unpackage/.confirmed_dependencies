@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "index.html": {
     "resources": [
       "fonts/iconfont_money.ttf",
@@ -121,4 +122,101 @@
     ],
     "refer": []
   }
+=======
+	"index.html": {
+		"resources": [
+			"fonts/iconfont_money.ttf",
+			"css/souye.css",
+			"main/subindex.html",
+			"js/common.js",
+			"fonts/iconfont_foot.ttf",
+			"js/mui.min.js",
+			"css/iconfont.css",
+			"css/mui.min.css",
+			"fonts/iconfont.ttf",
+			"css/iconfont_money.css",
+			"css/iconfont_foot.css"
+		],
+		"refer": [
+			"main/subindex.html",
+			"mine/Mine.html",
+			"healthfile/Health_File.html",
+			"inquiry/Inquiry.html"
+		]
+	},
+	"main/subindex.html": {
+		"resources": [
+			"img/test.jpg",
+			"img/lookonline.jpg",
+			"img/jiankang2.jpeg",
+			"img/findHp.jpg",
+			"img/finddoctor.jpg",
+			"js/souye.js",
+			"img/jiankang.jpeg"
+		],
+		"refer": [
+			"main/search/search.html"
+		]
+	},
+	"mine/Mine.html": {
+		"resources": [
+			"fonts/mui.ttf"
+		],
+		"refer": [
+			"login/login.html"
+		]
+	},
+	"healthfile/Health_File.html": {
+		"resources": [
+			"img/healthfile.jpg",
+			"css/iconfont_health_file.css",
+			"fonts/iconfont_health_file.ttf",
+			"css/health_file.css",
+			"img/doctor.jpeg"
+		],
+		"refer": []
+	},
+	"inquiry/Inquiry.html": {
+		"resources": [
+			"css/iconfont_inquiry.css",
+			"img/inquiry2.jpg",
+			"css/inquiry.css",
+			"fonts/iconfont_inquiry.ttf",
+			"css/header.css"
+		],
+		"refer": []
+	},
+	"login/login.html": {
+		"refer": [
+			"index.html"
+		]
+	},
+	"main/search/search2.html": {
+		"resources": [
+			"main/search/search_info.html",
+			"js/webviewGroup.js"
+		],
+		"refer": [
+			"main/search/search_info.html",
+			"main/search/search_info_hp.html"
+		]
+	},
+	"main/search/search_info.html": {
+		"resources": [
+			"img/hospital.png",
+			"css/iconfont_se.css",
+			"fonts/iconfont_se.ttf"
+		]
+	},
+	"main/search/search.html": {
+		"resources": [
+			"css/search.css",
+			"css/search_history.css",
+			"css/search_info.css"
+		],
+		"refer": [
+			"main/search/search2.html"
+		]
+	}
+>>>>>>> af5506a6e69ecec17fa634dac217bb1650c897c1
 }

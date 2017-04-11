@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50540
 File Encoding         : 65001
 
-Date: 2017-04-10 10:27:24
+Date: 2017-04-10 20:54:27
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -212,7 +212,7 @@ CREATE TABLE `doctor_info` (
   `doc_fee` varchar(8) DEFAULT NULL COMMENT '费用',
   `doc_time` varchar(16) NOT NULL COMMENT '创建时间',
   PRIMARY KEY (`doc_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=40 DEFAULT CHARSET=utf8 COMMENT='医生信息表';
+) ENGINE=InnoDB AUTO_INCREMENT=42 DEFAULT CHARSET=utf8 COMMENT='医生信息表';
 
 -- ----------------------------
 -- Records of doctor_info
@@ -229,6 +229,8 @@ INSERT INTO `doctor_info` VALUES ('36', '56', '13', '李随生', '男', 'doctor/
 INSERT INTO `doctor_info` VALUES ('37', '54', '10', '李佳迪', '男', 'doctor/2017-04-07/58e7a17910ba8.jpg', '123456', '123456', '子宫肌瘤', '', '广东 惠州 惠城区', '213', '', '11', null, '23', '2017-04-07 22:26');
 INSERT INTO `doctor_info` VALUES ('38', '53', '9', '蔡刘聪', '男', 'doctor/2017-04-07/58e7a1c387f7e.jpg', '123', '123456', '神经病', '', '福建 福州 鼓楼区', '123', '', '11', null, '123', '2017-04-07 22:27');
 INSERT INTO `doctor_info` VALUES ('39', '53', '8', '黄宇红', '男', 'doctor/2017-04-07/58e7a1e532d9e.jpg', '123', '123456', '冠心病', '', '广东 惠州 惠城区', '213', '', '123', null, '23', '2017-04-07 22:27');
+INSERT INTO `doctor_info` VALUES ('40', '57', '6', 'aa', '女', 'doctor/2017-04-10/58eb3840e43f9.png', '15768465434', '123456', 'aa', '', '广东 惠州 惠城区', '', '', '', null, '', '2017-04-10 15:46');
+INSERT INTO `doctor_info` VALUES ('41', '57', '6', 'bb', '女', 'doctor/2017-04-10/58eb3b33d26dd.jpeg', 'bbb', '123456', 'bb', '', '广东 惠州 惠城区', '', '', '', null, '', '2017-04-10 15:58');
 
 -- ----------------------------
 -- Table structure for `drug`
@@ -866,20 +868,23 @@ CREATE TABLE `user_info` (
   `user_qq` varchar(16) DEFAULT NULL COMMENT 'QQ',
   `user_weixin` varchar(16) DEFAULT NULL COMMENT '微信',
   `user_time` varchar(16) NOT NULL COMMENT '创建时间',
-  `token` varchar(256) DEFAULT NULL,
+  `user_token` varchar(256) DEFAULT NULL,
   `token_time` varchar(16) DEFAULT NULL COMMENT 'token生成时间',
   `login_time` varchar(16) DEFAULT NULL COMMENT '最后一次登录时间',
   PRIMARY KEY (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COMMENT='用户信息表';
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8 COMMENT='用户信息表';
 
 -- ----------------------------
 -- Records of user_info
 -- ----------------------------
 INSERT INTO `user_info` VALUES ('1', '张洋豪', '张洋豪', '22', '15768650568', '123456', 'User/2017-03-25/58d5ec271fc8c.jpg', '男', '黑龙江 鸡西 鸡冠区', '07/13/1995', '身份证', '441622199411067918', '汉', '学生', '本科', '未婚', '3777623205', '15768650568', '2017-03-25 12:41', null, null, null);
 INSERT INTO `user_info` VALUES ('2', '王哲', '王哲', '12', '15768650568', '123456', 'User/2017-03-25/58d5ec6a6c634.jpg', '男', '天津 和平区 ', '11/09/1994', '身份证', '441622199411067918', '汉', '学生', '本科', '未婚', '3777623205', '15768650568', '2017-03-25 12:47', null, null, null);
-INSERT INTO `user_info` VALUES ('3', '黄辉煌', '黄辉煌', '22', '110', '110', 'User/2017-03-25/58d5ebe31bf28.jpg', '女', '广东 惠州 惠城区', '123', '学生证', '123', '123', '学生仔', '本科', '未婚', '123', '213', '2017-03-25 12:02', null, null, null);
+INSERT INTO `user_info` VALUES ('3', '黄辉煌', '黄辉煌', '22', '110', '110', 'User/2017-03-25/58d5ebe31bf28.jpg', '男', '广东 惠州 惠城区', '123', '学生证', '123', '123', '学生仔', '本科', '未婚', '123', '213', '2017-04-10 12:57', null, null, null);
 INSERT INTO `user_info` VALUES ('4', '姚桂泰', '姚桂泰', '28', '120', '1210', 'User/2017-03-25/58d5ec5f3534f.jpg', '男', '广东 惠州 惠城区', '1996-11-05', '身份证', '45456', '汉族', '学生', '硕士', '未婚', '562356610', '562356610', '2017-03-25 12:04', null, null, null);
 INSERT INTO `user_info` VALUES ('5', '何家朗', '肥仔哥哥', '22', '15768652840', '123456', 'User/2017-03-29/58db96bbf04bf.jpg', '男', '广东 广州 增城市', '06/06/1995', '身份证', '44162215564798888', '回族', '营养师', '本科', '未婚', '123456', '12346', '2017-03-29 19:13', null, null, null);
+INSERT INTO `user_info` VALUES ('6', 'XHZWjN', '', '0', '15768653949', 'e10adc3949ba59abbe56e057f20f883e', '', '男', '', '', null, null, '汉', null, null, '', null, null, '2017-04-10 13:39', '82bc0d47a8472197554aab7fc640a557', '2017-04-10 15:46', '2017-04-10 16:27');
+INSERT INTO `user_info` VALUES ('7', 'ExZmYH', '', '0', '15768653948', 'e10adc3949ba59abbe56e057f20f883e', '', '男', '', '', null, null, '汉', null, null, '', null, null, '2017-04-10 14:55', 'cef5ee8381ed44aa15173c6ba1f97659', '2017-04-10 14:55', '2017-04-10 14:55');
+INSERT INTO `user_info` VALUES ('8', 'hkK4B2', '', '0', '15768653333', 'e10adc3949ba59abbe56e057f20f883e', '', '男', '', '', null, null, '汉', null, null, '', null, null, '2017-04-10 15:17', 'ffbd04a57a6431dd6b29991eea5e2e99', '2017-04-10 15:19', '2017-04-10 15:22');
 
 -- ----------------------------
 -- Table structure for `user_login`
