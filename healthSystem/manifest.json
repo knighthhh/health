@@ -335,7 +335,8 @@
 					"mine/recharge.html",
 					"mine/follow.html",
 					"mine/feedback.html",
-					"mine/about.html"
+					"mine/about.html",
+					"login/login.html"
 				],
 				"priority": 0
 			},
