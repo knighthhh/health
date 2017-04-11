@@ -335,7 +335,8 @@
 					"mine/recharge.html",
 					"mine/follow.html",
 					"mine/feedback.html",
-					"mine/about.html"
+					"mine/about.html",
+					"login/login.html"
 				],
 				"priority": 0
 			},
@@ -365,7 +366,8 @@
 					"css/header.css",
 					"js/mui.min.js",
 					"css/mui.min.css",
-					"css/iconfont_foot.css"
+					"css/iconfont_foot.css",
+					"fonts/mui.ttf"
 				],
 				"refer": [
 					"inquiry/mydoctor.html",
