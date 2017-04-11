@@ -4,6 +4,7 @@
       "fonts/iconfont_money.ttf",
       "css/souye.css",
       "main/subindex.html",
+<<<<<<< HEAD
       "fonts/iconfont_foot.ttf",
       "css/iconfont.css",
       "css/iconfont_money.css",
@@ -11,6 +12,16 @@
       "js/common.js",
       "js/mui.min.js",
       "css/mui.min.css"
+=======
+      "js/common.js",
+      "fonts/iconfont_foot.ttf",
+      "js/mui.min.js",
+      "css/iconfont.css",
+      "css/mui.min.css",
+      "fonts/iconfont.ttf",
+      "css/iconfont_money.css",
+      "css/iconfont_foot.css"
+>>>>>>> c27428674c483eef14b03d01cc73d4691c9edcec
     ],
     "refer": [
       "main/subindex.html",
@@ -26,6 +37,7 @@
       "img/jiankang2.jpeg",
       "img/findHp.jpg",
       "img/finddoctor.jpg",
+<<<<<<< HEAD
       "fonts/iconfont.ttf",
       "js/souye.js",
       "img/jiankang.jpeg",
@@ -49,6 +61,19 @@
     ],
     "refer": [
       "index.html"
+=======
+      "js/souye.js",
+      "img/jiankang.jpeg"
+    ],
+    "refer": []
+  },
+  "mine/Mine.html": {
+    "resources": [
+      "fonts/mui.ttf"
+    ],
+    "refer": [
+      "login/login.html"
+>>>>>>> c27428674c483eef14b03d01cc73d4691c9edcec
     ]
   },
   "healthfile/Health_File.html": {
@@ -67,6 +92,7 @@
       "img/inquiry2.jpg",
       "css/inquiry.css",
       "fonts/iconfont_inquiry.ttf",
+<<<<<<< HEAD
       "css/header.css",
       "js/mui.min.js",
       "css/mui.min.css",
@@ -81,6 +107,15 @@
     ],
     "resources": [
       "fonts/mui.ttf"
+=======
+      "css/header.css"
+    ],
+    "refer": []
+  },
+  "login/login.html": {
+    "refer": [
+      "index.html"
+>>>>>>> c27428674c483eef14b03d01cc73d4691c9edcec
     ]
   }
 }

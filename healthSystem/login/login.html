@@ -46,13 +46,24 @@
 <script>
 	(function($, doc) {
 		mui.init({
+			
 			keyEventBind: {
 				backbutton: false  //关闭back按键监听
 			}
 		});
 		
+		
+		
 		$.plusReady(function() {
-			
+
+			var views = plus.webview.all();
+           	for(var i = 0; i < views.length - 1; i++) {
+   				console.log(views[i].id);
+         	    plus.webview.close(views[i].id);
+          	    console.log("已经关闭 "+views[i].id);
+            }
+
+				
 			var page = mui.preload({
 			      url:'../index.html',
 			  	  id:'index',//默认使用当前页面的url作为id
@@ -60,6 +71,7 @@
 			  	  waiting: {autoShow: false},
 			    extras:{}//自定义扩展参数
 			});
+			
 			var loginButton = doc.getElementById('login');
 			var user_phoneBox = doc.getElementById('user_phone');
 			var user_passwordBox = doc.getElementById('user_password');
