@@ -186,10 +186,35 @@
 	
 	
 		<div class="mui-card-footer" >
-			<button type="button" class="mui-btn public-color mui-pull-left" style="color: #FFFFFF;margin-left: 20%;">去这里</button>
+			<button id="gohere" type="button" class="mui-btn public-color mui-pull-left" style="color: #FFFFFF;margin-left: 20%;">去这里</button>
 			<!--调用地图模块-->
 			<button type="button" class="mui-btn public-color mui-pull-right" style="color: #FFFFFF;margin-right: 20% ;">去哪儿</button>
 		</div>
+		
+		<script src="../js/mui.min.js"></script>
+		<script type="text/javascript" charset="utf-8">
+			mui.init();
+	      	mui.plusReady(function(){
+	      		var gohereButton = document.getElementById("gohere");
+	      		gohereButton.addEventListener('tap', function(event) {
+	      			
+					mui.openWindow({
+						url: '/maps/maps_map.html',
+						id: 'maps',
+						preload: true,
+						show: {
+							aniShow: 'pop-in'
+						},
+						styles: {
+							popGesture: 'hide'
+						},
+						waiting: {
+							autoShow: false
+						}
+					});
+				}, false);
+	      	});
+		</script>
 		
 	</body>
 

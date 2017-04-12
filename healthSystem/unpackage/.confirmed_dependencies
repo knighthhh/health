@@ -1,27 +1,119 @@
 {
+  "main/search/search2.html": {
+    "resources": [
+      "main/search/search_info.html",
+      "js/webviewGroup.js",
+      "css/search.css",
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "css/mui.min.css",
+      "css/search_history.css",
+      "css/search_info.css"
+    ],
+    "refer": [
+      "main/search/search_info.html",
+      "main/search/search_info_hp.html",
+      "main/search/search_info_dt.html",
+      "main/search/search_info_jb.html"
+    ]
+  },
+  "main/search/search_info.html": {
+    "resources": [
+      "fonts/iconfont_money.ttf",
+      "img/hospital.png",
+      "css/iconfont_se.css",
+      "css/iconfont_money.css",
+      "fonts/iconfont_se.ttf",
+      "img/doctor.jpeg"
+    ],
+    "refer": []
+  },
+  "main/subindex.html": {
+    "refer": [
+      "main/search/search.html",
+      "finddoctor/hosHP.html",
+      "finddoctor/docHP.html"
+    ],
+    "resources": [
+      "img/test.jpg",
+      "img/lookonline.jpg",
+      "img/jiankang2.jpeg",
+      "img/findHp.jpg",
+      "img/finddoctor.jpg",
+      "fonts/iconfont.ttf",
+      "js/souye.js",
+      "img/jiankang.jpeg",
+      "fonts/mui.ttf",
+      "fonts/iconfont_money.ttf",
+      "js/common.js",
+      "fonts/iconfont_foot.ttf",
+      "css/iconfont_money.css",
+      "css/souye.css",
+      "js/mui.min.js",
+      "css/iconfont.css",
+      "css/mui.min.css",
+      "css/iconfont_foot.css"
+    ]
+  },
+  "main/search/search.html": {
+    "resources": [
+      "css/search.css",
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "css/mui.min.css",
+      "css/search_history.css",
+      "css/search_info.css"
+    ],
+    "refer": [
+      "main/search/search2.html"
+    ]
+  },
+  "main/hosHP.html": {
+    "resources": [
+      "fonts/iconfont_money.ttf",
+      "img/hos1.jpg",
+      "css/souye.css",
+      "fonts/iconfont_foot.ttf",
+      "js/mui.min.js",
+      "img/hos3.jpg",
+      "fonts/mui.ttf",
+      "css/iconfont.css",
+      "css/mui.min.css",
+      "fonts/iconfont.ttf",
+      "img/hos2.jpg",
+      "img/hos4.jpg",
+      "css/iconfont_money.css",
+      "css/iconfont_foot.css"
+    ],
+    "refer": [
+      "maps/maps.html",
+      "maps/maps_map.html"
+    ]
+  },
+  "maps/maps.html": {
+    "resources": [
+      "js/common.js",
+      "css/maps.css",
+      "js/maps.js",
+      "js/maps_immersed.js"
+    ],
+    "refer": [
+      "maps/maps_map.html"
+    ]
+  },
   "index.html": {
     "resources": [
       "fonts/iconfont_money.ttf",
       "css/souye.css",
       "main/subindex.html",
-<<<<<<< HEAD
-      "fonts/iconfont_foot.ttf",
-      "css/iconfont.css",
-      "css/iconfont_money.css",
-      "css/iconfont_foot.css",
-      "js/common.js",
-      "js/mui.min.js",
-      "css/mui.min.css"
-=======
       "js/common.js",
       "fonts/iconfont_foot.ttf",
       "js/mui.min.js",
       "css/iconfont.css",
       "css/mui.min.css",
-      "fonts/iconfont.ttf",
       "css/iconfont_money.css",
-      "css/iconfont_foot.css"
->>>>>>> c27428674c483eef14b03d01cc73d4691c9edcec
+      "css/iconfont_foot.css",
+      "fonts/iconfont.ttf"
     ],
     "refer": [
       "main/subindex.html",
@@ -30,50 +122,25 @@
       "inquiry/Inquiry.html"
     ]
   },
-  "main/subindex.html": {
-    "resources": [
-      "img/test.jpg",
-      "img/lookonline.jpg",
-      "img/jiankang2.jpeg",
-      "img/findHp.jpg",
-      "img/finddoctor.jpg",
-<<<<<<< HEAD
-      "fonts/iconfont.ttf",
-      "js/souye.js",
-      "img/jiankang.jpeg",
-      "fonts/mui.ttf",
-      "css/iconfont_money.css",
-      "css/souye.css",
-      "js/common.js",
-      "js/mui.min.js",
-      "css/iconfont.css",
-      "css/mui.min.css",
-      "css/iconfont_foot.css"
-    ],
-    "refer": []
-  },
   "login/login.html": {
     "resources": [
       "js/common.js",
       "js/mui.min.js",
-      "fonts/mui.ttf",
-      "css/mui.min.css"
-    ],
-    "refer": [
-      "index.html"
-=======
-      "js/souye.js",
-      "img/jiankang.jpeg"
-    ],
-    "refer": []
-  },
-  "mine/Mine.html": {
-    "resources": [
+      "css/mui.min.css",
       "fonts/mui.ttf"
     ],
     "refer": [
+      "index.html"
+    ]
+  },
+  "mine/Mine.html": {
+    "resources": [
+      "fonts/mui.ttf",
+      "js/mui.min.js",
+      "css/mui.min.css"
+    ],
+    "refer": [
       "login/login.html"
->>>>>>> c27428674c483eef14b03d01cc73d4691c9edcec
     ]
   },
   "healthfile/Health_File.html": {
@@ -82,7 +149,10 @@
       "css/iconfont_health_file.css",
       "fonts/iconfont_health_file.ttf",
       "css/health_file.css",
-      "img/doctor.jpeg"
+      "img/doctor.jpeg",
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "css/iconfont_foot.css"
     ],
     "refer": []
   },
@@ -92,30 +162,69 @@
       "img/inquiry2.jpg",
       "css/inquiry.css",
       "fonts/iconfont_inquiry.ttf",
-<<<<<<< HEAD
       "css/header.css",
+      "fonts/mui.ttf",
       "js/mui.min.js",
       "css/mui.min.css",
-      "css/iconfont_foot.css",
-      "fonts/mui.ttf"
+      "css/iconfont_foot.css"
     ],
     "refer": []
   },
-  "mine/Mine.html": {
-    "refer": [
-      "login/login.html"
-    ],
+  "maps/maps_map.html": {
     "resources": [
-      "fonts/mui.ttf"
-=======
-      "css/header.css"
+      "js/common.js",
+      "maps/maps_map_sub.html",
+      "js/maps.js",
+      "js/maps_immersed.js",
+      "css/maps.css",
+      "js/mui.min.js"
+    ],
+    "refer": [
+      "maps/maps_map_sub.html"
+    ]
+  },
+  "maps/maps_map_sub.html": {
+    "resources": [
+      "css/maps.css"
     ],
     "refer": []
   },
-  "login/login.html": {
+  "maps/geolocation.html": {
+    "resources": [
+      "js/common.js",
+      "js/maps.js",
+      "css/maps.css"
+    ],
+    "refer": []
+  },
+  "finddoctor/hosHP.html": {
+    "resources": [
+      "js/common.js",
+      "js/mui.min.js",
+      "css/mui.min.css",
+      "css/iconfont_money.css",
+      "css/souye.css",
+      "css/iconfont.css",
+      "css/iconfont_foot.css",
+      "fonts/iconfont_money.ttf",
+      "fonts/iconfont_foot.ttf",
+      "fonts/mui.ttf",
+      "fonts/iconfont.ttf"
+    ],
     "refer": [
-      "index.html"
->>>>>>> c27428674c483eef14b03d01cc73d4691c9edcec
+      "maps/maps_map.html"
     ]
+  },
+  "finddoctor/docHP.html": {
+    "resources": [
+      "css/souye.css",
+      "js/common.js",
+      "js/mui.min.js",
+      "css/iconfont.css",
+      "css/mui.min.css",
+      "css/iconfont_money.css",
+      "css/iconfont_foot.css"
+    ],
+    "refer": []
   }
 }
