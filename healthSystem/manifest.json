@@ -367,7 +367,8 @@
 					"js/mui.min.js",
 					"css/mui.min.css",
 					"css/iconfont_foot.css",
-					"fonts/mui.ttf"
+					"fonts/mui.ttf",
+					"fonts/iconfont_foot.ttf"
 				],
 				"refer": [
 					"inquiry/mydoctor.html",
@@ -574,7 +575,8 @@
 			"inquiry/select_file.html": {
 				"resources": [
 					"js/mui.picker.min.js",
-					"css/fast_question.css"
+					"css/fast_question.css",
+					"css/mui.picker.min.css"
 				],
 				"refer": [
 					"inquiry/basic_text.html"

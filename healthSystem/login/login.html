@@ -55,15 +55,15 @@
                 for(var i = 0; i < views.length - 1; i++) {
                        plus.webview.close(views[i].id);
                        }
-			
-			
-			var page = mui.preload({
-			      url:'../index.html',
-			  	  id:'index',//默认使用当前页面的url作为id
-			  	  styles:{popGesture: 'hide'},//窗口参数
-			  	  waiting: {autoShow: false},
-			    extras:{}//自定义扩展参数
-			});
+//			
+//			
+//			var page = mui.preload({
+//			      url:'../index.html',
+//			  	  id:'index',//默认使用当前页面的url作为id
+//			  	  styles:{popGesture: 'hide'},//窗口参数
+//			  	  waiting: {autoShow: false},
+//			    extras:{}//自定义扩展参数
+//			});
 			var loginButton = doc.getElementById('login');
 			var user_phoneBox = doc.getElementById('user_phone');
 			var user_passwordBox = doc.getElementById('user_password');
@@ -110,10 +110,10 @@
 									autoShow: false
 								}
 							});
-							setTimeout(function(){
-								var self = plus.webview.currentWebview();
-								self.close();	
-							},1000);
+//							setTimeout(function(){
+//								var self = plus.webview.currentWebview();
+//								self.close();	
+//							},1000);
       					}else{
       						//登录失败
       						plus.ui.toast(data.data);

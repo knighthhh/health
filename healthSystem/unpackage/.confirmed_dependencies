@@ -4,8 +4,14 @@
       "css/souye.css",
       "css/iconfont_money.css",
       "img/doctor.jpeg",
-      "css/iconfont_foot.css"
-    ]
+      "css/iconfont_foot.css",
+      "js/common.js",
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "css/iconfont.css",
+      "css/mui.min.css"
+    ],
+    "refer": []
   },
   "index.html": {
     "resources": [
@@ -40,7 +46,8 @@
       "fonts/iconfont.ttf",
       "css/iconfont_money.css",
       "css/iconfont_foot.css"
-    ]
+    ],
+    "refer": []
   },
   "main/subindex.html": {
     "resources": [
@@ -65,7 +72,10 @@
     ],
     "refer": [
       "finddoctor/search_doctor.html",
-      "finddoctor/search_doctor_yy.html"
+      "finddoctor/search_doctor_yy.html",
+      "main/search/search.html",
+      "finddoctor/docHP.html",
+      "finddoctor/hosHP.html"
     ]
   },
   "login/login.html": {
@@ -101,7 +111,9 @@
       "css/health_file.css"
     ],
     "refer": [
-      "finddoctor/search_doctor_xm.html"
+      "finddoctor/search_doctor_xm.html",
+      "finddoctor/search_doctor_yy.html",
+      "finddoctor/search_doctor_jb.html"
     ]
   },
   "healthfile/Health_File.html": {
@@ -111,7 +123,8 @@
       "fonts/iconfont_health_file.ttf",
       "css/health_file.css",
       "img/doctor.jpeg"
-    ]
+    ],
+    "refer": []
   },
   "inquiry/Inquiry.html": {
     "resources": [
@@ -120,7 +133,12 @@
       "css/inquiry.css",
       "fonts/iconfont_inquiry.ttf",
       "css/header.css",
-      "fonts/mui.ttf"
+      "fonts/mui.ttf",
+      "fonts/iconfont_foot.ttf"
+    ],
+    "refer": [
+      "inquiry/mydoctor.html",
+      "inquiry/select_file.html"
     ]
   },
   "finddoctor/search_doctor_xm.html": {
@@ -150,5 +168,38 @@
     "refer": [
       "finddoctor/hosHP.html"
     ]
+  },
+  "inquiry/mydoctor.html": {
+    "resources": [
+      "fonts/iconfont_money.ttf",
+      "css/mydoctor.css",
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "css/mui.min.css",
+      "css/iconfont_se.css",
+      "css/iconfont_money.css",
+      "fonts/iconfont_se.ttf",
+      "img/doctor.jpeg"
+    ],
+    "refer": []
+  },
+  "inquiry/select_file.html": {
+    "resources": [
+      "js/mui.picker.min.js",
+      "css/mui.picker.min.css",
+      "css/fast_question.css"
+    ],
+    "refer": []
+  },
+  "main/search/search.html": {
+    "resources": [
+      "css/search.css",
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "css/mui.min.css",
+      "css/search_history.css",
+      "css/search_info.css"
+    ],
+    "refer": []
   }
 }
