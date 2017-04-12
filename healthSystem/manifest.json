@@ -364,7 +364,8 @@
 					"css/header.css",
 					"js/mui.min.js",
 					"css/mui.min.css",
-					"css/iconfont_foot.css"
+					"css/iconfont_foot.css",
+					"fonts/mui.ttf"
 				],
 				"refer": [
 					"inquiry/mydoctor.html",

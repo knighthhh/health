@@ -3,16 +3,16 @@ namespace Admin\Controller;
 
 use Think\Controller;
 /*
-*  科室管理
+*  历史就诊记录管理
 */
-class DepartmentController extends Controller
+class HistoryVisController extends Controller
 {
 
 
-	public function listDep()
+	public function listHis()
 	{
-		$model = D('department_info');
-		$data = $model->getTree();
+		$model = D('see_doc_case');
+		$data = $model->search();
 		$this->assign('data',$data);
 		$this->display();
 	}

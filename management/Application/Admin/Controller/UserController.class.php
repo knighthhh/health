@@ -2,7 +2,9 @@
 namespace Admin\Controller;
 
 use Think\Controller;
-
+/*
+*  用户信息管理
+*/
 class UserController extends Controller
 {
 	public function listUser()

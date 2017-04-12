@@ -22,12 +22,12 @@
 </style>
 </head>
 <body>
-<form method="post" action="/health/management/Application/index.php/Admin/User/listUser" id="listform">
+<form method="post" action="/health/management/Application/index.php/Admin/Knowledge/listKnow" id="listform">
   <div class="panel admin-panel">
     <div class="panel-head"><strong class="icon-reorder"> 内容列表</strong></div>
     <div class="padding border-bottom">
       <ul class="search" style="padding-left:10px;">
-        <li> <a class="button border-green icon-plus-square-o" href="/health/management/Application/index.php/Admin/User/add"> 添加用户</a> </li>
+        <li> <a class="button border-green icon-plus-square-o" href="/health/management/Application/index.php/Admin/Knowledge/add"> 添加知识</a> </li>
         <li>搜索：</li>
         <li>首页
           <select name="s_ishome" class="input" onchange="changesearch()" style="width:60px; line-height:17px; display:inline-block">
@@ -57,104 +57,26 @@
     <table class="table table-hover text-center">
       <tr>
         <th width="8%" style="text-align:left; padding-left:20px;">ID</th>
-        <th width="8%">帐号</th>
-        <th width="10%">用户名称</th>
-        <th width="14%">所属地址</th>
-        <th width="5%">性别</th>
-        <th width="20%">注册时间</th>
+        <th width="8%">标题</th>
+        <th width="10%">点击量</th>
+        <th width="14%">更新时间</th>
         <th width="30%">操作</th>
       </tr>
     <?php foreach ($data as $k => $v): ?>
         <tr>
-          <td style="text-align:left; padding-left:20px;"><input type="checkbox" name="user_id[]" value="<?php echo $v['user_id']; ?>" /><?php echo $v['user_id']; ?></td>
-          <td><?php echo $v['user_phone']; ?></td>
-          <td><?php echo $v['user_name']; ?></td>
-          <td><?php echo $v['user_city']; ?></td>
-          <td><?php echo $v['user_sex']; ?></td>
-          <td><?php echo $v['user_time']; ?></td>
+          <td style="text-align:left; padding-left:20px;"><input type="checkbox" name="know_id[]" value="<?php echo $v['know_id']; ?>" /><?php echo $v['know_id']; ?></td>
+          <td><?php echo $v['know_title']; ?></td>
+          <td><?php echo $v['know_see']; ?></td>
+          <td><?php echo $v['time']; ?></td>
           <td><div class="button-group">
-          <a class="button border-green" style="cursor:pointer" onclick="showDialog(<?php echo $v['user_id']; ?>)"><span class="icon-view-o"></span> 查看</a>
-          <a class="button border-main" href="/health/management/Application/index.php/Admin/User/edit/user_id/<?php echo $v['user_id']; ?>"><span class="icon-edit"></span> 修改</a> 
-          <a class="button border-red" style="cursor:pointer" onclick="del(<?php echo $v['user_id']; ?>)"><span class="icon-trash-o"></span> 删除</a>
-          <a class="button border-green" href="/health/management/Application/index.php/Admin/User/edit/user_id/<?php echo $v['user_id']; ?>"><span class="icon-view-o"></span> 健康档案</a>
+          <a class="button border-green" style="cursor:pointer" onclick="showDialog(<?php echo $v['know_id']; ?>)"><span class="icon-view-o"></span> 查看</a>
+          <a class="button border-main" href="/health/management/Application/index.php/Admin/Knowledge/edit/know_id/<?php echo $v['know_id']; ?>"><span class="icon-edit"></span> 修改</a> 
+          <a class="button border-red" style="cursor:pointer" onclick="del(<?php echo $v['know_id']; ?>)"><span class="icon-trash-o"></span> 删除</a>
           </div></td>
           <td colspan="0">
           	<!-- 详情页面 -->
-        	<div id="dialog<?php echo $v['user_id']; ?>" style="display:none;" title="详情信息">
-    		<table class="dialogtable" cellspacing="0" cellpadding="0">
-    			<tr>
-	    			<td valign="middle">头像：</td>
-	    			<td><?php showImage($v['user_img'],120,80); ?></td>
-	    		</tr>
-	    		<tr>
-	    			<td>用户名称：</td>
-	    			<td><?php echo $v['user_name']; ?></td>
-	    		</tr>
-	    		<tr>
-	    			<td>用户昵称：</td>
-	    			<td><?php echo $v['user_nickname']; ?></td>
-	    		</tr>
-	    		<tr>
-	    			<td>年龄：</td>
-	    			<td><?php echo $v['user_age']; ?></td>
-	    		</tr>
-	    		<tr>
-	    			<td>用户电话：</td>
-	    			<td><?php echo $v['user_phone']; ?></td>
-	    		</tr>
-	    		<tr>
-	    			<td>用户密码：</td>
-	    			<td><?php echo $v['user_password']; ?></td>
-	    		</tr>
-	    		<tr>
-	    			<td>性别：</td>
-	    			<td><?php echo $v['user_sex']; ?></td>
-	    		</tr>
-	    		<tr>
-	    			<td>所在城市：</td>
-	    			<td><?php echo $v['user_city']; ?></td>
-	    		</tr>
-	    		<tr>
-	    			<td>出生日期：</td>
-	    			<td><?php echo $v['user_date']; ?></td>
-	    		</tr>
-	    		<tr>
-	    			<td>证件类型：</td>
-	    			<td><?php echo $v['papers_type']; ?></td>
-	    		</tr>
-	    		<tr>
-	    			<td>证件号码：</td>
-	    			<td><?php echo $v['papers_num']; ?></td>
-	    		</tr>
-	    		<tr>
-	    			<td>民族：</td>
-	    			<td><?php echo $v['nation']; ?></td>
-	    		</tr>
-	    		<tr>
-	    			<td>职业：</td>
-	    			<td><?php echo $v['profession']; ?></td>
-	    		</tr>
-	    		<tr>
-	    			<td>文化程度：</td>
-	    			<td><?php echo $v['education']; ?></td>
-	    		</tr>
-	    		<tr>
-	    			<td>婚姻状况：</td>
-	    			<td><?php echo $v['marriage']; ?></td>
-	    		</tr>
-	    		<tr>
-	    			<td>QQ：</td>
-	    			<td><?php echo $v['user_qq']; ?></td>
-	    		</tr>
-	    		<tr>
-	    			<td>微信：</td>
-	    			<td><?php echo $v['user_weixin']; ?></td>
-	    		</tr>
-	    		<tr>
-	    			<td>创建时间：</td>
-	    			<td><?php echo $v['user_time']; ?></td>
-	    		</tr>
-    		</table>
+        	<div id="dialog<?php echo $v['know_id']; ?>" style="display:none;" title="详情信息">
+        	<div><?php echo htmlspecialchars_decode($v['know_content']); ?></div>
        		</div>
           </td>
         </tr>
@@ -195,9 +117,9 @@ function showDialog(id) {
 	});
   };
 //单个删除
-function del(user_id){
+function del(know_id){
 	if(confirm("您确定要删除吗?")){
-		window.location="/health/management/Application/index.php/Admin/User/delete/user_id/"+user_id;
+		window.location="/health/management/Application/index.php/Admin/Knowledge/delete/know_id/"+know_id;
 	}
 }
 

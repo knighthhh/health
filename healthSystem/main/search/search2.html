@@ -15,23 +15,23 @@
 			body {
 				background-color: #efeff4;
 			}
-			</style>
+		</style>
 	</head>
 
 	<body>
 		<!-- 头部  包含搜索-->
-	<header id="header" class="mui-bar mui-bar-nav public-color">
-	    <a class="mui-action-back mui-icon mui-icon-back mui-pull-left size2"></a>
-	     <a class="icon2 mui-pull-right ">搜索</a>
-	   
-	    <div id="search"class="search">
-	    	<div class="mui-input-row mui-search">
-	    		<input class=" mui-input-clear" type="search" name="search" id="search" value="" placeholder="搜疾病，医生，医院，科室" />
-	    		
-	    	</div>
-	    </div>
-	</header>
-	<!-- 头部 -->
+		<header id="header" class="mui-bar mui-bar-nav public-color">
+			<a class="mui-action-back mui-icon mui-icon-back mui-pull-left size2"></a>
+			<a class="icon2 mui-pull-right ">搜索</a>
+
+			<div id="search" class="search">
+				<div class="mui-input-row mui-search">
+					<input class=" mui-input-clear" type="search" name="search" id="search" value="" placeholder="搜疾病，医生，医院，科室" />
+
+				</div>
+			</div>
+		</header>
+		<!-- 头部 -->
 		<div class="mui-content">
 			<div id="slider" class="mui-slider mui-fullscreen">
 				<div id="sliderSegmentedControl" class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
@@ -60,28 +60,32 @@
 		<script src="../../js/webviewGroup.js" type="text/javascript" charset="utf-8"></script>
 		<script>
 			mui.init();
-			
 			mui.plusReady(function() {
 				var group = new webviewGroup("viewgroup", {
 					items: [{
 						id: "search_info.html",
 						url: "search_info.html",
+						waiting:false,
 						extras: {}
 					}, {
 						id: "search_info_jb.html",
 						url: "search_info_jb.html",
+						waiting:false,
 						extras: {}
 					}, {
 						id: "search_info_hp.html",
 						url: "search_info_hp.html",
+						waiting:false,
 						extras: {}
 					}, {
 						id: "search_info_dt.html",
 						url: "search_info_dt.html",
+						waiting:false,
 						extras: {}
 					}, {
 						id: "search_info_ks.html",
 						url: "search_info_ks.html",
+						waiting:false,
 						extras: {}
 					}],
 					onChange: function(obj) {
@@ -101,7 +105,7 @@
 			mui.back = function() {
 				var _self = plus.webview.currentWebview();
 				_self.close("auto");
-				
+
 			}
 		</script>
 	</body>

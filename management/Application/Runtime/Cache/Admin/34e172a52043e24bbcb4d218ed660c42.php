@@ -29,32 +29,7 @@
     .tab-front{
       background:#0095BB;
     }
-    #ul_img_list div{
-      float: left;
-      margin-left: 10px;
-      margin-top: 10px;
-      margin-bottom: 10px;
-    }
-    #ul_img_list li{
-      margin-left: 810px;
-    }
-    .delImg{
-      margin-left: 90px;
-      margin-top: 10px;
-      width: 80px;
-      height: 30px;
-      border: 0px;
-      background-image: url(<?php echo (ADMIN_IMAGES_URL); ?>/delete.jpg);
-      background-size: 20px;
-      background-repeat: no-repeat;
-      background-position: 10%;
-      border-radius: 5px;
-      padding-left: 30px;
-      font-size: 16px;
-    }
-    .delImg:hover{
-       opacity:0.7;
-    }
+    
 </style>
 </head>
 <body>
@@ -62,30 +37,34 @@
       <div class="panel-head" id="add">
        <ul id="nav"> 
           <li class="tab-front">基本信息</li> 
-          <li class="tab-back">医院介绍</li>
-          <li class="tab-back">医院图片</li>
+          <li class="tab-back">医生介绍</li>
       </ul> 
       </div>
     <div class="body-content">
-    <form method="post" class="form-x" action="/health/management/Application/index.php/Admin/hospital/edit/id/57" name="fileUploadForm" enctype="multipart/form-data">
-    <input type="hidden" name="hos_id" value="<?php echo $data['hos_id']; ?>" />
+    <form method="post" class="form-x" action="/health/management/Application/index.php/Admin/doctor/edit/doc_id/33/hos_id/57" name="fileUploadForm" enctype="multipart/form-data">
+    <input type="hidden" name="doc_id" value="<?php echo I('get.doc_id'); ?>">
+    <input type="hidden" name="hos_id" value="<?php echo I('get.hos_id'); ?>">
     <div class="div_tab" style="display:block;">  
       <div class="form-group">
         <div class="label">
-          <label>医院名称：</label>
+          <label>姓名：</label>
         </div>
         <div class="field">
-          <input type="text" class="input w50" value="<?php echo $data['hos_name']; ?>" name="hos_name" data-validate="required:请输入标题" />
+          <input type="text" class="input w50" value="<?php echo $data['doc_name']; ?>" name="doc_name" data-validate="required:请输入标题" />
           <span class="tips">*</span>
         </div>
       </div>
-
       <div class="form-group">
         <div class="label">
-          <label>医院等级：</label>
+          <label>所属科室：</label>
         </div>
         <div class="field">
-          <input type="text" class="input w50" value="<?php echo $data['hos_level']; ?>" name="hos_level" />
+          <select name="depa_id">
+            <option value="0">请选择</option>
+            <?php foreach ($dep as $k => $v): if($data['depa_id']==$v['dep_id']) { $select = 'selected="selected"'; }else{ $select = ''; } ?>
+              <option <?php echo $select; ?> value="<?php echo $v['dep_id']; ?>"><?php echo str_repeat("　　",2*$v['level'])."|--".$v['dep_name']; ?></option>
+            <?php endforeach; ?>
+          </select> 
           <span class="tips">*</span>
         </div>
       </div>
@@ -103,39 +82,64 @@
       <div class="clear"></div>
       <div class="form-group">
         <div class="label">
-          <label>详细地址：</label>
+          <label>性别：</label>
         </div>
         <div class="field">
-          <input type="text" class="input w50" value="<?php echo $data['hos_address_detail']; ?>" name="hos_address_detail" />
+          <label><input <?php echo $data['doc_sex']=='男'?'checked="checked"':null ?> name="doc_sex" type="radio" value="男"/>男</label>
+          <label><input <?php echo $data['doc_sex']=='女'?'checked="checked"':null ?> name="doc_sex" type="radio" value="女"/>女</label>
           <span class="tips">*</span>
         </div>
       </div>
       <div class="form-group">
         <div class="label">
-          <label>经度：</label>
+          <label>擅长：</label>
         </div>
         <div class="field">
-          <input type="text" class="input w50" value="<?php echo $data['hos_longitude']; ?>" name="hos_longitude" />
+          <input type="text" class="input w50" value="<?php echo $data['doc_especial']; ?>" name="doc_especial" />
         </div>
       </div>
       <div class="form-group">
         <div class="label">
-          <label>纬度：</label>
+          <label>电话：</label>
         </div>
         <div class="field">
-          <input type="text" class="input w50" value="<?php echo $data['hos_latitude']; ?>" name="hos_latitude" />
+          <input type="text" class="input w50" value="<?php echo $data['doc_phone']; ?>" name="doc_phone" />
         </div>
       </div>
       <div class="form-group">
-        <div class="label" style="margin-top: 30px;">
-          <label>院内导航图片：</label>
+        <div class="label">
+          <label>登录密码：</label>
         </div>
-        <!-- 显示图片 -->
-        <span><?php showImage($data['hos_navigate_img'],120,80); ?></span>
+        <div class="field">
+          <input type="text" class="input w50" value="<?php echo $data['doc_password']; ?>" name="doc_phone" />
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="label">
+          <label>支付宝账号：</label>
+        </div>
+        <div class="field">
+          <input type="text" class="input w50" value="<?php echo $data['doc_alipay']; ?>" name="doc_alipay" />
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="label">
+          <label>咨询费用：</label>
+        </div>
+        <div class="field">
+          <input type="text" class="input w50" value="<?php echo $data['doc_fee']; ?>" name="doc_fee" />
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="label">
+          <label>头像：</label>
+        </div>
+        <!-- 显示头像 -->
+        <span><?php showImage($data['doc_img'],120,80); ?></span>
         <div style="margin-left: 125px;margin-top: 10px" class="field">
-          <input type="file" id="fileUpload" name="hos_navigate_img" class="input tips" style="display:none;width:25%; float:left;"  value=""  data-toggle="hover" data-place="right" data-image=""  />
+          <input type="file" id="fileUpload" name="doc_img" class="input tips" style="display:none;width:25%; float:left;"  value=""  data-toggle="hover" data-place="right" data-image=""  />
           <div id="filePath" style="float:left;line-height:40px;" ></div>
-          <input type="button" class="button bg-blue margin-left" id="upload" value="+ 浏览上传"  style="float:left;">
+          <input type="button" class="button bg-blue margin-left upload" value="+ 浏览上传"  style="float:left;">
           <div class="tipss">图片格式：jpg，jpeg，gif，png</div>
         </div>
       </div>
@@ -144,36 +148,22 @@
           <label>热门程度：</label>
         </div>
         <div class="field">
-          <input type="text" class="input w50" name="hos_hot" value="<?php echo $data['hos_hot']; ?>"  />
+          <input type="text" class="input w50" name="doc_hot" value="<?php echo $data['doc_hot']; ?>"  />
           <div class="tips"></div>
         </div>
       </div>
       </div>
-      <!-- 医院介绍 -->
+      <!-- 医生介绍 -->
       <div class="div_tab" style="display: none;">
         <div class="form-group" >
           <div class="label">
-            <label>医院介绍：</label>
+            <label>医生介绍：</label>
           </div>
           <div class="field">
-            <textarea id="introduce" name="hos_introduce"><?php echo $data['hos_introduce']; ?></textarea>
+            <textarea id="introduce" name="doc_introduce"><?php echo $data['doc_introduce']; ?></textarea>
             <div class="tips"></div>
           </div>
         </div>
-      </div>
-      <!-- 医院图片 -->
-      <div style="display: none;"  class="div_tab">
-        <input type="button" class="button bg-blue margin-left" id="addOne" value="+ 添加一张"  style="float:left;margin-bottom: 30px;">
-        <hr/>
-          <ul id="ul_img_list">
-            <?php foreach ($imgData as $k => $v): ?>
-              <div>
-                  <?php showImage($v['hos_mid_img'],250); ?></br>
-                  <input imgId="<?php echo $v['id']; ?>" type="button" class="delImg" value="删除" />
-              </div>
-            <?php endforeach ?>
-          </ul>
-        <hr/>
       </div>
       <!-- 提交 -->
       <div class="form-group" style="margin-left: 200px;margin-top: 40px">
@@ -192,9 +182,10 @@
           initialFrameWidth:"80%",
           initialFrameHeight:"400"
           });
-
+  
   //院内导航图上传按钮处理
-  $("#upload").click(function(){
+  $(".upload").click(function(){
+    console.log("Sd");
     $("#fileUpload").click();
   });
   $("#fileUpload").change(function(){
@@ -217,35 +208,11 @@
     $(this).removeClass("tab-back").addClass("tab-front");
   });
 
-  //添加一张图片
-  $("#addOne").click(function(){
-    var li = '<li><input type=file name="hos_img[]"/></li></br>';
-    $("#ul_img_list").append(li);
-  });
-
-  //ajax删除医院图片
-  $(".delImg").click(function(){
-    if(confirm("确认删除图片吗？")){
-      //获取删除按钮的父节点li
-      var parentNode = $(this).parent();
-      //获取删除按钮上的医院图片ID属性
-      var imgId = $(this).attr("imgId");
-      $.ajax({
-        type: "GET",
-        url : "<?php echo U('ajaxDelImg','',false);?>/imgId/"+imgId,
-        success:function(data){
-          //在页面中删除图片节点
-          parentNode.remove();
-          }
-      });
-    }
-  });
-
-  $("#city").citySelect({   
+$("#city").citySelect({   
     url:"<?php echo (ADMIN_JS_URL); ?>city.min.js",   
-    prov:"<?php echo ($data["hos_address"]["0"]); ?>", //省份  
-    city:"<?php echo ($data["hos_address"]["1"]); ?>", //城市  
-    dist:"<?php echo ($data["hos_address"]["2"]); ?>", //区县  
+    prov:"<?php echo ($data["doc_address"]["0"]); ?>", //省份  
+    city:"<?php echo ($data["doc_address"]["1"]); ?>", //城市  
+    dist:"<?php echo ($data["doc_address"]["2"]); ?>", //区县 
     nodata:"none" //当子集无数据时，隐藏select  
 });
 </script>
