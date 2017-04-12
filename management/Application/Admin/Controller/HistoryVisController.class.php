@@ -7,8 +7,6 @@ use Think\Controller;
 */
 class HistoryVisController extends Controller
 {
-
-
 	public function listHis()
 	{
 		$model = D('see_doc_case');
