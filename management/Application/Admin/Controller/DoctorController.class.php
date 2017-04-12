@@ -2,7 +2,9 @@
 namespace Admin\Controller;
 
 use Think\Controller;
-
+/*
+*  医生信息管理
+*/
 class DoctorController extends Controller
 {
 	public function listDoc()

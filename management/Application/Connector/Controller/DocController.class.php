@@ -35,7 +35,7 @@ class DocController extends Controller{
         ->select();
         $i = 0;
         foreach ($data as $k => $v) {
-            $firstCharter = mb_substr($v['doc_name'],0,1);
+            $firstCharter = mb_substr($v['doc_name'],0,1,'utf8');
             $firstCharter = getFirstCharter($firstCharter);
             $data[$i]['firstCharter'] = $firstCharter;
             $i++;
@@ -59,7 +59,7 @@ class DocController extends Controller{
                 //echo $v1['firstCharter'];
             }
         }
-        //dump($info);die;
+		$firstCharter = getFirstCharter("sdas");
         echo json_encode($info);
     }
 }

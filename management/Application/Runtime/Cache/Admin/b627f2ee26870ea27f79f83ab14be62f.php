@@ -22,12 +22,12 @@
 </style>
 </head>
 <body>
-<form method="post" action="/health/management/Application/index.php/Admin/Hospital/listHos" id="listform">
+<form method="post" action="/health/management/Application/index.php/Admin/doctor/listDoc/hos_id/57" id="listform">
   <div class="panel admin-panel">
     <div class="panel-head"><strong class="icon-reorder"> 内容列表</strong></div>
     <div class="padding border-bottom">
       <ul class="search" style="padding-left:10px;">
-        <li> <a class="button border-green icon-plus-square-o" href="/health/management/Application/index.php/Admin/Hospital/add"> 添加医院</a> </li>
+        <li> <a class="button border-green icon-plus-square-o" href="/health/management/Application/index.php/Admin/Doctor/add/hos_id/<?php echo I('hos_id'); ?>"> 添加医生</a> </li>
         <li>搜索：</li>
         <li>首页
           <select name="s_ishome" class="input" onchange="changesearch()" style="width:60px; line-height:17px; display:inline-block">
@@ -56,69 +56,93 @@
     </div>
     <table class="table table-hover text-center">
       <tr>
-        <th width="10%" style="text-align:left; padding-left:20px;">ID</th>
-        <th width="15%">名称</th>
-        <th width="5%">等级</th>
-        <th width="10%">所属地址</th>
-        <th width="20%">详细地址</th>
-        <th width="10%">创建时间</th>
+        <th width="8%" style="text-align:left; padding-left:20px;">ID</th>
+        <th width="8%">名称</th>
+        <th width="10%">所属医院</th>
+        <th width="8%">所属科室</th>
+        <th width="14%">所属地址</th>
+        <th width="5%">性别</th>
+        <th width="20%">擅长</th>
         <th width="30%">操作</th>
       </tr>
     <?php foreach ($data as $k => $v): ?>
         <tr>
-          <td style="text-align:left; padding-left:20px;"><input type="checkbox" name="hos_id[]" value="<?php echo $v['hos_id']; ?>" /><?php echo $v['hos_id']; ?></td>
+          <td style="text-align:left; padding-left:20px;"><input type="checkbox" name="hos_id[]" value="<?php echo $v['doc_id']; ?>" /><?php echo $v['doc_id']; ?></td>
+          <td><?php echo $v['doc_name']; ?></td>
           <td><?php echo $v['hos_name']; ?></td>
-          <td><?php echo $v['hos_level']; ?></td>
-          <td><?php echo $v['hos_address']; ?></td>
-          <td><?php echo $v['hos_address_detail']; ?></td>
-          <td><?php echo $v['hos_time']; ?></td>
+          <td><?php echo $v['dep_name']; ?></td>
+          <td><?php echo $v['doc_address']; ?></td>
+          <td><?php echo $v['doc_sex']; ?></td>
+          <td><?php echo $v['doc_especial']; ?></td>
           <td><div class="button-group">
-          <a class="button border-green" style="cursor:pointer" onclick="showDialog(<?php echo $v['hos_id']; ?>)"><span class="icon-view-o"></span> 查看</a>
-          <a class="button border-main" href="/health/management/Application/index.php/Admin/hospital/edit/id/<?php echo $v['hos_id']; ?>"><span class="icon-edit"></span> 修改</a> 
-          <a class="button border-red" style="cursor:pointer" onclick="del(<?php echo $v['hos_id']; ?>)"><span class="icon-trash-o"></span> 删除</a>
-          <a class="button border-green" style="cursor:pointer" href="/health/management/Application/index.php/Admin/hospital/listDep/hos_id/<?php echo $v['hos_id']; ?>"><span class="icon-view-o"></span> 科室</a>
-          <a class="button border-green" style="cursor:pointer" href="/health/management/Application/index.php/Admin/doctor/listDoc/hos_id/<?php echo $v['hos_id']; ?>"><span class="icon-view-o"></span> 医生</a>
+          <a class="button border-green" style="cursor:pointer" onclick="showDialog(<?php echo $v['doc_id']; ?>)"><span class="icon-view-o"></span> 查看</a>
+          <a class="button border-main" href="/health/management/Application/index.php/Admin/doctor/edit/doc_id/<?php echo $v['doc_id']; ?>/hos_id/<?php echo $v['hos_id']; ?>"><span class="icon-edit"></span> 修改</a> 
+          <a class="button border-red" style="cursor:pointer" onclick="del(<?php echo $v['doc_id'].",".I('hos_id'); ?>)"><span class="icon-trash-o"></span> 删除</a>
           </div></td>
           <td colspan="0">
           	<!-- 详情页面 -->
-        	<div id="dialog<?php echo $v['hos_id']; ?>" style="display:none;" title="详情信息">
+        	<div id="dialog<?php echo $v['doc_id']; ?>" style="display:none;" title="详情信息">
     		<table class="dialogtable" cellspacing="0" cellpadding="0">
+    			<tr>
+	    			<td valign="middle">头像：</td>
+	    			<td><?php showImage($v['doc_img'],120,80); ?></td>
+	    		</tr>
 	    		<tr>
-	    			<td>医院名称：</td>
+	    			<td>医生名称：</td>
+	    			<td><?php echo $v['doc_name']; ?></td>
+	    		</tr>
+	    		<tr>
+	    			<td>所属医院：</td>
 	    			<td><?php echo $v['hos_name']; ?></td>
 	    		</tr>
 	    		<tr>
-	    			<td>医院等级：</td>
-	    			<td><?php echo $v['hos_level']; ?></td>
+	    			<td>所属科室：</td>
+	    			<td><?php echo $v['dep_name']; ?></td>
 	    		</tr>
 	    		<tr>
 	    			<td>所属地址：</td>
-	    			<td><?php echo $v['hos_address']; ?></td>
+	    			<td><?php echo $v['doc_address']; ?></td>
 	    		</tr>
 	    		<tr>
-	    			<td>详细地址：</td>
-	    			<td><?php echo $v['hos_address_detail']; ?></td>
+	    			<td>性别：</td>
+	    			<td><?php echo $v['doc_sex']; ?></td>
 	    		</tr>
 	    		<tr>
-	    			<td>经度：</td>
-	    			<td><?php echo $v['hos_longitude']; ?></td>
+	    			<td>电话：</td>
+	    			<td><?php echo $v['doc_phone']; ?></td>
 	    		</tr>
 	    		<tr>
-	    			<td>纬度：</td>
-	    			<td><?php echo $v['hos_latitude']; ?></td>
+	    			<td>擅长：</td>
+	    			<td><?php echo $v['doc_especial']; ?></td>
 	    		</tr>
 	    		<tr>
-	    			<td valign="middle">院内导航图片：</td>
-	    			<td><?php showImage($v['hos_navigate_img'],120,80); ?></td>
+	    			<td>支付宝账号：</td>
+	    			<td><?php echo $v['doc_alipay']; ?></td>
+	    		</tr>
+	    		<tr>
+	    			<td>累计接诊：</td>
+	    			<td><?php echo $v['doc_rece']; ?></td>
+	    		</tr>
+	    		<tr>
+	    			<td>被关注量：</td>
+	    			<td><?php echo $v['doc_attention']; ?></td>
+	    		</tr>
+	    		<tr>
+	    			<td>咨询费用：</td>
+	    			<td><?php echo $v['doc_fee']; ?></td>
 	    		</tr>
 	    		<tr>
 	    			<td>热门程度：</td>
-	    			<td><?php echo $v['hos_hot']; ?></td>
+	    			<td><?php echo $v['doc_hot']; ?></td>
+	    		</tr>
+	    		<tr>
+	    			<td>创建时间：</td>
+	    			<td><?php echo $v['doc_time']; ?></td>
 	    		</tr>
     		</table>
 	    		<span style="display:block;width:80%;margin-top: 15px ">
-					医院介绍：<br/>
-					<?php echo htmlspecialchars_decode($v['hos_introduce']); ?>
+					医生介绍：<br/>
+					<?php echo htmlspecialchars_decode($v['doc_introduce']); ?>
 				</span>
        		</div>
           </td>
@@ -160,9 +184,9 @@ function showDialog(id) {
 	});
   };
 //单个删除
-function del(id){
+function del(doc_id,hos_id){
 	if(confirm("您确定要删除吗?")){
-		window.location="/health/management/Application/index.php/Admin/hospital/delete/id/"+id;
+		window.location="/health/management/Application/index.php/Admin/doctor/delete/doc_id/"+doc_id+"/hos_id/"+hos_id;
 	}
 }
 
@@ -193,133 +217,6 @@ function DelSelect(){
 	}
 	else{
 		alert("请选择您要删除的内容!");
-		return false;
-	}
-}
-
-//批量排序
-function sorts(){
-	var Checkbox=false;
-	 $("input[name='id[]']").each(function(){
-	  if (this.checked==true) {		
-		Checkbox=true;	
-	  }
-	});
-	if (Checkbox){	
-		
-		$("#listform").submit();		
-	}
-	else{
-		alert("请选择要操作的内容!");
-		return false;
-	}
-}
-
-
-//批量首页显示
-function changeishome(o){
-	var Checkbox=false;
-	 $("input[name='id[]']").each(function(){
-	  if (this.checked==true) {		
-		Checkbox=true;	
-	  }
-	});
-	if (Checkbox){
-		
-		$("#listform").submit();	
-	}
-	else{
-		alert("请选择要操作的内容!");		
-	
-		return false;
-	}
-}
-
-//批量推荐
-function changeisvouch(o){
-	var Checkbox=false;
-	 $("input[name='id[]']").each(function(){
-	  if (this.checked==true) {		
-		Checkbox=true;	
-	  }
-	});
-	if (Checkbox){
-		
-		
-		$("#listform").submit();	
-	}
-	else{
-		alert("请选择要操作的内容!");	
-		
-		return false;
-	}
-}
-
-//批量置顶
-function changeistop(o){
-	var Checkbox=false;
-	 $("input[name='id[]']").each(function(){
-	  if (this.checked==true) {		
-		Checkbox=true;	
-	  }
-	});
-	if (Checkbox){		
-		
-		$("#listform").submit();	
-	}
-	else{
-		alert("请选择要操作的内容!");		
-	
-		return false;
-	}
-}
-
-
-//批量移动
-function changecate(o){
-	var Checkbox=false;
-	 $("input[name='id[]']").each(function(){
-	  if (this.checked==true) {		
-		Checkbox=true;	
-	  }
-	});
-	if (Checkbox){		
-		
-		$("#listform").submit();		
-	}
-	else{
-		alert("请选择要操作的内容!");
-		
-		return false;
-	}
-}
-
-//批量复制
-function changecopy(o){
-	var Checkbox=false;
-	 $("input[name='id[]']").each(function(){
-	  if (this.checked==true) {		
-		Checkbox=true;	
-	  }
-	});
-	if (Checkbox){	
-		var i = 0;
-	    $("input[name='id[]']").each(function(){
-	  		if (this.checked==true) {
-				i++;
-			}		
-	    });
-		if(i>1){ 
-	    	alert("只能选择一条信息!");
-			$(o).find("option:first").prop("selected","selected");
-		}else{
-		
-			$("#listform").submit();		
-		}	
-	}
-	else{
-		alert("请选择要复制的内容!");
-		$(o).find("option:first").prop("selected","selected");
 		return false;
 	}
 }

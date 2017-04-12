@@ -1,7 +1,9 @@
 <?php 
 namespace Admin\Controller;
 use Think\Controller;
-
+/*
+*  疾病管理
+*/
 class IllnessController extends Controller
 {
 	public function listSick(){

@@ -37,7 +37,7 @@
 
 		
 		
-			var bodyHeight = document.documentElement.clientHeight || document.body.clientHeight;
+		var bodyHeight = document.documentElement.clientHeight || document.body.clientHeight;
 			document.getElementById("box-b-a").style.height=bodyHeight*0.3+"px";
 			document.getElementById("findhos").style.height=bodyHeight*0.15+"px";
 			document.getElementById("finddoctor").style.height=bodyHeight*0.15+"px";

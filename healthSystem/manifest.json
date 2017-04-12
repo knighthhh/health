@@ -238,8 +238,7 @@
 			"Mine.html": {
 				"resources": [
 					"css/feedback.css",
-					"js/feedback.js",
-					"js/mui.view.js"
+					"js/feedback.js"
 				],
 				"refer": [],
 				"priority": 0
@@ -360,10 +359,10 @@
 				"resources": [
 					"css/feedback.css",
 					"js/feedback.js",
-					"js/mui.view.js",
 					"js/mui.min.js",
 					"css/mui.min.css",
-					"fonts/mui.ttf"
+					"fonts/mui.ttf",
+					"js/common.js"
 				],
 				"refer": [
 					"mine/account.html",
@@ -501,7 +500,9 @@
 				"resources": [
 					"js/app.js",
 					"js/mui.min.js",
-					"js/yzm.js"
+					"js/yzm.js",
+					"css/mui.min.css",
+					"fonts/mui.ttf"
 				],
 				"refer": [],
 				"priority": 0

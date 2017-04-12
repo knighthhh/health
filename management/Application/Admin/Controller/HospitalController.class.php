@@ -2,7 +2,9 @@
 namespace Admin\Controller;
 
 use Think\Controller;
-
+/*
+*  医院信息管理
+*/
 class HospitalController extends Controller
 {
     public function listHos()
