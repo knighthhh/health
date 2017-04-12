@@ -41,17 +41,23 @@ class UserController extends Controller{
 			$data['user_token']=I('post.user_token');
 			$mess=M('user_info')->where($data)->find();
 			if ($mess) {
-				$time['login_time']=date('Y-m-d H:i:s');
-				$user_phone=$data['user_phone'];
-				M('user_info')->where("user_phone=$user_phone")->save($time);
-				$res['result']=1;
-				$res['data']="登录成功";
 				
 				//token过期，重新登录
 				if(ceil((time() - strtotime($mess['token_time']))/(60*60*24))>=7){
 					$res['result']=0;
 					$res['data']="您的登录信息已过期，请重新登录";
+				}else{
+					$res['result']=1;
+					$res['data']="自动登录成功";
+					$res['user_token']=md5('user_phone'+time());
+					
+					$token['user_token']=$res['user_token'];
+					$token['token_time']=date('Y-m-d H:i:s');
+					$token['login_time']=date('Y-m-d H:i:s');
+					M('user_info')->where($data)->save($token);
+				
 				}
+				
 			}else{
 				$res['result']=0;
 				$res['data']="您的登录信息已过期，请重新登录";
