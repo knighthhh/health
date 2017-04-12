@@ -6276,3 +6276,86 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTrace [ RunTime:0.000054s ]
 INFO: [ app_end ] --END-- [ RunTime:0.000130s ]
 
+[ 2017-04-12T13:50:41+08:00 ] 10.200.38.32 /health/management/Application/index.php/Connector/User/login
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000889s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000079s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000055s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000127s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000041s ]
+SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.052271s ]
+SQL: SELECT * FROM `user_info` WHERE ( `user_phone` = '15768651577' ) AND ( `user_token` = 'b192d2b395891c1d6964fc862fcef8c1' ) LIMIT 1   [ RunTime:0.000823s ]
+SQL: UPDATE `user_info` SET `login_time`='2017-04-12 13:50:41' WHERE ( user_phone=15768651577 ) [ RunTime:0.121475s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000102s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000214s ]
+
+[ 2017-04-12T13:50:42+08:00 ] 10.200.38.32 /health/management/Application/index.php/Home/Index/getHotHos?category=news
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000442s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000037s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000072s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000141s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000041s ]
+SQL: SHOW COLUMNS FROM `hospital_info` [ RunTime:0.004448s ]
+SQL: SELECT * FROM `hospital_info`  [ RunTime:0.000486s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000047s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000109s ]
+
+[ 2017-04-12T13:50:42+08:00 ] 10.200.38.32 /health/management/Application/index.php/Home/Index/getHotDoc
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000429s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000026s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000044s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000089s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000053s ]
+NOTIC: [2048] Declaration of Admin\Model\DoctorInfoModel::_after_insert() should be compatible with Think\Model::_after_insert($data, $options) F:\phpStudy\WWW\health\management\Application\Admin\Model\DoctorInfoModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `doctor_info` [ RunTime:0.004185s ]
+SQL: SELECT a.*,b.hos_name,c.dep_name FROM doctor_info a LEFT JOIN hospital_info b on a.hos_id=b.hos_id LEFT JOIN department_info c on a.depa_id=c.dep_id  [ RunTime:0.000707s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000048s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000117s ]
+
+[ 2017-04-12T13:50:54+08:00 ] 10.200.38.32 /health/management/Application/index.php/Home/Index/getHotDoc
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000394s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000023s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000062s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000139s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000027s ]
+NOTIC: [2048] Declaration of Admin\Model\DoctorInfoModel::_after_insert() should be compatible with Think\Model::_after_insert($data, $options) F:\phpStudy\WWW\health\management\Application\Admin\Model\DoctorInfoModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `doctor_info` [ RunTime:0.007522s ]
+SQL: SELECT a.*,b.hos_name,c.dep_name FROM doctor_info a LEFT JOIN hospital_info b on a.hos_id=b.hos_id LEFT JOIN department_info c on a.depa_id=c.dep_id  [ RunTime:0.001316s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000054s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000277s ]
+
+[ 2017-04-12T13:50:54+08:00 ] 10.200.38.32 /health/management/Application/index.php/Home/Index/getHotHos?category=news
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000445s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000071s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000043s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000100s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000093s ]
+SQL: SHOW COLUMNS FROM `hospital_info` [ RunTime:0.003557s ]
+SQL: SELECT * FROM `hospital_info`  [ RunTime:0.000339s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000028s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000066s ]
+
