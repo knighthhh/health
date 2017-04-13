@@ -27,6 +27,11 @@ function openWebview(){
 	w.show("pop-in");
 //	w.show("slide-in-right");
 }
+function openWebview2(){
+	var w = plus.webview.create( "History_todoc.html" );
+	w.show("pop-in");
+//	w.show("slide-in-right");
+}
 	</script>
 </head>
 <body>
@@ -47,7 +52,7 @@ function openWebview(){
 			        </a>
 			    </li>
 			    <li class="mui-table-view-cell mui-media mui-col-xs-4">
-			        <a href="#">
+			        <a onclick="openWebview2()">
 			            <span class="mui-icon iconfont icon-lishijiuzhen ul_t2"></span>
 			            	<!--<span class="mui-badge mui-badge-red">5</span></span>-->
 			            <div class="mui-media-body">历史就诊</div>

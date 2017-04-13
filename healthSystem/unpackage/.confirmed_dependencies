@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "login/login.html": {
     "resources": [
       "js/common.js",
@@ -18,6 +19,25 @@
       "fonts/mui.ttf"
     ]
   },
+=======
+<<<<<<< HEAD
+  "finddoctor/docHP.html": {
+    "resources": [
+      "css/souye.css",
+      "css/iconfont_money.css",
+      "img/doctor.jpeg",
+      "css/iconfont_foot.css",
+      "js/common.js",
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "css/iconfont.css",
+      "css/mui.min.css"
+    ],
+    "refer": []
+  },
+=======
+>>>>>>> 748f28056e6fa9a3487f7a3556996ea89bb6a038
+>>>>>>> bcb2fd3793920b83a857a56d496bde983e17c15b
   "index.html": {
     "resources": [
       "fonts/iconfont_money.ttf",
@@ -38,6 +58,25 @@
       "inquiry/Inquiry.html"
     ]
   },
+<<<<<<< HEAD
+  "finddoctor/hosHP.html": {
+    "resources": [
+      "fonts/iconfont_money.ttf",
+      "css/souye.css",
+      "js/common.js",
+      "fonts/iconfont_foot.ttf",
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "css/iconfont.css",
+      "css/mui.min.css",
+      "fonts/iconfont.ttf",
+      "css/iconfont_money.css",
+      "css/iconfont_foot.css"
+    ],
+    "refer": []
+  },
+=======
+>>>>>>> 748f28056e6fa9a3487f7a3556996ea89bb6a038
   "main/subindex.html": {
     "resources": [
       "img/test.jpg",
@@ -56,8 +95,18 @@
       "css/iconfont_foot.css"
     ],
     "refer": [
+<<<<<<< HEAD
       "finddoctor/search_doctor_yy.html",
       "finddoctor/docHP.html",
+=======
+<<<<<<< HEAD
+      "finddoctor/search_doctor.html",
+      "finddoctor/search_doctor_yy.html",
+      "main/search/search.html",
+      "finddoctor/docHP.html",
+=======
+>>>>>>> 748f28056e6fa9a3487f7a3556996ea89bb6a038
+>>>>>>> bcb2fd3793920b83a857a56d496bde983e17c15b
       "finddoctor/hosHP.html"
     ]
   },
@@ -101,16 +150,48 @@
       "fonts/mui.ttf"
     ],
     "refer": [
+<<<<<<< HEAD
+      "finddoctor/search_doctor_xm.html",
+      "finddoctor/search_doctor_yy.html",
+      "finddoctor/search_doctor_jb.html"
+    ]
+  },
+  "healthfile/Health_File.html": {
+    "resources": [
+      "img/healthfile.jpg",
+      "css/iconfont_health_file.css",
+      "fonts/iconfont_health_file.ttf",
+      "css/health_file.css",
+      "img/doctor.jpeg"
+    ],
+    "refer": []
+=======
       "maps/maps_map.html"
     ]
+>>>>>>> 748f28056e6fa9a3487f7a3556996ea89bb6a038
   },
   "maps/maps_map.html": {
     "resources": [
+<<<<<<< HEAD
+      "css/iconfont_inquiry.css",
+      "img/inquiry2.jpg",
+      "css/inquiry.css",
+      "fonts/iconfont_inquiry.ttf",
+      "css/header.css",
+      "fonts/mui.ttf",
+      "fonts/iconfont_foot.ttf"
+    ],
+    "refer": [
+      "inquiry/mydoctor.html",
+      "inquiry/select_file.html"
+    ]
+=======
       "css/maps.css",
       "js/mui.min.js",
       "js/maps.js",
       "maps/maps_map_sub.html"
     ],
+<<<<<<< HEAD
     "refer": [
       "maps/maps_map_sub.html"
     ]
@@ -132,6 +213,10 @@
     "refer": [
       "finddoctor/hosHP.html"
     ]
+=======
+    "refer": []
+>>>>>>> 748f28056e6fa9a3487f7a3556996ea89bb6a038
+>>>>>>> bcb2fd3793920b83a857a56d496bde983e17c15b
   },
   "maps/maps_map_sub.html": {
     "resources": [
@@ -159,6 +244,44 @@
       "fonts/mui.ttf",
       "css/mui.min.css"
     ],
+<<<<<<< HEAD
+    "refer": [
+      "finddoctor/hosHP.html"
+    ]
+  },
+  "inquiry/mydoctor.html": {
+    "resources": [
+      "fonts/iconfont_money.ttf",
+      "css/mydoctor.css",
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "css/mui.min.css",
+      "css/iconfont_se.css",
+      "css/iconfont_money.css",
+      "fonts/iconfont_se.ttf",
+      "img/doctor.jpeg"
+    ],
+    "refer": []
+  },
+  "inquiry/select_file.html": {
+    "resources": [
+      "js/mui.picker.min.js",
+      "css/mui.picker.min.css",
+      "css/fast_question.css"
+    ],
+    "refer": []
+  },
+  "main/search/search.html": {
+    "resources": [
+      "css/search.css",
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "css/mui.min.css",
+      "css/search_history.css",
+      "css/search_info.css"
+    ],
+=======
+>>>>>>> 748f28056e6fa9a3487f7a3556996ea89bb6a038
     "refer": []
   }
 }

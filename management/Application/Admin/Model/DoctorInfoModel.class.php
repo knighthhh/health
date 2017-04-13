@@ -8,11 +8,12 @@ class DoctorInfoModel extends Model
     protected $insertFields = "doc_id,hos_id,depa_id,doc_name,doc_sex,doc_img,doc_phone,doc_password,doc_especial,doc_introduce,doc_address,doc_alipay,doc_rece,doc_hot,doc_attention,doc_fee,doc_time";
     protected $updateFields = "doc_id,hos_id,depa_id,doc_name,doc_sex,doc_img,doc_phone,doc_password,doc_especial,doc_introduce,doc_address,doc_alipay,doc_rece,doc_hot,doc_attention,doc_fee,doc_time";
 
-    public function search($perPage=5)
+    public function search($perPage=10)
     {
         $hos_id = I('get.hos_id');
         /* 分页 */
-        $count = $this->count();
+        $count = $this->where(array(
+            'hos_id'=>array('eq',$hos_id)))->count();
         //实例化翻页类对象
         $pageObj = new \Think\Page($count, $perPage);
         //设置翻页样式

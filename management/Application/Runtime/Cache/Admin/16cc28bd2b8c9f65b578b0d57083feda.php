@@ -19,117 +19,56 @@
 	.dialogtable td{border: solid 1px #ccc; padding: 8px;valign:middle;}
 	.button.border-green{ color:#22CC77;}
 	.pagelist span.current{background: #22CC77}
+    .button{font-size:10px;padding:5px 5px;margin:0;display:inline-block;line-height:10px;}
+    .padding {padding: 0px}
+    .table td{padding: 4px;}
 </style>
 </head>
 <body>
-<form method="post" action="/health/management/Application/index.php/Admin/Hospital/listHos/p/1.html" id="listform">
+<form method="post" action="/health/management/Application/index.php/Admin/hospital/listDep/hos_id/57" id="listform">
   <div class="panel admin-panel">
     <div class="panel-head"><strong class="icon-reorder"> 内容列表</strong></div>
     <div class="padding border-bottom">
       <ul class="search" style="padding-left:10px;">
-        <li> <a class="button border-green icon-plus-square-o" href="/health/management/Application/index.php/Admin/Hospital/add"> 添加医院</a> </li>
-        <li>搜索：</li>
-        <li>首页
-          <select name="s_ishome" class="input" onchange="changesearch()" style="width:60px; line-height:17px; display:inline-block">
-            <option value="">选择</option>
-            <option value="1">是</option>
-            <option value="0">否</option>
-          </select>
-          &nbsp;&nbsp;
-          推荐
-          <select name="s_isvouch" class="input" onchange="changesearch()"  style="width:60px; line-height:17px;display:inline-block">
-            <option value="">选择</option>
-            <option value="1">是</option>
-            <option value="0">否</option>
-          </select>
-          &nbsp;&nbsp;
-          置顶
-          <select name="s_istop" class="input" onchange="changesearch()"  style="width:60px; line-height:17px;display:inline-block">
-            <option value="">选择</option>
-            <option value="1">是</option>
-            <option value="0">否</option>
-          </select>
-        <li>
-          <input type="text" placeholder="请输入搜索关键字" name="keywords" class="input" style="width:250px; line-height:17px;display:inline-block" />
-          <a href="javascript:void(0)" class="button border-green icon-search" onclick="changesearch()" > 搜索</a></li>
+        <li> <a class="button border-green icon-plus-square-o" href="/health/management/Application/index.php/Admin/hospital/addDep/hos_id/<?php echo I('get.hos_id'); ?>"> 添加科室</a></li>
       </ul>
     </div>
-    <table class="table table-hover text-center">
+    <table class="table table-hover">
       <tr>
-        <th width="10%" style="text-align:left; padding-left:20px;">ID</th>
-        <th width="15%">名称</th>
-        <th width="5%">等级</th>
-        <th width="10%">所属地址</th>
-        <th width="20%">详细地址</th>
-        <th width="10%">创建时间</th>
-        <th width="30%">操作</th>
+        <th >科室名称</th>
+        <th width="310">操作</th>
       </tr>
     <?php foreach ($data as $k => $v): ?>
         <tr>
-          <td style="text-align:left; padding-left:20px;"><input type="checkbox" name="hos_id[]" value="<?php echo $v['hos_id']; ?>" /><?php echo $v['hos_id']; ?></td>
-          <td><?php echo $v['hos_name']; ?></td>
-          <td><?php echo $v['hos_level']; ?></td>
-          <td><?php echo $v['hos_address']; ?></td>
-          <td><?php echo $v['hos_address_detail']; ?></td>
-          <td><?php echo $v['hos_time']; ?></td>
-          <td><div class="button-group">
-          <a class="button border-green" style="cursor:pointer" onclick="showDialog(<?php echo $v['hos_id']; ?>)"><span class="icon-view-o"></span> 查看</a>
-          <a class="button border-main" href="/health/management/Application/index.php/Admin/hospital/edit/id/<?php echo $v['hos_id']; ?>"><span class="icon-edit"></span> 修改</a> 
-          <a class="button border-red" style="cursor:pointer" onclick="del(<?php echo $v['hos_id']; ?>)"><span class="icon-trash-o"></span> 删除</a>
-          <a class="button border-green" style="cursor:pointer" href="/health/management/Application/index.php/Admin/hospital/listDep/hos_id/<?php echo $v['hos_id']; ?>"><span class="icon-view-o"></span> 科室</a>
-          <a class="button border-green" style="cursor:pointer" href="/health/management/Application/index.php/Admin/doctor/listDoc/hos_id/<?php echo $v['hos_id']; ?>"><span class="icon-view-o"></span> 医生</a>
+          <input type="hidden" name="dep_id" value="<?php echo $v['dep_id']; ?>" />
+          <td><?php echo str_repeat("　　",2*$v['level'])."|--".$v['dep_name']; ?></td>
+          <td class="text-center"><div class="button-group">&nbsp
+           <a class="button border-green" style="cursor:pointer" onclick="showDialog(<?php echo $v['dep_id']; ?>)"><span class="icon-view-o"></span> 查看</a>　
+          <a class="button border-main" href="/health/management/Application/index.php/Admin/Hospital/editDep/hos_id/<?php echo $v['hos_id']; ?>/dep_id/<?php echo $v['dep_id']; ?>"><span class="icon-edit"></span> 修改</a> 　&nbsp
+          <a class="button border-red" style="cursor:pointer" onclick="del(<?php echo $v['id'].",".$v['hos_id']; ?>)"><span class="icon-trash-o"></span> 删除</a>&nbsp
           </div></td>
           <td colspan="0">
           	<!-- 详情页面 -->
-        	<div id="dialog<?php echo $v['hos_id']; ?>" style="display:none;" title="详情信息">
+        	<div id="dialog<?php echo $v['dep_id']; ?>" style="display:none;" title="详情信息">
     		<table class="dialogtable" cellspacing="0" cellpadding="0">
 	    		<tr>
-	    			<td>医院名称：</td>
-	    			<td><?php echo $v['hos_name']; ?></td>
+	    			<td>科室名称：</td>
+	    			<td><?php echo $v['dep_name']; ?></td>
 	    		</tr>
 	    		<tr>
-	    			<td>医院等级：</td>
-	    			<td><?php echo $v['hos_level']; ?></td>
-	    		</tr>
-	    		<tr>
-	    			<td>所属地址：</td>
-	    			<td><?php echo $v['hos_address']; ?></td>
-	    		</tr>
-	    		<tr>
-	    			<td>详细地址：</td>
-	    			<td><?php echo $v['hos_address_detail']; ?></td>
-	    		</tr>
-	    		<tr>
-	    			<td>经度：</td>
-	    			<td><?php echo $v['hos_longitude']; ?></td>
-	    		</tr>
-	    		<tr>
-	    			<td>纬度：</td>
-	    			<td><?php echo $v['hos_latitude']; ?></td>
-	    		</tr>
-	    		<tr>
-	    			<td valign="middle">院内导航图片：</td>
-	    			<td><?php showImage($v['hos_navigate_img'],120,80); ?></td>
-	    		</tr>
-	    		<tr>
-	    			<td>热门程度：</td>
-	    			<td><?php echo $v['hos_hot']; ?></td>
+	    			<td>创建时间：</td>
+	    			<td><?php echo $v['dep_time']; ?></td>
 	    		</tr>
     		</table>
-	    		<span style="display:block;width:80%;margin-top: 15px ">
-					医院介绍：<br/>
-					<?php echo htmlspecialchars_decode($v['hos_introduce']); ?>
+    		<span style="display:block;width:80%;margin-top: 15px "><b>科室介绍：</b>
+					<br/><br/>
+					<?php echo htmlspecialchars_decode($v['dep_introduce']); ?>
 				</span>
        		</div>
           </td>
         </tr>
         
     <?php endforeach; ?>
-      <tr>
-        <td style="text-align:left; padding:19px 0;padding-left:20px;"><input type="checkbox" id="checkall"/>
-          全选 </td>
-        <td colspan="7" style="text-align:left;padding-left:20px;"><a href="javascript:void(0)" class="button border-red icon-trash-o" style="padding:5px 15px;" onclick="DelSelect()"> 删除</a> <a href="javascript:void(0)" style="padding:5px 15px; margin:0 10px;" class="button border-blue icon-edit" onclick="sorts()"> 排序</a>
-      </tr>
       <tr>
       	<td colspan="8">
       	<div class="pagelist">
@@ -151,7 +90,7 @@ function showDialog(id) {
 		  height:"auto",
 	      width: "auto",
 	      position: {my: "right bottom", at: "center",  collision:"fit"},
-	      modal:false,//是否模式对话框
+	      modal:true,//是否模式对话框
 	      draggable:true,//是否允许拖拽
 	      resizable:true,//是否允许拖动
 	      title:"详细信息",//对话框标题
@@ -160,9 +99,9 @@ function showDialog(id) {
 	});
   };
 //单个删除
-function del(id){
+function del(id,hos_id){
 	if(confirm("您确定要删除吗?")){
-		window.location="/health/management/Application/index.php/Admin/hospital/delete/id/"+id;
+		window.location="/health/management/Application/index.php/Admin/hospital/delDep/id/"+id+"/hos_id/"+hos_id;
 	}
 }
 

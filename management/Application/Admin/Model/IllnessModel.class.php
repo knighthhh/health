@@ -7,7 +7,7 @@ class IllnessModel extends Model
 {
 	//protected $insertFields = "";
     //protected $updateFields = "";
-    public function search($perPage=5)
+    public function search($perPage=10)
     {
     	/* 分页 */
         $count = $this->count();
