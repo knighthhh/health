@@ -92,7 +92,9 @@
       						//登录成功
       						plus.ui.toast("登录成功");
       						plus.storage.setItem('user_phone',user_phoneBox.value);
+      						plus.storage.setItem('user_id',data.user_id);
 							plus.storage.setItem('user_token',data.user_token);
+							
       						$.openWindow({
 								url: '../index.html',
 								id: 'index',

@@ -267,7 +267,8 @@
 					"mine/Mine.html",
 					"healthfile/Health_File.html",
 					"inquiry/Inquiry.html",
-					"main/search/search.html"
+					"main/search/search.html",
+					"login/login.html"
 				],
 				"priority": 0
 			},
@@ -370,7 +371,8 @@
 					"mine/follow.html",
 					"mine/feedback.html",
 					"mine/about.html",
-					"login/login.html"
+					"login/login.html",
+					"mine/general.html"
 				],
 				"priority": 0
 			},
@@ -419,13 +421,15 @@
 					"css/mui.min.css",
 					"css/search_history.css",
 					"css/search_info.css",
-					"fonts/mui.ttf"
+					"fonts/mui.ttf",
+					"js/common.js"
 				],
 				"refer": [
 					"main/search/search_info_dt.html",
 					"main/search/search_info_hp.html",
 					"main/search/search_info_jb.html",
-					"main/search/search_info_ks.html"
+					"main/search/search_info_ks.html",
+					"main/search/search.html"
 				],
 				"priority": 0
 			},
@@ -440,9 +444,14 @@
 					"img/hospital.png",
 					"css/iconfont_se.css",
 					"fonts/iconfont_se.ttf",
-					"img/doctor.jpeg"
+					"img/doctor.jpeg",
+					"js/common.js",
+					"fonts/mui.ttf"
 				],
-				"refer": [],
+				"refer": [
+					"finddoctor/hosHP.html",
+					"finddoctor/docHP.html"
+				],
 				"priority": 0
 			},
 			"main/search/search.html": {
@@ -452,10 +461,13 @@
 					"css/mui.min.css",
 					"css/search_history.css",
 					"css/search_info.css",
-					"fonts/mui.ttf"
+					"fonts/mui.ttf",
+					"js/common.js"
 				],
 				"refer": [
-					"main/search/search2.html"
+					"main/search/search2.html",
+					"login/login.html",
+					"main/search/search_info.html"
 				],
 				"priority": 0
 			},
@@ -464,7 +476,11 @@
 					"js/mui.min.js",
 					"css/mui.min.css",
 					"css/search_info.css",
-					"css/iconfont_money.css"
+					"css/iconfont_money.css",
+					"fonts/iconfont_money.ttf",
+					"fonts/iconfont_se.ttf",
+					"img/doctor.jpeg",
+					"css/iconfont_se.css"
 				],
 				"refer": [],
 				"priority": 0
@@ -473,9 +489,15 @@
 				"resources": [
 					"js/mui.min.js",
 					"css/mui.min.css",
-					"css/search_info.css"
+					"css/search_info.css",
+					"img/hospital.png",
+					"css/iconfont_se.css",
+					"fonts/iconfont_se.ttf",
+					"js/common.js"
 				],
-				"refer": [],
+				"refer": [
+					"finddoctor/hosHP.html"
+				],
 				"priority": 0
 			},
 			"main/search/search_info_jb.html": {
@@ -667,7 +689,10 @@
 			},
 			"mine/account.html": {
 				"resources": [
-					"js/mui.min.js"
+					"js/mui.min.js",
+					"css/mui.min.css",
+					"fonts/mui.ttf",
+					"js/common.js"
 				],
 				"refer": [],
 				"priority": 0
@@ -685,7 +710,10 @@
 			},
 			"login/reg.html": {
 				"resources": [
-					"js/common.js"
+					"js/common.js",
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css"
 				],
 				"refer": [],
 				"priority": 0
@@ -726,6 +754,41 @@
 					"js/common.js",
 					"js/maps.js",
 					"css/maps.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"mine/recharge.html": {
+				"resources": [
+					"js/mui.min.js",
+					"css/mui.min.css",
+					"fonts/mui.ttf"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"healthfile/medDiary.html": {
+				"resources": [
+					"js/mui.min.js",
+					"css/mui.min.css",
+					"fonts/mui.ttf"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"mine/general.html": {
+				"resources": [
+					"js/mui.min.js",
+					"css/mui.min.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"mine/follow.html": {
+				"resources": [
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css"
 				],
 				"refer": [],
 				"priority": 0

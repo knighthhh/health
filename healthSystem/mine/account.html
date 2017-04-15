@@ -37,8 +37,39 @@
 
 	<body>
 		<script src="../js/mui.min.js"></script>
+		<script src="../js/common.js"></script>
 		<script type="text/javascript">
-			mui.init()
+			mui.init();
+			
+			mui.plusReady(function(){
+				var user_phone = plus.storage.getItem('user_phone');
+				mui.ajax('http://'+serverName+'/health/management/Application/index.php/Connector/User/getuserInfo',{
+      				data:{
+      					user_phone:user_phone
+      				},
+      				dataType:'json',
+      				type:'POST',
+      				timeout:10000,
+      				success:function(data){
+      					//{"reslut":1}表示请求数据成功
+      					if(data.result==1){
+							document.getElementById("head-img1").src=data.user_img;
+							document.getElementById("user_name").innerHTML=data.user_name;
+							document.getElementById("user_phone").innerHTML=user_phone;
+							document.getElementById("user_qq").innerHTML=data.user_qq;
+							document.getElementById("user_weixin").innerHTML=data.user_weixin;
+      					}else{ 
+      						//plus.ui.toast(data.data);
+      						
+      					}
+      				},
+      				error:function(){
+      					plus.nativeUI.toast("请检查您的网络");
+      				}
+      			})
+				
+			});
+			
 		</script>
 		<!--用户名头像-->
 		<header class="mui-bar mui-bar-nav">
@@ -57,18 +88,18 @@
 							</a>
 							</li>
 							<li class="mui-table-view-cell">
-								<a>用户名<span class="mui-pull-right">YGT</span></a>
+								<a>用户名<span id="user_name" class="mui-pull-right">YGT</span></a>
 							</li>
 						</ul>
 						<ul class="mui-table-view">
 							<li class="mui-table-view-cell">
-								<a>手机号<span class="mui-pull-right">8877777</span></a>
+								<a>手机号<span id="user_phone" class="mui-pull-right">8877777</span></a>
 							</li>
 							<li class="mui-table-view-cell">
-								<a>QQ号<span class="mui-pull-right">88888888</span></a>
+								<a>QQ号<span id="user_qq" class="mui-pull-right">88888888</span></a>
 							</li>
 							<li class="mui-table-view-cell">
-								<a>微信号<span class="mui-pull-right">7777777</span></a>
+								<a>微信号<span id="user_weixin" class="mui-pull-right">7777777</span></a>
 							</li>						
 						</ul>
 						<ul class="mui-table-view">

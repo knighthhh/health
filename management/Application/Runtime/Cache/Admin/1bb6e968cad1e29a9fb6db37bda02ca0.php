@@ -25,12 +25,12 @@
 </style>
 </head>
 <body>
-<form method="post" action="/health/management/Application/index.php/Admin/Department/listDep" id="listform">
+<form method="post" action="/health/management/application/index.php/Admin/Department/listDep" id="listform">
   <div class="panel admin-panel">
     <div class="panel-head"><strong class="icon-reorder"> 内容列表</strong></div>
     <div class="padding border-bottom">
       <ul class="search" style="padding-left:10px;">
-        <li> <a class="button border-green icon-plus-square-o" href="/health/management/Application/index.php/Admin/Department/add"> 添加科室</a></li>
+        <li> <a class="button border-green icon-plus-square-o" href="/health/management/application/index.php/Admin/Department/add"> 添加科室</a></li>
       </ul>
     </div>
     <table class="table table-hover">
@@ -43,7 +43,7 @@
           <input type="hidden" name="dep_id" value="<?php echo $v['dep_id']; ?>" />
           <td><?php echo str_repeat("　　",2*$v['level'])."|--".$v['dep_name']; ?></td>
           <td class="text-center"><div class="button-group">
-          <a class="button border-main" href="/health/management/Application/index.php/Admin/Department/edit/dep_id/<?php echo $v['dep_id']; ?>"><span class="icon-edit"></span> 修改</a>
+          <a class="button border-main" href="/health/management/application/index.php/Admin/Department/edit/dep_id/<?php echo $v['dep_id']; ?>"><span class="icon-edit"></span> 修改</a>
           <a class="button border-red" style="cursor:pointer" onclick="del(<?php echo $v['dep_id']; ?>)"><span class="icon-trash-o"></span> 删除</a>
           </div></td>
         </tr>
@@ -64,7 +64,7 @@
 //单个删除
 function del(id){
 	if(confirm("您确定要删除吗?")){
-		window.location="/health/management/Application/index.php/Admin/Department/delete/dep_id/"+id;
+		window.location="/health/management/application/index.php/Admin/Department/delete/dep_id/"+id;
 	}
 }
 
