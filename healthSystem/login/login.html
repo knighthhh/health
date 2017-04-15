@@ -52,13 +52,14 @@
 			}
 		});
 		
-		
+	
 		
 		$.plusReady(function() {
+			//底部切换问题
 			var views = plus.webview.all();
            	for(var i = 0; i < views.length - 1; i++) {
          	    plus.webview.close(views[i].id);
-            }
+            } 
 			var loginButton = doc.getElementById('login');
 			var user_phoneBox = doc.getElementById('user_phone');
 			var user_passwordBox = doc.getElementById('user_password');
@@ -90,7 +91,9 @@
       						//登录成功
       						plus.ui.toast("登录成功");
       						plus.storage.setItem('user_phone',user_phoneBox.value);
+      						plus.storage.setItem('user_id',data.user_id);
 							plus.storage.setItem('user_token',data.user_token);
+							
       						$.openWindow({
 								url: '../index.html',
 								id: 'index',
@@ -105,10 +108,10 @@
 									autoShow: false
 								}
 							});
-//							setTimeout(function(){
-//								var self = plus.webview.currentWebview();
-//								self.close();	
-//							},1000);
+							setTimeout(function(){
+								var self = plus.webview.currentWebview();
+								self.close();	
+							},1000);
       					}else{
       						//登录失败
       						plus.ui.toast(data.data);
@@ -152,7 +155,6 @@
 					}
 				});
 			}, false);
-			
 		});
 	}(mui, document));
 		</script>

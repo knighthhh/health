@@ -22,12 +22,11 @@
 		<!-- 头部  包含搜索-->
 		<header id="header" class="mui-bar mui-bar-nav public-color">
 			<a class="mui-action-back mui-icon mui-icon-back mui-pull-left size2"></a>
-			<a class="icon2 mui-pull-right ">搜索</a>
+			<a id="search2" class="icon2 mui-pull-right ">搜索</a>
 
-			<div id="search" class="search">
+			<div  class="search">
 				<div class="mui-input-row mui-search">
-					<input class=" mui-input-clear" type="search" name="search" id="search" value="" placeholder="搜疾病，医生，医院，科室" />
-
+					<input id="searchtext2" class=" mui-input-clear" type="search" name="search"  value="" placeholder="搜疾病，医生，医院，科室" />
 				</div>
 			</div>
 		</header>
@@ -57,36 +56,68 @@
 			</div>
 		</div>
 		<script src="../../js/mui.min.js"></script>
+		<script src="../../js/common.js"></script>
 		<script src="../../js/webviewGroup.js" type="text/javascript" charset="utf-8"></script>
 		<script>
 			mui.init();
 			mui.plusReady(function() {
+				var self = plus.webview.currentWebview();
+				var searchtext = self.searchtext;
+				
+				//监听该页面的搜索按钮
+				search2.addEventListener('tap',function(){
+					mui.openWindow({
+						url: 'search.html',
+						id: 'search',
+						//preload: true,
+						show: {
+							aniShow: 'pop-in'
+						},
+						waiting: {
+							autoShow: false
+						}
+					});
+					setTimeout(function(){
+						self.close();	
+					},1000);
+				});
+				
 				var group = new webviewGroup("viewgroup", {
 					items: [{
 						id: "search_info.html",
 						url: "search_info.html",
 						waiting:false,
-						extras: {}
+						extras: {
+							searchtext:searchtext,
+						}
 					}, {
 						id: "search_info_jb.html",
 						url: "search_info_jb.html",
 						waiting:false,
-						extras: {}
+						extras: {
+							searchtext:searchtext
+						}
 					}, {
 						id: "search_info_hp.html",
 						url: "search_info_hp.html",
 						waiting:false,
-						extras: {}
+						extras: {
+							searchtext:searchtext
+						}
 					}, {
 						id: "search_info_dt.html",
 						url: "search_info_dt.html",
 						waiting:false,
-						extras: {}
+						extras: {
+							searchtext:searchtext
+						}
 					}, {
 						id: "search_info_ks.html",
 						url: "search_info_ks.html",
 						waiting:false,
-						extras: {}
+						extras: {
+							searchtext:searchtext
+						}
 					}],
 					onChange: function(obj) {
 						var c = document.querySelector(".mui-control-item.mui-active");

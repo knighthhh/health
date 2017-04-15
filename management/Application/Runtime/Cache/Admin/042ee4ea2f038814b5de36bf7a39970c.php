@@ -22,12 +22,12 @@
 </style>
 </head>
 <body>
-<form method="post" action="/health/management/Application/index.php/Admin/Knowledge/listKnow" id="listform">
+<form method="post" action="/health/management/application/index.php/Admin/Knowledge/listKnow" id="listform">
   <div class="panel admin-panel">
     <div class="panel-head"><strong class="icon-reorder"> 内容列表</strong></div>
     <div class="padding border-bottom">
       <ul class="search" style="padding-left:10px;">
-        <li> <a class="button border-green icon-plus-square-o" href="/health/management/Application/index.php/Admin/Knowledge/add"> 添加知识</a> </li>
+        <li> <a class="button border-green icon-plus-square-o" href="/health/management/application/index.php/Admin/Knowledge/add"> 添加知识</a> </li>
         <li>搜索：</li>
         <li>首页
           <select name="s_ishome" class="input" onchange="changesearch()" style="width:60px; line-height:17px; display:inline-block">
@@ -70,7 +70,7 @@
           <td><?php echo $v['time']; ?></td>
           <td><div class="button-group">
           <a class="button border-green" style="cursor:pointer" onclick="showDialog(<?php echo $v['know_id']; ?>)"><span class="icon-view-o"></span> 查看</a>
-          <a class="button border-main" href="/health/management/Application/index.php/Admin/Knowledge/edit/know_id/<?php echo $v['know_id']; ?>"><span class="icon-edit"></span> 修改</a> 
+          <a class="button border-main" href="/health/management/application/index.php/Admin/Knowledge/edit/know_id/<?php echo $v['know_id']; ?>"><span class="icon-edit"></span> 修改</a> 
           <a class="button border-red" style="cursor:pointer" onclick="del(<?php echo $v['know_id']; ?>)"><span class="icon-trash-o"></span> 删除</a>
           </div></td>
           <td colspan="0">
@@ -119,7 +119,7 @@ function showDialog(id) {
 //单个删除
 function del(know_id){
 	if(confirm("您确定要删除吗?")){
-		window.location="/health/management/Application/index.php/Admin/Knowledge/delete/know_id/"+know_id;
+		window.location="/health/management/application/index.php/Admin/Knowledge/delete/know_id/"+know_id;
 	}
 }
 
