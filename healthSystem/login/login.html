@@ -52,14 +52,10 @@
 			}
 		});
 		
-		//底部切换问题
-	    var views = plus.webview.all();
-        for(var i = 0; i < views.length - 1; i++) {
-       		plus.webview.close(views[i].id);
-        }
-		
+	
 		
 		$.plusReady(function() {
+			//底部切换问题
 			var views = plus.webview.all();
            	for(var i = 0; i < views.length - 1; i++) {
          	    plus.webview.close(views[i].id);
