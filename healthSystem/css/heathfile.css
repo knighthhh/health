@@ -1,0 +1,97 @@
+/*medDiary*/
+.public-color{
+	background:#06BFAC;
+}
+.public-color h1{
+	color:#F7F7F7;
+	font-size: 19px;
+}
+.chose{
+	
+	width:auto;
+	margin-left:35%;
+	color: #F7F7F7;
+	font-size:18px;
+	letter-spacing: 3px;
+	
+}
+.chose .mui-select:before{
+	font-family: Muiicons;
+    position: absolute;
+    top: 0px;
+    right: 9px;
+    content: '\e581';
+    color: #F7F7F7;
+}
+.chose_man{
+	width: auto;
+	background: #06BFAC;
+	font-size:18px;
+	letter-spacing: 3px;
+	padding: 12px 8px 0px 3px;
+}
+
+.box{
+	text-align: center;
+	background: #fff;
+	padding: 8px 0px;
+	font-size: 15px;
+	color:#6C6C6C;
+	margin-top:5px;
+	letter-spacing: 4px;
+	border-bottom: 1px solid #f0f0f0;
+}
+.detial{
+	margin-right: -10%;
+	color: #1AC0F4;
+}
+
+.submit{
+	text-align: center;
+	
+	
+}
+.submit .mui-btn{
+
+	font-size: 18px;
+	margin: 10px;
+	padding: 6px 80px;
+}
+
+/*write_diary*/
+
+.box-dairy p{
+	
+	font-size: 17px;
+}
+		.others-2{
+			float: right;
+			margin-right: 25%;
+		}
+		
+    	.others-2 .mui-radio{
+				float: right;
+		}
+
+		 .others-2 .mui-radio input[type=radio]:checked:before {
+		    content: '\e442';
+		    }
+		 /*.others-2 .mui-input-row label{
+		 	padding-right:auto;
+		 }*/
+		
+
+
+/*History_todoc*/
+.online_history span{
+	color: #8F8F94;
+}
+.outline_history span{
+	color: #8F8F94;
+}
+
+.history_button{
+	width: 25%;
+    line-height: 0.7;
+	margin: 0px 5px 0 0;
+}

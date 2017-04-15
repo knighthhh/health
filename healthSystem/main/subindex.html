@@ -231,7 +231,7 @@
 				
 function searchwin(){
 	var w = plus.webview.create( "search/search.html" );
-	w.show("pop-in");
+	w.show("fade-in");
 //	w.show("slide-in-right");
 	document.getElementById("search").focus();
 }
@@ -244,7 +244,6 @@ function searchwin(){
 	    <div id="search" class="search">
 	    	<div class="mui-input-row mui-search">
 	    		<input class=" mui-input-clear" type="search" name="search" id="search" onclick="searchwin()" placeholder="搜疾病，医生，医院，科室" />
-	    		
 	    	</div>
 	    </div>   
 	</header>
