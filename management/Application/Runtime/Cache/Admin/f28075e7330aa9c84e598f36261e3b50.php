@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
 <html lang="zh-cn">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -6,17 +6,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 <meta name="renderer" content="webkit">
 <title></title>
-<link rel="stylesheet" href="{$Think.const.ADMIN_CSS_URL}pintuer.css">
-<link rel="stylesheet" href="{$Think.const.ADMIN_CSS_URL}admin.css">
-<link href="{$Think.const.ADMIN_CSS_URL}foundation-datepicker.css" rel="stylesheet" type="text/css">
-<script src="{$Think.const.ADMIN_JS_URL}jquery.js"></script>
-<script src="{$Think.const.ADMIN_JS_URL}pintuer.js"></script>
-<script src="{$Think.const.ADMIN_JS_URL}jquery.cityselect.js"></script>
-<script type="text/javascript" charset="utf-8" src="__PUBLIC__/Ueditor/ueditor.config.js"></script>
-<script type="text/javascript" charset="utf-8" src="__PUBLIC__/Ueditor/ueditor.all.min.js"> </script>
-<script type="text/javascript" charset="utf-8" src="__PUBLIC__/Ueditor/lang/zh-cn/zh-cn.js"></script>
-<script src="{$Think.const.ADMIN_JS_URL}foundation-datepicker.min.js"></script>
-<script src="{$Think.const.ADMIN_JS_URL}locales/foundation-datepicker.zh-CN.js"></script> 
+<link rel="stylesheet" href="<?php echo (ADMIN_CSS_URL); ?>pintuer.css">
+<link rel="stylesheet" href="<?php echo (ADMIN_CSS_URL); ?>admin.css">
+<link href="<?php echo (ADMIN_CSS_URL); ?>foundation-datepicker.css" rel="stylesheet" type="text/css">
+<script src="<?php echo (ADMIN_JS_URL); ?>jquery.js"></script>
+<script src="<?php echo (ADMIN_JS_URL); ?>pintuer.js"></script>
+<script src="<?php echo (ADMIN_JS_URL); ?>jquery.cityselect.js"></script>
+<script type="text/javascript" charset="utf-8" src="/health/management/Application/Public/Ueditor/ueditor.config.js"></script>
+<script type="text/javascript" charset="utf-8" src="/health/management/Application/Public/Ueditor/ueditor.all.min.js"> </script>
+<script type="text/javascript" charset="utf-8" src="/health/management/Application/Public/Ueditor/lang/zh-cn/zh-cn.js"></script>
+<script src="<?php echo (ADMIN_JS_URL); ?>foundation-datepicker.min.js"></script>
+<script src="<?php echo (ADMIN_JS_URL); ?>locales/foundation-datepicker.zh-CN.js"></script>
 <style type="text/css">
     .tips{
       color: red;
@@ -26,7 +26,7 @@
     #nav{ width:100%; height:30px; background:#00A2CA;} 
     #nav li{display:inline; height:60px} 
     #nav li {display:inline-block; padding:0 20px; height:30px; line-height:30px;
-                color:#FFF; font-family:"\5FAE\8F6F\96C5\9ED1"; font-size:12px} 
+                color:#FFF; font-family:"5FAE8F6F96C59ED1"; font-size:12px} 
     #nav li:hover{background:#0095BB;cursor: pointer;}
     /*设置鼠标滑过或悬停时变化的背景颜色 */
     .tab-front{
@@ -45,14 +45,15 @@
       </ul> 
       </div>
     <div class="body-content">
-    <form method="post" class="form-x" action="__SELF__" name="fileUploadForm" enctype="multipart/form-data">
+    <form method="post" class="form-x" action="/health/management/Application/index.php/Admin/HistoryVis/edit/relative_id/1/hos_id/" name="fileUploadForm" enctype="multipart/form-data">
+    <input type="hidden" value="<?php echo $data['seecase_id']; ?>" name="seecase_id" />
     <div class="div_tab" style="display:block;">  
-     <div class="form-group">
+      <div class="form-group">
         <div class="label">
           <label>用户ID：</label>
         </div>
         <div class="field">
-          <input type="text" class="input w50" value="" name="user_id" />
+          <input type="text" class="input w50" value="<?php echo $data['user_id']; ?>" name="user_id" />
           <span class="tips">*</span>
         </div>
       </div>
@@ -61,7 +62,7 @@
           <label>就诊医院：</label>
         </div>
         <div class="field">
-          <input type="text" class="input w50" value="" name="seecase_hos" />
+          <input type="text" class="input w50" value="<?php echo $data['seecase_hos']; ?>" name="seecase_hos" />
           <span class="tips">*</span>
         </div>
       </div>
@@ -70,7 +71,7 @@
           <label>就诊科室：</label>
         </div>
         <div class="field">
-          <input type="text" class="input w50" value="" name="seecase_depa" />
+          <input type="text" class="input w50" value="<?php echo $data['seecase_depa']; ?>" name="seecase_depa" />
           <span class="tips">*</span>
         </div>
       </div>
@@ -79,7 +80,7 @@
           <label>就诊医生：</label>
         </div>
         <div class="field">
-          <input type="text" class="input w50" value="" name="seecase_doc" />
+          <input type="text" class="input w50" value="<?php echo $data['seecase_doc']; ?>" name="seecase_doc" />
           <span class="tips">*</span>
         </div>
       </div>
@@ -89,7 +90,7 @@
           <label>就诊时间：</label>
         </div>
         <div class="field">
-          <input type="text" class="input w50" id="seecase_time" value="" name="seecase_time" />
+          <input type="text" id="seecase_time" class="input w50" value="<?php echo $data['seecase_time']; ?>" name="seecase_time" />
           <span class="tips">*</span>
         </div>
       </div>
@@ -98,7 +99,7 @@
           <label>诊断结果：</label>
         </div>
         <div class="field">
-          <input type="text" class="input w50" value="" name="seecase_info" />
+          <input type="text" class="input w50" value="<?php echo $data['seecase_info']; ?>" name="seecase_info" />
         </div>
       </div>
       <div class="form-group">
@@ -106,7 +107,7 @@
           <label>医生建议：</label>
         </div>
         <div class="field">
-          <input type="text" class="input w50" value="" name="seecase_sgs" />
+          <input type="text" class="input w50" value="<?php echo $data['seecase_sgs']; ?>" name="seecase_sgs" />
         </div>
       </div>
       </div>
@@ -117,7 +118,7 @@
             <label>处方信息：</label>
           </div>
           <div class="field">
-              <textarea id="page_info" name="page_info"></textarea>
+              <textarea id="page_info" name="page_info"><?php echo $data['page_info']; ?></textarea>
               <div class="tips"></div>
           </div>
         </div>
@@ -125,7 +126,10 @@
         <div class="label">
           <label>处方图片：</label>
         </div>
-        <div class="field">
+          <?php foreach ($pageImg as $k => $v):?>
+          <span><?php showImage($v['page_img_path'],120,80); ?></span>
+          <?php endforeach; ?>
+        <div style="margin-left: 125px;margin-top: 10px" class="field">
           <input type="file" id="pageUpload" name="page_img_path" class="input tips" style="display:none;width:25%; float:left;"  value=""  data-toggle="hover" data-place="right" data-image=""  />
           <div id="pagePath" style="float:left;line-height:40px;" ></div>
           <input type="button" class="button bg-blue margin-left pageUpload" value="+ 浏览上传"  style="float:left;">
@@ -140,7 +144,7 @@
             <label>检查信息：</label>
           </div>
           <div class="field">
-              <textarea id="check_info" name="check_info"></textarea>
+              <textarea id="check_info" name="check_info"><?php echo $data['check_info']; ?></textarea>
               <div class="tips"></div>
           </div>
         </div>
@@ -148,7 +152,10 @@
         <div class="label">
           <label>检查图片：</label>
         </div>
-        <div class="field">
+        <?php foreach ($checkImg as $k => $v):?>
+          <span><?php showImage($v['check_img_path'],120,80); ?></span>
+        <?php endforeach; ?>
+        <div style="margin-left: 125px;margin-top: 10px" class="field">
           <input type="file" id="checkUpload" name="check_img_path" class="input tips" style="display:none;width:25%; float:left;"  value=""  data-toggle="hover" data-place="right" data-image=""  />
           <div id="checkPath" style="float:left;line-height:40px;" ></div>
           <input type="button" class="button bg-blue margin-left checkUpload" value="+ 浏览上传"  style="float:left;">

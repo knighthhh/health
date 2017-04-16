@@ -1,0 +1,2527 @@
+[ 2017-04-16T00:00:29+08:00 ] 10.77.117.237 /health/management/Application/index.php/Admin/Relative/add
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000265s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000020s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000031s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000069s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000024s ]
+NOTIC: [2048] Declaration of Admin\Model\RelativeInfoModel::_after_insert() should be compatible with Think\Model::_after_insert($data, $options) D:\xampp\htdocs\health\management\Application\Admin\Model\RelativeInfoModel.class.php 第 7 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `relative_info` [ RunTime:0.001388s ]
+INFO: [ view_begin ] --START--
+INFO: [ view_begin ] --END-- [ RunTime:0.000020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000064s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000113s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.005808s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005858s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000011s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000040s ]
+INFO: [ view_end ] --START--
+INFO: [ view_end ] --END-- [ RunTime:0.000012s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000025s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000052s ]
+
+[ 2017-04-16T00:00:38+08:00 ] 10.77.117.237 /health/management/Application/index.php/Admin/Relative/add
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000264s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000019s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000029s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000081s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000023s ]
+NOTIC: [2048] Declaration of Admin\Model\RelativeInfoModel::_after_insert() should be compatible with Think\Model::_after_insert($data, $options) D:\xampp\htdocs\health\management\Application\Admin\Model\RelativeInfoModel.class.php 第 7 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `relative_info` [ RunTime:0.002428s ]
+SQL: INSERT INTO `relative_info` (`user_id`,`relative_name`,`relative_age`,`relative_relation`,`relative_phone`,`relative_date`,`relative_city`,`create_time`) VALUES (10,'123',312,'12312','','','广东 惠州 惠城区','2017-04-16 00:00:38') [ RunTime:0.096036s ]
+NOTIC: [8] Undefined index: page_img_path D:\xampp\htdocs\health\management\Application\Admin\Model\RelativeInfoModel.class.php 第 54 行.
+NOTIC: [8] Undefined index: page_img_path D:\xampp\htdocs\health\management\Application\Common\Common\function.php 第 11 行.
+NOTIC: [8] Undefined index: tmp_name D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Upload.class.php 第 149 行.
+NOTIC: [2] finfo_file(): Empty filename or path D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Upload.class.php 第 149 行.
+NOTIC: [8] Undefined index: name D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Upload.class.php 第 153 行.
+NOTIC: [8] Undefined index: error D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Upload.class.php 第 261 行.
+NOTIC: [8] Undefined index: tmp_name D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Upload.class.php 第 272 行.
+SQL: SHOW COLUMNS FROM `page_img` [ RunTime:0.001354s ]
+NOTIC: [8] Undefined index: seecase_id D:\xampp\htdocs\health\management\Application\Admin\Model\RelativeInfoModel.class.php 第 58 行.
+NOTIC: [8] Undefined index: images D:\xampp\htdocs\health\management\Application\Admin\Model\RelativeInfoModel.class.php 第 59 行.
+SQL: INSERT INTO `page_img` (`seecase_id`,`page_img_path`,`time`) VALUES (null,null,'2017-04-16 00:00:38') [ RunTime:0.000198s ]
+ERR: 1048:Column 'seecase_id' cannot be null
+ [ SQL语句 ] : INSERT INTO `page_img` (`seecase_id`,`page_img_path`,`time`) VALUES (null,null,'2017-04-16 00:00:38')
+NOTIC: [8] Undefined index: check_img_path D:\xampp\htdocs\health\management\Application\Admin\Model\RelativeInfoModel.class.php 第 64 行.
+NOTIC: [8] Undefined index: check_img_path D:\xampp\htdocs\health\management\Application\Common\Common\function.php 第 11 行.
+NOTIC: [8] Undefined index: tmp_name D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Upload.class.php 第 149 行.
+NOTIC: [2] finfo_file(): Empty filename or path D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Upload.class.php 第 149 行.
+NOTIC: [8] Undefined index: name D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Upload.class.php 第 153 行.
+NOTIC: [8] Undefined index: error D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Upload.class.php 第 261 行.
+NOTIC: [8] Undefined index: tmp_name D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Upload.class.php 第 272 行.
+SQL: SHOW COLUMNS FROM `check_img` [ RunTime:0.001173s ]
+NOTIC: [8] Undefined index: seecase_id D:\xampp\htdocs\health\management\Application\Admin\Model\RelativeInfoModel.class.php 第 68 行.
+NOTIC: [8] Undefined index: images D:\xampp\htdocs\health\management\Application\Admin\Model\RelativeInfoModel.class.php 第 69 行.
+SQL: INSERT INTO `check_img` (`seecase_id`,`check_img_path`,`time`) VALUES (null,null,'2017-04-16 00:00:38') [ RunTime:0.000181s ]
+ERR: 1048:Column 'seecase_id' cannot be null
+ [ SQL语句 ] : INSERT INTO `check_img` (`seecase_id`,`check_img_path`,`time`) VALUES (null,null,'2017-04-16 00:00:38')
+INFO: [ view_begin ] --START--
+INFO: [ view_begin ] --END-- [ RunTime:0.000016s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000039s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000088s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.004978s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005043s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000012s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000054s ]
+INFO: [ view_end ] --START--
+INFO: [ view_end ] --END-- [ RunTime:0.000012s ]
+
+[ 2017-04-16T00:00:39+08:00 ] 10.77.117.237 /health/management/Application/index.php/Admin/Relative/listRela.html
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000275s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000020s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000040s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000085s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000060s ]
+NOTIC: [2048] Declaration of Admin\Model\RelativeInfoModel::_after_insert() should be compatible with Think\Model::_after_insert($data, $options) D:\xampp\htdocs\health\management\Application\Admin\Model\RelativeInfoModel.class.php 第 7 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `relative_info` [ RunTime:0.002675s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `relative_info` LIMIT 1   [ RunTime:0.000275s ]
+SQL: SELECT a.*,b.user_phone,b.user_name FROM relative_info a LEFT JOIN user_info b on a.user_id = b.user_id ORDER BY a.relative_id desc LIMIT 0,5   [ RunTime:0.000445s ]
+INFO: [ view_begin ] --START--
+INFO: [ view_begin ] --END-- [ RunTime:0.000025s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000071s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000128s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.008271s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008359s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000016s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000056s ]
+INFO: [ view_end ] --START--
+INFO: [ view_end ] --END-- [ RunTime:0.000028s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000051s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000103s ]
+
+[ 2017-04-16T00:00:41+08:00 ] 10.77.117.237 /health/management/Application/index.php/Admin/Relative/edit/relative_id/4
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000262s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000027s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000057s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000136s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000030s ]
+NOTIC: [2048] Declaration of Admin\Model\RelativeInfoModel::_after_insert() should be compatible with Think\Model::_after_insert($data, $options) D:\xampp\htdocs\health\management\Application\Admin\Model\RelativeInfoModel.class.php 第 7 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `relative_info` [ RunTime:0.001257s ]
+SQL: SELECT * FROM `relative_info` WHERE ( `relative_id` = 4 ) LIMIT 1   [ RunTime:0.000362s ]
+NOTIC: [8] Undefined variable: address D:\xampp\htdocs\health\management\Application\Admin\Controller\RelativeController.class.php 第 55 行.
+INFO: [ view_begin ] --START--
+INFO: [ view_begin ] --END-- [ RunTime:0.000017s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000142s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000236s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.011823s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011888s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000012s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000044s ]
+INFO: [ view_end ] --START--
+INFO: [ view_end ] --END-- [ RunTime:0.000012s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000028s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000057s ]
+
+[ 2017-04-16T00:00:49+08:00 ] 10.77.117.237 /health/management/Application/index.php/Admin/Relative/listRela
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000272s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000019s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000031s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000070s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000023s ]
+NOTIC: [2048] Declaration of Admin\Model\RelativeInfoModel::_after_insert() should be compatible with Think\Model::_after_insert($data, $options) D:\xampp\htdocs\health\management\Application\Admin\Model\RelativeInfoModel.class.php 第 7 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `relative_info` [ RunTime:0.001291s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `relative_info` LIMIT 1   [ RunTime:0.000239s ]
+SQL: SELECT a.*,b.user_phone,b.user_name FROM relative_info a LEFT JOIN user_info b on a.user_id = b.user_id ORDER BY a.relative_id desc LIMIT 0,5   [ RunTime:0.000346s ]
+INFO: [ view_begin ] --START--
+INFO: [ view_begin ] --END-- [ RunTime:0.000018s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000068s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000122s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.007041s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007088s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000011s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000040s ]
+INFO: [ view_end ] --START--
+INFO: [ view_end ] --END-- [ RunTime:0.000021s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000030s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000063s ]
+
+[ 2017-04-16T00:01:21+08:00 ] 10.77.117.237 /health/management/Application/index.php/Admin/Relative/edit/relative_id/4
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000896s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000038s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000033s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000071s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000034s ]
+NOTIC: [2048] Declaration of Admin\Model\RelativeInfoModel::_after_insert() should be compatible with Think\Model::_after_insert($data, $options) D:\xampp\htdocs\health\management\Application\Admin\Model\RelativeInfoModel.class.php 第 7 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `relative_info` [ RunTime:0.002593s ]
+SQL: SELECT * FROM `relative_info` WHERE ( `relative_id` = 4 ) LIMIT 1   [ RunTime:0.000531s ]
+NOTIC: [8] Undefined variable: address D:\xampp\htdocs\health\management\Application\Admin\Controller\RelativeController.class.php 第 55 行.
+
+[ 2017-04-16T00:01:43+08:00 ] 10.77.117.237 /health/management/Application/index.php/Admin/Relative/listRela
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000338s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000022s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000041s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000087s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000027s ]
+NOTIC: [2048] Declaration of Admin\Model\RelativeInfoModel::_after_insert() should be compatible with Think\Model::_after_insert($data, $options) D:\xampp\htdocs\health\management\Application\Admin\Model\RelativeInfoModel.class.php 第 7 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `relative_info` [ RunTime:0.002015s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `relative_info` LIMIT 1   [ RunTime:0.000282s ]
+SQL: SELECT a.*,b.user_phone,b.user_name FROM relative_info a LEFT JOIN user_info b on a.user_id = b.user_id ORDER BY a.relative_id desc LIMIT 0,5   [ RunTime:0.000399s ]
+INFO: [ view_begin ] --START--
+INFO: [ view_begin ] --END-- [ RunTime:0.000019s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000077s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000135s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.007981s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008037s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000012s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000044s ]
+INFO: [ view_end ] --START--
+INFO: [ view_end ] --END-- [ RunTime:0.000022s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000031s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000071s ]
+
+[ 2017-04-16T00:01:44+08:00 ] 10.77.117.237 /health/management/Application/index.php/Admin/Relative/listRela
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000435s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000035s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000061s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000140s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000055s ]
+NOTIC: [2048] Declaration of Admin\Model\RelativeInfoModel::_after_insert() should be compatible with Think\Model::_after_insert($data, $options) D:\xampp\htdocs\health\management\Application\Admin\Model\RelativeInfoModel.class.php 第 7 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `relative_info` [ RunTime:0.002454s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `relative_info` LIMIT 1   [ RunTime:0.000337s ]
+SQL: SELECT a.*,b.user_phone,b.user_name FROM relative_info a LEFT JOIN user_info b on a.user_id = b.user_id ORDER BY a.relative_id desc LIMIT 0,5   [ RunTime:0.000667s ]
+INFO: [ view_begin ] --START--
+INFO: [ view_begin ] --END-- [ RunTime:0.000044s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000114s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000211s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.012590s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012702s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000020s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000071s ]
+INFO: [ view_end ] --START--
+INFO: [ view_end ] --END-- [ RunTime:0.000039s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000051s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000109s ]
+
+[ 2017-04-16T00:01:47+08:00 ] 10.77.117.237 /health/management/Application/index.php/Admin/Relative/listRela
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000258s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000018s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000045s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000085s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000022s ]
+NOTIC: [2048] Declaration of Admin\Model\RelativeInfoModel::_after_insert() should be compatible with Think\Model::_after_insert($data, $options) D:\xampp\htdocs\health\management\Application\Admin\Model\RelativeInfoModel.class.php 第 7 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `relative_info` [ RunTime:0.001231s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `relative_info` LIMIT 1   [ RunTime:0.000225s ]
+SQL: SELECT a.*,b.user_phone,b.user_name FROM relative_info a LEFT JOIN user_info b on a.user_id = b.user_id ORDER BY a.relative_id desc LIMIT 0,5   [ RunTime:0.000343s ]
+INFO: [ view_begin ] --START--
+INFO: [ view_begin ] --END-- [ RunTime:0.000017s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000104s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000168s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.007941s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008022s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000019s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000065s ]
+INFO: [ view_end ] --START--
+INFO: [ view_end ] --END-- [ RunTime:0.000030s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000046s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000099s ]
+
+[ 2017-04-16T00:01:49+08:00 ] 10.77.117.237 /health/management/Application/index.php/Admin/Relative/edit/relative_id/4
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000261s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000018s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000031s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000069s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000030s ]
+NOTIC: [2048] Declaration of Admin\Model\RelativeInfoModel::_after_insert() should be compatible with Think\Model::_after_insert($data, $options) D:\xampp\htdocs\health\management\Application\Admin\Model\RelativeInfoModel.class.php 第 7 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `relative_info` [ RunTime:0.001724s ]
+SQL: SELECT * FROM `relative_info` WHERE ( `relative_id` = 4 ) LIMIT 1   [ RunTime:0.000296s ]
+
+[ 2017-04-16T00:02:01+08:00 ] 10.77.117.237 /health/management/Application/index.php/Admin/Relative/edit/relative_id/4
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000353s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000022s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000035s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000083s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000024s ]
+NOTIC: [2048] Declaration of Admin\Model\RelativeInfoModel::_after_insert() should be compatible with Think\Model::_after_insert($data, $options) D:\xampp\htdocs\health\management\Application\Admin\Model\RelativeInfoModel.class.php 第 7 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `relative_info` [ RunTime:0.001262s ]
+SQL: SELECT * FROM `relative_info` WHERE ( `relative_id` = 4 ) LIMIT 1   [ RunTime:0.000322s ]
+
+[ 2017-04-16T00:02:24+08:00 ] 10.77.117.237 /health/management/Application/index.php/Admin/Relative/edit/relative_id/4
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000291s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000020s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000032s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000074s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000023s ]
+NOTIC: [2048] Declaration of Admin\Model\RelativeInfoModel::_after_insert() should be compatible with Think\Model::_after_insert($data, $options) D:\xampp\htdocs\health\management\Application\Admin\Model\RelativeInfoModel.class.php 第 7 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `relative_info` [ RunTime:0.001433s ]
+SQL: SELECT * FROM `relative_info` WHERE ( `relative_id` = 4 ) LIMIT 1   [ RunTime:0.000314s ]
+NOTIC: [8] Undefined variable: address D:\xampp\htdocs\health\management\Application\Admin\Controller\RelativeController.class.php 第 57 行.
+NOTIC: [8] Undefined variable:  D:\xampp\htdocs\health\management\Application\Admin\Controller\RelativeController.class.php 第 58 行.
+
+[ 2017-04-16T00:02:28+08:00 ] 10.77.117.237 /health/management/Application/index.php/Admin/Relative/edit/relative_id/4
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000287s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000019s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000032s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000071s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000023s ]
+NOTIC: [2048] Declaration of Admin\Model\RelativeInfoModel::_after_insert() should be compatible with Think\Model::_after_insert($data, $options) D:\xampp\htdocs\health\management\Application\Admin\Model\RelativeInfoModel.class.php 第 7 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `relative_info` [ RunTime:0.001774s ]
+SQL: SELECT * FROM `relative_info` WHERE ( `relative_id` = 4 ) LIMIT 1   [ RunTime:0.000324s ]
+NOTIC: [8] Undefined variable: address D:\xampp\htdocs\health\management\Application\Admin\Controller\RelativeController.class.php 第 57 行.
+
+[ 2017-04-16T00:02:44+08:00 ] 10.77.117.237 /health/management/Application/index.php/Admin/Relative/edit/relative_id/4
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000589s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000030s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000056s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000137s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000075s ]
+NOTIC: [2048] Declaration of Admin\Model\RelativeInfoModel::_after_insert() should be compatible with Think\Model::_after_insert($data, $options) D:\xampp\htdocs\health\management\Application\Admin\Model\RelativeInfoModel.class.php 第 7 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `relative_info` [ RunTime:0.001347s ]
+SQL: SELECT * FROM `relative_info` WHERE ( `relative_id` = 4 ) LIMIT 1   [ RunTime:0.001086s ]
+
+[ 2017-04-16T00:02:54+08:00 ] 10.77.117.237 /health/management/Application/index.php/Admin/Relative/edit/relative_id/4
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000270s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000020s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000033s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000071s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000024s ]
+NOTIC: [2048] Declaration of Admin\Model\RelativeInfoModel::_after_insert() should be compatible with Think\Model::_after_insert($data, $options) D:\xampp\htdocs\health\management\Application\Admin\Model\RelativeInfoModel.class.php 第 7 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `relative_info` [ RunTime:0.001338s ]
+SQL: SELECT * FROM `relative_info` WHERE ( `relative_id` = 4 ) LIMIT 1   [ RunTime:0.000294s ]
+NOTIC: [8] Undefined variable: address D:\xampp\htdocs\health\management\Application\Admin\Controller\RelativeController.class.php 第 57 行.
+
+[ 2017-04-16T00:03:02+08:00 ] 10.77.117.237 /health/management/Application/index.php/Admin/Relative/edit/relative_id/4
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000458s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000029s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000032s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000070s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000023s ]
+NOTIC: [2048] Declaration of Admin\Model\RelativeInfoModel::_after_insert() should be compatible with Think\Model::_after_insert($data, $options) D:\xampp\htdocs\health\management\Application\Admin\Model\RelativeInfoModel.class.php 第 7 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `relative_info` [ RunTime:0.001259s ]
+SQL: SELECT * FROM `relative_info` WHERE ( `relative_id` = 4 ) LIMIT 1   [ RunTime:0.001125s ]
+
+[ 2017-04-16T00:03:15+08:00 ] 10.77.117.237 /health/management/Application/index.php/Admin/Relative/edit/relative_id/4
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000319s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000023s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000031s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000070s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000023s ]
+NOTIC: [2048] Declaration of Admin\Model\RelativeInfoModel::_after_insert() should be compatible with Think\Model::_after_insert($data, $options) D:\xampp\htdocs\health\management\Application\Admin\Model\RelativeInfoModel.class.php 第 7 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `relative_info` [ RunTime:0.001627s ]
+SQL: SELECT * FROM `relative_info` WHERE ( `relative_id` = 4 ) LIMIT 1   [ RunTime:0.000472s ]
+NOTIC: [8] Undefined variable: address D:\xampp\htdocs\health\management\Application\Admin\Controller\RelativeController.class.php 第 58 行.
+
+[ 2017-04-16T00:03:29+08:00 ] 10.77.117.237 /health/management/Application/index.php/Admin/Relative/edit/relative_id/4
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000267s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000020s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000045s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000099s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000024s ]
+NOTIC: [2048] Declaration of Admin\Model\RelativeInfoModel::_after_insert() should be compatible with Think\Model::_after_insert($data, $options) D:\xampp\htdocs\health\management\Application\Admin\Model\RelativeInfoModel.class.php 第 7 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `relative_info` [ RunTime:0.002678s ]
+SQL: SELECT * FROM `relative_info` WHERE ( `relative_id` = 4 ) LIMIT 1   [ RunTime:0.000318s ]
+
+[ 2017-04-16T00:03:42+08:00 ] 10.77.117.237 /health/management/Application/index.php/Admin/Relative/edit/relative_id/4
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000385s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000049s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000033s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000073s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000024s ]
+NOTIC: [2048] Declaration of Admin\Model\RelativeInfoModel::_after_insert() should be compatible with Think\Model::_after_insert($data, $options) D:\xampp\htdocs\health\management\Application\Admin\Model\RelativeInfoModel.class.php 第 7 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `relative_info` [ RunTime:0.001381s ]
+SQL: SELECT * FROM `relative_info` WHERE ( `relative_id` = 4 ) LIMIT 1   [ RunTime:0.001579s ]
+INFO: [ view_begin ] --START--
+INFO: [ view_begin ] --END-- [ RunTime:0.000041s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000069s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000122s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.007813s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007879s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000011s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000040s ]
+INFO: [ view_end ] --START--
+INFO: [ view_end ] --END-- [ RunTime:0.000012s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000026s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000054s ]
+
+[ 2017-04-16T00:03:47+08:00 ] 10.77.117.237 /health/management/Application/index.php/Admin/Relative/edit/relative_id/4
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000264s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000019s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000030s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000068s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000023s ]
+NOTIC: [2048] Declaration of Admin\Model\RelativeInfoModel::_after_insert() should be compatible with Think\Model::_after_insert($data, $options) D:\xampp\htdocs\health\management\Application\Admin\Model\RelativeInfoModel.class.php 第 7 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `relative_info` [ RunTime:0.001982s ]
+SQL: SELECT * FROM `relative_info` WHERE ( `relative_id` = 4 ) LIMIT 1   [ RunTime:0.000465s ]
+INFO: [ view_begin ] --START--
+INFO: [ view_begin ] --END-- [ RunTime:0.000020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000084s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000141s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.007686s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007739s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000021s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000053s ]
+INFO: [ view_end ] --START--
+INFO: [ view_end ] --END-- [ RunTime:0.000012s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000025s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000053s ]
+
+[ 2017-04-16T00:03:51+08:00 ] 10.77.117.237 /health/management/Application/index.php/Admin/Relative/edit/relative_id/4
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000266s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000031s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000030s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000068s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000023s ]
+NOTIC: [2048] Declaration of Admin\Model\RelativeInfoModel::_after_insert() should be compatible with Think\Model::_after_insert($data, $options) D:\xampp\htdocs\health\management\Application\Admin\Model\RelativeInfoModel.class.php 第 7 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `relative_info` [ RunTime:0.001241s ]
+NOTIC: [8] Use of undefined constant FASLE - assumed 'FASLE' D:\xampp\htdocs\health\management\Application\Admin\Controller\RelativeController.class.php 第 44 行.
+NOTIC: [8] Undefined index: seecase_id D:\xampp\htdocs\health\management\Application\Admin\Model\RelativeInfoModel.class.php 第 78 行.
+NOTIC: [8] Undefined index: page_img_path D:\xampp\htdocs\health\management\Application\Admin\Model\RelativeInfoModel.class.php 第 80 行.
+NOTIC: [8] Undefined index: page_img_path D:\xampp\htdocs\health\management\Application\Common\Common\function.php 第 11 行.
+NOTIC: [8] Undefined index: tmp_name D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Upload.class.php 第 149 行.
+NOTIC: [2] finfo_file(): Empty filename or path D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Upload.class.php 第 149 行.
+NOTIC: [8] Undefined index: name D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Upload.class.php 第 153 行.
+NOTIC: [8] Undefined index: error D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Upload.class.php 第 261 行.
+NOTIC: [8] Undefined index: tmp_name D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Upload.class.php 第 272 行.
+SQL: SHOW COLUMNS FROM `page_img` [ RunTime:0.001094s ]
+SQL: SELECT `page_img_path` FROM `page_img` WHERE ( `seecase_id` = null ) LIMIT 1   [ RunTime:0.000232s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\xampp\htdocs\health\management\Application\Common\Common\function.php 第 40 行.
+SQL: DELETE FROM `page_img` WHERE ( `seecase_id` = null ) [ RunTime:0.000182s ]
+NOTIC: [8] Undefined index: images D:\xampp\htdocs\health\management\Application\Admin\Model\RelativeInfoModel.class.php 第 93 行.
+SQL: INSERT INTO `page_img` (`seecase_id`,`page_img_path`,`time`) VALUES (null,null,'2017-04-16 00:03:51') [ RunTime:0.000184s ]
+ERR: 1048:Column 'seecase_id' cannot be null
+ [ SQL语句 ] : INSERT INTO `page_img` (`seecase_id`,`page_img_path`,`time`) VALUES (null,null,'2017-04-16 00:03:51')
+NOTIC: [8] Undefined index: check_img_path D:\xampp\htdocs\health\management\Application\Admin\Model\RelativeInfoModel.class.php 第 98 行.
+NOTIC: [8] Undefined index: check_img_path D:\xampp\htdocs\health\management\Application\Common\Common\function.php 第 11 行.
+NOTIC: [8] Undefined index: tmp_name D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Upload.class.php 第 149 行.
+NOTIC: [2] finfo_file(): Empty filename or path D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Upload.class.php 第 149 行.
+NOTIC: [8] Undefined index: name D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Upload.class.php 第 153 行.
+NOTIC: [8] Undefined index: error D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Upload.class.php 第 261 行.
+NOTIC: [8] Undefined index: tmp_name D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Upload.class.php 第 272 行.
+SQL: SHOW COLUMNS FROM `check_img` [ RunTime:0.001201s ]
+SQL: SELECT `check_img_path` FROM `check_img` WHERE ( `seecase_id` = null ) LIMIT 1   [ RunTime:0.000215s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\xampp\htdocs\health\management\Application\Common\Common\function.php 第 40 行.
+SQL: DELETE FROM `check_img` WHERE ( `seecase_id` = null ) [ RunTime:0.000170s ]
+NOTIC: [8] Undefined index: images D:\xampp\htdocs\health\management\Application\Admin\Model\RelativeInfoModel.class.php 第 111 行.
+SQL: INSERT INTO `check_img` (`seecase_id`,`check_img_path`,`time`) VALUES (null,null,'2017-04-16 00:03:51') [ RunTime:0.000175s ]
+ERR: 1048:Column 'seecase_id' cannot be null
+ [ SQL语句 ] : INSERT INTO `check_img` (`seecase_id`,`check_img_path`,`time`) VALUES (null,null,'2017-04-16 00:03:51')
+SQL: UPDATE `relative_info` SET `user_id`=10,`relative_name`='1233',`relative_sex`='男',`relative_age`=312,`relative_relation`='12312',`relative_phone`='',`relative_date`='',`relative_city`='广东 惠州 惠城区' WHERE ( `relative_id` = 4 ) [ RunTime:0.299818s ]
+INFO: [ view_begin ] --START--
+INFO: [ view_begin ] --END-- [ RunTime:0.000019s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000042s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000100s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.007300s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007378s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000012s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000040s ]
+INFO: [ view_end ] --START--
+INFO: [ view_end ] --END-- [ RunTime:0.000011s ]
+
+[ 2017-04-16T00:03:52+08:00 ] 10.77.117.237 /health/management/Application/index.php/Admin/Relative/listRela.html
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000271s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000020s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000033s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000071s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000024s ]
+NOTIC: [2048] Declaration of Admin\Model\RelativeInfoModel::_after_insert() should be compatible with Think\Model::_after_insert($data, $options) D:\xampp\htdocs\health\management\Application\Admin\Model\RelativeInfoModel.class.php 第 7 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `relative_info` [ RunTime:0.001207s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `relative_info` LIMIT 1   [ RunTime:0.000230s ]
+SQL: SELECT a.*,b.user_phone,b.user_name FROM relative_info a LEFT JOIN user_info b on a.user_id = b.user_id ORDER BY a.relative_id desc LIMIT 0,5   [ RunTime:0.000380s ]
+INFO: [ view_begin ] --START--
+INFO: [ view_begin ] --END-- [ RunTime:0.000019s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000070s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000126s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.007468s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007522s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000027s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000069s ]
+INFO: [ view_end ] --START--
+INFO: [ view_end ] --END-- [ RunTime:0.000023s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000032s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000067s ]
+
+[ 2017-04-16T00:04:00+08:00 ] 10.77.117.237 /health/management/Application/index.php/Admin/Relative/edit/relative_id/4
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000291s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000021s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000033s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000072s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000029s ]
+NOTIC: [2048] Declaration of Admin\Model\RelativeInfoModel::_after_insert() should be compatible with Think\Model::_after_insert($data, $options) D:\xampp\htdocs\health\management\Application\Admin\Model\RelativeInfoModel.class.php 第 7 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `relative_info` [ RunTime:0.002242s ]
+SQL: SELECT * FROM `relative_info` WHERE ( `relative_id` = 4 ) LIMIT 1   [ RunTime:0.000437s ]
+INFO: [ view_begin ] --START--
+INFO: [ view_begin ] --END-- [ RunTime:0.000058s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000070s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000124s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.007040s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007118s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000012s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000052s ]
+INFO: [ view_end ] --START--
+INFO: [ view_end ] --END-- [ RunTime:0.000012s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000026s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000054s ]
+
+[ 2017-04-16T00:04:04+08:00 ] 10.77.117.237 /health/management/Application/index.php/Admin/Relative/edit/relative_id/4
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000951s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000022s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000029s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000068s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000034s ]
+NOTIC: [2048] Declaration of Admin\Model\RelativeInfoModel::_after_insert() should be compatible with Think\Model::_after_insert($data, $options) D:\xampp\htdocs\health\management\Application\Admin\Model\RelativeInfoModel.class.php 第 7 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `relative_info` [ RunTime:0.001352s ]
+NOTIC: [8] Use of undefined constant FASLE - assumed 'FASLE' D:\xampp\htdocs\health\management\Application\Admin\Controller\RelativeController.class.php 第 44 行.
+NOTIC: [8] Undefined index: seecase_id D:\xampp\htdocs\health\management\Application\Admin\Model\RelativeInfoModel.class.php 第 78 行.
+NOTIC: [8] Undefined index: page_img_path D:\xampp\htdocs\health\management\Application\Admin\Model\RelativeInfoModel.class.php 第 80 行.
+NOTIC: [8] Undefined index: page_img_path D:\xampp\htdocs\health\management\Application\Common\Common\function.php 第 11 行.
+NOTIC: [8] Undefined index: tmp_name D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Upload.class.php 第 149 行.
+NOTIC: [2] finfo_file(): Empty filename or path D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Upload.class.php 第 149 行.
+NOTIC: [8] Undefined index: name D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Upload.class.php 第 153 行.
+NOTIC: [8] Undefined index: error D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Upload.class.php 第 261 行.
+NOTIC: [8] Undefined index: tmp_name D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Upload.class.php 第 272 行.
+SQL: SHOW COLUMNS FROM `page_img` [ RunTime:0.001281s ]
+SQL: SELECT `page_img_path` FROM `page_img` WHERE ( `seecase_id` = null ) LIMIT 1   [ RunTime:0.000302s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\xampp\htdocs\health\management\Application\Common\Common\function.php 第 40 行.
+SQL: DELETE FROM `page_img` WHERE ( `seecase_id` = null ) [ RunTime:0.000533s ]
+NOTIC: [8] Undefined index: images D:\xampp\htdocs\health\management\Application\Admin\Model\RelativeInfoModel.class.php 第 93 行.
+SQL: INSERT INTO `page_img` (`seecase_id`,`page_img_path`,`time`) VALUES (null,null,'2017-04-16 00:04:04') [ RunTime:0.000212s ]
+ERR: 1048:Column 'seecase_id' cannot be null
+ [ SQL语句 ] : INSERT INTO `page_img` (`seecase_id`,`page_img_path`,`time`) VALUES (null,null,'2017-04-16 00:04:04')
+NOTIC: [8] Undefined index: check_img_path D:\xampp\htdocs\health\management\Application\Admin\Model\RelativeInfoModel.class.php 第 98 行.
+NOTIC: [8] Undefined index: check_img_path D:\xampp\htdocs\health\management\Application\Common\Common\function.php 第 11 行.
+NOTIC: [8] Undefined index: tmp_name D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Upload.class.php 第 149 行.
+NOTIC: [2] finfo_file(): Empty filename or path D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Upload.class.php 第 149 行.
+NOTIC: [8] Undefined index: name D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Upload.class.php 第 153 行.
+NOTIC: [8] Undefined index: error D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Upload.class.php 第 261 行.
+NOTIC: [8] Undefined index: tmp_name D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Upload.class.php 第 272 行.
+SQL: SHOW COLUMNS FROM `check_img` [ RunTime:0.001200s ]
+SQL: SELECT `check_img_path` FROM `check_img` WHERE ( `seecase_id` = null ) LIMIT 1   [ RunTime:0.000259s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\xampp\htdocs\health\management\Application\Common\Common\function.php 第 40 行.
+SQL: DELETE FROM `check_img` WHERE ( `seecase_id` = null ) [ RunTime:0.000181s ]
+NOTIC: [8] Undefined index: images D:\xampp\htdocs\health\management\Application\Admin\Model\RelativeInfoModel.class.php 第 111 行.
+SQL: INSERT INTO `check_img` (`seecase_id`,`check_img_path`,`time`) VALUES (null,null,'2017-04-16 00:04:04') [ RunTime:0.000177s ]
+ERR: 1048:Column 'seecase_id' cannot be null
+ [ SQL语句 ] : INSERT INTO `check_img` (`seecase_id`,`check_img_path`,`time`) VALUES (null,null,'2017-04-16 00:04:04')
+SQL: UPDATE `relative_info` SET `user_id`=10,`relative_name`='1233',`relative_sex`='男',`relative_age`=312,`relative_relation`='12312',`relative_phone`='12332',`relative_date`='04/20/2017',`relative_city`='广东 惠州 惠城区' WHERE ( `relative_id` = 4 ) [ RunTime:0.207375s ]
+INFO: [ view_begin ] --START--
+INFO: [ view_begin ] --END-- [ RunTime:0.000018s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000077s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000180s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.006597s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006700s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000020s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000069s ]
+INFO: [ view_end ] --START--
+INFO: [ view_end ] --END-- [ RunTime:0.000022s ]
+
+[ 2017-04-16T00:04:05+08:00 ] 10.77.117.237 /health/management/Application/index.php/Admin/Relative/listRela.html
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000263s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000018s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000031s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000068s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000033s ]
+NOTIC: [2048] Declaration of Admin\Model\RelativeInfoModel::_after_insert() should be compatible with Think\Model::_after_insert($data, $options) D:\xampp\htdocs\health\management\Application\Admin\Model\RelativeInfoModel.class.php 第 7 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `relative_info` [ RunTime:0.001231s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `relative_info` LIMIT 1   [ RunTime:0.000260s ]
+SQL: SELECT a.*,b.user_phone,b.user_name FROM relative_info a LEFT JOIN user_info b on a.user_id = b.user_id ORDER BY a.relative_id desc LIMIT 0,5   [ RunTime:0.000392s ]
+INFO: [ view_begin ] --START--
+INFO: [ view_begin ] --END-- [ RunTime:0.000018s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000067s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000119s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.006256s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006305s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000010s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000039s ]
+INFO: [ view_end ] --START--
+INFO: [ view_end ] --END-- [ RunTime:0.000021s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000031s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000063s ]
+
+[ 2017-04-16T00:04:45+08:00 ] 10.77.117.237 /health/management/Application/index.php/Admin/Relative/edit/relative_id/4
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000283s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000019s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000031s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000069s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000176s ]
+NOTIC: [2048] Declaration of Admin\Model\RelativeInfoModel::_after_insert() should be compatible with Think\Model::_after_insert($data, $options) D:\xampp\htdocs\health\management\Application\Admin\Model\RelativeInfoModel.class.php 第 7 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `relative_info` [ RunTime:0.001531s ]
+SQL: SELECT * FROM `relative_info` WHERE ( `relative_id` = 4 ) LIMIT 1   [ RunTime:0.000311s ]
+INFO: [ view_begin ] --START--
+INFO: [ view_begin ] --END-- [ RunTime:0.000018s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000101s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000188s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.008713s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008810s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000013s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000057s ]
+INFO: [ view_end ] --START--
+INFO: [ view_end ] --END-- [ RunTime:0.000014s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000027s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000056s ]
+
+[ 2017-04-16T00:05:31+08:00 ] 10.77.117.237 /health/management/Application/index.php/Admin/index/index
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000268s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000018s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000032s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000069s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000031s ]
+INFO: [ view_begin ] --START--
+INFO: [ view_begin ] --END-- [ RunTime:0.000014s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000072s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000158s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.008526s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008582s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000011s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000041s ]
+INFO: [ view_end ] --START--
+INFO: [ view_end ] --END-- [ RunTime:0.000011s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000024s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000051s ]
+
+[ 2017-04-16T00:05:31+08:00 ] 10.77.117.237 /health/management/Application/index.php/Admin/index/main.html
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000457s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000035s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000038s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000084s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000038s ]
+INFO: [ view_begin ] --START--
+INFO: [ view_begin ] --END-- [ RunTime:0.000018s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000075s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000169s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.008998s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009076s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000018s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000078s ]
+INFO: [ view_end ] --START--
+INFO: [ view_end ] --END-- [ RunTime:0.000023s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000045s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000099s ]
+
+[ 2017-04-16T00:05:32+08:00 ] 10.77.117.237 /health/management/Application/index.php/Admin/Relative/listRela
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000314s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000018s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000031s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000069s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000038s ]
+NOTIC: [2048] Declaration of Admin\Model\RelativeInfoModel::_after_insert() should be compatible with Think\Model::_after_insert($data, $options) D:\xampp\htdocs\health\management\Application\Admin\Model\RelativeInfoModel.class.php 第 7 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `relative_info` [ RunTime:0.001327s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `relative_info` LIMIT 1   [ RunTime:0.000239s ]
+SQL: SELECT a.*,b.user_phone,b.user_name FROM relative_info a LEFT JOIN user_info b on a.user_id = b.user_id ORDER BY a.relative_id desc LIMIT 0,5   [ RunTime:0.000377s ]
+INFO: [ view_begin ] --START--
+INFO: [ view_begin ] --END-- [ RunTime:0.000017s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000070s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000119s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.006605s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006655s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000011s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000039s ]
+INFO: [ view_end ] --START--
+INFO: [ view_end ] --END-- [ RunTime:0.000020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000030s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000062s ]
+
+[ 2017-04-16T00:05:42+08:00 ] 10.77.117.237 /health/management/Application/index.php/Admin/Relative/listRela
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000329s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000021s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000036s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000082s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000047s ]
+NOTIC: [2048] Declaration of Admin\Model\RelativeInfoModel::_after_insert() should be compatible with Think\Model::_after_insert($data, $options) D:\xampp\htdocs\health\management\Application\Admin\Model\RelativeInfoModel.class.php 第 7 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `relative_info` [ RunTime:0.001610s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `relative_info` LIMIT 1   [ RunTime:0.000241s ]
+SQL: SELECT a.*,b.user_phone,b.user_name FROM relative_info a LEFT JOIN user_info b on a.user_id = b.user_id ORDER BY a.relative_id desc LIMIT 0,5   [ RunTime:0.000344s ]
+INFO: [ view_begin ] --START--
+INFO: [ view_begin ] --END-- [ RunTime:0.000018s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000070s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000117s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.006397s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006447s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000022s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000054s ]
+INFO: [ view_end ] --START--
+INFO: [ view_end ] --END-- [ RunTime:0.000033s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000049s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000098s ]
+
+[ 2017-04-16T00:05:56+08:00 ] 10.77.117.237 /health/management/Application/index.php/Admin/Relative/listRela
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000257s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000018s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000030s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000067s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000023s ]
+NOTIC: [2048] Declaration of Admin\Model\RelativeInfoModel::_after_insert() should be compatible with Think\Model::_after_insert($data, $options) D:\xampp\htdocs\health\management\Application\Admin\Model\RelativeInfoModel.class.php 第 7 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `relative_info` [ RunTime:0.001410s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `relative_info` LIMIT 1   [ RunTime:0.000237s ]
+SQL: SELECT a.*,b.user_phone,b.user_name FROM relative_info a LEFT JOIN user_info b on a.user_id = b.user_id ORDER BY a.relative_id desc LIMIT 0,5   [ RunTime:0.000366s ]
+INFO: [ view_begin ] --START--
+INFO: [ view_begin ] --END-- [ RunTime:0.000018s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000069s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000121s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.006307s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006359s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000012s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000040s ]
+INFO: [ view_end ] --START--
+INFO: [ view_end ] --END-- [ RunTime:0.000023s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000033s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000066s ]
+
+[ 2017-04-16T00:06:04+08:00 ] 10.77.117.237 /health/management/Application/index.php/Admin/Relative/listRela
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000253s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000019s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000031s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000071s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000033s ]
+NOTIC: [2048] Declaration of Admin\Model\RelativeInfoModel::_after_insert() should be compatible with Think\Model::_after_insert($data, $options) D:\xampp\htdocs\health\management\Application\Admin\Model\RelativeInfoModel.class.php 第 7 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `relative_info` [ RunTime:0.001199s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `relative_info` LIMIT 1   [ RunTime:0.000226s ]
+SQL: SELECT a.*,b.user_phone,b.user_name FROM relative_info a LEFT JOIN user_info b on a.user_id = b.user_id ORDER BY a.relative_id desc LIMIT 0,5   [ RunTime:0.000407s ]
+INFO: [ view_begin ] --START--
+INFO: [ view_begin ] --END-- [ RunTime:0.000023s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000093s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000161s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.008927s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009028s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000022s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000083s ]
+INFO: [ view_end ] --START--
+INFO: [ view_end ] --END-- [ RunTime:0.000040s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000051s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000109s ]
+
+[ 2017-04-16T00:06:25+08:00 ] 10.77.117.237 /health/management/Application/index.php/Admin/Relative/listRela
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000284s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000020s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000046s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000095s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000023s ]
+NOTIC: [2048] Declaration of Admin\Model\RelativeInfoModel::_after_insert() should be compatible with Think\Model::_after_insert($data, $options) D:\xampp\htdocs\health\management\Application\Admin\Model\RelativeInfoModel.class.php 第 7 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `relative_info` [ RunTime:0.001332s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `relative_info` LIMIT 1   [ RunTime:0.000233s ]
+SQL: SELECT a.*,b.user_phone,b.user_name FROM relative_info a LEFT JOIN user_info b on a.user_id = b.user_id ORDER BY a.relative_id desc LIMIT 0,5   [ RunTime:0.000365s ]
+INFO: [ view_begin ] --START--
+INFO: [ view_begin ] --END-- [ RunTime:0.000019s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000100s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000155s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.007225s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007277s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000010s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000040s ]
+INFO: [ view_end ] --START--
+INFO: [ view_end ] --END-- [ RunTime:0.000021s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000032s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000066s ]
+
+[ 2017-04-16T00:07:00+08:00 ] 10.77.117.237 /health/management/Application/index.php/Admin/Relative/listRela
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000363s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000024s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000050s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000149s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000046s ]
+NOTIC: [2048] Declaration of Admin\Model\RelativeInfoModel::_after_insert() should be compatible with Think\Model::_after_insert($data, $options) D:\xampp\htdocs\health\management\Application\Admin\Model\RelativeInfoModel.class.php 第 7 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `relative_info` [ RunTime:0.001393s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `relative_info` LIMIT 1   [ RunTime:0.000247s ]
+SQL: SELECT a.*,b.user_phone,b.user_name FROM relative_info a LEFT JOIN user_info b on a.user_id = b.user_id ORDER BY a.relative_id desc LIMIT 0,5   [ RunTime:0.000365s ]
+INFO: [ view_begin ] --START--
+INFO: [ view_begin ] --END-- [ RunTime:0.000018s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000070s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000126s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.007273s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007326s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000012s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000039s ]
+INFO: [ view_end ] --START--
+INFO: [ view_end ] --END-- [ RunTime:0.000021s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000032s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000065s ]
+
+[ 2017-04-16T00:07:14+08:00 ] 10.77.117.237 /health/management/Application/index.php/Admin/Relative/listRela
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000255s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000018s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000030s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000067s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000031s ]
+NOTIC: [2048] Declaration of Admin\Model\RelativeInfoModel::_after_insert() should be compatible with Think\Model::_after_insert($data, $options) D:\xampp\htdocs\health\management\Application\Admin\Model\RelativeInfoModel.class.php 第 7 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `relative_info` [ RunTime:0.001702s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `relative_info` LIMIT 1   [ RunTime:0.000254s ]
+SQL: SELECT a.*,b.user_phone,b.user_name FROM relative_info a LEFT JOIN user_info b on a.user_id = b.user_id ORDER BY a.relative_id desc LIMIT 0,5   [ RunTime:0.000396s ]
+INFO: [ view_begin ] --START--
+INFO: [ view_begin ] --END-- [ RunTime:0.000019s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000069s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000119s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.007212s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007301s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000015s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000055s ]
+INFO: [ view_end ] --START--
+INFO: [ view_end ] --END-- [ RunTime:0.000096s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000045s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000106s ]
+
+[ 2017-04-16T00:07:28+08:00 ] 10.77.117.237 /health/management/Application/index.php/Admin/Relative/listRela
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000522s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000019s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000032s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000071s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000022s ]
+NOTIC: [2048] Declaration of Admin\Model\RelativeInfoModel::_after_insert() should be compatible with Think\Model::_after_insert($data, $options) D:\xampp\htdocs\health\management\Application\Admin\Model\RelativeInfoModel.class.php 第 7 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `relative_info` [ RunTime:0.001534s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `relative_info` LIMIT 1   [ RunTime:0.000218s ]
+SQL: SELECT a.*,b.user_phone,b.user_name FROM relative_info a LEFT JOIN user_info b on a.user_id = b.user_id ORDER BY a.relative_id desc LIMIT 0,5   [ RunTime:0.000355s ]
+INFO: [ view_begin ] --START--
+INFO: [ view_begin ] --END-- [ RunTime:0.000020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000078s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000138s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.008695s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008759s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000020s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000059s ]
+INFO: [ view_end ] --START--
+INFO: [ view_end ] --END-- [ RunTime:0.000025s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000044s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000093s ]
+
+[ 2017-04-16T00:07:47+08:00 ] 10.77.117.237 /health/management/Application/index.php/Admin/Relative/edit/relative_id/4
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000319s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000035s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000034s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000075s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000032s ]
+NOTIC: [2048] Declaration of Admin\Model\RelativeInfoModel::_after_insert() should be compatible with Think\Model::_after_insert($data, $options) D:\xampp\htdocs\health\management\Application\Admin\Model\RelativeInfoModel.class.php 第 7 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `relative_info` [ RunTime:0.001289s ]
+SQL: SELECT * FROM `relative_info` WHERE ( `relative_id` = 4 ) LIMIT 1   [ RunTime:0.000355s ]
+INFO: [ view_begin ] --START--
+INFO: [ view_begin ] --END-- [ RunTime:0.000021s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000071s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000127s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.009838s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009895s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000012s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000041s ]
+INFO: [ view_end ] --START--
+INFO: [ view_end ] --END-- [ RunTime:0.000012s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000026s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000054s ]
+
+[ 2017-04-16T00:07:55+08:00 ] 10.77.117.237 /health/management/Application/index.php/Admin/Relative/listRela
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000299s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000019s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000030s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000067s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000032s ]
+NOTIC: [2048] Declaration of Admin\Model\RelativeInfoModel::_after_insert() should be compatible with Think\Model::_after_insert($data, $options) D:\xampp\htdocs\health\management\Application\Admin\Model\RelativeInfoModel.class.php 第 7 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `relative_info` [ RunTime:0.001174s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `relative_info` LIMIT 1   [ RunTime:0.000236s ]
+SQL: SELECT a.*,b.user_phone,b.user_name FROM relative_info a LEFT JOIN user_info b on a.user_id = b.user_id ORDER BY a.relative_id desc LIMIT 0,5   [ RunTime:0.000350s ]
+INFO: [ view_begin ] --START--
+INFO: [ view_begin ] --END-- [ RunTime:0.000018s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000095s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000181s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.008757s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008823s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000014s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000054s ]
+INFO: [ view_end ] --START--
+INFO: [ view_end ] --END-- [ RunTime:0.000025s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000053s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000106s ]
+
+[ 2017-04-16T00:07:58+08:00 ] 10.77.117.237 /health/management/Application/index.php/Admin/Relative/edit/relative_id/4
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000274s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000019s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000053s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000115s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000130s ]
+NOTIC: [2048] Declaration of Admin\Model\RelativeInfoModel::_after_insert() should be compatible with Think\Model::_after_insert($data, $options) D:\xampp\htdocs\health\management\Application\Admin\Model\RelativeInfoModel.class.php 第 7 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `relative_info` [ RunTime:0.001370s ]
+SQL: SELECT * FROM `relative_info` WHERE ( `relative_id` = 4 ) LIMIT 1   [ RunTime:0.000291s ]
+INFO: [ view_begin ] --START--
+INFO: [ view_begin ] --END-- [ RunTime:0.000018s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000081s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000145s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.007856s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007955s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000022s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000110s ]
+INFO: [ view_end ] --START--
+INFO: [ view_end ] --END-- [ RunTime:0.000019s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000035s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000080s ]
+
+[ 2017-04-16T00:08:00+08:00 ] 10.77.117.237 /health/management/Application/index.php/Admin/Relative/listRela
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000295s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000018s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000030s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000068s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000023s ]
+NOTIC: [2048] Declaration of Admin\Model\RelativeInfoModel::_after_insert() should be compatible with Think\Model::_after_insert($data, $options) D:\xampp\htdocs\health\management\Application\Admin\Model\RelativeInfoModel.class.php 第 7 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `relative_info` [ RunTime:0.001190s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `relative_info` LIMIT 1   [ RunTime:0.000222s ]
+SQL: SELECT a.*,b.user_phone,b.user_name FROM relative_info a LEFT JOIN user_info b on a.user_id = b.user_id ORDER BY a.relative_id desc LIMIT 0,5   [ RunTime:0.000573s ]
+INFO: [ view_begin ] --START--
+INFO: [ view_begin ] --END-- [ RunTime:0.000040s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000067s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000110s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.006188s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006239s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000010s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000039s ]
+INFO: [ view_end ] --START--
+INFO: [ view_end ] --END-- [ RunTime:0.000021s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000032s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000066s ]
+
+[ 2017-04-16T00:08:02+08:00 ] 10.77.117.237 /health/management/Application/index.php/Admin/Relative/edit/relative_id/3
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000310s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000019s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000030s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000067s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000024s ]
+NOTIC: [2048] Declaration of Admin\Model\RelativeInfoModel::_after_insert() should be compatible with Think\Model::_after_insert($data, $options) D:\xampp\htdocs\health\management\Application\Admin\Model\RelativeInfoModel.class.php 第 7 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `relative_info` [ RunTime:0.002398s ]
+SQL: SELECT * FROM `relative_info` WHERE ( `relative_id` = 3 ) LIMIT 1   [ RunTime:0.000321s ]
+INFO: [ view_begin ] --START--
+INFO: [ view_begin ] --END-- [ RunTime:0.000016s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000070s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000116s ]
+NOTIC: [8] Undefined offset: 1 D:\xampp\htdocs\health\management\Application\Runtime\Cache\Admin\bff4e92af9aab5d7bef0b92a9de84d9b.php 第 140 行.
+NOTIC: [8] Undefined offset: 2 D:\xampp\htdocs\health\management\Application\Runtime\Cache\Admin\bff4e92af9aab5d7bef0b92a9de84d9b.php 第 141 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.006207s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006256s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000012s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000044s ]
+INFO: [ view_end ] --START--
+INFO: [ view_end ] --END-- [ RunTime:0.000014s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000037s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000068s ]
+
+[ 2017-04-16T00:08:47+08:00 ] 10.77.117.237 /health/management/Application/index.php/Admin/Relative/edit/relative_id/3
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000263s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000019s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000028s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000067s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000022s ]
+NOTIC: [2048] Declaration of Admin\Model\RelativeInfoModel::_after_insert() should be compatible with Think\Model::_after_insert($data, $options) D:\xampp\htdocs\health\management\Application\Admin\Model\RelativeInfoModel.class.php 第 7 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `relative_info` [ RunTime:0.048850s ]
+NOTIC: [8] Use of undefined constant FASLE - assumed 'FASLE' D:\xampp\htdocs\health\management\Application\Admin\Controller\RelativeController.class.php 第 44 行.
+NOTIC: [8] Undefined index: seecase_id D:\xampp\htdocs\health\management\Application\Admin\Model\RelativeInfoModel.class.php 第 78 行.
+NOTIC: [8] Undefined index: page_img_path D:\xampp\htdocs\health\management\Application\Admin\Model\RelativeInfoModel.class.php 第 80 行.
+NOTIC: [8] Undefined index: page_img_path D:\xampp\htdocs\health\management\Application\Common\Common\function.php 第 11 行.
+NOTIC: [8] Undefined index: tmp_name D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Upload.class.php 第 149 行.
+NOTIC: [2] finfo_file(): Empty filename or path D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Upload.class.php 第 149 行.
+NOTIC: [8] Undefined index: name D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Upload.class.php 第 153 行.
+NOTIC: [8] Undefined index: error D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Upload.class.php 第 261 行.
+NOTIC: [8] Undefined index: tmp_name D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Upload.class.php 第 272 行.
+SQL: SHOW COLUMNS FROM `page_img` [ RunTime:0.001274s ]
+SQL: SELECT `page_img_path` FROM `page_img` WHERE ( `seecase_id` = null ) LIMIT 1   [ RunTime:0.000332s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\xampp\htdocs\health\management\Application\Common\Common\function.php 第 40 行.
+SQL: DELETE FROM `page_img` WHERE ( `seecase_id` = null ) [ RunTime:0.000205s ]
+NOTIC: [8] Undefined index: images D:\xampp\htdocs\health\management\Application\Admin\Model\RelativeInfoModel.class.php 第 93 行.
+SQL: INSERT INTO `page_img` (`seecase_id`,`page_img_path`,`time`) VALUES (null,null,'2017-04-16 00:08:47') [ RunTime:0.000186s ]
+ERR: 1048:Column 'seecase_id' cannot be null
+ [ SQL语句 ] : INSERT INTO `page_img` (`seecase_id`,`page_img_path`,`time`) VALUES (null,null,'2017-04-16 00:08:47')
+NOTIC: [8] Undefined index: check_img_path D:\xampp\htdocs\health\management\Application\Admin\Model\RelativeInfoModel.class.php 第 98 行.
+NOTIC: [8] Undefined index: check_img_path D:\xampp\htdocs\health\management\Application\Common\Common\function.php 第 11 行.
+NOTIC: [8] Undefined index: tmp_name D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Upload.class.php 第 149 行.
+NOTIC: [2] finfo_file(): Empty filename or path D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Upload.class.php 第 149 行.
+NOTIC: [8] Undefined index: name D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Upload.class.php 第 153 行.
+NOTIC: [8] Undefined index: error D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Upload.class.php 第 261 行.
+NOTIC: [8] Undefined index: tmp_name D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Upload.class.php 第 272 行.
+SQL: SHOW COLUMNS FROM `check_img` [ RunTime:0.001100s ]
+SQL: SELECT `check_img_path` FROM `check_img` WHERE ( `seecase_id` = null ) LIMIT 1   [ RunTime:0.000206s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\xampp\htdocs\health\management\Application\Common\Common\function.php 第 40 行.
+SQL: DELETE FROM `check_img` WHERE ( `seecase_id` = null ) [ RunTime:0.000163s ]
+NOTIC: [8] Undefined index: images D:\xampp\htdocs\health\management\Application\Admin\Model\RelativeInfoModel.class.php 第 111 行.
+SQL: INSERT INTO `check_img` (`seecase_id`,`check_img_path`,`time`) VALUES (null,null,'2017-04-16 00:08:47') [ RunTime:0.000171s ]
+ERR: 1048:Column 'seecase_id' cannot be null
+ [ SQL语句 ] : INSERT INTO `check_img` (`seecase_id`,`check_img_path`,`time`) VALUES (null,null,'2017-04-16 00:08:47')
+SQL: UPDATE `relative_info` SET `user_id`=3,`relative_name`='黄小六',`relative_sex`='男',`relative_age`=12,`relative_relation`='兄弟',`relative_phone`='15768650568',`relative_date`='04/15/2017',`relative_city`='广东 广州 荔湾区' WHERE ( `relative_id` = 3 ) [ RunTime:0.153803s ]
+INFO: [ view_begin ] --START--
+INFO: [ view_begin ] --END-- [ RunTime:0.000019s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000054s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000113s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.005756s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005819s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000010s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000049s ]
+INFO: [ view_end ] --START--
+INFO: [ view_end ] --END-- [ RunTime:0.000013s ]
+
+[ 2017-04-16T00:08:48+08:00 ] 10.77.117.237 /health/management/Application/index.php/Admin/Relative/listRela.html
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000297s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000068s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000032s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000073s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000023s ]
+NOTIC: [2048] Declaration of Admin\Model\RelativeInfoModel::_after_insert() should be compatible with Think\Model::_after_insert($data, $options) D:\xampp\htdocs\health\management\Application\Admin\Model\RelativeInfoModel.class.php 第 7 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `relative_info` [ RunTime:0.001191s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `relative_info` LIMIT 1   [ RunTime:0.000234s ]
+SQL: SELECT a.*,b.user_phone,b.user_name FROM relative_info a LEFT JOIN user_info b on a.user_id = b.user_id ORDER BY a.relative_id desc LIMIT 0,5   [ RunTime:0.000373s ]
+INFO: [ view_begin ] --START--
+INFO: [ view_begin ] --END-- [ RunTime:0.000018s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000071s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000129s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.008266s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008319s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000012s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000061s ]
+INFO: [ view_end ] --START--
+INFO: [ view_end ] --END-- [ RunTime:0.000022s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000033s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000066s ]
+
+[ 2017-04-16T00:08:55+08:00 ] 10.77.117.237 /health/management/Application/index.php/Admin/Relative/edit/relative_id/2
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000309s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000033s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000052s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000105s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000030s ]
+NOTIC: [2048] Declaration of Admin\Model\RelativeInfoModel::_after_insert() should be compatible with Think\Model::_after_insert($data, $options) D:\xampp\htdocs\health\management\Application\Admin\Model\RelativeInfoModel.class.php 第 7 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `relative_info` [ RunTime:0.001288s ]
+SQL: SELECT * FROM `relative_info` WHERE ( `relative_id` = 2 ) LIMIT 1   [ RunTime:0.000291s ]
+INFO: [ view_begin ] --START--
+INFO: [ view_begin ] --END-- [ RunTime:0.000018s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000081s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000147s ]
+NOTIC: [8] Undefined offset: 1 D:\xampp\htdocs\health\management\Application\Runtime\Cache\Admin\bff4e92af9aab5d7bef0b92a9de84d9b.php 第 140 行.
+NOTIC: [8] Undefined offset: 2 D:\xampp\htdocs\health\management\Application\Runtime\Cache\Admin\bff4e92af9aab5d7bef0b92a9de84d9b.php 第 141 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.007851s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007946s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000015s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000071s ]
+INFO: [ view_end ] --START--
+INFO: [ view_end ] --END-- [ RunTime:0.000053s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000093s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000169s ]
+
+[ 2017-04-16T00:09:44+08:00 ] 10.77.117.237 /health/management/Application/index.php/Admin/Relative/edit/relative_id/2
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000312s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000022s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000034s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000082s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000029s ]
+NOTIC: [2048] Declaration of Admin\Model\RelativeInfoModel::_after_insert() should be compatible with Think\Model::_after_insert($data, $options) D:\xampp\htdocs\health\management\Application\Admin\Model\RelativeInfoModel.class.php 第 7 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `relative_info` [ RunTime:0.001524s ]
+NOTIC: [8] Use of undefined constant FASLE - assumed 'FASLE' D:\xampp\htdocs\health\management\Application\Admin\Controller\RelativeController.class.php 第 44 行.
+NOTIC: [8] Undefined index: seecase_id D:\xampp\htdocs\health\management\Application\Admin\Model\RelativeInfoModel.class.php 第 78 行.
+NOTIC: [8] Undefined index: page_img_path D:\xampp\htdocs\health\management\Application\Admin\Model\RelativeInfoModel.class.php 第 80 行.
+NOTIC: [8] Undefined index: page_img_path D:\xampp\htdocs\health\management\Application\Common\Common\function.php 第 11 行.
+NOTIC: [8] Undefined index: tmp_name D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Upload.class.php 第 149 行.
+NOTIC: [2] finfo_file(): Empty filename or path D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Upload.class.php 第 149 行.
+NOTIC: [8] Undefined index: name D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Upload.class.php 第 153 行.
+NOTIC: [8] Undefined index: error D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Upload.class.php 第 261 行.
+NOTIC: [8] Undefined index: tmp_name D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Upload.class.php 第 272 行.
+SQL: SHOW COLUMNS FROM `page_img` [ RunTime:0.001187s ]
+SQL: SELECT `page_img_path` FROM `page_img` WHERE ( `seecase_id` = null ) LIMIT 1   [ RunTime:0.000196s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\xampp\htdocs\health\management\Application\Common\Common\function.php 第 40 行.
+SQL: DELETE FROM `page_img` WHERE ( `seecase_id` = null ) [ RunTime:0.000131s ]
+NOTIC: [8] Undefined index: images D:\xampp\htdocs\health\management\Application\Admin\Model\RelativeInfoModel.class.php 第 93 行.
+SQL: INSERT INTO `page_img` (`seecase_id`,`page_img_path`,`time`) VALUES (null,null,'2017-04-16 00:09:44') [ RunTime:0.000130s ]
+ERR: 1048:Column 'seecase_id' cannot be null
+ [ SQL语句 ] : INSERT INTO `page_img` (`seecase_id`,`page_img_path`,`time`) VALUES (null,null,'2017-04-16 00:09:44')
+NOTIC: [8] Undefined index: check_img_path D:\xampp\htdocs\health\management\Application\Admin\Model\RelativeInfoModel.class.php 第 98 行.
+NOTIC: [8] Undefined index: check_img_path D:\xampp\htdocs\health\management\Application\Common\Common\function.php 第 11 行.
+NOTIC: [8] Undefined index: tmp_name D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Upload.class.php 第 149 行.
+NOTIC: [2] finfo_file(): Empty filename or path D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Upload.class.php 第 149 行.
+NOTIC: [8] Undefined index: name D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Upload.class.php 第 153 行.
+NOTIC: [8] Undefined index: error D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Upload.class.php 第 261 行.
+NOTIC: [8] Undefined index: tmp_name D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Upload.class.php 第 272 行.
+SQL: SHOW COLUMNS FROM `check_img` [ RunTime:0.001159s ]
+SQL: SELECT `check_img_path` FROM `check_img` WHERE ( `seecase_id` = null ) LIMIT 1   [ RunTime:0.000203s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\xampp\htdocs\health\management\Application\Common\Common\function.php 第 40 行.
+SQL: DELETE FROM `check_img` WHERE ( `seecase_id` = null ) [ RunTime:0.000123s ]
+NOTIC: [8] Undefined index: images D:\xampp\htdocs\health\management\Application\Admin\Model\RelativeInfoModel.class.php 第 111 行.
+SQL: INSERT INTO `check_img` (`seecase_id`,`check_img_path`,`time`) VALUES (null,null,'2017-04-16 00:09:44') [ RunTime:0.000126s ]
+ERR: 1048:Column 'seecase_id' cannot be null
+ [ SQL语句 ] : INSERT INTO `check_img` (`seecase_id`,`check_img_path`,`time`) VALUES (null,null,'2017-04-16 00:09:44')
+NOTIC: [8] Undefined index: city D:\xampp\htdocs\health\management\Application\Admin\Model\RelativeInfoModel.class.php 第 115 行.
+NOTIC: [8] Undefined index: dist D:\xampp\htdocs\health\management\Application\Admin\Model\RelativeInfoModel.class.php 第 115 行.
+SQL: UPDATE `relative_info` SET `user_id`=4,`relative_name`='姚桂子',`relative_sex`='男',`relative_age`=12,`relative_relation`='堂兄',`relative_phone`='085-1489579',`relative_date`='03/08/1990',`relative_city`='国外  ' WHERE ( `relative_id` = 2 ) [ RunTime:0.323629s ]
+INFO: [ view_begin ] --START--
+INFO: [ view_begin ] --END-- [ RunTime:0.000020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000045s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000104s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.005497s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005572s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000013s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000045s ]
+INFO: [ view_end ] --START--
+INFO: [ view_end ] --END-- [ RunTime:0.000013s ]
+
+[ 2017-04-16T00:09:45+08:00 ] 10.77.117.237 /health/management/Application/index.php/Admin/Relative/listRela.html
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000296s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000038s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000066s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000168s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000217s ]
+NOTIC: [2048] Declaration of Admin\Model\RelativeInfoModel::_after_insert() should be compatible with Think\Model::_after_insert($data, $options) D:\xampp\htdocs\health\management\Application\Admin\Model\RelativeInfoModel.class.php 第 7 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `relative_info` [ RunTime:0.002297s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `relative_info` LIMIT 1   [ RunTime:0.000269s ]
+SQL: SELECT a.*,b.user_phone,b.user_name FROM relative_info a LEFT JOIN user_info b on a.user_id = b.user_id ORDER BY a.relative_id desc LIMIT 0,5   [ RunTime:0.000459s ]
+INFO: [ view_begin ] --START--
+INFO: [ view_begin ] --END-- [ RunTime:0.000022s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000079s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000134s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.006859s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006921s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000012s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000046s ]
+INFO: [ view_end ] --START--
+INFO: [ view_end ] --END-- [ RunTime:0.000023s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000043s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000090s ]
+
+[ 2017-04-16T00:10:00+08:00 ] 10.77.117.237 /health/management/Application/index.php/Admin/Relative/edit/relative_id/1
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000260s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000018s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000031s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000068s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000023s ]
+NOTIC: [2048] Declaration of Admin\Model\RelativeInfoModel::_after_insert() should be compatible with Think\Model::_after_insert($data, $options) D:\xampp\htdocs\health\management\Application\Admin\Model\RelativeInfoModel.class.php 第 7 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `relative_info` [ RunTime:0.001264s ]
+SQL: SELECT * FROM `relative_info` WHERE ( `relative_id` = 1 ) LIMIT 1   [ RunTime:0.000287s ]
+INFO: [ view_begin ] --START--
+INFO: [ view_begin ] --END-- [ RunTime:0.000015s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000094s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000173s ]
+NOTIC: [8] Undefined offset: 1 D:\xampp\htdocs\health\management\Application\Runtime\Cache\Admin\bff4e92af9aab5d7bef0b92a9de84d9b.php 第 140 行.
+NOTIC: [8] Undefined offset: 2 D:\xampp\htdocs\health\management\Application\Runtime\Cache\Admin\bff4e92af9aab5d7bef0b92a9de84d9b.php 第 141 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.009742s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009801s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000012s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000039s ]
+INFO: [ view_end ] --START--
+INFO: [ view_end ] --END-- [ RunTime:0.000012s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000026s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000054s ]
+
+[ 2017-04-16T00:10:26+08:00 ] 10.77.117.237 /health/management/Application/index.php/Admin/Relative/edit/relative_id/1
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000257s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000018s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000028s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000065s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000023s ]
+NOTIC: [2048] Declaration of Admin\Model\RelativeInfoModel::_after_insert() should be compatible with Think\Model::_after_insert($data, $options) D:\xampp\htdocs\health\management\Application\Admin\Model\RelativeInfoModel.class.php 第 7 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `relative_info` [ RunTime:0.001268s ]
+NOTIC: [8] Use of undefined constant FASLE - assumed 'FASLE' D:\xampp\htdocs\health\management\Application\Admin\Controller\RelativeController.class.php 第 44 行.
+NOTIC: [8] Undefined index: seecase_id D:\xampp\htdocs\health\management\Application\Admin\Model\RelativeInfoModel.class.php 第 78 行.
+NOTIC: [8] Undefined index: page_img_path D:\xampp\htdocs\health\management\Application\Admin\Model\RelativeInfoModel.class.php 第 80 行.
+NOTIC: [8] Undefined index: page_img_path D:\xampp\htdocs\health\management\Application\Common\Common\function.php 第 11 行.
+NOTIC: [8] Undefined index: tmp_name D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Upload.class.php 第 149 行.
+NOTIC: [2] finfo_file(): Empty filename or path D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Upload.class.php 第 149 行.
+NOTIC: [8] Undefined index: name D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Upload.class.php 第 153 行.
+NOTIC: [8] Undefined index: error D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Upload.class.php 第 261 行.
+NOTIC: [8] Undefined index: tmp_name D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Upload.class.php 第 272 行.
+SQL: SHOW COLUMNS FROM `page_img` [ RunTime:0.001094s ]
+SQL: SELECT `page_img_path` FROM `page_img` WHERE ( `seecase_id` = null ) LIMIT 1   [ RunTime:0.000245s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\xampp\htdocs\health\management\Application\Common\Common\function.php 第 40 行.
+SQL: DELETE FROM `page_img` WHERE ( `seecase_id` = null ) [ RunTime:0.000172s ]
+NOTIC: [8] Undefined index: images D:\xampp\htdocs\health\management\Application\Admin\Model\RelativeInfoModel.class.php 第 93 行.
+SQL: INSERT INTO `page_img` (`seecase_id`,`page_img_path`,`time`) VALUES (null,null,'2017-04-16 00:10:26') [ RunTime:0.000177s ]
+ERR: 1048:Column 'seecase_id' cannot be null
+ [ SQL语句 ] : INSERT INTO `page_img` (`seecase_id`,`page_img_path`,`time`) VALUES (null,null,'2017-04-16 00:10:26')
+NOTIC: [8] Undefined index: check_img_path D:\xampp\htdocs\health\management\Application\Admin\Model\RelativeInfoModel.class.php 第 98 行.
+NOTIC: [8] Undefined index: check_img_path D:\xampp\htdocs\health\management\Application\Common\Common\function.php 第 11 行.
+NOTIC: [8] Undefined index: tmp_name D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Upload.class.php 第 149 行.
+NOTIC: [2] finfo_file(): Empty filename or path D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Upload.class.php 第 149 行.
+NOTIC: [8] Undefined index: name D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Upload.class.php 第 153 行.
+NOTIC: [8] Undefined index: error D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Upload.class.php 第 261 行.
+NOTIC: [8] Undefined index: tmp_name D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Upload.class.php 第 272 行.
+SQL: SHOW COLUMNS FROM `check_img` [ RunTime:0.001034s ]
+SQL: SELECT `check_img_path` FROM `check_img` WHERE ( `seecase_id` = null ) LIMIT 1   [ RunTime:0.000206s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\xampp\htdocs\health\management\Application\Common\Common\function.php 第 40 行.
+SQL: DELETE FROM `check_img` WHERE ( `seecase_id` = null ) [ RunTime:0.000161s ]
+NOTIC: [8] Undefined index: images D:\xampp\htdocs\health\management\Application\Admin\Model\RelativeInfoModel.class.php 第 111 行.
+SQL: INSERT INTO `check_img` (`seecase_id`,`check_img_path`,`time`) VALUES (null,null,'2017-04-16 00:10:26') [ RunTime:0.000169s ]
+ERR: 1048:Column 'seecase_id' cannot be null
+ [ SQL语句 ] : INSERT INTO `check_img` (`seecase_id`,`check_img_path`,`time`) VALUES (null,null,'2017-04-16 00:10:26')
+SQL: UPDATE `relative_info` SET `user_id`=7,`relative_name`='王二小',`relative_sex`='男',`relative_age`=10,`relative_relation`='儿子',`relative_phone`='15768650568',`relative_date`='10/30/2007',`relative_city`='广东 河源 龙川县' WHERE ( `relative_id` = 1 ) [ RunTime:0.280839s ]
+INFO: [ view_begin ] --START--
+INFO: [ view_begin ] --END-- [ RunTime:0.000018s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000045s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000105s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.005794s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005867s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000013s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000065s ]
+INFO: [ view_end ] --START--
+INFO: [ view_end ] --END-- [ RunTime:0.000015s ]
+
+[ 2017-04-16T00:10:27+08:00 ] 10.77.117.237 /health/management/Application/index.php/Admin/Relative/listRela.html
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000264s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000025s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000031s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000070s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000023s ]
+NOTIC: [2048] Declaration of Admin\Model\RelativeInfoModel::_after_insert() should be compatible with Think\Model::_after_insert($data, $options) D:\xampp\htdocs\health\management\Application\Admin\Model\RelativeInfoModel.class.php 第 7 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `relative_info` [ RunTime:0.001197s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `relative_info` LIMIT 1   [ RunTime:0.000225s ]
+SQL: SELECT a.*,b.user_phone,b.user_name FROM relative_info a LEFT JOIN user_info b on a.user_id = b.user_id ORDER BY a.relative_id desc LIMIT 0,5   [ RunTime:0.000434s ]
+INFO: [ view_begin ] --START--
+INFO: [ view_begin ] --END-- [ RunTime:0.000019s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000071s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000126s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.007910s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007964s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000011s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000040s ]
+INFO: [ view_end ] --START--
+INFO: [ view_end ] --END-- [ RunTime:0.000022s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000033s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000068s ]
+
+[ 2017-04-16T00:12:55+08:00 ] 10.77.117.237 /health/management/Application/index.php/Admin/Relative/listRela.html?s_ishome=&s_isvouch=&s_istop=&userPhone=110
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000266s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000026s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000059s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000144s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000031s ]
+NOTIC: [2048] Declaration of Admin\Model\RelativeInfoModel::_after_insert() should be compatible with Think\Model::_after_insert($data, $options) D:\xampp\htdocs\health\management\Application\Admin\Model\RelativeInfoModel.class.php 第 7 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `relative_info` [ RunTime:0.002406s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `relative_info` WHERE ( b.user_phone = '110' ) LIMIT 1   [ RunTime:0.000289s ]
+ERR: 1054:Unknown column 'b.user_phone' in 'where clause'
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `relative_info` WHERE ( b.user_phone = '110' ) LIMIT 1  
+SQL: SELECT a.*,b.user_phone,b.user_name FROM relative_info a LEFT JOIN user_info b on a.user_id = b.user_id WHERE ( b.user_phone = '110' ) ORDER BY a.relative_id desc LIMIT 0,5   [ RunTime:0.000445s ]
+INFO: [ view_begin ] --START--
+INFO: [ view_begin ] --END-- [ RunTime:0.000018s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000069s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000144s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.006436s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006496s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000010s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000039s ]
+INFO: [ view_end ] --START--
+INFO: [ view_end ] --END-- [ RunTime:0.000012s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000026s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000053s ]
+
+[ 2017-04-16T00:13:00+08:00 ] 10.77.117.237 /health/management/Application/index.php/Admin/Relative/listRela.html?s_ishome=&s_isvouch=&s_istop=&userPhone=15768650568
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.001054s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000025s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000063s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000149s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000059s ]
+NOTIC: [2048] Declaration of Admin\Model\RelativeInfoModel::_after_insert() should be compatible with Think\Model::_after_insert($data, $options) D:\xampp\htdocs\health\management\Application\Admin\Model\RelativeInfoModel.class.php 第 7 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `relative_info` [ RunTime:0.001293s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `relative_info` WHERE ( b.user_phone = '15768650568' ) LIMIT 1   [ RunTime:0.000152s ]
+ERR: 1054:Unknown column 'b.user_phone' in 'where clause'
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `relative_info` WHERE ( b.user_phone = '15768650568' ) LIMIT 1  
+SQL: SELECT a.*,b.user_phone,b.user_name FROM relative_info a LEFT JOIN user_info b on a.user_id = b.user_id WHERE ( b.user_phone = '15768650568' ) ORDER BY a.relative_id desc LIMIT 0,5   [ RunTime:0.000517s ]
+INFO: [ view_begin ] --START--
+INFO: [ view_begin ] --END-- [ RunTime:0.000018s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000071s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000126s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\xampp\htdocs\health\management\Application\Runtime\Cache\Admin\bfc28ab3b340669b90d1dbd5bbeeb15e.php 第 78 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.009135s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009204s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000012s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000060s ]
+INFO: [ view_end ] --START--
+INFO: [ view_end ] --END-- [ RunTime:0.000012s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000026s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000054s ]
+
+[ 2017-04-16T00:13:05+08:00 ] 10.77.117.237 /health/management/Application/index.php/Admin/Relative/listRela.html?s_ishome=&s_isvouch=&s_istop=&userPhone=
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000262s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000019s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000036s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000082s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000026s ]
+NOTIC: [2048] Declaration of Admin\Model\RelativeInfoModel::_after_insert() should be compatible with Think\Model::_after_insert($data, $options) D:\xampp\htdocs\health\management\Application\Admin\Model\RelativeInfoModel.class.php 第 7 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `relative_info` [ RunTime:0.001227s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `relative_info` LIMIT 1   [ RunTime:0.000224s ]
+SQL: SELECT a.*,b.user_phone,b.user_name FROM relative_info a LEFT JOIN user_info b on a.user_id = b.user_id ORDER BY a.relative_id desc LIMIT 0,5   [ RunTime:0.000358s ]
+INFO: [ view_begin ] --START--
+INFO: [ view_begin ] --END-- [ RunTime:0.000019s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000073s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000132s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.009043s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009098s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000011s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000042s ]
+INFO: [ view_end ] --START--
+INFO: [ view_end ] --END-- [ RunTime:0.000025s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000032s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000069s ]
+
+[ 2017-04-16T00:13:11+08:00 ] 10.77.117.237 /health/management/Application/index.php/Admin/Relative/listRela.html?s_ishome=&s_isvouch=&s_istop=&userPhone=12345678912
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000262s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000020s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000031s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000072s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000024s ]
+NOTIC: [2048] Declaration of Admin\Model\RelativeInfoModel::_after_insert() should be compatible with Think\Model::_after_insert($data, $options) D:\xampp\htdocs\health\management\Application\Admin\Model\RelativeInfoModel.class.php 第 7 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `relative_info` [ RunTime:0.001248s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `relative_info` WHERE ( b.user_phone = '12345678912' ) LIMIT 1   [ RunTime:0.000188s ]
+ERR: 1054:Unknown column 'b.user_phone' in 'where clause'
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `relative_info` WHERE ( b.user_phone = '12345678912' ) LIMIT 1  
+SQL: SELECT a.*,b.user_phone,b.user_name FROM relative_info a LEFT JOIN user_info b on a.user_id = b.user_id WHERE ( b.user_phone = '12345678912' ) ORDER BY a.relative_id desc LIMIT 0,5   [ RunTime:0.000375s ]
+INFO: [ view_begin ] --START--
+INFO: [ view_begin ] --END-- [ RunTime:0.000019s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000068s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000116s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.006316s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006375s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000011s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000040s ]
+INFO: [ view_end ] --START--
+INFO: [ view_end ] --END-- [ RunTime:0.000012s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000026s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000054s ]
+
+[ 2017-04-16T00:13:13+08:00 ] 10.77.117.237 /health/management/Application/index.php/Admin/Relative/listRela.html?s_ishome=&s_isvouch=&s_istop=&userPhone=123456789
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000259s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000019s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000049s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000093s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000034s ]
+NOTIC: [2048] Declaration of Admin\Model\RelativeInfoModel::_after_insert() should be compatible with Think\Model::_after_insert($data, $options) D:\xampp\htdocs\health\management\Application\Admin\Model\RelativeInfoModel.class.php 第 7 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `relative_info` [ RunTime:0.002299s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `relative_info` WHERE ( b.user_phone = '123456789' ) LIMIT 1   [ RunTime:0.000229s ]
+ERR: 1054:Unknown column 'b.user_phone' in 'where clause'
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `relative_info` WHERE ( b.user_phone = '123456789' ) LIMIT 1  
+SQL: SELECT a.*,b.user_phone,b.user_name FROM relative_info a LEFT JOIN user_info b on a.user_id = b.user_id WHERE ( b.user_phone = '123456789' ) ORDER BY a.relative_id desc LIMIT 0,5   [ RunTime:0.000334s ]
+INFO: [ view_begin ] --START--
+INFO: [ view_begin ] --END-- [ RunTime:0.000016s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000069s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000122s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\xampp\htdocs\health\management\Application\Runtime\Cache\Admin\bfc28ab3b340669b90d1dbd5bbeeb15e.php 第 78 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.006177s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006223s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000012s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000039s ]
+INFO: [ view_end ] --START--
+INFO: [ view_end ] --END-- [ RunTime:0.000012s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000026s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000053s ]
+
+[ 2017-04-16T00:13:18+08:00 ] 10.77.117.237 /health/management/Application/index.php/Admin/HistoryVis/listHis
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000263s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000019s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000031s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000070s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000023s ]
+NOTIC: [2048] Declaration of Admin\Model\SeeDocCaseModel::_after_insert() should be compatible with Think\Model::_after_insert($data, $options) D:\xampp\htdocs\health\management\Application\Admin\Model\SeeDocCaseModel.class.php 第 7 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `see_doc_case` [ RunTime:0.001255s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `see_doc_case` LIMIT 1   [ RunTime:0.000235s ]
+SQL: SELECT a.*,b.user_phone,b.user_name,c.page_img_path,d.check_img_path FROM see_doc_case a LEFT JOIN user_info b on a.user_id = b.user_id LEFT JOIN page_img c on a.seecase_id = c.seecase_id LEFT JOIN check_img d on a.seecase_id = d.seecase_id ORDER BY a.seecase_id desc LIMIT 0,5   [ RunTime:0.001459s ]
+INFO: [ view_begin ] --START--
+INFO: [ view_begin ] --END-- [ RunTime:0.000024s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000091s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000142s ]
+NOTIC: [8] Undefined index: hos_id D:\xampp\htdocs\health\management\Application\Runtime\Cache\Admin\37c5b598746537b13dbb6c7004d06e14.php 第 85 行.
+NOTIC: [8] Undefined index: hos_name D:\xampp\htdocs\health\management\Application\Runtime\Cache\Admin\37c5b598746537b13dbb6c7004d06e14.php 第 140 行.
+NOTIC: [8] Undefined index: hos_id D:\xampp\htdocs\health\management\Application\Runtime\Cache\Admin\37c5b598746537b13dbb6c7004d06e14.php 第 85 行.
+NOTIC: [8] Undefined index: hos_name D:\xampp\htdocs\health\management\Application\Runtime\Cache\Admin\37c5b598746537b13dbb6c7004d06e14.php 第 140 行.
+NOTIC: [8] Undefined index: hos_id D:\xampp\htdocs\health\management\Application\Runtime\Cache\Admin\37c5b598746537b13dbb6c7004d06e14.php 第 85 行.
+NOTIC: [8] Undefined index: hos_name D:\xampp\htdocs\health\management\Application\Runtime\Cache\Admin\37c5b598746537b13dbb6c7004d06e14.php 第 140 行.
+NOTIC: [8] Undefined index: hos_id D:\xampp\htdocs\health\management\Application\Runtime\Cache\Admin\37c5b598746537b13dbb6c7004d06e14.php 第 85 行.
+NOTIC: [8] Undefined index: hos_name D:\xampp\htdocs\health\management\Application\Runtime\Cache\Admin\37c5b598746537b13dbb6c7004d06e14.php 第 140 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.008100s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008148s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000010s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000038s ]
+INFO: [ view_end ] --START--
+INFO: [ view_end ] --END-- [ RunTime:0.000022s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000031s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000064s ]
+
+[ 2017-04-16T00:13:22+08:00 ] 10.77.117.237 /health/management/Application/index.php/Admin/HistoryVis/listHis?s_ishome=&s_isvouch=&s_istop=&userPhone=15768650568
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000257s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000018s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000033s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000082s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000026s ]
+NOTIC: [2048] Declaration of Admin\Model\SeeDocCaseModel::_after_insert() should be compatible with Think\Model::_after_insert($data, $options) D:\xampp\htdocs\health\management\Application\Admin\Model\SeeDocCaseModel.class.php 第 7 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `see_doc_case` [ RunTime:0.001243s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `see_doc_case` WHERE ( b.user_phone = '15768650568' ) LIMIT 1   [ RunTime:0.000194s ]
+ERR: 1054:Unknown column 'b.user_phone' in 'where clause'
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `see_doc_case` WHERE ( b.user_phone = '15768650568' ) LIMIT 1  
+SQL: SELECT a.*,b.user_phone,b.user_name,c.page_img_path,d.check_img_path FROM see_doc_case a LEFT JOIN user_info b on a.user_id = b.user_id LEFT JOIN page_img c on a.seecase_id = c.seecase_id LEFT JOIN check_img d on a.seecase_id = d.seecase_id WHERE ( b.user_phone = '15768650568' ) ORDER BY a.seecase_id desc LIMIT 0,5   [ RunTime:0.001448s ]
+INFO: [ view_begin ] --START--
+INFO: [ view_begin ] --END-- [ RunTime:0.000018s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000082s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000134s ]
+NOTIC: [8] Undefined index: hos_id D:\xampp\htdocs\health\management\Application\Runtime\Cache\Admin\37c5b598746537b13dbb6c7004d06e14.php 第 85 行.
+NOTIC: [8] Undefined index: hos_name D:\xampp\htdocs\health\management\Application\Runtime\Cache\Admin\37c5b598746537b13dbb6c7004d06e14.php 第 140 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.007208s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007254s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000011s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000041s ]
+INFO: [ view_end ] --START--
+INFO: [ view_end ] --END-- [ RunTime:0.000012s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000026s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000054s ]
+
+[ 2017-04-16T00:13:27+08:00 ] 10.77.117.237 /health/management/Application/index.php/Admin/Relative/listRela
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000258s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000018s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000030s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000068s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000032s ]
+NOTIC: [2048] Declaration of Admin\Model\RelativeInfoModel::_after_insert() should be compatible with Think\Model::_after_insert($data, $options) D:\xampp\htdocs\health\management\Application\Admin\Model\RelativeInfoModel.class.php 第 7 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `relative_info` [ RunTime:0.001359s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `relative_info` LIMIT 1   [ RunTime:0.000244s ]
+SQL: SELECT a.*,b.user_phone,b.user_name FROM relative_info a LEFT JOIN user_info b on a.user_id = b.user_id ORDER BY a.relative_id desc LIMIT 0,5   [ RunTime:0.000410s ]
+INFO: [ view_begin ] --START--
+INFO: [ view_begin ] --END-- [ RunTime:0.000017s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000069s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000125s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.008346s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008449s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000014s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000047s ]
+INFO: [ view_end ] --START--
+INFO: [ view_end ] --END-- [ RunTime:0.000022s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000035s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000070s ]
+
+[ 2017-04-16T00:13:31+08:00 ] 10.77.117.237 /health/management/Application/index.php/Admin/HistoryVis/listHis
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000254s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000018s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000030s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000068s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000032s ]
+NOTIC: [2048] Declaration of Admin\Model\SeeDocCaseModel::_after_insert() should be compatible with Think\Model::_after_insert($data, $options) D:\xampp\htdocs\health\management\Application\Admin\Model\SeeDocCaseModel.class.php 第 7 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `see_doc_case` [ RunTime:0.001261s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `see_doc_case` LIMIT 1   [ RunTime:0.000247s ]
+SQL: SELECT a.*,b.user_phone,b.user_name,c.page_img_path,d.check_img_path FROM see_doc_case a LEFT JOIN user_info b on a.user_id = b.user_id LEFT JOIN page_img c on a.seecase_id = c.seecase_id LEFT JOIN check_img d on a.seecase_id = d.seecase_id ORDER BY a.seecase_id desc LIMIT 0,5   [ RunTime:0.001332s ]
+INFO: [ view_begin ] --START--
+INFO: [ view_begin ] --END-- [ RunTime:0.000019s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000092s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000147s ]
+NOTIC: [8] Undefined index: hos_id D:\xampp\htdocs\health\management\Application\Runtime\Cache\Admin\37c5b598746537b13dbb6c7004d06e14.php 第 85 行.
+NOTIC: [8] Undefined index: hos_name D:\xampp\htdocs\health\management\Application\Runtime\Cache\Admin\37c5b598746537b13dbb6c7004d06e14.php 第 140 行.
+NOTIC: [8] Undefined index: hos_id D:\xampp\htdocs\health\management\Application\Runtime\Cache\Admin\37c5b598746537b13dbb6c7004d06e14.php 第 85 行.
+NOTIC: [8] Undefined index: hos_name D:\xampp\htdocs\health\management\Application\Runtime\Cache\Admin\37c5b598746537b13dbb6c7004d06e14.php 第 140 行.
+NOTIC: [8] Undefined index: hos_id D:\xampp\htdocs\health\management\Application\Runtime\Cache\Admin\37c5b598746537b13dbb6c7004d06e14.php 第 85 行.
+NOTIC: [8] Undefined index: hos_name D:\xampp\htdocs\health\management\Application\Runtime\Cache\Admin\37c5b598746537b13dbb6c7004d06e14.php 第 140 行.
+NOTIC: [8] Undefined index: hos_id D:\xampp\htdocs\health\management\Application\Runtime\Cache\Admin\37c5b598746537b13dbb6c7004d06e14.php 第 85 行.
+NOTIC: [8] Undefined index: hos_name D:\xampp\htdocs\health\management\Application\Runtime\Cache\Admin\37c5b598746537b13dbb6c7004d06e14.php 第 140 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.008251s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008297s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000012s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000039s ]
+INFO: [ view_end ] --START--
+INFO: [ view_end ] --END-- [ RunTime:0.000023s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000031s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000065s ]
+
+[ 2017-04-16T00:13:34+08:00 ] 10.77.117.237 /health/management/Application/index.php/Admin/Relative/listRela
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000397s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000033s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000052s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000119s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000035s ]
+NOTIC: [2048] Declaration of Admin\Model\RelativeInfoModel::_after_insert() should be compatible with Think\Model::_after_insert($data, $options) D:\xampp\htdocs\health\management\Application\Admin\Model\RelativeInfoModel.class.php 第 7 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `relative_info` [ RunTime:0.001274s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `relative_info` LIMIT 1   [ RunTime:0.000231s ]
+SQL: SELECT a.*,b.user_phone,b.user_name FROM relative_info a LEFT JOIN user_info b on a.user_id = b.user_id ORDER BY a.relative_id desc LIMIT 0,5   [ RunTime:0.000350s ]
+INFO: [ view_begin ] --START--
+INFO: [ view_begin ] --END-- [ RunTime:0.000017s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000067s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000136s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.006266s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006333s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000010s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000040s ]
+INFO: [ view_end ] --START--
+INFO: [ view_end ] --END-- [ RunTime:0.000022s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000031s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000067s ]
+
+[ 2017-04-16T00:13:44+08:00 ] 10.77.117.237 /health/management/Application/index.php/Admin/HistoryVis/listHis
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000258s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000018s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000029s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000066s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000024s ]
+NOTIC: [2048] Declaration of Admin\Model\SeeDocCaseModel::_after_insert() should be compatible with Think\Model::_after_insert($data, $options) D:\xampp\htdocs\health\management\Application\Admin\Model\SeeDocCaseModel.class.php 第 7 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `see_doc_case` [ RunTime:0.001324s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `see_doc_case` LIMIT 1   [ RunTime:0.000281s ]
+SQL: SELECT a.*,b.user_phone,b.user_name,c.page_img_path,d.check_img_path FROM see_doc_case a LEFT JOIN user_info b on a.user_id = b.user_id LEFT JOIN page_img c on a.seecase_id = c.seecase_id LEFT JOIN check_img d on a.seecase_id = d.seecase_id ORDER BY a.seecase_id desc LIMIT 0,5   [ RunTime:0.001327s ]
+INFO: [ view_begin ] --START--
+INFO: [ view_begin ] --END-- [ RunTime:0.000019s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000130s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000198s ]
+NOTIC: [8] Undefined index: hos_id D:\xampp\htdocs\health\management\Application\Runtime\Cache\Admin\37c5b598746537b13dbb6c7004d06e14.php 第 85 行.
+NOTIC: [8] Undefined index: hos_name D:\xampp\htdocs\health\management\Application\Runtime\Cache\Admin\37c5b598746537b13dbb6c7004d06e14.php 第 140 行.
+NOTIC: [8] Undefined index: hos_id D:\xampp\htdocs\health\management\Application\Runtime\Cache\Admin\37c5b598746537b13dbb6c7004d06e14.php 第 85 行.
+NOTIC: [8] Undefined index: hos_name D:\xampp\htdocs\health\management\Application\Runtime\Cache\Admin\37c5b598746537b13dbb6c7004d06e14.php 第 140 行.
+NOTIC: [8] Undefined index: hos_id D:\xampp\htdocs\health\management\Application\Runtime\Cache\Admin\37c5b598746537b13dbb6c7004d06e14.php 第 85 行.
+NOTIC: [8] Undefined index: hos_name D:\xampp\htdocs\health\management\Application\Runtime\Cache\Admin\37c5b598746537b13dbb6c7004d06e14.php 第 140 行.
+NOTIC: [8] Undefined index: hos_id D:\xampp\htdocs\health\management\Application\Runtime\Cache\Admin\37c5b598746537b13dbb6c7004d06e14.php 第 85 行.
+NOTIC: [8] Undefined index: hos_name D:\xampp\htdocs\health\management\Application\Runtime\Cache\Admin\37c5b598746537b13dbb6c7004d06e14.php 第 140 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.008193s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008238s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000014s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000053s ]
+INFO: [ view_end ] --START--
+INFO: [ view_end ] --END-- [ RunTime:0.000043s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000050s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000107s ]
+
+[ 2017-04-16T00:13:56+08:00 ] 10.77.117.237 /health/management/Application/index.php/Admin/User/listUser
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000307s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000018s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000030s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000067s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000022s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.001340s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `user_info` LIMIT 1   [ RunTime:0.000226s ]
+SQL: SELECT * FROM `user_info` LIMIT 0,5   [ RunTime:0.000338s ]
+INFO: [ view_begin ] --START--
+INFO: [ view_begin ] --END-- [ RunTime:0.000046s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000082s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000138s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.007825s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007873s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000010s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000039s ]
+INFO: [ view_end ] --START--
+INFO: [ view_end ] --END-- [ RunTime:0.000019s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000031s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000064s ]
+
+[ 2017-04-16T00:14:04+08:00 ] 10.77.117.237 /health/management/Application/index.php/Admin/HistoryVis/listHis
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000285s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000018s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000029s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000068s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000023s ]
+NOTIC: [2048] Declaration of Admin\Model\SeeDocCaseModel::_after_insert() should be compatible with Think\Model::_after_insert($data, $options) D:\xampp\htdocs\health\management\Application\Admin\Model\SeeDocCaseModel.class.php 第 7 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `see_doc_case` [ RunTime:0.001289s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `see_doc_case` LIMIT 1   [ RunTime:0.000234s ]
+SQL: SELECT a.*,b.user_phone,b.user_name,c.page_img_path,d.check_img_path FROM see_doc_case a LEFT JOIN user_info b on a.user_id = b.user_id LEFT JOIN page_img c on a.seecase_id = c.seecase_id LEFT JOIN check_img d on a.seecase_id = d.seecase_id ORDER BY a.seecase_id desc LIMIT 0,5   [ RunTime:0.001310s ]
+INFO: [ view_begin ] --START--
+INFO: [ view_begin ] --END-- [ RunTime:0.000019s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000090s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000136s ]
+NOTIC: [8] Undefined index: hos_id D:\xampp\htdocs\health\management\Application\Runtime\Cache\Admin\37c5b598746537b13dbb6c7004d06e14.php 第 85 行.
+NOTIC: [8] Undefined index: hos_name D:\xampp\htdocs\health\management\Application\Runtime\Cache\Admin\37c5b598746537b13dbb6c7004d06e14.php 第 140 行.
+NOTIC: [8] Undefined index: hos_id D:\xampp\htdocs\health\management\Application\Runtime\Cache\Admin\37c5b598746537b13dbb6c7004d06e14.php 第 85 行.
+NOTIC: [8] Undefined index: hos_name D:\xampp\htdocs\health\management\Application\Runtime\Cache\Admin\37c5b598746537b13dbb6c7004d06e14.php 第 140 行.
+NOTIC: [8] Undefined index: hos_id D:\xampp\htdocs\health\management\Application\Runtime\Cache\Admin\37c5b598746537b13dbb6c7004d06e14.php 第 85 行.
+NOTIC: [8] Undefined index: hos_name D:\xampp\htdocs\health\management\Application\Runtime\Cache\Admin\37c5b598746537b13dbb6c7004d06e14.php 第 140 行.
+NOTIC: [8] Undefined index: hos_id D:\xampp\htdocs\health\management\Application\Runtime\Cache\Admin\37c5b598746537b13dbb6c7004d06e14.php 第 85 行.
+NOTIC: [8] Undefined index: hos_name D:\xampp\htdocs\health\management\Application\Runtime\Cache\Admin\37c5b598746537b13dbb6c7004d06e14.php 第 140 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.006792s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006846s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000011s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000039s ]
+INFO: [ view_end ] --START--
+INFO: [ view_end ] --END-- [ RunTime:0.000037s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000047s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000103s ]
+
+[ 2017-04-16T00:18:11+08:00 ] 10.77.117.237 /health/management/Application/index.php/Admin/Relative/listRela
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000311s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000025s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000036s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000079s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000026s ]
+NOTIC: [2048] Declaration of Admin\Model\RelativeInfoModel::_after_insert() should be compatible with Think\Model::_after_insert($data, $options) D:\xampp\htdocs\health\management\Application\Admin\Model\RelativeInfoModel.class.php 第 7 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `relative_info` [ RunTime:0.002534s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `relative_info` LIMIT 1   [ RunTime:0.000300s ]
+SQL: SELECT a.*,b.user_phone,b.user_name FROM relative_info a LEFT JOIN user_info b on a.user_id = b.user_id ORDER BY a.relative_id desc LIMIT 0,5   [ RunTime:0.000390s ]
+INFO: [ view_begin ] --START--
+INFO: [ view_begin ] --END-- [ RunTime:0.000018s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000066s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000113s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.006012s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006073s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000010s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000056s ]
+INFO: [ view_end ] --START--
+INFO: [ view_end ] --END-- [ RunTime:0.000021s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000031s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000067s ]
+
+[ 2017-04-16T00:18:13+08:00 ] 10.77.117.237 /health/management/Application/index.php/Admin/Relative/edit/relative_id/4
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000258s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000019s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000032s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000070s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000034s ]
+NOTIC: [2048] Declaration of Admin\Model\RelativeInfoModel::_after_insert() should be compatible with Think\Model::_after_insert($data, $options) D:\xampp\htdocs\health\management\Application\Admin\Model\RelativeInfoModel.class.php 第 7 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `relative_info` [ RunTime:0.001209s ]
+SQL: SELECT * FROM `relative_info` WHERE ( `relative_id` = 4 ) LIMIT 1   [ RunTime:0.000287s ]
+INFO: [ view_begin ] --START--
+INFO: [ view_begin ] --END-- [ RunTime:0.000016s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000111s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000199s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.007671s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007728s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000012s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000045s ]
+INFO: [ view_end ] --START--
+INFO: [ view_end ] --END-- [ RunTime:0.000014s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000028s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000061s ]
+
+[ 2017-04-16T00:18:16+08:00 ] 10.77.117.237 /health/management/Application/index.php/Admin/Relative/edit/relative_id/4
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000280s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000018s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000028s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000065s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000033s ]
+NOTIC: [2048] Declaration of Admin\Model\RelativeInfoModel::_after_insert() should be compatible with Think\Model::_after_insert($data, $options) D:\xampp\htdocs\health\management\Application\Admin\Model\RelativeInfoModel.class.php 第 7 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `relative_info` [ RunTime:0.001650s ]
+NOTIC: [8] Use of undefined constant FASLE - assumed 'FASLE' D:\xampp\htdocs\health\management\Application\Admin\Controller\RelativeController.class.php 第 44 行.
+SQL: UPDATE `relative_info` SET `user_id`=10,`relative_name`='1233',`relative_sex`='女',`relative_age`=312,`relative_relation`='12312',`relative_phone`='12332',`relative_date`='04/20/2017',`relative_city`='广东 惠州 惠城区' WHERE ( `relative_id` = 4 ) [ RunTime:0.098082s ]
+INFO: [ view_begin ] --START--
+INFO: [ view_begin ] --END-- [ RunTime:0.000019s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000042s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000098s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.005734s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005805s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000011s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000089s ]
+INFO: [ view_end ] --START--
+INFO: [ view_end ] --END-- [ RunTime:0.000017s ]
+
+[ 2017-04-16T00:18:17+08:00 ] 10.77.117.237 /health/management/Application/index.php/Admin/Relative/listRela.html
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000442s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000036s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000052s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000118s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000029s ]
+NOTIC: [2048] Declaration of Admin\Model\RelativeInfoModel::_after_insert() should be compatible with Think\Model::_after_insert($data, $options) D:\xampp\htdocs\health\management\Application\Admin\Model\RelativeInfoModel.class.php 第 7 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `relative_info` [ RunTime:0.002415s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `relative_info` LIMIT 1   [ RunTime:0.000236s ]
+SQL: SELECT a.*,b.user_phone,b.user_name FROM relative_info a LEFT JOIN user_info b on a.user_id = b.user_id ORDER BY a.relative_id desc LIMIT 0,5   [ RunTime:0.000386s ]
+INFO: [ view_begin ] --START--
+INFO: [ view_begin ] --END-- [ RunTime:0.000018s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000070s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000117s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.006164s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006225s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000012s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000044s ]
+INFO: [ view_end ] --START--
+INFO: [ view_end ] --END-- [ RunTime:0.000021s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000033s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000068s ]
+
+[ 2017-04-16T00:18:18+08:00 ] 10.77.117.237 /health/management/Application/index.php/Admin/Relative/edit/relative_id/4
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000258s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000018s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000031s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000086s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000023s ]
+NOTIC: [2048] Declaration of Admin\Model\RelativeInfoModel::_after_insert() should be compatible with Think\Model::_after_insert($data, $options) D:\xampp\htdocs\health\management\Application\Admin\Model\RelativeInfoModel.class.php 第 7 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `relative_info` [ RunTime:0.001207s ]
+SQL: SELECT * FROM `relative_info` WHERE ( `relative_id` = 4 ) LIMIT 1   [ RunTime:0.000287s ]
+INFO: [ view_begin ] --START--
+INFO: [ view_begin ] --END-- [ RunTime:0.000017s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000073s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000132s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.008182s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008235s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000021s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000052s ]
+INFO: [ view_end ] --START--
+INFO: [ view_end ] --END-- [ RunTime:0.000013s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000027s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000056s ]
+
+[ 2017-04-16T00:18:25+08:00 ] 10.77.117.237 /health/management/Application/index.php/Admin/Relative/edit/relative_id/4
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000258s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000018s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000028s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000067s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000023s ]
+NOTIC: [2048] Declaration of Admin\Model\RelativeInfoModel::_after_insert() should be compatible with Think\Model::_after_insert($data, $options) D:\xampp\htdocs\health\management\Application\Admin\Model\RelativeInfoModel.class.php 第 7 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `relative_info` [ RunTime:0.001184s ]
+NOTIC: [8] Use of undefined constant FASLE - assumed 'FASLE' D:\xampp\htdocs\health\management\Application\Admin\Controller\RelativeController.class.php 第 44 行.
+SQL: UPDATE `relative_info` SET `user_id`=10,`relative_name`='1233',`relative_sex`='女',`relative_age`=12,`relative_relation`='12312',`relative_phone`='12332',`relative_date`='04/20/2017',`relative_city`='广东 惠州 惠城区' WHERE ( `relative_id` = 4 ) [ RunTime:0.105774s ]
+INFO: [ view_begin ] --START--
+INFO: [ view_begin ] --END-- [ RunTime:0.000017s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000076s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000159s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.005790s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005851s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000011s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000038s ]
+INFO: [ view_end ] --START--
+INFO: [ view_end ] --END-- [ RunTime:0.000012s ]
+
+[ 2017-04-16T00:18:26+08:00 ] 10.77.117.237 /health/management/Application/index.php/Admin/Relative/listRela.html
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000288s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000019s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000030s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000069s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000037s ]
+NOTIC: [2048] Declaration of Admin\Model\RelativeInfoModel::_after_insert() should be compatible with Think\Model::_after_insert($data, $options) D:\xampp\htdocs\health\management\Application\Admin\Model\RelativeInfoModel.class.php 第 7 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `relative_info` [ RunTime:0.001186s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `relative_info` LIMIT 1   [ RunTime:0.000223s ]
+SQL: SELECT a.*,b.user_phone,b.user_name FROM relative_info a LEFT JOIN user_info b on a.user_id = b.user_id ORDER BY a.relative_id desc LIMIT 0,5   [ RunTime:0.000375s ]
+INFO: [ view_begin ] --START--
+INFO: [ view_begin ] --END-- [ RunTime:0.000016s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000070s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000121s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.008299s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008356s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000010s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000038s ]
+INFO: [ view_end ] --START--
+INFO: [ view_end ] --END-- [ RunTime:0.000020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000031s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000063s ]
+
+[ 2017-04-16T00:18:29+08:00 ] 10.77.117.237 /health/management/Application/index.php/Admin/Relative/edit/relative_id/4
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000259s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000018s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000031s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000068s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000023s ]
+NOTIC: [2048] Declaration of Admin\Model\RelativeInfoModel::_after_insert() should be compatible with Think\Model::_after_insert($data, $options) D:\xampp\htdocs\health\management\Application\Admin\Model\RelativeInfoModel.class.php 第 7 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `relative_info` [ RunTime:0.001910s ]
+SQL: SELECT * FROM `relative_info` WHERE ( `relative_id` = 4 ) LIMIT 1   [ RunTime:0.000329s ]
+INFO: [ view_begin ] --START--
+INFO: [ view_begin ] --END-- [ RunTime:0.000018s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000070s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000123s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.006219s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006271s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000010s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000039s ]
+INFO: [ view_end ] --START--
+INFO: [ view_end ] --END-- [ RunTime:0.000013s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000026s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000054s ]
+
+[ 2017-04-16T00:19:05+08:00 ] 10.77.117.237 /health/management/Application/index.php/Admin/Relative/edit/relative_id/4
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000290s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000019s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000028s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000068s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000023s ]
+NOTIC: [2048] Declaration of Admin\Model\RelativeInfoModel::_after_insert() should be compatible with Think\Model::_after_insert($data, $options) D:\xampp\htdocs\health\management\Application\Admin\Model\RelativeInfoModel.class.php 第 7 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `relative_info` [ RunTime:0.002102s ]
+NOTIC: [8] Use of undefined constant FASLE - assumed 'FASLE' D:\xampp\htdocs\health\management\Application\Admin\Controller\RelativeController.class.php 第 44 行.
+SQL: UPDATE `relative_info` SET `user_id`=10,`relative_name`='李达康',`relative_sex`='男',`relative_age`=56,`relative_relation`='家庭成员',`relative_phone`='1125797922',`relative_date`='04/20/2017',`relative_city`='广东 惠州 惠城区' WHERE ( `relative_id` = 4 ) [ RunTime:0.087188s ]
+INFO: [ view_begin ] --START--
+INFO: [ view_begin ] --END-- [ RunTime:0.000033s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000040s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000095s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.005801s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005862s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000010s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000038s ]
+INFO: [ view_end ] --START--
+INFO: [ view_end ] --END-- [ RunTime:0.000012s ]
+
+[ 2017-04-16T00:19:06+08:00 ] 10.77.117.237 /health/management/Application/index.php/Admin/Relative/listRela.html
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000294s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000023s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000088s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000184s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000038s ]
+NOTIC: [2048] Declaration of Admin\Model\RelativeInfoModel::_after_insert() should be compatible with Think\Model::_after_insert($data, $options) D:\xampp\htdocs\health\management\Application\Admin\Model\RelativeInfoModel.class.php 第 7 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `relative_info` [ RunTime:0.002216s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `relative_info` LIMIT 1   [ RunTime:0.000375s ]
+SQL: SELECT a.*,b.user_phone,b.user_name FROM relative_info a LEFT JOIN user_info b on a.user_id = b.user_id ORDER BY a.relative_id desc LIMIT 0,5   [ RunTime:0.054680s ]
+INFO: [ view_begin ] --START--
+INFO: [ view_begin ] --END-- [ RunTime:0.000026s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000114s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000184s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.008249s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008345s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000011s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000041s ]
+INFO: [ view_end ] --START--
+INFO: [ view_end ] --END-- [ RunTime:0.000038s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000050s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000101s ]
+
+[ 2017-04-16T00:19:20+08:00 ] 10.77.117.237 /health/management/Application/index.php/Admin/HistoryVis/listHis
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000259s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000019s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000030s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000068s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000023s ]
+NOTIC: [2048] Declaration of Admin\Model\SeeDocCaseModel::_after_insert() should be compatible with Think\Model::_after_insert($data, $options) D:\xampp\htdocs\health\management\Application\Admin\Model\SeeDocCaseModel.class.php 第 7 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `see_doc_case` [ RunTime:0.001584s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `see_doc_case` LIMIT 1   [ RunTime:0.000248s ]
+SQL: SELECT a.*,b.user_phone,b.user_name,c.page_img_path,d.check_img_path FROM see_doc_case a LEFT JOIN user_info b on a.user_id = b.user_id LEFT JOIN page_img c on a.seecase_id = c.seecase_id LEFT JOIN check_img d on a.seecase_id = d.seecase_id ORDER BY a.seecase_id desc LIMIT 0,5   [ RunTime:0.001566s ]
+INFO: [ view_begin ] --START--
+INFO: [ view_begin ] --END-- [ RunTime:0.000018s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000089s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000135s ]
+NOTIC: [8] Undefined index: hos_id D:\xampp\htdocs\health\management\Application\Runtime\Cache\Admin\37c5b598746537b13dbb6c7004d06e14.php 第 85 行.
+NOTIC: [8] Undefined index: hos_name D:\xampp\htdocs\health\management\Application\Runtime\Cache\Admin\37c5b598746537b13dbb6c7004d06e14.php 第 140 行.
+NOTIC: [8] Undefined index: hos_id D:\xampp\htdocs\health\management\Application\Runtime\Cache\Admin\37c5b598746537b13dbb6c7004d06e14.php 第 85 行.
+NOTIC: [8] Undefined index: hos_name D:\xampp\htdocs\health\management\Application\Runtime\Cache\Admin\37c5b598746537b13dbb6c7004d06e14.php 第 140 行.
+NOTIC: [8] Undefined index: hos_id D:\xampp\htdocs\health\management\Application\Runtime\Cache\Admin\37c5b598746537b13dbb6c7004d06e14.php 第 85 行.
+NOTIC: [8] Undefined index: hos_name D:\xampp\htdocs\health\management\Application\Runtime\Cache\Admin\37c5b598746537b13dbb6c7004d06e14.php 第 140 行.
+NOTIC: [8] Undefined index: hos_id D:\xampp\htdocs\health\management\Application\Runtime\Cache\Admin\37c5b598746537b13dbb6c7004d06e14.php 第 85 行.
+NOTIC: [8] Undefined index: hos_name D:\xampp\htdocs\health\management\Application\Runtime\Cache\Admin\37c5b598746537b13dbb6c7004d06e14.php 第 140 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.006857s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006901s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000010s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000040s ]
+INFO: [ view_end ] --START--
+INFO: [ view_end ] --END-- [ RunTime:0.000023s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000032s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000066s ]
+
+[ 2017-04-16T00:19:22+08:00 ] 10.77.117.237 /health/management/Application/index.php/Admin/User/listUser
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000277s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000019s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000032s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000069s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000023s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.001377s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `user_info` LIMIT 1   [ RunTime:0.000254s ]
+SQL: SELECT * FROM `user_info` LIMIT 0,5   [ RunTime:0.000352s ]
+INFO: [ view_begin ] --START--
+INFO: [ view_begin ] --END-- [ RunTime:0.000018s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000082s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000143s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.007955s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000010s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000039s ]
+INFO: [ view_end ] --START--
+INFO: [ view_end ] --END-- [ RunTime:0.000026s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000052s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000144s ]
+
+[ 2017-04-16T00:19:23+08:00 ] 10.77.117.237 /health/management/Application/index.php/Admin/HistoryVis/listHis
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000329s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000018s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000031s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000068s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000023s ]
+NOTIC: [2048] Declaration of Admin\Model\SeeDocCaseModel::_after_insert() should be compatible with Think\Model::_after_insert($data, $options) D:\xampp\htdocs\health\management\Application\Admin\Model\SeeDocCaseModel.class.php 第 7 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `see_doc_case` [ RunTime:0.001281s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `see_doc_case` LIMIT 1   [ RunTime:0.000243s ]
+SQL: SELECT a.*,b.user_phone,b.user_name,c.page_img_path,d.check_img_path FROM see_doc_case a LEFT JOIN user_info b on a.user_id = b.user_id LEFT JOIN page_img c on a.seecase_id = c.seecase_id LEFT JOIN check_img d on a.seecase_id = d.seecase_id ORDER BY a.seecase_id desc LIMIT 0,5   [ RunTime:0.001409s ]
+INFO: [ view_begin ] --START--
+INFO: [ view_begin ] --END-- [ RunTime:0.000019s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000092s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000148s ]
+NOTIC: [8] Undefined index: hos_id D:\xampp\htdocs\health\management\Application\Runtime\Cache\Admin\37c5b598746537b13dbb6c7004d06e14.php 第 85 行.
+NOTIC: [8] Undefined index: hos_name D:\xampp\htdocs\health\management\Application\Runtime\Cache\Admin\37c5b598746537b13dbb6c7004d06e14.php 第 140 行.
+NOTIC: [8] Undefined index: hos_id D:\xampp\htdocs\health\management\Application\Runtime\Cache\Admin\37c5b598746537b13dbb6c7004d06e14.php 第 85 行.
+NOTIC: [8] Undefined index: hos_name D:\xampp\htdocs\health\management\Application\Runtime\Cache\Admin\37c5b598746537b13dbb6c7004d06e14.php 第 140 行.
+NOTIC: [8] Undefined index: hos_id D:\xampp\htdocs\health\management\Application\Runtime\Cache\Admin\37c5b598746537b13dbb6c7004d06e14.php 第 85 行.
+NOTIC: [8] Undefined index: hos_name D:\xampp\htdocs\health\management\Application\Runtime\Cache\Admin\37c5b598746537b13dbb6c7004d06e14.php 第 140 行.
+NOTIC: [8] Undefined index: hos_id D:\xampp\htdocs\health\management\Application\Runtime\Cache\Admin\37c5b598746537b13dbb6c7004d06e14.php 第 85 行.
+NOTIC: [8] Undefined index: hos_name D:\xampp\htdocs\health\management\Application\Runtime\Cache\Admin\37c5b598746537b13dbb6c7004d06e14.php 第 140 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.008241s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008288s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000012s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000040s ]
+INFO: [ view_end ] --START--
+INFO: [ view_end ] --END-- [ RunTime:0.000021s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000041s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000079s ]
+
+[ 2017-04-16T00:19:24+08:00 ] 10.77.117.237 /health/management/Application/index.php/Admin/User/listUser
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000260s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000019s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000030s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000068s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000023s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.001422s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `user_info` LIMIT 1   [ RunTime:0.000276s ]
+SQL: SELECT * FROM `user_info` LIMIT 0,5   [ RunTime:0.000378s ]
+INFO: [ view_begin ] --START--
+INFO: [ view_begin ] --END-- [ RunTime:0.000018s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000081s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000128s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.006884s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006935s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000011s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000043s ]
+INFO: [ view_end ] --START--
+INFO: [ view_end ] --END-- [ RunTime:0.000020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000031s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000064s ]
+
+[ 2017-04-16T00:19:27+08:00 ] 10.77.117.237 /health/management/Application/index.php/Admin/User/listUser
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000413s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000030s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000051s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000118s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000028s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.001728s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `user_info` LIMIT 1   [ RunTime:0.000241s ]
+SQL: SELECT * FROM `user_info` LIMIT 0,5   [ RunTime:0.000364s ]
+INFO: [ view_begin ] --START--
+INFO: [ view_begin ] --END-- [ RunTime:0.000019s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000095s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000154s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.007739s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007798s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000013s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000045s ]
+INFO: [ view_end ] --START--
+INFO: [ view_end ] --END-- [ RunTime:0.000021s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000047s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000095s ]
+
+[ 2017-04-16T00:19:33+08:00 ] 10.77.117.237 /health/management/Application/index.php/Admin/Relative/listRela
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000388s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000029s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000051s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000108s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000038s ]
+NOTIC: [2048] Declaration of Admin\Model\RelativeInfoModel::_after_insert() should be compatible with Think\Model::_after_insert($data, $options) D:\xampp\htdocs\health\management\Application\Admin\Model\RelativeInfoModel.class.php 第 7 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `relative_info` [ RunTime:0.001249s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `relative_info` LIMIT 1   [ RunTime:0.000233s ]
+SQL: SELECT a.*,b.user_phone,b.user_name FROM relative_info a LEFT JOIN user_info b on a.user_id = b.user_id ORDER BY a.relative_id desc LIMIT 0,5   [ RunTime:0.000354s ]
+INFO: [ view_begin ] --START--
+INFO: [ view_begin ] --END-- [ RunTime:0.000017s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000067s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000113s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.006002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006061s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000021s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000055s ]
+INFO: [ view_end ] --START--
+INFO: [ view_end ] --END-- [ RunTime:0.000022s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000032s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000065s ]
+

@@ -22,12 +22,13 @@
 </style>
 </head>
 <body>
-<form method="post" action="/health/management/Application/index.php/Admin/doctor/listDoc/hos_id/57" id="listform">
+<!-- 搜索表单 -->
+<form method="get" action="/health/management/Application/index.php/Admin/HistoryVis/listHis" id="searchForm">
   <div class="panel admin-panel">
     <div class="panel-head"><strong class="icon-reorder"> 内容列表</strong></div>
     <div class="padding border-bottom">
       <ul class="search" style="padding-left:10px;">
-        <li> <a class="button border-green icon-plus-square-o" href="/health/management/Application/index.php/Admin/Doctor/add/hos_id/<?php echo I('hos_id'); ?>"> 添加医生</a> </li>
+        <li> <a class="button border-green icon-plus-square-o" href="/health/management/Application/index.php/Admin/HistoryVis/add"> 添加</a> </li>
         <li>搜索：</li>
         <li>首页
           <select name="s_ishome" class="input" onchange="changesearch()" style="width:60px; line-height:17px; display:inline-block">
@@ -49,101 +50,96 @@
             <option value="1">是</option>
             <option value="0">否</option>
           </select>
+      	</li>
         <li>
-          <input type="text" placeholder="请输入搜索关键字" name="keywords" class="input" style="width:250px; line-height:17px;display:inline-block" />
-          <a href="javascript:void(0)" class="button border-green icon-search" onclick="changesearch()" > 搜索</a></li>
+          <input type="text" placeholder="请输入手机号" name="userPhone" class="input" style="width:250px; line-height:17px;display:inline-block" value="<?php echo I('get.userPhone'); ?>" />
+          <a href="javascript:void(0)" class="button border-green icon-search" onclick="$('#submit').click()" > 搜索</a>
+        </li>
       </ul>
     </div>
+	</div>
+	<input id="submit" type="submit" value="搜索" style="display:none"/>
+</form>
     <table class="table table-hover text-center">
       <tr>
         <th width="8%" style="text-align:left; padding-left:20px;">ID</th>
-        <th width="8%">名称</th>
-        <th width="10%">所属医院</th>
-        <th width="8%">所属科室</th>
-        <th width="14%">所属地址</th>
-        <th width="5%">性别</th>
-        <th width="20%">擅长</th>
+        <th>所属用户</th>
+        <th>用户手机</th>
+        <th>就诊医院</th>
+        <th>就诊科室</th>
+        <th>就诊医生</th>
+        <th>就诊时间</th>
         <th width="30%">操作</th>
       </tr>
     <?php foreach ($data as $k => $v): ?>
         <tr>
-          <td style="text-align:left; padding-left:20px;"><input type="checkbox" name="hos_id[]" value="<?php echo $v['doc_id']; ?>" /><?php echo $v['doc_id']; ?></td>
-          <td><?php echo $v['doc_name']; ?></td>
-          <td><?php echo $v['hos_name']; ?></td>
-          <td><?php echo $v['dep_name']; ?></td>
-          <td><?php echo $v['doc_address']; ?></td>
-          <td><?php echo $v['doc_sex']; ?></td>
-          <td><?php echo $v['doc_especial']; ?></td>
+          <td style="text-align:left; padding-left:20px;"><input type="checkbox" name="seecase_id[]" value="<?php echo $v['seecase_id']; ?>" /><?php echo $v['seecase_id']; ?></td>
+          <td><?php echo $v['user_name']; ?></td>
+          <td><?php echo $v['user_phone']; ?></td>
+          <td><?php echo $v['seecase_hos']; ?></td>
+          <td><?php echo $v['seecase_depa']; ?></td>
+          <td><?php echo $v['seecase_doc']; ?></td>
+          <td><?php echo $v['seecase_time']; ?></td>
           <td><div class="button-group">
-          <a class="button border-green" style="cursor:pointer" onclick="showDialog(<?php echo $v['doc_id']; ?>)"><span class="icon-view-o"></span> 查看</a>
-          <a class="button border-main" href="/health/management/Application/index.php/Admin/doctor/edit/doc_id/<?php echo $v['doc_id']; ?>/hos_id/<?php echo $v['hos_id']; ?>"><span class="icon-edit"></span> 修改</a> 
-          <a class="button border-red" style="cursor:pointer" onclick="del(<?php echo $v['doc_id'].",".I('hos_id'); ?>)"><span class="icon-trash-o"></span> 删除</a>
+          <a class="button border-green" style="cursor:pointer" onclick="showDialog(<?php echo $v['seecase_id']; ?>)"><span class="icon-view-o"></span> 查看</a>
+          <a class="button border-main" href="/health/management/Application/index.php/Admin/HistoryVis/edit/seecase_id/<?php echo $v['seecase_id']; ?>/hos_id/<?php echo $v['hos_id']; ?>"><span class="icon-edit"></span> 修改</a> 
+          <a class="button border-red" style="cursor:pointer" onclick="del(<?php echo $v['seecase_id']; ?>)"><span class="icon-trash-o"></span> 删除</a>
           </div></td>
           <td colspan="0">
           	<!-- 详情页面 -->
-        	<div id="dialog<?php echo $v['doc_id']; ?>" style="display:none;" title="详情信息">
+        	<div id="dialog<?php echo $v['seecase_id']; ?>" style="display:none;" title="详情信息">
     		<table class="dialogtable" cellspacing="0" cellpadding="0">
     			<tr>
-	    			<td valign="middle">头像：</td>
-	    			<td><?php showImage($v['doc_img'],120,80); ?></td>
+    				<td>用户名：</td>
+    				<td><?php echo $v['user_name']; ?></td>
+    			</tr>
+	    		<tr>
+	    			<td>用户手机：</td>
+	    			<td><?php echo $v['user_phone']; ?></td>
 	    		</tr>
 	    		<tr>
-	    			<td>医生名称：</td>
-	    			<td><?php echo $v['doc_name']; ?></td>
+	    			<td>就诊时间：</td>
+	    			<td><?php echo $v['seecase_time']; ?></td>
 	    		</tr>
 	    		<tr>
-	    			<td>所属医院：</td>
-	    			<td><?php echo $v['hos_name']; ?></td>
+	    			<td>就诊医院：</td>
+	    			<td><?php echo $v['seecase_hos']; ?></td>
 	    		</tr>
 	    		<tr>
-	    			<td>所属科室：</td>
-	    			<td><?php echo $v['dep_name']; ?></td>
+	    			<td>就诊科室：</td>
+	    			<td><?php echo $v['seecase_depa']; ?></td>
 	    		</tr>
 	    		<tr>
-	    			<td>所属地址：</td>
-	    			<td><?php echo $v['doc_address']; ?></td>
+	    			<td>就诊医生：</td>
+	    			<td><?php echo $v['seecase_doc']; ?></td>
 	    		</tr>
 	    		<tr>
-	    			<td>性别：</td>
-	    			<td><?php echo $v['doc_sex']; ?></td>
+	    			<td>诊断结果</td>
+	    			<td><?php echo $v['seecase_info']; ?></td>
 	    		</tr>
 	    		<tr>
-	    			<td>电话：</td>
-	    			<td><?php echo $v['doc_phone']; ?></td>
+	    			<td>医生建议：</td>
+	    			<td><?php echo $v['seecase_sgs']; ?></td>
 	    		</tr>
 	    		<tr>
-	    			<td>擅长：</td>
-	    			<td><?php echo $v['doc_especial']; ?></td>
+	    			<td>处方信息：</td>
+	    			<td>
+	    			<?php echo htmlspecialchars_decode($v['page_info']); ?>
+	    			<?php showImage($v['page_img_path'],120,80); ?>
+	    			</td>
 	    		</tr>
 	    		<tr>
-	    			<td>支付宝账号：</td>
-	    			<td><?php echo $v['doc_alipay']; ?></td>
-	    		</tr>
-	    		<tr>
-	    			<td>累计接诊：</td>
-	    			<td><?php echo $v['doc_rece']; ?></td>
-	    		</tr>
-	    		<tr>
-	    			<td>被关注量：</td>
-	    			<td><?php echo $v['doc_attention']; ?></td>
-	    		</tr>
-	    		<tr>
-	    			<td>咨询费用：</td>
-	    			<td><?php echo $v['doc_fee']; ?></td>
-	    		</tr>
-	    		<tr>
-	    			<td>热门程度：</td>
-	    			<td><?php echo $v['doc_hot']; ?></td>
+	    			<td>检验结果：</td>
+	    			<td>
+	    			<?php echo htmlspecialchars_decode($v['check_info']); ?>
+	    			<?php showImage($v['check_img_path'],120,80);?>
+	    			</td>
 	    		</tr>
 	    		<tr>
 	    			<td>创建时间：</td>
-	    			<td><?php echo $v['doc_time']; ?></td>
+	    			<td><?php echo $v['hos_name']; ?></td>
 	    		</tr>
     		</table>
-	    		<span style="display:block;width:80%;margin-top: 15px ">
-					医生介绍：<br/>
-					<?php echo htmlspecialchars_decode($v['doc_introduce']); ?>
-				</span>
        		</div>
           </td>
         </tr>
@@ -162,7 +158,6 @@
       	</td>
       </tr>
     </table>
-</form>
 <script type="text/javascript">
 
 //搜索
@@ -184,9 +179,9 @@ function showDialog(id) {
 	});
   };
 //单个删除
-function del(doc_id,hos_id){
+function del(seecase_id){
 	if(confirm("您确定要删除吗?")){
-		window.location="/health/management/Application/index.php/Admin/doctor/delete/doc_id/"+doc_id+"/hos_id/"+hos_id;
+		window.location="/health/management/Application/index.php/Admin/HistoryVis/delete/seecase_id/"+seecase_id;
 	}
 }
 

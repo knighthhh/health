@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
 <html lang="zh-cn">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -6,17 +6,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 <meta name="renderer" content="webkit">
 <title></title>
-<link rel="stylesheet" href="{$Think.const.ADMIN_CSS_URL}pintuer.css">
-<link rel="stylesheet" href="{$Think.const.ADMIN_CSS_URL}admin.css">
-<link href="{$Think.const.ADMIN_CSS_URL}foundation-datepicker.css" rel="stylesheet" type="text/css">
-<script src="{$Think.const.ADMIN_JS_URL}jquery.js"></script>
-<script src="{$Think.const.ADMIN_JS_URL}pintuer.js"></script>
-<script src="{$Think.const.ADMIN_JS_URL}jquery.cityselect.js"></script>
-<script type="text/javascript" charset="utf-8" src="__PUBLIC__/Ueditor/ueditor.config.js"></script>
-<script type="text/javascript" charset="utf-8" src="__PUBLIC__/Ueditor/ueditor.all.min.js"> </script>
-<script type="text/javascript" charset="utf-8" src="__PUBLIC__/Ueditor/lang/zh-cn/zh-cn.js"></script>
-<script src="{$Think.const.ADMIN_JS_URL}foundation-datepicker.min.js"></script>
-<script src="{$Think.const.ADMIN_JS_URL}locales/foundation-datepicker.zh-CN.js"></script> 
+<link rel="stylesheet" href="<?php echo (ADMIN_CSS_URL); ?>pintuer.css">
+<link rel="stylesheet" href="<?php echo (ADMIN_CSS_URL); ?>admin.css">
+<link href="<?php echo (ADMIN_CSS_URL); ?>foundation-datepicker.css" rel="stylesheet" type="text/css">
+<script src="<?php echo (ADMIN_JS_URL); ?>jquery.js"></script>
+<script src="<?php echo (ADMIN_JS_URL); ?>pintuer.js"></script>
+<script src="<?php echo (ADMIN_JS_URL); ?>jquery.cityselect.js"></script>
+<script type="text/javascript" charset="utf-8" src="/health/management/Application/Public/Ueditor/ueditor.config.js"></script>
+<script type="text/javascript" charset="utf-8" src="/health/management/Application/Public/Ueditor/ueditor.all.min.js"> </script>
+<script type="text/javascript" charset="utf-8" src="/health/management/Application/Public/Ueditor/lang/zh-cn/zh-cn.js"></script>
+<script src="<?php echo (ADMIN_JS_URL); ?>foundation-datepicker.min.js"></script>
+<script src="<?php echo (ADMIN_JS_URL); ?>locales/foundation-datepicker.zh-CN.js"></script> 
 <style type="text/css">
     .tips{
       color: red;
@@ -26,7 +26,7 @@
     #nav{ width:100%; height:30px; background:#00A2CA;} 
     #nav li{display:inline; height:60px} 
     #nav li {display:inline-block; padding:0 20px; height:30px; line-height:30px;
-                color:#FFF; font-family:"\5FAE\8F6F\96C5\9ED1"; font-size:12px} 
+                color:#FFF; font-family:"5FAE8F6F96C59ED1"; font-size:12px} 
     #nav li:hover{background:#0095BB;cursor: pointer;}
     /*设置鼠标滑过或悬停时变化的背景颜色 */
     .tab-front{
@@ -45,7 +45,7 @@
       </ul> 
       </div>
     <div class="body-content">
-    <form method="post" class="form-x" action="__SELF__" name="fileUploadForm" enctype="multipart/form-data">
+    <form method="post" class="form-x" action="/health/management/Application/index.php/Admin/HistoryVis/add" name="fileUploadForm" enctype="multipart/form-data">
     <div class="div_tab" style="display:block;">  
      <div class="form-group">
         <div class="label">
