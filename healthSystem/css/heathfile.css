@@ -40,7 +40,7 @@
 	font-family: Muiicons;
     position: absolute;
     top: 0px;
-    right: 9px;
+    right: -10px;;
     content: '\e581';
     color: #F7F7F7;
 }

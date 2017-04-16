@@ -4,7 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
     <title></title>
-
+    <script src="../js/mui.min.js"></script>
+    <script src="../js/common.js" type="text/javascript" charset="utf-8"></script>
     <link href="../css/mui.min.css" rel="stylesheet"/>
     <link rel="stylesheet" type="text/css" href="../css/iconfont_foot.css"/>
     <link rel="stylesheet" type="text/css" href="../css/iconfont_health_file.css"/>
@@ -21,6 +22,7 @@
 //}
 
 // 创建并显示新窗口
+
 //function openWebview(){
 //	var w = plus.webview.create( "medDiary.html" );
 //	w.show("pop-in");
@@ -36,17 +38,27 @@
 //	w.show("pop-in");
 ////	w.show("slide-in-right");
 //}
+
+
+mui.get('http://'+serverName+'/health/management/Application/index.php/Connector/User/getKnowList',{
+		
+},function(data){
+		var knowledge = document.getElementById("knowledge");
+		var item = '';
+		for (var i=0;i<data.length;i++) {
+			item = item + '<li class="mui-table-view-cell mui-media"><a href="javascript:;"><div class="mui-media-body"><h4>'+data[i].know_title+
+			'</h4><p class="mui-ellipsis">'+data[i].know_title+'</p><span class="put-day">发布日期：</span><span class="day">'+data[i].time+'</span> <span class="mui-pull-right read">阅读量:<span class="readnumber">500</span></span></div></a></li>';
+		}
+		//console.log(item);
+		knowledge.innerHTML = item;
+	},'json'
+);
+
 	</script>
 </head>
 <body>
-	
-	
-	
 		<div class="mui-content">
-
-			
 				<img src="../img/healthfile.jpg" style="width: 100%;"/>
-				
 			<!--九宫格-->
 			    <ul class="mui-table-view mui-grid-view mui-grid-9">
 			    <li class="mui-table-view-cell mui-media mui-col-xs-4 ">
@@ -92,7 +104,7 @@
 			<!--知识推送-->
 			<p class="knowledge">- 知识推送 -</p>
 			<div class="knowledge_info">
-				<ul class="mui-table-view">
+				<ul id="knowledge" class="mui-table-view">
 					<li class="mui-table-view-cell mui-media">
 						<a href="javascript:;">
 							<img class=" mui-pull-left" src="../img/doctor.jpeg">
@@ -127,8 +139,6 @@
 			</div>
 			
 		</div>
-			
-			
 		<script src="../js/mui.min.js"></script>
 		<script type="text/javascript">
 	    	mui.init();

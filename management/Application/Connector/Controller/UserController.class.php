@@ -100,5 +100,17 @@ class UserController extends Controller{
 			
 			echo json_encode($res);
 	}
+
+	//获取知识推送列表
+	public function getKnowList()
+	{
+		$model = D('health_know');
+		$data = $model->select();
+		foreach ($data as $k => $v) {
+			$data[$k]['know_content'] = htmlspecialchars_decode($v['know_content']);
+		}
+		//dump($data);die;
+		echo json_encode($data);
+	}
 	
 }

@@ -386,13 +386,15 @@
 					"js/mui.min.js",
 					"css/mui.min.css",
 					"fonts/iconfont_foot.ttf",
-					"css/iconfont_foot.css"
+					"css/iconfont_foot.css",
+					"js/common.js"
 				],
 				"refer": [
 					"healthfile/medDiary.html",
 					"healthfile/History_todoc.html",
 					"healthfile/My_file.html",
 					"healthfile/Health_record.html"
+
 				],
 				"priority": 0
 			},
@@ -641,7 +643,11 @@
 				"resources": [
 					"js/mui.picker.min.js",
 					"css/fast_question.css",
-					"css/mui.picker.min.css"
+					"css/mui.picker.min.css",
+					"css/mydoctor.css",
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css"
 				],
 				"refer": [
 					"inquiry/basic_text.html"
@@ -797,7 +803,36 @@
 			},
 			"mine/follow.html": {
 				"resources": [
-					"js/mui.min.js"
+					"js/mui.min.js",
+					"css/mui.min.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"healthfile/write_diary.html": {
+				"resources": [
+					"css/mui.min.css",
+					"css/heathfile.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"healthfile/History_todoc.html": {
+				"resources": [
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"css/heathfile.css",
+					"js/common.js"
+				],
+				"refer": [
+					"login/login.html"
+				],
+				"priority": 0
+			},
+			"mine/about.html": {
+				"resources": [
+					"img/doctor.jpeg"
 				],
 				"refer": [],
 				"priority": 0
