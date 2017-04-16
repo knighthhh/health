@@ -12,9 +12,9 @@
 <script src="<?php echo (ADMIN_JS_URL); ?>jquery.js"></script>
 <script src="<?php echo (ADMIN_JS_URL); ?>pintuer.js"></script>
 <script src="<?php echo (ADMIN_JS_URL); ?>jquery.cityselect.js"></script>
-<script type="text/javascript" charset="utf-8" src="/health/management/Application/Public/Ueditor/ueditor.config.js"></script>
-<script type="text/javascript" charset="utf-8" src="/health/management/Application/Public/Ueditor/ueditor.all.min.js"> </script>
-<script type="text/javascript" charset="utf-8" src="/health/management/Application/Public/Ueditor/lang/zh-cn/zh-cn.js"></script>
+<script type="text/javascript" charset="utf-8" src="/health/management/application/Public/Ueditor/ueditor.config.js"></script>
+<script type="text/javascript" charset="utf-8" src="/health/management/application/Public/Ueditor/ueditor.all.min.js"> </script>
+<script type="text/javascript" charset="utf-8" src="/health/management/application/Public/Ueditor/lang/zh-cn/zh-cn.js"></script>
 <script src="<?php echo (ADMIN_JS_URL); ?>foundation-datepicker.min.js"></script>
 <script src="<?php echo (ADMIN_JS_URL); ?>locales/foundation-datepicker.zh-CN.js"></script> 
 <style type="text/css">
@@ -43,7 +43,7 @@
       </ul> 
       </div>
     <div class="body-content">
-    <form method="post" class="form-x" action="/health/management/Application/index.php/Admin/User/edit/user_id/3" name="fileUploadForm" enctype="multipart/form-data">
+    <form method="post" class="form-x" action="/health/management/application/index.php/Admin/User/edit/user_id/1" name="fileUploadForm" enctype="multipart/form-data">
     <input type="hidden" name="user_id" value="<?php echo I('get.user_id'); ?>">
     <div class="div_tab" style="display:block;">  
       <div class="form-group">

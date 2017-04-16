@@ -32,12 +32,21 @@ class HistoryVisController extends Controller
 			$error = $model->getError();
             $this->error($error);
 		}
+        //取出亲友信息
+        $relaModel = D('relative_info');
+        $relaData = $relaModel
+        ->field("relative_name,relative_id")
+        ->select();
+        $this->assign(array(
+            'relaData' => $relaData
+            ));
 		$this->display();
 	}
 
 	public function edit()
 	{
 		$seecase_id = I('get.seecase_id');
+        $user_id    = I('get.user_id');
 		$model  = D('see_doc_case');
         if (IS_POST) {
         	//dump($_POST);die;
@@ -50,6 +59,13 @@ class HistoryVisController extends Controller
             $error = $model->getError();
             $this->error($error);
         }
+        //取出亲友信息
+        $relaModel = D('relative_info');
+        $relaData = $relaModel
+        ->field("relative_name,relative_id")
+        ->where(array(
+            'user_id' => array('eq',$user_id)
+            ))->select();
         //取出处方和检查图片
         $pageModel = D('page_img');
         $checkModel = D('check_img');
@@ -65,7 +81,8 @@ class HistoryVisController extends Controller
         $this->assign(array(
         	'data' => $data,
         	'pageImg' => $pageImg,
-        	'checkImg' => $checkImg
+        	'checkImg' => $checkImg,
+            'relaData' => $relaData
         	));
 		$this->display();
 	}
@@ -81,4 +98,17 @@ class HistoryVisController extends Controller
         $error = $model->getError();
         $this->error($error);
 	}
+
+    public function ajaxGetRela(){
+        $userID = I('get.userID');
+        //$userID = 1;
+        $model = D('relative_info');
+        $data = $model
+        ->field('relative_name,relative_id')
+        ->where(array(
+            'user_id' => array('eq',$userID)
+            ))->select();
+        //dump($data);die;
+        echo json_encode($data);
+    }
 }

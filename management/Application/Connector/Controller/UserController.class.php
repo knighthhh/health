@@ -17,6 +17,8 @@ class UserController extends Controller{
 			$name = new \Org\Util\String();
 			$data['user_name']=$name->randString(6,5);
 			$data['user_time']=date('Y-m-d H:i:s');
+			//设置默认头像
+			$data['user_img']='User/user_img.png';
 			$findmess['user_phone']=$_POST['user_phone'];
 			$user=$model->where($findmess)->find();
 			//先判断该手机是否注册过
@@ -50,6 +52,8 @@ class UserController extends Controller{
 					$res['result']=1;
 					$res['data']="自动登录成功";
 					$res['user_token']=md5('user_phone'+time());
+					$res['user_id']=$mess['user_id'];
+				//	$res['user_name']=$mess['user_name'];
 					
 					$token['user_token']=$res['user_token'];
 					$token['token_time']=date('Y-m-d H:i:s');
@@ -70,6 +74,8 @@ class UserController extends Controller{
 				$res['result']=1;
 				$res['data']="登录成功";
 				$res['user_token']=md5('user_phone'+time());
+				$res['user_id']=$mess['user_id'];
+				//$res['user_name']=$mess['user_name'];
 				
 				$token['user_token']=$res['user_token'];
 				$token['token_time']=date('Y-m-d H:i:s');
@@ -85,11 +91,26 @@ class UserController extends Controller{
 		echo json_encode($res);
 	}
 	
-	public function userinfo(){
-		if ($SESSION['user_phone']) {
+	public function getuserInfo(){
+			$data['user_phone']=I('post.user_phone');
+			$res=M('user_info')->where($data)->find();
+			$ic = C('IMAGE_CONFIG');
+			$res['user_img']=$ic['viewPath'].$res['user_img'];
 			$res['result']=1;
-			$mess=M('user_info')->where('user_phone')->find();
-			echo json_encode($mess);
-		}
+			
+			echo json_encode($res);
 	}
+
+	//获取知识推送列表
+	public function getKnowList()
+	{
+		$model = D('health_know');
+		$data = $model->select();
+		foreach ($data as $k => $v) {
+			$data[$k]['know_content'] = htmlspecialchars_decode($v['know_content']);
+		}
+		//dump($data);die;
+		echo json_encode($data);
+	}
+	
 }

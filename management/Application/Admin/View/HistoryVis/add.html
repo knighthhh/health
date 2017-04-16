@@ -52,7 +52,21 @@
           <label>用户ID：</label>
         </div>
         <div class="field">
-          <input type="text" class="input w50" value="" name="user_id" />
+          <input type="text" class="input w50" value="" id="user_id" name="user_id" />
+          <span class="tips">*</span>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="label">
+          <label>亲友姓名：</label>
+        </div>
+        <div class="field">
+          <select id="relative_id" name="relative_id">
+              <option value="0">本人</option>
+            <?php foreach ($relaData as $k => $v): ?>
+              <option value="<?php echo $v['relative_id']; ?>"><?php echo $v['relative_name']; ?></option>
+            <?php endforeach; ?>
+          </select>
           <span class="tips">*</span>
         </div>
       </div>
@@ -173,11 +187,11 @@
   //调用ueditor编辑器
   var ue = UE.getEditor('page_info',{
           initialFrameWidth:"50%",
-          initialFrameHeight:"200"
+          initialFrameHeight:"300"
           });
    var ue2 = UE.getEditor('check_info',{
           initialFrameWidth:"50%",
-          initialFrameHeight:"200"
+          initialFrameHeight:"300"
           });
   
   //处方图片上传按钮处理
@@ -211,6 +225,26 @@
     $(".tab-front").removeClass("tab-front").addClass("tab-back");
     //再设置所选择的li标签为选中状态
     $(this).removeClass("tab-back").addClass("tab-front");
+  });
+
+  //ajax获取用户亲友信息
+  $("#user_id").blur(function(){
+    var userID = $(this).val();
+    //console.log(userID);
+    if(userID){
+        $.ajax({
+          url: "<?php echo U('ajaxGetRela','',FALSE); ?>/userID/"+userID,
+          type: "GET",
+          dataType: "json",
+          success:function(data){
+            var item = '<option value="0">本人</option>';
+            $(data).each(function(k,v){
+              item = item + '<option value="'+v.relative_id+'">'+v.relative_name+'</option>';
+            });
+            $("#relative_id").html(item);
+          }
+        });
+      }
   });
 </script>
 </html>

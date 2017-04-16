@@ -28,7 +28,7 @@
     <div class="panel-head"><strong class="icon-reorder"> 内容列表</strong></div>
     <div class="padding border-bottom">
       <ul class="search" style="padding-left:10px;">
-        <li> <a class="button border-green icon-plus-square-o" href="__MODULE__/HistoryVis/add"> 添加</a> </li>
+        <li> <a class="button border-green icon-plus-square-o" href="__MODULE__/HistoryVis/add/relative_id/<?php echo $data['relative_id']; ?>"> 添加</a> </li>
         <li>搜索：</li>
         <li>首页
           <select name="s_ishome" class="input" onchange="changesearch()" style="width:60px; line-height:17px; display:inline-block">
@@ -65,6 +65,8 @@
         <th width="8%" style="text-align:left; padding-left:20px;">ID</th>
         <th>所属用户</th>
         <th>用户手机</th>
+        <th>亲友姓名</th>
+        <th>所属关系</th>
         <th>就诊医院</th>
         <th>就诊科室</th>
         <th>就诊医生</th>
@@ -76,13 +78,15 @@
           <td style="text-align:left; padding-left:20px;"><input type="checkbox" name="seecase_id[]" value="<?php echo $v['seecase_id']; ?>" /><?php echo $v['seecase_id']; ?></td>
           <td><?php echo $v['user_name']; ?></td>
           <td><?php echo $v['user_phone']; ?></td>
+          <td><?php echo $v['relative_name']; ?></td>
+          <td><?php echo $v['relative_relation']; ?></td>
           <td><?php echo $v['seecase_hos']; ?></td>
           <td><?php echo $v['seecase_depa']; ?></td>
           <td><?php echo $v['seecase_doc']; ?></td>
           <td><?php echo $v['seecase_time']; ?></td>
           <td><div class="button-group">
           <a class="button border-green" style="cursor:pointer" onclick="showDialog(<?php echo $v['seecase_id']; ?>)"><span class="icon-view-o"></span> 查看</a>
-          <a class="button border-main" href="__MODULE__/HistoryVis/edit/seecase_id/<?php echo $v['seecase_id']; ?>/hos_id/<?php echo $v['hos_id']; ?>"><span class="icon-edit"></span> 修改</a> 
+          <a class="button border-main" href="__MODULE__/HistoryVis/edit/seecase_id/<?php echo $v['seecase_id']; ?>/user_id/<?php echo $v['user_id']; ?>"><span class="icon-edit"></span> 修改</a> 
           <a class="button border-red" style="cursor:pointer" onclick="del(<?php echo $v['seecase_id']; ?>)"><span class="icon-trash-o"></span> 删除</a>
           </div></td>
           <td colspan="0">
@@ -97,6 +101,14 @@
 	    			<td>用户手机：</td>
 	    			<td><?php echo $v['user_phone']; ?></td>
 	    		</tr>
+	    		<tr>
+    				<td>亲友姓名：</td>
+    				<td><?php echo $v['relative_name']; ?></td>
+    			</tr>
+    			<tr>
+    				<td>所属关系：</td>
+    				<td><?php echo $v['relative_relation']; ?></td>
+    			</tr>
 	    		<tr>
 	    			<td>就诊时间：</td>
 	    			<td><?php echo $v['seecase_time']; ?></td>

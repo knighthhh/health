@@ -184,8 +184,9 @@ height: 100%;
 	background: #fff;
 	padding: 8px 0px;
 	font-size: 13px;
-	color: #000;
+	color:#6C6C6C;
 	margin: 0px;
+	letter-spacing: 5px;
 	border-bottom: 1px solid #f0f0f0;
 }
 
@@ -233,8 +234,9 @@ height: 100%;
 	background: #fff;
 	padding: 8px 0px;
 	font-size: 13px;
-	color: #000;
+	color:#6C6C6C;
 	margin: 0px;
+	letter-spacing: 5px;
 	border-bottom: 1px solid #f0f0f0;
 }
 .box-d-a{

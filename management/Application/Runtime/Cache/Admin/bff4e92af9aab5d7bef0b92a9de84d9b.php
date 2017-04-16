@@ -43,7 +43,7 @@
       </ul> 
       </div>
     <div class="body-content">
-    <form method="post" class="form-x" action="/health/management/Application/index.php/Admin/Relative/edit/relative_id/4" name="fileUploadForm" enctype="multipart/form-data">
+    <form method="post" class="form-x" action="/health/management/Application/index.php/Admin/Relative/edit/relative_id/7" name="fileUploadForm" enctype="multipart/form-data">
     <input type="hidden" value="<?php echo $data['relative_id']; ?>" name="relative_id" />
     <div class="div_tab" style="display:block;">  
      <div class="form-group">

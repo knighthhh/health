@@ -29,15 +29,22 @@ class SeeDocCaseModel extends Model
         //生成翻页按钮（上一页，下一页）
         $pageButton = $pageObj->show();
         $data       = $this
-            ->field("a.*,b.user_phone,b.user_name,c.page_img_path,d.check_img_path")
+            ->field("a.*,b.user_phone,b.user_name,c.page_img_path,d.check_img_path,e.relative_relation,e.relative_name")
             ->alias('a')
             ->join('__USER_INFO__ b on a.user_id = b.user_id', 'LEFT')
             ->join('__PAGE_IMG__ c on a.seecase_id = c.seecase_id', 'LEFT')
             ->join('__CHECK_IMG__ d on a.seecase_id = d.seecase_id', 'LEFT')
+            ->join('__RELATIVE_INFO__ e on a.relative_id = e.relative_id','LEFT')
             ->where($where)
             ->order("$orderby $orderway")
             ->limit($pageObj->firstRow . "," . $pageObj->listRows)
             ->select();
+        foreach ($data as $k => $v) {
+            if($v['relative_id']==0){
+                $data[$k]['relative_relation'] = "本人";
+                $data[$k]['relative_name'] = "本人";
+            }
+        }
         return array(
             'data' => $data, //数据库信息
             'page' => $pageButton, //分页结果

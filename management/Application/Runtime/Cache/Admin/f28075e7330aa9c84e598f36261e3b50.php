@@ -45,7 +45,7 @@
       </ul> 
       </div>
     <div class="body-content">
-    <form method="post" class="form-x" action="/health/management/Application/index.php/Admin/HistoryVis/edit/relative_id/1/hos_id/" name="fileUploadForm" enctype="multipart/form-data">
+    <form method="post" class="form-x" action="/health/management/Application/index.php/Admin/HistoryVis/edit/seecase_id/15/user_id/10" name="fileUploadForm" enctype="multipart/form-data">
     <input type="hidden" value="<?php echo $data['seecase_id']; ?>" name="seecase_id" />
     <div class="div_tab" style="display:block;">  
       <div class="form-group">
@@ -53,7 +53,31 @@
           <label>用户ID：</label>
         </div>
         <div class="field">
-          <input type="text" class="input w50" value="<?php echo $data['user_id']; ?>" name="user_id" />
+          <input type="text" id="user_id" class="input w50" value="<?php echo $data['user_id']; ?>" name="user_id" />
+          <span class="tips">*</span>
+        </div>
+      </div>
+      <!-- <div class="form-group">
+        <div class="label">
+          <label>亲友ID：</label>
+        </div>
+        <div class="field">
+          <input type="text" class="input w50" value="<?php echo $data['relative_id']; ?>" name="relative_id" />
+          <span class="tips">*</span>
+        </div>
+      </div> -->
+      <div class="form-group">
+        <div class="label">
+          <label>亲友姓名：</label>
+        </div>
+        <div class="field">
+          <select id="relative_id" name="relative_id">
+                <option value="0">本人</option>
+            <?php foreach ($relaData as $k => $v): ?>
+            <?php if($data['relative_id']==$v['relative_id']){ $select = 'selected="selected"'; }else{ $select =" "; } ?>
+              <option <?php echo $select; ?> value="<?php echo $v['relative_id']; ?>"><?php echo $v['relative_name']; ?></option>
+            <?php endforeach; ?>
+          </select>
           <span class="tips">*</span>
         </div>
       </div>
@@ -180,11 +204,11 @@
   //调用ueditor编辑器
   var ue = UE.getEditor('page_info',{
           initialFrameWidth:"50%",
-          initialFrameHeight:"200"
+          initialFrameHeight:"300"
           });
    var ue2 = UE.getEditor('check_info',{
           initialFrameWidth:"50%",
-          initialFrameHeight:"200"
+          initialFrameHeight:"300"
           });
   
   //处方图片上传按钮处理
@@ -218,6 +242,26 @@
     $(".tab-front").removeClass("tab-front").addClass("tab-back");
     //再设置所选择的li标签为选中状态
     $(this).removeClass("tab-back").addClass("tab-front");
+  });
+
+  //ajax获取用户亲友信息
+  $("#user_id").blur(function(){
+    var userID = $(this).val();
+    //console.log(userID);
+    if(userID){
+        $.ajax({
+          url: "<?php echo U('ajaxGetRela','',FALSE); ?>/userID/"+userID,
+          type: "GET",
+          dataType: "json",
+          success:function(data){
+            var item = '<option value="0">本人</option>';
+            $(data).each(function(k,v){
+              item = item + '<option value="'+v.relative_id+'">'+v.relative_name+'</option>';
+            });
+            $("#relative_id").html(item);
+          }
+        });
+      }
   });
 </script>
 </html>

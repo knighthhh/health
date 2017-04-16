@@ -51,7 +51,7 @@ class UserController extends Controller
             
         }
 		$data = $model->find($user_id);
-		$address = explode(" ",$data['user_city']);
+		$addrsess = explode(" ",$data['user_city']);
         $data['user_city'] = $address;
         //dump($data);die;
 		$this->assign(array(

@@ -61,6 +61,32 @@
 						});
 					},false);
 					
+					//显示医生列表
+					mui.post('http://'+serverName+'/health/management/application/index.php/Connector/Search/searchdoc',{
+						searchtext:searchtext
+					},function(data){
+						if(data.result!=0){
+							var s="";
+							for(var i=0;i<data.length;i++){
+								s+="<li class='mui-table-view-cell mui-media '><a class=''><div class='mui-row '><div class='mui-pull-left mui-col-xs-3 '>";
+								s+="<img src='"+data[i].doc_img+"' style='width: 100%' /></div><div class='mui-col-xs-9'>";
+								s+="<h4 class='dt_title'>"+data[i].doc_name+"</h4><div class='dt_from'><p><span class='mui-icon iconfont icon-iconaddress i-color'></span>";
+								s+="<span>"+data[i].hos_name+"</span></p>";
+								s+="<p><span class='mui-icon iconfont icon-iconaddress i-color'></span>所属科室：<span>"+data[i].dep_name+"</span> </p></div></p></div></div>";
+								s+="<p class='mui-ellipsis'> 擅长：<span>"+data[i].doc_especial+"</span></p>";
+								s+="<span class='iconfont icon-jinqian1 i-color'></span><span class='icon-title'>"+data[i].doc_fee+"/半小时</span>";
+								s+="<span class='iconfont icon-pinglun2 i-color'></span><span class='icon-title'>"+data[i].doc_rece+"</span>";
+								s+="<span class='iconfont icon-dianzan i-color'></span><span class='icon-title'>"+data[i].doc_attention+"</span>";
+								s+="<span class='iconfont icon-guanzhu1 i-color'></span><span class='icon-title'>"+data[i].doc_hot+"</span>";
+							}
+							var searchdoc =document.getElementById("searchdoc");
+							searchdoc.innerHTML = s;
+						}else{
+							//提示没有搜索结果
+						}
+					},'json'
+				);
+					
 				});
 	</script>
 	<body>

@@ -99,7 +99,13 @@
           <label>关系：</label>
         </div>
         <div class="field">
-          <input type="text" class="input w50" value="" name="relative_relation" />
+          <select name="relative_relation">
+            <option value="本人">本人</option>
+            <option value="家庭成员">家庭成员</option>
+            <option value="亲戚">亲戚</option>
+            <option value="朋友">朋友</option>
+            <option value="其他">其他</option>
+          </select>
         </div>
       </div>
       <div class="form-group">
