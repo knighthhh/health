@@ -108,7 +108,7 @@
 				        		<button type="button" class="mui-btn mui-btn-success mui-btn-outlined mui-pull-right history_button">
 															去复诊
 								</button>
-				            	<button type="button" class="mui-btn mui-btn-success mui-btn-outlined mui-pull-right history_button">
+				            	<button id="detail_online" type="button" class="mui-btn mui-btn-success mui-btn-outlined mui-pull-right history_button">
 															查看详情
 								</button>
 				        	</p>
@@ -192,10 +192,10 @@
 				        </li>
 				        <li class="mui-table-view-cell">
 				        	<p>
-				        		<button type="button" class="mui-btn mui-btn-success mui-btn-outlined mui-pull-right history_button">
+				        		<button id="edit_outline" type="button" class="mui-btn mui-btn-success mui-btn-outlined mui-pull-right history_button">
 															修改记录
 								</button>
-				            	<button type="button" class="mui-btn mui-btn-success mui-btn-outlined mui-pull-right history_button">
+				            	<button id="detail_outline" type="button" class="mui-btn mui-btn-success mui-btn-outlined mui-pull-right history_button">
 															查看详情
 								</button>
 				        	</p>
@@ -203,15 +203,84 @@
 				        </li>
 				    </ul>
 				</div>
-			
+			<div class="submit" id="add_outline">
+					<span class="mui-btn mui-btn-success ">
+					增加线下就诊记录
+					</span>
+				</div>
 		</div>
 		
 		
 		
 		<script src="../js/mui.min.js"></script>
 		<script type="text/javascript">
-			mui.init()
-		</script>
+	    	mui.init();
+			mui.plusReady(function() {
+					var detail_online= document.getElementById('detail_online');	
+					var detail_outline= document.getElementById('detail_outline');	
+					var edit_outline= document.getElementById('edit_outline');	
+					var add_outline= document.getElementById('add_outline');	
+					
+					detail_online.addEventListener('tap',function(event){
+						mui.openWindow({
+							url: 'online_detail.html',
+							id: 'online_detail',
+							preload: true,
+							show: {
+								aniShow: 'pop-in'
+							},
+							waiting: {
+								autoShow: false
+							}
+						});
+					},false);
+					
+					detail_outline.addEventListener('tap',function(event){
+						mui.openWindow({
+							url: 'outline_detail.html',
+							id: 'outline_detail',
+							preload: true,
+							show: {
+								aniShow: 'pop-in'
+							},
+							waiting: {
+								autoShow: false
+							}
+						});
+					},false);
+					
+					edit_outline.addEventListener('tap',function(event){
+						mui.openWindow({
+							url: 'outline_edit.html',
+							id: 'outline_edit',
+							preload: true,
+							show: {
+								aniShow: 'pop-in'
+							},
+							waiting: {
+								autoShow: false
+							}
+						});
+					},false);
+					
+					add_outline.addEventListener('tap',function(event){
+						mui.openWindow({
+							url: 'outline_add.html',
+							id: 'outline_add',
+							preload: true,
+							show: {
+								aniShow: 'pop-in'
+							},
+							waiting: {
+								autoShow: false
+							}
+						});
+					},false);
+					
+					
+				});
+
+	</script>
 	</body>
 
 </html>

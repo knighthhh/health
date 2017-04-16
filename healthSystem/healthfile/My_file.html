@@ -6,13 +6,165 @@
 		<title></title>
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 		<link href="../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../css/heathfile.css"/>
 	</head>
 
 	<body>
+		<header class="mui-bar mui-bar-nav public-color">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		    <h1 class="mui-title">我的档案</h1>
+		</header>
+		
+		<div class="mui-content">
+			<div class="person_info">
+				
+					<ul class="mui-table-view">
+					    <li class="mui-table-view-cell mui-media">
+					        <a href="javascript:;">
+					            <img class="mui-pull-left" src="../img/inquiry.jpg">
+					            <div class="mui-media-body">
+					              		<span class="name">张三丰</span> 
+					              	<hr style="border:1px dashed #CCCCCC ">
+					                <p class='mui-ellipsis'>性别：<span>男</span></p>
+					                <p class='mui-ellipsis'>居住地：<span>深圳</span></p>
+					                <p class='mui-ellipsis'>出生日期：<span>2010-10-10</span></p>
+					                
+					            </div>
+					        </a>
+					    </li> 
+					</ul>
+				
+			</div>
+			
+			<div class="other_info">
+				<ul class="mui-table-view mui-table-view-chevron">
+					
+					<li class="mui-table-view-cell mui-collapse mui-active">
+						<a class="mui-navigate-right" href="#">
+							<p class="headline">健康状况
+								
+								<span class="mui-pull-right detial">详情</span>
+								
+							</p>
+						</a>
+						<ul class="mui-table-view mui-table-view-chevron other_info_res">
+							<li class="mui-table-view-cell">
+								<p>当前健康状况：</p>
+								<span>良</span>
+							</li>
+							<li class="mui-table-view-cell">
+								<p>当前健康问题：</p>
+								<span>鼻炎</span>
+							</li>
+							<li class="mui-table-view-cell">
+								<p>既往病史：</p>
+								<span>咽炎</span>
+							</li>
+							<li class="mui-table-view-cell">
+								<p>过敏史：</p>
+								<span>无</span>
+							</li>
+							<li class="mui-table-view-cell">
+				        		<p>
+				        		<button id="edit_health" type="button" class="mui-btn mui-btn-success mui-btn-outlined mui-pull-right">
+															修改/填写
+								</button>
+								</p>
+				        	</li>
+							
+						</ul>
+					</li>
+					<li class="mui-table-view-cell mui-collapse">
+						<a class="mui-navigate-right" href="#">
+							<p class="headline">生活状况:
+								<span class="mui-pull-right detial">详情</span>
+							</p>
+							
+						</a>
+						<ul class="mui-table-view mui-table-view-chevron other_info_res">
+							<li class="mui-table-view-cell">
+								<p>工作状况：</p>
+								<span>程序员</span>
+							</li>
+							<li class="mui-table-view-cell">
+								<p>是否已婚：</p>
+								<span>是</span>
+							</li>
+							<li class="mui-table-view-cell">
+								<p>是否生育：</p>
+								<span>是</span>
+							</li>
+							<li class="mui-table-view-cell">
+								<p>生活习惯：</p>
+								<span>写代码</span>
+							</li>
+							<li class="mui-table-view-cell">
+								<p>作息时间：</p>
+								<span>23:00-24:00</span>
+							</li>
+							<li class="mui-table-view-cell">
+								<p>饮食习惯：</p>
+								<span>清淡</span>
+							</li>
+							<li class="mui-table-view-cell">
+				        		<p>
+				        			<button id="edit_live" type="button" class="mui-btn mui-btn-success mui-btn-outlined mui-pull-right">
+															修改/填写
+									</button>
+				        		</p>
+
+				        	</li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+		
+		
+		
+		
 		<script src="../js/mui.min.js"></script>
 		<script type="text/javascript">
-			mui.init()
-		</script>
+	    	mui.init();
+			mui.plusReady(function() {
+					var edit_health= document.getElementById('edit_health');	
+					var edit_live= document.getElementById('edit_live');	
+	
+					
+					edit_health.addEventListener('tap',function(event){
+						mui.openWindow({
+							url: 'myfile_health_edit.html',
+							id: 'myfile_health_edit',
+							preload: true,
+							show: {
+								aniShow: 'pop-in'
+							},
+							waiting: {
+								autoShow: false
+							}
+						});
+					},false);
+					
+					edit_live.addEventListener('tap',function(event){
+						mui.openWindow({
+							url: 'myfile_live_edit.html',
+							id: 'myfile_live_edit',
+							preload: true,
+							show: {
+								aniShow: 'pop-in'
+							},
+							waiting: {
+								autoShow: false
+							}
+						});
+					},false);
+					
+					
+					
+				});
+
+	</script>
 	</body>
 
 </html>

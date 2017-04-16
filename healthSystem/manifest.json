@@ -389,7 +389,10 @@
 					"css/iconfont_foot.css"
 				],
 				"refer": [
-					"healthfile/medDiary.html"
+					"healthfile/medDiary.html",
+					"healthfile/History_todoc.html",
+					"healthfile/My_file.html",
+					"healthfile/Health_record.html"
 				],
 				"priority": 0
 			},
@@ -774,9 +777,14 @@
 				"resources": [
 					"js/mui.min.js",
 					"fonts/mui.ttf",
-					"css/mui.min.css"
+					"css/mui.min.css",
+					"js/mui.calendar.js",
+					"css/heathfile.css",
+					"css/mui.calendar.css"
 				],
-				"refer": [],
+				"refer": [
+					"healthfile/write_diary.html"
+				],
 				"priority": 0
 			},
 			"mine/general.html": {
@@ -793,6 +801,58 @@
 				],
 				"refer": [],
 				"priority": 0
+			},
+			"healthfile/History_todoc.html": {
+				"resources": [
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"css/heathfile.css"
+				],
+				"refer": [
+					"healthfile/outline_add.html"
+				],
+				"priority": 0
+			},
+			"healthfile/My_file.html": {
+				"resources": [
+					"img/person_background.png",
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"img/inquiry.jpg",
+					"css/heathfile.css"
+				],
+				"refer": [
+					"healthfile/myfile_health_edit.html",
+					"healthfile/myfile_live_edit.html"
+				],
+				"priority": 0
+			},
+			"healthfile/Health_record.html": {
+				"resources": [
+					"js/mui.min.js",
+					"css/mui.min.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"healthfile/outline_add.html": {
+				"resources": [
+					"js/feedback_mydoctor.js",
+					"img/choose_photos.png",
+					"css/mui.min.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"healthfile/myfile_health_edit.html": {
+				"resources": [
+					"js/mui.min.js",
+					"css/mui.min.css"
+				],
+				"refer": [],
+				"priority": 0
 			}
 		},
 		"idle": {
@@ -804,7 +864,6 @@
 				"img/text1.jpg",
 				"img/search.jpg",
 				"html/Health_File.html",
-				"img/inquiry.jpg",
 				"html/Inquiry.html",
 				"css/mui.css",
 				"img/inquiry1.jpg",

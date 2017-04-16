@@ -6,13 +6,119 @@
 		<title></title>
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 		<link href="../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../css/heathfile.css"/>
 	</head>
 
 	<body>
+		<header class="mui-bar mui-bar-nav public-color">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		    <h1 class="mui-title">亲友档案</h1>
+		</header>
+		
+		<div class="mui-content">
+		
+			
+			<div class="friend_file">
+				<p class="box">--我关联的亲友--</p>
+					<ul class="mui-table-view">
+					         <li class="mui-table-view-cell mui-media">
+							        <a class="mui-navigate-right">
+							            <img class="mui-media-object mui-pull-left" src="http://placehold.it/40x30">
+							            <div class="mui-media-body">
+							                <p>张三</p>
+							            </div>
+							        </a>
+							  </li>
+					        <li class="mui-table-view-cell">
+					            <a class="mui-navigate-right">
+					                <p>张三</p>
+					            </a>
+					        </li>
+					        <li class="mui-table-view-cell">
+					            <a class="mui-navigate-right">
+					                <p>张三</p>
+					            </a>
+					        </li>
+					    </ul>
+					    <div class="submit" id="add_outline">
+							<span class="mui-btn mui-btn-success ">
+									关联更多亲友
+							</span>
+						</div>		
+					
+				<p class="box">--我添加的亲友--</p>
+						
+						<ul class="mui-table-view">
+					        <li class="mui-table-view-cell">
+					            <a class="mui-navigate-right">
+					               <p>张三</p>
+					            </a>
+					        </li>
+					        <li class="mui-table-view-cell">
+					            <a class="mui-navigate-right">
+					                <p>张三</p>
+					            </a>
+					        </li>
+					        <li class="mui-table-view-cell">
+					            <a class="mui-navigate-right">
+					               <p>张三</p>
+					            </a>
+					        </li>
+					    </ul>
+						
+						
+				<div class="submit" id="add_outline">
+					<span class="mui-btn mui-btn-success ">
+							添加亲友档案
+					</span>
+				</div>				
+			</div>
+		</div>
+		
+		
+		
+		
 		<script src="../js/mui.min.js"></script>
 		<script type="text/javascript">
-			mui.init()
-		</script>
+	    	mui.init();
+			mui.plusReady(function() {
+					var edit_health= document.getElementById('edit_health');	
+					var edit_live= document.getElementById('edit_live');	
+	
+					
+					edit_health.addEventListener('tap',function(event){
+						mui.openWindow({
+							url: 'myfile_health_edit.html',
+							id: 'myfile_health_edit',
+							preload: true,
+							show: {
+								aniShow: 'pop-in'
+							},
+							waiting: {
+								autoShow: false
+							}
+						});
+					},false);
+					
+					edit_live.addEventListener('tap',function(event){
+						mui.openWindow({
+							url: 'myfile_live_edit.html',
+							id: 'myfile_live_edit',
+							preload: true,
+							show: {
+								aniShow: 'pop-in'
+							},
+							waiting: {
+								autoShow: false
+							}
+						});
+					},false);
+					
+					
+					
+				});
+
+	</script>
 	</body>
 
 </html>
