@@ -363,7 +363,16 @@
 					"js/mui.min.js",
 					"css/mui.min.css",
 					"fonts/mui.ttf",
-					"js/common.js"
+					"js/common.js",
+					"fonts/iconfont_money.ttf",
+					"css/iconfont_health_file.css",
+					"css/iconfont_mine.css",
+					"fonts/iconfont_mine.ttf",
+					"css/iconfont_money.css",
+					"css/iconfont.css",
+					"fonts/iconfont_health_file.ttf",
+					"fonts/iconfont.ttf",
+					"img/doctor.jpeg"
 				],
 				"refer": [
 					"mine/account.html",
@@ -394,7 +403,6 @@
 					"healthfile/History_todoc.html",
 					"healthfile/My_file.html",
 					"healthfile/Health_record.html"
-
 				],
 				"priority": 0
 			},
@@ -826,6 +834,7 @@
 					"js/common.js"
 				],
 				"refer": [
+					"healthfile/outline_add.html",
 					"login/login.html"
 				],
 				"priority": 0
@@ -835,18 +844,6 @@
 					"img/doctor.jpeg"
 				],
 				"refer": [],
-				"priority": 0
-			},
-			"healthfile/History_todoc.html": {
-				"resources": [
-					"js/mui.min.js",
-					"fonts/mui.ttf",
-					"css/mui.min.css",
-					"css/heathfile.css"
-				],
-				"refer": [
-					"healthfile/outline_add.html"
-				],
 				"priority": 0
 			},
 			"healthfile/My_file.html": {
