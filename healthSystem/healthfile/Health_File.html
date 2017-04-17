@@ -10,29 +10,36 @@
     <link rel="stylesheet" type="text/css" href="../css/iconfont_foot.css"/>
     <link rel="stylesheet" type="text/css" href="../css/iconfont_health_file.css"/>
     <link rel="stylesheet" type="text/css" href="../css/health_file.css"/>
-     <script src="" type="text/javascript" charset="utf-8"></script>
      <!--<script src="js/skip.js" type="text/javascript" charset="utf-8"></script>-->
      <script type="text/javascript">
 // H5 plus事件处理
-function plusReady(){
-}
-if(window.plus){
-	plusReady();
-}else{
-	document.addEventListener("plusready",plusReady,false);
-}
+//function plusReady(){
+//}
+//if(window.plus){
+//	plusReady();
+//}else{
+//	document.addEventListener("plusready",plusReady,false);
+//}
 
 // 创建并显示新窗口
-function openWebview(){
-	var w = plus.webview.create( "medDiary.html" );
-	w.show("pop-in");
-//	w.show("slide-in-right");
-}
-function openWebview2(){
-	var w = plus.webview.create( "History_todoc.html" );
-	w.show("pop-in");
-//	w.show("slide-in-right");
-}
+
+//function openWebview(){
+//	var w = plus.webview.create( "medDiary.html" );
+//	w.show("pop-in");
+////	w.show("slide-in-right");
+//}
+//function openWebview2(){
+//	var w = plus.webview.create( "History_todoc.html" );
+//	w.show("pop-in");
+////	w.show("slide-in-right");
+//}
+//function openWebview3(){
+//	var w = plus.webview.create( "My_file.html" );
+//	w.show("pop-in");
+////	w.show("slide-in-right");
+//}
+
+
 mui.get('http://'+serverName+'/health/management/Application/index.php/Connector/User/getKnowList',{
 		
 },function(data){
@@ -46,6 +53,7 @@ mui.get('http://'+serverName+'/health/management/Application/index.php/Connector
 		knowledge.innerHTML = item;
 	},'json'
 );
+
 	</script>
 </head>
 <body>
@@ -54,38 +62,38 @@ mui.get('http://'+serverName+'/health/management/Application/index.php/Connector
 			<!--九宫格-->
 			    <ul class="mui-table-view mui-grid-view mui-grid-9">
 			    <li class="mui-table-view-cell mui-media mui-col-xs-4 ">
-			        <a onclick="openWebview()">
+			        <a href="#" id="record">
 			            <span class="mui-icon iconfont icon-yongyaojilu ul_t1"></span>
 			            <div class="mui-media-body">用药日记</div>
 			        </a>
 			    </li>
 			    <li class="mui-table-view-cell mui-media mui-col-xs-4">
-			        <a onclick="openWebview2()">
+			        <a href="#" id="history_todoc">
 			            <span class="mui-icon iconfont icon-lishijiuzhen ul_t2"></span>
 			            	<!--<span class="mui-badge mui-badge-red">5</span></span>-->
 			            <div class="mui-media-body">历史就诊</div>
 			        </a>
 			    </li>
 			    <li class="mui-table-view-cell mui-media mui-col-xs-4">
-			        <a href="#">
+			        <a href="#" id="myfile">
 			            <span class="mui-icon iconfont icon-dangan-copy ul_t3"></span>
 			            <div class="mui-media-body">我的档案</div>
 			        </a>
 			    </li>
 			    <li class="mui-table-view-cell mui-media mui-col-xs-4 ">
-			        <a href="#">
+			        <a href="#" id="">
 			            <span class="mui-icon iconfont icon-group ul_t4"></span>
 			            <div class="mui-media-body">亲友档案</div>
 			        </a>
 			    </li>
 			    <li class="mui-table-view-cell mui-media mui-col-xs-4">
-			        <a href="#">
+			        <a href="#" id="">
 			            <span class="mui-icon iconfont icon-jiankangjilu ul_t5"></span>
 			            <div class="mui-media-body">健康记录</div>
 			        </a>
 			    </li>
 			    <li class="mui-table-view-cell mui-media mui-col-xs-4 ">
-			        <a href="#">
+			        <a href="#"id="">
 			            <span class="mui-icon iconfont icon-gengduo ul_t6"></span>
 			            <div class="mui-media-body">家族史</div>
 			        </a>
@@ -131,10 +139,59 @@ mui.get('http://'+serverName+'/health/management/Application/index.php/Connector
 			</div>
 			
 		</div>
-			
-			
-			
-			
+		<script src="../js/mui.min.js"></script>
+		<script type="text/javascript">
+	    	mui.init();
+			mui.plusReady(function() {
+					var record= document.getElementById('record');	
+					var history_todoc= document.getElementById('history_todoc');	
+					var myfile= document.getElementById('myfile');	
+					
+					record.addEventListener('tap',function(event){
+						mui.openWindow({
+							url: 'medDiary.html',
+							id: 'medDiary',
+							preload: true,
+							show: {
+								aniShow: 'pop-in'
+							},
+							waiting: {
+								autoShow: false
+							}
+						});
+					},false);
+					
+					history_todoc.addEventListener('tap',function(event){
+						mui.openWindow({
+							url: 'History_todoc.html',
+							id: 'History_todoc',
+							preload: true,
+							show: {
+								aniShow: 'pop-in'
+							},
+							waiting: {
+								autoShow: false
+							}
+						});
+					},false);
+					
+					myfile.addEventListener('tap',function(event){
+						mui.openWindow({
+							url: 'My_file.html',
+							id: 'My_file',
+							preload: true,
+							show: {
+								aniShow: 'pop-in'
+							},
+							waiting: {
+								autoShow: false
+							}
+						});
+					},false);
+					
+				});
+
+	</script>
 		
 	</body>
 </html>
