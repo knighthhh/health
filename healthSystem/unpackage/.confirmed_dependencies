@@ -29,7 +29,8 @@
 			"img/findHp.jpg",
 			"img/finddoctor.jpg",
 			"js/souye.js",
-			"img/jiankang.jpeg"
+			"img/jiankang.jpeg",
+			"fonts/mui.ttf"
 		]
 	},
 	"mine/Mine.html": {
@@ -73,7 +74,8 @@
 			"img/inquiry2.jpg",
 			"css/inquiry.css",
 			"fonts/iconfont_inquiry.ttf",
-			"css/header.css"
+			"css/header.css",
+			"fonts/mui.ttf"
 		]
 	},
 	"login/login.html": {
@@ -117,7 +119,12 @@
 			"js/common.js",
 			"js/mui.min.js",
 			"fonts/mui.ttf",
-			"css/mui.min.css"
+			"css/mui.min.css",
+			"fonts/iconfont_account.ttf",
+			"css/iconfont_mine.css",
+			"fonts/iconfont_mine.ttf",
+			"css/iconfont_account.css",
+			"img/doctor.jpeg"
 		]
 	}
 }

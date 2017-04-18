@@ -712,7 +712,12 @@
 					"js/mui.min.js",
 					"css/mui.min.css",
 					"fonts/mui.ttf",
-					"js/common.js"
+					"js/common.js",
+					"fonts/iconfont_account.ttf",
+					"css/iconfont_mine.css",
+					"fonts/iconfont_mine.ttf",
+					"css/iconfont_account.css",
+					"img/doctor.jpeg"
 				],
 				"refer": [],
 				"priority": 0
