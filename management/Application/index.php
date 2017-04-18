@@ -7,7 +7,9 @@ define("APP_DEBUG",true);
 
 
 
+
 define("SITE_URL", "http://10.77.116.160:80");
+
 
 
 define("CSS_URL", "/health/management/Application/Public/Home/css/");
