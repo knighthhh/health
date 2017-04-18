@@ -2,7 +2,6 @@
 namespace Connector\Controller;
 
 use Think\Controller;
-
 class UserController extends Controller{
 	public function reg(){
 		if(!$_POST['user_phone']||!$_POST['user_password']) {
@@ -27,12 +26,21 @@ class UserController extends Controller{
 				$res['result']=0;
 				$res['data']="该手机号已经被注册";
 			}else{
-				//No user exists
+				//注册融云token
+				$appKey = 'c9kqb3rdcvq4j';
+				$appSecret = 'usuKQXzEY2';
+				$RongCloud = new \Im\RongCloud($appKey,$appSecret);
+				// 获取 Token 方法
+				$rongyun = $RongCloud->user()->getToken($data['user_phone'], 'username', 'http://www.rongcloud.cn/images/logo.png');
+				$rongyun = json_decode($rongyun,1);
+				$data['im_token'] = $rongyun['token'];
+				//写入数据库
 				$addres=$model->add($data);
 				$res['result']=1;
 				$res['data']="恭喜注册成功";
 			}
 		}
+
 		echo json_encode($res);
 	}
 	
@@ -53,6 +61,7 @@ class UserController extends Controller{
 					$res['data']="自动登录成功";
 					$res['user_token']=md5('user_phone'+time());
 					$res['user_id']=$mess['user_id'];
+					$res['im_token']=$mess['im_token'];
 				//	$res['user_name']=$mess['user_name'];
 					
 					$token['user_token']=$res['user_token'];
@@ -75,6 +84,7 @@ class UserController extends Controller{
 				$res['data']="登录成功";
 				$res['user_token']=md5('user_phone'+time());
 				$res['user_id']=$mess['user_id'];
+				$res['im_token']=$mess['im_token'];
 				//$res['user_name']=$mess['user_name'];
 				
 				$token['user_token']=$res['user_token'];
@@ -101,4 +111,14 @@ class UserController extends Controller{
 			echo json_encode($res);
 	}
 	
+	public function aa(){
+		$appKey = 'c9kqb3rdcvq4j';
+		$appSecret = 'usuKQXzEY2';
+		$RongCloud = new \Im\RongCloud($appKey,$appSecret);
+				
+		$result = $RongCloud->message()->getHistory('2017041701');
+		echo "getHistory    ";
+		print_r($result);
+		echo "\n";
+	}
 }

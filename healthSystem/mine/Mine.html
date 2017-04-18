@@ -105,7 +105,7 @@
 				});
 			},false);
 			
-			//已经登录了的显示个人信息
+			//自动登录，已经登录了的显示个人信息
 			var user_phone = plus.storage.getItem('user_phone');
 			if(islogin()){
 				document.getElementById("user_phone").innerHTML=user_phone;

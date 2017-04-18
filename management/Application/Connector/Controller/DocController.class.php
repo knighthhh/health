@@ -62,4 +62,34 @@ class DocController extends Controller{
 		$firstCharter = getFirstCharter("sdas");
         echo json_encode($info);
     }
+
+	//医生登录
+	public function login(){
+		
+			$data['doc_phone']=I('post.doc_phone');
+			$data['doc_password']=md5(I('post.doc_password').C('MD5_KEY'));
+//$data['doc_phone']=15768651577;
+//			$data['doc_password']=md5('123456'.C('MD5_KEY'));
+			$mess=M('doctor_info')->where($data)->find();
+			if ($mess) {
+				$res['result']=1;
+				$res['data']="登录成功";
+				//$res['user_token']=md5('user_phone'+time());
+				$res['doc_id']=$mess['doc_id'];
+				$res['im_token']=$mess['im_token'];
+				//$res['user_name']=$mess['user_name'];
+				
+//				$token['user_token']=$res['user_token'];
+//				$token['token_time']=date('Y-m-d H:i:s');
+//				$token['login_time']=date('Y-m-d H:i:s');
+//				M('user_info')->where($data)->save($token);
+				
+			}else{
+				$res['result']=0;
+				$res['data']="用户名或密码错误";
+			}
+		
+
+		echo json_encode($res);
+	}
 }

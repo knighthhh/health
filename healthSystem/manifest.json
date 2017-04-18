@@ -638,7 +638,11 @@
 				"resources": [
 					"js/mui.picker.min.js",
 					"css/fast_question.css",
-					"css/mui.picker.min.css"
+					"css/mui.picker.min.css",
+					"css/mydoctor.css",
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css"
 				],
 				"refer": [
 					"inquiry/basic_text.html"
@@ -657,7 +661,9 @@
 					"css/iconfont_foot.css",
 					"js/common.js"
 				],
-				"refer": [],
+				"refer": [
+					"im/im-chat.html"
+				],
 				"priority": 0
 			},
 			"main/docHP.html": {
@@ -790,6 +796,35 @@
 			"mine/follow.html": {
 				"resources": [
 					"js/mui.min.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"im/im-chat.html": {
+				"resources": [
+					"js/mui.min.js",
+					"css/app.css",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"js/mui.imageViewer.js",
+					"css/mui.imageviewer.css",
+					"js/arttmpl.js",
+					"img/finddoctor.jpg",
+					"im/%3C%\u003d(item.content)%%3E",
+					"js/im.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"test.html": {
+				"resources": [
+					"js/mui.min.js",
+					"/css/mui.min.css",
+					"/js/mui.min.js",
+					"/js/common.js",
+					"js/common.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css"
 				],
 				"refer": [],
 				"priority": 0
