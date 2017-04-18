@@ -235,7 +235,7 @@ input::-webkit-input-placeholder,textarea::-webkit-input-placeholder{
 .person_info .mui-table-view-cell{
 	padding: 11px 8px;
 }
-.other_info .headline{
+.headline{
 	font-family: "微软雅黑";
 	font-size:medium;
 	color: #22BBA7 ;
@@ -253,3 +253,109 @@ input::-webkit-input-placeholder,textarea::-webkit-input-placeholder{
 }
 
 
+/*friend_file*/
+.friend_file img{
+	border-radius: 50%;
+}
+
+.friend-detail{
+		margin-top: 10px;
+}
+.friend-detail .headcolor{
+	background-color:#78E067;
+	 opacity:0.8;
+}
+.friend-detail  span{
+
+	color: #8F8F94;
+}
+
+
+/*health_record*/
+.c-left p{
+	margin-left: 5px;
+	font-size: medium;
+}
+.s-left{
+	float: left;
+}
+.c-normal{
+		width:25px;
+		height:25px;
+		border-radius:50%;
+		margin-left:25%;
+		float: left;
+		border:1px solid #78E067;
+}
+.c-bad{
+	width:25px;
+		height:25px;
+		border-radius:50%;
+		margin-left:15%;
+		float: left;
+		border:1px solid #FF0000;
+}
+
+
+
+.health_record .mui-grid-view.mui-grid-9{
+     		background-color: #fff;
+     		clear: both;
+     	}
+.health_record .mui-grid-view.mui-grid-9 .mui-table-view-cell{
+	padding: 0px 0px;
+}
+
+.health_record .mui-grid-view.mui-grid-9 .mui-table-view-cell>a:not(.mui-btn){
+	padding: 2px 0;
+}
+.health_record .iconfont{
+	display: block;
+	font-size: x-large!important;
+	margin-top:20%;
+	padding-bottom: 5px;
+	
+	
+}
+.health_record .circle_normal{
+		width:100px;
+		height:100px;
+		border-radius:50%;
+		margin: auto;
+		border:2px solid #78E067; 
+		}
+.health_record .circle_bad{
+		width:100px;
+		height:100px;
+		border-radius:50%;
+		margin: auto;
+		border:2px solid #FF0000; 
+		}
+.circle p{
+	display:inline;
+}
+		
+.ul_t1{
+	color:#FF9F22;
+}
+
+.ul_t2{
+	color:#4F92EF;
+}
+
+.ul_t3{
+	color:#4EC7EF;
+}
+
+.ul_t4{
+	color:#FF0000;
+}
+
+.ul_t5{
+	
+	color:#FF6767;
+}
+
+.ul_t6{
+	color:#CF2D28;
+}

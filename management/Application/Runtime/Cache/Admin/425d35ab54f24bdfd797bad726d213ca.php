@@ -22,12 +22,13 @@
 </style>
 </head>
 <body>
-<form method="post" action="/health/management/Application/index.php/Admin/Knowledge/listKnow" id="listform">
+<!-- 搜索表单 -->
+<form method="get" action="/health/management/Application/index.php/Admin/HistoryVis/listHis" id="searchForm">
   <div class="panel admin-panel">
     <div class="panel-head"><strong class="icon-reorder"> 内容列表</strong></div>
     <div class="padding border-bottom">
       <ul class="search" style="padding-left:10px;">
-        <li> <a class="button border-green icon-plus-square-o" href="/health/management/Application/index.php/Admin/Knowledge/add"> 添加知识</a> </li>
+        <li> <a class="button border-green icon-plus-square-o" href="/health/management/Application/index.php/Admin/HistoryVis/add/relative_id/<?php echo $data['relative_id']; ?>"> 添加</a> </li>
         <li>搜索：</li>
         <li>首页
           <select name="s_ishome" class="input" onchange="changesearch()" style="width:60px; line-height:17px; display:inline-block">
@@ -49,34 +50,108 @@
             <option value="1">是</option>
             <option value="0">否</option>
           </select>
+      	</li>
         <li>
-          <input type="text" placeholder="请输入搜索关键字" name="keywords" class="input" style="width:250px; line-height:17px;display:inline-block" />
-          <a href="javascript:void(0)" class="button border-green icon-search" onclick="changesearch()" > 搜索</a></li>
+          <input type="text" placeholder="请输入手机号" name="userPhone" class="input" style="width:250px; line-height:17px;display:inline-block" value="<?php echo I('get.userPhone'); ?>" />
+          <a href="javascript:void(0)" class="button border-green icon-search" onclick="$('#submit').click()" > 搜索</a>
+        </li>
       </ul>
     </div>
+	</div>
+	<input id="submit" type="submit" value="搜索" style="display:none"/>
+</form>
     <table class="table table-hover text-center">
       <tr>
         <th width="8%" style="text-align:left; padding-left:20px;">ID</th>
-        <th>标题</th>
-        <th width="10%">点击量</th>
-        <th width="14%">更新时间</th>
+        <th>所属用户</th>
+        <th>用户手机</th>
+        <th>亲友姓名</th>
+        <th>所属关系</th>
+        <th>就诊医院</th>
+        <th>就诊科室</th>
+        <th>就诊医生</th>
+        <th>就诊时间</th>
         <th width="30%">操作</th>
       </tr>
     <?php foreach ($data as $k => $v): ?>
         <tr>
-          <td style="text-align:left; padding-left:20px;"><input type="checkbox" name="know_id[]" value="<?php echo $v['know_id']; ?>" /><?php echo $v['know_id']; ?></td>
-          <td><?php echo $v['know_title']; ?></td>
-          <td><?php echo $v['know_see']; ?></td>
-          <td><?php echo $v['time']; ?></td>
+          <td style="text-align:left; padding-left:20px;"><input type="checkbox" name="seecase_id[]" value="<?php echo $v['seecase_id']; ?>" /><?php echo $v['seecase_id']; ?></td>
+          <td><?php echo $v['user_name']; ?></td>
+          <td><?php echo $v['user_phone']; ?></td>
+          <td><?php echo $v['relative_name']; ?></td>
+          <td><?php echo $v['relative_relation']; ?></td>
+          <td><?php echo $v['seecase_hos']; ?></td>
+          <td><?php echo $v['seecase_depa']; ?></td>
+          <td><?php echo $v['seecase_doc']; ?></td>
+          <td><?php echo $v['seecase_time']; ?></td>
           <td><div class="button-group">
-          <a class="button border-green" style="cursor:pointer" onclick="showDialog(<?php echo $v['know_id']; ?>)"><span class="icon-view-o"></span> 查看</a>
-          <a class="button border-main" href="/health/management/Application/index.php/Admin/Knowledge/edit/know_id/<?php echo $v['know_id']; ?>"><span class="icon-edit"></span> 修改</a> 
-          <a class="button border-red" style="cursor:pointer" onclick="del(<?php echo $v['know_id']; ?>)"><span class="icon-trash-o"></span> 删除</a>
+          <a class="button border-green" style="cursor:pointer" onclick="showDialog(<?php echo $v['seecase_id']; ?>)"><span class="icon-view-o"></span> 查看</a>
+          <a class="button border-main" href="/health/management/Application/index.php/Admin/HistoryVis/edit/seecase_id/<?php echo $v['seecase_id']; ?>/user_id/<?php echo $v['user_id']; ?>"><span class="icon-edit"></span> 修改</a> 
+          <a class="button border-red" style="cursor:pointer" onclick="del(<?php echo $v['seecase_id']; ?>)"><span class="icon-trash-o"></span> 删除</a>
           </div></td>
           <td colspan="0">
           	<!-- 详情页面 -->
-        	<div id="dialog<?php echo $v['know_id']; ?>" style="display:none;" title="详情信息">
-        	<div><?php echo htmlspecialchars_decode($v['know_content']); ?></div>
+        	<div id="dialog<?php echo $v['seecase_id']; ?>" style="display:none;" title="详情信息">
+    		<table class="dialogtable" cellspacing="0" cellpadding="0">
+    			<tr>
+    				<td>用户名：</td>
+    				<td><?php echo $v['user_name']; ?></td>
+    			</tr>
+	    		<tr>
+	    			<td>用户手机：</td>
+	    			<td><?php echo $v['user_phone']; ?></td>
+	    		</tr>
+	    		<tr>
+    				<td>亲友姓名：</td>
+    				<td><?php echo $v['relative_name']; ?></td>
+    			</tr>
+    			<tr>
+    				<td>所属关系：</td>
+    				<td><?php echo $v['relative_relation']; ?></td>
+    			</tr>
+	    		<tr>
+	    			<td>就诊时间：</td>
+	    			<td><?php echo $v['seecase_time']; ?></td>
+	    		</tr>
+	    		<tr>
+	    			<td>就诊医院：</td>
+	    			<td><?php echo $v['seecase_hos']; ?></td>
+	    		</tr>
+	    		<tr>
+	    			<td>就诊科室：</td>
+	    			<td><?php echo $v['seecase_depa']; ?></td>
+	    		</tr>
+	    		<tr>
+	    			<td>就诊医生：</td>
+	    			<td><?php echo $v['seecase_doc']; ?></td>
+	    		</tr>
+	    		<tr>
+	    			<td>诊断结果</td>
+	    			<td><?php echo $v['seecase_info']; ?></td>
+	    		</tr>
+	    		<tr>
+	    			<td>医生建议：</td>
+	    			<td><?php echo $v['seecase_sgs']; ?></td>
+	    		</tr>
+	    		<tr>
+	    			<td>处方信息：</td>
+	    			<td>
+	    			<?php echo htmlspecialchars_decode($v['page_info']); ?>
+	    			<?php showImage($v['page_img_path'],120,80); ?>
+	    			</td>
+	    		</tr>
+	    		<tr>
+	    			<td>检验结果：</td>
+	    			<td>
+	    			<?php echo htmlspecialchars_decode($v['check_info']); ?>
+	    			<?php showImage($v['check_img_path'],120,80);?>
+	    			</td>
+	    		</tr>
+	    		<tr>
+	    			<td>创建时间：</td>
+	    			<td><?php echo $v['hos_name']; ?></td>
+	    		</tr>
+    		</table>
        		</div>
           </td>
         </tr>
@@ -95,7 +170,6 @@
       	</td>
       </tr>
     </table>
-</form>
 <script type="text/javascript">
 
 //搜索
@@ -117,9 +191,9 @@ function showDialog(id) {
 	});
   };
 //单个删除
-function del(know_id){
+function del(seecase_id){
 	if(confirm("您确定要删除吗?")){
-		window.location="/health/management/Application/index.php/Admin/Knowledge/delete/know_id/"+know_id;
+		window.location="/health/management/Application/index.php/Admin/HistoryVis/delete/seecase_id/"+seecase_id;
 	}
 }
 

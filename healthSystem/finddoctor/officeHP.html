@@ -1,0 +1,112 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../css/app.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/find_doctor.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/search_info.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/iconfont_money.css" />
+		<link rel="stylesheet" type="text/css" href="../css/health_file.css"/>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav public-color">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		    <h1 class="mui-title">xxx科</h1>
+		</header>
+		<div class="mui-content">
+			<div class="office_contents">
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell">
+				           <h4 class="text_h4">耳鼻喉科<span>简介</span></h4>         
+				        </li>
+				        <ul class="mui-table-view mui-table-view-chevron">
+						        <li class="mui-table-view-cell brief">     	           
+						          <p class="paragraph">“耳鼻咽喉科”是诊断治疗耳、鼻、咽、喉、及其相关头颈区域的外科学科。随着科技的进步与发展，医学各科相互渗透和促进，拓展了耳鼻咽喉科的范畴，耳显微外科，耳神经外科，侧颅底外科，听力学及平衡科学，鼻内镜外科，鼻神经外科（鼻颅底外科），头颈外科，喉显微外科，嗓音与言语疾病科，小儿耳鼻咽喉科等的出现，大大丰富了耳鼻咽喉科的内容。</p> 	           
+						        </li>
+						        <li class="mui-table-view-cell">
+							        <p id="office_lookdetail" class="mui-pull-right" style="color:#0062CC;">查看详情>></p>  
+						        </li>
+				        </ul>
+
+				</ul>
+<!-------------医生列表---------->
+					<ul class="mui-table-view">
+						<li class="mui-table-view-cell">
+				           <h5 class="recommend">
+				           	医生列表
+				           </h5>         
+				        </li>
+						<div class="info_dt">
+							<ul class="mui-table-view mui-table-view-chevron">
+								<li class="mui-table-view-cell mui-media ">
+									<a class=" ">
+										<div class="mui-row ">
+											<div class="mui-pull-left mui-col-xs-3">
+												<img src="../img/doctor.jpeg" style="width: 100%;" />
+											</div>
+											<div class="mui-col-xs-1">
+						
+											</div>
+											<div class="mui-col-xs-7">
+												<h4 class="dt_title">张先生</h4>
+												<div class="dt_from">
+													<p><span class="mui-icon iconfont icon-iconaddress i-color"></span><span>惠州市人民医院</span></p>
+													<p><span class="mui-icon iconfont icon-iconaddress i-color"></span>所属科室：<span>骨科,眼科</span> </p>
+												</div>
+						
+												</p>
+											</div>
+										</div>
+										<p class="mui-ellipsis"> 擅长：<span>治疗各种骨科症状，眼睛疾病</span></p>
+										<span class="iconfont icon-jinqian1 i-color"></span><span class="icon-title">30/半小时</span>
+										<span class="iconfont icon-pinglun2 i-color"></span><span class="icon-title">1000</span>
+										<span class="iconfont icon-dianzan i-color"></span><span class="icon-title">1500</span>
+										<span class="iconfont icon-guanzhu1 i-color"></span><span class="icon-title">1500</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</ul>
+
+							        
+				</ul>
+				    
+				    
+			</div>
+				
+		</div>
+		
+		
+		
+		<script src="../js/mui.min.js"></script>
+		<script type="text/javascript">
+	    	mui.init();
+			mui.plusReady(function() {
+					var office_lookdetail= document.getElementById('office_lookdetail');	
+					office_lookdetail.addEventListener('tap',function(event){
+						mui.openWindow({
+							url: 'article_brief.html',
+							id: 'article_brief',
+							preload: true,
+							show: {
+								aniShow: 'pop-in'
+							},
+							waiting: {
+								autoShow: false
+							}
+						});
+					},false);
+					
+					
+					
+				});
+
+	</script>
+	</body>
+
+</html>
