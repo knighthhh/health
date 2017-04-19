@@ -55,11 +55,6 @@
 	
 		
 		$.plusReady(function() {
-			//底部切换问题
-			var views = plus.webview.all();
-           	for(var i = 0; i < views.length - 1; i++) {
-         	    plus.webview.close(views[i].id);
-            } 
 			var loginButton = doc.getElementById('login');
 			var user_phoneBox = doc.getElementById('user_phone');
 			var user_passwordBox = doc.getElementById('user_password');
@@ -93,22 +88,8 @@
       						plus.storage.setItem('user_phone',user_phoneBox.value);
       						plus.storage.setItem('user_id',data.user_id);
 							plus.storage.setItem('user_token',data.user_token);
-							plus.storage.setItem('im_token',data.im_token);
-							
-      						$.openWindow({
-								url: '../index.html',
-								id: 'index',
-								preload: true,
-								show: {
-									aniShow: 'pop-in'
-								},
-								styles: {
-									popGesture: 'hide'
-								},
-								waiting: {
-									autoShow: false
-								}
-							});
+							plus.storage.setItem('im_token',data.im_token);						
+      						plus.webview.show('../index.html');
 							setTimeout(function(){
 								var self = plus.webview.currentWebview();
 								self.close();	
@@ -163,6 +144,9 @@
 
 	<body>
 		<header class="mui-bar mui-bar-nav">
+			<button type="button" class="mui-left mui-action-back mui-btn  mui-btn-link mui-btn-nav mui-pull-left">
+					<span class="mui-icon mui-icon-left-nav"></span>返回
+				</button>
 			<h1 class="mui-title">登录</h1>
 		</header>
 		<div class="mui-content">

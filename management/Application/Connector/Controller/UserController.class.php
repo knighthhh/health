@@ -111,14 +111,39 @@ class UserController extends Controller{
 			echo json_encode($res);
 	}
 	
-	public function aa(){
-		$appKey = 'c9kqb3rdcvq4j';
-		$appSecret = 'usuKQXzEY2';
-		$RongCloud = new \Im\RongCloud($appKey,$appSecret);
-				
-		$result = $RongCloud->message()->getHistory('2017041701');
-		echo "getHistory    ";
-		print_r($result);
-		echo "\n";
+	//头像修改
+	public function headimg(){
+		$ic = C('IMAGE_CONFIG');
+		$data['imgData']=I('post.imgData');
+		$phone['user_phone']=I('post.user_phone');
+		$img = base64_decode($data['imgData']);
+		$path = './Public/Uploads/User/headimg/';
+		$imgname=uniqid().'.png';
+		$zijie = file_put_contents($path.$imgname, $img);//返回的是字节数
+		if($zijie){
+			$res['result']=1;
+			$res['imgurl']=$ic['viewPath'].'User/headimg/'.$imgname;
+			//对用户表进行操作更换头像
+			$saveimg['user_img'] = 'User/headimg/'.$imgname;
+			$saveres=M('user_info')->where($phone)->save($saveimg);
+			
+		}else{
+			$res['result']=0;
+		}
+		echo json_encode($res);
 	}
+
+	//获取知识推送列表
+	public function getKnowList()
+	{
+		$model = D('health_know');
+		$data = $model->select();
+		foreach ($data as $k => $v) {
+			$data[$k]['know_content'] = htmlspecialchars_decode($v['know_content']);
+		}
+		//dump($data);die;
+		echo json_encode($data);
+	}
+
+
 }

@@ -363,7 +363,16 @@
 					"js/mui.min.js",
 					"css/mui.min.css",
 					"fonts/mui.ttf",
-					"js/common.js"
+					"js/common.js",
+					"fonts/iconfont_money.ttf",
+					"css/iconfont_health_file.css",
+					"css/iconfont_mine.css",
+					"fonts/iconfont_mine.ttf",
+					"css/iconfont_money.css",
+					"css/iconfont.css",
+					"fonts/iconfont_health_file.ttf",
+					"fonts/iconfont.ttf",
+					"img/doctor.jpeg"
 				],
 				"refer": [
 					"mine/account.html",
@@ -386,10 +395,14 @@
 					"js/mui.min.js",
 					"css/mui.min.css",
 					"fonts/iconfont_foot.ttf",
-					"css/iconfont_foot.css"
+					"css/iconfont_foot.css",
+					"js/common.js"
 				],
 				"refer": [
-					"healthfile/medDiary.html"
+					"healthfile/medDiary.html",
+					"healthfile/History_todoc.html",
+					"healthfile/My_file.html",
+					"healthfile/Health_record.html"
 				],
 				"priority": 0
 			},
@@ -780,9 +793,14 @@
 				"resources": [
 					"js/mui.min.js",
 					"fonts/mui.ttf",
-					"css/mui.min.css"
+					"css/mui.min.css",
+					"js/mui.calendar.js",
+					"css/heathfile.css",
+					"css/mui.calendar.css"
 				],
-				"refer": [],
+				"refer": [
+					"healthfile/write_diary.html"
+				],
 				"priority": 0
 			},
 			"mine/general.html": {
@@ -795,7 +813,77 @@
 			},
 			"mine/follow.html": {
 				"resources": [
-					"js/mui.min.js"
+					"js/mui.min.js",
+					"css/mui.min.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"healthfile/write_diary.html": {
+				"resources": [
+					"css/mui.min.css",
+					"css/heathfile.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"healthfile/History_todoc.html": {
+				"resources": [
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"css/heathfile.css",
+					"js/common.js"
+				],
+				"refer": [
+					"healthfile/outline_add.html",
+					"login/login.html"
+				],
+				"priority": 0
+			},
+			"mine/about.html": {
+				"resources": [
+					"img/doctor.jpeg"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"healthfile/My_file.html": {
+				"resources": [
+					"img/person_background.png",
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"img/inquiry.jpg",
+					"css/heathfile.css"
+				],
+				"refer": [
+					"healthfile/myfile_health_edit.html",
+					"healthfile/myfile_live_edit.html"
+				],
+				"priority": 0
+			},
+			"healthfile/Health_record.html": {
+				"resources": [
+					"js/mui.min.js",
+					"css/mui.min.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"healthfile/outline_add.html": {
+				"resources": [
+					"js/feedback_mydoctor.js",
+					"img/choose_photos.png",
+					"css/mui.min.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"healthfile/myfile_health_edit.html": {
+				"resources": [
+					"js/mui.min.js",
+					"css/mui.min.css"
 				],
 				"refer": [],
 				"priority": 0
@@ -839,7 +927,6 @@
 				"img/text1.jpg",
 				"img/search.jpg",
 				"html/Health_File.html",
-				"img/inquiry.jpg",
 				"html/Inquiry.html",
 				"css/mui.css",
 				"img/inquiry1.jpg",
