@@ -34,6 +34,13 @@
 	</head>
 	<script type="text/javascript" src="../js/mui.min.js" ></script>
 	<script type="text/javascript" src="../js/common.js" ></script>
+	<script>
+		window.addEventListener('refresh',function(event){
+		
+		plus.webview.getWebviewById('mine/Mine.html').reload();
+		console.log(123);
+		});
+	</script>
 	<script type="text/javascript">
 		mui.plusReady(function() {
 			var account = document.getElementById('account');
@@ -46,7 +53,7 @@
 				mui.openWindow({
 					url: 'account.html',
 					id: 'account',
-					preload: true,
+//					preload: true,
 					show: {
 						aniShow: 'pop-in'
 					},
@@ -54,6 +61,7 @@
 						autoShow: false
 					}
 				});
+				
 			},false);
 			recharge.addEventListener('tap',function(event){
 				mui.openWindow({
@@ -121,7 +129,7 @@
 				});
 			},false);
 			
-			//已经登录了的显示个人信息
+			//自动登录，已经登录了的显示个人信息
 			var user_phone = plus.storage.getItem('user_phone');
 			if(islogin()){
 				document.getElementById("user_phone").innerHTML=user_phone;
@@ -136,7 +144,7 @@
       					//{"reslut":1}表示请求数据成功
       					if(data.result==1){
 							document.getElementById("user_name").innerHTML=data.user_name;
-//							document.getElementById("head-img").src=data.user_img;
+							document.getElementById("head-img").src=data.user_img;
       					}else{ 
       						//plus.ui.toast(data.data);
       						

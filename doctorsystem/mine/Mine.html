@@ -34,6 +34,14 @@
 	</head>
 	<script type="text/javascript" src="../js/mui.min.js" ></script>
 	<script type="text/javascript" src="../js/common.js" ></script>
+	<script>
+		window.addEventListener('refresh',function(event){
+		
+		plus.webview.getWebviewById('mine/Mine.html').reload();
+		console.log(123);
+		});
+	</script>
+
 	<script type="text/javascript">
 		mui.plusReady(function() {
 			var account = document.getElementById('account');
@@ -46,7 +54,7 @@
 				mui.openWindow({
 					url: 'account.html',
 					id: 'account',
-					preload: true,
+//					preload: true,
 					show: {
 						aniShow: 'pop-in'
 					},
@@ -96,25 +104,21 @@
 			},false);
 			
 			//已经登录了的显示个人信息
-			var user_phone = plus.storage.getItem('user_phone');
+			var doc_phone = plus.storage.getItem('doc_phone');
+			var doc_id = plus.storage.getItem('doc_id');
 			if(islogin()){
-				document.getElementById("user_phone").innerHTML=user_phone;
-				mui.ajax('http://'+serverName+'/health/management/Application/index.php/Connector/User/getuserInfo',{
+				document.getElementById("doc_phone").innerHTML=doc_phone;
+				mui.ajax('http://'+serverName+'/health/management/Application/index.php/Connector/Doc/getDocDetail',{
       				data:{
-      					user_phone:user_phone
+      					doc_id:doc_id
       				},
       				dataType:'json',
-      				type:'POST',
+      				type:'get',
       				timeout:10000,
       				success:function(data){
-      					//{"reslut":1}表示请求数据成功
-      					if(data.result==1){
-							document.getElementById("user_name").innerHTML=data.user_name;
-//							document.getElementById("head-img").src=data.user_img;
-      					}else{ 
-      						//plus.ui.toast(data.data);
-      						
-      					}
+						document.getElementById("doc_name").innerHTML=data.doc_name;
+						document.getElementById("head-img").src=data.doc_img;
+      					
       				},
       				error:function(){
       					plus.nativeUI.toast("请检查您的网络");
@@ -163,8 +167,8 @@
 											<td><img id="head-img" src="../img/doctor.jpeg" /></td>
 											<td style="padding-left: 15px;">
 												<div class="mui-media-body">
-													<span id="user_name">姚医生</span>
-													<p class='mui-ellipsis'>账号:<span id="user_phone">2</span></p>
+													<span id="doc_name">姚医生</span>
+													<p class='mui-ellipsis'>账号:<span id="doc_phone">2</span></p>
 												</div>
 											</td>
 										</tr>

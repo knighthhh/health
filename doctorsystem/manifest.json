@@ -258,7 +258,8 @@
 					"css/iconfont_foot.css",
 					"main/subindex.html",
 					"fonts/iconfont.ttf",
-					"js/common.js"
+					"js/common.js",
+					"main/docHomepage.html"
 				],
 				"refer": [
 					"Mine.html",
@@ -268,7 +269,8 @@
 					"healthfile/Health_File.html",
 					"inquiry/Inquiry.html",
 					"main/search/search.html",
-					"login/login.html"
+					"login/login.html",
+					"message/Message.html"
 				],
 				"priority": 0
 			},
@@ -417,7 +419,8 @@
 					"css/mui.min.css",
 					"css/iconfont_foot.css",
 					"fonts/mui.ttf",
-					"fonts/iconfont_foot.ttf"
+					"fonts/iconfont_foot.ttf",
+					"img/doctor.jpeg"
 				],
 				"refer": [
 					"inquiry/mydoctor.html",
@@ -887,6 +890,42 @@
 				"resources": [
 					"js/mui.min.js",
 					"css/mui.min.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"main/docHomepage.html": {
+				"resources": [
+					"img/finddoctor.jpg",
+					"css/heathfile.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"message/Message.html": {
+				"resources": [
+					"css/header.css",
+					"img/doctor.jpeg",
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css"
+				],
+				"refer": [
+					"message/chat.html"
+				],
+				"priority": 0
+			},
+			"message/chat.html": {
+				"resources": [
+					"js/mui.imageViewer.js",
+					"css/app.css",
+					"css/mui.imageviewer.css",
+					"js/arttmpl.js",
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"img/finddoctor.jpg",
+					"js/common.js"
 				],
 				"refer": [],
 				"priority": 0

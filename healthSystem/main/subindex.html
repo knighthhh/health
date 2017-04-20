@@ -33,8 +33,27 @@
 		<script type="text/javascript">
 // H5 plus事件处理
 		mui.plusReady(function() {
+				 	var find = document.getElementById("box-b-a");
 					var finddoctor = document.getElementById('finddoctor');
 					var findhos = document.getElementById('findhos');
+					
+					
+					//找医生点击事件
+					find.addEventListener('tap',function(){
+						mui.openWindow({
+							url: '../finddoctor/search_doctor.html',
+							id: 'findoctor',
+							preload: true,
+							show: {
+								aniShow: 'pop-in'
+							},
+							waiting: {
+								autoShow: false
+							}
+						});
+					});
+					
+					//健康资讯点击事件
 					finddoctor.addEventListener('tap',function(event){
 						mui.openWindow({
 							url: '../finddoctor/search_doctor.html',

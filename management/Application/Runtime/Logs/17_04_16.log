@@ -1,3 +1,183 @@
+<<<<<<< HEAD
+[ 2017-04-16T10:43:21+08:00 ] 172.17.32.112 /health/management/application/index.php/Connector/Search/searchdep
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.083050s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000046s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000059s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000153s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000058s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000041s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000098s ]
+
+[ 2017-04-16T10:59:05+08:00 ] 172.17.32.112 /health/management/Application/index.php/Connector/User/login
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000578s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000059s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000093s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000206s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000071s ]
+SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.166501s ]
+SQL: SELECT * FROM `user_info` WHERE ( `user_phone` = '15768653949' ) AND ( `user_token` = '917b91f623f44b250478ff4e3bf35d3c' ) LIMIT 1   [ RunTime:0.009354s ]
+SQL: UPDATE `user_info` SET `user_token`='485560aa0a13fc4f1dbc61abfdc76d57',`token_time`='2017-04-16 10:59:05',`login_time`='2017-04-16 10:59:05' WHERE ( `user_phone` = '15768653949' ) AND ( `user_token` = '917b91f623f44b250478ff4e3bf35d3c' ) [ RunTime:0.026840s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000042s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000104s ]
+
+[ 2017-04-16T10:59:06+08:00 ] 172.17.32.112 /health/management/Application/index.php/Home/Index/getHotHos?category=news
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000387s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000039s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000053s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000119s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000081s ]
+SQL: SHOW COLUMNS FROM `hospital_info` [ RunTime:0.077848s ]
+SQL: SELECT * FROM `hospital_info`  [ RunTime:0.000735s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000072s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000185s ]
+
+[ 2017-04-16T10:59:08+08:00 ] 172.17.32.112 /health/management/Application/index.php/Home/Index/getHotDoc
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000352s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000038s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000050s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000114s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000078s ]
+NOTIC: [2048] Declaration of Admin\Model\DoctorInfoModel::_after_insert() should be compatible with that of Think\Model::_after_insert() D:\WWW\health\management\Application\Admin\Model\DoctorInfoModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `doctor_info` [ RunTime:0.063060s ]
+SQL: SELECT a.*,b.hos_name,c.dep_name FROM doctor_info a LEFT JOIN hospital_info b on a.hos_id=b.hos_id LEFT JOIN department_info c on a.depa_id=c.dep_id  [ RunTime:0.063143s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000077s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000302s ]
+
+[ 2017-04-16T10:59:09+08:00 ] 172.17.32.112 /health/management/Application/index.php/Connector/User/getuserInfo
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000373s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000044s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000053s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000128s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000082s ]
+SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.005509s ]
+SQL: SELECT * FROM `user_info` WHERE ( `user_phone` = '15768653949' ) LIMIT 1   [ RunTime:0.000831s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000069s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000184s ]
+
+[ 2017-04-16T22:29:13+08:00 ] 172.17.32.112 /health/management/application/index.php/Connector/User/reg
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000333s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000039s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000055s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000160s ]
+NOTIC: [2] include(../Im/rongcloud.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory D:\WWW\health\management\Application\Connector\Controller\UserController.class.php 第 5 行.
+NOTIC: [2] include() [<a href='function.include'>function.include</a>]: Failed opening '../Im/rongcloud.php' for inclusion (include_path='.;C:\php\pear') D:\WWW\health\management\Application\Connector\Controller\UserController.class.php 第 5 行.
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000035s ]
+NOTIC: [8] Undefined index: user_phone D:\WWW\health\management\Application\Connector\Controller\UserController.class.php 第 9 行.
+
+[ 2017-04-16T22:33:17+08:00 ] 172.17.32.112 /health/management/application/index.php/Connector/User/reg
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000342s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000097s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000053s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000130s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000091s ]
+NOTIC: [8] Undefined index: user_phone D:\WWW\health\management\Application\Connector\Controller\UserController.class.php 第 8 行.
+NOTIC: [2] include(../Im/rongcloud.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory D:\WWW\health\management\Application\Connector\Controller\UserController.class.php 第 46 行.
+NOTIC: [2] include() [<a href='function.include'>function.include</a>]: Failed opening '../Im/rongcloud.php' for inclusion (include_path='.;C:\php\pear') D:\WWW\health\management\Application\Connector\Controller\UserController.class.php 第 46 行.
+
+[ 2017-04-16T22:33:43+08:00 ] 172.17.32.112 /health/management/application/index.php/Connector/User/reg
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000303s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000034s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000046s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000106s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000037s ]
+NOTIC: [8] Undefined index: user_phone D:\WWW\health\management\Application\Connector\Controller\UserController.class.php 第 8 行.
+NOTIC: [2] include(../Im/rongcloud.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory D:\WWW\health\management\Application\Connector\Controller\UserController.class.php 第 46 行.
+NOTIC: [2] include() [<a href='function.include'>function.include</a>]: Failed opening '../Im/rongcloud.php' for inclusion (include_path='.;C:\php\pear') D:\WWW\health\management\Application\Connector\Controller\UserController.class.php 第 46 行.
+
+[ 2017-04-16T22:33:44+08:00 ] 172.17.32.112 /health/management/application/index.php/Connector/User/reg
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000259s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000030s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000044s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000102s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000031s ]
+NOTIC: [8] Undefined index: user_phone D:\WWW\health\management\Application\Connector\Controller\UserController.class.php 第 8 行.
+NOTIC: [2] include(../Im/rongcloud.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory D:\WWW\health\management\Application\Connector\Controller\UserController.class.php 第 46 行.
+NOTIC: [2] include() [<a href='function.include'>function.include</a>]: Failed opening '../Im/rongcloud.php' for inclusion (include_path='.;C:\php\pear') D:\WWW\health\management\Application\Connector\Controller\UserController.class.php 第 46 行.
+
+[ 2017-04-16T22:33:44+08:00 ] 172.17.32.112 /health/management/application/index.php/Connector/User/reg
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000252s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000034s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000043s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000103s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000032s ]
+NOTIC: [8] Undefined index: user_phone D:\WWW\health\management\Application\Connector\Controller\UserController.class.php 第 8 行.
+NOTIC: [2] include(../Im/rongcloud.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory D:\WWW\health\management\Application\Connector\Controller\UserController.class.php 第 46 行.
+NOTIC: [2] include() [<a href='function.include'>function.include</a>]: Failed opening '../Im/rongcloud.php' for inclusion (include_path='.;C:\php\pear') D:\WWW\health\management\Application\Connector\Controller\UserController.class.php 第 46 行.
+
+[ 2017-04-16T22:33:44+08:00 ] 172.17.32.112 /health/management/application/index.php/Connector/User/reg
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000257s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000041s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000045s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000105s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000036s ]
+NOTIC: [8] Undefined index: user_phone D:\WWW\health\management\Application\Connector\Controller\UserController.class.php 第 8 行.
+NOTIC: [2] include(../Im/rongcloud.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory D:\WWW\health\management\Application\Connector\Controller\UserController.class.php 第 46 行.
+NOTIC: [2] include() [<a href='function.include'>function.include</a>]: Failed opening '../Im/rongcloud.php' for inclusion (include_path='.;C:\php\pear') D:\WWW\health\management\Application\Connector\Controller\UserController.class.php 第 46 行.
+
+[ 2017-04-16T22:33:44+08:00 ] 172.17.32.112 /health/management/application/index.php/Connector/User/reg
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000262s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000032s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000049s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000185s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000037s ]
+NOTIC: [8] Undefined index: user_phone D:\WWW\health\management\Application\Connector\Controller\UserController.class.php 第 8 行.
+NOTIC: [2] include(../Im/rongcloud.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory D:\WWW\health\management\Application\Connector\Controller\UserController.class.php 第 46 行.
+NOTIC: [2] include() [<a href='function.include'>function.include</a>]: Failed opening '../Im/rongcloud.php' for inclusion (include_path='.;C:\php\pear') D:\WWW\health\management\Application\Connector\Controller\UserController.class.php 第 46 行.
+
+=======
 [ 2017-04-16T00:00:29+08:00 ] 10.77.117.237 /health/management/Application/index.php/Admin/Relative/add
 INFO: [ app_init ] --START--
 INFO: [ app_init ] --END-- [ RunTime:0.000265s ]
@@ -23308,3 +23488,4 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTrace [ RunTime:0.000025s ]
 INFO: [ app_end ] --END-- [ RunTime:0.000059s ]
 
+>>>>>>> 9d1ffdd71586c0954ee19a6d5ef1081db44b5dfe

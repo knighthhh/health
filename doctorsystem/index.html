@@ -53,38 +53,38 @@
 			    }
 			    
 				//已经登录过的，保持登录状态，有BUG，因为从登录界面进来也要验证一次
-				var tempuserphone=plus.storage.getItem('user_phone');
-				var temptoken=plus.storage.getItem('user_token');				
-				if(tempuserphone!=null && temptoken!=null){
-					mui.ajax('http://'+serverName+'/health/management/Application/index.php/Connector/User/login',{	
-						data:{
-							user_phone:tempuserphone,
-							user_token:temptoken
-						},
-						dataType:'json',
-						type:'POST',
-						timeout:10000,
-						success:function(data){
-							//{"reslut":1}表示成功
-							if(data.result==1){
-								//登录成功
-								//plus.ui.toast("自动登录成功");
-								//将用户信息放进本地的存储中
-								plus.storage.setItem('user_phone',tempuserphone);
-								plus.storage.setItem('user_id',data.user_id);
-								plus.storage.setItem('user_token',data.user_token);
-								
-							}else{
-								//登录失败，过期的缓存清理掉
-								plus.storage.clear();
-								plus.ui.toast(data.data);
-							}
-						},
-						error:function(){
-							plus.nativeUI.toast("请检查您的网络");
-						}
-					})
-				}
+//				var tempuserphone=plus.storage.getItem('user_phone');
+//				var temptoken=plus.storage.getItem('user_token');				
+//				if(tempuserphone!=null && temptoken!=null){
+//					mui.ajax('http://'+serverName+'/health/management/Application/index.php/Connector/User/login',{	
+//						data:{
+//							user_phone:tempuserphone,
+//							user_token:temptoken
+//						},
+//						dataType:'json',
+//						type:'POST',
+//						timeout:10000,
+//						success:function(data){
+//							//{"reslut":1}表示成功
+//							if(data.result==1){
+//								//登录成功
+//								//plus.ui.toast("自动登录成功");
+//								//将用户信息放进本地的存储中
+//								plus.storage.setItem('user_phone',tempuserphone);
+//								plus.storage.setItem('user_id',data.user_id);
+//								plus.storage.setItem('user_token',data.user_token);
+//								
+//							}else{
+//								//登录失败，过期的缓存清理掉
+//								plus.storage.clear();
+//								plus.ui.toast(data.data);
+//							}
+//						},
+//						error:function(){
+//							plus.nativeUI.toast("请检查您的网络");
+//						}
+//					})
+//				}
 				    
 			   //当前激活选项
 				var activeTab = subpages[Index];

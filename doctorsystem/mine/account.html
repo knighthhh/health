@@ -33,10 +33,6 @@
 				width: 80px;
 				height: 80px;
 			}
-			.mima{
-				position: absolute;
-				right: 40px;
-			}
 			.i1{
 				color:gray;
 				}
@@ -56,26 +52,31 @@
 		<script src="../js/mui.min.js"></script>
 		<script src="../js/common.js"></script>
 		<script type="text/javascript">
-			mui.init();
+			mui.init({
+				beforeback: function() {
+					//获得返回界面的webview
+					var m = plus.webview.getWebviewById('mine/Mine.html');
+					//触发返回界面的自定义事件（refresh）,从而进行数据刷新
+					mui.fire(m, 'refresh');
+					//返回true，继续页面关闭逻辑
+					return true;
+				}
+			});
 			
 			mui.plusReady(function(){
-				var user_phone = plus.storage.getItem('user_phone');
-				mui.ajax('http://'+serverName+'/health/management/Application/index.php/Connector/User/getuserInfo',{
+				var doc_phone = plus.storage.getItem('doc_phone');
+				var doc_id = plus.storage.getItem('doc_id');
+				mui.ajax('http://'+serverName+'/health/management/Application/index.php/Connector/Doc/getDocDetail',{
       				data:{
-      					user_phone:user_phone
+      					doc_id:doc_id
       				},
       				dataType:'json',
-      				type:'POST',
+      				type:'get',
       				timeout:10000,
       				success:function(data){
-      					//{"reslut":1}表示请求数据成功
-      					if(data.result==1){
-//							document.getElementById("head-img1").src=data.user_img;
-							document.getElementById("user_name").innerHTML=data.user_name;
-							document.getElementById("user_phone").innerHTML=user_phone;					
-      					}else{ 
-      						//plus.ui.toast(data.data);
-      					}
+						document.getElementById("doc_name").innerHTML=data.doc_name;
+						document.getElementById("doc_phone").innerHTML=doc_phone;					
+						document.getElementById("head-img1").src=data.doc_img;	
       				},
       				error:function(){
       					plus.nativeUI.toast("请检查您的网络");
@@ -104,18 +105,18 @@
 							</li>
 							<li class="mui-table-view-cell">
 								<a><span class="iconfont icon-username i2"></span>
-									用户名<span id="user_name" class="mui-pull-right">医生</span></a>
+									用户名<span id="doc_name" class="mui-pull-right">YGT</span></a>
 							</li>
 						</ul>
 						<ul class="mui-table-view">
 							<li class="mui-table-view-cell">
 								<a><span class="iconfont icon-shoujihao i3"></span>
-									手机号<span id="user_phone" class="mui-pull-right">8877777</span></a>
+									手机号<span id="doc_phone" class="mui-pull-right">8877777</span></a>
 							</li>					
 						
-							<li class="mui-table-view-cell ">
-								<a class="mui-navigate-right" ><span class="iconfont icon-mima i4"></span>
-									密码<span class="mui-pull-right mima">*****</span></a>
+							<li class="mui-table-view-cell">
+								<a><span class="iconfont icon-mima i4"></span>
+									密码<span class="mui-pull-right">*****</span></a>
 							</li>
 												
 						</ul>			
@@ -158,6 +159,7 @@
 					var s = entry.toLocalURL() + "?version=" + new Date().getTime();
 					console.log("输出路径：" + s);
 					document.getElementById("head-img1").src = s;
+					uploadHead(s);
 					//变更大图预览的src
 					//目前仅有一张图片，暂时如此处理，后续需要通过标准组件实现
 //					document.querySelector("#__mui-imageview__group .mui-slider-item img").src = s + "?version=" + new Date().getTime();;;
@@ -182,6 +184,7 @@
 								entry.copyTo(root, 'head.jpg', function(e) {
 										var e = e.fullPath + "?version=" + new Date().getTime();
 										document.getElementById("head-img1").src = e;
+										uploadHead(e);
 										//变更大图预览的src
 										//目前仅有一张图片，暂时如此处理，后续需要通过标准组件实现
 										document.querySelector("#__mui-imageview__group .mui-slider-item img").src = e + "?version=" + new Date().getTime();;
@@ -227,8 +230,65 @@
 			}else{
 				document.getElementById("head-img1").src = '../img/doctor.jpeg';
 			}
-			
 		}
-				</script>
+		
+		//上传头像图片 
+        function uploadHead(imgPath) { 
+            console.log("imgPath = " + imgPath); 
+//          mainImage.src = imgPath; 
+//          mainImage.style.width = "60px"; 
+//          mainImage.style.height = "60px"; 
+            
+ 			var image = new Image(); 
+            image.src = imgPath;
+            image.onload = function() {
+            	//转成base64
+           		 var imgData = getBase64Image(image); 
+           		 var doc_phone = plus.storage.getItem('doc_phone');
+                /*在这里调用上传接口*/ 
+                mui.ajax('http://'+serverName+'/health/management/Application/index.php/Connector/Doc/headimg', { 
+                    data: { 
+                    	 doc_phone:doc_phone,
+                         imgData:imgData
+                    }, 
+                    dataType: 'json', 
+                    type: 'post', 
+                    timeout: 10000, 
+                    success: function(data) {
+                        console.log('上传成功'); 
+                    }, 
+                    error: function(xhr, type, errorThrown) { 
+                        mui.toast('网络异常，请稍后再试！'); 
+                    } 
+                }); 
+            } 
+   		}
+        
+        //将图片压缩转成base64 
+        function getBase64Image(img) { 
+            var canvas = document.createElement("canvas"); 
+            var width = img.width; 
+            var height = img.height; 
+            // calculate the width and height, constraining the proportions 
+            if (width > height) { 
+                if (width > 100) { 
+                    height = Math.round(height *= 100 / width); 
+                    width = 100; 
+                } 
+            } else { 
+                if (height > 100) { 
+                    width = Math.round(width *= 100 / height); 
+                    height = 100; 
+                } 
+            } 
+            canvas.width = width;   /*设置新的图片的宽度*/ 
+            canvas.height = height; /*设置新的图片的长度*/ 
+            var ctx = canvas.getContext("2d"); 
+            ctx.drawImage(img, 0, 0, width, height); /*绘图*/ 
+            var dataURL = canvas.toDataURL("image/png", 0.8); 
+            return dataURL.replace("data:image/png;base64,", ""); 
+        }  
+		
+	    </script>
 	</body>
 </html>

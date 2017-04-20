@@ -11,14 +11,18 @@
 			"css/mui.min.css",
 			"fonts/iconfont.ttf",
 			"css/iconfont_money.css",
-			"css/iconfont_foot.css"
+			"css/iconfont_foot.css",
+			"main/docHomepage.html",
+			"fonts/mui.ttf"
 		],
 		"refer": [
 			"main/subindex.html",
 			"mine/Mine.html",
 			"healthfile/Health_File.html",
 			"inquiry/Inquiry.html",
-			"login/login.html"
+			"login/login.html",
+			"main/docHomepage.html",
+			"message/Message.html"
 		]
 	},
 	"main/subindex.html": {
@@ -75,7 +79,8 @@
 			"css/inquiry.css",
 			"fonts/iconfont_inquiry.ttf",
 			"css/header.css",
-			"fonts/mui.ttf"
+			"fonts/mui.ttf",
+			"img/doctor.jpeg"
 		]
 	},
 	"login/login.html": {
@@ -125,6 +130,37 @@
 			"fonts/iconfont_mine.ttf",
 			"css/iconfont_account.css",
 			"img/doctor.jpeg"
+		]
+	},
+	"main/docHomepage.html": {
+		"resources": [
+			"img/finddoctor.jpg",
+			"css/heathfile.css"
+		]
+	},
+	"message/Message.html": {
+		"resources": [
+			"css/header.css",
+			"img/doctor.jpeg",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css"
+		],
+		"refer": [
+			"message/chat.html"
+		]
+	},
+	"message/chat.html": {
+		"resources": [
+			"js/mui.imageViewer.js",
+			"css/app.css",
+			"css/mui.imageviewer.css",
+			"js/arttmpl.js",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"img/finddoctor.jpg",
+			"js/common.js"
 		]
 	}
 }

@@ -87,8 +87,10 @@
       						plus.ui.toast("登录成功");
       						plus.storage.setItem('user_phone',user_phoneBox.value);
       						plus.storage.setItem('user_id',data.user_id);
-							plus.storage.setItem('user_token',data.user_token);							
+							plus.storage.setItem('user_token',data.user_token);
+							plus.storage.setItem('im_token',data.im_token);						
       						plus.webview.show('../index.html');
+      						plus.webview.getWebviewById('mine/Mine.html').reload();
 							setTimeout(function(){
 								var self = plus.webview.currentWebview();
 								self.close();	
