@@ -137,3 +137,7 @@ padding: 6px 15px;
 .know_contents_h_test{
 	margin-left:2px;
 }
+/*article_brief*/
+.article_brief .mui-table-view-chevron .mui-table-view-cell{
+	padding-right: 15px;
+}
