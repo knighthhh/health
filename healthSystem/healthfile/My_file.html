@@ -26,7 +26,7 @@
 					              		<span class="name">张三丰</span> 
 					              	<hr style="border:1px dashed #CCCCCC ">
 					                <p class='mui-ellipsis'>性别：<span>男</span></p>
-					                <p class='mui-ellipsis'>居住地：<span>深圳</span></p>
+					                <p class='mui-ellipsis'>本人电话：<span>15768651511</span></p>
 					                <p class='mui-ellipsis'>出生日期：<span>2010-10-10</span></p>
 					                
 					            </div>
@@ -38,7 +38,42 @@
 			
 			<div class="other_info">
 				<ul class="mui-table-view mui-table-view-chevron">
-					
+					<li class="mui-table-view-cell mui-collapse mui-active">
+						<a class="mui-navigate-right" href="#">
+							<p class="headline">个人信息
+								
+								<span class="mui-pull-right detial">详情</span>
+								
+							</p>
+						</a>
+						<ul class="mui-table-view mui-table-view-chevron other_info_res">
+							<li class="mui-table-view-cell">
+								<p>民族：</p>
+								<span>汉族</span>
+							</li>
+							<li class="mui-table-view-cell">
+								<p>证件类型：</p>
+								<span>身份证</span>
+							</li>
+							<li class="mui-table-view-cell">
+								<p>证件号码：</p>
+								<span>123456</span>
+							</li>
+							<li class="mui-table-view-cell">
+								<p>居住地：</p>
+								<span>深圳</span>
+							</li>
+							
+							<li class="mui-table-view-cell">
+				        		<p>
+				        		<button id="edit_person" type="button" class="mui-btn mui-btn-success mui-btn-outlined mui-pull-right">
+															修改/填写
+								</button>
+								</p>
+				        	</li>
+							
+						</ul>
+					</li>
 					<li class="mui-table-view-cell mui-collapse mui-active">
 						<a class="mui-navigate-right" href="#">
 							<p class="headline">健康状况
@@ -83,7 +118,7 @@
 						</a>
 						<ul class="mui-table-view mui-table-view-chevron other_info_res">
 							<li class="mui-table-view-cell">
-								<p>工作状况：</p>
+								<p>职业：</p>
 								<span>程序员</span>
 							</li>
 							<li class="mui-table-view-cell">
@@ -130,7 +165,7 @@
 			mui.plusReady(function() {
 					var edit_health= document.getElementById('edit_health');	
 					var edit_live= document.getElementById('edit_live');	
-	
+					var edit_person= document.getElementById('edit_person');
 					
 					edit_health.addEventListener('tap',function(event){
 						mui.openWindow({
@@ -160,7 +195,19 @@
 						});
 					},false);
 					
-					
+					edit_person.addEventListener('tap',function(event){
+						mui.openWindow({
+							url: 'myfile_person_edit.html',
+							id: 'myfile_person_edit',
+							preload: true,
+							show: {
+								aniShow: 'pop-in'
+							},
+							waiting: {
+								autoShow: false
+							}
+						});
+					},false);
 					
 				});
 

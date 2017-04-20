@@ -52,7 +52,16 @@
 		<script src="../js/mui.min.js"></script>
 		<script src="../js/common.js"></script>
 		<script type="text/javascript">
-			mui.init();
+			mui.init({
+				beforeback: function() {
+					//获得返回界面的webview
+					var m = plus.webview.getWebviewById('mine/Mine.html');
+					//触发返回界面的自定义事件（refresh）,从而进行数据刷新
+					mui.fire(m, 'refresh');
+					//返回true，继续页面关闭逻辑
+					return true;
+				}
+			});
 			
 			mui.plusReady(function(){
 				var user_phone = plus.storage.getItem('user_phone');
@@ -118,6 +127,7 @@
 						</ul>			
 				</div>
 				<script>
+					
 					//更换头像
 		mui(".mui-table-view-cell").on("tap", "#head", function(e) {
 			if(mui.os.plus){

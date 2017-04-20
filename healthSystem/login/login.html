@@ -90,6 +90,7 @@
 							plus.storage.setItem('user_token',data.user_token);
 							plus.storage.setItem('im_token',data.im_token);						
       						plus.webview.show('../index.html');
+      						plus.webview.getWebviewById('mine/Mine.html').reload();
 							setTimeout(function(){
 								var self = plus.webview.currentWebview();
 								self.close();	

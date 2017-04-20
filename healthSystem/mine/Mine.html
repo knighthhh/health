@@ -34,6 +34,13 @@
 	</head>
 	<script type="text/javascript" src="../js/mui.min.js" ></script>
 	<script type="text/javascript" src="../js/common.js" ></script>
+	<script>
+		window.addEventListener('refresh',function(event){
+		
+		plus.webview.getWebviewById('mine/Mine.html').reload();
+		console.log(123);
+		});
+	</script>
 	<script type="text/javascript">
 		mui.plusReady(function() {
 			var account = document.getElementById('account');

@@ -65,3 +65,75 @@
 	color:#4EC7EF;
 }
 /*八宫格常见科室*/
+
+
+
+/*illHP*/
+.ill_contents .mui-table-view-chevron .mui-table-view-cell{
+	padding-right: 15px;
+}
+.text_h4{
+	font-family: "微软雅黑";
+	font-size:large;
+	color: #323232;
+	letter-spacing: 1px;
+}
+.text_h4 span{
+	font-size: small;
+}
+/*officeHp*/
+.office_contents .mui-table-view-chevron .mui-table-view-cell{
+	padding-right: 15px;
+}
+
+.paragraph{
+	text-indent: 2em;
+}
+.brief{
+display: -webkit-box; 
+text-overflow: ellipsis;
+overflow : hidden;
+text-overflow: ellipsis;
+display: -webkit-box;
+-webkit-line-clamp: 3;
+-webkit-box-orient: vertical;
+padding: 6px 15px;
+}
+
+.recommend{
+	font-family: "微软雅黑";
+	font-size: medium;
+	color: #323232;
+	letter-spacing: 1px;
+}
+.recommend span{
+	font-size: small;
+}
+
+
+/*know_contents*/
+.know_contents .mui-table-view-chevron .mui-table-view-cell{
+	padding-right: 15px;
+}
+.article_h4{
+	text-align: center;
+	font-family: "微软雅黑";
+	font-size:large;
+	color: #323232;
+	letter-spacing: 1px;
+}
+
+.article_paragraph{
+	font-family:"微软雅黑";
+	font-size: medium;
+	line-height:23px;
+	letter-spacing: 1px;
+	text-indent: 2em;
+	color: #222222;
+}
+.know_contents_h {
+	float: right;
+}
+.know_contents_h_test{
+	margin-left:2px;
+}

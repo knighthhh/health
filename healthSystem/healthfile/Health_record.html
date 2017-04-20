@@ -6,13 +6,142 @@
 		<title></title>
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 		<link href="../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../css/mui.calendar.css">
+		<link rel="stylesheet" type="text/css" href="../css/heathfile.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/iconfont_health_record.css"/>
+		
 	</head>
 
 	<body>
+		<header class="mui-bar mui-bar-nav public-color">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		    <h1 class="mui-title">健康记录</h1>
+		</header>
+		<div class="mui-content">
+			<div class="health_record">
+				<div id='calender' class="myCalendar"></div>
+			 	<p class="box">
+			 		--<span>2017.04.02</span> 健康记录--
+					
+			 	</p>
+			 	<p>
+			 		<div class="c-left">
+			 			<div class="c-normal">
+						
+						</div>
+						<div id="" class="s-left">
+							<p>正常</p>
+						</div>
+			 		</div>
+			 		<div class="c-left">
+			 			<div class="c-bad">
+							
+						</div>
+						<div id="" class="s-left">
+							<p>不正常</p>
+						</div>
+						
+			 		</div>
+					
+			 	</p>
+			 	
+				<ul class="mui-table-view mui-grid-view mui-grid-9">
+				    <li class="mui-table-view-cell mui-media mui-col-xs-4 ">
+				        <a href="#" id="">
+				        	
+				        	<div id="" class="circle_normal">
+				            <span class="mui-icon iconfont icon-shengao ul_t1"></span>
+				            <span>165</span>
+				            <span>cm</span>
+				            
+				            </div>
+				            
+				            <span>身高</span>
+				        </a>
+				    </li>
+				    <li class="mui-table-view-cell mui-media mui-col-xs-4">
+				        <a href="#" id="">
+				        	<div id="" class="circle_bad">
+				            <span class="mui-icon iconfont icon-ccgl-chengzhongsaomiao-5 ul_t2"></span>
+							<span>65</span>
+				            <span>KG</span>
+				            
+				            </div>	
+				            <span>体重</span>
+				        </a>
+				    </li>
+				    <li class="mui-table-view-cell mui-media mui-col-xs-4">
+				        <a href="#" id="">
+				        	<div id="" class="circle_normal">
+				            <span class="mui-icon iconfont icon-shiliceping ul_t3"></span>
+				            <span>5.01</span>
+				            
+				            </div>
+				             <span>视力</span>
+				        </a>
+				    </li>
+				    <li class="mui-table-view-cell mui-media mui-col-xs-4 ">
+				        <a href="#" id="">
+				        	<div id="" class="circle_normal">
+				            <span class="mui-icon iconfont icon-xueya ul_t4"></span>
+				           	<span>25.0</span>
+				            <span>nmol/L</span>
+				            
+				            </div>
+				            <span>血糖</span>
+				        </a>
+				    </li>
+				    <li class="mui-table-view-cell mui-media mui-col-xs-4">
+				        <a href="#" id="">
+				        	<div id="" class="circle_bad">
+				            <span class="mui-icon iconfont icon-iconxt ul_t5"></span>
+				            <span>180</span>/<span>63</span>
+				            <span style="font-size: smaller;">mmHg</span>
+				            </div>
+				            <span>血压</span>
+				        </a>
+				    </li>
+				    <li class="mui-table-view-cell mui-media mui-col-xs-4 ">
+				        <a href="#"id="">
+				        	<div id="" class="circle_bad">
+				            <span class="mui-icon iconfont icon-icon ul_t6"></span>
+				            <span>BMP</span>
+				            </div>
+				            <span>心率</span>
+				        </a>
+				    </li>
+				</ul>
+			</div>
+				
+			
+			
+			<!--<div style=" width:50px; height:50px; background-color:#F00; border-radius:25px;">
+         <span style="height:50px; line-height:50px; display:block; color:#FFF; text-align:center">65KG</span>
+		</div>-->
+		
+		<!--<div id="test"><span>65KG</span></div>-->
+			
+		</div>
 		<script src="../js/mui.min.js"></script>
+		<script src="../js/mui.calendar.js"></script>
 		<script type="text/javascript">
 			mui.init()
 		</script>
+		<script>
+		mui.init();
+		var myDate = new Date();
+		mui(".myCalendar").calendar(
+			{
+				year:myDate.getFullYear(),
+				month:myDate.getMonth()+1,
+				today:myDate.getDate()			
+			}, //日历参数，设置年月日,默认为今天
+			function(year, month) {  //日历切换时的回调方法，可以加载当前月的事件
+//				alert(1)
+			}
+		);
+	</script>
+
 	</body>
 
 </html>
