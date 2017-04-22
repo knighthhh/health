@@ -16,24 +16,15 @@
 			<div class="friend_file">
 				<p class="box">--我关联的亲友--</p>
 					<ul class="mui-table-view">
-					         <li class="mui-table-view-cell mui-media">
+					         <li id="friendfile_detail" class="mui-table-view-cell mui-media">
 							        <a class="mui-navigate-right">
-							            <img class="mui-media-object mui-pull-left" src="http://placehold.it/40x30">
+							            <img class="mui-media-object mui-pull-left" src="../img/inquiry.jpg">
 							            <div class="mui-media-body">
 							                <p>张三</p>
+							                <p>与本人关系:<span>父子</span></p>
 							            </div>
 							        </a>
-							  </li>
-					        <li class="mui-table-view-cell">
-					            <a class="mui-navigate-right">
-					                <p>张三</p>
-					            </a>
-					        </li>
-					        <li class="mui-table-view-cell">
-					            <a class="mui-navigate-right">
-					                <p>张三</p>
-					            </a>
-					        </li>
+							
 					    </ul>
 					    <div class="submit" id="add_outline">
 							<span class="mui-btn mui-btn-success ">
@@ -44,25 +35,19 @@
 				<p class="box">--我添加的亲友--</p>
 						
 						<ul class="mui-table-view">
-					        <li class="mui-table-view-cell">
-					            <a class="mui-navigate-right">
-					               <p>张三</p>
-					            </a>
-					        </li>
-					        <li class="mui-table-view-cell">
-					            <a class="mui-navigate-right">
-					                <p>张三</p>
-					            </a>
-					        </li>
-					        <li class="mui-table-view-cell">
-					            <a class="mui-navigate-right">
-					               <p>张三</p>
-					            </a>
-					        </li>
+					         <li id="" class="mui-table-view-cell mui-media">
+							        <a class="mui-navigate-right">
+							            <img class="mui-media-object mui-pull-left" src="../img/inquiry.jpg">
+							            <div class="mui-media-body">
+							                <p>张三</p>
+							                <p>与本人关系:<span>父子</span></p>
+							            </div>
+							        </a>
+							
 					    </ul>
 						
 						
-				<div class="submit" id="add_outline">
+				<div id="friendfile_add" class="submit" id="add_outline">
 					<span class="mui-btn mui-btn-success ">
 							添加亲友档案
 					</span>
@@ -77,14 +62,14 @@
 		<script type="text/javascript">
 	    	mui.init();
 			mui.plusReady(function() {
-					var edit_health= document.getElementById('edit_health');	
-					var edit_live= document.getElementById('edit_live');	
+					var friendfile_detail= document.getElementById('friendfile_detail');	
+					var friendfile_add= document.getElementById('friendfile_add');	
 	
 					
-					edit_health.addEventListener('tap',function(event){
+					friendfile_detail.addEventListener('tap',function(event){
 						mui.openWindow({
-							url: 'myfile_health_edit.html',
-							id: 'myfile_health_edit',
+							url: 'Friend_file_detail.html',
+							id: 'Friend_file_detail',
 							preload: true,
 							show: {
 								aniShow: 'pop-in'
@@ -95,10 +80,10 @@
 						});
 					},false);
 					
-					edit_live.addEventListener('tap',function(event){
+					friendfile_add.addEventListener('tap',function(event){
 						mui.openWindow({
-							url: 'myfile_live_edit.html',
-							id: 'myfile_live_edit',
+							url: 'Friend_file_add.html',
+							id: 'Friend_file_add',
 							preload: true,
 							show: {
 								aniShow: 'pop-in'

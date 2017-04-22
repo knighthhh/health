@@ -23,9 +23,12 @@
 </div>
 <div class="leftnav">
   <div class="leftnav-title"><strong><span class="icon-list"></span>菜单列表</strong></div>
-  <h2><span class="icon-user"></span>用户管理</h2>
   <ul> 
     <li><a href="/health/management/Application/index.php/Admin/User/listUser" target="right"><span class="icon-caret-right"></span>用户管理</a></li>
+    <li><a href="/health/management/Application/index.php/Admin/HistoryVis/listHis" target="right"><span class="icon-caret-right"></span>历史就诊</a></li>
+    <li><a href="/health/management/Application/index.php/Admin/User/listUser" target="right"><span class="icon-caret-right"></span>健康记录</a></li>
+    <li><a href="/health/management/Application/index.php/Admin/User/listUser" target="right"><span class="icon-caret-right"></span>用药日记</a></li>
+    <li><a href="/health/management/Application/index.php/Admin/Relative/listRela" target="right"><span class="icon-caret-right"></span>亲友管理</a></li>
   </ul>   
   <h2><span class="icon-pencil-square-o"></span>医院管理</h2>
   <ul>
@@ -55,7 +58,7 @@ $(function(){
 </script>
 <ul class="bread">
   <li><a href="<?php echo U('main'); ?>" target="right" class="icon-home"> 首页</a></li>
-  <li id="a_leader_txt">网站信息></li>
+  <li id="a_leader_txt">网站信息</li>
 </ul>
 <div class="admin">
   <iframe scrolling="auto" rameborder="0" src="<?php echo U('main'); ?>" name="right" width="100%" height="100%"></iframe>

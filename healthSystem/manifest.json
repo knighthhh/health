@@ -363,7 +363,16 @@
 					"js/mui.min.js",
 					"css/mui.min.css",
 					"fonts/mui.ttf",
-					"js/common.js"
+					"js/common.js",
+					"fonts/iconfont_money.ttf",
+					"css/iconfont_health_file.css",
+					"css/iconfont_mine.css",
+					"fonts/iconfont_mine.ttf",
+					"css/iconfont_money.css",
+					"css/iconfont.css",
+					"fonts/iconfont_health_file.ttf",
+					"fonts/iconfont.ttf",
+					"img/doctor.jpeg"
 				],
 				"refer": [
 					"mine/account.html",
@@ -394,7 +403,9 @@
 					"healthfile/History_todoc.html",
 					"healthfile/My_file.html",
 					"healthfile/Health_record.html",
-					"healthfile/Friends_file.html"
+					"healthfile/Friends_file.html",
+					"healthfile/know_contents.html",
+					"healthfile/medDiary2.html"
 				],
 				"priority": 0
 			},
@@ -651,7 +662,8 @@
 					"css/mui.min.css"
 				],
 				"refer": [
-					"inquiry/basic_text.html"
+					"inquiry/basic_text.html",
+					"inquiry/fast_question.html"
 				],
 				"priority": 0
 			},
@@ -667,7 +679,9 @@
 					"css/iconfont_foot.css",
 					"js/common.js"
 				],
-				"refer": [],
+				"refer": [
+					"im/im-chat.html"
+				],
 				"priority": 0
 			},
 			"main/docHP.html": {
@@ -705,7 +719,12 @@
 					"js/mui.min.js",
 					"css/mui.min.css",
 					"fonts/mui.ttf",
-					"js/common.js"
+					"js/common.js",
+					"fonts/iconfont_account.ttf",
+					"css/iconfont_mine.css",
+					"fonts/iconfont_mine.ttf",
+					"css/iconfont_account.css",
+					"img/doctor.jpeg"
 				],
 				"refer": [],
 				"priority": 0
@@ -787,7 +806,9 @@
 					"css/mui.min.css",
 					"js/mui.calendar.js",
 					"css/heathfile.css",
-					"css/mui.calendar.css"
+					"css/mui.calendar.css",
+					"js/mui.picker.min.js",
+					"css/iconfont_account.css"
 				],
 				"refer": [
 					"healthfile/write_diary.html"
@@ -910,7 +931,11 @@
 				"resources": [
 					"js/mui.min.js",
 					"css/mui.min.css",
-					"css/heathfile.css"
+					"js/mui.calendar.js",
+					"fonts/iconfont_health_record.ttf",
+					"css/heathfile.css",
+					"css/iconfont_health_record.css",
+					"css/mui.calendar.css"
 				],
 				"refer": [],
 				"priority": 0
@@ -937,7 +962,59 @@
 					"js/mui.min.js",
 					"css/mui.min.css",
 					"css/heathfile.css",
-					"fonts/mui.ttf"
+					"fonts/mui.ttf",
+					"css/heathfile.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"healthfile/Friends_file.html": {
+				"resources": [
+					"js/mui.min.js",
+					"css/mui.min.css",
+					"img/inquiry.jpg",
+					"css/heathfile.css"
+				],
+				"refer": [
+					"healthfile/Friend_file_detail.html",
+					"healthfile/Friend_file_add.html"
+				],
+				"priority": 0
+			},
+			"healthfile/Friend_file_detail.html": {
+				"resources": [
+					"js/mui.min.js",
+					"css/mui.min.css",
+					"css/heathfile.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"im/im-chat.html": {
+				"resources": [
+					"js/mui.min.js",
+					"css/app.css",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"js/mui.imageViewer.js",
+					"css/mui.imageviewer.css",
+					"js/arttmpl.js",
+					"img/finddoctor.jpg",
+					"im/%3C%\u003d(item.content)%%3E",
+					"js/im.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"test.html": {
+				"resources": [
+					"js/mui.min.js",
+					"/css/mui.min.css",
+					"/js/mui.min.js",
+					"/js/common.js",
+					"js/common.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css"
 				],
 				"refer": [],
 				"priority": 0

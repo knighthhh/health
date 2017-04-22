@@ -59,53 +59,54 @@
 		<div class="mui-content">
 			<img src="../img/healthfile.jpg" style="width: 100%;" />
 			<!--九宫格-->
-			<ul class="mui-table-view mui-grid-view mui-grid-9">
-				<li class="mui-table-view-cell mui-media mui-col-xs-4 ">
-					<a href="#" id="record">
-						<span class="mui-icon iconfont icon-yongyaojilu ul_t1"></span>
-						<div class="mui-media-body">用药日记</div>
-					</a>
-				</li>
-				<li class="mui-table-view-cell mui-media mui-col-xs-4">
-					<a href="#" id="history_todoc">
-						<span class="mui-icon iconfont icon-lishijiuzhen ul_t2"></span>
-						<!--<span class="mui-badge mui-badge-red">5</span></span>-->
-						<div class="mui-media-body">历史就诊</div>
-					</a>
-				</li>
-				<li class="mui-table-view-cell mui-media mui-col-xs-4">
-					<a href="#" id="myfile">
-						<span class="mui-icon iconfont icon-dangan-copy ul_t3"></span>
-						<div class="mui-media-body">我的档案</div>
-					</a>
-				</li>
-				<li class="mui-table-view-cell mui-media mui-col-xs-4 ">
-					<a href="#" id="relative">
-						<span class="mui-icon iconfont icon-group ul_t4"></span>
-						<div class="mui-media-body">亲友档案</div>
-					</a>
-				</li>
-				<li class="mui-table-view-cell mui-media mui-col-xs-4">
-					<a href="#" id="">
-						<span class="mui-icon iconfont icon-jiankangjilu ul_t5"></span>
-						<div class="mui-media-body">健康记录</div>
-					</a>
-				</li>
-				<li class="mui-table-view-cell mui-media mui-col-xs-4 ">
-					<a href="#" id="">
-						<span class="mui-icon iconfont icon-gengduo ul_t6"></span>
-						<div class="mui-media-body">家族史</div>
-					</a>
-				</li>
-			</ul>
-			<!--九宫格-->
+
+			    <ul class="mui-table-view mui-grid-view mui-grid-9">
+			    <li class="mui-table-view-cell mui-media mui-col-xs-4 ">
+			        <a href="#" id="record">
+			            <span class="mui-icon iconfont icon-yongyaojilu ul_t1"></span>
+			            <div class="mui-media-body">用药日记</div>
+			        </a>
+			    </li>
+			    <li class="mui-table-view-cell mui-media mui-col-xs-4">
+			        <a href="#" id="history_todoc">
+			            <span class="mui-icon iconfont icon-lishijiuzhen ul_t2"></span>
+			            	<!--<span class="mui-badge mui-badge-red">5</span></span>-->
+			            <div class="mui-media-body">历史就诊</div>
+			        </a>
+			    </li>
+			    <li class="mui-table-view-cell mui-media mui-col-xs-4">
+			        <a href="#" id="myfile">
+			            <span class="mui-icon iconfont icon-dangan-copy ul_t3"></span>
+			            <div class="mui-media-body">我的档案</div>
+			        </a>
+			    </li>
+			    <li class="mui-table-view-cell mui-media mui-col-xs-4 ">
+			        <a href="#" id="friendfile">
+			            <span class="mui-icon iconfont icon-group ul_t4"></span>
+			            <div class="mui-media-body">亲友档案</div>
+			        </a>
+			    </li>
+			    <li class="mui-table-view-cell mui-media mui-col-xs-4">
+			        <a href="#" id="health_record">
+			            <span class="mui-icon iconfont icon-jiankangjilu ul_t5"></span>
+			            <div class="mui-media-body">健康记录</div>
+			        </a>
+			    </li>
+			    <li class="mui-table-view-cell mui-media mui-col-xs-4 ">
+			        <a href="#"id="family_history">
+			            <span class="mui-icon iconfont icon-gengduo ul_t6"></span>
+			            <div class="mui-media-body">家族史</div>
+			        </a>
+			    </li>
+			       </ul>			
+			<!--九宫格-->	
 
 			<!--知识推送-->
 			<p class="knowledge">- 知识推送 -</p>
 			<div class="knowledge_info">
 				<ul id="knowledge" class="mui-table-view">
-					<li class="mui-table-view-cell mui-media">
-						<a href="javascript:;">
+					<li  class="mui-table-view-cell mui-media">
+						<a id="know_detail"  href="javascript:;">
 							<img class=" mui-pull-left" src="../img/doctor.jpeg">
 							<div class="mui-media-body">
 								<h4>幸福</h4>
@@ -145,24 +146,14 @@
 					var record= document.getElementById('record');	
 					var history_todoc= document.getElementById('history_todoc');	
 					var myfile= document.getElementById('myfile');	
-					var relative = document.getElementById('relative');
+					var friendfile= document.getElementById('friendfile');	
+					var health_record= document.getElementById('health_record');	
+				    var know_detail=document.getElementById('know_detail');
+				    var family_history=document.getElementById('family_history');
 					record.addEventListener('tap',function(event){
 						mui.openWindow({
 							url: 'medDiary.html',
 							id: 'medDiary',
-							preload: true,
-							show: {
-								aniShow: 'pop-in'
-							},
-							waiting: {
-								autoShow: false
-							}
-						});
-					},false);
-					relative.addEventListener('tap',function(event){
-						mui.openWindow({
-							url: 'Friends_file.html',
-							id: 'Friends_file',
 							preload: true,
 							show: {
 								aniShow: 'pop-in'
@@ -199,6 +190,59 @@
 							}
 						});
 					},false);
+					friendfile.addEventListener('tap',function(event){
+						mui.openWindow({
+							url: 'Friends_file.html',
+							id: 'Friends_file',
+							preload: true,
+							show: {
+								aniShow: 'pop-in'
+							},
+							waiting: {
+								autoShow: false
+							}
+						});
+					},false);
+					health_record.addEventListener('tap',function(event){
+						mui.openWindow({
+							url: 'Health_record.html',
+							id: 'Health_record',
+							preload: true,
+							show: {
+								aniShow: 'pop-in'
+							},
+							waiting: {
+								autoShow: false
+							}
+						});
+					},false);
+					family_history.addEventListener('tap',function(event){
+						mui.openWindow({
+							url: 'Family_history.html',
+							id: 'Family_history.',
+							preload: true,
+							show: {
+								aniShow: 'pop-in'
+							},
+							waiting: {
+								autoShow: false
+							}
+						});
+					},false);
+					know_detail.addEventListener('tap',function(event){
+						mui.openWindow({
+							url: 'know_contents.html',
+							id: 'know_contents',
+							preload: true,
+							show: {
+								aniShow: 'pop-in'
+							},
+							waiting: {
+								autoShow: false
+							}
+						});
+					},false);
+					
 					
 				});
 

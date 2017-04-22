@@ -57,7 +57,7 @@
     <table class="table table-hover text-center">
       <tr>
         <th width="8%" style="text-align:left; padding-left:20px;">ID</th>
-        <th width="8%">标题</th>
+        <th>标题</th>
         <th width="10%">点击量</th>
         <th width="14%">更新时间</th>
         <th width="30%">操作</th>

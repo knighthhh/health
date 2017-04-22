@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="../js/mui.min.js"></script>
+    <link href="../css/mui.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="../css/header.css"/>
+    <style>
+    	.sick{
+    		padding: 10px;
+    	}
+    </style>
+</head>
+
+	<script type="text/javascript">
+		mui.init();
+		mui.plusReady(function() {
+					var patient= document.getElementById('patient');
+					patient.addEventListener('tap',function(event){
+						mui.openWindow({
+							url: 'patientmeg.html',
+							id: 'patientmeg',
+							preload: true,
+							show: {
+								aniShow: 'pop-in'
+							},
+							waiting: {
+								autoShow: false
+							}
+						});
+					},false);					
+				});
+	</script>
+<body>
+<header class="mui-bar mui-bar-nav public-color">
+	    <h1 class="mui-title" style="color: #FFFFFF;">问诊列表</h1>
+	</header>
+		<div class="mui-content">
+			<div class="list">
+					<ul class="mui-table-view mui-table-view-chevron">
+						<li class="mui-table-view-cell mui-media ">		
+									<a class="mui-navigate-right" id="patient" >
+										<div class="mui-row">
+											<div class="mui-pull-left mui-col-xs-3 " >
+												<img src="../img/doctor.jpeg" style="width: 100%" />
+											</div>					
+											<div class="mui-col-xs-9 sick">
+													<p><span>患者：</span> <span>姚先生</span></p>
+													<p><span>提问时间：</span> <span>2017-05-23</span></p>	
+											</div>
+									</div>
+												
+									</a>
+							</li>	
+					</ul>
+			</div>
+		</div>
+	</body>
+</html>
