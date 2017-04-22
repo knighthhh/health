@@ -19,6 +19,10 @@ class RelativeInfoModel extends Model
         if($userPhone){
             $where['b.user_phone'] = array('eq', "$userPhone");
         }
+        $user_id = I('get.user_id');
+        if($user_id){
+            $where['a.user_id'] = array('eq',"$user_id");
+        }
         /* 分页 */
         $count = $this->where($where)->count();
         //实例化翻页类对象

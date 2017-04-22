@@ -46,7 +46,7 @@
 						item = item + '<div class=" mui-table-view-cell mui-collapse"><a class="mui-navigate-right" href="#">'+data[i].dep_name+'</a><div class="mui-collapse-content">';
 						for(j=0;j<data[i].child.length;j++){
 							item = item + '<a class="mui-control-item" href="#'+data[i].child[j].dep_id+'">'+data[i].child[j].dep_name+'</a>';
-							item2 = item2 + '<div id="'+data[i].child[j].dep_id+'" class="mui-control-content mui-active"><ul class="mui-table-view">';
+							item2 = item2 + '<div id="'+data[i].child[j].dep_id+'" class="mui-control-content"><ul class="mui-table-view">';
 							for(k=0;k<data[i].child[j].sick.length;k++){
 								item2 = item2 + '<li sickID="'+data[i].child[j].sick[k].illness_id+'" class="mui-table-view-cell">'+data[i].child[j].sick[k].illness_name+'</li>';
 							}
@@ -102,7 +102,6 @@
 				<li class="mui-table-view-cell">抑郁症</li>
 				<li class="mui-table-view-cell">心脏病</li>
 				<li class="mui-table-view-cell">血肿瘤</li>
-				
 			</ul>
 		</div>
 	</div>

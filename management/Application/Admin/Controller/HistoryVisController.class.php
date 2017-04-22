@@ -20,13 +20,32 @@ class HistoryVisController extends Controller
 	public function add()
 	{
 		$model = D('see_doc_case');
+        $where = array();
+        $relative_id = I('get.relative_id');
+        if($relative_id=="0" || $relative_id){
+            //dump($relative_id);die;
+            $where['relative_id'] = I('get.relative_id');
+        }
+        $user_id = I('get.user_id');
+        if($user_id){
+            $where['user_id'] = array('eq',"$user_id");
+        }
 		if(IS_POST){	
 		//dump($_POST);die;	
 			if($info=$model->create(I('post.'),1)){
 				//dump($info);die;
 				if($model->add()){
-					$this->success('操作成功!', U('listHis'));
-                    exit;
+                    if($user_id!=="relative_id"){
+                        //echo $user_id;die;
+                        $this->success('操作成功!', U('listHis', array(
+                            'user_id' => $user_id,
+                            'relative_id' => $relative_id
+                            )));
+                        exit;
+                    }else{
+                        $this->success('操作成功!', U('listHis'));
+                        exit;
+                    }
 				}
 			}
 			$error = $model->getError();
@@ -36,7 +55,9 @@ class HistoryVisController extends Controller
         $relaModel = D('relative_info');
         $relaData = $relaModel
         ->field("relative_name,relative_id")
+        ->where($where)
         ->select();
+        //dump($relaData);die;
         $this->assign(array(
             'relaData' => $relaData
             ));
@@ -47,13 +68,22 @@ class HistoryVisController extends Controller
 	{
 		$seecase_id = I('get.seecase_id');
         $user_id    = I('get.user_id');
+        $relative_id    = I('get.relative_id');
 		$model  = D('see_doc_case');
         if (IS_POST) {
-        	//dump($_POST);die;
         	if ($model->create(I('post.'), 1)) {
                 if (FASLE !== $model->save()) {
-                    $this->success('操作成功!', U('listHis'));
-                    exit;
+                    if($relative_id || $relative_id=="0"){
+                        $this->success('操作成功!', U('listHis', array(
+                            'user_id' => $user_id,
+                            'relative_id' => $relative_id
+                            )));
+                        exit;
+                    }else{
+                        $this->success('操作成功!', U('listHis'));
+                        exit;
+                    }
+
                 }
             }
             $error = $model->getError();
@@ -90,10 +120,21 @@ class HistoryVisController extends Controller
 	public function delete()
 	{
 		$seecase_id = I('get.seecase_id');
+        $relative_id = I('get.relative_id');
+        $user_id = I('get.user_id');
 		$model  = D('see_doc_case');
         if (FASLE !== $model->delete($seecase_id)) {
-            $this->success('操作成功!', U('listHis'));
-            exit;
+            if($user_id!=="relative_id"){
+                        //echo $user_id;die;
+                        $this->success('操作成功!', U('listHis', array(
+                            'user_id' => $user_id,
+                            'relative_id' => $relative_id
+                            )));
+                        exit;
+                    }else{
+                        $this->success('操作成功!', U('listHis'));
+                        exit;
+                    }
         }
         $error = $model->getError();
         $this->error($error);

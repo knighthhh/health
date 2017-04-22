@@ -23,12 +23,12 @@
 </head>
 <body>
 <!-- 搜索表单 -->
-<form method="get" action="/health/management/Application/index.php/Admin/HistoryVis/listHis" id="searchForm">
+<form method="get" action="/health/management/Application/index.php/Admin/HistoryVis/listHis.html" id="searchForm">
   <div class="panel admin-panel">
     <div class="panel-head"><strong class="icon-reorder"> 内容列表</strong></div>
     <div class="padding border-bottom">
       <ul class="search" style="padding-left:10px;">
-        <li> <a class="button border-green icon-plus-square-o" href="/health/management/Application/index.php/Admin/HistoryVis/add/relative_id/<?php echo $data['relative_id']; ?>"> 添加</a> </li>
+        <li> <a class="button border-green icon-plus-square-o" href="/health/management/Application/index.php/Admin/HistoryVis/add/user_id/<?php echo I('get.user_id'); ?>/relative_id/<?php echo I('get.relative_id'); ?>"> 添加</a> </li>
         <li>搜索：</li>
         <li>首页
           <select name="s_ishome" class="input" onchange="changesearch()" style="width:60px; line-height:17px; display:inline-block">
@@ -86,8 +86,8 @@
           <td><?php echo $v['seecase_time']; ?></td>
           <td><div class="button-group">
           <a class="button border-green" style="cursor:pointer" onclick="showDialog(<?php echo $v['seecase_id']; ?>)"><span class="icon-view-o"></span> 查看</a>
-          <a class="button border-main" href="/health/management/Application/index.php/Admin/HistoryVis/edit/seecase_id/<?php echo $v['seecase_id']; ?>/user_id/<?php echo $v['user_id']; ?>"><span class="icon-edit"></span> 修改</a> 
-          <a class="button border-red" style="cursor:pointer" onclick="del(<?php echo $v['seecase_id']; ?>)"><span class="icon-trash-o"></span> 删除</a>
+          <a class="button border-main" href="/health/management/Application/index.php/Admin/HistoryVis/edit/seecase_id/<?php echo $v['seecase_id']; ?>/user_id/<?php echo $v['user_id']; ?>/relative_id/<?php echo I('get.relative_id'); ?>"><span class="icon-edit"></span> 修改</a> 
+          <a class="button border-red" href="/health/management/Application/index.php/Admin/HistoryVis/delete/seecase_id/<?php echo $v['seecase_id']; ?>/user_id/<?php echo I('get.user_id'); ?>/relative_id/<?php echo I('get.relative_id'); ?>"><span class="icon-edit"></span> 删除</a> 
           </div></td>
           <td colspan="0">
           	<!-- 详情页面 -->
@@ -191,9 +191,9 @@ function showDialog(id) {
 	});
   };
 //单个删除
-function del(seecase_id){
+function del(seecase_id,user_id,relative_id){
 	if(confirm("您确定要删除吗?")){
-		window.location="/health/management/Application/index.php/Admin/HistoryVis/delete/seecase_id/"+seecase_id;
+		window.location="/health/management/Application/index.php/Admin/HistoryVis/delete/seecase_id/"+seecase_id+"/user_id/"+user_id+"/relative_id/"+relative_id;
 	}
 }
 

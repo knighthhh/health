@@ -23,12 +23,12 @@
 </head>
 <body>
 <!-- 搜索表单 -->
-<form method="get" action="/health/management/Application/index.php/Admin/Relative/listRela" id="searchForm">
+<form method="get" action="/health/management/Application/index.php/Admin/Relative/listRela.html" id="searchForm">
   <div class="panel admin-panel">
     <div class="panel-head"><strong class="icon-reorder"> 内容列表</strong></div>
     <div class="padding border-bottom">
       <ul class="search" style="padding-left:10px;">
-        <li> <a class="button border-green icon-plus-square-o" href="/health/management/Application/index.php/Admin/Relative/add"> 添加</a> </li>
+        <li> <a class="button border-green icon-plus-square-o" href="/health/management/Application/index.php/Admin/Relative/add/user_id/<?php echo I('get.user_id'); ?>"> 添加</a> </li>
         <li>搜索：</li>
         <li>首页
           <select name="s_ishome" class="input" onchange="changesearch()" style="width:60px; line-height:17px; display:inline-block">
@@ -89,8 +89,10 @@
           <td><?php echo $v['relative_date']; ?></td>
           <td><?php echo $v['create_time']; ?></td>
           <td><div class="button-group">
-          <a class="button border-main" href="/health/management/Application/index.php/Admin/Relative/edit/relative_id/<?php echo $v['relative_id']; ?>"><span class="icon-edit"></span> 修改</a> 
-          <a class="button border-red" style="cursor:pointer" onclick="del(<?php echo $v['relative_id']; ?>)"><span class="icon-trash-o"></span> 删除</a>
+          <a href="/health/management/Application/index.php/Admin/Relative/edit/relative_id/<?php echo $v['relative_id']; ?>">修改</a> 
+          <a style="cursor:pointer" onclick="del(<?php echo $v['relative_id']; ?>)">删除</a></br>
+          <a href="/health/management/Application/index.php/Admin/HistoryVis/listHis/user_id/<?php echo $v['user_id']; ?>/relative_id/<?php echo $v['relative_id']; ?>">历史就诊</a>
+          <a href="/health/management/Application/index.php/Admin/DrugDiary/listDiary/user_id/<?php echo $v['user_id']; ?>/relative_id/<?php echo $v['relative_id']; ?>">用药日记</a>
           </div></td>
         </tr>
     <?php endforeach; ?>

@@ -393,8 +393,8 @@
 					"healthfile/medDiary.html",
 					"healthfile/History_todoc.html",
 					"healthfile/My_file.html",
-					"healthfile/Health_record.html"
-
+					"healthfile/Health_record.html",
+					"healthfile/Friends_file.html"
 				],
 				"priority": 0
 			},
@@ -567,7 +567,8 @@
 					"js/mui.min.js",
 					"css/app.css",
 					"fonts/mui.ttf",
-					"css/mui.min.css"
+					"css/mui.min.css",
+					"js/common.js"
 				],
 				"refer": [
 					"finddoctor/search_doctor_jb.html",
@@ -826,7 +827,12 @@
 					"js/common.js"
 				],
 				"refer": [
-					"login/login.html"
+					"healthfile/outline_add.html",
+					"healthfile/outline_detail.html",
+					"healthfile/online_detail.html",
+					"healthfile/outline_edit.html",
+					"login/login.html",
+					"healthfile/Health_File.html"
 				],
 				"priority": 0
 			},
@@ -835,18 +841,6 @@
 					"img/doctor.jpeg"
 				],
 				"refer": [],
-				"priority": 0
-			},
-			"healthfile/History_todoc.html": {
-				"resources": [
-					"js/mui.min.js",
-					"fonts/mui.ttf",
-					"css/mui.min.css",
-					"css/heathfile.css"
-				],
-				"refer": [
-					"healthfile/outline_add.html"
-				],
 				"priority": 0
 			},
 			"healthfile/My_file.html": {
@@ -876,15 +870,74 @@
 				"resources": [
 					"js/feedback_mydoctor.js",
 					"img/choose_photos.png",
-					"css/mui.min.css"
+					"css/mui.min.css",
+					"js/mui.min.js",
+					"css/heathfile.css",
+					"fonts/mui.ttf",
+					"healthfile/outline_add.html",
+					"js/common.js"
 				],
-				"refer": [],
+				"refer": [
+					"healthfile/History_todoc.html"
+				],
 				"priority": 0
 			},
 			"healthfile/myfile_health_edit.html": {
 				"resources": [
 					"js/mui.min.js",
-					"css/mui.min.css"
+					"css/mui.min.css",
+					"css/heathfile.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"healthfile/outline_detail.html": {
+				"resources": [
+					"js/mui.min.js",
+					"css/mui.min.css",
+					"css/heathfile.css",
+					"js/common.js",
+					"img/1.jpg",
+					"fonts/mui.ttf"
+				],
+				"refer": [
+					"healthfile/outline_edit.html",
+					"healthfile/History_todoc.html"
+				],
+				"priority": 0
+			},
+			"healthfile/online_detail.html": {
+				"resources": [
+					"js/mui.min.js",
+					"css/mui.min.css",
+					"css/heathfile.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"healthfile/outline_edit.html": {
+				"resources": [
+					"js/feedback_mydoctor.js",
+					"img/choose_photos.png",
+					"css/mui.min.css",
+					"js/mui.min.js",
+					"css/heathfile.css",
+					"fonts/mui.ttf",
+					"js/common.js"
+				],
+				"refer": [
+					"healthfile/History_todoc.html",
+					"healthfile/My_file.html",
+					"healthfile/outline_detail.html"
+				],
+				"priority": 0
+			},
+			"healthfile/Friends_file.html": {
+				"resources": [
+					"js/mui.min.js",
+					"css/mui.min.css",
+					"css/heathfile.css",
+					"fonts/mui.ttf"
 				],
 				"refer": [],
 				"priority": 0
@@ -895,7 +948,6 @@
 				"medDiary.html",
 				"html/Mine.html",
 				"html/subindex.html",
-				"img/1.jpg",
 				"img/text1.jpg",
 				"img/search.jpg",
 				"html/Health_File.html",

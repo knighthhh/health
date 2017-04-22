@@ -43,14 +43,14 @@
       </ul> 
       </div>
     <div class="body-content">
-    <form method="post" class="form-x" action="/health/management/Application/index.php/Admin/Relative/add" name="fileUploadForm" enctype="multipart/form-data">
+    <form method="post" class="form-x" action="/health/management/Application/index.php/Admin/Relative/add/user_id/2" name="fileUploadForm" enctype="multipart/form-data">
     <div class="div_tab" style="display:block;">  
      <div class="form-group">
         <div class="label">
           <label>所属用户ID：</label>
         </div>
         <div class="field">
-          <input type="text" class="input w50" value="" name="user_id" />
+          <input type="text" class="input w50" value="<?php echo I('get.user_id'); ?>" name="user_id" />
           <span class="tips">*</span>
         </div>
       </div>
@@ -100,7 +100,6 @@
         </div>
         <div class="field">
           <select name="relative_relation">
-            <option value="本人">本人</option>
             <option value="家庭成员">家庭成员</option>
             <option value="亲戚">亲戚</option>
             <option value="朋友">朋友</option>
