@@ -403,7 +403,9 @@
 					"healthfile/History_todoc.html",
 					"healthfile/My_file.html",
 					"healthfile/Health_record.html",
-					"healthfile/Friends_file.html"
+					"healthfile/Friends_file.html",
+					"healthfile/know_contents.html",
+					"healthfile/medDiary2.html"
 				],
 				"priority": 0
 			},
@@ -659,7 +661,8 @@
 					"css/mui.min.css"
 				],
 				"refer": [
-					"inquiry/basic_text.html"
+					"inquiry/basic_text.html",
+					"inquiry/fast_question.html"
 				],
 				"priority": 0
 			},
@@ -802,7 +805,9 @@
 					"css/mui.min.css",
 					"js/mui.calendar.js",
 					"css/heathfile.css",
-					"css/mui.calendar.css"
+					"css/mui.calendar.css",
+					"js/mui.picker.min.js",
+					"css/iconfont_account.css"
 				],
 				"refer": [
 					"healthfile/write_diary.html"
