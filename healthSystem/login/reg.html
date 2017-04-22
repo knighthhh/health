@@ -76,10 +76,10 @@
 					<table>
 					<tr>
 					<td>
-						<input id='code' type="text" class=" mui-input" placeholder="请输入验证码">
+						<input id="yzm" type="text" class=" mui-input" placeholder="请输入验证码">
 					</td>
 					<td>
-						<button type="button" class="mui-btn1 mui-btn-success">获取验证码</button>
+						<button id='code' type="button" class="mui-btn1 mui-btn-success">获取验证码</button>
 					</td>
 					</tr>
 					</table>
@@ -94,15 +94,13 @@
 		<script src="../js/mui.min.js"></script>
 		<script src="../js/common.js"></script>
 		<script type="text/javascript" charset="utf-8">
-			
-			//验证码暂时不做
-			
 			mui.init();
 	      	mui.plusReady(function(){
 	      		var phone=document.getElementById("user_phone");
 	      		var password=document.getElementById("user_password");
 	      		var pwdconfirm=document.getElementById("password_confirm");
 	      		var reg=document.getElementById("reg");
+	      		var yzm=document.getElementById("yzm");
 	      		
 	      		//后面在做设置用户输入的手机号只能为数字
 	      		//onkeyup="this.value=this.value.replace(/[^\d]/g,'') "
@@ -120,11 +118,16 @@
 						plus.nativeUI.toast('密码两次输入不一致');
 						return;
 					}
+	      			if (yzm.value.length < 6) {
+						plus.nativeUI.toast('请输入6位验证码');
+						return;
+					}
 	      			mui.ajax('http://'+serverName+'/health/management/Application/index.php/Connector/User/reg',{
 	      				data:{
 	      					user_phone:phone.value,
-	      					user_password:password.value
-	      				},
+	      					user_password:password.value,
+	      					user_yzm:yzm.value
+	      				}, 
 	      				dataType:'json',//数据格式类型
 	      				type:'POST',//http请求类型
 	      				timeout:10000,//超时设置
@@ -144,6 +147,80 @@
 	      				}
 	      			})
 	      		});
+	      		
+	      		//获取验证码按钮监听
+	      		var btn = document.getElementById('code');
+			    btn.addEventListener('tap',function() {
+			        var sleep = 60,
+			            interval = null;
+			        PhoneMobile();
+			        if ( phone.value != "输入的手机号不正确") {
+			            CallAction();
+			            if (!interval) {
+			                this.disabled = "disabled";
+			                this.style.cursor = "wait";
+			                this.value = "重新发送 (" + sleep-- + ")";
+			                interval = setInterval(function() {
+			                    if (sleep == 0) {
+			                        if (!!interval) {
+			                            clearInterval(interval);
+			                            interval = null;
+			                            sleep = 60;
+			                            btn.style.cursor = "pointer";
+			                            btn.removeAttribute('disabled');
+			                            btn.value = "获取验证码";
+			                            btn.style.backgroundColor = '';
+			                        }
+			                        return false;
+			                    }
+			                    btn.value = "重新发送 (" + sleep-- + ")";
+			                }, 1000);
+			            }
+			        }
+			    });
+			    
+			    //手机号合法性验证
+				function PhoneMobile() {
+				    var user_phone = document.all("user_phone").value;
+				    if (user_phone.match(/^(13[0-9]|14(5|7)|15(0|1|2|3|5|6|7|8|9)|18[0-9])\d{8}$/) != null) {
+				        //verificationMobile();
+				    } else {
+						phone.value="输入的手机号不正确";
+						phone.style.color="red";
+				    }
+				}
+				
+				//验证码请求
+				function CallAction() {
+//				    var data = "你的数据请求连接";
+//				    $.ajax({
+//				        async: true,
+//				        url: '网站连接',
+//				        data: data,
+//				        dataType: 'jsonp',
+//				        type: 'get',
+//				        callback: successCallback,
+//				        timeout: 10000,
+//				        complete: function(XMLHttpRequest, status) {
+//				            if (status == 'timeout') {
+//				                //超时,status还有success,error等值的情况 
+//				                alert("方法查询异常！");
+//				            }  
+//				        }
+//				    });
+					mui.post('http://'+serverName+'/health/management/application/Connector/Sms/industrySMS.php',{
+							user_phone:phone.value
+					},function(data){   
+							if(data.result==0){ 
+								//注册过了
+								plus.ui.toast(data.data);
+							}else{
+								
+							} 
+						},'json' 
+					);
+				}
+
 	      	});
 
 		</script>

@@ -1,0 +1,55 @@
+[ 2017-04-23T00:08:21+08:00 ] 172.17.32.112 /health/management/Application/index.php/Connector/User/reg
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000310s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000034s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000045s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000106s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000031s ]
+SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.003082s ]
+SQL: SELECT * FROM `user_info` WHERE ( `user_phone` = '15768653949' ) LIMIT 1   [ RunTime:0.000602s ]
+SQL: SHOW COLUMNS FROM `user_yzm` [ RunTime:0.063501s ]
+SQL: SELECT * FROM `user_yzm` WHERE ( `user_phone` = '15768653949' ) AND ( `user_yzm` = '569875' )  [ RunTime:0.000366s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000038s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000100s ]
+
+[ 2017-04-23T00:08:29+08:00 ] 172.17.32.112 /health/management/Application/index.php/Connector/User/reg
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000283s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000031s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000043s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000096s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000027s ]
+SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.003223s ]
+SQL: SELECT * FROM `user_info` WHERE ( `user_phone` = '15768653949' ) LIMIT 1   [ RunTime:0.000438s ]
+SQL: SHOW COLUMNS FROM `user_yzm` [ RunTime:0.002413s ]
+SQL: SELECT * FROM `user_yzm` WHERE ( `user_phone` = '15768653949' ) AND ( `user_yzm` = '569858' )  [ RunTime:0.000271s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000036s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000093s ]
+
+[ 2017-04-23T00:08:43+08:00 ] 172.17.32.112 /health/management/Application/index.php/Connector/User/reg
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000264s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000032s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000041s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000097s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000031s ]
+SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.015106s ]
+SQL: SELECT * FROM `user_info` WHERE ( `user_phone` = '15768653949' ) LIMIT 1   [ RunTime:0.000860s ]
+SQL: SHOW COLUMNS FROM `user_yzm` [ RunTime:0.005082s ]
+SQL: SELECT * FROM `user_yzm` WHERE ( `user_phone` = '15768653949' ) AND ( `user_yzm` = '456835' )  [ RunTime:0.000494s ]
+SQL: INSERT INTO `user_info` (`user_phone`,`user_password`,`user_name`,`user_time`,`user_img`,`im_token`) VALUES ('15768653949','e10adc3949ba59abbe56e057f20f883e','C2DYps','2017-04-23 00:08:38','User/user_img.png','owCV7Bca4ztQlqKXmLHKpVJSNIpA9S6EZU7IckO4Zgcf3MIp3CtZh96bOfH/UIar0ZV3W9VG58xpKc3F6FqS/UPiA8I/zVRY') [ RunTime:0.049732s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000072s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000188s ]
+

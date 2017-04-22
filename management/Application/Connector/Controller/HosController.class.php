@@ -55,6 +55,28 @@ class HosController extends Controller{
         //dump($data);die;
         echo json_encode($data);
     }
-
+	
+	//按医院找医生
+	public function hosDoc(){
+		$province=I('post.province');
+		$town=I('post.town');
+		$ic = C('IMAGE_CONFIG');
+		$data['hos_address'] = array('like',"%$province%$town%");
+		$res=  M('hospital_info')->where($data)->select();
+		//图片拼装
+		for ($i=0; $i <count($res) ; $i++) { 
+	        $res[$i]['hos_navigate_img'] = $ic['viewPath'].$res[$i]['hos_navigate_img'];
+	    }
+		
+		//如果查询没有东西还要返回空
+		if($res){
+			
+		}else{
+			$res['result']=0;
+		}
+		echo json_encode($res);
+	}
+	
+	
 	
 }

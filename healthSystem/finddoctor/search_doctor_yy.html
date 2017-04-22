@@ -16,40 +16,43 @@
 	<script type="text/javascript">
 		mui.init();
 		mui.plusReady(function() {
-					mui.getJSON('http://'+serverName+'/health/management/Application/index.php/Connector/Hos/getHos',{},function(data){
-						//获得服务器响应
-						var listHos = document.getElementById("listHos");
-						var item = '';
-						for(i=0;i<data.length;i++){
-							//console.log(data[i].hos_navigate_img);
-							item = item+'<li hos-id="'+data[i].hos_id+'" class="mui-table-view-cell mui-media" id="hosHP"><a><div class="mui-row "><div class="mui-pull-left mui-col-xs-3 " ><img style="width:60px;height:60px;" src="'+data[i].hos_navigate_img+
-							'" style="width: 100%" /></div><div class="mui-col-xs-9"><h4 class="hp_title">'+data[i].hos_name+'</h4><p class="mui-ellipsis"><span class="iconfont icon-iconaddress i-color"></span><span class="icon-title">'+data[i].hos_address+
-							'</span></p><p><span class="iconfont icon-dengji i-color"></span><span class="icon-title">'+data[i].hos_level+
-							' </span><span class="iconfont icon-guanzhu1 i-color"></span> <span class="icon-title">'+data[i].hos_hot+'</span></p></div></div></a></li>';
+				mui.getJSON('http://'+serverName+'/health/management/Application/index.php/Connector/Hos/getHos',{},function(data){
+					//获得服务器响应
+					var listHos = document.getElementById("listHos");
+					var item = '';
+					for(i=0;i<data.length;i++){
+						//console.log(data[i].hos_navigate_img);
+						item = item+'<li hos-id="'+data[i].hos_id+'" class="mui-table-view-cell mui-media" id="hosHP"><a><div class="mui-row "><div class="mui-pull-left mui-col-xs-3 " ><img style="width:60px;height:60px;" src="'+data[i].hos_navigate_img+
+						'" style="width: 100%" /></div><div class="mui-col-xs-9"><h4 class="hp_title">'+data[i].hos_name+'</h4><p class="mui-ellipsis"><span class="iconfont icon-iconaddress i-color"></span><span class="icon-title">'+data[i].hos_address+
+						'</span></p><p><span class="iconfont icon-dengji i-color"></span><span class="icon-title">'+data[i].hos_level+
+						' </span><span class="iconfont icon-guanzhu1 i-color"></span> <span class="icon-title">'+data[i].hos_hot+'</span></p></div></div></a></li>';
+					}
+					listHos.innerHTML = item;
+					
+				});
+				
+				//点击医院跳转至详情
+				var detailPage = null;
+				//添加列表项的点击事件
+				mui('#listHos').on('tap', '.mui-table-view-cell', function() {
+				  	var hos_id = this.getAttribute('hos-id');
+					mui.openWindow({
+						url:'../finddoctor/hosHP.html',   
+					    id:'hosHP',
+					    extras:{
+					    	hos_id:hos_id
+					    },
+					    show:{
+					    	autoShow:false,  									
+					    	event:'loaded',//页面显示时机，默认为titleUpdate事件时显示
+						},
+						waiting:{
+							autoShow:true,
 						}
-						listHos.innerHTML = item;
-						//点击热门医院跳转至详情
-							var detailPage = null;
-							//添加列表项的点击事件
-							mui('#listHos').on('tap', '.mui-table-view-cell', function() {
-							  var hos_id = this.getAttribute('hos-id');
-							mui.openWindow({
-								url:'../finddoctor/hosHP.html',   
-							    id:'hosHP',
-							    extras:{
-							    	hos_id:hos_id
-							    },
-							    show:{
-							    	autoShow:false,  									
-							    	event:'loaded',//页面显示时机，默认为titleUpdate事件时显示
-    							},
-    							waiting:{
-    								autoShow:true,
-    							}
-							 });
-							});
-					});
-					},false);
+					 });
+				});
+				
+		},false);
 	</script>
 <body>
 	
@@ -86,9 +89,39 @@
 					cityPicker.setData(cityData);
 					var showCityPickerButton = doc.getElementById('showUserPicker');
 					
-					showCityPickerButton.addEventListener('tap', function(event) {
+					showCityPickerButton.addEventListener('tap', function(event) { 
 						cityPicker.show(function(items) {
 							showCityPickerButton.innerText = items[0].text + " " + items[1].text;
+							//选择对应地区的医生 有BUG，会发送两次ajax
+							mui.ajax('http://'+serverName+'/health/management/Application/index.php/Connector/Hos/hosDoc',{
+								data:{
+									province:items[0].text,
+									town:items[1].text
+								},
+								dataType:'json',
+								type:'post',
+								timeout:10000,
+								success:function(data){
+									if(data.result==0){
+										var s="";
+										var listHos =document.getElementById("listHos");
+										listHos.innerHTML = s;
+									}else{
+										var s="";
+										for(var i=0;i<data.length;i++){
+											s=s+'<li hos-id="'+data[i].hos_id+'" class="mui-table-view-cell mui-media" id="hosHP"><a><div class="mui-row "><div class="mui-pull-left mui-col-xs-3 " ><img style="width:60px;height:60px;" src="'+data[i].hos_navigate_img+
+											'" style="width: 100%" /></div><div class="mui-col-xs-9"><h4 class="hp_title">'+data[i].hos_name+'</h4><p class="mui-ellipsis"><span class="iconfont icon-iconaddress i-color"></span><span class="icon-title">'+data[i].hos_address+
+											'</span></p><p><span class="iconfont icon-dengji i-color"></span><span class="icon-title">'+data[i].hos_level+
+											' </span><span class="iconfont icon-guanzhu1 i-color"></span> <span class="icon-title">'+data[i].hos_hot+'</span></p></div></div></a></li>';
+										}
+										var listHos =document.getElementById("listHos");
+										listHos.innerHTML = s;
+									}
+									
+								},
+								error:function(){
+								}
+							});
 							//返回 false 可以阻止选择框的关闭
 							//return false;
 						});

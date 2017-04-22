@@ -35,30 +35,36 @@
 		<script src="../js/common.js"></script>
 		<script type="text/javascript">
 			mui.init();
-			mui.get('http://'+serverName+'/health/management/Application/index.php/Connector/Sick/getSick',{
-					
-				},function(data){
-					var department = document.getElementById("department");
-					var segmentedControlContents =document.getElementById("segmentedControlContents");
-					var item = '';
-					var item2 = '';
-					for (i=0;i<data.length;i++) {
-						item = item + '<div class=" mui-table-view-cell mui-collapse"><a class="mui-navigate-right" href="#">'+data[i].dep_name+'</a><div class="mui-collapse-content">';
-						for(j=0;j<data[i].child.length;j++){
-							item = item + '<a class="mui-control-item" href="#'+data[i].child[j].dep_id+'">'+data[i].child[j].dep_name+'</a>';
-							item2 = item2 + '<div id="'+data[i].child[j].dep_id+'" class="mui-control-content mui-active"><ul class="mui-table-view">';
-							for(k=0;k<data[i].child[j].sick.length;k++){
-								item2 = item2 + '<li sickID="'+data[i].child[j].sick[k].illness_id+'" class="mui-table-view-cell">'+data[i].child[j].sick[k].illness_name+'</li>';
+			mui.plusReady(function(){
+				mui.get('http://'+serverName+'/health/management/Application/index.php/Connector/Sick/getSick',{
+						
+					},function(data){
+						var department = document.getElementById("department");
+						var segmentedControlContents =document.getElementById("segmentedControlContents");
+						var item = '';
+						var item2 = '';
+						for (i=0;i<data.length;i++) {
+	//						console.log(data[i].dep_name);  父级科室
+							item = item + '<div class=" mui-table-view-cell mui-collapse"><a class="mui-navigate-right" href="#">'+data[i].dep_name+'</a><div class="mui-collapse-content">';
+							for(j=0;j<data[i].child.length;j++){
+	//							console.log(data[i].child[j].dep_name); 父级科室对应的子级科室
+								item = item + '<a class="mui-control-item" href="#'+data[i].child[j].dep_id+'">'+data[i].child[j].dep_name+'</a>';
+								item2 = item2 + '<div id="'+data[i].child[j].dep_id+'" class="mui-control-content mui-active"><ul class="mui-table-view">';
+								for(k=0;k<data[i].child[j].sick.length;k++){
+									item2 = item2 + '<li sickID="'+data[i].child[j].sick[k].illness_id+'" class="mui-table-view-cell">'+data[i].child[j].sick[k].illness_name+'</li>';
+	//								console.log(data[i].child[j].sick[k].illness_name);  子级科室对应的疾病
+								}
+								item2 = item2 + '</ul></div>';
 							}
-							item2 = item2 + '</ul></div>';
+							item = item + '</div></div>';
 						}
-						item = item + '</div></div>';
-					}
-					//console.log(item2);
-					department.innerHTML = item;
-					segmentedControlContents.innerHTML = segmentedControlContents.innerHTML + item2;
-				},'json'
-			);
+						//console.log(item2);
+						department.innerHTML = item;
+						segmentedControlContents.innerHTML = segmentedControlContents.innerHTML + item2;
+					},'json'
+				);
+				
+			});
 		</script>
 	</head>
 	<body>
@@ -67,47 +73,45 @@
 		    <h1 class="mui-title">按疾病找</h1>
 		</header>
 	<div class="mui-content mui-row mui-fullscreen">
-	<div class="mui-col-xs-5">
-		<div id="segmentedControls" class="mui-segmented-control mui-segmented-control-inverted mui-segmented-control-vertical">
-			<a class="mui-control-item mui-active" href="#content1">常见疾病</a>
-			<div id = "department">
-				<!--<div class=" mui-table-view-cell mui-collapse">
-						<a class="mui-navigate-right" href="#">内科</a>
-						<div class="mui-collapse-content">
-							<a class="mui-control-item" href="#content2">呼吸科</a>
-							<a class="mui-control-item" href="#content3">心血管科</a>
-						</div>
-				</div>-->
+		<div class="mui-col-xs-5">
+			<div id="segmentedControls" class="mui-segmented-control mui-segmented-control-inverted mui-segmented-control-vertical">
+				<a class="mui-control-item mui-active" href="#content1">常见疾病</a>
+				<div id = "department">
+					<!--<div class=" mui-table-view-cell mui-collapse">
+							<a class="mui-navigate-right" href="#">内科</a>
+							<div class="mui-collapse-content">
+								<a class="mui-control-item" href="#content2">呼吸科</a>
+								<a class="mui-control-item" href="#content3">心血管科</a>
+							</div>
+					</div>-->
+				</div>
 			</div>
 		</div>
+		<div id="segmentedControlContents" class="mui-col-xs-7" style="border-left: 1px solid #c8c7cc;">
+			<div id="content1" class="mui-control-content mui-active">
+				<ul id="jblist"class="mui-table-view">
+					<li class="mui-table-view-cell">鼻炎</li>
+					<li class="mui-table-view-cell">高血压</li>
+					<li class="mui-table-view-cell">骨折</li>
+					<li class="mui-table-view-cell">白内障</li>
+					<li class="mui-table-view-cell">皮肤病</li>
+					<li class="mui-table-view-cell">胆结石</li>
+					<li class="mui-table-view-cell">肺癌</li>
+					<li class="mui-table-view-cell">胆结石</li>
+					<li class="mui-table-view-cell">脑肿瘤</li>
+					<li class="mui-table-view-cell">甲状腺瘤</li>
+					<li class="mui-table-view-cell">糖尿病</li>
+					<li class="mui-table-view-cell">肺炎</li>
+					<li class="mui-table-view-cell">胃炎</li>
+					<li class="mui-table-view-cell">心肌梗塞</li>
+					<li class="mui-table-view-cell">乙肝</li>
+					<li class="mui-table-view-cell">冠心病</li>
+					<li class="mui-table-view-cell">心脏病</li>
+					<li class="mui-table-view-cell">血肿瘤</li>
+				</ul>
+			</div>
+		</div>	
 	</div>
-	<div id="segmentedControlContents" class="mui-col-xs-7" style="border-left: 1px solid #c8c7cc;">
-		<div id="content1" class="mui-control-content mui-active">
-			<ul class="mui-table-view">
-				<li class="mui-table-view-cell">鼻炎</li>
-				<li class="mui-table-view-cell">高血压</li>
-				<li class="mui-table-view-cell">骨折</li>
-				<li class="mui-table-view-cell">白内障</li>
-				<li class="mui-table-view-cell">皮肤病</li>
-				<li class="mui-table-view-cell">胆结石</li>
-				<li class="mui-table-view-cell">肺癌</li>
-				<li class="mui-table-view-cell">胆结石</li>
-				<li class="mui-table-view-cell">脑肿瘤</li>
-				<li class="mui-table-view-cell">甲状腺瘤</li>
-				<li class="mui-table-view-cell">糖尿病</li>
-				<li class="mui-table-view-cell">肺炎</li>
-				<li class="mui-table-view-cell">胃炎</li>
-				<li class="mui-table-view-cell">心肌梗塞</li>
-				<li class="mui-table-view-cell">乙肝</li>
-				<li class="mui-table-view-cell">冠心病</li>
-				<li class="mui-table-view-cell">心脏病</li>
-				<li class="mui-table-view-cell">血肿瘤</li>
-				
-			</ul>
-		</div>
-	</div>
-
-</div>
 		
 		
 

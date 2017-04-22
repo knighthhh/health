@@ -62,31 +62,28 @@
 						});
 					},false);
 					
-					//显示医生列表
-					mui.post('http://'+serverName+'/health/management/application/index.php/Connector/Search/searchdoc',{
-						searchtext:searchtext
-					},function(data){
-						if(data.result!=0){
-							var s="";
-							for(var i=0;i<data.length;i++){
-								s+="<li class='mui-table-view-cell mui-media '><a class=''><div class='mui-row '><div class='mui-pull-left mui-col-xs-3 '>";
-								s+="<img src='"+data[i].doc_img+"' style='width: 100%' /></div><div class='mui-col-xs-9'>";
-								s+="<h4 class='dt_title'>"+data[i].doc_name+"</h4><div class='dt_from'><p><span class='mui-icon iconfont icon-iconaddress i-color'></span>";
-								s+="<span>"+data[i].hos_name+"</span></p>";
-								s+="<p><span class='mui-icon iconfont icon-iconaddress i-color'></span>所属科室：<span>"+data[i].dep_name+"</span> </p></div></p></div></div>";
-								s+="<p class='mui-ellipsis'> 擅长：<span>"+data[i].doc_especial+"</span></p>";
-								s+="<span class='iconfont icon-jinqian1 i-color'></span><span class='icon-title'>"+data[i].doc_fee+"/半小时</span>";
-								s+="<span class='iconfont icon-pinglun2 i-color'></span><span class='icon-title'>"+data[i].doc_rece+"</span>";
-								s+="<span class='iconfont icon-dianzan i-color'></span><span class='icon-title'>"+data[i].doc_attention+"</span>";
-								s+="<span class='iconfont icon-guanzhu1 i-color'></span><span class='icon-title'>"+data[i].doc_hot+"</span>";
+					//科室列表批量监听
+					mui('#depalist').on('tap', '.box-a-l', function() {
+						var dep_id = this.getAttribute('id');
+						mui.openWindow({
+							url:'/finddoctor/doclist.html',   
+						    id:'doclist',
+						    extras:{
+						    	dep_id:dep_id
+						    },
+						    show:{
+						    	aniShow: 'pop-in'
+							},
+							styles: {
+								popGesture: 'hide'
+							},
+							waiting:{
+								autoShow:true
 							}
-							var searchdoc =document.getElementById("searchdoc");
-							searchdoc.innerHTML = s;
-						}else{
-							//提示没有搜索结果
-						}
-					},'json'
-				);
+						});
+					}); 
+					
+					
 					
 				});
 	</script>
@@ -123,32 +120,32 @@
 		    
 		    <p class="box-c-p">按科室找 </p>
 		    
-		    <div class="box-a">
-		    	<div class="box-a-l">
+		    <div id="depalist" class="box-a">
+		    	<div id="5" class="box-a-l">
 		    		<span class="iconfont icon-1 tu-yi"></span>
 		    		<p >妇产科</p>
 		    	</div>
-		    	<div class="box-a-l">
+		    	<div id="3" class="box-a-l">
 		    		<span class="iconfont icon-guke_iconx-copy tu-er"></span>
 		    		<p>骨科</p>
 		    	</div>
-		    	<div class="box-a-l">
+		    	<div id="2"  class="box-a-l">
 		    		<span class="iconfont icon-neike tu-san"></span>
 		    		<p>内科</p>
 		    	</div>
-		    	<div class="box-a-l">
+		    	<div id="11" class="box-a-l">
 		    		<span class="iconfont icon-pifuke tu-si"></span>
 		    		<p>皮肤科</p>
 		    	</div>
-		    	<div class="box-a-l">
+		    	<div id="14" class="box-a-l">
 		    		<span class="iconfont icon-yanke1 tu-wu"></span>
 		    		<p>眼科</p>
 		    	</div>
-		    	<div class="box-a-l">
+		    	<div id="1" class="box-a-l">
 		    		<span class="iconfont icon-color tu-liu"></span>
 		    		<p>外科</p>
 		    	</div>
-		    	<div class="box-a-l">
+		    	<div id="12" class="box-a-l">
 		    		<span class="iconfont icon-color1 tu-qi"></span>
 		    		<p>儿科</p>
 		    	</div>
@@ -156,9 +153,9 @@
 		    		<span class="iconfont icon-circle-more tu-ba"></span>
 		    		<p>更多</p>
 		    	</div>
-		    	
 		 	</div>
 		</div>
+		
 		<script src="../js/mui.min.js"></script>
 		<script type="text/javascript">
 			mui.init()

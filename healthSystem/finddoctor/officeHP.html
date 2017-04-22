@@ -16,17 +16,17 @@
 	<body>
 		<header class="mui-bar mui-bar-nav public-color">
 		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
-		    <h1 class="mui-title">xxx科</h1>
+		    <h1 id="dep_name_title" class="mui-title"></h1>
 		</header>
 		<div class="mui-content">
 			<div class="office_contents">
 				<ul class="mui-table-view">
 					<li class="mui-table-view-cell">
-				           <h4 class="text_h4">耳鼻喉科<span>简介</span></h4>         
+				           <h4 id="dep_name"class="text_h4"><span>简介</span></h4>         
 				        </li>
 				        <ul class="mui-table-view mui-table-view-chevron">
 						        <li class="mui-table-view-cell brief">     	           
-						          <p class="paragraph">“耳鼻咽喉科”是诊断治疗耳、鼻、咽、喉、及其相关头颈区域的外科学科。随着科技的进步与发展，医学各科相互渗透和促进，拓展了耳鼻咽喉科的范畴，耳显微外科，耳神经外科，侧颅底外科，听力学及平衡科学，鼻内镜外科，鼻神经外科（鼻颅底外科），头颈外科，喉显微外科，嗓音与言语疾病科，小儿耳鼻咽喉科等的出现，大大丰富了耳鼻咽喉科的内容。</p> 	           
+						          <p id="dep_introduce" class="paragraph"></p> 	           
 						        </li>
 						        <li class="mui-table-view-cell">
 							        <p id="office_lookdetail" class="mui-pull-right" style="color:#0062CC;">查看详情>></p>  
@@ -42,21 +42,21 @@
 				           </h5>         
 				        </li>
 						<div class="info_dt">
-							<ul class="mui-table-view mui-table-view-chevron">
-								<li class="mui-table-view-cell mui-media ">
+							<ul id="doclist" class="mui-table-view mui-table-view-chevron">
+								<!--<li class="mui-table-view-cell mui-media ">
 									<a class=" ">
 										<div class="mui-row ">
 											<div class="mui-pull-left mui-col-xs-3">
-												<img src="../img/doctor.jpeg" style="width: 100%;" />
+												<img src="../img/healthfile.jpg" style="width: 100%;" />
 											</div>
 											<div class="mui-col-xs-1">
 						
 											</div>
-											<div class="mui-col-xs-7">
+											<div class="mui-col-xs-8">
 												<h4 class="dt_title">张先生</h4>
 												<div class="dt_from">
 													<p><span class="mui-icon iconfont icon-iconaddress i-color"></span><span>惠州市人民医院</span></p>
-													<p><span class="mui-icon iconfont icon-iconaddress i-color"></span>所属科室：<span>骨科,眼科</span> </p>
+													<p><span class="mui-icon iconfont  icon-iconaddress i-color"></span>所属科室：<span>骨科,眼科</span> </p>
 												</div>
 						
 												</p>
@@ -68,7 +68,7 @@
 										<span class="iconfont icon-dianzan i-color"></span><span class="icon-title">1500</span>
 										<span class="iconfont icon-guanzhu1 i-color"></span><span class="icon-title">1500</span>
 									</a>
-								</li>
+								</li>-->
 							</ul>
 						</div>
 					</ul>
@@ -84,27 +84,87 @@
 		
 		
 		<script src="../js/mui.min.js"></script>
+		<script src="../js/common.js"></script>
 		<script type="text/javascript">
 	    	mui.init();
 			mui.plusReady(function() {
-					var office_lookdetail= document.getElementById('office_lookdetail');	
-					office_lookdetail.addEventListener('tap',function(event){
-						mui.openWindow({
-							url: 'article_brief.html',
-							id: 'article_brief',
-							preload: true,
-							show: {
-								aniShow: 'pop-in'
-							},
-							waiting: {
-								autoShow: false
-							}
-						});
-					},false);
+				var self = plus.webview.currentWebview();
+				var hos_id = self.hos_id;
+				var dep_id = self.dep_id;
+				var office_lookdetail= document.getElementById('office_lookdetail');	
+				office_lookdetail.addEventListener('tap',function(event){
+					mui.openWindow({
+						url: 'article_brief.html',
+						id: 'article_brief',
+						preload: true,
+						show: {
+							aniShow: 'pop-in'
+						},
+						waiting: {
+							autoShow: false
+						}
+					});
+				},false);
+				
+				//科室介绍
+				var dep_name_title = document.getElementById("dep_name_title");
+				var dep_name=document.getElementById("dep_name");
+				var dep_introduce=document.getElementById("dep_introduce");
+				mui.post('http://'+serverName+'/health/management/application/index.php/Connector/Depa/gethosdep',{
+						hos_id:hos_id,
+						dep_id:dep_id
+				},function(data){
+						dep_name_title.innerHTML = data.dep_name;
+						dep_name.innerHTML=data.dep_name;
+						dep_introduce.innerHTML=data.dep_introduce;
+						
+					},'json'
+				);
+				
+				//医生列表
+				var doclist = document.getElementById("doclist");
+				mui.post('http://'+serverName+'/health/management/application/index.php/Connector/Depa/gethosdoc',{
+						hos_id:hos_id,
+						dep_id:dep_id
+				},function(data){
+					var s="";
+					for(var i=0;i<data.length;++i){
+						s+="<li id='"+data[i].doc_id+"' class='mui-table-view-cell mui-media '><a class=''><div class='mui-row '><div class='mui-pull-left mui-col-xs-3 '>";
+						s+="<img src='"+data[i].doc_img+"' style='width: 100%' /></div><div class='mui-col-xs-1'></div><div class='mui-col-xs-8'>";
+						s+="<h4 class='dt_title'>"+data[i].doc_name+"</h4><div class='dt_from'><p><span class='mui-icon iconfont icon-iconaddress i-color'></span>";
+						s+="<span>"+data[i].hos_name+"</span></p>";
+						s+="<p><span class='mui-icon iconfont icon-iconaddress i-color'></span>所属科室：<span>"+data[i].dep_name+"</span> </p></div></p></div></div>";
+						s+="<p class='mui-ellipsis'> 擅长：<span>"+data[i].doc_especial+"</span></p>";
+						s+="<span class='iconfont icon-jinqian1 i-color'></span><span class='icon-title'>"+data[i].doc_fee+"/半小时</span>";
+						s+="<span class='iconfont icon-pinglun2 i-color'></span><span class='icon-title'>"+data[i].doc_rece+"</span>";
+						s+="<span class='iconfont icon-dianzan i-color'></span><span class='icon-title'>"+data[i].doc_attention+"</span>";
+						s+="<span class='iconfont icon-guanzhu1 i-color'></span><span class='icon-title'>"+data[i].doc_hot+"</span>";
+					}
+					doclist.innerHTML = s;
+					},'json'
+				);
 					
+				//批量监听医生列表点击
+				mui('#doclist').on('tap', '.mui-table-view-cell', function() {
+					var doc_id = this.getAttribute('id');
+					mui.openWindow({
+						url:'/finddoctor/docHP.html',   
+					    id:'docHP',
+					    extras:{
+					    	doc_id:doc_id
+					    },
+					    show:{
+					    	autoShow:false,  									
+					    	event:'loaded',//页面显示时机，默认为titleUpdate事件时显示
+						},
+						waiting:{
+							autoShow:true,
+						}
+					});
+				}); 
+				
 					
-					
-				});
+			});
 
 	</script>
 	</body>

@@ -26,18 +26,36 @@ class UserController extends Controller{
 				$res['result']=0;
 				$res['data']="该手机号已经被注册";
 			}else{
-				//注册融云token
-				$appKey = 'c9kqb3rdcvq4j';
-				$appSecret = 'usuKQXzEY2';
-				$RongCloud = new \Im\RongCloud($appKey,$appSecret);
-				// 获取 Token 方法
-				$rongyun = $RongCloud->user()->getToken($data['user_phone'], 'username', 'http://www.rongcloud.cn/images/logo.png');
-				$rongyun = json_decode($rongyun,1);
-				$data['im_token'] = $rongyun['token'];
-				//写入数据库
-				$addres=$model->add($data);
-				$res['result']=1;
-				$res['data']="恭喜注册成功";
+				//判断验证码是否正确
+				$jieguo = M('user_yzm')
+				         ->where(array(
+				            'user_phone' => array('eq', $_POST['user_phone']),
+				            'user_yzm' => array('eq', $_POST['user_yzm'])
+				         ))
+				         ->select();
+				
+				if(ceil((time() - strtotime($jieguo['yzm_time']))/(60*60))>=5){
+					$res['result']=0;
+					$res['data']="该验证码已过期，请重新获取";
+				}
+				
+				if(!$jieguo){
+					$res['result']=0;
+					$res['data']="请输入正确验证码";
+				}else{
+					//注册融云token
+					$appKey = 'c9kqb3rdcvq4j';
+					$appSecret = 'usuKQXzEY2';
+					$RongCloud = new \Im\RongCloud($appKey,$appSecret);
+					// 获取 Token 方法
+					$rongyun = $RongCloud->user()->getToken($data['user_phone'], 'username', 'http://www.rongcloud.cn/images/logo.png');
+					$rongyun = json_decode($rongyun,1);
+					$data['im_token'] = $rongyun['token'];
+					//写入数据库
+					$addres=$model->add($data);
+					$res['result']=1;
+					$res['data']="恭喜注册成功";
+				}
 			}
 		}
 

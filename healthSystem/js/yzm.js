@@ -12,6 +12,7 @@ function PhoneMobile() {
 function verificationMobile() {
     var btn = document.getElementById('code');
     btn.onclick = function() {
+    	alert(1);
         var sleep = 60,
             interval = null;
         PhoneMobile();
@@ -42,7 +43,7 @@ function verificationMobile() {
 }
 //验证码请求
 function CallAction() {
-    var data = 你的数据请求连接;
+    var data = "你的数据请求连接";
     $.ajax({
         async: true,
         url: '网站连接',

@@ -33,4 +33,14 @@ return array(
 
     /*过滤设置*/
     'DEFAULT_FILTER'      => 'trim,htmlspecialchars',
+    
+	//验证码配置
+	'SMS_CONFIG'			=>array(
+		//验证码
+		'BASE_URL' => 'https://api.miaodiyun.com/20150822/',
+		'ACCOUNT_SID' => '931f6a288e714fb6a1fbee598cb20f4c', 
+		'AUTH_TOKEN' => '9f61022dc82b43728dbbe00279f8ad2d',
+		'CONTENT_TYPE' => 'application/x-www-form-urlencoded',
+		'ACCEPT' => 'application/json',
+	),
 );
