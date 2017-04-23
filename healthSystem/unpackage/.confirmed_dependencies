@@ -37,7 +37,9 @@
 			"img/jiankang.jpeg",
 			"css/iconfont_foot.css",
 			"js/common.js",
-			"js/mui.min.js"
+			"js/mui.min.js",
+			"fonts/iconfont_money.ttf",
+			"fonts/iconfont_foot.ttf"
 		],
 		"refer": [
 			"finddoctor/search_doctor.html",

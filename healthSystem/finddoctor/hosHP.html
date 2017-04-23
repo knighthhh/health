@@ -104,6 +104,28 @@
 				    	self.show('fade-in',500);
             		},'json');
             		
+            		//科室批量监听
+            		mui('#depalist').on('tap', '.box-a-l', function() {
+						var dep_id = this.getAttribute('id');
+						mui.openWindow({
+							url:'officeHP.html',   
+						    id:'officeHP',
+						    extras:{
+						    	hos_id:hos_id,
+						    	dep_id:dep_id
+						    },
+						    show:{
+						    	aniShow: 'pop-in'
+							},
+							styles: {
+								popGesture: 'hide'
+							},
+							waiting:{
+								autoShow:true
+							}
+						});
+					}); 
+            		
             		//去这里按钮监听事件
             		var gohereButton = document.getElementById("gohere");
             		gohereButton.addEventListener('tap',function(){
@@ -160,46 +182,46 @@
 	<p class="box-c-p">- 科室-</p>
 	</div>
 		
-	<div class="box-a">
-		    <div class="box-a-l">
-		    		<span class="iconfont icon-1 tu-yi"></span>
-		    		<p >妇产科</p>
-		    	</div>
-		    	<div class="box-a-l">
-		    		<span class="iconfont icon-guke_iconx-copy tu-er"></span>
-		    		<p>骨科</p>
-		    	</div>
-		    	<div class="box-a-l">
-		    		<span class="iconfont icon-neike tu-san"></span>
-		    		<p>内科</p>
-		    	</div>
-		    	<div class="box-a-l">
-		    		<span class="iconfont icon-pifuke tu-si"></span>
-		    		<p>皮肤科</p>
-		    	</div>
-		    	<div class="box-a-l">
-		    		<span class="iconfont icon-yanke1 tu-wu"></span>
-		    		<p>眼科</p>
-		    	</div>
-		    	<div class="box-a-l">
-		    		<span class="iconfont icon-color tu-liu"></span>
-		    		<p>外科</p>
-		    	</div>
-		    	<div class="box-a-l">
-		    		<span class="iconfont icon-color1 tu-qi"></span>
-		    		<p>儿科</p>
-		    	</div>
-		    	<div class="box-a-l">
-		    		<span class="iconfont icon-circle-more tu-ba"></span>
-		    		<p>更多</p>
-		    	</div>
+	<div id="depalist" class="box-a">
+    	<div id="5" class="box-a-l">
+    		<span class="iconfont icon-1 tu-yi"></span>
+    		<p >妇产科</p>
+    	</div>
+    	<div id="3"  class="box-a-l">
+    		<span class="iconfont icon-guke_iconx-copy tu-er"></span>
+    		<p>骨科</p>
+    	</div>
+    	<div id="2" class="box-a-l">
+    		<span class="iconfont icon-neike tu-san"></span>
+    		<p>内科</p>
+    	</div>
+    	<div id="11" class="box-a-l">
+    		<span class="iconfont icon-pifuke tu-si"></span>
+    		<p>皮肤科</p>
+    	</div>
+    	<div id="14" class="box-a-l">
+    		<span class="iconfont icon-yanke1 tu-wu"></span>
+    		<p>眼科</p>
+    	</div>
+    	<div id="1" class="box-a-l">
+    		<span class="iconfont icon-color tu-liu"></span>
+    		<p>外科</p>
+    	</div>
+    	<div id="12" class="box-a-l">
+    		<span class="iconfont icon-color1 tu-qi"></span>
+    		<p>儿科</p>
+    	</div>
+    	<div id=" " class="box-a-l">
+    		<span class="iconfont icon-circle-more tu-ba"></span>
+    		<p>更多</p>
+    	</div>
 	</div>	
 	
 	
 		<div class="mui-card-footer" >
 			<button type="button" id="gohere" class="mui-btn public-color mui-pull-left" style="color: #FFFFFF;margin-left: 20%;">去这里</button>
 			<!--调用地图模块-->
-			<button type="button" class="mui-btn public-color mui-pull-right" style="color: #FFFFFF;margin-right: 20% ;">去哪儿</button>
+			<button type="button" class="mui-btn public-color mui-pull-right" style="color: #FFFFFF;margin-right: 20% ;">关注</button>
 		</div>
 		
 	</body>

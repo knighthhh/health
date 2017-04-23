@@ -22,12 +22,12 @@
 </style>
 </head>
 <body>
-<form method="post" action="/health/management/application/index.php/Admin/User/listUser" id="listform">
+<form method="post" action="/health/management/Application/index.php/Admin/User/listUser" id="listform">
   <div class="panel admin-panel">
     <div class="panel-head"><strong class="icon-reorder"> 内容列表</strong></div>
     <div class="padding border-bottom">
       <ul class="search" style="padding-left:10px;">
-        <li> <a class="button border-green icon-plus-square-o" href="/health/management/application/index.php/Admin/User/add"> 添加用户</a> </li>
+        <li> <a class="button border-green icon-plus-square-o" href="/health/management/Application/index.php/Admin/User/add"> 添加用户</a> </li>
         <li>搜索：</li>
         <li>首页
           <select name="s_ishome" class="input" onchange="changesearch()" style="width:60px; line-height:17px; display:inline-block">
@@ -74,9 +74,9 @@
           <td><?php echo $v['user_time']; ?></td>
           <td><div class="button-group">
           <a class="button border-green" style="cursor:pointer" onclick="showDialog(<?php echo $v['user_id']; ?>)"><span class="icon-view-o"></span> 查看</a>
-          <a class="button border-main" href="/health/management/application/index.php/Admin/User/edit/user_id/<?php echo $v['user_id']; ?>"><span class="icon-edit"></span> 修改</a> 
+          <a class="button border-main" href="/health/management/Application/index.php/Admin/User/edit/user_id/<?php echo $v['user_id']; ?>"><span class="icon-edit"></span> 修改</a> 
           <a class="button border-red" style="cursor:pointer" onclick="del(<?php echo $v['user_id']; ?>)"><span class="icon-trash-o"></span> 删除</a>
-          <a class="button border-green" href="/health/management/application/index.php/Admin/User/edit/user_id/<?php echo $v['user_id']; ?>"><span class="icon-view-o"></span> 健康档案</a>
+          <a class="button border-green" href="/health/management/Application/index.php/Admin/User/edit/user_id/<?php echo $v['user_id']; ?>"><span class="icon-view-o"></span> 健康档案</a>
           </div></td>
           <td colspan="0">
           	<!-- 详情页面 -->
@@ -197,7 +197,7 @@ function showDialog(id) {
 //单个删除
 function del(user_id){
 	if(confirm("您确定要删除吗?")){
-		window.location="/health/management/application/index.php/Admin/User/delete/user_id/"+user_id;
+		window.location="/health/management/Application/index.php/Admin/User/delete/user_id/"+user_id;
 	}
 }
 
