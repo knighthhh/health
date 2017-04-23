@@ -117,18 +117,33 @@ class HealthController extends Controller
                     if ($v['error'] == 0) {
                         $ret = uploadOne($k, $dir);
                         if ($dir == "checkImg") {
-                            $checkModel->add(array(
+                            $a = $checkModel->add(array(
                                 'seecase_id'     => $seecase_id,
                                 'check_img_path' => $ret['images'][0],
                                 'time'           => date('Y-m-d H:i:s'),
                             ));
+                            if($a==false){
+                                echo "文件上传失败";die;
+                            }
                         }
                         if ($dir == "pageImg") {
-                            $pageModel->add(array(
+                            $a = $pageModel->add(array(
                                 'seecase_id'    => $seecase_id,
                                 'page_img_path' => $ret['images'][0],
                                 'time'          => date('Y-m-d H:i:s'),
                             ));
+                            if($a==false){
+                                echo "文件上传失败";die;
+                            }
+                        }
+                    }elseif($v['error']>0){
+                        echo '上传错误：';
+                        switch ($v['error']){
+                            case 1: die('上传文件过大');
+                            case 2: die('上传文件过大HTML');
+                            case 3: die('文件部分上传');
+                            case 4: die('没有上传文件');
+                            default: die('未知错误');
                         }
                     }
                 }
@@ -171,6 +186,10 @@ class HealthController extends Controller
                     $dir = substr($k, 0, -1);
                     if ($v['error'] == 0) {
                         $ret = uploadOne($k, $dir);
+                        if($ret['ok']==0){
+                            echo $ret['error'];
+                            die;
+                        }
                         if ($dir == "checkImg") {
                             /*删除原来的图片*/
                             $oldPath = $checkModel->field("check_img_path")->where(array(
@@ -180,11 +199,14 @@ class HealthController extends Controller
                             $checkModel->where(array(
                                 'seecase_id' => array('eq',$seecase_id)
                                 ))->delete();
-                            $checkModel->add(array(
+                            $a = $checkModel->add(array(
                                 'seecase_id'     => $seecase_id,
                                 'check_img_path' => $ret['images'][0],
                                 'time'           => date('Y-m-d H:i:s'),
                             ));
+                            if($a==false){
+                                echo "文件上传失败";die;
+                            }
                         }
                         if ($dir == "pageImg") {
                             /*删除原来的图片*/
@@ -195,11 +217,23 @@ class HealthController extends Controller
                             $pageModel->where(array(
                                 'seecase_id' => array('eq',$seecase_id)
                                 ))->delete();
-                            $pageModel->add(array(
+                            $a = $pageModel->add(array(
                                 'seecase_id'    => $seecase_id,
                                 'page_img_path' => $ret['images'][0],
                                 'time'          => date('Y-m-d H:i:s'),
                             ));
+                            if($a==false){
+                                echo "文件上传失败";die;
+                            }
+                        }
+                    }elseif($v['error']>0){
+                        echo '上传错误：';
+                        switch ($v['error']){
+                            case 1: die('上传文件过大');
+                            case 2: die('上传文件过大HTML');
+                            case 3: die('文件部分上传');
+                            case 4: die('没有上传文件');
+                            default: die('未知错误');
                         }
                     }
                 }

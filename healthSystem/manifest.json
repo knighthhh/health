@@ -405,7 +405,8 @@
 					"healthfile/Health_record.html",
 					"healthfile/Friends_file.html",
 					"healthfile/know_contents.html",
-					"healthfile/medDiary2.html"
+					"healthfile/medDiary2.html",
+					"healthfile/Family_history.html"
 				],
 				"priority": 0
 			},
@@ -826,7 +827,9 @@
 			"mine/follow.html": {
 				"resources": [
 					"js/mui.min.js",
-					"css/mui.min.css"
+					"css/mui.min.css",
+					"fonts/iconfont_account.ttf",
+					"css/iconfont_account.css"
 				],
 				"refer": [],
 				"priority": 0
@@ -875,14 +878,21 @@
 				],
 				"refer": [
 					"healthfile/myfile_health_edit.html",
-					"healthfile/myfile_live_edit.html"
+					"healthfile/myfile_live_edit.html",
+					"healthfile/myfile_person_edit.html"
 				],
 				"priority": 0
 			},
 			"healthfile/Health_record.html": {
 				"resources": [
 					"js/mui.min.js",
-					"css/mui.min.css"
+					"css/mui.min.css",
+					"fonts/iconfont_health_record.ttf",
+					"js/mui.picker.min.js",
+					"css/heathfile.css",
+					"css/iconfont_health_record.css",
+					"css/mui.calendar.css",
+					"fonts/mui.ttf"
 				],
 				"refer": [],
 				"priority": 0
@@ -961,17 +971,6 @@
 				"resources": [
 					"js/mui.min.js",
 					"css/mui.min.css",
-					"css/heathfile.css",
-					"fonts/mui.ttf",
-					"css/heathfile.css"
-				],
-				"refer": [],
-				"priority": 0
-			},
-			"healthfile/Friends_file.html": {
-				"resources": [
-					"js/mui.min.js",
-					"css/mui.min.css",
 					"img/inquiry.jpg",
 					"css/heathfile.css"
 				],
@@ -1001,7 +1000,8 @@
 					"js/arttmpl.js",
 					"img/finddoctor.jpg",
 					"im/%3C%\u003d(item.content)%%3E",
-					"js/im.js"
+					"js/im.js",
+					"js/common.js"
 				],
 				"refer": [],
 				"priority": 0
@@ -1015,6 +1015,26 @@
 					"js/common.js",
 					"fonts/mui.ttf",
 					"css/mui.min.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"healthfile/know_contents.html": {
+				"resources": [
+					"css/find_doctor.css",
+					"js/mui.min.js",
+					"css/app.css",
+					"fonts/mui.ttf",
+					"css/mui.min.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"healthfile/Family_history.html": {
+				"resources": [
+					"js/mui.min.js",
+					"css/mui.min.css",
+					"css/heathfile.css"
 				],
 				"refer": [],
 				"priority": 0

@@ -4,6 +4,7 @@ namespace Connector\Controller;
 use Think\Controller;
 class UserController extends Controller{
 	public function reg(){
+		
 		if(!$_POST['user_phone']||!$_POST['user_password']) {
 			$res['result']=0;
 			$res['data']="手机号码或者密码不能为空";

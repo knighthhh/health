@@ -50,7 +50,7 @@
 						<input id="page" class="mui-input-clear" placeholder="处方" type="text">
 					</div>
 				</div>
-				<p>上传您的处方信息图片（可选）</p>
+				<p>上传您的处方信息图片（可选：建议小于2M）</p>
 				<!--<div id="" class="add_medicinephoto">
 						<div id="image-list" class="row image-list">
 					</div>-->
@@ -64,7 +64,7 @@
 						<input id="check" class="mui-input-clear" placeholder="处方" type="text">
 					</div>
 				</div>
-				<p>上传您的检查信息图片（可选）</p>
+				<p>上传您的检查信息图片（可选：建议小于2M）</p>
 				<!--<div id="" class="add_medicinephoto">
 						<div id="image-list" class="row image-list">
 					</div>-->
@@ -85,8 +85,6 @@
 			var server = 'http://' + serverName + '/health/management/Application/index.php/Connector/health/uploadHis';
 			var files = [];
 			mui.plusReady(function () {
-			   	var History_todoc = "History_todoc";
-			   	plus.webview.close(History_todoc,"none");
 			})
 			// 上传文件
 			function upload() {
@@ -97,10 +95,9 @@
 					function(t, status) { //上传完成
 						if(status == 200) {
 							plus.nativeUI.toast(t.responseText);
-							var a = plus.webview.create('History_todoc.html','History_todoc',{},{
-									
-								});
-								a.show("pop-in",300);
+							var taskList = plus.webview.getWebviewById('History_todoc');
+					        taskList.reload();
+					        mui.back();
 						} else {
 							//plus.nativeUI.alert("上传失败！");
 						}
@@ -162,10 +159,9 @@
 					},function(data){
 							//console.log(data);
 							plus.nativeUI.toast(data);
-							var a = plus.webview.create('History_todoc.html','History_todoc',{},{
-									
-								});
-							a.show("pop-in",300);
+							var taskList = plus.webview.getWebviewById('History_todoc');
+					        taskList.reload();
+					        mui.back();
 						},'text');
 				}
 				

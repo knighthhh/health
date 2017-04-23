@@ -47,7 +47,7 @@
 					</div>
 				</div>
 				<span style="margin-left: 10px;" id="pageImg"></span>
-				<p>上传您的处方信息图片（可选）</p>
+				<p>上传您的处方信息图片（可选：建议小于2M）</p>
 				<!--<div id="" class="add_medicinephoto">
 						<div id="image-list" class="row image-list">
 					</div>-->
@@ -62,7 +62,7 @@
 					</div>
 				</div>
 				<span style="margin-left: 10px;" id="checkImg"></span>
-				<p>上传您的检查信息图片（可选）</p>
+				<p>上传您的检查信息图片（可选：建议小于2M）</p>
 				<!--<div id="" class="add_medicinephoto">
 						<div id="image-list" class="row image-list">
 					</div>-->
@@ -88,9 +88,6 @@
 			    var self = plus.webview.currentWebview();
 			    var seecase_id = self.seecaseID;
 			    var relative_id = self.relative_id;
-			    var outline_detail = "outline_detail";
-			    //关闭详情页面
-			    plus.webview.close(outline_detail,"none");
 				//列出表单信息
 				mui.get('http://' + serverName + '/health/management/Application/index.php/Connector/health/getHisDetail', {
 					seecase_id: seecase_id
@@ -129,11 +126,9 @@
 						function(t, status) { //上传完成
 							if(status == 200) {
 								plus.nativeUI.toast(t.responseText);
-								var a = plus.webview.create('outline_detail.html','',{},{
-									seecaseID: seecase_id,
-									relative_id: relative_id
-								});
-								a.show("pop-in",300);
+								var taskList = plus.webview.getWebviewById('outline_detail');
+						        taskList.reload();
+						        mui.back();
 							} else {
 								//plus.nativeUI.alert("上传失败！");
 							}
@@ -199,11 +194,9 @@
 						seecase_id:seecase_id
 					},function(data){
 							plus.nativeUI.toast(data);
-							var a = plus.webview.create('outline_detail.html','outline_detail3',{},{
-								seecaseID: seecase_id,
-								relative_id: relative_id
-							});
-							a.show("pop-in",300);
+							var taskList = plus.webview.getWebviewById('outline_detail');
+					        taskList.reload();
+					        mui.back();							
 							//plus.webview.close(self,"none");
 						},'text');
 				}

@@ -194,7 +194,9 @@
 										seecase_id: seecaseID
 									},function(data){
 										plus.nativeUI.toast(data);
-										mui.back();
+										var taskList = plus.webview.getWebviewById('History_todoc');
+								        taskList.reload();
+								        mui.back();
 									},'text'
 								);
 							}else{

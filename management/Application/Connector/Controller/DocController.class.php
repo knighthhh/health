@@ -36,11 +36,11 @@ class DocController extends Controller{
         $i = 0;
         foreach ($data as $k => $v) {
             $firstCharter = mb_substr($v['doc_name'],0,1,'utf8');
-            $number = array(1,2,3,4,5,6,7,8,9,0);
+            //$number = array(1,2,3,4,5,6,7,8,9,0);
             //dump($number);die;
-            if(!in_array($firstCharter,$number)){
-				$firstCharter = getFirstCharter($firstCharter);
-            }
+            //if(!in_array($firstCharter,$number)){
+			$firstCharter = getFirstCharter($firstCharter);
+            //}
             $data[$i]['firstCharter'] = $firstCharter;
             $i++;
         }

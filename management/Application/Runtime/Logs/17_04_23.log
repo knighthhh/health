@@ -1,0 +1,2344 @@
+[ 2017-04-23T11:46:48+08:00 ] 10.77.118.187 /health/management/Application/index.php/Connector/User/login
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.009185s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000030s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000465s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000525s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000035s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.001409s ]
+SQL: SELECT * FROM `user_info` WHERE ( `user_phone` = '12345678912' ) AND ( `user_token` = '62e628dfbf2d4a1cd9f93a2def25c435' ) LIMIT 1   [ RunTime:0.000490s ]
+SQL: UPDATE `user_info` SET `user_token`='86d9526bf933bd2422a72f3bbf2eb960',`token_time`='2017-04-23 11:46:48',`login_time`='2017-04-23 11:46:48' WHERE ( `user_phone` = '12345678912' ) AND ( `user_token` = '62e628dfbf2d4a1cd9f93a2def25c435' ) [ RunTime:0.070505s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000028s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000064s ]
+
+[ 2017-04-23T11:46:49+08:00 ] 10.77.118.187 /health/management/Application/index.php/Connector/User/getKnowList
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000285s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000018s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000031s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000065s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000021s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `health_know` [ RunTime:0.001092s ]
+SQL: SELECT * FROM `health_know`  [ RunTime:0.000368s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000027s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000113s ]
+
+[ 2017-04-23T11:46:50+08:00 ] 10.77.118.187 /health/management/Application/index.php/Home/Index/getHotHos?category=news
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000286s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000031s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000037s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000083s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000034s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `hospital_info` [ RunTime:0.001527s ]
+SQL: SELECT * FROM `hospital_info`  [ RunTime:0.000394s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000030s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000074s ]
+
+[ 2017-04-23T11:46:50+08:00 ] 10.77.118.187 /health/management/Application/index.php/Home/Index/getHotDoc
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000260s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000031s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000036s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000080s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000038s ]
+NOTIC: [2048] Declaration of Admin\Model\DoctorInfoModel::_after_insert() should be compatible with Think\Model::_after_insert($data, $options) D:\xampp\htdocs\health\management\Application\Admin\Model\DoctorInfoModel.class.php 第 7 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `doctor_info` [ RunTime:0.001376s ]
+SQL: SELECT a.*,b.hos_name,c.dep_name FROM doctor_info a LEFT JOIN hospital_info b on a.hos_id=b.hos_id LEFT JOIN department_info c on a.depa_id=c.dep_id  [ RunTime:0.000570s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000026s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000066s ]
+
+[ 2017-04-23T11:46:50+08:00 ] 10.77.118.187 /health/management/Application/index.php/Connector/User/getuserInfo
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000390s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000023s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000034s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000074s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000026s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.001563s ]
+SQL: SELECT * FROM `user_info` WHERE ( `user_phone` = '12345678912' ) LIMIT 1   [ RunTime:0.000406s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000041s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000103s ]
+
+[ 2017-04-23T11:46:56+08:00 ] 10.77.117.237 /health/management/Application/index.php/Connector/User/getKnowList
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000318s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000023s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000035s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000080s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000029s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `health_know` [ RunTime:0.001572s ]
+SQL: SELECT * FROM `health_know`  [ RunTime:0.000499s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000057s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000172s ]
+
+[ 2017-04-23T11:47:58+08:00 ] 10.77.118.187 /health/management/Application/index.php/Connector/Health/getHisRelaName?user_phone=12345678912
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000253s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000021s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000037s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000080s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000033s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.001360s ]
+SQL: SELECT `user_id` FROM `user_info` WHERE ( `user_phone` = '12345678912' ) LIMIT 1   [ RunTime:0.000247s ]
+SQL: SHOW COLUMNS FROM `relative_info` [ RunTime:0.001088s ]
+SQL: SELECT `relative_id`,`relative_name` FROM `relative_info` WHERE ( `user_id` = '10' )  [ RunTime:0.000283s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000025s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000062s ]
+
+[ 2017-04-23T11:47:58+08:00 ] 10.77.118.187 /health/management/Application/index.php/Connector/Health/getHisVis?relative_id=0&user_phone=12345678912
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000263s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000019s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000030s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000067s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000032s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.001327s ]
+SQL: SELECT `user_id` FROM `user_info` WHERE ( `user_phone` = '12345678912' ) LIMIT 1   [ RunTime:0.000240s ]
+SQL: SHOW COLUMNS FROM `see_doc_case` [ RunTime:0.001096s ]
+SQL: SELECT a.* FROM see_doc_case a WHERE ( a.relative_id = '0' ) AND ( a.user_id = '10' )  [ RunTime:0.009672s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000026s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000061s ]
+
+[ 2017-04-23T11:48:02+08:00 ] 10.77.118.187 /health/management/Application/index.php/Connector/Health/getHisDetail?seecase_id=377
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000253s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000018s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000030s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000065s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000023s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `see_doc_case` [ RunTime:0.001243s ]
+SQL: SELECT a.* FROM see_doc_case a WHERE ( a.seecase_id = '377' ) LIMIT 1   [ RunTime:0.000295s ]
+SQL: SHOW COLUMNS FROM `page_img` [ RunTime:0.001026s ]
+SQL: SELECT * FROM `page_img` WHERE ( `seecase_id` = '377' )  [ RunTime:0.000283s ]
+SQL: SHOW COLUMNS FROM `check_img` [ RunTime:0.001023s ]
+SQL: SELECT * FROM `check_img` WHERE ( `seecase_id` = '377' )  [ RunTime:0.000275s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000025s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000060s ]
+
+[ 2017-04-23T11:48:06+08:00 ] 10.77.118.187 /health/management/Application/index.php/Connector/health/getHisDetail?seecase_id=377
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000374s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000027s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000050s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000102s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000037s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `see_doc_case` [ RunTime:0.001261s ]
+SQL: SELECT a.* FROM see_doc_case a WHERE ( a.seecase_id = '377' ) LIMIT 1   [ RunTime:0.000295s ]
+SQL: SHOW COLUMNS FROM `page_img` [ RunTime:0.000999s ]
+SQL: SELECT * FROM `page_img` WHERE ( `seecase_id` = '377' )  [ RunTime:0.000264s ]
+SQL: SHOW COLUMNS FROM `check_img` [ RunTime:0.001021s ]
+SQL: SELECT * FROM `check_img` WHERE ( `seecase_id` = '377' )  [ RunTime:0.000259s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000039s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000084s ]
+
+[ 2017-04-23T11:48:19+08:00 ] 10.77.118.187 /health/management/Application/index.php/Connector/health/getHisDetail?seecase_id=377
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000249s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000018s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000058s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000096s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000022s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `see_doc_case` [ RunTime:0.001209s ]
+SQL: SELECT a.* FROM see_doc_case a WHERE ( a.seecase_id = '377' ) LIMIT 1   [ RunTime:0.000304s ]
+SQL: SHOW COLUMNS FROM `page_img` [ RunTime:0.001039s ]
+SQL: SELECT * FROM `page_img` WHERE ( `seecase_id` = '377' )  [ RunTime:0.000258s ]
+SQL: SHOW COLUMNS FROM `check_img` [ RunTime:0.001052s ]
+SQL: SELECT * FROM `check_img` WHERE ( `seecase_id` = '377' )  [ RunTime:0.000263s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000025s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000061s ]
+
+[ 2017-04-23T11:48:30+08:00 ] 10.77.118.187 /health/management/Application/index.php/Connector/Health/getHisDetail?seecase_id=377
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000222s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000019s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000030s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000064s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000029s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `see_doc_case` [ RunTime:0.001205s ]
+SQL: SELECT a.* FROM see_doc_case a WHERE ( a.seecase_id = '377' ) LIMIT 1   [ RunTime:0.000315s ]
+SQL: SHOW COLUMNS FROM `page_img` [ RunTime:0.001016s ]
+SQL: SELECT * FROM `page_img` WHERE ( `seecase_id` = '377' )  [ RunTime:0.000260s ]
+SQL: SHOW COLUMNS FROM `check_img` [ RunTime:0.001033s ]
+SQL: SELECT * FROM `check_img` WHERE ( `seecase_id` = '377' )  [ RunTime:0.000260s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000025s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000059s ]
+
+[ 2017-04-23T11:48:31+08:00 ] 10.77.118.187 /health/management/Application/index.php/Connector/health/getHisDetail?seecase_id=377
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000219s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000017s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000030s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000062s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000022s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `see_doc_case` [ RunTime:0.001468s ]
+SQL: SELECT a.* FROM see_doc_case a WHERE ( a.seecase_id = '377' ) LIMIT 1   [ RunTime:0.000374s ]
+SQL: SHOW COLUMNS FROM `page_img` [ RunTime:0.001330s ]
+SQL: SELECT * FROM `page_img` WHERE ( `seecase_id` = '377' )  [ RunTime:0.000341s ]
+SQL: SHOW COLUMNS FROM `check_img` [ RunTime:0.001287s ]
+SQL: SELECT * FROM `check_img` WHERE ( `seecase_id` = '377' )  [ RunTime:0.000356s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000044s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000105s ]
+
+[ 2017-04-23T11:48:36+08:00 ] 10.77.118.187 /health/management/Application/index.php/Connector/health/uploadHisEdit
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000224s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000018s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000029s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000062s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000031s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.001401s ]
+SQL: SELECT `user_id` FROM `user_info` WHERE ( `user_phone` = '12345678912' ) LIMIT 1   [ RunTime:0.000254s ]
+SQL: SHOW COLUMNS FROM `see_doc_case` [ RunTime:0.001134s ]
+SQL: UPDATE `see_doc_case` SET `seecase_doc`='111',`seecase_hos`='恭喜你我还',`seecase_depa`='红米',`seecase_info`='',`seecase_sgs`='',`seecase_time`='',`page_info`='',`check_info`='',`relative_id`=0,`user_id`=10,`time`='2017-04-23 11:48:35' WHERE ( `seecase_id` = 377 ) [ RunTime:0.218165s ]
+SQL: SHOW COLUMNS FROM `page_img` [ RunTime:0.001099s ]
+SQL: SHOW COLUMNS FROM `check_img` [ RunTime:0.000919s ]
+NOTIC: [8] Use of undefined constant IS_FILES - assumed 'IS_FILES' D:\xampp\htdocs\health\management\Application\Connector\Controller\HealthController.class.php 第 169 行.
+NOTIC: [8] Use of undefined constant fasle - assumed 'fasle' D:\xampp\htdocs\health\management\Application\Connector\Controller\HealthController.class.php 第 208 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000028s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000064s ]
+
+[ 2017-04-23T11:48:36+08:00 ] 10.77.118.187 /health/management/Application/index.php/Connector/Health/getHisDetail?seecase_id=377
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000223s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000019s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000029s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000062s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000022s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `see_doc_case` [ RunTime:0.001212s ]
+SQL: SELECT a.* FROM see_doc_case a WHERE ( a.seecase_id = '377' ) LIMIT 1   [ RunTime:0.000297s ]
+SQL: SHOW COLUMNS FROM `page_img` [ RunTime:0.001034s ]
+SQL: SELECT * FROM `page_img` WHERE ( `seecase_id` = '377' )  [ RunTime:0.000261s ]
+SQL: SHOW COLUMNS FROM `check_img` [ RunTime:0.001036s ]
+SQL: SELECT * FROM `check_img` WHERE ( `seecase_id` = '377' )  [ RunTime:0.000262s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000025s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000060s ]
+
+[ 2017-04-23T11:48:42+08:00 ] 10.77.118.187 /health/management/Application/index.php/Connector/health/getHisDetail?seecase_id=377
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000224s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000018s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000030s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000075s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000022s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `see_doc_case` [ RunTime:0.001250s ]
+SQL: SELECT a.* FROM see_doc_case a WHERE ( a.seecase_id = '377' ) LIMIT 1   [ RunTime:0.000308s ]
+SQL: SHOW COLUMNS FROM `page_img` [ RunTime:0.001034s ]
+SQL: SELECT * FROM `page_img` WHERE ( `seecase_id` = '377' )  [ RunTime:0.000279s ]
+SQL: SHOW COLUMNS FROM `check_img` [ RunTime:0.001034s ]
+SQL: SELECT * FROM `check_img` WHERE ( `seecase_id` = '377' )  [ RunTime:0.000263s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000026s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000061s ]
+
+[ 2017-04-23T11:48:51+08:00 ] 10.77.118.187 /health/management/Application/index.php/Connector/health/uploadHisEdit
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000242s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000018s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000028s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000066s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000023s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.001531s ]
+SQL: SELECT `user_id` FROM `user_info` WHERE ( `user_phone` = '12345678912' ) LIMIT 1   [ RunTime:0.000291s ]
+SQL: SHOW COLUMNS FROM `see_doc_case` [ RunTime:0.001147s ]
+SQL: UPDATE `see_doc_case` SET `seecase_doc`='111',`seecase_hos`='恭喜你我还',`seecase_depa`='红米',`seecase_info`='',`seecase_sgs`='',`seecase_time`='',`page_info`='',`check_info`='',`user_id`=10,`time`='2017-04-23 11:48:51' WHERE ( `seecase_id` = 377 ) [ RunTime:0.070314s ]
+SQL: SHOW COLUMNS FROM `page_img` [ RunTime:0.001604s ]
+SQL: SHOW COLUMNS FROM `check_img` [ RunTime:0.001464s ]
+NOTIC: [8] Use of undefined constant IS_FILES - assumed 'IS_FILES' D:\xampp\htdocs\health\management\Application\Connector\Controller\HealthController.class.php 第 169 行.
+NOTIC: [8] Use of undefined constant fasle - assumed 'fasle' D:\xampp\htdocs\health\management\Application\Connector\Controller\HealthController.class.php 第 208 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000030s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000069s ]
+
+[ 2017-04-23T11:48:51+08:00 ] 10.77.118.187 /health/management/Application/index.php/Connector/Health/getHisDetail?seecase_id=377
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000251s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000018s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000030s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000064s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000021s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `see_doc_case` [ RunTime:0.001265s ]
+SQL: SELECT a.* FROM see_doc_case a WHERE ( a.seecase_id = '377' ) LIMIT 1   [ RunTime:0.000298s ]
+SQL: SHOW COLUMNS FROM `page_img` [ RunTime:0.001022s ]
+SQL: SELECT * FROM `page_img` WHERE ( `seecase_id` = '377' )  [ RunTime:0.000262s ]
+SQL: SHOW COLUMNS FROM `check_img` [ RunTime:0.001030s ]
+SQL: SELECT * FROM `check_img` WHERE ( `seecase_id` = '377' )  [ RunTime:0.000268s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000025s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000060s ]
+
+[ 2017-04-23T11:49:20+08:00 ] 10.77.118.187 /health/management/Application/index.php/Connector/health/getHisDetail?seecase_id=377
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000297s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000022s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000037s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000081s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000035s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `see_doc_case` [ RunTime:0.005188s ]
+SQL: SELECT a.* FROM see_doc_case a WHERE ( a.seecase_id = '377' ) LIMIT 1   [ RunTime:0.000325s ]
+SQL: SHOW COLUMNS FROM `page_img` [ RunTime:0.001358s ]
+SQL: SELECT * FROM `page_img` WHERE ( `seecase_id` = '377' )  [ RunTime:0.000403s ]
+SQL: SHOW COLUMNS FROM `check_img` [ RunTime:0.001768s ]
+SQL: SELECT * FROM `check_img` WHERE ( `seecase_id` = '377' )  [ RunTime:0.000399s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000044s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000111s ]
+
+[ 2017-04-23T11:49:28+08:00 ] 10.77.118.187 /health/management/Application/index.php/Connector/health/uploadHisEdit
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000276s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000018s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000028s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000066s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000023s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.001338s ]
+SQL: SELECT `user_id` FROM `user_info` WHERE ( `user_phone` = '12345678912' ) LIMIT 1   [ RunTime:0.000256s ]
+SQL: SHOW COLUMNS FROM `see_doc_case` [ RunTime:0.001368s ]
+SQL: UPDATE `see_doc_case` SET `seecase_doc`='111',`seecase_hos`='恭喜你我还',`seecase_depa`='红米',`seecase_info`='',`seecase_sgs`='',`seecase_time`='',`page_info`='',`check_info`='',`user_id`=10,`time`='2017-04-23 11:49:28' WHERE ( `seecase_id` = 377 ) [ RunTime:0.106852s ]
+SQL: SHOW COLUMNS FROM `page_img` [ RunTime:0.001179s ]
+SQL: SHOW COLUMNS FROM `check_img` [ RunTime:0.000991s ]
+NOTIC: [8] Use of undefined constant IS_FILES - assumed 'IS_FILES' D:\xampp\htdocs\health\management\Application\Connector\Controller\HealthController.class.php 第 169 行.
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Upload.class.php 第 167 行.
+SQL: SELECT `page_img_path` FROM `page_img` WHERE ( `seecase_id` = '377' ) LIMIT 1   [ RunTime:0.000333s ]
+SQL: DELETE FROM `page_img` WHERE ( `seecase_id` = '377' ) [ RunTime:0.070217s ]
+SQL: INSERT INTO `page_img` (`seecase_id`,`page_img_path`,`time`) VALUES (377,'pageImg/2017-04-23/58fc24488b515.jpg','2017-04-23 11:49:28') [ RunTime:0.066418s ]
+NOTIC: [8] Use of undefined constant fasle - assumed 'fasle' D:\xampp\htdocs\health\management\Application\Connector\Controller\HealthController.class.php 第 208 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000043s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000092s ]
+
+[ 2017-04-23T11:49:29+08:00 ] 10.77.118.187 /health/management/Application/index.php/Connector/Health/getHisDetail?seecase_id=377
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000250s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000019s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000032s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000068s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000021s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `see_doc_case` [ RunTime:0.001481s ]
+SQL: SELECT a.* FROM see_doc_case a WHERE ( a.seecase_id = '377' ) LIMIT 1   [ RunTime:0.000346s ]
+SQL: SHOW COLUMNS FROM `page_img` [ RunTime:0.001170s ]
+SQL: SELECT * FROM `page_img` WHERE ( `seecase_id` = '377' )  [ RunTime:0.000239s ]
+SQL: SHOW COLUMNS FROM `check_img` [ RunTime:0.001063s ]
+SQL: SELECT * FROM `check_img` WHERE ( `seecase_id` = '377' )  [ RunTime:0.000237s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000027s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000064s ]
+
+[ 2017-04-23T11:49:54+08:00 ] 10.77.118.187 /health/management/Application/index.php/Connector/health/getHisDetail?seecase_id=377
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000256s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000018s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000031s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000065s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000022s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `see_doc_case` [ RunTime:0.001250s ]
+SQL: SELECT a.* FROM see_doc_case a WHERE ( a.seecase_id = '377' ) LIMIT 1   [ RunTime:0.000310s ]
+SQL: SHOW COLUMNS FROM `page_img` [ RunTime:0.001040s ]
+SQL: SELECT * FROM `page_img` WHERE ( `seecase_id` = '377' )  [ RunTime:0.000260s ]
+SQL: SHOW COLUMNS FROM `check_img` [ RunTime:0.001014s ]
+SQL: SELECT * FROM `check_img` WHERE ( `seecase_id` = '377' )  [ RunTime:0.000271s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000026s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000061s ]
+
+[ 2017-04-23T11:50:04+08:00 ] 10.77.118.187 /health/management/Application/index.php/Connector/health/uploadHisEdit
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000333s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000025s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000033s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000075s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000028s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.001420s ]
+SQL: SELECT `user_id` FROM `user_info` WHERE ( `user_phone` = '12345678912' ) LIMIT 1   [ RunTime:0.000230s ]
+SQL: SHOW COLUMNS FROM `see_doc_case` [ RunTime:0.001300s ]
+SQL: UPDATE `see_doc_case` SET `seecase_doc`='111',`seecase_hos`='恭喜你我还',`seecase_depa`='红米',`seecase_info`='',`seecase_sgs`='',`seecase_time`='',`page_info`='',`check_info`='',`user_id`=10,`time`='2017-04-23 11:50:04' WHERE ( `seecase_id` = 377 ) [ RunTime:0.158776s ]
+SQL: SHOW COLUMNS FROM `page_img` [ RunTime:0.001235s ]
+SQL: SHOW COLUMNS FROM `check_img` [ RunTime:0.001140s ]
+NOTIC: [8] Use of undefined constant IS_FILES - assumed 'IS_FILES' D:\xampp\htdocs\health\management\Application\Connector\Controller\HealthController.class.php 第 169 行.
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Upload.class.php 第 167 行.
+SQL: SELECT `page_img_path` FROM `page_img` WHERE ( `seecase_id` = '377' ) LIMIT 1   [ RunTime:0.000349s ]
+SQL: DELETE FROM `page_img` WHERE ( `seecase_id` = '377' ) [ RunTime:0.058065s ]
+SQL: INSERT INTO `page_img` (`seecase_id`,`page_img_path`,`time`) VALUES (377,'pageImg/2017-04-23/58fc246c70c43.jpg','2017-04-23 11:50:04') [ RunTime:0.051610s ]
+NOTIC: [8] Use of undefined constant fasle - assumed 'fasle' D:\xampp\htdocs\health\management\Application\Connector\Controller\HealthController.class.php 第 208 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000029s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000063s ]
+
+[ 2017-04-23T11:50:04+08:00 ] 10.77.118.187 /health/management/Application/index.php/Connector/health/uploadHisEdit
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000311s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000020s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000032s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000075s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000034s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.001329s ]
+SQL: SELECT `user_id` FROM `user_info` WHERE ( `user_phone` = '12345678912' ) LIMIT 1   [ RunTime:0.000239s ]
+SQL: SHOW COLUMNS FROM `see_doc_case` [ RunTime:0.001134s ]
+SQL: UPDATE `see_doc_case` SET `seecase_doc`='111',`seecase_hos`='恭喜你我还',`seecase_depa`='红米',`seecase_info`='',`seecase_sgs`='',`seecase_time`='',`page_info`='',`check_info`='',`user_id`=10,`time`='2017-04-23 11:50:04' WHERE ( `seecase_id` = 377 ) [ RunTime:0.164304s ]
+SQL: SHOW COLUMNS FROM `page_img` [ RunTime:0.001122s ]
+SQL: SHOW COLUMNS FROM `check_img` [ RunTime:0.001347s ]
+NOTIC: [8] Use of undefined constant IS_FILES - assumed 'IS_FILES' D:\xampp\htdocs\health\management\Application\Connector\Controller\HealthController.class.php 第 169 行.
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Upload.class.php 第 167 行.
+SQL: SELECT `page_img_path` FROM `page_img` WHERE ( `seecase_id` = '377' ) LIMIT 1   [ RunTime:0.000352s ]
+SQL: DELETE FROM `page_img` WHERE ( `seecase_id` = '377' ) [ RunTime:0.047135s ]
+SQL: INSERT INTO `page_img` (`seecase_id`,`page_img_path`,`time`) VALUES (377,'pageImg/2017-04-23/58fc246cb8ef1.jpg','2017-04-23 11:50:04') [ RunTime:0.070167s ]
+NOTIC: [8] Use of undefined constant fasle - assumed 'fasle' D:\xampp\htdocs\health\management\Application\Connector\Controller\HealthController.class.php 第 208 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000031s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000070s ]
+
+[ 2017-04-23T11:50:05+08:00 ] 10.77.118.187 /health/management/Application/index.php/Connector/Health/getHisDetail?seecase_id=377
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000305s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000020s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000034s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000074s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000047s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `see_doc_case` [ RunTime:0.001282s ]
+SQL: SELECT a.* FROM see_doc_case a WHERE ( a.seecase_id = '377' ) LIMIT 1   [ RunTime:0.076020s ]
+SQL: SHOW COLUMNS FROM `page_img` [ RunTime:0.001087s ]
+SQL: SELECT * FROM `page_img` WHERE ( `seecase_id` = '377' )  [ RunTime:0.000321s ]
+SQL: SHOW COLUMNS FROM `check_img` [ RunTime:0.001035s ]
+SQL: SELECT * FROM `check_img` WHERE ( `seecase_id` = '377' )  [ RunTime:0.000275s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000026s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000073s ]
+
+[ 2017-04-23T11:50:07+08:00 ] 10.77.118.187 /health/management/Application/index.php/Connector/health/getHisDetail?seecase_id=377
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000242s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000018s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000030s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000063s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000022s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `see_doc_case` [ RunTime:0.001199s ]
+SQL: SELECT a.* FROM see_doc_case a WHERE ( a.seecase_id = '377' ) LIMIT 1   [ RunTime:0.000292s ]
+SQL: SHOW COLUMNS FROM `page_img` [ RunTime:0.001047s ]
+SQL: SELECT * FROM `page_img` WHERE ( `seecase_id` = '377' )  [ RunTime:0.000259s ]
+SQL: SHOW COLUMNS FROM `check_img` [ RunTime:0.001009s ]
+SQL: SELECT * FROM `check_img` WHERE ( `seecase_id` = '377' )  [ RunTime:0.000268s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000026s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000059s ]
+
+[ 2017-04-23T11:50:16+08:00 ] 10.77.118.187 /health/management/Application/index.php/Connector/health/uploadHisEdit
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000222s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000033s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000030s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000070s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000026s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.001445s ]
+SQL: SELECT `user_id` FROM `user_info` WHERE ( `user_phone` = '12345678912' ) LIMIT 1   [ RunTime:0.000268s ]
+SQL: SHOW COLUMNS FROM `see_doc_case` [ RunTime:0.001183s ]
+SQL: UPDATE `see_doc_case` SET `seecase_doc`='111',`seecase_hos`='恭喜你我还',`seecase_depa`='红米',`seecase_info`='',`seecase_sgs`='',`seecase_time`='',`page_info`='',`check_info`='',`user_id`=10,`time`='2017-04-23 11:50:16' WHERE ( `seecase_id` = 377 ) [ RunTime:0.055210s ]
+SQL: SHOW COLUMNS FROM `page_img` [ RunTime:0.001100s ]
+SQL: SHOW COLUMNS FROM `check_img` [ RunTime:0.001186s ]
+NOTIC: [8] Use of undefined constant IS_FILES - assumed 'IS_FILES' D:\xampp\htdocs\health\management\Application\Connector\Controller\HealthController.class.php 第 169 行.
+NOTIC: [8] Use of undefined constant fasle - assumed 'fasle' D:\xampp\htdocs\health\management\Application\Connector\Controller\HealthController.class.php 第 208 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000027s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000062s ]
+
+[ 2017-04-23T11:50:16+08:00 ] 10.77.118.187 /health/management/Application/index.php/Connector/Health/getHisDetail?seecase_id=377
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000281s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000018s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000030s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000065s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000022s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `see_doc_case` [ RunTime:0.001183s ]
+SQL: SELECT a.* FROM see_doc_case a WHERE ( a.seecase_id = '377' ) LIMIT 1   [ RunTime:0.000294s ]
+SQL: SHOW COLUMNS FROM `page_img` [ RunTime:0.001001s ]
+SQL: SELECT * FROM `page_img` WHERE ( `seecase_id` = '377' )  [ RunTime:0.000257s ]
+SQL: SHOW COLUMNS FROM `check_img` [ RunTime:0.000993s ]
+SQL: SELECT * FROM `check_img` WHERE ( `seecase_id` = '377' )  [ RunTime:0.000263s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000025s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000060s ]
+
+[ 2017-04-23T11:53:41+08:00 ] 10.77.118.187 /health/management/Application/index.php/Connector/health/getHisDetail?seecase_id=377
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000258s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000018s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000061s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000132s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000026s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `see_doc_case` [ RunTime:0.001319s ]
+SQL: SELECT a.* FROM see_doc_case a WHERE ( a.seecase_id = '377' ) LIMIT 1   [ RunTime:0.000319s ]
+SQL: SHOW COLUMNS FROM `page_img` [ RunTime:0.001036s ]
+SQL: SELECT * FROM `page_img` WHERE ( `seecase_id` = '377' )  [ RunTime:0.000272s ]
+SQL: SHOW COLUMNS FROM `check_img` [ RunTime:0.001028s ]
+SQL: SELECT * FROM `check_img` WHERE ( `seecase_id` = '377' )  [ RunTime:0.000260s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000025s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000061s ]
+
+[ 2017-04-23T11:53:48+08:00 ] 10.77.118.187 /health/management/Application/index.php/Connector/health/uploadHisEdit
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000258s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000030s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000029s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000067s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000023s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.001332s ]
+SQL: SELECT `user_id` FROM `user_info` WHERE ( `user_phone` = '12345678912' ) LIMIT 1   [ RunTime:0.000244s ]
+SQL: SHOW COLUMNS FROM `see_doc_case` [ RunTime:0.001131s ]
+SQL: UPDATE `see_doc_case` SET `seecase_doc`='111',`seecase_hos`='恭喜你我还',`seecase_depa`='红米',`seecase_info`='',`seecase_sgs`='',`seecase_time`='',`page_info`='',`check_info`='',`user_id`=10,`time`='2017-04-23 11:53:48' WHERE ( `seecase_id` = 377 ) [ RunTime:0.085485s ]
+SQL: SHOW COLUMNS FROM `page_img` [ RunTime:0.001211s ]
+SQL: SHOW COLUMNS FROM `check_img` [ RunTime:0.000990s ]
+NOTIC: [8] Use of undefined constant IS_FILES - assumed 'IS_FILES' D:\xampp\htdocs\health\management\Application\Connector\Controller\HealthController.class.php 第 169 行.
+NOTIC: [8] Use of undefined constant fasle - assumed 'fasle' D:\xampp\htdocs\health\management\Application\Connector\Controller\HealthController.class.php 第 212 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000043s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000101s ]
+
+[ 2017-04-23T11:53:49+08:00 ] 10.77.118.187 /health/management/Application/index.php/Connector/Health/getHisDetail?seecase_id=377
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000236s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000030s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000029s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000062s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000021s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `see_doc_case` [ RunTime:0.001215s ]
+SQL: SELECT a.* FROM see_doc_case a WHERE ( a.seecase_id = '377' ) LIMIT 1   [ RunTime:0.000298s ]
+SQL: SHOW COLUMNS FROM `page_img` [ RunTime:0.001029s ]
+SQL: SELECT * FROM `page_img` WHERE ( `seecase_id` = '377' )  [ RunTime:0.000260s ]
+SQL: SHOW COLUMNS FROM `check_img` [ RunTime:0.001328s ]
+SQL: SELECT * FROM `check_img` WHERE ( `seecase_id` = '377' )  [ RunTime:0.000325s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000027s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000060s ]
+
+[ 2017-04-23T11:55:04+08:00 ] 10.77.118.187 /health/management/Application/index.php/Connector/health/getHisDetail?seecase_id=377
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000332s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000021s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000036s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000080s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000023s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `see_doc_case` [ RunTime:0.001291s ]
+SQL: SELECT a.* FROM see_doc_case a WHERE ( a.seecase_id = '377' ) LIMIT 1   [ RunTime:0.000303s ]
+SQL: SHOW COLUMNS FROM `page_img` [ RunTime:0.001016s ]
+SQL: SELECT * FROM `page_img` WHERE ( `seecase_id` = '377' )  [ RunTime:0.000277s ]
+SQL: SHOW COLUMNS FROM `check_img` [ RunTime:0.001210s ]
+SQL: SELECT * FROM `check_img` WHERE ( `seecase_id` = '377' )  [ RunTime:0.000288s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000025s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000060s ]
+
+[ 2017-04-23T11:55:11+08:00 ] 10.77.118.187 /health/management/Application/index.php/Connector/health/uploadHisEdit
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000257s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000033s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000030s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000068s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000025s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.001977s ]
+SQL: SELECT `user_id` FROM `user_info` WHERE ( `user_phone` = '12345678912' ) LIMIT 1   [ RunTime:0.000455s ]
+SQL: SHOW COLUMNS FROM `see_doc_case` [ RunTime:0.001831s ]
+SQL: UPDATE `see_doc_case` SET `seecase_doc`='111',`seecase_hos`='恭喜你我还',`seecase_depa`='红米',`seecase_info`='',`seecase_sgs`='',`seecase_time`='',`page_info`='',`check_info`='',`user_id`=10,`time`='2017-04-23 11:55:11' WHERE ( `seecase_id` = 377 ) [ RunTime:0.090371s ]
+SQL: SHOW COLUMNS FROM `page_img` [ RunTime:0.001195s ]
+SQL: SHOW COLUMNS FROM `check_img` [ RunTime:0.001043s ]
+NOTIC: [8] Use of undefined constant IS_FILES - assumed 'IS_FILES' D:\xampp\htdocs\health\management\Application\Connector\Controller\HealthController.class.php 第 169 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000028s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000067s ]
+
+[ 2017-04-23T11:55:11+08:00 ] 10.77.118.187 /health/management/Application/index.php/Connector/Health/getHisDetail?seecase_id=377
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000226s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000018s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000040s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000076s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000021s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `see_doc_case` [ RunTime:0.001243s ]
+SQL: SELECT a.* FROM see_doc_case a WHERE ( a.seecase_id = '377' ) LIMIT 1   [ RunTime:0.000292s ]
+SQL: SHOW COLUMNS FROM `page_img` [ RunTime:0.001067s ]
+SQL: SELECT * FROM `page_img` WHERE ( `seecase_id` = '377' )  [ RunTime:0.000367s ]
+SQL: SHOW COLUMNS FROM `check_img` [ RunTime:0.001114s ]
+SQL: SELECT * FROM `check_img` WHERE ( `seecase_id` = '377' )  [ RunTime:0.000273s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000026s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000061s ]
+
+[ 2017-04-23T12:00:01+08:00 ] 10.77.118.187 /health/management/Application/index.php/Connector/health/getHisDetail?seecase_id=377
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000282s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000017s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000030s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000066s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000022s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `see_doc_case` [ RunTime:0.046074s ]
+SQL: SELECT a.* FROM see_doc_case a WHERE ( a.seecase_id = '377' ) LIMIT 1   [ RunTime:0.000325s ]
+SQL: SHOW COLUMNS FROM `page_img` [ RunTime:0.001037s ]
+SQL: SELECT * FROM `page_img` WHERE ( `seecase_id` = '377' )  [ RunTime:0.000267s ]
+SQL: SHOW COLUMNS FROM `check_img` [ RunTime:0.000984s ]
+SQL: SELECT * FROM `check_img` WHERE ( `seecase_id` = '377' )  [ RunTime:0.000260s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000025s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000061s ]
+
+[ 2017-04-23T12:08:53+08:00 ] 10.77.118.187 /health/management/Application/index.php/Connector/User/reg
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000278s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000018s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000030s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000066s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000022s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.005207s ]
+SQL: SELECT * FROM `user_info` WHERE ( `user_phone` = '15811643691' ) LIMIT 1   [ RunTime:0.000425s ]
+SQL: INSERT INTO `user_info` (`user_phone`,`user_password`,`user_name`,`user_time`,`user_img`,`im_token`) VALUES ('15811643691','e10adc3949ba59abbe56e057f20f883e','4Cwhs3','2017-04-23 12:08:52','User/user_img.png',0) [ RunTime:0.237519s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000027s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000061s ]
+
+[ 2017-04-23T12:09:03+08:00 ] 10.77.118.187 /health/management/Application/index.php/Connector/User/login
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000505s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000040s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000066s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000152s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000053s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.002942s ]
+SQL: SELECT * FROM `user_info` WHERE ( `user_phone` = '15811643691' ) AND ( `user_password` = 'e10adc3949ba59abbe56e057f20f883e' ) LIMIT 1   [ RunTime:0.000826s ]
+SQL: UPDATE `user_info` SET `user_token`='2e1e63e2dac3aa99f6df46904019a549',`token_time`='2017-04-23 12:09:03',`login_time`='2017-04-23 12:09:03' WHERE ( `user_phone` = '15811643691' ) AND ( `user_password` = 'e10adc3949ba59abbe56e057f20f883e' ) [ RunTime:0.087321s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000029s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000066s ]
+
+[ 2017-04-23T12:09:04+08:00 ] 10.77.118.187 /health/management/Application/index.php/Connector/User/getuserInfo
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000469s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000045s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000036s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000081s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000036s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.001773s ]
+SQL: SELECT * FROM `user_info` WHERE ( `user_phone` = '15811643691' ) LIMIT 1   [ RunTime:0.000423s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000037s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000088s ]
+
+[ 2017-04-23T12:12:35+08:00 ] 10.77.117.237 /health/management/Application/index.php/Admin/index/index
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000729s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000024s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000038s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000087s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000051s ]
+INFO: [ view_begin ] --START--
+INFO: [ view_begin ] --END-- [ RunTime:0.000017s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000059s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000114s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.043993s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.044043s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000010s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000040s ]
+INFO: [ view_end ] --START--
+INFO: [ view_end ] --END-- [ RunTime:0.000012s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000023s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000051s ]
+
+[ 2017-04-23T12:12:35+08:00 ] 10.77.117.237 /health/management/Application/index.php/Admin/index/main.html
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000434s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000022s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000058s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000135s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000052s ]
+INFO: [ view_begin ] --START--
+INFO: [ view_begin ] --END-- [ RunTime:0.000025s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000050s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000119s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.020573s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020665s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000019s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000080s ]
+INFO: [ view_end ] --START--
+INFO: [ view_end ] --END-- [ RunTime:0.000024s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000046s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000104s ]
+
+[ 2017-04-23T12:12:48+08:00 ] 10.77.117.237 /health/management/Application/index.php/Connector/User/reg
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000280s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000018s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000030s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000068s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000023s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.001578s ]
+NOTIC: [8] Undefined index: user_password D:\xampp\htdocs\health\management\Application\Connector\Controller\UserController.class.php 第 10 行.
+SQL: INSERT INTO `user_info` (`user_phone`,`user_password`,`user_name`,`user_time`,`user_img`,`im_token`) VALUES (15768653949,'d41d8cd98f00b204e9800998ecf8427e','ebhIRv','2017-04-23 12:12:48','User/user_img.png',0) [ RunTime:0.066922s ]
+ERR: 1062:Duplicate entry '15768653949' for key 'user_phone'
+ [ SQL语句 ] : INSERT INTO `user_info` (`user_phone`,`user_password`,`user_name`,`user_time`,`user_img`,`im_token`) VALUES (15768653949,'d41d8cd98f00b204e9800998ecf8427e','ebhIRv','2017-04-23 12:12:48','User/user_img.png',0)
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000045s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000096s ]
+
+[ 2017-04-23T12:13:21+08:00 ] 10.77.117.237 /health/management/Application/index.php/Connector/User/reg
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000769s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000103s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000034s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000074s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000022s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.002625s ]
+NOTIC: [8] Undefined index: user_password D:\xampp\htdocs\health\management\Application\Connector\Controller\UserController.class.php 第 10 行.
+SQL: INSERT INTO `user_info` (`user_phone`,`user_password`,`user_name`,`user_time`,`user_img`,`im_token`) VALUES (15768653949,'d41d8cd98f00b204e9800998ecf8427e','J74V2E','2017-04-23 12:13:21','User/user_img.png',0) [ RunTime:0.051722s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000034s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000076s ]
+
+[ 2017-04-23T12:14:20+08:00 ] 10.77.117.237 /health/management/Application/index.php/Connector/User/reg
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000380s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000019s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000034s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000075s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000059s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.003065s ]
+NOTIC: [8] Undefined index: user_password D:\xampp\htdocs\health\management\Application\Connector\Controller\UserController.class.php 第 10 行.
+SQL: INSERT INTO `user_info` (`user_phone`,`user_password`,`user_name`,`user_time`,`user_img`,`im_token`) VALUES (15768653949,'d41d8cd98f00b204e9800998ecf8427e','EuJDRz','2017-04-23 12:14:20','User/user_img.png',0) [ RunTime:0.093981s ]
+ERR: 1062:Duplicate entry '15768653949' for key 'user_phone'
+ [ SQL语句 ] : INSERT INTO `user_info` (`user_phone`,`user_password`,`user_name`,`user_time`,`user_img`,`im_token`) VALUES (15768653949,'d41d8cd98f00b204e9800998ecf8427e','EuJDRz','2017-04-23 12:14:20','User/user_img.png',0)
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000028s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000063s ]
+
+[ 2017-04-23T12:16:19+08:00 ] 10.77.117.237 /health/management/Application/index.php/Connector/User/reg
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000379s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000018s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000033s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000071s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000028s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.001618s ]
+NOTIC: [8] Undefined index: user_password D:\xampp\htdocs\health\management\Application\Connector\Controller\UserController.class.php 第 10 行.
+SQL: INSERT INTO `user_info` (`user_phone`,`user_password`,`user_name`,`user_time`,`user_img`,`im_token`) VALUES (15768653949,'d41d8cd98f00b204e9800998ecf8427e','GEVcAI','2017-04-23 12:16:18','User/user_img.png',0) [ RunTime:0.088571s ]
+ERR: 1062:Duplicate entry '15768653949' for key 'user_phone'
+ [ SQL语句 ] : INSERT INTO `user_info` (`user_phone`,`user_password`,`user_name`,`user_time`,`user_img`,`im_token`) VALUES (15768653949,'d41d8cd98f00b204e9800998ecf8427e','GEVcAI','2017-04-23 12:16:18','User/user_img.png',0)
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000039s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000075s ]
+
+[ 2017-04-23T12:17:44+08:00 ] 10.77.117.237 /health/management/Application/index.php/Connector/User/reg
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000259s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000018s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000031s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000070s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000022s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.001361s ]
+NOTIC: [8] Undefined index: user_password D:\xampp\htdocs\health\management\Application\Connector\Controller\UserController.class.php 第 10 行.
+SQL: INSERT INTO `user_info` (`user_phone`,`user_password`,`user_name`,`user_time`,`user_img`,`im_token`) VALUES (15768653949,'d41d8cd98f00b204e9800998ecf8427e','jtpPyC','2017-04-23 12:17:44','User/user_img.png',8) [ RunTime:0.193234s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000031s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000071s ]
+
+[ 2017-04-23T12:18:20+08:00 ] 10.77.117.237 /health/management/Application/index.php/Connector/User/reg
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000316s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000020s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000042s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000101s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000057s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.001634s ]
+NOTIC: [8] Undefined index: user_password D:\xampp\htdocs\health\management\Application\Connector\Controller\UserController.class.php 第 10 行.
+SQL: INSERT INTO `user_info` (`user_phone`,`user_password`,`user_name`,`user_time`,`user_img`,`im_token`) VALUES (15768653949,'d41d8cd98f00b204e9800998ecf8427e','p54XPn','2017-04-23 12:18:20','User/user_img.png','H9QxcU0W7IjUdoBamgZuY0eCMLfsJdG7DU8H1ybxjweIGYfROLLh8lB0RZGinWKemyltMzz9Radf2m3mYT4DE+uvA+FKV/yo') [ RunTime:0.074414s ]
+ERR: 1062:Duplicate entry '15768653949' for key 'user_phone'
+ [ SQL语句 ] : INSERT INTO `user_info` (`user_phone`,`user_password`,`user_name`,`user_time`,`user_img`,`im_token`) VALUES (15768653949,'d41d8cd98f00b204e9800998ecf8427e','p54XPn','2017-04-23 12:18:20','User/user_img.png','H9QxcU0W7IjUdoBamgZuY0eCMLfsJdG7DU8H1ybxjweIGYfROLLh8lB0RZGinWKemyltMzz9Radf2m3mYT4DE+uvA+FKV/yo')
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000029s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000064s ]
+
+[ 2017-04-23T12:18:38+08:00 ] 10.77.117.237 /health/management/Application/index.php/Connector/User/reg
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000307s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000021s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000037s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000080s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000026s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.002253s ]
+NOTIC: [8] Undefined index: user_password D:\xampp\htdocs\health\management\Application\Connector\Controller\UserController.class.php 第 10 行.
+SQL: INSERT INTO `user_info` (`user_phone`,`user_password`,`user_name`,`user_time`,`user_img`,`im_token`) VALUES (15768653949,'d41d8cd98f00b204e9800998ecf8427e','2FKmnG','2017-04-23 12:18:38','User/user_img.png','viMC4ibkqx+vAd8Dvt6PeQw5f5aZvT5xw3JgzbRIqa+L76gWTUeroxadvUq+d8arMLGFONZxDV5heLBgh/qFnirMlwiWMyPM') [ RunTime:0.166106s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000030s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000077s ]
+
+[ 2017-04-23T12:20:07+08:00 ] 10.77.118.187 /health/management/Application/index.php/Connector/Health/getHisVis?relative_id=4&user_phone=12345678912
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000280s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000017s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000032s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000069s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000022s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.001366s ]
+SQL: SELECT `user_id` FROM `user_info` WHERE ( `user_phone` = '12345678912' ) LIMIT 1   [ RunTime:0.000258s ]
+SQL: SHOW COLUMNS FROM `see_doc_case` [ RunTime:0.001450s ]
+SQL: SELECT a.* FROM see_doc_case a WHERE ( a.relative_id = '4' ) AND ( a.user_id = '10' )  [ RunTime:0.000367s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000025s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000059s ]
+
+[ 2017-04-23T12:20:10+08:00 ] 10.77.118.187 /health/management/Application/index.php/Connector/Health/getHisVis?relative_id=0&user_phone=12345678912
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000387s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000027s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000050s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000104s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000028s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.001577s ]
+SQL: SELECT `user_id` FROM `user_info` WHERE ( `user_phone` = '12345678912' ) LIMIT 1   [ RunTime:0.000236s ]
+SQL: SHOW COLUMNS FROM `see_doc_case` [ RunTime:0.001209s ]
+SQL: SELECT a.* FROM see_doc_case a WHERE ( a.relative_id = '0' ) AND ( a.user_id = '10' )  [ RunTime:0.000386s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000027s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000065s ]
+
+[ 2017-04-23T12:20:23+08:00 ] 10.77.118.187 /health/management/Application/index.php/Connector/Health/getHisDetail?seecase_id=359
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000254s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000018s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000031s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000065s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000021s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `see_doc_case` [ RunTime:0.001240s ]
+SQL: SELECT a.* FROM see_doc_case a WHERE ( a.seecase_id = '359' ) LIMIT 1   [ RunTime:0.000291s ]
+SQL: SHOW COLUMNS FROM `page_img` [ RunTime:0.001089s ]
+SQL: SELECT * FROM `page_img` WHERE ( `seecase_id` = '359' )  [ RunTime:0.000250s ]
+SQL: SHOW COLUMNS FROM `check_img` [ RunTime:0.001069s ]
+SQL: SELECT * FROM `check_img` WHERE ( `seecase_id` = '359' )  [ RunTime:0.000262s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000025s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000062s ]
+
+[ 2017-04-23T12:20:40+08:00 ] 10.77.118.187 /health/management/Application/index.php/Connector/User/login
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000288s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000019s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000028s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000064s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000021s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.001440s ]
+SQL: SELECT * FROM `user_info` WHERE ( `user_phone` = '15811643691' ) AND ( `user_token` = '2e1e63e2dac3aa99f6df46904019a549' ) LIMIT 1   [ RunTime:0.000389s ]
+SQL: UPDATE `user_info` SET `user_token`='fefd0bd4cabf9f522aa2fb3d47adb185',`token_time`='2017-04-23 12:20:40',`login_time`='2017-04-23 12:20:40' WHERE ( `user_phone` = '15811643691' ) AND ( `user_token` = '2e1e63e2dac3aa99f6df46904019a549' ) [ RunTime:0.092680s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000026s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000059s ]
+
+[ 2017-04-23T12:20:41+08:00 ] 10.77.118.187 /health/management/Application/index.php/Connector/User/getKnowList
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000256s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000019s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000031s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000067s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000023s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `health_know` [ RunTime:0.001130s ]
+SQL: SELECT * FROM `health_know`  [ RunTime:0.061395s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000038s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000079s ]
+
+[ 2017-04-23T12:20:42+08:00 ] 10.77.118.187 /health/management/Application/index.php/Home/Index/getHotHos?category=news
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000294s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000039s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000038s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000083s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000024s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `hospital_info` [ RunTime:0.001214s ]
+SQL: SELECT * FROM `hospital_info`  [ RunTime:0.510478s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000029s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000069s ]
+
+[ 2017-04-23T12:20:42+08:00 ] 10.77.118.187 /health/management/Application/index.php/Home/Index/getHotDoc
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000290s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000022s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000061s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000116s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000037s ]
+NOTIC: [2048] Declaration of Admin\Model\DoctorInfoModel::_after_insert() should be compatible with Think\Model::_after_insert($data, $options) D:\xampp\htdocs\health\management\Application\Admin\Model\DoctorInfoModel.class.php 第 7 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `doctor_info` [ RunTime:0.001305s ]
+SQL: SELECT a.*,b.hos_name,c.dep_name FROM doctor_info a LEFT JOIN hospital_info b on a.hos_id=b.hos_id LEFT JOIN department_info c on a.depa_id=c.dep_id  [ RunTime:0.054641s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000037s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000082s ]
+
+[ 2017-04-23T12:20:42+08:00 ] 10.77.118.187 /health/management/Application/index.php/Connector/User/getuserInfo
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000257s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000019s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000029s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000064s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000041s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.001555s ]
+SQL: SELECT * FROM `user_info` WHERE ( `user_phone` = '15811643691' ) LIMIT 1   [ RunTime:0.000362s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000027s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000063s ]
+
+[ 2017-04-23T12:20:44+08:00 ] 10.77.118.187 /health/management/Application/index.php/Connector/Health/getHisVis?relative_id=0&user_phone=15811643691
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000300s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000020s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000034s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000076s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000022s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.001304s ]
+SQL: SELECT `user_id` FROM `user_info` WHERE ( `user_phone` = '15811643691' ) LIMIT 1   [ RunTime:0.000244s ]
+SQL: SHOW COLUMNS FROM `see_doc_case` [ RunTime:0.001102s ]
+SQL: SELECT a.* FROM see_doc_case a WHERE ( a.relative_id = '0' ) AND ( a.user_id = '12' )  [ RunTime:0.000299s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\xampp\htdocs\health\management\Application\Connector\Controller\HealthController.class.php 第 30 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000025s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000060s ]
+
+[ 2017-04-23T12:20:44+08:00 ] 10.77.118.187 /health/management/Application/index.php/Connector/Health/getHisRelaName?user_phone=15811643691
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000288s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000021s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000047s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000094s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000034s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.001355s ]
+SQL: SELECT `user_id` FROM `user_info` WHERE ( `user_phone` = '15811643691' ) LIMIT 1   [ RunTime:0.000242s ]
+SQL: SHOW COLUMNS FROM `relative_info` [ RunTime:0.001161s ]
+SQL: SELECT `relative_id`,`relative_name` FROM `relative_info` WHERE ( `user_id` = '12' )  [ RunTime:0.000273s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000024s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000057s ]
+
+[ 2017-04-23T12:20:59+08:00 ] 10.77.118.187 /health/management/Application/index.php/Connector/User/login
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000268s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000018s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000029s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000063s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000021s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.001333s ]
+SQL: SELECT * FROM `user_info` WHERE ( `user_phone` = '12345678912' ) AND ( `user_password` = 'e10adc3949ba59abbe56e057f20f883e' ) LIMIT 1   [ RunTime:0.000357s ]
+SQL: UPDATE `user_info` SET `user_token`='5385fae388dbeb8c22a48c0fbcdb5bdf',`token_time`='2017-04-23 12:20:59',`login_time`='2017-04-23 12:20:59' WHERE ( `user_phone` = '12345678912' ) AND ( `user_password` = 'e10adc3949ba59abbe56e057f20f883e' ) [ RunTime:0.107345s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000026s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000059s ]
+
+[ 2017-04-23T12:20:59+08:00 ] 10.77.118.187 /health/management/Application/index.php/Connector/User/getuserInfo
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000251s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000021s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000028s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000063s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000032s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.001290s ]
+SQL: SELECT * FROM `user_info` WHERE ( `user_phone` = '12345678912' ) LIMIT 1   [ RunTime:0.000345s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000026s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000059s ]
+
+[ 2017-04-23T12:21:14+08:00 ] 10.77.118.187 /health/management/Application/index.php/Connector/User/login
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000438s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000028s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000045s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000098s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000029s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.001471s ]
+SQL: SELECT * FROM `user_info` WHERE ( `user_phone` = '12345678912' ) AND ( `user_token` = '5385fae388dbeb8c22a48c0fbcdb5bdf' ) LIMIT 1   [ RunTime:0.000404s ]
+SQL: UPDATE `user_info` SET `user_token`='418802f1171b8b297ef8acf3a1b9e394',`token_time`='2017-04-23 12:21:14',`login_time`='2017-04-23 12:21:14' WHERE ( `user_phone` = '12345678912' ) AND ( `user_token` = '5385fae388dbeb8c22a48c0fbcdb5bdf' ) [ RunTime:0.081577s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000026s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000058s ]
+
+[ 2017-04-23T12:21:15+08:00 ] 10.77.118.187 /health/management/Application/index.php/Connector/User/getKnowList
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000258s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000018s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000031s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000065s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000021s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `health_know` [ RunTime:0.001317s ]
+SQL: SELECT * FROM `health_know`  [ RunTime:0.000430s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000029s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000077s ]
+
+[ 2017-04-23T12:21:16+08:00 ] 10.77.118.187 /health/management/Application/index.php/Home/Index/getHotHos?category=news
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000298s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000021s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000034s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000076s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000027s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `hospital_info` [ RunTime:0.001268s ]
+SQL: SELECT * FROM `hospital_info`  [ RunTime:0.000326s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000029s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000074s ]
+
+[ 2017-04-23T12:21:16+08:00 ] 10.77.118.187 /health/management/Application/index.php/Home/Index/getHotDoc
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000380s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000028s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000050s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000123s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000035s ]
+NOTIC: [2048] Declaration of Admin\Model\DoctorInfoModel::_after_insert() should be compatible with Think\Model::_after_insert($data, $options) D:\xampp\htdocs\health\management\Application\Admin\Model\DoctorInfoModel.class.php 第 7 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `doctor_info` [ RunTime:0.001297s ]
+SQL: SELECT a.*,b.hos_name,c.dep_name FROM doctor_info a LEFT JOIN hospital_info b on a.hos_id=b.hos_id LEFT JOIN department_info c on a.depa_id=c.dep_id  [ RunTime:0.000519s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000043s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000093s ]
+
+[ 2017-04-23T12:21:16+08:00 ] 10.77.118.187 /health/management/Application/index.php/Connector/User/getuserInfo
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000266s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000018s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000031s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000065s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000021s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.001324s ]
+SQL: SELECT * FROM `user_info` WHERE ( `user_phone` = '12345678912' ) LIMIT 1   [ RunTime:0.000338s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000024s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000057s ]
+
+[ 2017-04-23T12:21:17+08:00 ] 10.77.118.187 /health/management/Application/index.php/Connector/Health/getHisRelaName?user_phone=12345678912
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000300s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000028s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000048s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000103s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000024s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.001339s ]
+SQL: SELECT `user_id` FROM `user_info` WHERE ( `user_phone` = '12345678912' ) LIMIT 1   [ RunTime:0.000263s ]
+SQL: SHOW COLUMNS FROM `relative_info` [ RunTime:0.001112s ]
+SQL: SELECT `relative_id`,`relative_name` FROM `relative_info` WHERE ( `user_id` = '10' )  [ RunTime:0.052139s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000031s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000073s ]
+
+[ 2017-04-23T12:21:17+08:00 ] 10.77.118.187 /health/management/Application/index.php/Connector/Health/getHisVis?relative_id=0&user_phone=12345678912
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000384s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000020s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000037s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000087s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000035s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.001372s ]
+SQL: SELECT `user_id` FROM `user_info` WHERE ( `user_phone` = '12345678912' ) LIMIT 1   [ RunTime:0.000245s ]
+SQL: SHOW COLUMNS FROM `see_doc_case` [ RunTime:0.001149s ]
+SQL: SELECT a.* FROM see_doc_case a WHERE ( a.relative_id = '0' ) AND ( a.user_id = '10' )  [ RunTime:0.000371s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000025s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000060s ]
+
+[ 2017-04-23T12:22:42+08:00 ] 10.77.117.237 /health/management/Application/index.php/Connector/User/getKnowList
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000401s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000023s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000055s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000133s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000034s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `health_know` [ RunTime:0.001616s ]
+SQL: SELECT * FROM `health_know`  [ RunTime:0.000368s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000035s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000103s ]
+
+[ 2017-04-23T12:23:01+08:00 ] 10.77.118.187 /health/management/Application/index.php/Connector/Hos/getHos
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000292s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000022s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000037s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000077s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000038s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `hospital_info` [ RunTime:0.001611s ]
+SQL: SELECT * FROM `hospital_info`  [ RunTime:0.000303s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000027s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000066s ]
+
+[ 2017-04-23T12:23:10+08:00 ] 10.77.118.187 /health/management/Application/index.php/Connector/Hos/getHos
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000255s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000018s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000031s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000065s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000031s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `hospital_info` [ RunTime:0.001208s ]
+SQL: SELECT * FROM `hospital_info`  [ RunTime:0.000299s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000026s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000060s ]
+
+[ 2017-04-23T12:23:37+08:00 ] 10.77.118.187 /health/management/Application/index.php/Connector/Sick/getSick
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000251s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000018s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000030s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000066s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000035s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `department_info` [ RunTime:0.001240s ]
+SQL: SHOW COLUMNS FROM `illness` [ RunTime:0.001218s ]
+SQL: SELECT * FROM `department_info` WHERE ( `parent_id` = 0 )  [ RunTime:0.000326s ]
+SQL: SELECT * FROM `department_info`  [ RunTime:0.000234s ]
+SQL: SELECT * FROM `department_info`  [ RunTime:0.000268s ]
+SQL: SELECT * FROM `department_info`  [ RunTime:0.000232s ]
+SQL: SELECT * FROM `department_info`  [ RunTime:0.000232s ]
+SQL: SELECT * FROM `department_info`  [ RunTime:0.000237s ]
+SQL: SELECT * FROM `illness` WHERE ( `two_depa_id` = '6' )  [ RunTime:0.017217s ]
+SQL: SELECT * FROM `illness` WHERE ( `two_depa_id` = '7' )  [ RunTime:0.000227s ]
+SQL: SELECT * FROM `illness` WHERE ( `two_depa_id` = '8' )  [ RunTime:0.000153s ]
+SQL: SELECT * FROM `illness` WHERE ( `two_depa_id` = '9' )  [ RunTime:0.000147s ]
+SQL: SELECT * FROM `illness` WHERE ( `two_depa_id` = '11' )  [ RunTime:0.000199s ]
+SQL: SELECT * FROM `illness` WHERE ( `two_depa_id` = '13' )  [ RunTime:0.000160s ]
+SQL: SELECT * FROM `illness` WHERE ( `two_depa_id` = '12' )  [ RunTime:0.000150s ]
+SQL: SELECT * FROM `illness` WHERE ( `two_depa_id` = '14' )  [ RunTime:0.000158s ]
+SQL: SELECT * FROM `illness` WHERE ( `two_depa_id` = '10' )  [ RunTime:0.000142s ]
+SQL: SELECT * FROM `illness` WHERE ( `two_depa_id` = '15' )  [ RunTime:0.000143s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000028s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000063s ]
+
+[ 2017-04-23T12:28:49+08:00 ] 10.77.118.187 /health/management/Application/index.php/Connector/Health/getHisDetail?seecase_id=377
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000284s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000018s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000032s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000067s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000024s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `see_doc_case` [ RunTime:0.005171s ]
+SQL: SELECT a.* FROM see_doc_case a WHERE ( a.seecase_id = '377' ) LIMIT 1   [ RunTime:0.000324s ]
+SQL: SHOW COLUMNS FROM `page_img` [ RunTime:0.001033s ]
+SQL: SELECT * FROM `page_img` WHERE ( `seecase_id` = '377' )  [ RunTime:0.000290s ]
+SQL: SHOW COLUMNS FROM `check_img` [ RunTime:0.001127s ]
+SQL: SELECT * FROM `check_img` WHERE ( `seecase_id` = '377' )  [ RunTime:0.000277s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000025s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000059s ]
+
+[ 2017-04-23T12:28:52+08:00 ] 10.77.118.187 /health/management/Application/index.php/Connector/health/getHisDetail?seecase_id=377
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000331s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000031s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000040s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000092s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000033s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `see_doc_case` [ RunTime:0.001214s ]
+SQL: SELECT a.* FROM see_doc_case a WHERE ( a.seecase_id = '377' ) LIMIT 1   [ RunTime:0.000298s ]
+SQL: SHOW COLUMNS FROM `page_img` [ RunTime:0.001011s ]
+SQL: SELECT * FROM `page_img` WHERE ( `seecase_id` = '377' )  [ RunTime:0.000263s ]
+SQL: SHOW COLUMNS FROM `check_img` [ RunTime:0.000987s ]
+SQL: SELECT * FROM `check_img` WHERE ( `seecase_id` = '377' )  [ RunTime:0.000260s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000025s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000060s ]
+
+[ 2017-04-23T12:29:01+08:00 ] 10.77.118.187 /health/management/Application/index.php/Connector/health/uploadHisEdit
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000254s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000018s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000029s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000068s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000023s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.001502s ]
+SQL: SELECT `user_id` FROM `user_info` WHERE ( `user_phone` = '12345678912' ) LIMIT 1   [ RunTime:0.000264s ]
+SQL: SHOW COLUMNS FROM `see_doc_case` [ RunTime:0.001268s ]
+SQL: UPDATE `see_doc_case` SET `seecase_doc`='111',`seecase_hos`='恭喜你我还',`seecase_depa`='红米',`seecase_info`='',`seecase_sgs`='',`seecase_time`='',`page_info`='',`check_info`='',`user_id`=10,`time`='2017-04-23 12:29:01' WHERE ( `seecase_id` = 377 ) [ RunTime:0.109456s ]
+SQL: SHOW COLUMNS FROM `page_img` [ RunTime:0.001154s ]
+SQL: SHOW COLUMNS FROM `check_img` [ RunTime:0.000956s ]
+NOTIC: [8] Use of undefined constant IS_FILES - assumed 'IS_FILES' D:\xampp\htdocs\health\management\Application\Connector\Controller\HealthController.class.php 第 169 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000031s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000073s ]
+
+[ 2017-04-23T12:29:02+08:00 ] 10.77.118.187 /health/management/Application/index.php/Connector/Health/getHisDetail?seecase_id=377
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000256s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000019s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000030s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000066s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000037s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `see_doc_case` [ RunTime:0.001217s ]
+SQL: SELECT a.* FROM see_doc_case a WHERE ( a.seecase_id = '377' ) LIMIT 1   [ RunTime:0.000288s ]
+SQL: SHOW COLUMNS FROM `page_img` [ RunTime:0.001042s ]
+SQL: SELECT * FROM `page_img` WHERE ( `seecase_id` = '377' )  [ RunTime:0.000265s ]
+SQL: SHOW COLUMNS FROM `check_img` [ RunTime:0.001129s ]
+SQL: SELECT * FROM `check_img` WHERE ( `seecase_id` = '377' )  [ RunTime:0.000275s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000025s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000062s ]
+
+[ 2017-04-23T12:29:19+08:00 ] 10.77.118.187 /health/management/Application/index.php/Connector/health/getHisDetail?seecase_id=377
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000250s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000018s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000030s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000065s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000021s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `see_doc_case` [ RunTime:0.001308s ]
+SQL: SELECT a.* FROM see_doc_case a WHERE ( a.seecase_id = '377' ) LIMIT 1   [ RunTime:0.000337s ]
+SQL: SHOW COLUMNS FROM `page_img` [ RunTime:0.001051s ]
+SQL: SELECT * FROM `page_img` WHERE ( `seecase_id` = '377' )  [ RunTime:0.000263s ]
+SQL: SHOW COLUMNS FROM `check_img` [ RunTime:0.001017s ]
+SQL: SELECT * FROM `check_img` WHERE ( `seecase_id` = '377' )  [ RunTime:0.000263s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000025s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000061s ]
+
+[ 2017-04-23T12:37:29+08:00 ] 10.77.118.187 /health/management/Application/index.php/Connector/health/uploadHisEdit
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000280s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000018s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000029s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000067s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000033s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.001435s ]
+SQL: SELECT `user_id` FROM `user_info` WHERE ( `user_phone` = '12345678912' ) LIMIT 1   [ RunTime:0.000272s ]
+SQL: SHOW COLUMNS FROM `see_doc_case` [ RunTime:0.001231s ]
+SQL: UPDATE `see_doc_case` SET `seecase_doc`='111',`seecase_hos`='恭喜你我还',`seecase_depa`='红米',`seecase_info`='',`seecase_sgs`='',`seecase_time`='',`page_info`='',`check_info`='',`user_id`=10,`time`='2017-04-23 12:37:29' WHERE ( `seecase_id` = 377 ) [ RunTime:0.106968s ]
+SQL: SHOW COLUMNS FROM `page_img` [ RunTime:0.001173s ]
+SQL: SHOW COLUMNS FROM `check_img` [ RunTime:0.000974s ]
+NOTIC: [8] Use of undefined constant IS_FILES - assumed 'IS_FILES' D:\xampp\htdocs\health\management\Application\Connector\Controller\HealthController.class.php 第 169 行.
+
+[ 2017-04-23T12:37:30+08:00 ] 10.77.118.187 /health/management/Application/index.php/Connector/Health/getHisDetail?seecase_id=377
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000280s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000018s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000031s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000066s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000021s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `see_doc_case` [ RunTime:0.001586s ]
+SQL: SELECT a.* FROM see_doc_case a WHERE ( a.seecase_id = '377' ) LIMIT 1   [ RunTime:0.000322s ]
+SQL: SHOW COLUMNS FROM `page_img` [ RunTime:0.001059s ]
+SQL: SELECT * FROM `page_img` WHERE ( `seecase_id` = '377' )  [ RunTime:0.000266s ]
+SQL: SHOW COLUMNS FROM `check_img` [ RunTime:0.001011s ]
+SQL: SELECT * FROM `check_img` WHERE ( `seecase_id` = '377' )  [ RunTime:0.000271s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000026s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000059s ]
+
+[ 2017-04-23T12:37:37+08:00 ] 10.77.118.187 /health/management/Application/index.php/Connector/health/getHisDetail?seecase_id=377
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000251s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000018s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000030s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000065s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000024s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `see_doc_case` [ RunTime:0.001352s ]
+SQL: SELECT a.* FROM see_doc_case a WHERE ( a.seecase_id = '377' ) LIMIT 1   [ RunTime:0.000283s ]
+SQL: SHOW COLUMNS FROM `page_img` [ RunTime:0.001066s ]
+SQL: SELECT * FROM `page_img` WHERE ( `seecase_id` = '377' )  [ RunTime:0.000267s ]
+SQL: SHOW COLUMNS FROM `check_img` [ RunTime:0.000997s ]
+SQL: SELECT * FROM `check_img` WHERE ( `seecase_id` = '377' )  [ RunTime:0.000258s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000025s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000059s ]
+
+[ 2017-04-23T12:37:46+08:00 ] 10.77.118.187 /health/management/Application/index.php/Connector/health/uploadHisEdit
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000278s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000018s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000029s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000067s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000024s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.001299s ]
+SQL: SELECT `user_id` FROM `user_info` WHERE ( `user_phone` = '12345678912' ) LIMIT 1   [ RunTime:0.000238s ]
+SQL: SHOW COLUMNS FROM `see_doc_case` [ RunTime:0.001141s ]
+SQL: UPDATE `see_doc_case` SET `seecase_doc`='111',`seecase_hos`='恭喜你我还',`seecase_depa`='红米',`seecase_info`='',`seecase_sgs`='',`seecase_time`='',`page_info`='',`check_info`='',`user_id`=10,`time`='2017-04-23 12:37:45' WHERE ( `seecase_id` = 377 ) [ RunTime:0.104413s ]
+SQL: SHOW COLUMNS FROM `page_img` [ RunTime:0.001127s ]
+SQL: SHOW COLUMNS FROM `check_img` [ RunTime:0.000936s ]
+NOTIC: [8] Use of undefined constant IS_FILES - assumed 'IS_FILES' D:\xampp\htdocs\health\management\Application\Connector\Controller\HealthController.class.php 第 169 行.
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Upload.class.php 第 167 行.
+SQL: SELECT `page_img_path` FROM `page_img` WHERE ( `seecase_id` = '377' ) LIMIT 1   [ RunTime:0.000352s ]
+SQL: DELETE FROM `page_img` WHERE ( `seecase_id` = '377' ) [ RunTime:0.058776s ]
+SQL: INSERT INTO `page_img` (`seecase_id`,`page_img_path`,`time`) VALUES (377,'pageImg/2017-04-23/58fc2f99e9d4a.jpg','2017-04-23 12:37:46') [ RunTime:0.055385s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000031s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000073s ]
+
+[ 2017-04-23T12:37:46+08:00 ] 10.77.118.187 /health/management/Application/index.php/Connector/Health/getHisDetail?seecase_id=377
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000254s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000018s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000040s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000093s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000032s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `see_doc_case` [ RunTime:0.001199s ]
+SQL: SELECT a.* FROM see_doc_case a WHERE ( a.seecase_id = '377' ) LIMIT 1   [ RunTime:0.000301s ]
+SQL: SHOW COLUMNS FROM `page_img` [ RunTime:0.001059s ]
+SQL: SELECT * FROM `page_img` WHERE ( `seecase_id` = '377' )  [ RunTime:0.000267s ]
+SQL: SHOW COLUMNS FROM `check_img` [ RunTime:0.001028s ]
+SQL: SELECT * FROM `check_img` WHERE ( `seecase_id` = '377' )  [ RunTime:0.000259s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000025s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000072s ]
+
+[ 2017-04-23T12:39:32+08:00 ] 10.77.118.187 /health/management/Application/index.php/Connector/health/getHisDetail?seecase_id=377
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000254s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000019s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000030s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000066s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000022s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `see_doc_case` [ RunTime:0.005114s ]
+SQL: SELECT a.* FROM see_doc_case a WHERE ( a.seecase_id = '377' ) LIMIT 1   [ RunTime:0.000325s ]
+SQL: SHOW COLUMNS FROM `page_img` [ RunTime:0.001006s ]
+SQL: SELECT * FROM `page_img` WHERE ( `seecase_id` = '377' )  [ RunTime:0.000264s ]
+SQL: SHOW COLUMNS FROM `check_img` [ RunTime:0.001011s ]
+SQL: SELECT * FROM `check_img` WHERE ( `seecase_id` = '377' )  [ RunTime:0.000267s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000026s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000060s ]
+
+[ 2017-04-23T12:39:49+08:00 ] 10.77.118.187 /health/management/Application/index.php/Connector/health/uploadHisEdit
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000317s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000018s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000028s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000067s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000024s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.001574s ]
+SQL: SELECT `user_id` FROM `user_info` WHERE ( `user_phone` = '12345678912' ) LIMIT 1   [ RunTime:0.000262s ]
+SQL: SHOW COLUMNS FROM `see_doc_case` [ RunTime:0.001145s ]
+SQL: UPDATE `see_doc_case` SET `seecase_doc`='111',`seecase_hos`='恭喜你我还',`seecase_depa`='红米',`seecase_info`='',`seecase_sgs`='',`seecase_time`='',`page_info`='',`check_info`='',`user_id`=10,`time`='2017-04-23 12:39:48' WHERE ( `seecase_id` = 377 ) [ RunTime:0.100488s ]
+SQL: SHOW COLUMNS FROM `page_img` [ RunTime:0.001111s ]
+SQL: SHOW COLUMNS FROM `check_img` [ RunTime:0.000987s ]
+NOTIC: [8] Use of undefined constant IS_FILES - assumed 'IS_FILES' D:\xampp\htdocs\health\management\Application\Connector\Controller\HealthController.class.php 第 169 行.
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Upload.class.php 第 167 行.
+SQL: SELECT `page_img_path` FROM `page_img` WHERE ( `seecase_id` = '377' ) LIMIT 1   [ RunTime:0.000355s ]
+SQL: DELETE FROM `page_img` WHERE ( `seecase_id` = '377' ) [ RunTime:0.049624s ]
+SQL: INSERT INTO `page_img` (`seecase_id`,`page_img_path`,`time`) VALUES (377,'pageImg/2017-04-23/58fc3014de236.jpg','2017-04-23 12:39:48') [ RunTime:0.069723s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000031s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000069s ]
+
+[ 2017-04-23T12:39:49+08:00 ] 10.77.118.187 /health/management/Application/index.php/Connector/Health/getHisDetail?seecase_id=377
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000261s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000018s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000030s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000067s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000021s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `see_doc_case` [ RunTime:0.001209s ]
+SQL: SELECT a.* FROM see_doc_case a WHERE ( a.seecase_id = '377' ) LIMIT 1   [ RunTime:0.000292s ]
+SQL: SHOW COLUMNS FROM `page_img` [ RunTime:0.000995s ]
+SQL: SELECT * FROM `page_img` WHERE ( `seecase_id` = '377' )  [ RunTime:0.000258s ]
+SQL: SHOW COLUMNS FROM `check_img` [ RunTime:0.001035s ]
+SQL: SELECT * FROM `check_img` WHERE ( `seecase_id` = '377' )  [ RunTime:0.000258s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000025s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000060s ]
+
+[ 2017-04-23T12:40:36+08:00 ] 10.77.118.187 /health/management/Application/index.php/Connector/Health/getHisDetail?seecase_id=377
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000229s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000018s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000030s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000063s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000021s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `see_doc_case` [ RunTime:0.001332s ]
+SQL: SELECT a.* FROM see_doc_case a WHERE ( a.seecase_id = '377' ) LIMIT 1   [ RunTime:0.000332s ]
+SQL: SHOW COLUMNS FROM `page_img` [ RunTime:0.001034s ]
+SQL: SELECT * FROM `page_img` WHERE ( `seecase_id` = '377' )  [ RunTime:0.000271s ]
+SQL: SHOW COLUMNS FROM `check_img` [ RunTime:0.001453s ]
+SQL: SELECT * FROM `check_img` WHERE ( `seecase_id` = '377' )  [ RunTime:0.000275s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000028s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000066s ]
+
+[ 2017-04-23T12:40:39+08:00 ] 10.77.118.187 /health/management/Application/index.php/Connector/health/getHisDetail?seecase_id=377
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000223s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000018s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000030s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000064s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000022s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `see_doc_case` [ RunTime:0.001199s ]
+SQL: SELECT a.* FROM see_doc_case a WHERE ( a.seecase_id = '377' ) LIMIT 1   [ RunTime:0.000310s ]
+SQL: SHOW COLUMNS FROM `page_img` [ RunTime:0.001018s ]
+SQL: SELECT * FROM `page_img` WHERE ( `seecase_id` = '377' )  [ RunTime:0.000259s ]
+SQL: SHOW COLUMNS FROM `check_img` [ RunTime:0.000990s ]
+SQL: SELECT * FROM `check_img` WHERE ( `seecase_id` = '377' )  [ RunTime:0.000268s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000026s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000061s ]
+
+[ 2017-04-23T12:45:28+08:00 ] 10.77.118.187 /health/management/Application/index.php/Connector/Health/getHisDetail?seecase_id=377
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000260s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000019s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000031s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000066s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000033s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `see_doc_case` [ RunTime:0.001365s ]
+SQL: SELECT a.* FROM see_doc_case a WHERE ( a.seecase_id = '377' ) LIMIT 1   [ RunTime:0.000323s ]
+SQL: SHOW COLUMNS FROM `page_img` [ RunTime:0.001056s ]
+SQL: SELECT * FROM `page_img` WHERE ( `seecase_id` = '377' )  [ RunTime:0.000272s ]
+SQL: SHOW COLUMNS FROM `check_img` [ RunTime:0.001025s ]
+SQL: SELECT * FROM `check_img` WHERE ( `seecase_id` = '377' )  [ RunTime:0.000333s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000040s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000092s ]
+
+[ 2017-04-23T12:45:30+08:00 ] 10.77.118.187 /health/management/Application/index.php/Connector/health/getHisDetail?seecase_id=377
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000221s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000020s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000030s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000064s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000024s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `see_doc_case` [ RunTime:0.001204s ]
+SQL: SELECT a.* FROM see_doc_case a WHERE ( a.seecase_id = '377' ) LIMIT 1   [ RunTime:0.000295s ]
+SQL: SHOW COLUMNS FROM `page_img` [ RunTime:0.001010s ]
+SQL: SELECT * FROM `page_img` WHERE ( `seecase_id` = '377' )  [ RunTime:0.000257s ]
+SQL: SHOW COLUMNS FROM `check_img` [ RunTime:0.001027s ]
+SQL: SELECT * FROM `check_img` WHERE ( `seecase_id` = '377' )  [ RunTime:0.000313s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000035s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000084s ]
+
+[ 2017-04-23T12:45:37+08:00 ] 10.77.118.187 /health/management/Application/index.php/Connector/health/uploadHisEdit
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000259s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000018s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000028s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000066s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000155s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.001575s ]
+SQL: SELECT `user_id` FROM `user_info` WHERE ( `user_phone` = '12345678912' ) LIMIT 1   [ RunTime:0.000218s ]
+SQL: SHOW COLUMNS FROM `see_doc_case` [ RunTime:0.001171s ]
+SQL: UPDATE `see_doc_case` SET `seecase_doc`='111',`seecase_hos`='恭喜你我还',`seecase_depa`='红米',`seecase_info`='',`seecase_sgs`='',`seecase_time`='',`page_info`='',`check_info`='',`user_id`=10,`time`='2017-04-23 12:45:37' WHERE ( `seecase_id` = 377 ) [ RunTime:0.107067s ]
+SQL: SHOW COLUMNS FROM `page_img` [ RunTime:0.001360s ]
+SQL: SHOW COLUMNS FROM `check_img` [ RunTime:0.001264s ]
+NOTIC: [8] Use of undefined constant IS_FILES - assumed 'IS_FILES' D:\xampp\htdocs\health\management\Application\Connector\Controller\HealthController.class.php 第 169 行.
+
+[ 2017-04-23T12:45:38+08:00 ] 10.77.118.187 /health/management/Application/index.php/Connector/Health/getHisDetail?seecase_id=377
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000228s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000018s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000030s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000063s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000022s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `see_doc_case` [ RunTime:0.001246s ]
+SQL: SELECT a.* FROM see_doc_case a WHERE ( a.seecase_id = '377' ) LIMIT 1   [ RunTime:0.000297s ]
+SQL: SHOW COLUMNS FROM `page_img` [ RunTime:0.001045s ]
+SQL: SELECT * FROM `page_img` WHERE ( `seecase_id` = '377' )  [ RunTime:0.000261s ]
+SQL: SHOW COLUMNS FROM `check_img` [ RunTime:0.001075s ]
+SQL: SELECT * FROM `check_img` WHERE ( `seecase_id` = '377' )  [ RunTime:0.000283s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000026s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000061s ]
+
+[ 2017-04-23T12:46:19+08:00 ] 10.77.118.187 /health/management/Application/index.php/Connector/health/getHisDetail?seecase_id=377
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000269s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000018s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000030s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000064s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000021s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `see_doc_case` [ RunTime:0.001281s ]
+SQL: SELECT a.* FROM see_doc_case a WHERE ( a.seecase_id = '377' ) LIMIT 1   [ RunTime:0.000333s ]
+SQL: SHOW COLUMNS FROM `page_img` [ RunTime:0.001042s ]
+SQL: SELECT * FROM `page_img` WHERE ( `seecase_id` = '377' )  [ RunTime:0.000263s ]
+SQL: SHOW COLUMNS FROM `check_img` [ RunTime:0.001117s ]
+SQL: SELECT * FROM `check_img` WHERE ( `seecase_id` = '377' )  [ RunTime:0.000294s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000025s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000060s ]
+
+[ 2017-04-23T12:46:26+08:00 ] 10.77.118.187 /health/management/Application/index.php/Connector/health/uploadHisEdit
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000250s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000018s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000028s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000063s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000023s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.001338s ]
+SQL: SELECT `user_id` FROM `user_info` WHERE ( `user_phone` = '12345678912' ) LIMIT 1   [ RunTime:0.000246s ]
+SQL: SHOW COLUMNS FROM `see_doc_case` [ RunTime:0.001276s ]
+SQL: UPDATE `see_doc_case` SET `seecase_doc`='111',`seecase_hos`='恭喜你我还',`seecase_depa`='红米',`seecase_info`='',`seecase_sgs`='',`seecase_time`='',`page_info`='',`check_info`='',`user_id`=10,`time`='2017-04-23 12:46:26' WHERE ( `seecase_id` = 377 ) [ RunTime:0.107308s ]
+SQL: SHOW COLUMNS FROM `page_img` [ RunTime:0.001152s ]
+SQL: SHOW COLUMNS FROM `check_img` [ RunTime:0.000994s ]
+NOTIC: [8] Use of undefined constant IS_FILES - assumed 'IS_FILES' D:\xampp\htdocs\health\management\Application\Connector\Controller\HealthController.class.php 第 169 行.
+
+[ 2017-04-23T12:46:27+08:00 ] 10.77.118.187 /health/management/Application/index.php/Connector/Health/getHisDetail?seecase_id=377
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000306s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000021s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000054s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000169s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000022s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `see_doc_case` [ RunTime:0.001234s ]
+SQL: SELECT a.* FROM see_doc_case a WHERE ( a.seecase_id = '377' ) LIMIT 1   [ RunTime:0.000305s ]
+SQL: SHOW COLUMNS FROM `page_img` [ RunTime:0.001012s ]
+SQL: SELECT * FROM `page_img` WHERE ( `seecase_id` = '377' )  [ RunTime:0.000263s ]
+SQL: SHOW COLUMNS FROM `check_img` [ RunTime:0.001023s ]
+SQL: SELECT * FROM `check_img` WHERE ( `seecase_id` = '377' )  [ RunTime:0.000288s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000025s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000060s ]
+
+[ 2017-04-23T12:46:33+08:00 ] 10.77.118.187 /health/management/Application/index.php/Connector/health/getHisDetail?seecase_id=377
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000223s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000018s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000030s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000064s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000021s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `see_doc_case` [ RunTime:0.001336s ]
+SQL: SELECT a.* FROM see_doc_case a WHERE ( a.seecase_id = '377' ) LIMIT 1   [ RunTime:0.000313s ]
+SQL: SHOW COLUMNS FROM `page_img` [ RunTime:0.001054s ]
+SQL: SELECT * FROM `page_img` WHERE ( `seecase_id` = '377' )  [ RunTime:0.000261s ]
+SQL: SHOW COLUMNS FROM `check_img` [ RunTime:0.001007s ]
+SQL: SELECT * FROM `check_img` WHERE ( `seecase_id` = '377' )  [ RunTime:0.000260s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000025s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000060s ]
+
+[ 2017-04-23T12:46:38+08:00 ] 10.77.118.187 /health/management/Application/index.php/Connector/health/uploadHisEdit
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000225s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000018s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000027s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000065s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000023s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.001379s ]
+SQL: SELECT `user_id` FROM `user_info` WHERE ( `user_phone` = '12345678912' ) LIMIT 1   [ RunTime:0.000240s ]
+SQL: SHOW COLUMNS FROM `see_doc_case` [ RunTime:0.001110s ]
+SQL: UPDATE `see_doc_case` SET `seecase_doc`='111',`seecase_hos`='恭喜你我还',`seecase_depa`='红米',`seecase_info`='',`seecase_sgs`='',`seecase_time`='',`page_info`='',`check_info`='',`user_id`=10,`time`='2017-04-23 12:46:38' WHERE ( `seecase_id` = 377 ) [ RunTime:0.060474s ]
+SQL: SHOW COLUMNS FROM `page_img` [ RunTime:0.001156s ]
+SQL: SHOW COLUMNS FROM `check_img` [ RunTime:0.001300s ]
+NOTIC: [8] Use of undefined constant IS_FILES - assumed 'IS_FILES' D:\xampp\htdocs\health\management\Application\Connector\Controller\HealthController.class.php 第 169 行.
+
+[ 2017-04-23T12:46:39+08:00 ] 10.77.118.187 /health/management/Application/index.php/Connector/Health/getHisDetail?seecase_id=377
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000228s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000018s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000031s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000077s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000022s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `see_doc_case` [ RunTime:0.001258s ]
+SQL: SELECT a.* FROM see_doc_case a WHERE ( a.seecase_id = '377' ) LIMIT 1   [ RunTime:0.000293s ]
+SQL: SHOW COLUMNS FROM `page_img` [ RunTime:0.001122s ]
+SQL: SELECT * FROM `page_img` WHERE ( `seecase_id` = '377' )  [ RunTime:0.000269s ]
+SQL: SHOW COLUMNS FROM `check_img` [ RunTime:0.001032s ]
+SQL: SELECT * FROM `check_img` WHERE ( `seecase_id` = '377' )  [ RunTime:0.000278s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000031s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000074s ]
+
+[ 2017-04-23T12:47:31+08:00 ] 10.77.118.187 /health/management/Application/index.php/Connector/health/getHisDetail?seecase_id=377
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000290s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000018s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000033s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000069s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000031s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `see_doc_case` [ RunTime:0.001279s ]
+SQL: SELECT a.* FROM see_doc_case a WHERE ( a.seecase_id = '377' ) LIMIT 1   [ RunTime:0.000307s ]
+SQL: SHOW COLUMNS FROM `page_img` [ RunTime:0.001009s ]
+SQL: SELECT * FROM `page_img` WHERE ( `seecase_id` = '377' )  [ RunTime:0.000285s ]
+SQL: SHOW COLUMNS FROM `check_img` [ RunTime:0.001024s ]
+SQL: SELECT * FROM `check_img` WHERE ( `seecase_id` = '377' )  [ RunTime:0.000259s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000040s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000099s ]
+
+[ 2017-04-23T12:47:39+08:00 ] 10.77.118.187 /health/management/Application/index.php/Connector/health/uploadHisEdit
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000237s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000018s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000027s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000062s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000023s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.001310s ]
+SQL: SELECT `user_id` FROM `user_info` WHERE ( `user_phone` = '12345678912' ) LIMIT 1   [ RunTime:0.000242s ]
+SQL: SHOW COLUMNS FROM `see_doc_case` [ RunTime:0.001144s ]
+SQL: UPDATE `see_doc_case` SET `seecase_doc`='111',`seecase_hos`='恭喜你我还',`seecase_depa`='红米',`seecase_info`='',`seecase_sgs`='',`seecase_time`='',`page_info`='',`check_info`='',`user_id`=10,`time`='2017-04-23 12:47:39' WHERE ( `seecase_id` = 377 ) [ RunTime:0.103534s ]
+SQL: SHOW COLUMNS FROM `page_img` [ RunTime:0.001156s ]
+SQL: SHOW COLUMNS FROM `check_img` [ RunTime:0.001045s ]
+NOTIC: [8] Use of undefined constant IS_FILES - assumed 'IS_FILES' D:\xampp\htdocs\health\management\Application\Connector\Controller\HealthController.class.php 第 169 行.
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Upload.class.php 第 167 行.
+SQL: SELECT `page_img_path` FROM `page_img` WHERE ( `seecase_id` = '377' ) LIMIT 1   [ RunTime:0.000335s ]
+SQL: DELETE FROM `page_img` WHERE ( `seecase_id` = '377' ) [ RunTime:0.060747s ]
+SQL: INSERT INTO `page_img` (`seecase_id`,`page_img_path`,`time`) VALUES (377,'pageImg/2017-04-23/58fc31eb677a5.jpg','2017-04-23 12:47:39') [ RunTime:0.066339s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000031s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000068s ]
+
+[ 2017-04-23T12:47:40+08:00 ] 10.77.118.187 /health/management/Application/index.php/Connector/Health/getHisDetail?seecase_id=377
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000302s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000020s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000030s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000064s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000031s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `see_doc_case` [ RunTime:0.001360s ]
+SQL: SELECT a.* FROM see_doc_case a WHERE ( a.seecase_id = '377' ) LIMIT 1   [ RunTime:0.016374s ]
+SQL: SHOW COLUMNS FROM `page_img` [ RunTime:0.001177s ]
+SQL: SELECT * FROM `page_img` WHERE ( `seecase_id` = '377' )  [ RunTime:0.020917s ]
+SQL: SHOW COLUMNS FROM `check_img` [ RunTime:0.001096s ]
+SQL: SELECT * FROM `check_img` WHERE ( `seecase_id` = '377' )  [ RunTime:0.013600s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000026s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000060s ]
+
+[ 2017-04-23T12:56:53+08:00 ] 10.77.118.187 /health/management/Application/index.php/Connector/health/getHisDetail?seecase_id=377
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000249s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000018s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000030s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000065s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000022s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `see_doc_case` [ RunTime:0.001943s ]
+SQL: SELECT a.* FROM see_doc_case a WHERE ( a.seecase_id = '377' ) LIMIT 1   [ RunTime:0.000325s ]
+SQL: SHOW COLUMNS FROM `page_img` [ RunTime:0.001041s ]
+SQL: SELECT * FROM `page_img` WHERE ( `seecase_id` = '377' )  [ RunTime:0.000272s ]
+SQL: SHOW COLUMNS FROM `check_img` [ RunTime:0.001024s ]
+SQL: SELECT * FROM `check_img` WHERE ( `seecase_id` = '377' )  [ RunTime:0.000257s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000024s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000059s ]
+
+[ 2017-04-23T13:04:46+08:00 ] 10.77.118.187 /health/management/Application/index.php/Connector/Health/getHisDetail?seecase_id=377
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000255s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000017s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000031s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000068s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000021s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `see_doc_case` [ RunTime:0.004999s ]
+SQL: SELECT a.* FROM see_doc_case a WHERE ( a.seecase_id = '377' ) LIMIT 1   [ RunTime:0.000322s ]
+SQL: SHOW COLUMNS FROM `page_img` [ RunTime:0.001050s ]
+SQL: SELECT * FROM `page_img` WHERE ( `seecase_id` = '377' )  [ RunTime:0.000271s ]
+SQL: SHOW COLUMNS FROM `check_img` [ RunTime:0.001071s ]
+SQL: SELECT * FROM `check_img` WHERE ( `seecase_id` = '377' )  [ RunTime:0.000302s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000026s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000060s ]
+
+[ 2017-04-23T13:04:48+08:00 ] 10.77.118.187 /health/management/Application/index.php/Connector/health/getHisDetail?seecase_id=377
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000227s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000018s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000030s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000063s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000020s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `see_doc_case` [ RunTime:0.001226s ]
+SQL: SELECT a.* FROM see_doc_case a WHERE ( a.seecase_id = '377' ) LIMIT 1   [ RunTime:0.000288s ]
+SQL: SHOW COLUMNS FROM `page_img` [ RunTime:0.001008s ]
+SQL: SELECT * FROM `page_img` WHERE ( `seecase_id` = '377' )  [ RunTime:0.000271s ]
+SQL: SHOW COLUMNS FROM `check_img` [ RunTime:0.001254s ]
+SQL: SELECT * FROM `check_img` WHERE ( `seecase_id` = '377' )  [ RunTime:0.000280s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000025s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000059s ]
+
+[ 2017-04-23T13:04:53+08:00 ] 10.77.118.187 /health/management/Application/index.php/Connector/health/uploadHisEdit
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000260s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000018s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000028s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000060s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000020s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.001324s ]
+SQL: SELECT `user_id` FROM `user_info` WHERE ( `user_phone` = '12345678912' ) LIMIT 1   [ RunTime:0.051568s ]
+SQL: SHOW COLUMNS FROM `see_doc_case` [ RunTime:0.001571s ]
+SQL: UPDATE `see_doc_case` SET `seecase_doc`='111',`seecase_hos`='恭喜你我还',`seecase_depa`='红米',`seecase_info`='dhdh',`seecase_sgs`='',`seecase_time`='',`page_info`='',`check_info`='',`relative_id`=0,`user_id`=10,`time`='2017-04-23 13:04:53' WHERE ( `seecase_id` = 377 ) [ RunTime:0.044387s ]
+SQL: SHOW COLUMNS FROM `page_img` [ RunTime:0.001292s ]
+SQL: SHOW COLUMNS FROM `check_img` [ RunTime:0.001588s ]
+NOTIC: [8] Use of undefined constant IS_FILES - assumed 'IS_FILES' D:\xampp\htdocs\health\management\Application\Connector\Controller\HealthController.class.php 第 184 行.
+NOTIC: [8] Use of undefined constant fasle - assumed 'fasle' D:\xampp\htdocs\health\management\Application\Connector\Controller\HealthController.class.php 第 242 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000028s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000062s ]
+
+[ 2017-04-23T13:04:54+08:00 ] 10.77.118.187 /health/management/Application/index.php/Connector/Health/getHisDetail?seecase_id=377
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000400s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000033s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000055s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000121s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000037s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `see_doc_case` [ RunTime:0.001719s ]
+SQL: SELECT a.* FROM see_doc_case a WHERE ( a.seecase_id = '377' ) LIMIT 1   [ RunTime:0.000378s ]
+SQL: SHOW COLUMNS FROM `page_img` [ RunTime:0.001716s ]
+SQL: SELECT * FROM `page_img` WHERE ( `seecase_id` = '377' )  [ RunTime:0.000360s ]
+SQL: SHOW COLUMNS FROM `check_img` [ RunTime:0.001720s ]
+SQL: SELECT * FROM `check_img` WHERE ( `seecase_id` = '377' )  [ RunTime:0.000369s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000040s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000097s ]
+
+[ 2017-04-23T13:05:02+08:00 ] 10.77.118.187 /health/management/Application/index.php/Connector/health/getHisDetail?seecase_id=377
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000223s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000018s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000030s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000061s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000021s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `see_doc_case` [ RunTime:0.001237s ]
+SQL: SELECT a.* FROM see_doc_case a WHERE ( a.seecase_id = '377' ) LIMIT 1   [ RunTime:0.000295s ]
+SQL: SHOW COLUMNS FROM `page_img` [ RunTime:0.001464s ]
+SQL: SELECT * FROM `page_img` WHERE ( `seecase_id` = '377' )  [ RunTime:0.000317s ]
+SQL: SHOW COLUMNS FROM `check_img` [ RunTime:0.001335s ]
+SQL: SELECT * FROM `check_img` WHERE ( `seecase_id` = '377' )  [ RunTime:0.000285s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000028s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000081s ]
+
+[ 2017-04-23T13:05:10+08:00 ] 10.77.118.187 /health/management/Application/index.php/Connector/health/uploadHisEdit
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000355s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000020s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000032s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000097s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000026s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.001403s ]
+SQL: SELECT `user_id` FROM `user_info` WHERE ( `user_phone` = '12345678912' ) LIMIT 1   [ RunTime:0.000255s ]
+SQL: SHOW COLUMNS FROM `see_doc_case` [ RunTime:0.001139s ]
+SQL: UPDATE `see_doc_case` SET `seecase_doc`='111',`seecase_hos`='恭喜你我还',`seecase_depa`='红米',`seecase_info`='dhdh',`seecase_sgs`='',`seecase_time`='',`page_info`='',`check_info`='',`user_id`=10,`time`='2017-04-23 13:05:09' WHERE ( `seecase_id` = 377 ) [ RunTime:0.080551s ]
+SQL: SHOW COLUMNS FROM `page_img` [ RunTime:0.001173s ]
+SQL: SHOW COLUMNS FROM `check_img` [ RunTime:0.001400s ]
+NOTIC: [8] Use of undefined constant IS_FILES - assumed 'IS_FILES' D:\xampp\htdocs\health\management\Application\Connector\Controller\HealthController.class.php 第 184 行.
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Upload.class.php 第 167 行.
+SQL: SELECT `page_img_path` FROM `page_img` WHERE ( `seecase_id` = '377' ) LIMIT 1   [ RunTime:0.000363s ]
+SQL: DELETE FROM `page_img` WHERE ( `seecase_id` = '377' ) [ RunTime:0.054574s ]
+SQL: INSERT INTO `page_img` (`seecase_id`,`page_img_path`,`time`) VALUES (377,'pageImg/2017-04-23/58fc36060fc78.jpeg','2017-04-23 13:05:10') [ RunTime:0.088599s ]
+NOTIC: [8] Use of undefined constant fasle - assumed 'fasle' D:\xampp\htdocs\health\management\Application\Connector\Controller\HealthController.class.php 第 242 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000028s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000062s ]
+
+[ 2017-04-23T13:05:11+08:00 ] 10.77.118.187 /health/management/Application/index.php/Connector/Health/getHisDetail?seecase_id=377
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000253s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000020s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000034s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000068s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000025s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `see_doc_case` [ RunTime:0.001305s ]
+SQL: SELECT a.* FROM see_doc_case a WHERE ( a.seecase_id = '377' ) LIMIT 1   [ RunTime:0.000299s ]
+SQL: SHOW COLUMNS FROM `page_img` [ RunTime:0.001096s ]
+SQL: SELECT * FROM `page_img` WHERE ( `seecase_id` = '377' )  [ RunTime:0.000273s ]
+SQL: SHOW COLUMNS FROM `check_img` [ RunTime:0.001099s ]
+SQL: SELECT * FROM `check_img` WHERE ( `seecase_id` = '377' )  [ RunTime:0.000271s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000025s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000064s ]
+
+[ 2017-04-23T13:05:20+08:00 ] 10.77.118.187 /health/management/Application/index.php/Connector/Health/getHisDetail?seecase_id=2
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000220s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000018s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000028s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000076s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000030s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `see_doc_case` [ RunTime:0.001242s ]
+SQL: SELECT a.* FROM see_doc_case a WHERE ( a.seecase_id = '2' ) LIMIT 1   [ RunTime:0.000291s ]
+SQL: SHOW COLUMNS FROM `page_img` [ RunTime:0.001053s ]
+SQL: SELECT * FROM `page_img` WHERE ( `seecase_id` = '2' )  [ RunTime:0.000257s ]
+SQL: SHOW COLUMNS FROM `check_img` [ RunTime:0.001304s ]
+SQL: SELECT * FROM `check_img` WHERE ( `seecase_id` = '2' )  [ RunTime:0.000272s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000025s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000058s ]
+
+[ 2017-04-23T13:05:24+08:00 ] 10.77.118.187 /health/management/Application/index.php/Connector/health/getHisDetail?seecase_id=2
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000223s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000028s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000035s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000077s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000034s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `see_doc_case` [ RunTime:0.011870s ]
+SQL: SELECT a.* FROM see_doc_case a WHERE ( a.seecase_id = '2' ) LIMIT 1   [ RunTime:0.000314s ]
+SQL: SHOW COLUMNS FROM `page_img` [ RunTime:0.001209s ]
+SQL: SELECT * FROM `page_img` WHERE ( `seecase_id` = '2' )  [ RunTime:0.000305s ]
+SQL: SHOW COLUMNS FROM `check_img` [ RunTime:0.001556s ]
+SQL: SELECT * FROM `check_img` WHERE ( `seecase_id` = '2' )  [ RunTime:0.000279s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000027s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000065s ]
+
+[ 2017-04-23T13:05:31+08:00 ] 10.77.118.187 /health/management/Application/index.php/Connector/Health/getHisDetail?seecase_id=377
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000266s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000018s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000031s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000068s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000021s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `see_doc_case` [ RunTime:0.001304s ]
+SQL: SELECT a.* FROM see_doc_case a WHERE ( a.seecase_id = '377' ) LIMIT 1   [ RunTime:0.000298s ]
+SQL: SHOW COLUMNS FROM `page_img` [ RunTime:0.001048s ]
+SQL: SELECT * FROM `page_img` WHERE ( `seecase_id` = '377' )  [ RunTime:0.000347s ]
+SQL: SHOW COLUMNS FROM `check_img` [ RunTime:0.001226s ]
+SQL: SELECT * FROM `check_img` WHERE ( `seecase_id` = '377' )  [ RunTime:0.000287s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000025s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000060s ]
+
+[ 2017-04-23T13:05:35+08:00 ] 10.77.118.187 /health/management/Application/index.php/Connector/health/getHisDetail?seecase_id=377
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000241s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000018s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000028s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000061s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000022s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `see_doc_case` [ RunTime:0.001261s ]
+SQL: SELECT a.* FROM see_doc_case a WHERE ( a.seecase_id = '377' ) LIMIT 1   [ RunTime:0.000295s ]
+SQL: SHOW COLUMNS FROM `page_img` [ RunTime:0.001055s ]
+SQL: SELECT * FROM `page_img` WHERE ( `seecase_id` = '377' )  [ RunTime:0.000263s ]
+SQL: SHOW COLUMNS FROM `check_img` [ RunTime:0.001055s ]
+SQL: SELECT * FROM `check_img` WHERE ( `seecase_id` = '377' )  [ RunTime:0.000281s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000033s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000088s ]
+
+[ 2017-04-23T13:05:45+08:00 ] 10.77.118.187 /health/management/Application/index.php/Connector/health/uploadHisEdit
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000258s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000021s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000032s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000074s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000025s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.001550s ]
+SQL: SELECT `user_id` FROM `user_info` WHERE ( `user_phone` = '12345678912' ) LIMIT 1   [ RunTime:0.000258s ]
+SQL: SHOW COLUMNS FROM `see_doc_case` [ RunTime:0.001330s ]
+SQL: UPDATE `see_doc_case` SET `seecase_doc`='111',`seecase_hos`='恭喜你我还',`seecase_depa`='红米',`seecase_info`='dhdh',`seecase_sgs`='',`seecase_time`='',`page_info`='hxjxjddjdj',`check_info`='djdjdjdjdj',`relative_id`=0,`user_id`=10,`time`='2017-04-23 13:05:45' WHERE ( `seecase_id` = 377 ) [ RunTime:0.089841s ]
+SQL: SHOW COLUMNS FROM `page_img` [ RunTime:0.001265s ]
+SQL: SHOW COLUMNS FROM `check_img` [ RunTime:0.001129s ]
+NOTIC: [8] Use of undefined constant IS_FILES - assumed 'IS_FILES' D:\xampp\htdocs\health\management\Application\Connector\Controller\HealthController.class.php 第 184 行.
+NOTIC: [8] Use of undefined constant fasle - assumed 'fasle' D:\xampp\htdocs\health\management\Application\Connector\Controller\HealthController.class.php 第 242 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000028s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000066s ]
+
+[ 2017-04-23T13:05:45+08:00 ] 10.77.118.187 /health/management/Application/index.php/Connector/Health/getHisDetail?seecase_id=377
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000332s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000021s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000039s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000076s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000031s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `see_doc_case` [ RunTime:0.001337s ]
+SQL: SELECT a.* FROM see_doc_case a WHERE ( a.seecase_id = '377' ) LIMIT 1   [ RunTime:0.000319s ]
+SQL: SHOW COLUMNS FROM `page_img` [ RunTime:0.001112s ]
+SQL: SELECT * FROM `page_img` WHERE ( `seecase_id` = '377' )  [ RunTime:0.000271s ]
+SQL: SHOW COLUMNS FROM `check_img` [ RunTime:0.001046s ]
+SQL: SELECT * FROM `check_img` WHERE ( `seecase_id` = '377' )  [ RunTime:0.000260s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000024s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000060s ]
+
+[ 2017-04-23T13:06:04+08:00 ] 10.77.118.187 /health/management/Application/index.php/Connector/Health/getHisVis?relative_id=4&user_phone=12345678912
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000264s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000021s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000039s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000078s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000024s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.001649s ]
+SQL: SELECT `user_id` FROM `user_info` WHERE ( `user_phone` = '12345678912' ) LIMIT 1   [ RunTime:0.000288s ]
+SQL: SHOW COLUMNS FROM `see_doc_case` [ RunTime:0.001201s ]
+SQL: SELECT a.* FROM see_doc_case a WHERE ( a.relative_id = '4' ) AND ( a.user_id = '10' )  [ RunTime:0.038528s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000025s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000057s ]
+
+[ 2017-04-23T13:06:09+08:00 ] 10.77.118.187 /health/management/Application/index.php/Connector/Health/getHisVis?relative_id=7&user_phone=12345678912
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000222s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000019s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000028s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000067s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000028s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.001392s ]
+SQL: SELECT `user_id` FROM `user_info` WHERE ( `user_phone` = '12345678912' ) LIMIT 1   [ RunTime:0.000245s ]
+SQL: SHOW COLUMNS FROM `see_doc_case` [ RunTime:0.001274s ]
+SQL: SELECT a.* FROM see_doc_case a WHERE ( a.relative_id = '7' ) AND ( a.user_id = '10' )  [ RunTime:0.000358s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000027s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000064s ]
+
