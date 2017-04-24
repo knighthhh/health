@@ -17,7 +17,8 @@
 			"main/subindex.html",
 			"mine/Mine.html",
 			"healthfile/Health_File.html",
-			"inquiry/Inquiry.html"
+			"inquiry/Inquiry.html",
+			"login/login.html"
 		]
 	},
 	"main/subindex.html": {
@@ -42,9 +43,16 @@
 	"mine/Mine.html": {
 		"resources": [
 			"css/iconfont_mine.css",
-			"fonts/iconfont_mine.ttf"
+			"fonts/iconfont_mine.ttf",
+			"img/doctor.jpeg",
+			"js/common.js",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css"
 		],
-		"refer": []
+		"refer": [
+			"login/login.html"
+		]
 	},
 	"healthfile/Health_File.html": {
 		"resources": [
@@ -82,6 +90,24 @@
 		],
 		"refer": [
 			"healthfile/write_diary.html"
+		]
+	},
+	"login/login.html": {
+		"resources": [
+			"js/common.js",
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"fonts/mui.ttf"
+		],
+		"refer": [
+			"login/reg.html"
+		]
+	},
+	"login/reg.html": {
+		"resources": [
+			"js/common.js",
+			"js/mui.min.js",
+			"css/mui.min.css"
 		]
 	}
 }
