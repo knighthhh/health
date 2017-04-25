@@ -1,0 +1,326 @@
+[ 2017-04-25T11:19:05+08:00 ] 172.17.32.112 /health/management/Application/index.php/Connector/User/getKnowList
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.008020s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000044s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000051s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000151s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000051s ]
+SQL: SHOW COLUMNS FROM `health_know` [ RunTime:0.057519s ]
+SQL: SELECT * FROM `health_know`  [ RunTime:0.024615s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000038s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000094s ]
+
+[ 2017-04-25T11:19:06+08:00 ] 172.17.32.112 /health/management/Application/index.php/Home/Index/getHotHos?category=news
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000438s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000033s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000060s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000157s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000043s ]
+SQL: SHOW COLUMNS FROM `hospital_info` [ RunTime:0.026801s ]
+SQL: SELECT * FROM `hospital_info`  [ RunTime:0.001895s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000040s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000103s ]
+
+[ 2017-04-25T11:19:06+08:00 ] 172.17.32.112 /health/management/Application/index.php/Home/Index/getHotDoc
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000321s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000036s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000047s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000108s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000051s ]
+NOTIC: [2048] Declaration of Admin\Model\DoctorInfoModel::_after_insert() should be compatible with that of Think\Model::_after_insert() D:\WWW\health\management\Application\Admin\Model\DoctorInfoModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `doctor_info` [ RunTime:0.016149s ]
+SQL: SELECT a.*,b.hos_name,c.dep_name FROM doctor_info a LEFT JOIN hospital_info b on a.hos_id=b.hos_id LEFT JOIN department_info c on a.depa_id=c.dep_id  [ RunTime:0.000939s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000041s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000172s ]
+
+[ 2017-04-25T11:21:05+08:00 ] 172.17.32.112 /health/management/Application/index.php/Connector/User/reg
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000327s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000032s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000044s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000100s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000032s ]
+SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.005259s ]
+SQL: SELECT * FROM `user_info` WHERE ( `user_phone` = '15768651576' ) LIMIT 1   [ RunTime:0.000611s ]
+SQL: SHOW COLUMNS FROM `user_yzm` [ RunTime:0.021323s ]
+SQL: SELECT * FROM `user_yzm` WHERE ( `user_phone` = '15768651576' ) AND ( `user_yzm` = '666666' )  [ RunTime:0.000349s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000039s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000097s ]
+
+[ 2017-04-25T11:21:16+08:00 ] 172.17.32.112 /health/management/Application/index.php/Connector/User/reg
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000487s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000058s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000077s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000179s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000057s ]
+SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.006732s ]
+SQL: SELECT * FROM `user_info` WHERE ( `user_phone` = '15768651576' ) LIMIT 1   [ RunTime:0.000774s ]
+SQL: SHOW COLUMNS FROM `user_yzm` [ RunTime:0.004849s ]
+SQL: SELECT * FROM `user_yzm` WHERE ( `user_phone` = '15768651576' ) AND ( `user_yzm` = '666666' )  [ RunTime:0.000529s ]
+NOTIC: [8] Undefined index: yzm_time D:\WWW\health\management\Application\Connector\Controller\UserController.class.php 第 38 行.
+SQL: INSERT INTO `user_info` (`user_phone`,`user_cid`,`user_password`,`user_name`,`user_time`,`user_img`,`im_token`) VALUES ('15768651576','7c165f2b0ef3f3ebd5197f798a9f7117','e10adc3949ba59abbe56e057f20f883e','WbR53i','2017-04-25 11:21:14','User/user_img.png','7NNFmM3JGj16BGOqeP1Bgww5f5aZvT5xw3JgzbRIqa+66NbwxcXwPeGjhhB/vkR+JiSuox2fkbEkuqWCW/novukq+fYO5GtH') [ RunTime:0.035774s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000071s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000186s ]
+
+[ 2017-04-25T11:21:59+08:00 ] 172.17.32.112 /health/management/Application/index.php/Connector/User/reg
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000309s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000038s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000050s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000114s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000036s ]
+SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.004045s ]
+SQL: SELECT * FROM `user_info` WHERE ( `user_phone` = '15768651576' ) LIMIT 1   [ RunTime:0.000555s ]
+SQL: SHOW COLUMNS FROM `user_yzm` [ RunTime:0.003110s ]
+SQL: SELECT * FROM `user_yzm` WHERE ( `user_phone` = '15768651576' ) AND ( `user_yzm` = '666666' )  [ RunTime:0.000303s ]
+NOTIC: [8] Undefined index: yzm_time D:\WWW\health\management\Application\Connector\Controller\UserController.class.php 第 38 行.
+SQL: INSERT INTO `user_info` (`user_phone`,`user_cid`,`user_password`,`user_name`,`user_time`,`user_img`,`im_token`) VALUES ('15768651576','7c165f2b0ef3f3ebd5197f798a9f7117','e10adc3949ba59abbe56e057f20f883e','cuUIQD','2017-04-25 11:21:54','User/user_img.png','AKMeGqP68nBZD5oMAvGKWFJSNIpA9S6EZU7IckO4Zgfiq8cI2KwpUJH04+am+bAw0ZV3W9VG58ywKNt4LG5AuMunCSODhfA6') [ RunTime:0.046044s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000073s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000226s ]
+
+[ 2017-04-25T11:22:29+08:00 ] 172.17.32.112 /health/management/Application/index.php/Connector/User/reg
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000512s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000035s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000043s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000099s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000031s ]
+SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.006918s ]
+SQL: SELECT * FROM `user_info` WHERE ( `user_phone` = '15768651576' ) LIMIT 1   [ RunTime:0.000514s ]
+SQL: SHOW COLUMNS FROM `user_yzm` [ RunTime:0.003013s ]
+SQL: SELECT * FROM `user_yzm` WHERE ( `user_phone` = '15768651576' ) AND ( `user_yzm` = '666665' )  [ RunTime:0.000366s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000040s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000105s ]
+
+[ 2017-04-25T11:25:06+08:00 ] 172.17.32.112 /health/management/Application/index.php/Connector/User/reg
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000621s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000055s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000081s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000186s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000059s ]
+SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.015138s ]
+SQL: SELECT * FROM `user_info` WHERE ( `user_phone` = '15768651576' ) LIMIT 1   [ RunTime:0.001526s ]
+SQL: SHOW COLUMNS FROM `user_yzm` [ RunTime:0.004582s ]
+SQL: SELECT * FROM `user_yzm` WHERE ( `user_phone` = '15768651576' ) AND ( `user_yzm` = '666666' )  [ RunTime:0.000470s ]
+NOTIC: [8] Undefined index: yzm_time D:\WWW\health\management\Application\Connector\Controller\UserController.class.php 第 44 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000072s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000224s ]
+
+[ 2017-04-25T11:25:29+08:00 ] 172.17.32.112 /health/management/Application/index.php/Connector/User/reg
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000282s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000031s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000043s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000095s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000030s ]
+SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.015082s ]
+SQL: SELECT * FROM `user_info` WHERE ( `user_phone` = '15768651576' ) LIMIT 1   [ RunTime:0.000463s ]
+SQL: SHOW COLUMNS FROM `user_yzm` [ RunTime:0.005246s ]
+SQL: SELECT * FROM `user_yzm` WHERE ( `user_phone` = '15768651576' ) AND ( `user_yzm` = '666666' )  [ RunTime:0.000413s ]
+NOTIC: [8] Undefined index: yzm_time D:\WWW\health\management\Application\Connector\Controller\UserController.class.php 第 44 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000037s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000088s ]
+
+[ 2017-04-25T11:25:37+08:00 ] 172.17.32.112 /health/management/Application/index.php/Connector/User/reg
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000550s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000035s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000054s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000129s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000042s ]
+SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.006704s ]
+SQL: SELECT * FROM `user_info` WHERE ( `user_phone` = '15768651576' ) LIMIT 1   [ RunTime:0.000773s ]
+SQL: SHOW COLUMNS FROM `user_yzm` [ RunTime:0.005564s ]
+SQL: SELECT * FROM `user_yzm` WHERE ( `user_phone` = '15768651576' ) AND ( `user_yzm` = '666666' )  [ RunTime:0.000498s ]
+NOTIC: [8] Undefined index: yzm_time D:\WWW\health\management\Application\Connector\Controller\UserController.class.php 第 44 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000071s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000174s ]
+
+[ 2017-04-25T11:26:22+08:00 ] 172.17.32.112 /health/management/Application/index.php/Connector/User/reg
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000251s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000028s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000041s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000094s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000028s ]
+SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.019165s ]
+SQL: SELECT * FROM `user_info` WHERE ( `user_phone` = '15768651576' ) LIMIT 1   [ RunTime:0.000816s ]
+SQL: SHOW COLUMNS FROM `user_yzm` [ RunTime:0.004389s ]
+SQL: SELECT * FROM `user_yzm` WHERE ( `user_phone` = '15768651576' ) AND ( `user_yzm` = '666666' )  [ RunTime:0.000478s ]
+NOTIC: [8] Undefined index: yzm_time D:\WWW\health\management\Application\Connector\Controller\UserController.class.php 第 44 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000071s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000179s ]
+
+[ 2017-04-25T11:26:41+08:00 ] 172.17.32.112 /health/management/Application/index.php/Connector/User/reg
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000301s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000035s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000049s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000112s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000034s ]
+SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.003285s ]
+SQL: SELECT * FROM `user_info` WHERE ( `user_phone` = '15768651576' ) LIMIT 1   [ RunTime:0.000591s ]
+SQL: SHOW COLUMNS FROM `user_yzm` [ RunTime:0.002747s ]
+SQL: SELECT * FROM `user_yzm` WHERE ( `user_phone` = '15768651576' ) AND ( `user_yzm` = '666666' )  [ RunTime:0.000336s ]
+NOTIC: [8] Undefined index: yzm_time D:\WWW\health\management\Application\Connector\Controller\UserController.class.php 第 44 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000040s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000098s ]
+
+[ 2017-04-25T11:28:35+08:00 ] 172.17.32.112 /health/management/Application/index.php/Connector/User/reg
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000395s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000041s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000054s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000124s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000048s ]
+SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.005651s ]
+SQL: SELECT * FROM `user_info` WHERE ( `user_phone` = '15768651576' ) LIMIT 1   [ RunTime:0.000809s ]
+SQL: SHOW COLUMNS FROM `user_yzm` [ RunTime:0.007165s ]
+SQL: SELECT * FROM `user_yzm` WHERE ( `user_phone` = '15768651576' ) AND ( `user_yzm` = '666666' )  [ RunTime:0.000501s ]
+NOTIC: [8] Undefined index: yzm_time D:\WWW\health\management\Application\Connector\Controller\UserController.class.php 第 44 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000070s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000177s ]
+
+[ 2017-04-25T11:28:57+08:00 ] 172.17.32.112 /health/management/Application/index.php/Connector/User/reg
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000498s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000062s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000078s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000182s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000091s ]
+SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.015933s ]
+SQL: SELECT * FROM `user_info` WHERE ( `user_phone` = '15768651576' ) LIMIT 1   [ RunTime:0.000770s ]
+SQL: SHOW COLUMNS FROM `user_yzm` [ RunTime:0.005662s ]
+SQL: SELECT * FROM `user_yzm` WHERE ( `user_phone` = '15768651576' ) AND ( `user_yzm` = '666666' )  [ RunTime:0.000632s ]
+NOTIC: [8] Undefined index: yzm_time D:\WWW\health\management\Application\Connector\Controller\UserController.class.php 第 44 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000070s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000173s ]
+
+[ 2017-04-25T11:29:27+08:00 ] 172.17.32.112 /health/management/Application/index.php/Connector/User/reg
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000266s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000029s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000042s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000095s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000048s ]
+SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.017016s ]
+SQL: SELECT * FROM `user_info` WHERE ( `user_phone` = '15768651576' ) LIMIT 1   [ RunTime:0.000812s ]
+SQL: SHOW COLUMNS FROM `user_yzm` [ RunTime:0.005081s ]
+SQL: SELECT * FROM `user_yzm` WHERE ( `user_phone` = '15768651576' ) AND ( `user_yzm` = '666666' )  [ RunTime:0.000490s ]
+NOTIC: [8] Undefined index: yzm_time D:\WWW\health\management\Application\Connector\Controller\UserController.class.php 第 44 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000068s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000196s ]
+
+[ 2017-04-25T19:18:08+08:00 ] 172.17.32.112 /health/management/Application/index.php/Connector/User/getKnowList
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.007962s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000057s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000106s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000228s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000073s ]
+SQL: SHOW COLUMNS FROM `health_know` [ RunTime:0.024786s ]
+SQL: SELECT * FROM `health_know`  [ RunTime:0.001008s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000048s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000138s ]
+
+[ 2017-04-25T19:18:09+08:00 ] 172.17.32.112 /health/management/Application/index.php/Home/Index/getHotDoc
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000293s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000030s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000049s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000111s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000057s ]
+NOTIC: [2048] Declaration of Admin\Model\DoctorInfoModel::_after_insert() should be compatible with that of Think\Model::_after_insert() D:\WWW\health\management\Application\Admin\Model\DoctorInfoModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `doctor_info` [ RunTime:0.023408s ]
+SQL: SELECT a.*,b.hos_name,c.dep_name FROM doctor_info a LEFT JOIN hospital_info b on a.hos_id=b.hos_id LEFT JOIN department_info c on a.depa_id=c.dep_id  [ RunTime:0.015217s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000042s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000170s ]
+
+[ 2017-04-25T19:18:10+08:00 ] 172.17.32.112 /health/management/Application/index.php/Home/Index/getHotHos?category=news
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000296s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000030s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000045s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000100s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000050s ]
+SQL: SHOW COLUMNS FROM `hospital_info` [ RunTime:0.005258s ]
+SQL: SELECT * FROM `hospital_info`  [ RunTime:0.000642s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000071s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000179s ]
+

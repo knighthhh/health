@@ -10,6 +10,7 @@ class UserController extends Controller{
 		}else{
 			$model = D('user_info');
 			$data['user_phone']=$_POST['user_phone'];
+			$data['user_cid']=$_POST['user_cid'];
 			// 用户注册之前先对密码加密
 			$data['user_password']=md5($_POST['user_password'].C('MD5_KEY'));
 			//用户名生成随机字符串
@@ -55,6 +56,7 @@ class UserController extends Controller{
 					$addres=$model->add($data);
 					$res['result']=1;
 					$res['data']="恭喜注册成功";
+					
 				}
 			}
 		}
@@ -131,23 +133,47 @@ class UserController extends Controller{
 	
 	//头像修改
 	public function headimg(){
-		$ic = C('IMAGE_CONFIG');
-		$data['imgData']=I('post.imgData');
-		$phone['user_phone']=I('post.user_phone');
-		$img = base64_decode($data['imgData']);
-		$path = './Public/Uploads/User/headimg/';
-		$imgname=uniqid().'.png';
-		$zijie = file_put_contents($path.$imgname, $img);//返回的是字节数
-		if($zijie){
-			$res['result']=1;
-			$res['imgurl']=$ic['viewPath'].'User/headimg/'.$imgname;
-			//对用户表进行操作更换头像
-			$saveimg['user_img'] = 'User/headimg/'.$imgname;
-			$saveres=M('user_info')->where($phone)->save($saveimg);
-			
-		}else{
-			$res['result']=0;
-		}
+//		$ic = C('IMAGE_CONFIG');
+//		$data['imgData']=I('post.imgData');
+//		$phone['user_phone']=I('post.user_phone');
+//		$img = base64_decode($data['imgData']);
+//		$path = './Public/Uploads/User/headimg/';
+//		$imgname=uniqid().'.png';
+//		$zijie = file_put_contents($path.$imgname, $img);//返回的是字节数
+//		if($zijie){
+//			$res['result']=1;
+//			$res['imgurl']=$ic['viewPath'].'User/headimg/'.$imgname;
+//			//对用户表进行操作更换头像
+//			$saveimg['user_img'] = 'User/headimg/'.$imgname;
+//			$saveres=M('user_info')->where($phone)->save($saveimg);
+//			
+//		}else{
+//			$res['result']=0;
+//		}
+//		echo json_encode($res);
+		if(!empty($_POST)){
+			$data['user_phone']=I('post.user_phone');
+			foreach ( $_FILES as $name=>$file ) {
+				if($file['error']==0){
+					 $cfg = array(
+	                   'rootPath' => './Public/Uploads/User/headimg/',
+	               );
+	               $up = new \Think\Upload($cfg);
+	               $z = $up -> uploadOne($file);
+				   $path = 'User/headimg/'.$z['savepath'].$z['savename'];
+				   $saveimg['user_img']=$path;
+				   //上传成功，把头像路径写入数据库
+				   if($z){
+				   		M('user_info')->where($data)->save($saveimg);
+					    $res['result']=1;
+				   }
+				}else{
+					$res['result']=0;
+				}
+			}
+        }else{
+        	$res['result']=0;
+        }
 		echo json_encode($res);
 	}
 

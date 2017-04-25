@@ -897,7 +897,8 @@
 			"main/docHomepage.html": {
 				"resources": [
 					"img/finddoctor.jpg",
-					"css/heathfile.css"
+					"css/heathfile.css",
+					"img/doctor.jpeg"
 				],
 				"refer": [],
 				"priority": 0

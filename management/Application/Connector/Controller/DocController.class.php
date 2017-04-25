@@ -95,23 +95,29 @@ class DocController extends Controller{
 	
 	//头像修改
 	public function headimg(){
-		$ic = C('IMAGE_CONFIG');
-		$data['imgData']=I('post.imgData');
-		$phone['doc_phone']=I('post.doc_phone');
-		$img = base64_decode($data['imgData']);
-		$path = './Public/Uploads/doctor/headimg/';
-		$imgname=uniqid().'.png';
-		$zijie = file_put_contents($path.$imgname, $img);//返回的是字节数
-		if($zijie){
-			$res['result']=1;
-			$res['imgurl']=$ic['viewPath'].'doctor/headimg/'.$imgname;
-			//对医生表进行操作更换头像
-			$saveimg['doc_img'] = 'doctor/headimg/'.$imgname;
-			$saveres=M('doctor_info')->where($phone)->save($saveimg);
-			
-		}else{
-			$res['result']=0;
-		}
+		if(!empty($_POST)){
+			$data['doc_phone']=I('post.doc_phone');
+			foreach ( $_FILES as $name=>$file ) {
+				if($file['error']==0){
+					 $cfg = array(
+	                   'rootPath' => './Public/Uploads/doctor/headimg/',
+	               );
+	               $up = new \Think\Upload($cfg);
+	               $z = $up -> uploadOne($file);
+				   $path = 'doctor/headimg/'.$z['savepath'].$z['savename'];
+				   $saveimg['doc_img']=$path;
+				   //上传成功，把头像路径写入数据库
+				   if($z){
+				   		M('doctor_info')->where($data)->save($saveimg);
+					    $res['result']=1;
+				   }
+				}else{
+					$res['result']=0;
+				}
+			}
+        }else{
+        	$res['result']=0;
+        }
 		echo json_encode($res);
 	}
 }

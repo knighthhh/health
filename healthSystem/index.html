@@ -34,6 +34,9 @@
 			mui.plusReady(function() {
 			    //获取当前页面所属的Webview窗口对象
 			    var self = plus.webview.currentWebview();
+			    //获取推送所要用的CID
+			    user_cid = plus.push.getClientInfo().clientid;
+			    plus.storage.setItem('user_cid',user_cid);
 			    for (var i = 0; i < 4; i++) {
 			        //创建webview子页
 			        var sub = plus.webview.create(

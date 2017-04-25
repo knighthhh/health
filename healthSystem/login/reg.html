@@ -101,6 +101,7 @@
 	      		var pwdconfirm=document.getElementById("password_confirm");
 	      		var reg=document.getElementById("reg");
 	      		var yzm=document.getElementById("yzm");
+	      		var user_cid = plus.storage.getItem('user_cid');
 	      		
 	      		//后面在做设置用户输入的手机号只能为数字
 	      		//onkeyup="this.value=this.value.replace(/[^\d]/g,'') "
@@ -126,7 +127,8 @@
 	      				data:{
 	      					user_phone:phone.value,
 	      					user_password:password.value,
-	      					user_yzm:yzm.value
+	      					user_yzm:yzm.value,
+	      					user_cid:user_cid
 	      				}, 
 	      				dataType:'json',//数据格式类型
 	      				type:'POST',//http请求类型
@@ -181,13 +183,13 @@
 			    
 			    //手机号合法性验证
 				function PhoneMobile() {
-				    var user_phone = document.all("user_phone").value;
-				    if (user_phone.match(/^(13[0-9]|14(5|7)|15(0|1|2|3|5|6|7|8|9)|18[0-9])\d{8}$/) != null) {
+				    var user_phone = document.all("user_phone").value; 
+				    if (user_phone.match(/^(13[0-9]|14(5|7)|15(0|1|2|3|5|6|7|8|9)|18[0-9]|)\d{8}$/) != null) {
 				        //verificationMobile();
 				    } else {
 						phone.value="输入的手机号不正确";
 						phone.style.color="red";
-				    }
+				    } 
 				}
 				
 				//验证码请求
