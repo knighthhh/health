@@ -10,6 +10,9 @@ class DoctorInfoModel extends Model
 
     public function search($perPage=10)
     {
+         /*排序*/
+        $orderby = "a.doc_id";
+        $orderway = "desc";
         $hos_id = I('get.hos_id');
         /* 分页 */
         $count = $this->where(array(
@@ -29,6 +32,7 @@ class DoctorInfoModel extends Model
             ->where(array(
                'a.hos_id'=>array('eq',$hos_id)
                ))
+            ->order("$orderby $orderway")
             ->limit($pageObj->firstRow . "," . $pageObj->listRows)
             ->select();
         return array(
@@ -45,6 +49,7 @@ class DoctorInfoModel extends Model
         }
 
         $data['doc_address'] = $_POST['prov']." ".$_POST['city']." ".$_POST['dist'];
+        $data['doc_password'] = md5(123456);
         //dump($data['doc_address']);die;
         $data['doc_time'] = date('Y-m-d H:i:s');
         //dump($data);die;

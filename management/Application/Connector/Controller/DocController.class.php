@@ -22,6 +22,7 @@ class DocController extends Controller{
         $model = D('Admin/doctor_info');
         $ic = C('IMAGE_CONFIG');
         $info = $model -> getDocDetail($doc_id);
+        $info['doc_introduce'] = htmlspecialchars_decode($info['doc_introduce']);
         $info['doc_img'] = $ic['viewPath'].$info['doc_img'];
         //dump($info);die;
         echo json_encode($info);
@@ -36,11 +37,11 @@ class DocController extends Controller{
         $i = 0;
         foreach ($data as $k => $v) {
             $firstCharter = mb_substr($v['doc_name'],0,1,'utf8');
-            $number = array(1,2,3,4,5,6,7,8,9,0);
+            //$number = array(1,2,3,4,5,6,7,8,9,0);
             //dump($number);die;
-            if(!in_array($firstCharter,$number)){
-				$firstCharter = getFirstCharter($firstCharter);
-            }
+            //if(!in_array($firstCharter,$number)){
+			$firstCharter = getFirstCharter($firstCharter);
+            //}
             $data[$i]['firstCharter'] = $firstCharter;
             $i++;
         }

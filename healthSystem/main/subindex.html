@@ -19,13 +19,13 @@
 			mui.init(
 			{
 			  preloadPages:[
-//			  {
-//			    id:'hosHP.html',
-//			    url:'../finddoctor/hosHP.html'           
-//			  },{
-//			  	id:'docHP.html',
-//			    url:'../finddoctor/docHP.html' 
-//			  }
+			  {
+			    id:'hosHP.html',
+			    url:'../finddoctor/hosHP.html'           
+			  },{
+			  	id:'docHP.html',
+			    url:'../finddoctor/docHP.html' 
+			  }
 			  ]
 			}
 				)
@@ -130,53 +130,36 @@
 							var detailPage = null;
 							//添加列表项的点击事件
 							mui('#demo4').on('tap', '.box-d-a', function() {
-							  var hos_id = this.getAttribute('hos-id');
+							  var hosID = this.getAttribute('hos-id');
 							  //获得详情页面
-//							  if(!detailPage){
-//							    detailPage = plus.webview.getWebviewById('hosHP.html');
-//							  }
-//							  //触发详情页面的detailPage事件
-//							  mui.fire(detailPage,'detailPage',{
-//							    hos_id:hos_id
-//							  });
-							mui.openWindow({
-								url:'../finddoctor/hosHP.html',   
-							    id:'hosHP',
-							    extras:{
-							    	hos_id:hos_id
-							    },
+							  if(!detailPage){
+							    detailPage = plus.webview.getWebviewById('hosHP.html');
+							  }
+							  //触发详情页面的detailPage事件
+							mui.fire(detailPage,'hosID',{
+							    hosID:hosID
+							  });
+							mui.openWindow({ 
+							    id:'hosHP.html',
 							    show:{
-							    	autoShow:false,  									
-							    	event:'loaded',//页面显示时机，默认为titleUpdate事件时显示
-    							},
-    							waiting:{
-    								autoShow:true,
+									aniShow:'pop-in'							    	
     							}
 							 });
 							});  
 						    mui('#demo5').on('tap', '.box-d-a', function() {
-							  var hos_id = this.getAttribute('hos-id');
+							  var hosID = this.getAttribute('hos-id');
 							  //获得详情页面
-//							  if(!detailPage){
-//							    detailPage = plus.webview.getWebviewById('hosHP.html');
-//							  }
-//							  //触发详情页面的detailPage事件
-//							  mui.fire(detailPage,'detailPage',{
-//							    hos_id:hos_id
-//							  });
-							//打开详情页面
-							 mui.openWindow({
-								url:'../finddoctor/hosHP.html',   
-							    id:'hosHP',
-							    extras:{
-							    	hos_id:hos_id
-							    },
+							  if(!detailPage){
+							    detailPage = plus.webview.getWebviewById('hosHP.html');
+							  }
+							  //触发详情页面的detailPage事件
+							mui.fire(detailPage,'hosID',{
+							    hosID:hosID
+							  });
+							mui.openWindow({ 
+							    id:'hosHP.html',
 							    show:{
-							    	autoShow:false,  									
-							    	event:'loaded',//页面显示时机，默认为titleUpdate事件时显示
-    							},
-    							waiting:{
-    								autoShow:true,
+									aniShow:'pop-in'							    	
     							}
 							 });
 							});  
@@ -206,64 +189,42 @@
 						    }
 						    }
 						    var MyMar=setInterval(Marquee,speed)
-//						    mui('#demo').on('tap','.box-c-a',function(){
-//						    	clearInterval(MyMar);
-//						    });
-//						    mui('#demo').on('swipeup','.box-c-a',function(){
-//						    	MyMar=setInterval(Marquee,speed);
-//						    });
-//						    demo.onmouseover=function() {clearInterval(MyMar)}
-//						    demo.onmouseout=function() {MyMar=setInterval(Marquee,speed)}
 						    //点击热门医生跳转医生详情
 							var detailPage = null;
 							//添加列表项的点击事件
 							mui('#demo1').on('tap', '.box-c-a', function() {
-							  var doc_id = this.getAttribute('doc-id');
+							  var docID = this.getAttribute('doc-id');
 							  //获得详情页面
-//							  if(!detailPage){
-//							    detailPage = plus.webview.getWebviewById('docHP.html');
-//							  }
-//							  //触发详情页面的newsId事件
-//							  mui.fire(detailPage,'detailPage',{
-//							    doc_id:doc_id
-//							  });
+							  if(!detailPage){
+							    detailPage = plus.webview.getWebviewById('docHP.html');
+							  }
+							  //触发详情页面的newsId事件
+							  mui.fire(detailPage,'docID',{
+							    docID:docID
+							  });
 							//打开详情页面          
-							  mui.openWindow({
-								url:'../finddoctor/docHP.html',   
-							    id:'docHP',
-							    extras:{
-							    	doc_id:doc_id
-							    },
+							  mui.openWindow({  
+							    id:'docHP.html',
 							    show:{
-							    	autoShow:false,  									event:'loaded',//页面显示时机，默认为titleUpdate事件时显示
-    							},
-    							waiting:{
-    								autoShow:true,
+							    	aniShow:'pop-in',  									event:'loaded',//页面显示时机，默认为titleUpdate事件时显示
     							}
 							 });
 							});  
 						    mui('#demo2').on('tap', '.box-c-a', function() {
-							  var doc_id = this.getAttribute('doc-id');
+							  var docID = this.getAttribute('doc-id');
 							  //获得详情页面
-//							  if(!detailPage){
-//							    detailPage = plus.webview.getWebviewById('docHP.html');
-//							  }
-//							  //触发详情页面的newsId事件
-//							  mui.fire(detailPage,'detailPage',{
-//							    doc_id:doc_id
-//							  });
+							  if(!detailPage){
+							    detailPage = plus.webview.getWebviewById('docHP.html');
+							  }
+							  //触发详情页面的newsId事件
+							  mui.fire(detailPage,'docID',{
+							    docID:docID
+							  });
 							//打开详情页面          
-							  mui.openWindow({
-								url:'../finddoctor/docHP.html',   
-							    id:'docHP',
-							    extras:{
-							    	doc_id:doc_id
-							    },
+							  mui.openWindow({  
+							    id:'docHP.html',
 							    show:{
-							    	autoShow:false,  									event:'loaded',//页面显示时机，默认为titleUpdate事件时显示
-    							},
-    							waiting:{
-    								autoShow:true,
+							    	aniShow:'pop-in',  									event:'loaded',//页面显示时机，默认为titleUpdate事件时显示
     							}
 							 });
 							});  
@@ -400,12 +361,12 @@ function searchwin(){
 				
 					<div class=" mui-col-sm-6 mui-col-xs-6">
 							   	<div class="box-b-b" id="findhos">
-							    		<img class="" src="../img/findHp.jpg"/>
+							    		<img class="" src="../img/hos.jpg"/>
 							    </div>
 							   </a>
 							     
 							    <div class="box-b-c" id="finddoctor">
-							    		<img class="" src="../img/lookonline.jpg"/>
+							    		<img class="" src="../img/jkzx.jpg"/>
 							    </div>
 								</a>
 				   </div>	

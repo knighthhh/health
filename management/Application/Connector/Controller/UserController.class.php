@@ -2,6 +2,7 @@
 namespace Connector\Controller;
 
 use Think\Controller;
+
 class UserController extends Controller{
 	public function reg(){
 		if(!$_POST['user_phone']||!$_POST['user_password']) {
@@ -253,4 +254,40 @@ class UserController extends Controller{
 		
 		echo json_encode($res);
 	}
+	
+	//获取健康知识详情
+    public function getKnowDetail()
+    {
+        $knowID            = I('get.knowID');
+        $model             = D('health_know');
+        $data              = $model->find($knowID);
+        $_POST['know_see'] = $data['know_see'] + 1;
+        $_POST['know_id']  = $knowID;
+        $info = $model -> create(I('post.'),1);
+        $model->save();
+        $data['know_content'] = htmlspecialchars_decode($data['know_content']);
+        echo json_encode($data);
+    }
+
+    //意见反馈
+    public function feedback(){
+        $user_phone = I('post.phone');
+        $userModel = D('user_info');
+        $data = $userModel->field('user_id')->where(array(
+            'user_phone' => array('eq',$user_phone)
+            ))->find();
+        $model = D('feedback');
+        $_POST['feedb_time'] = date('Y-m-d H:i:s');
+        $_POST['user_id'] = $data['user_id'];
+        //echo json_encode($_POST);
+        if($model->create(I('post.'),1)){
+            if($model->add()){
+                $result['result'] = 1;
+                echo json_encode($result);
+            }
+        }else{
+            $result['result'] = 0;
+            echo json_encode($result);
+        }
+    }
 }

@@ -19,6 +19,15 @@ class SeeDocCaseModel extends Model
         if($userPhone){
             $where['b.user_phone'] = array('eq', "$userPhone");
         }
+        $user_id = I('get.user_id');
+        if($user_id){
+            $where['a.user_id'] = array('eq',"$user_id");
+        }
+        $relative_id = I('get.relative_id');
+        //dump($relative_id);die;
+        if($relative_id=="0" || $relative_id){
+            $where['a.relative_id'] = array('eq',"$relative_id");
+        }
         /* 分页 */
         $count = $this->where($where)->count();
         //实例化翻页类对象
@@ -58,8 +67,10 @@ class SeeDocCaseModel extends Model
 
     protected function _after_insert(&$data, $option)
     {
+        
         /*上传处方图片*/
         if ($_FILES['page_img_path']['error'] == 0) {
+            //dump($_FILES);die;
             $ret                      = uploadOne('page_img_path', 'pageImg');
             $pageModel = D('page_img');
             $pageModel->add(array(

@@ -45,14 +45,14 @@
       </ul> 
       </div>
     <div class="body-content">
-    <form method="post" class="form-x" action="/health/management/Application/index.php/Admin/HistoryVis/add/relative_id/" name="fileUploadForm" enctype="multipart/form-data">
+    <form method="post" class="form-x" action="/health/management/Application/index.php/Admin/HistoryVis/add/user_id//relative_id/" name="fileUploadForm" enctype="multipart/form-data">
     <div class="div_tab" style="display:block;">  
      <div class="form-group">
         <div class="label">
           <label>用户ID：</label>
         </div>
         <div class="field">
-          <input type="text" class="input w50" value="" id="user_id" name="user_id" />
+          <input type="text" class="input w50" value="<?php echo I('get.user_id'); ?>" id="user_id" name="user_id" />
           <span class="tips">*</span>
         </div>
       </div>

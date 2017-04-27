@@ -126,7 +126,7 @@
 												
 						</ul>			
 				</div>
-				<script>
+			<script>
 			mui.plusReady(function(){
 				var user_phone = plus.storage.getItem('user_phone');
 				
@@ -171,7 +171,6 @@
 						{method:"POST"},
 						function(t,status){ //上传完成
 							if(status==200){
-		//						alert(t.responseText);
 							}else{
 								outLine("上传失败："+status);
 								wt.close();
@@ -186,6 +185,7 @@
 					}
 					task.start();
 				}
+				
 				// 拍照添加文件
 				function appendByCamera(){
 					plus.camera.getCamera().captureImage(function(p){
@@ -214,6 +214,7 @@
 					return Math.floor(Math.random()*100000000+10000000).toString();
 				}
 			})	
+
 	    </script>
 	</body>
 </html>

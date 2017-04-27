@@ -43,7 +43,7 @@
       </ul> 
       </div>
     <div class="body-content">
-    <form method="post" class="form-x" action="/health/management/Application/index.php/Admin/Relative/edit/relative_id/7" name="fileUploadForm" enctype="multipart/form-data">
+    <form method="post" class="form-x" action="/health/management/Application/index.php/Admin/Relative/edit/relative_id/9" name="fileUploadForm" enctype="multipart/form-data">
     <input type="hidden" value="<?php echo $data['relative_id']; ?>" name="relative_id" />
     <div class="div_tab" style="display:block;">  
      <div class="form-group">
@@ -100,7 +100,13 @@
           <label>关系：</label>
         </div>
         <div class="field">
-          <input type="text" class="input w50" value="<?php echo $data['relative_relation']; ?>" name="relative_relation" />
+          <select name="relative_relation">
+            <option <?php echo $data['relative_relation']=='本人'?'selected="selected"':null ?> value="本人">本人</option>
+            <option <?php echo $data['relative_relation']=='家庭成员'?'selected="selected"':null ?>  value="家庭成员">家庭成员</option>
+            <option <?php echo $data['relative_relation']=='亲戚'?'selected="selected"':null ?>  value="亲戚">亲戚</option>
+            <option <?php echo $data['relative_relation']=='朋友'?'selected="selected"':null ?>  value="朋友">朋友</option>
+            <option <?php echo $data['relative_relation']=='其他'?'selected="selected"':null ?>  value="其他">其他</option>
+          </select>
         </div>
       </div>
       <div class="form-group">

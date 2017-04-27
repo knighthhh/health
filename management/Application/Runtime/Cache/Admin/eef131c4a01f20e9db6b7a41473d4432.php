@@ -43,7 +43,7 @@
       </ul> 
       </div>
     <div class="body-content">
-    <form method="post" class="form-x" action="/health/management/Application/index.php/Admin/Knowledge/edit/know_id/5" name="fileUploadForm" enctype="multipart/form-data">
+    <form method="post" class="form-x" action="/health/management/Application/index.php/Admin/Knowledge/edit/know_id/2" name="fileUploadForm" enctype="multipart/form-data">
     <input type="hidden" name="know_id" value="<?php echo I('get.know_id'); ?>">
     <div class="div_tab" style="display:block;">  
       <div class="form-group">

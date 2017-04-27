@@ -6,7 +6,7 @@ class IndexController extends Controller
 {
 
 	public function index(){
-		//var_dump(get_defined_constants());
+		
 
 		$this->display();
 	}
@@ -24,8 +24,10 @@ class IndexController extends Controller
 		// $sql = "select * from hospital_info";
 		// $data = $model->query($sql);
 		// dump($data);
+		//dump(get_defined_constants());
 		$this->display();
 	}
+
 }
 
  ?>

@@ -16,8 +16,30 @@
 
 	<body>
 		<script src="../js/mui.min.js"></script>
+		<script src="../js/common.js" type="text/javascript" charset="utf-8"></script>
+		<!--<script src="../js/feedback.js" type="text/javascript" charset="utf-8"></script>-->
 		<script type="text/javascript">
 			mui.init()
+			mui.plusReady(function () {
+			    var phone = plus.storage.getItem('user_phone');
+				document.getElementById("submit").addEventListener('tap',function(){
+					var content = document.getElementById("question").value;
+			    	var contact = document.getElementById("contact").value;
+					mui.post('http://'+serverName+'/health/management/application/index.php/Connector/User/feedback',{
+							phone:phone,
+							feedb_content:content,
+							con_phone:contact
+						},function(data){
+							if(data.result == 1){
+								plus.nativeUI.toast("意见提交成功！");
+								mui.back();
+							}else{
+								plus.nativeUI.toast("出错啦！");
+							}
+						},'json'
+					);
+				});
+			});
 		</script>
 		<div id="feedback" class="mui-page feedback">
 			<div class="mui-navbar-inner mui-bar mui-bar-nav">
@@ -40,10 +62,6 @@
 						<div class="mui-scroll-wrapper">
 							<div class="mui-scroll">
 								<ul class="mui-table-view">
-									<!--仅流应用环境下显示-->
-									<li class="mui-table-view-cell stream">
-										<a href="#">桌面快捷方式创建失败</a>
-									</li>
 									<li class="mui-table-view-cell"><a href="#">界面显示错乱</a></li>
 									<li class="mui-table-view-cell"><a href="#">启动缓慢，卡出翔了</a></li>
 									<li class="mui-table-view-cell"><a href="#">偶发性崩溃</a></li>
@@ -56,13 +74,13 @@
 				<div class="row mui-input-row">
 					<textarea id='question' class="mui-input-clear question" placeholder="请详细描述你的问题和意见..."></textarea>
 				</div>
-				<p>图片(选填,提供问题截图,总大小10M以下)</p>
-				<div id='image-list' class="row image-list"></div>
+				<!--<p>图片(选填,提供问题截图,总大小10M以下)</p>
+				<div id='image-list' class="row image-list"></div>-->
 				<p>QQ/邮箱</p>
 				<div class="mui-input-row">
 					<input id='contact' type="text" class="mui-input-clear contact" placeholder="(选填,方便我们联系你 )" />
 				</div>
-				<div class="mui-content-padded">
+				<!--<div class="mui-content-padded">
 					<div class="mui-inline">应用评分</div>
 					<div class="icons mui-inline" style="margin-left: 6px;">
 						<i data-index="1" class="mui-icon mui-icon-star"></i>
@@ -71,7 +89,7 @@
 						<i data-index="4" class="mui-icon mui-icon-star"></i>
 						<i data-index="5" class="mui-icon mui-icon-star"></i>
 					</div>
-				</div><br />
+				</div><br />-->
 			</div>
 		</div>
 	</body>

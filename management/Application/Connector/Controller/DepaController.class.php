@@ -17,7 +17,7 @@ class DepaController extends Controller{
 	            'b.dep_id' => array('eq', $data['dep_id'])
 	         ))
 	         ->find();
-		
+		$res['dep_introduce'] = htmlspecialchars_decode($res['dep_introduce']);
 		echo json_encode($res);
 	}
 	
