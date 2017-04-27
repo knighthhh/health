@@ -34,7 +34,14 @@
 		<script src="../js/mui.min.js"></script>
 		<script src="../js/common.js"></script>
 		<script type="text/javascript">
-			mui.init();
+			mui.init({
+				preloadPages:[
+				{
+					url:'illHP.html',
+					id:'illHP'
+				}
+				],
+			});
 			mui.get('http://'+serverName+'/health/management/Application/index.php/Connector/Sick/getSick',{
 					
 				},function(data){
@@ -59,6 +66,29 @@
 					segmentedControlContents.innerHTML = segmentedControlContents.innerHTML + item2;
 				},'json'
 			);
+			mui.plusReady(function () {
+			    //跳转疾病详情页面
+			var illHP = null;
+			mui('#segmentedControlContents').on('tap','li',function(e){
+				var illnessID = this.getAttribute('sickID');
+				//获得疾病详情页面
+				if(!illHP){
+					illHP = plus.webview.getWebviewById('illHP');
+				}
+				//触发详情页面的自定义事件
+				mui.fire(illHP,'illnessID',{
+					illnessID:illnessID
+				});
+				//打开详情页面
+				mui.openWindow({
+					id:'illHP',
+					show:{
+						aniShow:'pop-in'
+					}
+				});
+			});
+			});
+			
 		</script>
 	</head>
 	<body>

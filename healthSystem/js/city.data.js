@@ -1,4 +1,11 @@
 var cityData = [{
+	value:'0',
+	text:'全部',
+	children:[{
+		value:'0',
+		text:'全部'
+	}]
+},{
 	value: '110000',
 	text: '北京市',
 	children: [{

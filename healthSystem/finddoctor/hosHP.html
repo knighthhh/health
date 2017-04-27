@@ -38,17 +38,17 @@
 				});
 			
             	mui.plusReady(function(){
-            		var self = plus.webview.currentWebview();
-            		var hos_id = self.hos_id;
+//          		var self = plus.webview.currentWebview();
+//          		var hos_id = self.hos_id;
             		
             		//用来传个下一个页面的经度，纬度，医院名字
             		var longitude=null;
             		var latitude=null;
             		var hos_name =null;
             	//添加detailPage自定义事件监听
-				//window.addEventListener('detailPage',function(event){
+				window.addEventListener('hosID',function(event){
 				  //获得医生ID参数
-				  //var hos_id = event.detail.hos_id;
+				  var hos_id = event.detail.hosID;
 				  //根据id向服务器请求医院轮播图片
 				  mui.get('http://'+serverName+'/health/management/Application/index.php/Connector/Hos/getHosImg',{
 				  		hos_id:hos_id
@@ -60,7 +60,7 @@
             			for(i=0;i<data.length;i++){
             				hosimg = hosimg +'<div class="mui-slider-item"><a href="#"><img src="'+data[i].hos_img+'"></a></div>';
             			}
-            			console.log("hosimg");
+
             			slider1.innerHTML = hosimg ;
             			//轮播图下面的圆点
             			var item = ''
@@ -98,10 +98,7 @@
             			'</p></li><li class="mui-table-view-cell mui-disabled"><span class="iconfont icon-yanke1 tu-wu "></span><p align="center">热门程度：'+data.hos_hot+
             			'</p></li><li class="mui-table-view-cell mui-disabled "><span class="iconfont icon-yanke1 tu-wu "></span><p align="center">'+data.hos_introduce+'</p></li>';
             			hosInfo.innerHTML = li ;
-            			//关闭等待框
-            			plus.nativeUI.closeWaiting();
-				    	//显示当前页面
-				    	self.show('fade-in',500);
+            			
             		},'json');
             		
             		//科室批量监听
@@ -149,6 +146,7 @@
 							}
 						});
             		});
+				});
 				});
 			}
         </script> 

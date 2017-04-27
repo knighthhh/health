@@ -11,47 +11,7 @@
 		<link rel="stylesheet" type="text/css" href="../css/iconfont_foot.css" />
 		<link rel="stylesheet" type="text/css" href="../css/iconfont_health_file.css" />
 		<link rel="stylesheet" type="text/css" href="../css/health_file.css" />
-		<!--<script src="js/skip.js" type="text/javascript" charset="utf-8"></script>-->
 		<script type="text/javascript">
-			// H5 plus事件处理
-			//function plusReady(){
-			//}
-			//if(window.plus){
-			//	plusReady();
-			//}else{
-			//	document.addEventListener("plusready",plusReady,false);
-			//}
-
-			// 创建并显示新窗口
-
-			//function openWebview(){
-			//	var w = plus.webview.create( "medDiary.html" );
-			//	w.show("pop-in");
-			////	w.show("slide-in-right");
-			//}
-			//function openWebview2(){
-			//	var w = plus.webview.create( "History_todoc.html" );
-			//	w.show("pop-in");
-			////	w.show("slide-in-right");
-			//}
-			//function openWebview3(){
-			//	var w = plus.webview.create( "My_file.html" );
-			//	w.show("pop-in");
-			////	w.show("slide-in-right");
-			//}
-
-			mui.get('http://' + serverName + '/health/management/Application/index.php/Connector/User/getKnowList', {
-
-			}, function(data) {
-				var knowledge = document.getElementById("knowledge");
-				var item = '';
-				for(var i = 0; i < data.length; i++) {
-					item = item + '<li class="mui-table-view-cell mui-media"><a href="javascript:;"><div class="mui-media-body"><h4>' + data[i].know_title +
-						'</h4><p class="mui-ellipsis">' + data[i].know_title + '</p><span class="put-day">发布日期：</span><span class="day">' + data[i].time + '</span> <span class="mui-pull-right read">阅读量:<span class="readnumber">500</span></span></div></a></li>';
-				}
-				//console.log(item);
-				knowledge.innerHTML = item;
-			}, 'json');
 		</script>
 	</head>
 
@@ -100,12 +60,11 @@
 				</li>
 			</ul>
 			<!--九宫格-->
-
 			<!--知识推送-->
 			<p class="knowledge">- 知识推送 -</p>
 			<div class="knowledge_info">
 				<ul id="knowledge" class="mui-table-view">
-					<li class="mui-table-view-cell mui-media">
+					<!--<li class="mui-table-view-cell mui-media">
 						<a id="know_detail" href="javascript:;">
 							<img class=" mui-pull-left" src="../img/doctor.jpeg">
 							<div class="mui-media-body">
@@ -134,21 +93,57 @@
 								<span class="put-day ">发布日期：</span><span class="day ">2017-03-15</span> <span class="mui-pull-right read ">阅读量:<span class="readnumber ">500</span></span>
 							</div>
 						</a>
-					</li>
+					</li>-->
 				</ul>
 			</div>
 			
 		</div>
-		<script src="../js/mui.min.js "></script>
-		<script type="text/javascript ">
-	    	mui.init();
-			mui.plusReady(function() {
+		<script type="text/javascript">
+	    	mui.init({
+	    		preloadPages:[
+	    		{
+	    			url:'know_contents.html',
+	    			id:'know_contents.html'
+	    		}
+	    		],
+	    	});
+			mui.plusReady(function() {});
+				mui.get('http://' + serverName + '/health/management/Application/index.php/Connector/User/getKnowList', {
+
+					}, function(data) {
+						var knowledge = document.getElementById("knowledge");
+						var item = '';
+						for(var i = 0; i < data.length; i++) {
+							item = item + '<li knowID="' + data[i].know_id + '" class="mui-table-view-cell mui-media"><div class="mui-media-body"><h4>' + data[i].know_title +
+								'</h4><p class="mui-ellipsis">' + data[i].know_title + '</p><span class="put-day">发布日期：</span><span class="day">' + data[i].time + '</span> <span class="mui-pull-right read">阅读量:<span class="readnumber">500</span></span></div></li>';
+						}
+						//console.log(item);
+						knowledge.innerHTML = item;
+					}, 'json');
+					//跳转至健康知识详情
+					var knowHP = null;
+					mui('#knowledge').on('tap','.mui-table-view-cell',function(e){
+						var knowID = this.getAttribute('knowID');
+						//获得医生详情页面
+						if(!knowHP){
+							knowHP = plus.webview.getWebviewById('know_contents.html');
+						}
+						//通知自定义事件
+						mui.fire(knowHP,'knowID',{
+							knowID:knowID
+						});
+						mui.openWindow({
+							id:'know_contents.html',
+							show:{
+								aniShow:'pop-in'
+							}
+						});
+					});
 					var record= document.getElementById('record');	
 					var history_todoc= document.getElementById('history_todoc');	
 					var myfile= document.getElementById('myfile');	
 					var friendfile= document.getElementById('friendfile');	
-					var health_record= document.getElementById('health_record');	
-				    var know_detail=document.getElementById('know_detail');
+					var health_record= document.getElementById('health_record');
 				    var family_history=document.getElementById('family_history');
 					record.addEventListener('tap',function(event){
 						mui.openWindow({
@@ -230,20 +225,8 @@
 							}
 						});
 					},false);
-					know_detail.addEventListener('tap',function(event){
-						mui.openWindow({
-							url: 'know_contents.html',
-							id: 'know_contents',
-							preload: true,
-							show: {
-								aniShow: 'pop-in'
-							},
-							waiting: {
-								autoShow: false
-							}
-						});
-					},false);
-				});
+					
+				
 	</script>
 		
 	</body>

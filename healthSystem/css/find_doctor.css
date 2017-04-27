@@ -133,9 +133,10 @@ padding: 6px 15px;
 }
 .know_contents_h {
 	float: right;
+	margin-right:50px;
 }
 .know_contents_h_test{
-	margin-left:2px;
+	margin-left:10px;
 }
 /*article_brief*/
 .article_brief .mui-table-view-chevron .mui-table-view-cell{

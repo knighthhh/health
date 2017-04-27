@@ -22,6 +22,7 @@ class HosController extends Controller{
         $hos_id = I('get.hos_id');
         $model = D('Admin/hospital_info');
         $info = $model -> getHosDetail($hos_id);
+        $info['hos_introduce'] = htmlspecialchars_decode($info['hos_introduce']);
         //dump($info);die;
         echo json_encode($info);
     }
@@ -55,19 +56,43 @@ class HosController extends Controller{
         //dump($data);die;
         echo json_encode($data);
     }
+
+    //获得制定科室下的医院列表
+    public function getDepHos(){
+        $model = D('hospital_info');
+        $depID = I('get.depID');
+        $data = $model
+            ->field('a.*')
+            ->alias('a')
+            ->join('__HOS_DEP__ b on a.hos_id = b.hos_id','LEFT')
+            ->where(array(
+                'b.dep_id' => array('eq',$depID)
+                ))->select();
+        //拼接医院图片路径
+        $ic = C('IMAGE_CONFIG');
+        for ($i=0; $i <count($data) ; $i++) { 
+            $data[$i]['hos_navigate_img'] = $ic['viewPath'].$data[$i]['hos_navigate_img'];
+        }
+        echo json_encode($data);
+    }
 	
 	//按医院找医生
 	public function hosDoc(){
 		$province=I('post.province');
 		$town=I('post.town');
+        if($town=='全部'){
+            $res=  D('hospital_info')->select();
+        }else{
+            $town = mb_substr($town,0,-1);
+            $data['hos_address'] = array('like',"%$town%");
+            $res=  D('hospital_info')->where($data)->select();
+        } 
 		$ic = C('IMAGE_CONFIG');
-		$data['hos_address'] = array('like',"%$province%$town%");
-		$res=  M('hospital_info')->where($data)->select();
 		//图片拼装
 		for ($i=0; $i <count($res) ; $i++) { 
 	        $res[$i]['hos_navigate_img'] = $ic['viewPath'].$res[$i]['hos_navigate_img'];
 	    }
-		
+		//dump($res);die;
 		//如果查询没有东西还要返回空
 		if($res){
 			

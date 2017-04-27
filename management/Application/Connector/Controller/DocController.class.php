@@ -22,6 +22,7 @@ class DocController extends Controller{
         $model = D('Admin/doctor_info');
         $ic = C('IMAGE_CONFIG');
         $info = $model -> getDocDetail($doc_id);
+        $info['doc_introduce'] = htmlspecialchars_decode($info['doc_introduce']);
         $info['doc_img'] = $ic['viewPath'].$info['doc_img'];
         //dump($info);die;
         echo json_encode($info);

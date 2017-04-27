@@ -23,7 +23,7 @@
 </head>
 <body>
 <!-- 搜索表单 -->
-<form method="get" action="/health/management/Application/index.php/Admin/Relative/listRela.html" id="searchForm">
+<form method="get" action="/health/management/Application/index.php/Admin/Relative/listRela" id="searchForm">
   <div class="panel admin-panel">
     <div class="panel-head"><strong class="icon-reorder"> 内容列表</strong></div>
     <div class="padding border-bottom">

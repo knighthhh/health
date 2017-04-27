@@ -29,11 +29,11 @@
 	<table width="70%" border="1" cellpadding="5" cellspacing="0" bgcolor="#cccccc">
 		<tr>
 			<th>系统名称</th>
-			<td>电子商城</td>
+			<td>健康管理系统</td>
 		</tr>
 		<tr>
 			<th>开发团队</th>
-			<td>sums_wang</td>
+			<td>菜鸟小队</td>
 		</tr>
 		
 	</table>

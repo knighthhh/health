@@ -24,7 +24,14 @@
 		<script src="../js/mui.min.js"></script>
 		<script src="../js/mui.indexedlist.js"></script>
 		<script type="text/javascript" charset="utf-8">
-			mui.init();
+			mui.init({
+				preloadPages:[
+				{
+					url:'docHP.html',
+					id:'docHP.html'
+				}
+				],
+			});
 			mui.plusReady(function(){
 				mui.get('http://'+serverName+'/health/management/Application/index.php/Connector/Doc/getDocName',{
 					
@@ -41,7 +48,6 @@
 					}
 					//console.log(data.length);
 					}
-					console.log(item);
 					nav.innerHTML = item;
 					charter.innerHTML = item2;
 					var header = document.querySelector('header.mui-bar');
@@ -53,23 +59,24 @@
 					
 				},'json');
 				//console.log("s");
+				var docHP = null;
 				mui('#nav').on('tap', '.mui-table-view-cell', function() {
-							var doc_id = this.getAttribute('doc_id');
-							mui.openWindow({
-								url:'../finddoctor/docHP.html',   
-							    id:'docHP',
-							    extras:{
-							    	doc_id:doc_id
-							    },
-							    show:{
-							    	autoShow:false,  									
-							    	event:'loaded',//页面显示时机，默认为titleUpdate事件时显示
-    							},
-    							waiting:{
-    								autoShow:true,
-    							}
-							 });
+							var docID = this.getAttribute('doc_id');
+							//获得医生详情页面
+							if(!docHP){
+								docHP = plus.webview.getWebviewById('docHP.html');
+							}
+							//通知自定义事件
+							mui.fire(docHP,'docID',{
+								docID:docID
 							});
+							mui.openWindow({
+								id:'docHP.html',
+								show:{
+									aniShow:'pop-in'
+								}
+							});
+				});
 			});
 			
 			mui.ready(function() {

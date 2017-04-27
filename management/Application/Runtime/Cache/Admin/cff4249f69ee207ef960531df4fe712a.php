@@ -27,7 +27,8 @@
     <div class="panel-head"><strong class="icon-reorder"> 内容列表</strong></div>
     <div class="padding border-bottom">
       <ul class="search" style="padding-left:10px;">
-        <li> <a class="button border-green icon-plus-square-o" href="/health/management/Application/index.php/Admin/Hospital/add"> 添加医院</a> </li>
+        <li> <a class="button border-green icon-plus-square-o" href="/health/management/Application/index.php/Admin/Hospital/add"> 添加医院</a>
+        <a class="button border-green icon-plus-square-o" href="/health/management/Application/index.php/Admin/Hospital/uploadExcel"> 批量导入</a> </li>
         <li>搜索：</li>
         <li>首页
           <select name="s_ishome" class="input" onchange="changesearch()" style="width:60px; line-height:17px; display:inline-block">
