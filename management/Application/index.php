@@ -2,7 +2,9 @@
 //模式由生产模式变为开发模式
 define("APP_DEBUG",true); 
 //定义前台CSS、JS、img的路径常量
+
 define("SITE_URL", "http://10.77.117.237:88");
+
 define("CSS_URL", "/health/management/Application/Public/Home/css/");
 define("IMAGES_URL", SITE_URL . "/health/management/Application/Public/Home/images/");
 define("JS_URL", SITE_URL . "/health/management/Application/Public/Home/js/");

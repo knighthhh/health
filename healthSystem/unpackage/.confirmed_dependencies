@@ -17,7 +17,8 @@
 			"main/subindex.html",
 			"mine/Mine.html",
 			"healthfile/Health_File.html",
-			"inquiry/Inquiry.html"
+			"inquiry/Inquiry.html",
+			"login/login.html"
 		]
 	},
 	"main/subindex.html": {
@@ -53,6 +54,7 @@
 		"resources": [
 			"css/iconfont_mine.css",
 			"fonts/iconfont_mine.ttf",
+<<<<<<< HEAD
 			"js/common.js",
 			"js/mui.min.js",
 			"css/mui.min.css",
@@ -65,6 +67,16 @@
 			"mine/feedback.html",
 			"mine/recharge.html",
 			"mine/follow.html"
+=======
+			"img/doctor.jpeg",
+			"js/common.js",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css"
+		],
+		"refer": [
+			"login/login.html"
+>>>>>>> 26c8f90c3d97536c71290a2e790665be91fe4e82
 		]
 	},
 	"healthfile/Health_File.html": {
@@ -510,6 +522,24 @@
 			"css/app.css",
 			"css/mui.min.css",
 			"fonts/mui.ttf"
+		]
+	},
+	"login/login.html": {
+		"resources": [
+			"js/common.js",
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"fonts/mui.ttf"
+		],
+		"refer": [
+			"login/reg.html"
+		]
+	},
+	"login/reg.html": {
+		"resources": [
+			"js/common.js",
+			"js/mui.min.js",
+			"css/mui.min.css"
 		]
 	}
 }
