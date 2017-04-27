@@ -33,30 +33,34 @@ class UserController extends Controller{
 				            'user_phone' => array('eq', $_POST['user_phone']),
 				            'user_yzm' => array('eq', $_POST['user_yzm'])
 				         ))
-				         ->select();
+				         ->find();
 				
-				if(ceil((time() - strtotime($jieguo['yzm_time']))/(60*60))>=5){
-					$res['result']=0;
-					$res['data']="该验证码已过期，请重新获取";
-				}
+				
 				
 				if(!$jieguo){
 					$res['result']=0;
 					$res['data']="请输入正确验证码";
 				}else{
-					//注册融云token
-					$appKey = 'c9kqb3rdcvq4j';
-					$appSecret = 'usuKQXzEY2';
-					$RongCloud = new \Im\RongCloud($appKey,$appSecret);
-					// 获取 Token 方法
-					$rongyun = $RongCloud->user()->getToken($data['user_phone'], 'username', 'http://www.rongcloud.cn/images/logo.png');
-					$rongyun = json_decode($rongyun,1);
-					$data['im_token'] = $rongyun['token'];
-					//写入数据库
-					$addres=$model->add($data);
-					$res['result']=1;
-					$res['data']="恭喜注册成功";
-					
+					//判断是否过期
+					if(floor((time()-strtotime($jieguo['yzm_time']))%86400/60) >= 5){
+						$res['result']=0;
+						$res['data']="该验证码已过期，请重新获取";
+					}else{
+						//注册融云token
+						$appKey = 'c9kqb3rdcvq4j';
+						$appSecret = 'usuKQXzEY2';
+						$RongCloud = new \Im\RongCloud($appKey,$appSecret);
+						// 获取 Token 方法
+						$rongyun = $RongCloud->user()->getToken($data['user_phone'], 'username', 'http://www.rongcloud.cn/images/logo.png');
+						$rongyun = json_decode($rongyun,1);
+						$data['im_token'] = $rongyun['token'];
+						if($rongyun){
+							//写入数据库
+							$addres=$model->add($data);
+							$res['result']=1;
+							$res['data']="恭喜注册成功";
+						}
+					}
 				}
 			}
 		}
@@ -65,13 +69,12 @@ class UserController extends Controller{
 	}
 	
 	public function login(){
-		
+		//自动登陆
 		if(I('post.user_phone') && I('post.user_token')){
 			$data['user_phone']=I('post.user_phone');
 			$data['user_token']=I('post.user_token');
 			$mess=M('user_info')->where($data)->find();
 			if ($mess) {
-				
 				//token过期，重新登录
 				if(ceil((time() - strtotime($mess['token_time']))/(60*60*24))>=7){
 					$res['result']=0;
@@ -88,14 +91,13 @@ class UserController extends Controller{
 					$token['token_time']=date('Y-m-d H:i:s');
 					$token['login_time']=date('Y-m-d H:i:s');
 					M('user_info')->where($data)->save($token);
-				
 				}
-				
 			}else{
 				$res['result']=0;
 				$res['data']="您的登录信息已过期，请重新登录";
 			}
 		}else{
+			//从登录界面登陆
 			$data['user_phone']=I('post.user_phone');
 			$data['user_password']=md5(I('post.user_password').C('MD5_KEY'));
 			$mess=M('user_info')->where($data)->find();
@@ -189,5 +191,66 @@ class UserController extends Controller{
 		echo json_encode($data);
 	}
 
-
+	//找回密码
+	public function forgetpwd(){
+		//判断验证码是否正确
+		$jieguo = M('user_yzm')
+		         ->where(array(
+		            'user_phone' => array('eq', $_POST['user_phone']),
+		            'user_yzm' => array('eq', $_POST['user_yzm'])
+		         ))
+		         ->find();
+				
+		if(!$jieguo){
+			$res['result']=0;
+			$res['data']="请输入正确验证码";
+		}else{
+			//判断是否过期
+			if(floor((time()-strtotime($jieguo['yzm_time']))%86400/60) >= 5){
+				$res['result']=0;
+				$res['data']="该验证码已过期，请重新获取";
+			}else{
+				$res['result']=1;
+				$res['data']="验证码正确";
+				
+			}
+		}
+		echo json_encode($res);
+	}
+	
+	//修改密码
+	public function reset(){
+		$data['user_phone']=I('post.user_phone');
+		$save['user_password']=md5($_POST['user_password'].C('MD5_KEY'));
+		$mess=M('user_info')->where($data)->save($save);
+		if($mess){
+			$res['result']=1;
+			$res['data']='恭喜！修改成功';
+		}else{
+			$res['result']=0;
+			$res['data']='修改失败，请检查您的网络';
+		}
+		echo json_encode($res);
+	}
+	
+	//我的医生
+	public function mydoc(){
+		$data['user_phone']=I('post.user_phone');
+		$data['doc_phone']=I('post.doc_phone');
+		//如何有记录则不操作，无记录就添加
+		$findres = M('my_doc')->where($data)->find();
+		if($findres){
+			$res['result']=0;
+		}else{
+			$data['my_doc_time']=date('Y-m-d H:i:s');
+			$res=M('my_doc')->add($data);
+			if($res){
+				$res['result']=1;
+			}else{
+				$res['result']=0;
+			}
+		}
+		
+		echo json_encode($res);
+	}
 }

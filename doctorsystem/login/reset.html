@@ -6,7 +6,6 @@
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 		<title></title>
 		<link href="../css/mui.min.css" rel="stylesheet" />
-		<!--<link href="css/style.css" rel="stylesheet" />-->
 		<style>
 			
 			.mui-input-group:first-child {
@@ -36,7 +35,7 @@
 	<body>
 		<header class="mui-bar mui-bar-nav">
 			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
-			<h1 class="mui-title">注册</h1>
+			<h1 class="mui-title">修改密码</h1>
 		</header>
 		<div class="mui-content">
 			<form class="mui-input-group">
@@ -56,7 +55,7 @@
 					<table>
 					<tr>
 					<td>
-						<input id='doc_password2' type="password" class="mui-input-password mui-input" placeholder="请再次确认密码">
+						<input id='password_confirm' type="password" class="mui-input-password mui-input" placeholder="请再次确认密码">
 					</td>
 					</tr>
 					</table>
@@ -65,11 +64,71 @@
 				
 			</form>
 			<div class="mui-content-padded">
-				<button type="button" id='reg' class="mui-btn mui-btn-block mui-btn-green">注册</button>
+				<button type="button" id='submit' class="mui-btn mui-btn-block mui-btn-green">提交</button>
 			</div>
 			
 		</div>
 		<script src="../js/mui.min.js"></script>
+		<script src="../js/common.js"></script>
+		<script type="text/javascript">
+			mui.init();
+			mui.plusReady(function(){
+				var self = plus.webview.currentWebview();
+				var doc_phone = self.doc_phone;
+				var submitbtn = document.getElementById("submit");
+				var password = document.getElementById("doc_password");
+				var pwdconfirm = document.getElementById("password_confirm");
+				submitbtn.addEventListener('tap',function(){
+					if(password.value.length < 6){
+	      				plus.ui.toast("密码长度不能小于6位数");
+	      				return;
+	      			}
+	      			if (pwdconfirm.value != password.value) {
+						plus.nativeUI.toast('密码两次输入不一致');
+						return;
+					}
+	      			//修改密码，并跳转到登陆
+					mui.ajax('http://' + serverName + '/health/management/Application/index.php/Connector/Doc/reset', {
+						data: {
+							doc_phone: doc_phone, 
+							doc_password: password.value
+						},
+						dataType: 'json', //数据格式类型
+						type: 'POST', //http请求类型
+						timeout: 10000, //超时设置
+						success: function(data) {
+							if(data.result == 0) {
+								//修改密码不成功
+								plus.ui.toast(data.data);
+							} else {
+								plus.ui.toast(data.data);
+								//跳转
+								mui.openWindow({ 
+									url: 'login.html',
+									id: 'login',
+									show: {
+										aniShow: 'pop-in'
+									},
+									styles: {
+										popGesture: 'hide'
+									},
+									waiting: {
+										autoShow: false
+									}
+								});
+								setTimeout(function(){
+									var self = plus.webview.currentWebview();
+									self.close();	
+								},1000);
+							}
+						},
+						error: function(xhr, type, errorThrown) {
+							plus.nativeUI.toast('请检查您的网络');
+						}
+					})
+				});
+			})
+		</script>
 		
 	</body>
 

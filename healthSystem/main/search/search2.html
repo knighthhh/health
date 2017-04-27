@@ -16,45 +16,6 @@
 				background-color: #efeff4;
 			}
 		</style>
-	</head>
-
-	<body>
-		<!-- 头部  包含搜索-->
-		<header id="header" class="mui-bar mui-bar-nav public-color">
-			<a class="mui-action-back mui-icon mui-icon-back mui-pull-left size2"></a>
-			<a id="search2" class="icon2 mui-pull-right ">搜索</a>
-
-			<div  class="search">
-				<div class="mui-input-row mui-search">
-					<input id="searchtext2" class=" mui-input-clear" type="search" name="search"  value="" placeholder="搜疾病，医生，医院，科室" />
-				</div>
-			</div>
-		</header>
-		<!-- 头部 -->
-		<div class="mui-content">
-			<div id="slider" class="mui-slider mui-fullscreen">
-				<div id="sliderSegmentedControl" class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
-					<div class="mui-scroll">
-						<a class="mui-control-item mui-active" href="#item1mobile" data-wid="search_info.html">
-							全部
-						</a>
-						<a class="mui-control-item" href="#item2mobile" data-wid="search_info_jb.html">
-							疾病
-						</a>
-						<a class="mui-control-item" href="#item3mobile" data-wid="search_info_hp.html">
-							医院
-						</a>
-						<a class="mui-control-item" href="#item4mobile" data-wid="search_info_dt.html">
-							医生
-						</a>
-						<a class="mui-control-item" href="#item5mobile" data-wid="search_info_ks.html">
-							科室
-						</a>
-					</div>
-				</div>
-
-			</div>
-		</div>
 		<script src="../../js/mui.min.js"></script>
 		<script src="../../js/common.js"></script>
 		<script src="../../js/webviewGroup.js" type="text/javascript" charset="utf-8"></script>
@@ -63,7 +24,7 @@
 			mui.plusReady(function() {
 				var self = plus.webview.currentWebview();
 				var searchtext = self.searchtext;
-				
+//				var searchtext2 = document.getElementById("searchtext2");
 				//监听该页面的搜索按钮
 				search2.addEventListener('tap',function(){
 					mui.openWindow({
@@ -81,7 +42,6 @@
 						self.close();	
 					},1000);
 				});
-				
 				var group = new webviewGroup("viewgroup", {
 					items: [{
 						id: "search_info.html",
@@ -133,12 +93,53 @@
 				});
 
 			});
+			
 			mui.back = function() {
 				var _self = plus.webview.currentWebview();
 				_self.close("auto");
 
 			}
 		</script>
+	</head>
+
+	<body>
+		<!-- 头部  包含搜索-->
+		<header id="header" class="mui-bar mui-bar-nav public-color">
+			<a class="mui-action-back mui-icon mui-icon-back mui-pull-left size2"></a>
+			<a id="search2" class="icon2 mui-pull-right ">搜索</a>
+
+			<div  id="searchtext2" class="search"> 
+				<div class="mui-input-row mui-search">
+					<input  class=" mui-input-clear" type="search" name="search" value="" placeholder="搜疾病，医生，医院，科室" />
+				</div>
+			</div>
+		</header>
+		<!-- 头部 --> 
+		<div class="mui-content">
+			<div id="slider" class="mui-slider mui-fullscreen">
+				<div id="sliderSegmentedControl" class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+					<div class="mui-scroll">
+						<a class="mui-control-item mui-active" href="#item1mobile" data-wid="search_info.html">
+							全部
+						</a>
+						<a class="mui-control-item" href="#item2mobile" data-wid="search_info_jb.html">
+							疾病
+						</a>
+						<a class="mui-control-item" href="#item3mobile" data-wid="search_info_hp.html">
+							医院
+						</a>
+						<a class="mui-control-item" href="#item4mobile" data-wid="search_info_dt.html">
+							医生
+						</a>
+						<a class="mui-control-item" href="#item5mobile" data-wid="search_info_ks.html">
+							科室
+						</a>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		
 	</body>
 
 </html>

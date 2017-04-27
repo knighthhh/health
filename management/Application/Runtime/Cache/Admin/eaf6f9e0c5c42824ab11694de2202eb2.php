@@ -58,7 +58,7 @@ $(function(){
 </script>
 <ul class="bread">
   <li><a href="<?php echo U('main'); ?>" target="right" class="icon-home"> 首页</a></li>
-  <li id="a_leader_txt">网站信息></li>
+  <li id="a_leader_txt">网站信息</li>
 </ul>
 <div class="admin">
   <iframe scrolling="auto" rameborder="0" src="<?php echo U('main'); ?>" name="right" width="100%" height="100%"></iframe>
