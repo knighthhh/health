@@ -92,6 +92,25 @@ class HealthController extends Controller
         echo json_encode($data);
     }
 
+     //获取问诊中的亲友姓名
+    public function getAskRelaName()
+    {
+        $user_phone = I('get.user_phone');
+        //$user_phone = 12345678912;
+        //先根据用户手机获得用户ID
+        $model   = D('user_info');
+        $user_id = $model->field("user_id")->where(array(
+            'user_phone' => array('eq', $user_phone),
+        ))->find();
+        //获取亲友姓名
+        $relaModel = D('relative_info');
+        $data      = $relaModel->field('relative_id,relative_name text')->where(array(
+            'user_id' => array('eq', $user_id['user_id']),
+        ))->select();
+        //dump($data);die;
+        echo json_encode($data);
+    }
+
     public function uploadHis()
     {
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {

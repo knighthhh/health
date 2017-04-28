@@ -61,7 +61,8 @@
 			</ul>
 			<!--九宫格-->
 			<!--知识推送-->
-			<p class="knowledge">- 知识推送 -</p>
+			<p class="knowledge">　- 知识推送 -<span style="margin-left: 230px;">更多>></span> </p>
+			   
 			<div class="knowledge_info">
 				<ul id="knowledge" class="mui-table-view">
 					<!--<li class="mui-table-view-cell mui-media">
@@ -115,7 +116,7 @@
 						var item = '';
 						for(var i = 0; i < data.length; i++) {
 							item = item + '<li knowID="' + data[i].know_id + '" class="mui-table-view-cell mui-media"><div class="mui-media-body"><h4>' + data[i].know_title +
-								'</h4><p class="mui-ellipsis">' + data[i].know_title + '</p><span class="put-day">发布日期：</span><span class="day">' + data[i].time + '</span> <span class="mui-pull-right read">阅读量:<span class="readnumber">500</span></span></div></li>';
+								'</h4><p class="mui-ellipsis">' + data[i].know_title + '</p><span class="put-day">发布日期：</span><span class="day">' + data[i].time + '</span> <span class="mui-pull-right read">阅读量:<span class="readnumber">'+data[i].know_see+'</span></span></div></li>';
 						}
 						//console.log(item);
 						knowledge.innerHTML = item;

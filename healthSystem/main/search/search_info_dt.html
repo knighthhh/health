@@ -11,7 +11,14 @@
 		<link rel="stylesheet" type="text/css" href="../../css/search_info.css" />
 		<script type="text/javascript" src="../../js/common.js"></script>
 		<script type="text/javascript">
-			mui.init();
+			mui.init({
+				preloadPages:[
+				{
+					url:'docHP.html',
+					id:'docHP.html'
+				}
+				]
+			});
 			mui.plusReady(function (){
 				var self = plus.webview.currentWebview();
 				var searchtext = self.searchtext;
@@ -37,27 +44,28 @@
 							searchdoc.innerHTML = s;
 						}else{
 							//提示没有搜索结果
+							plus.nativeUI.toast("结果不存在");
 						}
 					},'json'
 				);
-				
+				var docHP = null;
 				//批量监听医生列表点击
 				mui('#searchdoc').on('tap', '.mui-table-view-cell', function() {
-					var doc_id = this.getAttribute('id');
-					mui.openWindow({
-						url:'/finddoctor/docHP.html',   
-					    id:'docHP',
-					    extras:{
-					    	doc_id:doc_id
-					    },
-					    show:{
-					    	autoShow:false,  									
-					    	event:'loaded',//页面显示时机，默认为titleUpdate事件时显示
-						},
-						waiting:{
-							autoShow:true,
+					var docID = this.getAttribute('id');
+					//获得医生详情页面
+						if(!docHP){
+							docHP = plus.webview.getWebviewById('docHP.html');
 						}
-					});
+						//通知自定义事件
+						mui.fire(docHP,'docID',{
+							docID:docID
+						});
+						mui.openWindow({
+							id:'docHP.html',
+							show:{
+								aniShow:'pop-in'
+							}
+						});
 				}); 
 			})
 		</script>

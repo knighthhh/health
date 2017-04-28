@@ -73,56 +73,69 @@
 							
 		</div>
 <script src="../js/mui.min.js"></script>
+<script src="../js/common.js" type="text/javascript" charset="utf-8"></script>
 <script src="../js/mui.picker.min.js"></script>
 <script>
 			(function($, doc) {
 				$.init();
 				$.ready(function() {
-					//普通示例
-					var userPicker = new $.PopPicker();
-					userPicker.setData([{
-						value: 'ywj',
-						text: '张三'
-					}, {
-						value: 'aaa',
-						text: '李四'
-					}, {
-						value: 'lj',
-						text: '罗辑'
-					}, {
-						value: 'ymt',
-						text: '云天明'
-					}, {
-						value: 'shq',
-						text: '史强'
-					}, {
-						value: 'zhbh',
-						text: '章北海'
-					}, {
-						value: 'zhy',
-						text: '庄颜'
-					}, {
-						value: 'gyf',
-						text: '关一帆'
-					}, {
-						value: 'zhz',
-						text: '智子'
-					}, {
-						value: 'gezh', 
-						text: '歌者'
-					}]);
-					var showUserPickerButton = doc.getElementById('showUserPicker');
-					var userResult = doc.getElementById('userResult');
-					var showSickPerson = document.getElementById("showpsick");
-					showUserPickerButton.addEventListener('tap', function(event) {
-						userPicker.show(function(items) {
-							showUserPickerButton.innerText = items[0].text;
-							showSickPerson.innerText = "您选择的患者是：" + items[0].text;
-							//返回 false 可以阻止选择框的关闭
-							//return false;
-						});
-					}, false);
-
+					mui.plusReady(function () {
+					    var user_phone = plus.storage.getItem('user_phone');
+						//获取用户的亲友姓名
+						var relative = document.getElementById("relative");
+						//var data = null;
+					mui.get('http://' + serverName + '/health/management/Application/index.php/Connector/Health/getAskRelaName',{
+							user_phone: user_phone
+						},function(data){
+							window.data = JSON.stringify(data);
+							var userPicker = new $.PopPicker();
+							userPicker.setData(data);
+							var showUserPickerButton = doc.getElementById('showUserPicker');
+							var userResult = doc.getElementById('userResult');
+							var showSickPerson = document.getElementById("showpsick");
+							showUserPickerButton.addEventListener('tap', function(event) {
+								userPicker.show(function(items) {
+									showUserPickerButton.innerText = items[0].text;
+									showSickPerson.innerText = "您选择的患者是：" + items[0].text;
+									//返回 false 可以阻止选择框的关闭
+									//return false;
+								});
+							}, false);
+						},'json'
+					);
+					
+//					var data = [{
+//						value: '1',
+//						text: '张三'
+//					}, {
+//						value: '2',
+//						text: '李四'
+//					}, {
+//						value: 'lj',
+//						text: '罗辑'
+//					}, {
+//						value: 'ymt',
+//						text: '云天明'
+//					}, {
+//						value: 'shq',
+//						text: '史强'
+//					}, {
+//						value: 'zhbh',
+//						text: '章北海'
+//					}, {
+//						value: 'zhy',
+//						text: '庄颜'
+//					}, {
+//						value: 'gyf',
+//						text: '关一帆'
+//					}, {
+//						value: 'zhz',
+//						text: '智子'
+//					}, {
+//						value: 'gezh', 
+//						text: '歌者'
+//					}];
+					});
 				});
 			})(mui, document);
 		</script>

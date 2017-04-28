@@ -96,11 +96,30 @@
             			li = li + '<li class="mui-table-view-cell"><a class="mui-navigate-right"><span class="iconfont icon-yanke1 tu-wu "></span><p align="center">'+data.hos_address_detail+
             			'</p></a></li><li class="mui-table-view-cell mui-disabled"><span class="iconfont icon-yanke1 tu-wu "></span><p align="center">'+data.hos_level+
             			'</p></li><li class="mui-table-view-cell mui-disabled"><span class="iconfont icon-yanke1 tu-wu "></span><p align="center">热门程度：'+data.hos_hot+
-            			'</p></li><li class="mui-table-view-cell mui-disabled "><span class="iconfont icon-yanke1 tu-wu "></span><p align="center">'+data.hos_introduce+'</p></li>';
+            			'</p></li><li id="intro1" class="mui-table-view-cell"><span class="iconfont icon-yanke1 tu-wu "></span><p align="center">'+data.hos_introduce+'</p></li>';
             			hosInfo.innerHTML = li ;
             			
             		},'json');
             		
+            		//医院简介详情
+            		mui('#hosInfo').on('tap','#intro1',function(e){
+             			mui.openWindow({
+							url:'hos_brief.html',   
+						    id:'hos_brief.html',
+						    extras:{
+						    	hos_id:hos_id
+						    },
+						    show:{
+						    	aniShow: 'pop-in'
+							},
+							styles: {
+								popGesture: 'hide'
+							},
+							waiting:{
+								autoShow:true
+							}
+						});
+            		});
             		//科室批量监听
             		mui('#depalist').on('tap', '.box-a-l', function() {
 						var dep_id = this.getAttribute('id');

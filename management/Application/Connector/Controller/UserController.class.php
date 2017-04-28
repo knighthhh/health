@@ -162,11 +162,13 @@ class UserController extends Controller
     public function getKnowList()
     {
         $model = D('health_know');
-        $data  = $model->select();
+        $data  = $model
+        ->order('know_see desc')
+        ->limit(5)
+        ->select();
         foreach ($data as $k => $v) {
             $data[$k]['know_content'] = htmlspecialchars_decode($v['know_content']);
         }
-        //dump($data);die;
         echo json_encode($data);
     }
 

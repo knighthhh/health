@@ -67,6 +67,10 @@ class DepartmentInfoModel extends Model
     	
     }
 
+    protected function _before_delete($option){
+       
+    }
+
     /*医院科室管理*/
     /*取出医院科室列表*/
     // public function getDep($hos_id)

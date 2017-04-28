@@ -24,9 +24,9 @@
 			<a class="mui-action-back mui-icon mui-icon-back mui-pull-left size2"></a>
 			<a id="search2" class="icon2 mui-pull-right ">搜索</a>
 
-			<div  class="search">
-				<div class="mui-input-row mui-search">
-					<input id="searchtext2" class=" mui-input-clear" type="search" name="search"  value="" placeholder="搜疾病，医生，医院，科室" />
+			<div class="search">
+				<div  class="mui-input-row mui-search">
+					<input  class=" mui-input-clear" type="search" name="search"  value="" placeholder="搜疾病，医生，医院，科室" />
 				</div>
 			</div>
 		</header>
@@ -63,13 +63,12 @@
 			mui.plusReady(function() {
 				var self = plus.webview.currentWebview();
 				var searchtext = self.searchtext;
-				
 				//监听该页面的搜索按钮
-				search2.addEventListener('tap',function(){
+				document.getElementById("search2").addEventListener('tap',function(){
 					mui.openWindow({
 						url: 'search.html',
 						id: 'search',
-						//preload: true,
+						///preload: true,
 						show: {
 							aniShow: 'pop-in'
 						},
@@ -80,6 +79,7 @@
 					setTimeout(function(){
 						self.close();	
 					},1000);
+				//mui.back();
 				});
 				
 				var group = new webviewGroup("viewgroup", {
