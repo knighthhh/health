@@ -637,7 +637,8 @@
 					"js/common.js"
 				],
 				"refer": [
-					"finddoctor/docHP.html"
+					"finddoctor/docHP.html",
+					"im/im-chat.html"
 				],
 				"priority": 0
 			},

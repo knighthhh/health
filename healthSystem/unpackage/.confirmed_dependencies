@@ -205,7 +205,8 @@
 			"img/doctor.jpeg"
 		],
 		"refer": [
-			"finddoctor/docHP.html"
+			"finddoctor/docHP.html",
+			"im/im-chat.html"
 		]
 	},
 	"finddoctor/doclist.html": {
@@ -221,6 +222,19 @@
 			"css/search_info.css",
 			"css/iconfont_money.css",
 			"img/doctor.jpeg"
+		]
+	},
+	"im/im-chat.html": {
+		"resources": [
+			"js/mui.imageViewer.js",
+			"img/finddoctor.jpg",
+			"css/mui.imageviewer.css",
+			"js/arttmpl.js",
+			"js/common.js",
+			"js/mui.min.js",
+			"css/app.css",
+			"fonts/mui.ttf",
+			"css/mui.min.css"
 		]
 	}
 }

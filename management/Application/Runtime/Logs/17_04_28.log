@@ -2318,3 +2318,547 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTrace [ RunTime:0.000117s ]
 INFO: [ app_end ] --END-- [ RunTime:0.000290s ]
 
+[ 2017-04-28T19:12:16+08:00 ] 192.168.43.103 /health/management/Application/index.php/Connector/Zixun/mydoclist
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.001012s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000095s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000136s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000329s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000058s ]
+SQL: SHOW COLUMNS FROM `my_doc` [ RunTime:0.008974s ]
+NOTIC: [8] Use of undefined constant eq - assumed 'eq' E:\WWW\health\management\Application\Connector\Controller\ZixunController.class.php 第 111 行.
+SQL: SELECT a.*,b.*,c.*,d.* FROM my_doc a LEFT JOIN doctor_info b on a.doc_phone=b.doc_phone LEFT JOIN hospital_info c on b.hos_id=c.hos_id LEFT JOIN department_info d on b.depa_id=d.dep_id WHERE ( a.user_phone = '15768653949' )  [ RunTime:0.003157s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000119s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000307s ]
+
+[ 2017-04-28T19:12:23+08:00 ] 192.168.43.103 /health/management/Application/index.php/Connector/Zixun/mydoclist
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000532s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000058s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000080s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000201s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000061s ]
+SQL: SHOW COLUMNS FROM `my_doc` [ RunTime:0.009469s ]
+NOTIC: [8] Use of undefined constant eq - assumed 'eq' E:\WWW\health\management\Application\Connector\Controller\ZixunController.class.php 第 111 行.
+SQL: SELECT a.*,b.*,c.*,d.* FROM my_doc a LEFT JOIN doctor_info b on a.doc_phone=b.doc_phone LEFT JOIN hospital_info c on b.hos_id=c.hos_id LEFT JOIN department_info d on b.depa_id=d.dep_id WHERE ( a.user_phone = '15768653949' )  [ RunTime:0.001846s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000118s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000291s ]
+
+[ 2017-04-28T19:12:26+08:00 ] 192.168.43.103 /health/management/Application/index.php/Connector/Zixun/mydoclist
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.001024s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000095s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000135s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000312s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000131s ]
+SQL: SHOW COLUMNS FROM `my_doc` [ RunTime:0.007961s ]
+NOTIC: [8] Use of undefined constant eq - assumed 'eq' E:\WWW\health\management\Application\Connector\Controller\ZixunController.class.php 第 111 行.
+SQL: SELECT a.*,b.*,c.*,d.* FROM my_doc a LEFT JOIN doctor_info b on a.doc_phone=b.doc_phone LEFT JOIN hospital_info c on b.hos_id=c.hos_id LEFT JOIN department_info d on b.depa_id=d.dep_id WHERE ( a.user_phone = '15768653949' )  [ RunTime:0.001873s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000119s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000289s ]
+
+[ 2017-04-28T19:12:51+08:00 ] 192.168.43.103 /health/management/Application/index.php/Connector/Zixun/mydoclist
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000994s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000093s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000137s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000325s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000051s ]
+SQL: SHOW COLUMNS FROM `my_doc` [ RunTime:0.008402s ]
+NOTIC: [8] Use of undefined constant eq - assumed 'eq' E:\WWW\health\management\Application\Connector\Controller\ZixunController.class.php 第 111 行.
+SQL: SELECT a.*,b.*,c.*,d.* FROM my_doc a LEFT JOIN doctor_info b on a.doc_phone=b.doc_phone LEFT JOIN hospital_info c on b.hos_id=c.hos_id LEFT JOIN department_info d on b.depa_id=d.dep_id WHERE ( a.user_phone = '15768653949' )  [ RunTime:0.001882s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000144s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000322s ]
+
+[ 2017-04-28T19:13:00+08:00 ] 192.168.43.103 /health/management/Application/index.php/Connector/Zixun/mydoclist
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000528s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000050s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000073s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000168s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000057s ]
+SQL: SHOW COLUMNS FROM `my_doc` [ RunTime:0.008155s ]
+NOTIC: [8] Use of undefined constant eq - assumed 'eq' E:\WWW\health\management\Application\Connector\Controller\ZixunController.class.php 第 111 行.
+SQL: SELECT a.*,b.*,c.*,d.* FROM my_doc a LEFT JOIN doctor_info b on a.doc_phone=b.doc_phone LEFT JOIN hospital_info c on b.hos_id=c.hos_id LEFT JOIN department_info d on b.depa_id=d.dep_id WHERE ( a.user_phone = '15768653949' )  [ RunTime:0.001972s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000141s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000327s ]
+
+[ 2017-04-28T19:13:14+08:00 ] 192.168.43.103 /health/management/Application/index.php/Connector/Zixun/mydoclist
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000613s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000058s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000084s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000191s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000070s ]
+SQL: SHOW COLUMNS FROM `my_doc` [ RunTime:0.008422s ]
+NOTIC: [8] Use of undefined constant eq - assumed 'eq' E:\WWW\health\management\Application\Connector\Controller\ZixunController.class.php 第 111 行.
+SQL: SELECT a.*,b.*,c.*,d.* FROM my_doc a LEFT JOIN doctor_info b on a.doc_phone=b.doc_phone LEFT JOIN hospital_info c on b.hos_id=c.hos_id LEFT JOIN department_info d on b.depa_id=d.dep_id WHERE ( a.user_phone = '15768653949' )  [ RunTime:0.001887s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000117s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000289s ]
+
+[ 2017-04-28T19:13:30+08:00 ] 192.168.43.103 /health/management/Application/index.php/Connector/Zixun/mydoclist
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000094s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000132s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000310s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000125s ]
+SQL: SHOW COLUMNS FROM `my_doc` [ RunTime:0.008023s ]
+NOTIC: [8] Use of undefined constant eq - assumed 'eq' E:\WWW\health\management\Application\Connector\Controller\ZixunController.class.php 第 111 行.
+SQL: SELECT a.*,b.*,c.*,d.* FROM my_doc a LEFT JOIN doctor_info b on a.doc_phone=b.doc_phone LEFT JOIN hospital_info c on b.hos_id=c.hos_id LEFT JOIN department_info d on b.depa_id=d.dep_id WHERE ( a.user_phone = '15768653949' )  [ RunTime:0.001835s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000118s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000294s ]
+
+[ 2017-04-28T19:13:40+08:00 ] 192.168.43.103 /health/management/Application/index.php/Connector/Zixun/mydoclist
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000611s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000058s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000082s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000192s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000065s ]
+SQL: SHOW COLUMNS FROM `my_doc` [ RunTime:0.009259s ]
+NOTIC: [8] Use of undefined constant eq - assumed 'eq' E:\WWW\health\management\Application\Connector\Controller\ZixunController.class.php 第 111 行.
+SQL: SELECT a.*,b.*,c.*,d.* FROM my_doc a LEFT JOIN doctor_info b on a.doc_phone=b.doc_phone LEFT JOIN hospital_info c on b.hos_id=c.hos_id LEFT JOIN department_info d on b.depa_id=d.dep_id WHERE ( a.user_phone = '15768653949' )  [ RunTime:0.001870s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000116s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000286s ]
+
+[ 2017-04-28T19:13:47+08:00 ] 192.168.43.103 /health/management/Application/index.php/Connector/Zixun/mydoclist
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000597s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000053s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000083s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000198s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000063s ]
+SQL: SHOW COLUMNS FROM `my_doc` [ RunTime:0.004123s ]
+NOTIC: [8] Use of undefined constant eq - assumed 'eq' E:\WWW\health\management\Application\Connector\Controller\ZixunController.class.php 第 111 行.
+SQL: SELECT a.*,b.*,c.*,d.* FROM my_doc a LEFT JOIN doctor_info b on a.doc_phone=b.doc_phone LEFT JOIN hospital_info c on b.hos_id=c.hos_id LEFT JOIN department_info d on b.depa_id=d.dep_id WHERE ( a.user_phone = '15768653949' )  [ RunTime:0.000918s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000059s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000143s ]
+
+[ 2017-04-28T19:13:49+08:00 ] 192.168.43.103 /health/management/Application/index.php/Connector/Zixun/mydoclist
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000463s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000046s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000075s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000161s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000050s ]
+SQL: SHOW COLUMNS FROM `my_doc` [ RunTime:0.016582s ]
+NOTIC: [8] Use of undefined constant eq - assumed 'eq' E:\WWW\health\management\Application\Connector\Controller\ZixunController.class.php 第 111 行.
+SQL: SELECT a.*,b.*,c.*,d.* FROM my_doc a LEFT JOIN doctor_info b on a.doc_phone=b.doc_phone LEFT JOIN hospital_info c on b.hos_id=c.hos_id LEFT JOIN department_info d on b.depa_id=d.dep_id WHERE ( a.user_phone = '15768653949' )  [ RunTime:0.001816s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000116s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000291s ]
+
+[ 2017-04-28T19:14:41+08:00 ] 192.168.43.103 /health/management/Application/index.php/Connector/Zixun/mydoclist
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000465s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000044s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000064s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000147s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000051s ]
+SQL: SHOW COLUMNS FROM `my_doc` [ RunTime:0.009587s ]
+NOTIC: [8] Use of undefined constant eq - assumed 'eq' E:\WWW\health\management\Application\Connector\Controller\ZixunController.class.php 第 111 行.
+SQL: SELECT a.*,b.*,c.*,d.* FROM my_doc a LEFT JOIN doctor_info b on a.doc_phone=b.doc_phone LEFT JOIN hospital_info c on b.hos_id=c.hos_id LEFT JOIN department_info d on b.depa_id=d.dep_id WHERE ( a.user_phone = '15768653949' )  [ RunTime:0.002579s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000191s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000571s ]
+
+[ 2017-04-28T19:15:02+08:00 ] 192.168.43.103 /health/management/Application/index.php/Connector/Zixun/mydoclist
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000980s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000129s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000132s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000308s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000108s ]
+SQL: SHOW COLUMNS FROM `my_doc` [ RunTime:0.008679s ]
+NOTIC: [8] Use of undefined constant eq - assumed 'eq' E:\WWW\health\management\Application\Connector\Controller\ZixunController.class.php 第 111 行.
+SQL: SELECT a.*,b.*,c.*,d.* FROM my_doc a LEFT JOIN doctor_info b on a.doc_phone=b.doc_phone LEFT JOIN hospital_info c on b.hos_id=c.hos_id LEFT JOIN department_info d on b.depa_id=d.dep_id WHERE ( a.user_phone = '15768653949' )  [ RunTime:0.002074s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000116s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000291s ]
+
+[ 2017-04-28T19:15:10+08:00 ] 192.168.43.103 /health/management/Application/index.php/Connector/Zixun/mydoclist
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000638s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000059s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000082s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000189s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000065s ]
+SQL: SHOW COLUMNS FROM `my_doc` [ RunTime:0.007943s ]
+NOTIC: [8] Use of undefined constant eq - assumed 'eq' E:\WWW\health\management\Application\Connector\Controller\ZixunController.class.php 第 111 行.
+SQL: SELECT a.*,b.*,c.*,d.* FROM my_doc a LEFT JOIN doctor_info b on a.doc_phone=b.doc_phone LEFT JOIN hospital_info c on b.hos_id=c.hos_id LEFT JOIN department_info d on b.depa_id=d.dep_id WHERE ( a.user_phone = '15768653949' )  [ RunTime:0.001828s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000118s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000290s ]
+
+[ 2017-04-28T19:18:30+08:00 ] 192.168.43.103 /health/management/Application/index.php/Connector/Zixun/mydoclist
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000636s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000049s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000070s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000160s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000053s ]
+SQL: SHOW COLUMNS FROM `my_doc` [ RunTime:0.008137s ]
+NOTIC: [8] Use of undefined constant eq - assumed 'eq' E:\WWW\health\management\Application\Connector\Controller\ZixunController.class.php 第 111 行.
+SQL: SELECT a.*,b.*,c.*,d.* FROM my_doc a LEFT JOIN doctor_info b on a.doc_phone=b.doc_phone LEFT JOIN hospital_info c on b.hos_id=c.hos_id LEFT JOIN department_info d on b.depa_id=d.dep_id WHERE ( a.user_phone = '15768653949' )  [ RunTime:0.002089s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000117s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000291s ]
+
+[ 2017-04-28T19:18:50+08:00 ] 192.168.43.103 /health/management/Application/index.php/Connector/Zixun/mydoclist
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000501s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000046s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000068s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000156s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000056s ]
+SQL: SHOW COLUMNS FROM `my_doc` [ RunTime:0.008672s ]
+NOTIC: [8] Use of undefined constant eq - assumed 'eq' E:\WWW\health\management\Application\Connector\Controller\ZixunController.class.php 第 111 行.
+SQL: SELECT a.*,b.*,c.*,d.* FROM my_doc a LEFT JOIN doctor_info b on a.doc_phone=b.doc_phone LEFT JOIN hospital_info c on b.hos_id=c.hos_id LEFT JOIN department_info d on b.depa_id=d.dep_id WHERE ( a.user_phone = '15768653949' )  [ RunTime:0.001820s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000115s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000285s ]
+
+[ 2017-04-28T19:19:28+08:00 ] 192.168.43.103 /health/management/Application/index.php/Connector/Zixun/mydoclist
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.001013s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000094s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000137s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000318s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000061s ]
+SQL: SHOW COLUMNS FROM `my_doc` [ RunTime:0.004032s ]
+NOTIC: [8] Use of undefined constant eq - assumed 'eq' E:\WWW\health\management\Application\Connector\Controller\ZixunController.class.php 第 111 行.
+SQL: SELECT a.*,b.*,c.*,d.* FROM my_doc a LEFT JOIN doctor_info b on a.doc_phone=b.doc_phone LEFT JOIN hospital_info c on b.hos_id=c.hos_id LEFT JOIN department_info d on b.depa_id=d.dep_id WHERE ( a.user_phone = '15768653949' )  [ RunTime:0.000953s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000058s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000140s ]
+
+[ 2017-04-28T19:19:34+08:00 ] 192.168.43.103 /health/management/Application/index.php/Connector/Zixun/mydoclist
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.001013s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000092s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000134s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000313s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000105s ]
+SQL: SHOW COLUMNS FROM `my_doc` [ RunTime:0.008176s ]
+NOTIC: [8] Use of undefined constant eq - assumed 'eq' E:\WWW\health\management\Application\Connector\Controller\ZixunController.class.php 第 111 行.
+SQL: SELECT a.*,b.*,c.*,d.* FROM my_doc a LEFT JOIN doctor_info b on a.doc_phone=b.doc_phone LEFT JOIN hospital_info c on b.hos_id=c.hos_id LEFT JOIN department_info d on b.depa_id=d.dep_id WHERE ( a.user_phone = '15768653949' )  [ RunTime:0.001856s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000136s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000370s ]
+
+[ 2017-04-28T19:20:15+08:00 ] 192.168.43.103 /health/management/Application/index.php/Connector/Zixun/mydoclist
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000462s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000044s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000063s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000155s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000050s ]
+SQL: SHOW COLUMNS FROM `my_doc` [ RunTime:0.008910s ]
+NOTIC: [8] Use of undefined constant eq - assumed 'eq' E:\WWW\health\management\Application\Connector\Controller\ZixunController.class.php 第 111 行.
+SQL: SELECT a.*,b.*,c.*,d.* FROM my_doc a LEFT JOIN doctor_info b on a.doc_phone=b.doc_phone LEFT JOIN hospital_info c on b.hos_id=c.hos_id LEFT JOIN department_info d on b.depa_id=d.dep_id WHERE ( a.user_phone = '15768653949' )  [ RunTime:0.001988s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000118s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000294s ]
+
+[ 2017-04-28T19:20:24+08:00 ] 192.168.43.103 /health/management/Application/index.php/Connector/Zixun/mydoclist
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000490s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000047s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000072s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000160s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000055s ]
+SQL: SHOW COLUMNS FROM `my_doc` [ RunTime:0.007853s ]
+NOTIC: [8] Use of undefined constant eq - assumed 'eq' E:\WWW\health\management\Application\Connector\Controller\ZixunController.class.php 第 111 行.
+SQL: SELECT a.*,b.*,c.*,d.* FROM my_doc a LEFT JOIN doctor_info b on a.doc_phone=b.doc_phone LEFT JOIN hospital_info c on b.hos_id=c.hos_id LEFT JOIN department_info d on b.depa_id=d.dep_id WHERE ( a.user_phone = '15768653949' )  [ RunTime:0.001827s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000119s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000294s ]
+
+[ 2017-04-28T19:20:32+08:00 ] 192.168.43.103 /health/management/Application/index.php/Connector/Zixun/mydoclist
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000563s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000055s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000077s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000179s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000060s ]
+SQL: SHOW COLUMNS FROM `my_doc` [ RunTime:0.007883s ]
+NOTIC: [8] Use of undefined constant eq - assumed 'eq' E:\WWW\health\management\Application\Connector\Controller\ZixunController.class.php 第 111 行.
+SQL: SELECT a.*,b.*,c.*,d.* FROM my_doc a LEFT JOIN doctor_info b on a.doc_phone=b.doc_phone LEFT JOIN hospital_info c on b.hos_id=c.hos_id LEFT JOIN department_info d on b.depa_id=d.dep_id WHERE ( a.user_phone = '15768653949' )  [ RunTime:0.001923s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000117s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000288s ]
+
+[ 2017-04-28T19:20:58+08:00 ] 192.168.43.103 /health/management/Application/index.php/Connector/Zixun/mydoclist
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000562s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000053s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000078s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000179s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000061s ]
+SQL: SHOW COLUMNS FROM `my_doc` [ RunTime:0.007588s ]
+NOTIC: [8] Use of undefined constant eq - assumed 'eq' E:\WWW\health\management\Application\Connector\Controller\ZixunController.class.php 第 111 行.
+SQL: SELECT a.*,b.*,c.*,d.* FROM my_doc a LEFT JOIN doctor_info b on a.doc_phone=b.doc_phone LEFT JOIN hospital_info c on b.hos_id=c.hos_id LEFT JOIN department_info d on b.depa_id=d.dep_id WHERE ( a.user_phone = '15768653949' )  [ RunTime:0.001786s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000116s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000287s ]
+
+[ 2017-04-28T19:21:44+08:00 ] 192.168.43.103 /health/management/Application/index.php/Connector/Zixun/mydoclist
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.001211s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000098s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000141s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000366s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000081s ]
+SQL: SHOW COLUMNS FROM `my_doc` [ RunTime:0.007652s ]
+NOTIC: [8] Use of undefined constant eq - assumed 'eq' E:\WWW\health\management\Application\Connector\Controller\ZixunController.class.php 第 111 行.
+SQL: SELECT a.*,b.*,c.*,d.* FROM my_doc a LEFT JOIN doctor_info b on a.doc_phone=b.doc_phone LEFT JOIN hospital_info c on b.hos_id=c.hos_id LEFT JOIN department_info d on b.depa_id=d.dep_id WHERE ( a.user_phone = '15768653949' )  [ RunTime:0.001898s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000117s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000289s ]
+
+[ 2017-04-28T19:21:58+08:00 ] 192.168.43.103 /health/management/Application/index.php/Connector/Zixun/mydoclist
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000465s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000043s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000064s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000146s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000050s ]
+SQL: SHOW COLUMNS FROM `my_doc` [ RunTime:0.007804s ]
+NOTIC: [8] Use of undefined constant eq - assumed 'eq' E:\WWW\health\management\Application\Connector\Controller\ZixunController.class.php 第 111 行.
+SQL: SELECT a.*,b.*,c.*,d.* FROM my_doc a LEFT JOIN doctor_info b on a.doc_phone=b.doc_phone LEFT JOIN hospital_info c on b.hos_id=c.hos_id LEFT JOIN department_info d on b.depa_id=d.dep_id WHERE ( a.user_phone = '15768653949' )  [ RunTime:0.001814s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000116s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000291s ]
+
+[ 2017-04-28T19:22:34+08:00 ] 192.168.43.103 /health/management/Application/index.php/Connector/Zixun/mydoclist
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000573s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000054s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000078s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000182s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000063s ]
+SQL: SHOW COLUMNS FROM `my_doc` [ RunTime:0.007671s ]
+NOTIC: [8] Use of undefined constant eq - assumed 'eq' E:\WWW\health\management\Application\Connector\Controller\ZixunController.class.php 第 111 行.
+SQL: SELECT a.*,b.*,c.*,d.* FROM my_doc a LEFT JOIN doctor_info b on a.doc_phone=b.doc_phone LEFT JOIN hospital_info c on b.hos_id=c.hos_id LEFT JOIN department_info d on b.depa_id=d.dep_id WHERE ( a.user_phone = '15768653949' )  [ RunTime:0.001885s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000135s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000312s ]
+
+[ 2017-04-28T19:22:45+08:00 ] 192.168.43.103 /health/management/Application/index.php/Connector/Zixun/mydoclist
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000982s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000094s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000149s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000332s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000070s ]
+SQL: SHOW COLUMNS FROM `my_doc` [ RunTime:0.007801s ]
+NOTIC: [8] Use of undefined constant eq - assumed 'eq' E:\WWW\health\management\Application\Connector\Controller\ZixunController.class.php 第 111 行.
+SQL: SELECT a.*,b.*,c.*,d.* FROM my_doc a LEFT JOIN doctor_info b on a.doc_phone=b.doc_phone LEFT JOIN hospital_info c on b.hos_id=c.hos_id LEFT JOIN department_info d on b.depa_id=d.dep_id WHERE ( a.user_phone = '15768653949' )  [ RunTime:0.001811s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000117s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000290s ]
+
+[ 2017-04-28T19:23:17+08:00 ] 192.168.43.103 /health/management/Application/index.php/Connector/Zixun/mydoclist
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000603s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000068s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000088s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000197s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000065s ]
+SQL: SHOW COLUMNS FROM `my_doc` [ RunTime:0.004713s ]
+NOTIC: [8] Use of undefined constant eq - assumed 'eq' E:\WWW\health\management\Application\Connector\Controller\ZixunController.class.php 第 111 行.
+SQL: SELECT a.*,b.*,c.*,d.* FROM my_doc a LEFT JOIN doctor_info b on a.doc_phone=b.doc_phone LEFT JOIN hospital_info c on b.hos_id=c.hos_id LEFT JOIN department_info d on b.depa_id=d.dep_id WHERE ( a.user_phone = '15768653949' )  [ RunTime:0.001079s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000059s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000144s ]
+
+[ 2017-04-28T19:23:57+08:00 ] 192.168.43.103 /health/management/Application/index.php/Connector/Zixun/mydoclist
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000462s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000044s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000064s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000150s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000050s ]
+SQL: SHOW COLUMNS FROM `my_doc` [ RunTime:0.007938s ]
+NOTIC: [8] Use of undefined constant eq - assumed 'eq' E:\WWW\health\management\Application\Connector\Controller\ZixunController.class.php 第 111 行.
+SQL: SELECT a.*,b.*,c.*,d.* FROM my_doc a LEFT JOIN doctor_info b on a.doc_phone=b.doc_phone LEFT JOIN hospital_info c on b.hos_id=c.hos_id LEFT JOIN department_info d on b.depa_id=d.dep_id WHERE ( a.user_phone = '15768653949' )  [ RunTime:0.001853s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000117s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000286s ]
+
+[ 2017-04-28T19:24:30+08:00 ] 192.168.43.103 /health/management/Application/index.php/Connector/Zixun/mydoclist
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000463s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000046s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000063s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000148s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000051s ]
+SQL: SHOW COLUMNS FROM `my_doc` [ RunTime:0.008555s ]
+NOTIC: [8] Use of undefined constant eq - assumed 'eq' E:\WWW\health\management\Application\Connector\Controller\ZixunController.class.php 第 111 行.
+SQL: SELECT a.*,b.*,c.*,d.* FROM my_doc a LEFT JOIN doctor_info b on a.doc_phone=b.doc_phone LEFT JOIN hospital_info c on b.hos_id=c.hos_id LEFT JOIN department_info d on b.depa_id=d.dep_id WHERE ( a.user_phone = '15768653949' )  [ RunTime:0.001820s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000116s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000290s ]
+
+[ 2017-04-28T19:24:44+08:00 ] 192.168.43.103 /health/management/Application/index.php/Connector/Zixun/mydoclist
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.001008s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000096s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000133s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000312s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000062s ]
+SQL: SHOW COLUMNS FROM `my_doc` [ RunTime:0.007995s ]
+NOTIC: [8] Use of undefined constant eq - assumed 'eq' E:\WWW\health\management\Application\Connector\Controller\ZixunController.class.php 第 111 行.
+SQL: SELECT a.*,b.*,c.*,d.* FROM my_doc a LEFT JOIN doctor_info b on a.doc_phone=b.doc_phone LEFT JOIN hospital_info c on b.hos_id=c.hos_id LEFT JOIN department_info d on b.depa_id=d.dep_id WHERE ( a.user_phone = '15768653949' )  [ RunTime:0.001882s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000122s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000332s ]
+
+[ 2017-04-28T19:27:41+08:00 ] 192.168.43.103 /health/management/Application/index.php/Connector/Zixun/mydoclist
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000597s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000059s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000443s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000719s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000073s ]
+SQL: SHOW COLUMNS FROM `my_doc` [ RunTime:0.032259s ]
+NOTIC: [8] Use of undefined constant eq - assumed 'eq' E:\WWW\health\management\Application\Connector\Controller\ZixunController.class.php 第 111 行.
+SQL: SELECT a.*,b.*,c.*,d.* FROM my_doc a LEFT JOIN doctor_info b on a.doc_phone=b.doc_phone LEFT JOIN hospital_info c on b.hos_id=c.hos_id LEFT JOIN department_info d on b.depa_id=d.dep_id WHERE ( a.user_phone = '15768653949' )  [ RunTime:0.001910s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000118s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000297s ]
+
+[ 2017-04-28T19:28:11+08:00 ] 192.168.43.103 /health/management/Application/index.php/Connector/Zixun/mydoclist
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000697s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000044s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000065s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000150s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000051s ]
+SQL: SHOW COLUMNS FROM `my_doc` [ RunTime:0.007540s ]
+NOTIC: [8] Use of undefined constant eq - assumed 'eq' E:\WWW\health\management\Application\Connector\Controller\ZixunController.class.php 第 111 行.
+SQL: SELECT a.*,b.*,c.*,d.* FROM my_doc a LEFT JOIN doctor_info b on a.doc_phone=b.doc_phone LEFT JOIN hospital_info c on b.hos_id=c.hos_id LEFT JOIN department_info d on b.depa_id=d.dep_id WHERE ( a.user_phone = '15768653949' )  [ RunTime:0.001868s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000117s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000292s ]
+
+[ 2017-04-28T19:28:18+08:00 ] 192.168.43.103 /health/management/Application/index.php/Connector/Zixun/mydoclist
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000969s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000107s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000134s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000314s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000105s ]
+SQL: SHOW COLUMNS FROM `my_doc` [ RunTime:0.007699s ]
+NOTIC: [8] Use of undefined constant eq - assumed 'eq' E:\WWW\health\management\Application\Connector\Controller\ZixunController.class.php 第 111 行.
+SQL: SELECT a.*,b.*,c.*,d.* FROM my_doc a LEFT JOIN doctor_info b on a.doc_phone=b.doc_phone LEFT JOIN hospital_info c on b.hos_id=c.hos_id LEFT JOIN department_info d on b.depa_id=d.dep_id WHERE ( a.user_phone = '15768653949' )  [ RunTime:0.001964s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000117s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000291s ]
+
