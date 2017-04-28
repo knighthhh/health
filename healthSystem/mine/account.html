@@ -104,7 +104,7 @@
 								<a id="head" class="mui-navigate-right">
 									<span class="iconfont icon-touxiang i1"></span> 
 									头像<span class="mui-pull-right head">
-									<img class="head-img" id="head-img1" src="../img/doctor.jpeg"/>
+									<img id="head-img1" class="head-img" src="../img/doctor.jpeg"/>
 								</span>
 							</a>
 							</li>
@@ -126,104 +126,95 @@
 												
 						</ul>			
 				</div>
-				<script>
-					
-					//更换头像
-		mui(".mui-table-view-cell").on("tap", "#head", function(e) {
-			if(mui.os.plus){
-				var a = [{
-					title: "拍照"
-				}, {
-					title: "从手机相册选择"
-				}];
-				plus.nativeUI.actionSheet({
-					title: "修改头像",
-					cancel: "取消",
-					buttons: a
-				}, function(b) {
-					switch (b.index) {
-						case 0:
-							break;
-						case 1:
-							getImage();
-							break;
-						case 2:
-							galleryImg();
-							break;
-						default:
-							break
+			<script>
+			mui.plusReady(function(){
+				var user_phone = plus.storage.getItem('user_phone');
+				
+				//更换头像
+				mui(".mui-table-view-cell").on("tap", "#head", function(e) {
+					if(mui.os.plus){
+						var a = [{
+							title: "拍照"
+						}, {
+							title: "从手机相册选择"
+						}];
+						plus.nativeUI.actionSheet({
+							title: "修改头像",
+							cancel: "取消",
+							buttons: a
+						}, function(b) {
+							switch (b.index) {
+								case 0:
+									break;
+								case 1:
+									appendByCamera();
+									break;
+								case 2:
+									appendByGallery();
+									break;
+								default:
+									break
+							}
+						})	
 					}
-				})	
-			}
-			
-		});
-
-		function getImage() {
-			var c = plus.camera.getCamera();
-			c.captureImage(function(e) {
-				plus.io.resolveLocalFileSystemURL(e, function(entry) {
-					var s = entry.toLocalURL() + "?version=" + new Date().getTime();
-					console.log("输出路径：" + s);
-					document.getElementById("head-img1").src = s;
-					uploadHead(s);
-					//变更大图预览的src
-					//目前仅有一张图片，暂时如此处理，后续需要通过标准组件实现
-//					document.querySelector("#__mui-imageview__group .mui-slider-item img").src = s + "?version=" + new Date().getTime();;;
-				}, function(e) {
-					console.log("读取拍照文件错误：" + e.message);
 				});
-			}, function(s) {
-				console.log("error" + s);
-			}, {
-				filename: "_doc/head.jpg"
-			})
-		}
-
-		function galleryImg() {
-			plus.gallery.pick(function(a) {
-				plus.io.resolveLocalFileSystemURL(a, function(entry) {
-					plus.io.resolveLocalFileSystemURL("_doc/", function(root) {
-						root.getFile("head.jpg", {}, function(file) {
-							//文件已存在
-							file.remove(function() {
-								console.log("file remove success");
-								entry.copyTo(root, 'head.jpg', function(e) {
-										var e = e.fullPath + "?version=" + new Date().getTime();
-										document.getElementById("head-img1").src = e;
-										uploadHead(e);
-										//变更大图预览的src
-										//目前仅有一张图片，暂时如此处理，后续需要通过标准组件实现
-										document.querySelector("#__mui-imageview__group .mui-slider-item img").src = e + "?version=" + new Date().getTime();;
-									},
-									function(e) {
-										console.log('copy image fail:' + e.message);
-									});
-							}, function() {
-								console.log("delete image fail:" + e.message);
-							});
-						}, function() {
-							//文件不存在
-							entry.copyTo(root, 'head.jpg', function(e) {
-									var path = e.fullPath + "?version=" + new Date().getTime();
-									document.getElementById("head-img1").src = path;
-									//变更大图预览的src
-									//目前仅有一张图片，暂时如此处理，后续需要通过标准组件实现
-									document.querySelector("#__mui-imageview__group .mui-slider-item img").src = path;
-								},
-								function(e) {
-									console.log('copy image fail:' + e.message);
-								});
+				
+				
+				var files=[];
+				// 上传文件
+				function upload(){
+					if(files.length<=0){
+						plus.nativeUI.alert("没有添加上传文件！");
+						return;
+					}
+					var task=plus.uploader.createUpload('http://'+serverName+'/health/management/Application/index.php/Connector/User/headimg',
+						{method:"POST"},
+						function(t,status){ //上传完成
+							if(status==200){
+							}else{
+								outLine("上传失败："+status);
+								wt.close();
+							}
+						}
+					);
+					task.addData("user_phone",user_phone);
+					task.addData("uid",getUid());
+					for(var i=0;i<files.length;i++){
+						var f=files[i];
+						task.addFile(f.path,{key:f.name});
+					}
+					task.start();
+				}
+				
+				// 拍照添加文件
+				function appendByCamera(){
+					plus.camera.getCamera().captureImage(function(p){
+						plus.io.resolveLocalFileSystemURL(p, function(entry) {
+							var s = entry.toLocalURL();
+							document.getElementById("head-img1").src = s;
 						});
-					}, function(e) {
-						console.log("get _www folder fail");
-					})
-				}, function(e) {
-					console.log("读取拍照文件错误：" + e.message);
-				});
-			}, function(a) {}, {
-				filter: "image"
-			})
-		};
+						appendFile(p);
+						upload();
+					}); 
+				}  
+				// 从相册添加文件
+				function appendByGallery(){
+					plus.gallery.pick(function(p){
+				        appendFile(p);
+				        document.getElementById("head-img1").src = p;
+				        upload();
+				    });
+				}
+				// 添加文件
+				function appendFile(p){
+					$res=files.push({name:"uploadkey",path:p});
+				}
+				// 产生一个随机数
+				function getUid(){
+					return Math.floor(Math.random()*100000000+10000000).toString();
+				}
+			})	
+
 
 		function defaultImg() {
 			if(mui.os.plus){
@@ -294,7 +285,7 @@
             var dataURL = canvas.toDataURL("image/png", 0.8); 
             return dataURL.replace("data:image/png;base64,", ""); 
         }  
-		
+
 	    </script>
 	</body>
 </html>

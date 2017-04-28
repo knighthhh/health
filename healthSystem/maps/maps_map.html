@@ -56,7 +56,7 @@
 				//高德地图坐标为(116.3406445236,39.9630878208), 百度地图坐标为(116.347292,39.968716
 				
 				var marker=new plus.maps.Marker(new plus.maps.Point(longitude,latitude));
-				marker.setIcon("/logo.png");
+				marker.setIcon("../img/map.png");
 				marker.setLabel(text);
 				//var bubble = new plus.maps.Bubble("打造最好的HTML5移动开发工具");
 				//marker.setBubble(bubble);
@@ -114,9 +114,9 @@
 			</style>
 	</head>
 	<body>
-		<header id="header">
-			<div class="nvbt iback" onclick="back();"></div>
-			<div class="nvtt">应用内置地图</div>
+		<header id="header" style="background: #06BFAC;">
+			<div class="nvbt iback" onclick="back();" ></div>
+			<div class="nvtt" style="color: white;">地图导航</div>
 			<div class="nvbt ipos" onclick="userLocation();"></div>
 		</header>
 		<div id="map">地图加载中...</div>
