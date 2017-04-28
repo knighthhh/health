@@ -633,9 +633,12 @@
 					"css/iconfont_se.css",
 					"css/iconfont_money.css",
 					"fonts/iconfont_se.ttf",
-					"img/doctor.jpeg"
+					"img/doctor.jpeg",
+					"js/common.js"
 				],
-				"refer": [],
+				"refer": [
+					"finddoctor/docHP.html"
+				],
 				"priority": 0
 			},
 			"inquiry/select_file.html": {
@@ -1039,7 +1042,8 @@
 					"css/mui.min.css",
 					"css/health_file.css",
 					"css/search_info.css",
-					"css/iconfont_money.css"
+					"css/iconfont_money.css",
+					"img/doctor.jpeg"
 				],
 				"refer": [
 					"finddoctor/docHP.html"
