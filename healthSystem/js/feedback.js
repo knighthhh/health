@@ -217,5 +217,5 @@
 	mui('.mui-popover').on('tap','li',function(e){
 	  document.getElementById("question").value = document.getElementById("question").value + this.children[0].innerHTML;
 	  mui('.mui-popover').popover('toggle')
-	}) 
+	});
 })();

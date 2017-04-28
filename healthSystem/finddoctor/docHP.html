@@ -27,21 +27,21 @@
 			    demo.onmouseover=function() {clearInterval(MyMar)}
 			    demo.onmouseout=function() {MyMar=setInterval(Marquee,speed)}
 			
-            	mui.plusReady(function(){
-            		var self = plus.webview.currentWebview();
-            		//获得当前医生ID
-            		var doc_id = self.doc_id;
-            		var doc_phone=null;
-            		var doc_name=null;
+            	mui.plusReady(function(){});
+//          		var self = plus.webview.currentWebview();
+//          		//获得当前医生ID
+//          		var doc_id = self.doc_id;
+//          		var doc_phone=null;
+//          		var doc_name=null;
             		//console.log(doc_id);
             		//添加detailPage自定义事件监听
-					//window.addEventListener('detailPage',function(event){
+					window.addEventListener('docID',function(event){
 				 	//获得医生ID参数
-				 	//var doc_id = event.detail.doc_id;
+				 	var doc_id = event.detail.docID;
 				  	//根据id向服务器请求医生详情
 				  	mui.get('http://'+serverName+'/health/management/Application/index.php/Connector/Doc/getDocDetail',{
             			doc_id:doc_id
-            		},function(data){
+            	},function(data){
             			var docInfo = document.getElementById('docInfo');
             			var li = '';
             			li = li+'<li class="mui-table-view-cell"><div><img class="mui-pull-left" style="width:80px;height:80px;border-radius:100px;" src="'+data.doc_img+'"></div><div style="float:left;margin-left:20px" class=""><h4>'+data.doc_name+
@@ -55,21 +55,16 @@
 						doc_introduce.innerHTML = s;
 						doc_phone = data.doc_phone;
 						doc_name = data.doc_name;
-            			//关闭等待框
-				   		plus.nativeUI.closeWaiting();
-				    	//显示当前页面
-				    	mui.currentWebview.show('pop-in',400);
             		},'json');
             		
             		//咨询按钮监听
             		var zixun = document.getElementById("zixun");
             		zixun.addEventListener('tap',function(){
             			mui.openWindow({
-							url: '../im/im-chat.html',
-							id: 'chat',
+							url: 'zixun.html', 
+							id: 'zixun',
 							extras:{
-							    doc_phone:doc_phone,
-							    doc_name:doc_name
+							    doc_phone:doc_phone
 							},
 							show: {
 								aniShow: 'pop-in'

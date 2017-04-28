@@ -80,4 +80,76 @@ class DoctorController extends Controller
 		$error = $model->getError();
         $this->error($error);
 	}
+
+	//批量导入医生数据（上传EXCEL文件）
+    public function uploadExcel(){
+    	$hos_id = I('get.hos_id');
+        if($_FILES){
+            //dump($_FILES);die;
+            $data = array();
+            $data = uploadExcel('excelData','HosExcel');
+            $info = array();
+            foreach ($data as $k => $v) {
+                foreach ($v as $k1 => $v1) {
+                    switch ($k1) {
+                        case '0':
+                        if($v1){
+                            $info[$k]['doc_name'] = $v1;
+                        }
+                            break;
+                        case '1':
+                        if($v1){
+                        	$depModel = D('department_info');
+                        	$depa_id = $depModel->field('dep_id')->where(array(
+                        		'dep_name' => array('like',"%$v1%")
+                        		))->find();
+                        	//if($depa_id){
+                        		$info[$k]['depa_id'] = $depa_id['dep_id'];
+                        	//}
+                        }
+                        break;
+                        case '2':
+                        if($v1){
+                        	$info[$k]['doc_sex'] = $v1;
+                        }
+                        	break;
+                        case '3':
+                        if($v1){
+                        	$info[$k]['doc_phone'] = $v1;
+                        }
+                            break;
+                        case '4':
+                        if($v1){
+                        	$info[$k]['doc_especial'] = $v1;
+                        }
+                            break;
+                        case '5':
+                        if($v1){
+                        	$info[$k]['doc_introduce'] = $v1;
+                        }
+                            break;
+                        case '6':
+                        if($v1){
+                        	$info[$k]['doc_address'] = $v1;
+                        }
+                            break;
+                        default:
+                            break;
+                    }
+                }
+                $info[$k]['hos_id'] = $hos_id;
+                $info[$k]['doc_time'] = date("Y-m-d H:i:s");
+            }
+            $model = D('doctor_info');
+            //dump($info);die;
+            if($model->addAll($info)){
+                $this->success('操作成功!', U('listDoc', array('hos_id' => $hos_id)));
+                exit;
+            }else{
+                $error = $model->getError();
+                $this->error($error);
+            }
+        }
+        $this->display();
+    }	
 }

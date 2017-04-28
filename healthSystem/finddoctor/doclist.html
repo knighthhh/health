@@ -59,7 +59,12 @@
 		<script src="../js/mui.min.js"></script>
 		<script src="../js/common.js"></script>
 		<script type="text/javascript">
-	    	mui.init();
+	    	mui.init({
+	    		preloadPages:[{
+	    			url:'docHP.html',
+	    			id:'docHP'
+	    		}]
+	    	});
 			mui.plusReady(function() {
 				var self = plus.webview.currentWebview();
 				var dep_id = self.dep_id;
@@ -95,20 +100,21 @@
 				);
 					
 				//批量监听医生列表点击
+				var docHP = null;
 				mui('#doclist').on('tap', '.mui-table-view-cell', function() {
-					var doc_id = this.getAttribute('id');
+					var docID = this.getAttribute('id');
+					//获得医生详情页面
+					if(!docHP){
+						docHP = plus.webview.getWebviewById('docHP.html');
+					}
+					//通知自定义事件
+					mui.fire(docHP,'docID',{
+						docID:docID
+					});
 					mui.openWindow({
-						url:'/finddoctor/docHP.html',   
-					    id:'docHP',
-					    extras:{
-					    	doc_id:doc_id
-					    },
-					    show:{
-					    	autoShow:false,  									
-					    	event:'loaded',//页面显示时机，默认为titleUpdate事件时显示
-						},
-						waiting:{
-							autoShow:true,
+						id:'docHP.html',
+						show:{
+							aniShow:'pop-in'
 						}
 					});
 				}); 

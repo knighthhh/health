@@ -72,12 +72,14 @@
           <td><?php echo $v['user_city']; ?></td>
           <td><?php echo $v['user_sex']; ?></td>
           <td><?php echo $v['user_time']; ?></td>
-          <td><div class="button-group">
-          <a class="button border-green" style="cursor:pointer" onclick="showDialog(<?php echo $v['user_id']; ?>)"><span class="icon-view-o"></span> 查看</a>
-          <a class="button border-main" href="__MODULE__/User/edit/user_id/<?php echo $v['user_id']; ?>"><span class="icon-edit"></span> 修改</a> 
-          <a class="button border-red" style="cursor:pointer" onclick="del(<?php echo $v['user_id']; ?>)"><span class="icon-trash-o"></span> 删除</a>
-          <a class="button border-green" href="__MODULE__/User/edit/user_id/<?php echo $v['user_id']; ?>"><span class="icon-view-o"></span> 健康档案</a>
-          </div></td>
+          <td>
+          <a style="cursor:pointer" onclick="showDialog(<?php echo $v['user_id']; ?>)">查看</a>
+          <a href="__MODULE__/User/edit/user_id/<?php echo $v['user_id']; ?>">修改</a> 
+          <a style="cursor:pointer" onclick="del(<?php echo $v['user_id']; ?>)"> 删除</a></br>
+          <a href="__MODULE__/HistoryVis/listHis/user_id/<?php echo $v['user_id']; ?>/relative_id/0">历史就诊</a>
+          <a href="__MODULE__/User/edit/user_id/<?php echo $v['user_id']; ?>">用药日记</a>
+          <a href="__MODULE__/relative/listRela/user_id/<?php echo $v['user_id']; ?>">亲友管理</a>
+          </td>
           <td colspan="0">
           	<!-- 详情页面 -->
         	<div id="dialog<?php echo $v['user_id']; ?>" style="display:none;" title="详情信息">

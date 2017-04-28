@@ -1037,62 +1037,59 @@
 				}
 				
 				//上传聊天图片 uploadHead  成功后并调用融云的发送图片消息接口
-		        function uploadHead(imgPath) { 
-		            console.log("imgPath = " + imgPath); 
-		//          mainImage.src = imgPath; 
-		//          mainImage.style.width = "60px"; 
-		//          mainImage.style.height = "60px"; 
-		            
-		 			var image = new Image(); 
-		            image.src = imgPath;
-		            image.onload = function() {
-		            	//转成base64
-		           		 var imgData = getBase64Image(image); 
-		                /*在这里调用上传接口*/ 
-		                mui.ajax('http://'+serverName+'/health/management/Application/index.php/Connector/Im/chatimg', { 
-		                    data: { 
-		                    	 user_phone:user_phone,
-		                         imgData:imgData
-		                    }, 
-		                    dataType: 'json', 
-		                    type: 'post', 
-		                    timeout: 10000, 
-		                    success: function(data) {
-		                    	//返回URL
-		                    	sendimg(imgData,data.imgurl);
-		                        console.log('上传成功'); 
-		                    }, 
-		                    error: function(xhr, type, errorThrown) { 
-		                        mui.toast('网络异常，请稍后再试！'); 
-		                    } 
-		                }); 
-		            } 
+		         function uploadHead(imgPath) { 
+					var files=[];
+		        	$res=files.push({name:"uploadkey",path:imgPath});
+		        	var task=plus.uploader.createUpload('http://'+serverName+'/health/management/Application/index.php/Connector/Im/chatimg',
+						{method:"POST"},
+						function(t,status){ //上传完成
+							if(status==200){
+								eval("var json_info ="+t.responseText);
+								sendimg('0',json_info.imgurl);
+							}else{
+								outLine("上传失败："+status);
+								wt.close();
+							}
+						}
+					);
+					task.addData("user_phone",user_phone);
+					task.addData("uid",getUid());
+					for(var i=0;i<files.length;i++){
+						var f=files[i];
+						task.addFile(f.path,{key:f.name});
+					}
+					task.start();
 		   		}
 		        
+		        // 产生一个随机数
+				function getUid(){
+					return Math.floor(Math.random()*100000000+10000000).toString();
+				}
+		        
 		        //将图片压缩转成base64 
-		        function getBase64Image(img) { 
-		            var canvas = document.createElement("canvas"); 
-		            var width = img.width; 
-		            var height = img.height; 
-		            // calculate the width and height, constraining the proportions 
-		            if (width > height) { 
-		                if (width > 200) { 
-		                    height = Math.round(height *= 200 / width); 
-		                    width = 200; 
-		                } 
-		            } else { 
-		                if (height > 200) { 
-		                    width = Math.round(width *= 200 / height); 
-		                    height = 200; 
-		                } 
-		            } 
-		            canvas.width = width;   /*设置新的图片的宽度*/ 
-		            canvas.height = height; /*设置新的图片的长度*/ 
-		            var ctx = canvas.getContext("2d"); 
-		            ctx.drawImage(img, 0, 0, width, height); /*绘图*/ 
-		            var dataURL = canvas.toDataURL("image/png", 0.8); 
-		            return dataURL.replace("data:image/png;base64,", ""); 
-		        }
+//		        function getBase64Image(img) { 
+//		            var canvas = document.createElement("canvas"); 
+//		            var width = img.width; 
+//		            var height = img.height; 
+//		            // calculate the width and height, constraining the proportions 
+//		            if (width > height) { 
+//		                if (width > 200) { 
+//		                    height = Math.round(height *= 200 / width); 
+//		                    width = 200; 
+//		                } 
+//		            } else { 
+//		                if (height > 200) { 
+//		                    width = Math.round(width *= 200 / height); 
+//		                    height = 200; 
+//		                } 
+//		            } 
+//		            canvas.width = width;   /*设置新的图片的宽度*/ 
+//		            canvas.height = height; /*设置新的图片的长度*/ 
+//		            var ctx = canvas.getContext("2d"); 
+//		            ctx.drawImage(img, 0, 0, width, height); /*绘图*/ 
+//		            var dataURL = canvas.toDataURL("image/png", 0.8); 
+//		            return dataURL.replace("data:image/png;base64,", ""); 
+//		        }
 				
 					
 				});

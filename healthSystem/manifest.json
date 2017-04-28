@@ -103,7 +103,7 @@
 		},
 		"NativeObj": {
 			"description": "原生对象"
-		}
+		},"Push":{}
 	},
 	"plus": {
 		"splashscreen": {
@@ -114,7 +114,7 @@
 		"runmode": "normal",/*应用的首次启动运行模式，可取liberate或normal，liberate模式在第一次启动时将解压应用资源（Android平台File API才可正常访问_www目录）*/
 		"signature": "Sk9JTiBVUyBtYWlsdG86aHIyMDEzQGRjbG91ZC5pbw==",/*可选，保留给应用签名，暂不使用*/
 		"distribute": {
-			"plugins": {
+			"plugins": {"push":{"igexin":{"appid":"rGeSOxPwgN6Ue2iIunDtKA","appkey":"SsoewVDYzC7wCldNX6Gz1","appsecret":"LK3dNF1SoW5zhqk8Z4gTW3"}},
 				"maps": {
 					"baidu": {
 						"appkey_ios": "ka2CZkCx5itOXmDnY8L6bsflccOeSU9X",
@@ -137,30 +137,7 @@
 				"keystore": "",/*Android应用打包使用的密钥库文件*/
 				"password": "",/*Android应用打包使用密钥库中证书的密码*/
 				"aliasname": "",/*Android应用打包使用密钥库中证书的别名*/
-				"permissions": [
-					"<uses-permission android:name=\"android.permission.CHANGE_NETWORK_STATE\"/>",
-					"<uses-permission android:name=\"android.permission.MOUNT_UNMOUNT_FILESYSTEMS\"/>",
-					"<uses-permission android:name=\"android.permission.READ_CONTACTS\"/>",
-					"<uses-permission android:name=\"android.permission.VIBRATE\"/>",
-					"<uses-permission android:name=\"android.permission.READ_LOGS\"/>",
-					"<uses-permission android:name=\"android.permission.ACCESS_WIFI_STATE\"/>",
-					"<uses-feature android:name=\"android.hardware.camera.autofocus\"/>",
-					"<uses-permission android:name=\"android.permission.WRITE_CONTACTS\"/>",
-					"<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\"/>",
-					"<uses-permission android:name=\"android.permission.CAMERA\"/>",
-					"<uses-permission android:name=\"android.permission.RECORD_AUDIO\"/>",
-					"<uses-permission android:name=\"android.permission.GET_ACCOUNTS\"/>",
-					"<uses-permission android:name=\"android.permission.MODIFY_AUDIO_SETTINGS\"/>",
-					"<uses-permission android:name=\"android.permission.READ_PHONE_STATE\"/>",
-					"<uses-permission android:name=\"android.permission.CHANGE_WIFI_STATE\"/>",
-					"<uses-permission android:name=\"android.permission.WAKE_LOCK\"/>",
-					"<uses-permission android:name=\"android.permission.CALL_PHONE\"/>",
-					"<uses-permission android:name=\"android.permission.FLASHLIGHT\"/>",
-					"<uses-permission android:name=\"android.permission.ACCESS_COARSE_LOCATION\"/>",
-					"<uses-feature android:name=\"android.hardware.camera\"/>",
-					"<uses-permission android:name=\"android.permission.ACCESS_FINE_LOCATION\"/>",
-					"<uses-permission android:name=\"android.permission.WRITE_SETTINGS\"/>"
-				]
+				"permissions": ["<uses-permission android:name=\"android.permission.RECORD_AUDIO\"/>","<uses-permission android:name=\"android.permission.GET_ACCOUNTS\"/>","<uses-permission android:name=\"android.permission.CHANGE_NETWORK_STATE\"/>","<uses-permission android:name=\"android.permission.MODIFY_AUDIO_SETTINGS\"/>","<uses-permission android:name=\"android.permission.MOUNT_UNMOUNT_FILESYSTEMS\"/>","<uses-permission android:name=\"android.permission.READ_CONTACTS\"/>","<uses-permission android:name=\"android.permission.GET_TASKS\"/>","<uses-permission android:name=\"android.permission.CHANGE_WIFI_STATE\"/>","<uses-permission android:name=\"android.permission.READ_PHONE_STATE\"/>","<uses-permission android:name=\"android.permission.VIBRATE\"/>","<uses-permission android:name=\"android.permission.READ_LOGS\"/>","<uses-permission android:name=\"android.permission.WAKE_LOCK\"/>","<uses-permission android:name=\"android.permission.FLASHLIGHT\"/>","<uses-permission android:name=\"android.permission.CALL_PHONE\"/>","<uses-permission android:name=\"android.permission.ACCESS_WIFI_STATE\"/>","<uses-permission android:name=\"android.permission.ACCESS_COARSE_LOCATION\"/>","<uses-feature android:name=\"android.hardware.camera.autofocus\"/>","<uses-feature android:name=\"android.hardware.camera\"/>","<uses-permission android:name=\"android.permission.WRITE_CONTACTS\"/>","<uses-permission android:name=\"android.permission.ACCESS_FINE_LOCATION\"/>","<uses-permission android:name=\"android.permission.RECEIVE_USER_PRESENT\"/>","<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\"/>","<uses-permission android:name=\"android.permission.WRITE_SETTINGS\"/>","<uses-permission android:name=\"android.permission.RECEIVE_BOOT_COMPLETED\"/>","<uses-permission android:name=\"android.permission.CAMERA\"/>"]
 			},
 			"orientation": [
 				"portrait-primary"
@@ -329,7 +306,9 @@
 					"fonts/mui.ttf",
 					"fonts/iconfont_foot.ttf",
 					"js/common.js",
-					null
+					null,
+					"img/hos.jpg",
+					"img/jkzx.jpg"
 				],
 				"refer": [
 					"main/hosHP.html",
@@ -338,7 +317,8 @@
 					"main/search/search.html",
 					"finddoctor/docHP.html",
 					"finddoctor/hosHP.html",
-					"main/docHP.html"
+					"main/docHP.html",
+					"finddoctor/doclist.html"
 				],
 				"priority": 0
 			},
@@ -347,7 +327,8 @@
 					"js/mui.min.js",
 					"fonts/mui.ttf",
 					"css/mui.min.css",
-					"js/common.js"
+					"js/common.js",
+					"img/finddoctor.jpg"
 				],
 				"refer": [
 					"index.html",
@@ -405,7 +386,8 @@
 					"healthfile/Health_record.html",
 					"healthfile/Friends_file.html",
 					"healthfile/know_contents.html",
-					"healthfile/medDiary2.html"
+					"healthfile/medDiary2.html",
+					"healthfile/Family_history.html"
 				],
 				"priority": 0
 			},
@@ -542,7 +524,8 @@
 					"js/mui.min.js",
 					"js/yzm.js",
 					"css/mui.min.css",
-					"fonts/mui.ttf"
+					"fonts/mui.ttf",
+					"js/common.js"
 				],
 				"refer": [],
 				"priority": 0
@@ -578,12 +561,14 @@
 					"js/mui.min.js",
 					"css/app.css",
 					"fonts/mui.ttf",
-					"css/mui.min.css"
+					"css/mui.min.css",
+					"js/common.js"
 				],
 				"refer": [
 					"finddoctor/search_doctor_jb.html",
 					"finddoctor/search_doctor_yy.html",
-					"finddoctor/search_doctor_xm.html"
+					"finddoctor/search_doctor_xm.html",
+					"finddoctor/doclist.html"
 				],
 				"priority": 0
 			},
@@ -592,7 +577,9 @@
 					"css/feedback.css",
 					"js/mui.min.js",
 					"fonts/mui.ttf",
-					"css/mui.min.css"
+					"css/mui.min.css",
+					"js/feedback.js",
+					"js/common.js"
 				],
 				"refer": [],
 				"priority": 0
@@ -616,7 +603,8 @@
 					"js/common.js"
 				],
 				"refer": [
-					"maps/maps_map.html"
+					"maps/maps_map.html",
+					"finddoctor/officeHP.html"
 				],
 				"priority": 0
 			},
@@ -736,7 +724,9 @@
 					"css/mui.min.css",
 					"js/common.js"
 				],
-				"refer": [],
+				"refer": [
+					"finddoctor/illHP.html"
+				],
 				"priority": 0
 			},
 			"login/reg.html": {
@@ -825,7 +815,9 @@
 			"mine/follow.html": {
 				"resources": [
 					"js/mui.min.js",
-					"css/mui.min.css"
+					"css/mui.min.css",
+					"fonts/iconfont_account.ttf",
+					"css/iconfont_account.css"
 				],
 				"refer": [],
 				"priority": 0
@@ -848,7 +840,11 @@
 				],
 				"refer": [
 					"healthfile/outline_add.html",
-					"login/login.html"
+					"healthfile/outline_detail.html",
+					"healthfile/online_detail.html",
+					"healthfile/outline_edit.html",
+					"login/login.html",
+					"healthfile/Health_File.html"
 				],
 				"priority": 0
 			},
@@ -870,11 +866,66 @@
 				],
 				"refer": [
 					"healthfile/myfile_health_edit.html",
-					"healthfile/myfile_live_edit.html"
+					"healthfile/myfile_live_edit.html",
+					"healthfile/myfile_person_edit.html"
 				],
 				"priority": 0
 			},
 			"healthfile/Health_record.html": {
+				"resources": [
+					"js/mui.min.js",
+					"css/mui.min.css",
+					"fonts/iconfont_health_record.ttf",
+					"js/mui.picker.min.js",
+					"css/heathfile.css",
+					"css/iconfont_health_record.css",
+					"css/mui.calendar.css",
+					"fonts/mui.ttf"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"healthfile/outline_add.html": {
+				"resources": [
+					"js/feedback_mydoctor.js",
+					"img/choose_photos.png",
+					"css/mui.min.css",
+					"js/mui.min.js",
+					"css/heathfile.css",
+					"fonts/mui.ttf",
+					"healthfile/outline_add.html",
+					"js/common.js"
+				],
+				"refer": [
+					"healthfile/History_todoc.html"
+				],
+				"priority": 0
+			},
+			"healthfile/myfile_health_edit.html": {
+				"resources": [
+					"js/mui.min.js",
+					"css/mui.min.css",
+					"css/heathfile.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"healthfile/outline_detail.html": {
+				"resources": [
+					"js/mui.min.js",
+					"css/mui.min.css",
+					"css/heathfile.css",
+					"js/common.js",
+					"img/1.jpg",
+					"fonts/mui.ttf"
+				],
+				"refer": [
+					"healthfile/outline_edit.html",
+					"healthfile/History_todoc.html"
+				],
+				"priority": 0
+			},
+			"healthfile/online_detail.html": {
 				"resources": [
 					"js/mui.min.js",
 					"css/mui.min.css",
@@ -887,22 +938,21 @@
 				"refer": [],
 				"priority": 0
 			},
-			"healthfile/outline_add.html": {
+			"healthfile/outline_edit.html": {
 				"resources": [
 					"js/feedback_mydoctor.js",
 					"img/choose_photos.png",
-					"css/mui.min.css"
-				],
-				"refer": [],
-				"priority": 0
-			},
-			"healthfile/myfile_health_edit.html": {
-				"resources": [
-					"js/mui.min.js",
 					"css/mui.min.css",
-					"css/heathfile.css"
+					"js/mui.min.js",
+					"css/heathfile.css",
+					"fonts/mui.ttf",
+					"js/common.js"
 				],
-				"refer": [],
+				"refer": [
+					"healthfile/History_todoc.html",
+					"healthfile/My_file.html",
+					"healthfile/outline_detail.html"
+				],
 				"priority": 0
 			},
 			"healthfile/Friends_file.html": {
@@ -938,7 +988,8 @@
 					"js/arttmpl.js",
 					"img/finddoctor.jpg",
 					"im/%3C%\u003d(item.content)%%3E",
-					"js/im.js"
+					"js/im.js",
+					"js/common.js"
 				],
 				"refer": [],
 				"priority": 0
@@ -955,6 +1006,126 @@
 				],
 				"refer": [],
 				"priority": 0
+			},
+			"healthfile/know_contents.html": {
+				"resources": [
+					"css/find_doctor.css",
+					"js/mui.min.js",
+					"css/app.css",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"js/common.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"healthfile/Family_history.html": {
+				"resources": [
+					"js/mui.min.js",
+					"css/mui.min.css",
+					"css/heathfile.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"finddoctor/doclist.html": {
+				"resources": [
+					"fonts/iconfont_money.ttf",
+					"css/find_doctor.css",
+					"js/common.js",
+					"js/mui.min.js",
+					"css/app.css",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"css/health_file.css",
+					"css/search_info.css",
+					"css/iconfont_money.css"
+				],
+				"refer": [
+					"finddoctor/docHP.html"
+				],
+				"priority": 0
+			},
+			"finddoctor/illHP.html": {
+				"resources": [
+					"css/find_doctor.css",
+					"js/common.js",
+					"js/mui.min.js",
+					"css/app.css",
+					"css/mui.min.css",
+					"css/health_file.css",
+					"img/hospital.png",
+					"css/iconfont_se.css",
+					"css/search_info.css",
+					"css/iconfont_money.css",
+					"fonts/iconfont_se.ttf",
+					"img/doctor.jpeg",
+					"fonts/iconfont_money.ttf",
+					"fonts/mui.ttf",
+					"img/finddoctor.jpg"
+				],
+				"refer": [
+					"finddoctor/know_contents.html",
+					"finddoctor/docHP.html",
+					"finddoctor/article_brief.html",
+					"finddoctor/doclist.html",
+					"finddoctor/search_doctor_yy.html"
+				],
+				"priority": 0
+			},
+			"finddoctor/know_contents.html": {
+				"resources": [
+					"css/find_doctor.css",
+					"js/mui.min.js",
+					"css/app.css",
+					"css/mui.min.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"finddoctor/officeHP.html": {
+				"resources": [
+					"fonts/iconfont_money.ttf",
+					"css/find_doctor.css",
+					"js/common.js",
+					"css/app.css",
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"css/health_file.css",
+					"css/search_info.css",
+					"css/iconfont_money.css"
+				],
+				"refer": [
+					"finddoctor/article_brief.html",
+					"finddoctor/docHP.html",
+					"finddoctor/dep_brief.html"
+				],
+				"priority": 0
+			},
+			"finddoctor/article_brief.html": {
+				"resources": [
+					"js/mui.min.js",
+					"css/mui.min.css",
+					"css/find_doctor.css",
+					"css/app.css",
+					"fonts/mui.ttf",
+					"js/common.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"finddoctor/dep_brief.html": {
+				"resources": [
+					"css/find_doctor.css",
+					"js/common.js",
+					"js/mui.min.js",
+					"css/app.css",
+					"css/mui.min.css",
+					"fonts/mui.ttf"
+				],
+				"refer": [],
+				"priority": 0
 			}
 		},
 		"idle": {
@@ -962,7 +1133,6 @@
 				"medDiary.html",
 				"html/Mine.html",
 				"html/subindex.html",
-				"img/1.jpg",
 				"img/text1.jpg",
 				"img/search.jpg",
 				"html/Health_File.html",

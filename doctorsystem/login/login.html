@@ -109,6 +109,10 @@
 	
 		
 		$.plusReady(function() {
+			//获取推送所要用的CID
+		    doc_cid = plus.push.getClientInfo().clientid;
+		    plus.storage.setItem('doc_cid',doc_cid);
+		    
 			var loginButton = doc.getElementById('login');
 			var doc_phoneBox = doc.getElementById('doc_phone');
 			var doc_passwordBox = doc.getElementById('doc_password');
@@ -128,7 +132,8 @@
       			mui.ajax('http://'+serverName+'/health/management/Application/index.php/Connector/Doc/login',{
       				data:{
       					doc_phone:doc_phoneBox.value,
-      					doc_password:doc_passwordBox.value
+      					doc_password:doc_passwordBox.value,
+      					doc_cid:doc_cid
       				},
       				dataType:'json',
       				type:'POST',
@@ -140,11 +145,11 @@
       						plus.ui.toast("登录成功");
       						plus.storage.setItem('doc_phone',doc_phoneBox.value);
       						plus.storage.setItem('doc_id',data.doc_id);
-							//plus.storage.setItem('doc_token',data.doc_token);
+							plus.storage.setItem('doc_token',data.doc_token);
 							plus.storage.setItem('im_token',data.im_token);
-							
       						plus.webview.show('../index.html');
       						plus.webview.getWebviewById('mine/Mine.html').reload();
+      						plus.webview.getWebviewById('message/Message.html').reload();
 							setTimeout(function(){
 								var self = plus.webview.currentWebview();
 								self.close();	

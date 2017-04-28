@@ -52,8 +52,8 @@ class UserController extends Controller
         }
 		$data = $model->find($user_id);
 		$addrsess = explode(" ",$data['user_city']);
-        $data['user_city'] = $address;
-        //dump($data);die;
+        $data['user_city'] = $addrsess;
+        //dump($data['user_city']);die;
 		$this->assign(array(
 			'data' => $data
 			));
@@ -70,5 +70,10 @@ class UserController extends Controller
 		}
 		$error = $model->getError();
         $this->error($error);
+	}
+
+	//获得该用户的历史就诊记录
+	public function listHis(){
+
 	}
 }

@@ -90,6 +90,57 @@ class HospitalController extends Controller
         $this->display();
     }
 
+    //批量导入医院数据（上传EXCEL文件）
+    public function uploadExcel(){
+        if($_FILES){
+            //dump($_FILES);die;
+            $data = array();
+            $data = uploadExcel('excelData','HosExcel');
+            foreach ($data as $k => $v) {
+                foreach ($v as $k1 => $v1) {
+                    switch ($k1) {
+                        case '0':
+                            $info[$k]['hos_name'] = $v1;
+                            break;
+                        case '1':
+                            $info[$k]['hos_level'] = $v1;
+                            break;
+                        case '2':
+                            $info[$k]['hos_address'] = $v1;
+                            break;
+                        case '3':
+                            $info[$k]['hos_address_detail'] = $v1;
+                            break;
+                        case '4':
+                            $info[$k]['hos_longitude'] = $v1;
+                            break;
+                        case '5':
+                            $info[$k]['hos_latitude'] = $v1;
+                            break;
+                        case '6':
+                            $info[$k]['hos_introduce'] = $v1;
+                            break;
+                        case '7':
+                            $info[$k]['hos_link'] = $v1;
+                            break;
+                        default:
+                            break;
+                    }
+                }
+                 $info[$k]['hos_time'] = date("Y-m-d H:i:s");
+            }
+            $model = D('hospital_info');
+            if($model->addAll($info)){
+                $this->success('操作成功!', U('listHos'));
+                exit;
+            }else{
+                $error = $model->getError();
+                $this->error($error);
+            }
+        }
+        $this->display();
+    }
+
     /**
     医院科室管理
     **/
