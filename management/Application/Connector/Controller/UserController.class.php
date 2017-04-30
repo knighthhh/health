@@ -411,7 +411,6 @@ class UserController extends Controller
         }
         echo json_encode($data);
     }
-}
 
     
     //修改用户名
@@ -565,3 +564,4 @@ class UserController extends Controller
     
 }
 
+?>
