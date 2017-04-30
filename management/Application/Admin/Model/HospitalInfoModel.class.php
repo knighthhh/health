@@ -153,6 +153,19 @@ class HospitalInfoModel extends Model
     {
         //取得医院ID
         $id = $option['where']['hos_id'];
+        //删除医院下所属医生
+        $docModel = D('doctor_info');
+        $doc = $docModel->field('doc_id,doc_img')->where(array(
+            'hos_id' => array('eq',$id)
+            ))->select();
+        foreach ($doc as $k => $v) {
+            //删除原来硬盘上的医生头像
+            delImg($v);
+        }
+        $docModel->where(array(
+            'hos_id' => array('eq',$id)
+            ))->delete();
+        
         /*删除硬盘上院内导航图*/
         $oldPath = $this->field("hos_navigate_img")->find($id);
         delImg($oldPath);

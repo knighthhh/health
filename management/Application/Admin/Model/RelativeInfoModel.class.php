@@ -67,6 +67,39 @@ class RelativeInfoModel extends Model
 
     protected function _before_delete($option)
     {
-        
+        $relative_id = $option['where']['relative_id'];
+        //删除该用户的历史就诊记录
+        $seedoc = D('see_doc_case');
+        $data = $seedoc->field('seecase_id')->where(array(
+            'relative_id' => array('eq',$relative_id)
+            ))->select();
+        //删除硬盘上的检查和处方图片
+        foreach ($data as $k => $v) {
+            $seecase_id = $v['seecase_id'];
+            // 删除硬盘上处方图片
+            $pageModel = D('page_img');
+            $oldPath = $pageModel->field("page_img_path")->where(array(
+                'seecase_id' => array('eq',$seecase_id)
+                ))->find();
+            delImg($oldPath);
+            //删除数据库中的处方图片
+            $pageModel->where(array(
+                'seecase_id' => array('eq',$seecase_id)
+                ))->delete();
+            // 删除硬盘上检查图片
+            $checkModel = D('check_img');
+            $oldPath = $checkModel->field("check_img_path")->where(array(
+                'seecase_id' => array('eq',$seecase_id)
+                ))->find();
+            delImg($oldPath);
+            //删除数据库中的检查图片
+            $checkModel->where(array(
+                'seecase_id' => array('eq',$seecase_id)
+                ))->delete();
+        }
+        //从数据库中将历史就诊记录删除
+        $seedoc->where(array(
+            'relative_id' => array('eq',$relative_id)
+            ))->delete();
     }
 }

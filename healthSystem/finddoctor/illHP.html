@@ -157,16 +157,17 @@
 				],
 			});
 			mui.plusReady(function () {});
+				var illnessID = null;
 			window.addEventListener('illnessID',function(event){
 				//获得疾病ID
-				var illnessID = event.detail.illnessID;
+				illnessID = event.detail.illnessID;
 				mui.get('http://'+serverName+'/health/management/Application/index.php/Connector/Sick/getSickDetail',{
 						illnessID:illnessID
 					},function(data){
 						//显示出疾病详情
 						var sick = document.getElementById("sick");
 						var s = '<li class="mui-table-view-cell"><h4 class="text_h4">'+data.illness_name+
-						'<span>简介</span></h4></li><ul class="mui-table-view mui-table-view-chevron"><li class="mui-table-view-cell brief"><p class="paragraph">'+data.illness_introduce+
+						'<span>简介</span></h4></li><ul class="mui-table-view mui-table-view-chevron"><li class="mui-table-view-cell brief"><p class="paragraph">'+data.illness_name+
 						'</p></li><li class="mui-table-view-cell"><p id="lookdetail" sickID="'+data.illness_id+'" class="mui-pull-right" style="color:#0062CC;">查看详情>></p></li></ul>';
 						sick.innerHTML = s;
 						depID = data.two_depa_id;
@@ -231,8 +232,9 @@
 						}
 					});
 				});
-				//跳转至医生详情
-					var docDetail = document.getElementById("doc");
+				
+			});
+					//跳转至医生详情
 					var docHP = null;
 					mui('#doc').on('tap','li',function(e){
 						var docID = this.getAttribute('docID');
@@ -306,7 +308,6 @@
 							}
 						});
 					});
-			});
 		</script>
 	</body>
 

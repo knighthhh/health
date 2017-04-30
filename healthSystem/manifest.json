@@ -604,7 +604,8 @@
 				],
 				"refer": [
 					"maps/maps_map.html",
-					"finddoctor/officeHP.html"
+					"finddoctor/officeHP.html",
+					"finddoctor/hos_brief.html"
 				],
 				"priority": 0
 			},
@@ -633,9 +634,12 @@
 					"css/iconfont_se.css",
 					"css/iconfont_money.css",
 					"fonts/iconfont_se.ttf",
-					"img/doctor.jpeg"
+					"img/doctor.jpeg",
+					"js/common.js"
 				],
-				"refer": [],
+				"refer": [
+					"finddoctor/docHP.html"
+				],
 				"priority": 0
 			},
 			"inquiry/select_file.html": {
@@ -646,7 +650,8 @@
 					"css/mydoctor.css",
 					"js/mui.min.js",
 					"fonts/mui.ttf",
-					"css/mui.min.css"
+					"css/mui.min.css",
+					"js/common.js"
 				],
 				"refer": [
 					"inquiry/basic_text.html",
@@ -667,7 +672,8 @@
 					"js/common.js"
 				],
 				"refer": [
-					"im/im-chat.html"
+					"im/im-chat.html",
+					"finddoctor/zixun.html"
 				],
 				"priority": 0
 			},
@@ -807,7 +813,8 @@
 			"mine/general.html": {
 				"resources": [
 					"js/mui.min.js",
-					"css/mui.min.css"
+					"css/mui.min.css",
+					"fonts/mui.ttf"
 				],
 				"refer": [],
 				"priority": 0
@@ -850,7 +857,8 @@
 			},
 			"mine/about.html": {
 				"resources": [
-					"img/doctor.jpeg"
+					"img/doctor.jpeg",
+					"css/mui.min.css"
 				],
 				"refer": [],
 				"priority": 0
@@ -862,7 +870,8 @@
 					"fonts/mui.ttf",
 					"css/mui.min.css",
 					"img/inquiry.jpg",
-					"css/heathfile.css"
+					"css/heathfile.css",
+					"js/common.js"
 				],
 				"refer": [
 					"healthfile/myfile_health_edit.html",
@@ -960,7 +969,9 @@
 					"js/mui.min.js",
 					"css/mui.min.css",
 					"img/inquiry.jpg",
-					"css/heathfile.css"
+					"css/heathfile.css",
+					"fonts/mui.ttf",
+					"js/common.js"
 				],
 				"refer": [
 					"healthfile/Friend_file_detail.html",
@@ -972,9 +983,13 @@
 				"resources": [
 					"js/mui.min.js",
 					"css/mui.min.css",
-					"css/heathfile.css"
+					"css/heathfile.css",
+					"fonts/mui.ttf",
+					"js/common.js"
 				],
-				"refer": [],
+				"refer": [
+					"healthfile/Friend_edit.html"
+				],
 				"priority": 0
 			},
 			"im/im-chat.html": {
@@ -1023,7 +1038,8 @@
 				"resources": [
 					"js/mui.min.js",
 					"css/mui.min.css",
-					"css/heathfile.css"
+					"css/heathfile.css",
+					"fonts/mui.ttf"
 				],
 				"refer": [],
 				"priority": 0
@@ -1125,6 +1141,112 @@
 					"fonts/mui.ttf"
 				],
 				"refer": [],
+				"priority": 0
+			},
+			"finddoctor/zixun.html": {
+				"resources": [
+					"css/mydoctor.css",
+					"css/mui.min.css",
+					"css/zixun.css",
+					"css/fast_question.css",
+					"js/common.js",
+					"js/mui.min.js",
+					"fonts/mui.ttf"
+				],
+				"refer": [
+					"finddoctor/zixun_over.html"
+				],
+				"priority": 0
+			},
+			"finddoctor/hos_brief.html": {
+				"resources": [
+					"css/find_doctor.css",
+					"js/common.js",
+					"js/mui.min.js",
+					"css/app.css",
+					"fonts/mui.ttf",
+					"css/mui.min.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"healthfile/myfile_person_edit.html": {
+				"resources": [
+					"js/mui.min.js",
+					"css/mui.min.css",
+					"css/heathfile.css",
+					"fonts/mui.ttf",
+					"js/common.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"healthfile/myfile_live_edit.html": {
+				"resources": [
+					"js/mui.min.js",
+					"css/mui.min.css",
+					"css/heathfile.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"healthfile/Friend_file_add.html": {
+				"resources": [
+					"js/mui.min.js",
+					"css/mui.min.css",
+					"css/heathfile.css",
+					"fonts/mui.ttf",
+					"js/common.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"healthfile/Friend_edit.html": {
+				"resources": [
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"css/heathfile.css",
+					"js/common.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"inquiry/fast_question.html": {
+				"resources": [
+					"js/feedback_mydoctor.js",
+					"img/choose_photos.png",
+					"css/mydoctor.css",
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"css/fast_question.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"inquiry/basic_text.html": {
+				"resources": [
+					"css/mydoctor.css",
+					"css/mui.min.css",
+					"css/mui.picker.min.css",
+					"css/fast_question.css",
+					"js/common.js",
+					"js/mui.picker.min.js",
+					"js/mui.min.js",
+					"fonts/mui.ttf"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"finddoctor/zixun_over.html": {
+				"resources": [
+					"css/mui.min.css",
+					"css/fast_question.css"
+				],
+				"refer": [
+					"finddoctor/docHP.html"
+				],
 				"priority": 0
 			}
 		},
