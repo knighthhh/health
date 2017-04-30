@@ -56,22 +56,22 @@
 			
 			//批量监听患者消息列表
 			mui('#patient').on('tap', '.mui-table-view-cell', function() {
-				
-					var user_phone = this.getAttribute('id');
-					mui.openWindow({
-						url: 'chat.html',
-						id: 'chat',
-						extras:{
-							user_phone:user_phone
-						},
-						show: {
-							aniShow: 'pop-in'
-						},
-						waiting: {
-							autoShow: false
-						}
-					});
-				}); 
+				var user_phone = this.getAttribute('id');
+				mui.openWindow({
+					url: 'chat.html',
+					id: 'chat',
+					extras:{
+						user_phone:user_phone
+					},
+					show: {
+						aniShow: 'pop-in'
+					},
+					waiting: {
+						autoShow: false
+					}
+				});
+			}); 
+			
 		});
 	</script>
 

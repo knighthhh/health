@@ -35,8 +35,8 @@
 						searchtext:searchtext
 					},function(data){
 						if(data.result!=0){
-//							var res = "<ul class='mui-table-view mui-table-view-chevron'><li class='mui-table-view-cell mui-media'><span>医院</span></li></ul>"
-//							document.getElementById("hos").innerHTML = res;
+							var res = "<ul class='mui-table-view mui-table-view-chevron'><li class='mui-table-view-cell mui-media'><span>医院</span></li></ul>"
+							document.getElementById("hos").innerHTML = res;
 							
 							var s="";
 							for(var i=0;i<data.length;i++){
@@ -62,19 +62,19 @@
 				mui('#searchhos').on('tap', '.mui-table-view-cell', function() {
 					var hosID = this.getAttribute('id');
 					//获得医院详情页面
-						if(!hosHP){
-							hosHP = plus.webview.getWebviewById('hosHP.html');
+					if(!hosHP){
+						hosHP = plus.webview.getWebviewById('hosHP.html');
+					}
+					//通知自定义事件
+					mui.fire(hosHP,'hosID',{
+						hosID:hosID
+					});
+					mui.openWindow({
+						id:'hosHP.html',
+						show:{
+							aniShow:'pop-in'
 						}
-						//通知自定义事件
-						mui.fire(hosHP,'hosID',{
-							hosID:hosID
-						});
-						mui.openWindow({
-							id:'hosHP.html',
-							show:{
-								aniShow:'pop-in'
-							}
-						});
+					});
 				}); 
 				
 				//查询医生
@@ -82,21 +82,22 @@
 						searchtext:searchtext
 					},function(data){
 						if(data.result!=0){
-//							var res = "<ul class='mui-table-view mui-table-view-chevron'><li class='mui-table-view-cell mui-media'><span>医生</span></li></ul>"
-//							document.getElementById("doc").innerHTML = res;
+							var res = "<ul class='mui-table-view mui-table-view-chevron'><li class='mui-table-view-cell mui-media'><span>医生</span></li></ul>"
+							document.getElementById("doc").innerHTML = res;
 							
 							var s="";
 							for(var i=0;i<data.length;i++){
 								s+="<li id='"+data[i].doc_id+"' class='mui-table-view-cell mui-media '><a class=''><div class='mui-row '><div class='mui-pull-left mui-col-xs-3 '>";
 								s+="<img src='"+data[i].doc_img+"' style='width: 100%' /></div><div class='mui-col-xs-1'></div><div class='mui-col-xs-8'>";
-								s+="<h4 class='dt_title'>"+data[i].doc_name+"</h4><div class='dt_from'><p><span class='mui-icon iconfont icon-iconaddress i-color'></span>";
+								s+="<h4 class='dt_title'>"+data[i].doc_name+" 医生</h4><div class='dt_from'><p><span class='mui-icon iconfont icon-iconaddress i-color'></span>";
 								s+="<span>"+data[i].hos_name+"</span></p>";
-								s+="<p><span class='mui-icon iconfont icon-iconaddress i-color'></span>所属科室：<span>"+data[i].dep_name+"</span> </p></div></p></div></div>";
-								s+="<p class='mui-ellipsis'> 擅长：<span>"+data[i].doc_especial+"</span></p>";
-								s+="<span class='iconfont icon-jinqian1 i-color'></span><span class='icon-title'>"+data[i].doc_fee+"/半小时</span>";
-								s+="<span class='iconfont icon-pinglun2 i-color'></span><span class='icon-title'>"+data[i].doc_rece+"</span>";
-								s+="<span class='iconfont icon-dianzan i-color'></span><span class='icon-title'>"+data[i].doc_attention+"</span>";
-								s+="<span class='iconfont icon-guanzhu1 i-color'></span><span class='icon-title'>"+data[i].doc_hot+"</span>";
+								s+="<p><span class='mui-icon iconfont icon-iconaddress i-color'></span>所属科室：<span>"+data[i].dep_name+"</span> </p><p class='mui-ellipsis'> <span class='iconfont icon-dianzan i-color'></span>擅长：<span>"+data[i].doc_especial+"</span></p></div></p></div></div>";
+	//							s+="<p class='mui-ellipsis'> 擅长：<span>"+data[i].doc_especial+"</span></p>";
+								s+="<span class='iconfont icon-jinqian1 i-color'></span><span class='icon-title'> "+data[i].doc_fee+"/小时</span>";
+								s+="&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span class='iconfont icon-pinglun2 i-color'></span><span class='icon-title'> "+data[i].doc_rece+"</span>";
+	//							s+="<span class='iconfont icon-dianzan i-color'></span><span class='icon-title'>"+data[i].doc_hot+"</span>";
+								s+="&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span class='iconfont icon-guanzhu1 i-color'></span><span class='icon-title'> "+data[i].doc_attention+"</span>";
+//								s+="<span><button id='"+data[i].doc_phone+"' type='button' class='mui-btn mui-btn-success mui-btn-outlined mui-pull-right consult_button'>去咨询</button></span>";
 							}
 							var searchdoc =document.getElementById("searchdoc");
 							searchdoc.innerHTML = s;
@@ -130,14 +131,21 @@
 						searchtext:searchtext
 					},function(data){
 						if(data.result!=0){
-//							var res = "<ul class='mui-table-view mui-table-view-chevron'><li class='mui-table-view-cell mui-media'><span>科室</span></li></ul>"
-//							document.getElementById("dep").innerHTML = res;
+							var res = "<ul class='mui-table-view mui-table-view-chevron'><li class='mui-table-view-cell mui-media'><span>科室</span></li></ul>"
+							document.getElementById("dep").innerHTML = res;
 							
 							var s="";
 							for(var i=0;i<data.length;i++){
-								s+="<li class='mui-table-view-cell'><a class=''>";
-								s+="<h4 class='ks_title'>"+data[i].hos_name+data[i].dep_name+"</h4>";
-								s+="<p>"+data[i].dep_introduce+"</p></a></li>";
+								s+="<li id='"+data[i].doc_id+"' class='mui-table-view-cell mui-media '><a class=''><div class='mui-row '><div class='mui-pull-left mui-col-xs-3 '>";
+								s+="<img src='"+data[i].doc_img+"' style='width: 100%' /></div><div class='mui-col-xs-1'></div><div class='mui-col-xs-8'>";
+								s+="<h4 class='dt_title'>"+data[i].doc_name+" 医生</h4><div class='dt_from'><p><span class='mui-icon iconfont icon-iconaddress i-color'></span>";
+								s+="<span>"+data[i].hos_name+"</span></p>";
+								s+="<p><span class='mui-icon iconfont icon-iconaddress i-color'></span>所属科室：<span>"+data[i].dep_name+"</span> </p><p class='mui-ellipsis'> <span class='iconfont icon-dianzan i-color'></span>擅长：<span>"+data[i].doc_especial+"</span></p></div></p></div></div>";
+	//							s+="<p class='mui-ellipsis'> 擅长：<span>"+data[i].doc_especial+"</span></p>";
+								s+="<span class='iconfont icon-jinqian1 i-color'></span><span class='icon-title'> "+data[i].doc_fee+"/小时</span>";
+								s+="&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span class='iconfont icon-pinglun2 i-color'></span><span class='icon-title'> "+data[i].doc_rece+"</span>";
+	//							s+="<span class='iconfont icon-dianzan i-color'></span><span class='icon-title'>"+data[i].doc_hot+"</span>";
+								s+="&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span class='iconfont icon-guanzhu1 i-color'></span><span class='icon-title'> "+data[i].doc_attention+"</span>";
 							}
 							var searchdep =document.getElementById("searchdep");
 							searchdep.innerHTML = s;
@@ -148,22 +156,65 @@
 				);
 				
 				//批量监听科室列表点击
+				mui('#searchdep').on('tap', '.mui-table-view-cell', function() {
+					var docID = this.getAttribute('id');
+					//获得医生详情页面
+					docHP = plus.webview.getWebviewById('docHP.html');
+					//通知自定义事件
+					mui.fire(docHP,'docID',{
+						docID:docID
+					});
+					mui.openWindow({
+						id:'docHP.html',
+						show:{
+							aniShow:'pop-in'
+						}
+					});
+				}); 
 				
 				//查询疾病
-//				mui.post('http://'+serverName+'/health/management/application/index.php/Connector/Search/searchillness',{
-//						searchtext:searchtext
-//					},function(data){
-//						if(data.result!=0){
-//							var s="";
-//							for(var i=0;i<data.length;i++){
-//							}
-//							var searchillness =document.getElementById("searchillness");
-//							searchillness.innerHTML = s;
-//						}else{
-//							//提示没有搜索结果
-//						}
-//					},'json'
-//				);
+				mui.post('http://'+serverName+'/health/management/application/index.php/Connector/Search/search_illness',{
+						searchtext:searchtext
+					},function(data){
+						if(data.result!=0){
+							var res = "<ul class='mui-table-view mui-table-view-chevron'><li class='mui-table-view-cell mui-media'><span>疾病</span></li></ul>"
+							document.getElementById("illness").innerHTML = res;
+							 
+							var s="";
+							for(var i=0;i<data.length;i++){
+								s+="<li id='"+data[i].doc_id+"' class='mui-table-view-cell mui-media '><a class=''><div class='mui-row '><div class='mui-pull-left mui-col-xs-3 '>";
+								s+="<img src='"+data[i].doc_img+"' style='width: 100%' /></div><div class='mui-col-xs-1'></div><div class='mui-col-xs-8'>";
+								s+="<h4 class='dt_title'>"+data[i].doc_name+" 医生</h4><div class='dt_from'><p><span class='mui-icon iconfont icon-iconaddress i-color'></span>";
+								s+="<span>"+data[i].hos_name+"</span></p>";
+								s+="<p><span class='mui-icon iconfont icon-iconaddress i-color'></span>所属科室：<span>"+data[i].dep_name+"</span> </p><p class='mui-ellipsis'> <span class='iconfont icon-dianzan i-color'></span>擅长：<span>"+data[i].doc_especial+"</span></p></div></p></div></div>";
+								s+="<span class='iconfont icon-jinqian1 i-color'></span><span class='icon-title'> "+data[i].doc_fee+"/小时</span>";
+								s+="&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span class='iconfont icon-pinglun2 i-color'></span><span class='icon-title'> "+data[i].doc_rece+"</span>";
+								s+="&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span class='iconfont icon-guanzhu1 i-color'></span><span class='icon-title'> "+data[i].doc_attention+"</span>";
+							}
+							var search_illness =document.getElementById("search_illness");
+							search_illness.innerHTML = s;
+						}else{
+							//提示没有搜索结果
+						}
+					},'json'
+				);
+				
+				//批量监听疾病列表
+				mui('#search_illness').on('tap', '.mui-table-view-cell', function() {
+					var docID = this.getAttribute('id');
+					//获得医生详情页面
+					docHP = plus.webview.getWebviewById('docHP.html');
+					//通知自定义事件
+					mui.fire(docHP,'docID',{
+						docID:docID
+					});
+					mui.openWindow({
+						id:'docHP.html',
+						show:{
+							aniShow:'pop-in'
+						}
+					});
+				}); 
 			})
 		</script>
 	</head>
@@ -176,12 +227,12 @@
 			<div class="info_hp">
 				<div id="hos" class="info_title">
 					<ul class="mui-table-view mui-table-view-chevron">
-						<li class="mui-table-view-cell mui-media">
+						<!--<li class="mui-table-view-cell mui-media">
 							<a class="mui-navigate-right">
 								<span>医院</span>
 								<span class="mui-pull-right">更多</span>
 							</a>
-						</li>
+						</li>-->
 					</ul>
 				</div>
 
@@ -213,9 +264,9 @@
 			<div class="info_dt">
 				<div id="doc" class="info_title">
 					<ul class="mui-table-view mui-table-view-chevron">
-						<li class="mui-table-view-cell mui-media">
+						<!--<li class="mui-table-view-cell mui-media">
 								<span>医生</span>
-						</li>
+						</li>-->
 					</ul>
 				</div>
 
@@ -246,16 +297,16 @@
 			</div>
 
 			<!--科室-->
-			<div class="">
+			<div class="info_dt">
 				<div id="dep" class="info_title">
 					<ul class="mui-table-view mui-table-view-chevron">
-						<li class="mui-table-view-cell mui-media">
+						<!--<li class="mui-table-view-cell mui-media">
 								<span>科室</span>
-						</li>
+						</li>-->
 					</ul>
 				</div>
 
-				<ul id="searchdep" class="mui-table-view">
+				<ul id="searchdep" class="mui-table-view mui-table-view-chevron">
 					<!--<li class="mui-table-view-cell">
 						<a class="">
 							<h4 class="ks_title">上海五官科医院耳鼻喉科</h4>
@@ -266,24 +317,16 @@
 			</div>
 
 			<!--疾病-->
-			<div class="">
+			<div class="info_dt">
 				<div id="illness" class="info_title">
 					<ul class="mui-table-view mui-table-view-chevron">
-						<li class="mui-table-view-cell mui-media">
+						<!--<li class="mui-table-view-cell mui-media">
 								<span>疾病</span>
-						</li>
+						</li>-->
 					</ul>
 				</div>
-				<ul id="searchillness" class="mui-table-view">
-					<li class="mui-table-view-cell">
-						<a class="">
-							<h4 class="jb_title">鼻炎</h4>
-							<p>
-								<span>推荐医院：</span><span>1000</span><span>个医院</span>
-								<span>推荐医生：</span><span>1000</span><span>个医生</span>
-							</p>
-						</a>
-					</li>
+				<ul id="search_illness" class="mui-table-view mui-table-view-chevron">
+					
 				</ul>
 			</div>
 		</div>

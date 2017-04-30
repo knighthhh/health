@@ -52,16 +52,16 @@
 		<script src="../js/mui.min.js"></script>
 		<script src="../js/common.js"></script>
 		<script type="text/javascript">
-			mui.init({
-				beforeback: function() {
-					//获得返回界面的webview
-					var m = plus.webview.getWebviewById('mine/Mine.html');
-					//触发返回界面的自定义事件（refresh）,从而进行数据刷新
-					mui.fire(m, 'refresh');
-					//返回true，继续页面关闭逻辑
-					return true;
-				}
-			});
+//			mui.init({
+//				beforeback: function() {
+//					//获得返回界面的webview
+//					var m = plus.webview.getWebviewById('mine/Mine.html');
+//					//触发返回界面的自定义事件（refresh）,从而进行数据刷新
+//					mui.fire(m, 'refresh');
+//					//返回true，继续页面关闭逻辑
+//					return true;
+//				}
+//			});
 			
 			mui.plusReady(function(){
 				var user_phone = plus.storage.getItem('user_phone');
@@ -88,6 +88,48 @@
       				}
       			})
 				
+				//修改用户名
+				var namebtn = document.getElementById("name");
+				namebtn.addEventListener('tap',function(){
+					mui.openWindow({
+						url: 'reset_name.html',
+						id: 'reset_name',
+						extras:{
+							user_phone:user_phone
+						},
+						show: {
+							aniShow: 'pop-in'
+						},
+						styles: {
+							popGesture: 'hide'
+						},
+						waiting: {
+							autoShow: false
+						}
+					});
+				})
+				
+				//修改密码
+				var passwordbtn = document.getElementById("password");
+				passwordbtn.addEventListener('tap',function(){
+					mui.openWindow({
+						url: 'reset_password.html',
+						id: 'reset_password',
+						extras:{
+							user_phone:user_phone
+						},
+						show: {
+							aniShow: 'pop-in'
+						},
+						styles: {
+							popGesture: 'hide'
+						},
+						waiting: {
+							autoShow: false
+						}
+					});
+				})
+				
 			});
 			
 		</script>
@@ -108,18 +150,18 @@
 								</span>
 							</a>
 							</li>
-							<li class="mui-table-view-cell">
+							<li id="name" class="mui-table-view-cell">
 								<a><span class="iconfont icon-username i2"></span>
-									用户名<span id="user_name" class="mui-pull-right">YGT</span></a>
+									用户名<span id="user_name" class="mui-pull-right"></span></a>
 							</li>
 						</ul>
 						<ul class="mui-table-view">
 							<li class="mui-table-view-cell">
 								<a><span class="iconfont icon-shoujihao i3"></span>
-									手机号<span id="user_phone" class="mui-pull-right">8877777</span></a>
+									手机号<span id="user_phone" class="mui-pull-right"></span></a>
 							</li>					
 						
-							<li class="mui-table-view-cell">
+							<li id="password" class="mui-table-view-cell">
 								<a><span class="iconfont icon-mima i4"></span>
 									密码<span class="mui-pull-right">*****</span></a>
 							</li>
@@ -171,6 +213,7 @@
 						{method:"POST"},
 						function(t,status){ //上传完成
 							if(status==200){
+								plus.webview.getWebviewById('mine/Mine.html').reload();
 							}else{
 								outLine("上传失败："+status);
 								wt.close();

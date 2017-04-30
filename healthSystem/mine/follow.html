@@ -21,8 +21,95 @@
 	</head>
 	<body>
 		<script src="../js/mui.min.js"></script>
+		<script src="../js/common.js"></script>
 		<script type="text/javascript">
-			mui.init()
+			mui.init();
+			mui.plusReady(function(){
+				var user_phone = plus.storage.getItem('user_phone');
+				//关注的医院
+				mui.ajax('http://'+serverName+'/health/management/Application/index.php/Connector/User/get_attention_hos',{
+      				data:{
+      					user_phone:user_phone
+      				},
+      				dataType:'json',
+      				type:'POST',
+      				timeout:10000,
+      				success:function(data){
+      					//{"reslut":1}表示请求数据成功
+      					if(data.result!=0){ 
+      						var s="";
+      						for(var i=0;i<data.length;++i){
+      							s+="<li id='"+data[i].hos_id+"' class='mui-table-view-cell'><a class='mui-navigate-right'>"+data[i].hos_name+"</a> </li>";
+      						}
+      						document.getElementById("hos_list").innerHTML = s;
+      					}else{
+      						 
+      					}
+      				},
+      				error:function(){
+      					plus.nativeUI.toast("请检查您的网络");
+      				}
+      			});
+      			
+      			//批量监听医院跳转
+      			mui('#hos_list').on('tap', '.mui-table-view-cell', function() {
+					var hosID = this.getAttribute('id');
+					//获得医院详情页面
+					var hosHP = plus.webview.getWebviewById('hosHP.html');
+					//通知自定义事件
+					mui.fire(hosHP,'hosID',{
+						hosID:hosID
+					});
+					mui.openWindow({
+						id:'hosHP.html',
+						show:{
+							aniShow:'pop-in'
+						}
+					});
+				}); 
+      			
+      			//关注的医生
+      			mui.ajax('http://'+serverName+'/health/management/Application/index.php/Connector/User/get_attention_doc',{
+      				data:{
+      					user_phone:user_phone
+      				},
+      				dataType:'json',
+      				type:'POST',
+      				timeout:10000,
+      				success:function(data){
+      					//{"reslut":1}表示请求数据成功
+      					if(data.result!=0){ 
+      						var s="";
+      						for(var i=0;i<data.length;++i){
+      							s+="<li id='"+data[i].doc_id+"' class='mui-table-view-cell'><a class='mui-navigate-right'>"+data[i].doc_name+"</a> </li>";
+      						}
+      						document.getElementById("doc_list").innerHTML = s;
+      					}else{
+      						 
+      					}
+      				},
+      				error:function(){
+      					plus.nativeUI.toast("请检查您的网络");
+      				}
+      			});
+      			
+      			//批量监听医生列表点击
+				mui('#doc_list').on('tap', '.mui-table-view-cell', function() {
+					var docID = this.getAttribute('id');
+					//获得医生详情页面
+					docHP = plus.webview.getWebviewById('docHP.html');
+					//通知自定义事件
+					mui.fire(docHP,'docID',{
+						docID:docID
+					});
+					mui.openWindow({
+						id:'docHP.html',
+						show:{
+							aniShow:'pop-in'
+						}
+					});
+				}); 
+			})
 		</script>
 	</body>
 	<!--我的关注-->
@@ -38,16 +125,10 @@
 					            <a class="mui-navigate-right" href="#">
 					            	<span class="iconfont icon-yiyuan i1"></span>
 					            	我关注的医院</a>
-					     <ul class="mui-table-view mui-collapse-content">
-						    <li class="mui-table-view-cell">
+					     <ul id="hos_list" class="mui-table-view mui-collapse-content">
+						    <!--<li class="mui-table-view-cell">
 						        <a class="mui-navigate-right">医院1</a>
-						    </li>
-						    <li class="mui-table-view-cell">
-						        <a class="mui-navigate-right">医院 2</a>
-						    </li>
-						    <li class="mui-table-view-cell">
-						        <a class="mui-navigate-right">医院 3</a>
-						    </li>
+						    </li>-->
 						</ul>       
 					        </li>
 					   </ul>
@@ -56,16 +137,10 @@
 					            <a class="mui-navigate-right" href="#">
 					            	<span class="iconfont icon-guanlianyisheng i2"></span>
 					            	我关注的医生</a>
-					        <ul class="mui-table-view mui-collapse-content">
-						    <li class="mui-table-view-cell">
-						        <a class="mui-navigate-right">姚医生</a>
-						    </li>
-						    <li class="mui-table-view-cell">
-						        <a class="mui-navigate-right">王医生</a>
-						    </li>
-						    <li class="mui-table-view-cell">
-						        <a class="mui-navigate-right">黄医生</a>
-						    </li>
+					        <ul id="doc_list" class="mui-table-view mui-collapse-content">
+							    <!--<li class="mui-table-view-cell">
+							        <a class="mui-navigate-right">姚医生</a>
+							    </li>-->
 							</ul>
 					        </li>
 					    </ul>

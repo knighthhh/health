@@ -112,6 +112,7 @@
 			//获取推送所要用的CID
 		    doc_cid = plus.push.getClientInfo().clientid;
 		    plus.storage.setItem('doc_cid',doc_cid);
+		    alert(doc_cid);
 		    
 			var loginButton = doc.getElementById('login');
 			var doc_phoneBox = doc.getElementById('doc_phone');

@@ -33,15 +33,15 @@
 						for(var i=0;i<data.length;i++){
 							s+="<li id='"+data[i].doc_id+"' class='mui-table-view-cell mui-media '><a class=''><div class='mui-row '><div class='mui-pull-left mui-col-xs-3 '>";
 							s+="<img src='"+data[i].doc_img+"' style='width: 100%' /></div><div class='mui-col-xs-1'></div><div class='mui-col-xs-8'>";
-							s+="<h4 class='dt_title'>"+data[i].doc_name+"</h4><div class='dt_from'><p><span class='mui-icon iconfont icon-iconaddress i-color'></span>";
+							s+="<h4 class='dt_title'>"+data[i].doc_name+" 医生</h4><div class='dt_from'><p><span class='mui-icon iconfont icon-iconaddress i-color'></span>";
 							s+="<span>"+data[i].hos_name+"</span></p>";
-							s+="<p><span class='mui-icon iconfont icon-iconaddress i-color'></span>所属科室：<span>"+data[i].dep_name+"</span> </p></div></p></div></div>";
-							s+="<p class='mui-ellipsis'> 擅长：<span>"+data[i].doc_especial+"</span></p>";
-							s+="<span class='iconfont icon-jinqian1 i-color'></span><span class='icon-title'>"+data[i].doc_fee+"/半小时</span>";
-							s+="<span class='iconfont icon-pinglun2 i-color'></span><span class='icon-title'>"+data[i].doc_rece+"</span>";
-							s+="<span class='iconfont icon-dianzan i-color'></span><span class='icon-title'>"+data[i].doc_attention+"</span>";
-							s+="<span class='iconfont icon-guanzhu1 i-color'></span><span class='icon-title'>"+data[i].doc_hot+"</span>";
-							s+="<span><button id='"+data[i].doc_id+"' type='button' class='mui-btn mui-btn-success mui-btn-outlined mui-pull-right consult_button'>去咨询</button></span>";
+							s+="<p><span class='mui-icon iconfont icon-iconaddress i-color'></span>所属科室：<span>"+data[i].dep_name+"</span> </p><p class='mui-ellipsis'> <span class='iconfont icon-dianzan i-color'></span>擅长：<span>"+data[i].doc_especial+"</span></p></div></p></div></div>";
+//							s+="<p class='mui-ellipsis'> 擅长：<span>"+data[i].doc_especial+"</span></p>";
+							s+="<span class='iconfont icon-jinqian1 i-color'></span><span class='icon-title'> "+data[i].doc_fee+"/小时</span>";
+							s+="&nbsp&nbsp&nbsp<span class='iconfont icon-pinglun2 i-color'></span><span class='icon-title'> "+data[i].doc_rece+"</span>";
+//							s+="<span class='iconfont icon-dianzan i-color'></span><span class='icon-title'>"+data[i].doc_hot+"</span>";
+							s+="&nbsp&nbsp&nbsp<span class='iconfont icon-guanzhu1 i-color'></span><span class='icon-title'> "+data[i].doc_attention+"</span>";
+							s+="<span><button id='"+data[i].doc_phone+"' type='button' class='mui-btn mui-btn-success mui-btn-outlined mui-pull-right consult_button'>去咨询</button></span>";
 						} 
 						var mydoclist =document.getElementById("mydoclist");
 						mydoclist.innerHTML = s;
@@ -55,30 +55,49 @@
 				}
 			})
     		var docHP = null;
-    		//批量监听医生列表
-    		mui('#mydoclist').on('tap', '.mui-table-view-cell', function() {
-				var docID = this.getAttribute('id');
-						//获得医生详情页面
-						if(!docHP){
-							docHP = plus.webview.getWebviewById('docHP.html');
-						}
-						//通知自定义事件
-						mui.fire(docHP,'docID',{
-							docID:docID
-						});
-						mui.openWindow({
-							id:'docHP.html',
-							show:{
-								aniShow:'pop-in'
-							}
-						});
+//  		//批量监听医生列表
+//  		mui('#mydoclist').on('tap', '.mui-table-view-cell', function() {
+//				var docID = this.getAttribute('id');
+//						//获得医生详情页面
+//						if(!docHP){
+//							docHP = plus.webview.getWebviewById('docHP.html');
+//						}
+//						//通知自定义事件
+//						mui.fire(docHP,'docID',{
+//							docID:docID
+//						});
+//						mui.openWindow({
+//							id:'docHP.html',
+//							show:{
+//								aniShow:'pop-in'
+//							}
+//						});
+//         	});
+    		mui('#mydoclist').on('tap', '.mui-btn', function() {
+				var doc_phone = this.getAttribute('id');
+				mui.openWindow({
+					url: '/im/im-chat.html', 
+					id: 'im-chat',
+					extras:{
+					    doc_phone:doc_phone
+					},
+					show: {
+						aniShow: 'pop-in'
+					},
+					styles: {
+						popGesture: 'hide'
+					},
+					waiting: {
+						autoShow: true
+					}
+				});
 			}); 
     	})
     </script> 
 </head>
 <body> 
 	
-<header class="mui-bar mui-bar-nav public-color">
+<header class="mui-bar mui-bar-nav public-color"> 
     <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
     <h1 class="mui-title">我的医生</h1>
 </header>
@@ -87,7 +106,7 @@
 		<div class="mui-content">
 			<div class="info_dt">	
 					 <ul id="mydoclist" class="mui-table-view mui-table-view-chevron">
-						<li class="mui-table-view-cell mui-media ">		
+						<!--<li class="mui-table-view-cell mui-media ">		
 							<a class=" ">
 								<div class="mui-row ">
 									<div class="mui-pull-left mui-col-xs-3 " >
@@ -104,13 +123,13 @@
 									</div>
 								</div>
 								<p>
-								<!--<span class="clinic_time">就诊时间：</span> <span>2017-05-23</span>-->
+								<span class="clinic_time">就诊时间：</span> <span>2017-05-23</span>
 								<button type="button" class="mui-btn mui-btn-success mui-btn-outlined mui-pull-right consult_button">
 									去咨询
 								</button>
 								</p>
 							</a>
-						</li>
+						</li>-->
 					</ul>
 			</div>
 		</div>

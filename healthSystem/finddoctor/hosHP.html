@@ -58,6 +58,7 @@
 							var hosimg = '';
 							for(i = 0; i < data.length; i++) {
 								hosimg = hosimg + '<div class="mui-slider-item"><a href="#"><img src="' + data[i].hos_img + '"></a></div>';
+
 							}
 
 							slider1.innerHTML = hosimg;
@@ -147,7 +148,7 @@
 						});
 
 					});
-					//查看医生简介	
+					//查看医院简介	
 					mui('#hosInfo').on('tap', '#intro1', function(e) {
 						mui.openWindow({
 							url: 'hos_brief.html',
@@ -162,7 +163,30 @@
 								autoShow: true
 							}
 						});
-					});
+
+            		});
+            		
+            		//关注按钮监听
+            		var attention = document.getElementById("attention");
+            		attention.addEventListener('tap',function(){
+            			mui.ajax('http://'+serverName+'/health/management/Application/index.php/Connector/User/attention_hos',{
+			  				data:{
+								hos_id:hos_id,
+								user_phone:user_phone
+			  				},
+			  				dataType:'json',
+			  				type:'POST',
+			  				timeout:10000,
+			  				success:function(data){
+			  					//{"reslut":1}表示成功
+			  					plus.nativeUI.toast(data.data);
+			  					
+			  				},
+			  				error:function(){
+								plus.nativeUI.toast("请检查您的网络");
+			  				}
+			  			})
+            		});
 				});
 			}
 		</script>
@@ -235,7 +259,7 @@
 		<div class="mui-card-footer">
 			<button type="button" id="gohere" class="mui-btn public-color mui-pull-left" style="color: #FFFFFF;margin-left: 20%;">去这里</button>
 			<!--调用地图模块-->
-			<button type="button" class="mui-btn public-color mui-pull-right" style="color: #FFFFFF;margin-right: 20% ;">关注</button>
+			<button id="attention" type="button" class="mui-btn public-color mui-pull-right" style="color: #FFFFFF;margin-right: 20% ;">关注</button>
 		</div>
 
 	</body>

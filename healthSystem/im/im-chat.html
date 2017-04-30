@@ -297,9 +297,9 @@
 	</head>
 
 	<body contextmenu="return false;">
-		<header class="mui-bar mui-bar-nav">
+		<header class="mui-bar mui-bar-nav public-color" >
 			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
-			<h1 class="mui-title">chat (聊天窗口)</h1>
+			<h1 class="mui-title" >实时咨询</h1>
 		</header>
 		<pre id='h'></pre>
 		<script id='msg-template' type="text/template">
@@ -307,7 +307,7 @@
 				<div class="msg-item <%= (item.sender=='self'?' msg-item-self':'') %>" msg-type='<%=(item.type)%>' msg-content='<%=(item.content)%>'>
 					<% if(item.sender=='self' ) { %>
 						<i class="msg-user mui-icon mui-icon-person"></i>
-					<% } else { %>
+					<% } else { %> 
 						<img class="msg-user-img" src="../img/finddoctor.jpg" alt="" />
 					<% } %>
 					<div class="msg-content">

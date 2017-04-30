@@ -10,6 +10,7 @@
 		<link href="../css/mui.min.css" rel="stylesheet" />
 		<link rel="stylesheet" type="text/css" href="../css/heathfile.css" />
 		<script type="text/javascript" src="../js/mui.min.js"></script>
+		<script type="text/javascript" src="../js/common.js"></script>
 		<style type="text/css">
 			img {
 				height: 80px;
@@ -217,20 +218,104 @@
 	<script type="text/javascript">
 		mui.init();
 		mui.plusReady(function() {
-			var reply = document.getElementById('reply');
-			reply.addEventListener('tap', function(event) {
+			var self = plus.webview.currentWebview();
+			var inqu_id = self.inqu_id; 
+			var user_phone = self.user_phone;
+			var time = self.time;
+			var doc_phone = plus.storage.getItem('doc_phone');
+			//获取患者咨询信息
+			mui.ajax('http://'+serverName+'/health/management/Application/index.php/Connector/Inquiry/getInquiry_detail',{	
+				data:{
+					inqu_id:inqu_id,
+					user_phone:user_phone,
+					time : time
+				},
+				dataType:'json', 
+				type:'POST',
+				timeout:10000,
+				success:function(data){
+					document.getElementById("user_name").innerHTML=data.user_name;
+					document.getElementById("zixun_illness").innerHTML=data.zixun_illness;
+					document.getElementById("see_doc").innerHTML=data.see_doc;
+					document.getElementById("zixun_text").innerHTML=data.zixun_text;
+					
+					//图片展示
+					var s="";
+					for(var i=0;i<data.img.length;i++){
+						s+="<img src='"+data.img[i]+"' data-preview-src='' data-preview-group='1' />";
+					}
+					document.getElementById("zixun_img").innerHTML = s;
+				},
+				error:function(){
+//					plus.nativeUI.toast("请检查您的网络");
+				}
+			})
+			//回复
+			var huifu = document.getElementById("huifu");
+			huifu.addEventListener('tap',function(){
 				mui.openWindow({
-					url: 'reply.html',
-					id: 'reply',
-					preload: true,
+					url: '/message/chat.html', 
+					id: 'chat',
+					extras:{
+						user_phone:user_phone
+					},
 					show: {
 						aniShow: 'pop-in'
 					},
+					styles: {
+						popGesture: 'hide'
+					},
 					waiting: {
-						autoShow: false
+						autoShow: true
 					}
 				});
-			}, false);
+				//“我的医生”添加记录
+				mui.ajax('http://'+serverName+'/health/management/Application/index.php/Connector/User/mydoc',{	
+					data:{
+						user_phone:user_phone,
+						doc_phone:doc_phone
+					},
+					dataType:'json',
+					type:'POST',
+					timeout:10000,
+					success:function(data){
+						//{"reslut":1}表示成功
+					},
+					error:function(){
+					}
+				})
+				//发送推送给患者
+				mui.ajax('http://'+serverName+'/health/management/Application/Connector/push/push_user.php',{
+					data:{
+						doc_phone:doc_phone,
+						user_phone:user_phone
+					},
+					dataType:'json',
+					type:'POST',
+					timeout:10000,
+					success:function(data){
+						//{"reslut":1}表示成功
+						
+					},
+					error:function(){
+					}
+				})
+				
+				//刷新我的患者列表
+				plus.webview.getWebviewById('message/Message.html').reload();
+				
+				//10秒后关闭页面
+				setTimeout(function(){
+//					var self = plus.webview.currentWebview();
+					self.close();	 
+				},10000);
+			});
+			
+			//暂不处理
+//			var ignore = document.getElementById("ignore");
+//			ignore.addEventListener('tap',function(){
+//				mui.back();
+//			});
 
 		});
 	</script>
@@ -246,44 +331,31 @@
 				<ul class="mui-table-view mui-card">
 					<li class="mui-table-view-cell">
 						<span>患者姓名：</span>
-						<span id="">
-					姚先生
-			    </span>
+						<span id="user_name"> </span>
 					</li>
 					<li class="mui-table-view-cell">
 						<span>所患疾病：</span>
-						<span id="">
-  			     	鼻炎
-			    </span>
+						<span id="zixun_illness"></span>
 					</li>
 					<li class="mui-table-view-cell">
 						<span>是否去过医院就诊：</span>
-						<span id="">
- 			     	否
-				</span>
+						<span id="see_doc"></span>
 					</li>
 					<li class="mui-table-view-cell">
 						<span>疾病详情及病史描述：</span>
-						<span id="">
-				过敏性鼻炎晚期无药可救
-				</span>
+						<span id="zixun_text"></span>
 					</li>
 					<li class="mui-table-view-cell">
 						<span>相关资料：</span>
-						<span id="">
-				           处方图片
-		   </span>
-						<p>
-							<img src="../img/doctor.jpeg" data-preview-src="" data-preview-group="1" />
-							<img src="../img/findHp.jpg" data-preview-src="" data-preview-group="1" />
-							<img src="../img/search.jpg" data-preview-src="" data-preview-group="1" />
+						<span id=""> </span>
+						<p id="zixun_img">
+							<!--<img src="../img/doctor.jpeg" data-preview-src="" data-preview-group="1" />-->
 						</p>
 					</li>
 				</ul>
 				<div class="submit" id="reply">
-					<h1 class="mui-btn mui-btn-success ">
-				回复
-			</h1>
+					<button id="huifu" class="mui-btn mui-btn-success">回复</button>
+					<!--<button id="ignore" class="mui-btn mui-btn-blue">暂不处理</button>-->
 				</div>
 			</div>
 		</div>

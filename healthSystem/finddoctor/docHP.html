@@ -26,53 +26,80 @@
 			    var MyMar=setInterval(Marquee,speed)
 			    demo.onmouseover=function() {clearInterval(MyMar)}
 			    demo.onmouseout=function() {MyMar=setInterval(Marquee,speed)}
-			
-            	mui.plusReady(function(){});
+    
+				var doc_phone=null;
+        		var doc_name=null;
+        		var user_phone = null;
+        		
+            	mui.plusReady(function(){ user_phone = plus.storage.getItem('user_phone');});
+            		 
             		//添加detailPage自定义事件监听
 					window.addEventListener('docID',function(event){
-					 	//获得医生ID参数
-					 	var doc_id = event.detail.docID;
-					  	//根据id向服务器请求医生详情
-					  	mui.get('http://'+serverName+'/health/management/Application/index.php/Connector/Doc/getDocDetail',{
-	            			doc_id:doc_id
-	            			},function(data){
-	            			var docInfo = document.getElementById('docInfo');
-	            			var li = '';
-	            			li = li+'<li class="mui-table-view-cell"><div><img class="mui-pull-left" style="width:80px;height:80px;border-radius:100px;" src="'+data.doc_img+'"></div><div style="float:left;margin-left:20px" class=""><h4>'+data.doc_name+
-	            			'</h4><p>所属医院：'+data.hos_name+'</p><p>擅长: '+data.doc_especial+'</p><p>热度: '+data.doc_hot+'</p></div></li>';
-	            			docInfo.innerHTML = li ;
-	            			
-	            			//显示医生简介
-	            			var doc_introduce = document.getElementById("doc_introduce");
-	            			var s="";
-	            			s = "<p style='font-size: 15px;text-align: center;'>"+data.doc_introduce+"</p>";
-							doc_introduce.innerHTML = s;
-							doc_phone = data.doc_phone;
-							doc_name = data.doc_name;
-	            		},'json');
-	            		//医生简介详情
-	            		
-	            		//咨询按钮监听
-	            		var zixun = document.getElementById("zixun");
-	            		zixun.addEventListener('tap',function(){
-	            			mui.openWindow({
-								url: 'zixun.html', 
-								id: 'zixun',
-								extras:{
-								    doc_phone:doc_phone
-								},
-								show: {
-									aniShow: 'pop-in'
-								},
-								styles: {
-									popGesture: 'hide'
-								},
-								waiting: {
-									autoShow: true
-								}
-							});
-	            		});
-					});
+				 	//获得医生ID参数
+				 	var doc_id = event.detail.docID;
+				  	//根据id向服务器请求医生详情
+				  	mui.get('http://'+serverName+'/health/management/Application/index.php/Connector/Doc/getDocDetail',{
+            			doc_id:doc_id
+            		},function(data){
+            			var docInfo = document.getElementById('docInfo');
+            			var li = '';
+            			li = li+'<li class="mui-table-view-cell"><div><img class="mui-pull-left" style="width:80px;height:80px;border-radius:100px;" src="'+data.doc_img+'"></div><div style="float:left;margin-left:20px" class=""><h4>'+data.doc_name+
+            			'</h4><p>所属医院：'+data.hos_name+'</p><p>擅长: '+data.doc_especial+'</p><p>热度: '+data.doc_hot+'</p></div></li>';
+            			docInfo.innerHTML = li ;
+            			
+            			//显示医生简介
+            			var doc_introduce = document.getElementById("doc_introduce");
+            			var s="";
+            			s = "<p style='font-size: 15px;text-align: center;'>"+data.doc_introduce+"</p>";
+						doc_introduce.innerHTML = s;
+						doc_phone = data.doc_phone;
+						doc_name = data.doc_name;
+            		},'json');
+            		//医生简介详情
+            		
+            		//咨询按钮监听
+            		var zixun = document.getElementById("zixun");
+            		zixun.addEventListener('tap',function(){
+            			mui.openWindow({
+							url: 'zixun.html', 
+							id: 'zixun',
+							extras:{
+							    doc_phone:doc_phone
+							},
+							show: {
+								aniShow: 'pop-in'
+							},
+							styles: {
+								popGesture: 'hide'
+							},
+							waiting: {
+								autoShow: true
+							}
+						});
+            		});
+            		
+            		//关注按钮监听
+            		var attention = document.getElementById("attention");
+            		attention.addEventListener('tap',function(){
+            			mui.ajax('http://'+serverName+'/health/management/Application/index.php/Connector/User/attention_doc',{
+			  				data:{
+								doc_phone:doc_phone,
+								user_phone:user_phone
+			  				},
+			  				dataType:'json',
+			  				type:'POST',
+			  				timeout:10000,
+			  				success:function(data){
+			  					//{"reslut":1}表示成功
+			  					plus.nativeUI.toast(data.data);
+			  					
+			  				},
+			  				error:function(){
+								plus.nativeUI.toast("请检查您的网络");
+			  				}
+			  			})
+            		});
+				});
          }   	
         </script> 
 	</head>
@@ -175,7 +202,7 @@
 		<div class="mui-card-footer" >
 			<button id="zixun" type="button" class="mui-btn public-color mui-pull-left" style="color: #FFFFFF;margin-left: 20%;">咨询</button>
 			
-			<button type="button" class="mui-btn public-color mui-pull-right" style="color: #FFFFFF;margin-right: 20% ;">关注</button>
+			<button id="attention" type="button" class="mui-btn public-color mui-pull-right" style="color: #FFFFFF;margin-right: 20% ;">关注</button>
 		</div>
 		
 	</body>
