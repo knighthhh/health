@@ -326,7 +326,8 @@
 					"js/mui.min.js",
 					"fonts/mui.ttf",
 					"css/mui.min.css",
-					"js/common.js"
+					"js/common.js",
+					"img/finddoctor.jpg"
 				],
 				"refer": [
 					"index.html",
@@ -397,12 +398,15 @@
 					"css/iconfont_foot.css",
 					"fonts/mui.ttf",
 					"fonts/iconfont_foot.ttf",
-					"img/doctor.jpeg"
+					"img/doctor.jpeg",
+					"js/common.js"
 				],
 				"refer": [
 					"inquiry/mydoctor.html",
 					"inquiry/select_file.html",
-					"finddoctor/search_doctor.html"
+					"finddoctor/search_doctor.html",
+					"inquiry/patientmeg.html",
+					"message/chat.html"
 				],
 				"priority": 0
 			},
@@ -700,9 +704,17 @@
 					"css/iconfont_mine.css",
 					"fonts/iconfont_mine.ttf",
 					"css/iconfont_account.css",
-					"img/doctor.jpeg"
+					"img/doctor.jpeg",
+					"css/iconfont_se.css",
+					"fonts/iconfont_se.ttf",
+					"fonts/iconfont_money.ttf",
+					"css/iconfont_money.css"
 				],
-				"refer": [],
+				"refer": [
+					"mine/reset_name.html",
+					"mine/reset_password.html",
+					"mine/reset_fee.html"
+				],
 				"priority": 0
 			},
 			"finddoctor/search_doctor_jb.html": {
@@ -941,6 +953,54 @@
 					"message/chat.html"
 				],
 				"priority": 0
+			},
+			"mine/reset_name.html": {
+				"resources": [
+					"js/common.js",
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"mine/reset_password.html": {
+				"resources": [
+					"js/common.js",
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"mine/reset_fee.html": {
+				"resources": [
+					"js/common.js",
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"inquiry/patientmeg.html": {
+				"resources": [
+					"js/mui.zoom.js",
+					"img/findHp.jpg",
+					"img/search.jpg",
+					"js/mui.previewimage.js",
+					"css/heathfile.css",
+					"img/doctor.jpeg",
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"js/common.js"
+				],
+				"refer": [
+					"message/chat.html"
+				],
+				"priority": 0
 			}
 		},
 		"idle": {
@@ -950,7 +1010,6 @@
 				"html/subindex.html",
 				"img/1.jpg",
 				"img/text1.jpg",
-				"img/search.jpg",
 				"html/Health_File.html",
 				"html/Inquiry.html",
 				"css/mui.css",

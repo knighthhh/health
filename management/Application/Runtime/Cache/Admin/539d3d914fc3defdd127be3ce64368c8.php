@@ -1,26 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit();?><!-- <!DOCTYPE html>
-<html>
-<head>
-	<title></title>
-</head>
-<link rel="stylesheet" href="<?php echo (ADMIN_CSS_URL); ?>pintuer.css">
-<link rel="stylesheet" href="<?php echo (ADMIN_CSS_URL); ?>admin.css">
-<body>
-		<form id="addform" action="/health/management/Application/index.php/Admin/Doctor/uploadExcel/hos_id/64" method="post" enctype="multipart/form-data">
-  <input name="id" type="hidden" value="<?php echo ($goods_info["id"]); ?>" />
-        <div class="control-group">
-        <h2>先下载表格，填好数据后上传</h2>
-          <a style="text-decoration:none;" href="/health/management/Application/Public/Excel/医生导入表格.xls">医生Excel表格：</a>
-                <input type="file" name="excelData" value=""  datatype="*4-50"  nullmsg="请填写产品！" errormsg="不能少于4个字符大于50个汉字"/>
-                <span class="Validform_checktip"></span>
-        </div>
-        <div class="control-group">
-          <input class="button border-green icon-plus-square-o" type="submit" class="btn btn-primary Sub" value="导入" />
-        </div>
-    </form>
-</body>
-</html> -->
-<!DOCTYPE html>
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
 <html lang="zh-cn">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -88,7 +66,7 @@
 </body>
 <script type="text/javascript">
   
-  //院内导航图上传按钮处理
+  //上传按钮处理
   $(".upload").click(function(){
     console.log("Sd");
     $("#fileUpload").click();

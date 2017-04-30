@@ -38,9 +38,8 @@
 				});
 			
             	mui.plusReady(function(){
-//          		var self = plus.webview.currentWebview();
-//          		var hos_id = self.hos_id;
-            		
+            		var user_phone = plus.storage.getItem('user_phone');
+					var hos_id = null;            		
             		//用来传个下一个页面的经度，纬度，医院名字
             		var longitude=null;
             		var latitude=null;
@@ -48,7 +47,7 @@
             	//添加detailPage自定义事件监听
 				window.addEventListener('hosID',function(event){
 				  //获得医生ID参数
-				  var hos_id = event.detail.hosID;
+				  hos_id = event.detail.hosID;
 				  //根据id向服务器请求医院轮播图片
 				  mui.get('http://'+serverName+'/health/management/Application/index.php/Connector/Hos/getHosImg',{
 				  		hos_id:hos_id
@@ -96,11 +95,30 @@
             			li = li + '<li class="mui-table-view-cell"><a class="mui-navigate-right"><span class="iconfont icon-yanke1 tu-wu "></span><p align="center">'+data.hos_address_detail+
             			'</p></a></li><li class="mui-table-view-cell mui-disabled"><span class="iconfont icon-yanke1 tu-wu "></span><p align="center">'+data.hos_level+
             			'</p></li><li class="mui-table-view-cell mui-disabled"><span class="iconfont icon-yanke1 tu-wu "></span><p align="center">热门程度：'+data.hos_hot+
-            			'</p></li><li class="mui-table-view-cell mui-disabled "><span class="iconfont icon-yanke1 tu-wu "></span><p align="center">'+data.hos_introduce+'</p></li>';
+            			'</p></li><li id="intro1" class="mui-table-view-cell"><span class="iconfont icon-yanke1 tu-wu "></span><p align="center">'+data.hos_introduce+'</p></li>';
             			hosInfo.innerHTML = li ;
             			
             		},'json');
             		
+            		//医院简介详情
+            		mui('#hosInfo').on('tap','#intro1',function(e){
+             			mui.openWindow({
+							url:'hos_brief.html',   
+						    id:'hos_brief.html',
+						    extras:{
+						    	hos_id:hos_id
+						    },
+						    show:{
+						    	aniShow: 'pop-in'
+							},
+							styles: {
+								popGesture: 'hide'
+							},
+							waiting:{
+								autoShow:true
+							}
+						});
+            		});
             		//科室批量监听
             		mui('#depalist').on('tap', '.box-a-l', function() {
 						var dep_id = this.getAttribute('id');
@@ -145,6 +163,28 @@
 								autoShow: true
 							}
 						});
+            		});
+            		
+            		//关注按钮监听
+            		var attention = document.getElementById("attention");
+            		attention.addEventListener('tap',function(){
+            			mui.ajax('http://'+serverName+'/health/management/Application/index.php/Connector/User/attention_hos',{
+			  				data:{
+								hos_id:hos_id,
+								user_phone:user_phone
+			  				},
+			  				dataType:'json',
+			  				type:'POST',
+			  				timeout:10000,
+			  				success:function(data){
+			  					//{"reslut":1}表示成功
+			  					plus.nativeUI.toast(data.data);
+			  					
+			  				},
+			  				error:function(){
+								plus.nativeUI.toast("请检查您的网络");
+			  				}
+			  			})
             		});
 				});
 				});
@@ -219,7 +259,7 @@
 		<div class="mui-card-footer" >
 			<button type="button" id="gohere" class="mui-btn public-color mui-pull-left" style="color: #FFFFFF;margin-left: 20%;">去这里</button>
 			<!--调用地图模块-->
-			<button type="button" class="mui-btn public-color mui-pull-right" style="color: #FFFFFF;margin-right: 20% ;">关注</button>
+			<button id="attention" type="button" class="mui-btn public-color mui-pull-right" style="color: #FFFFFF;margin-right: 20% ;">关注</button>
 		</div>
 		
 	</body>

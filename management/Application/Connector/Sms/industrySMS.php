@@ -32,7 +32,7 @@
 		$yzm=rand('100000','999999') ;
 		$nowtime = date('Y-m-d H:i:s');
 		$time='5';
-		$body['smsContent'] = "【健康系统】您的验证码为:".$yzm."，请于".$time."分钟内正确输入，如非本人操作，请忽略此短信。";
+		$body['smsContent'] = "【掌上健康系统】您的验证码为:".$yzm."，请于".$time."分钟内正确输入，如非本人操作，请忽略此短信。";
 		$body['to'] = $phone;
 		
 		// 提交请求

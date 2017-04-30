@@ -52,16 +52,16 @@
 		<script src="../js/mui.min.js"></script>
 		<script src="../js/common.js"></script>
 		<script type="text/javascript">
-			mui.init({
-				beforeback: function() {
-					//获得返回界面的webview
-					var m = plus.webview.getWebviewById('mine/Mine.html');
-					//触发返回界面的自定义事件（refresh）,从而进行数据刷新
-					mui.fire(m, 'refresh');
-					//返回true，继续页面关闭逻辑
-					return true;
-				}
-			});
+//			mui.init({
+//				beforeback: function() {
+//					//获得返回界面的webview
+//					var m = plus.webview.getWebviewById('mine/Mine.html');
+//					//触发返回界面的自定义事件（refresh）,从而进行数据刷新
+//					mui.fire(m, 'refresh');
+//					//返回true，继续页面关闭逻辑
+//					return true;
+//				}
+//			});
 			
 			mui.plusReady(function(){
 				var user_phone = plus.storage.getItem('user_phone');
@@ -88,6 +88,48 @@
       				}
       			})
 				
+				//修改用户名
+				var namebtn = document.getElementById("name");
+				namebtn.addEventListener('tap',function(){
+					mui.openWindow({
+						url: 'reset_name.html',
+						id: 'reset_name',
+						extras:{
+							user_phone:user_phone
+						},
+						show: {
+							aniShow: 'pop-in'
+						},
+						styles: {
+							popGesture: 'hide'
+						},
+						waiting: {
+							autoShow: false
+						}
+					});
+				})
+				
+				//修改密码
+				var passwordbtn = document.getElementById("password");
+				passwordbtn.addEventListener('tap',function(){
+					mui.openWindow({
+						url: 'reset_password.html',
+						id: 'reset_password',
+						extras:{
+							user_phone:user_phone
+						},
+						show: {
+							aniShow: 'pop-in'
+						},
+						styles: {
+							popGesture: 'hide'
+						},
+						waiting: {
+							autoShow: false
+						}
+					});
+				})
+				
 			});
 			
 		</script>
@@ -108,18 +150,18 @@
 								</span>
 							</a>
 							</li>
-							<li class="mui-table-view-cell">
+							<li id="name" class="mui-table-view-cell">
 								<a><span class="iconfont icon-username i2"></span>
-									用户名<span id="user_name" class="mui-pull-right">YGT</span></a>
+									用户名<span id="user_name" class="mui-pull-right"></span></a>
 							</li>
 						</ul>
 						<ul class="mui-table-view">
 							<li class="mui-table-view-cell">
 								<a><span class="iconfont icon-shoujihao i3"></span>
-									手机号<span id="user_phone" class="mui-pull-right">8877777</span></a>
+									手机号<span id="user_phone" class="mui-pull-right"></span></a>
 							</li>					
 						
-							<li class="mui-table-view-cell">
+							<li id="password" class="mui-table-view-cell">
 								<a><span class="iconfont icon-mima i4"></span>
 									密码<span class="mui-pull-right">*****</span></a>
 							</li>
@@ -171,6 +213,7 @@
 						{method:"POST"},
 						function(t,status){ //上传完成
 							if(status==200){
+								plus.webview.getWebviewById('mine/Mine.html').reload();
 							}else{
 								outLine("上传失败："+status);
 								wt.close();
@@ -214,6 +257,77 @@
 					return Math.floor(Math.random()*100000000+10000000).toString();
 				}
 			})	
+
+
+		function defaultImg() {
+			if(mui.os.plus){
+				plus.io.resolveLocalFileSystemURL("_doc/head.jpg", function(entry) {
+					var s = entry.fullPath + "?version=" + new Date().getTime();;
+					document.getElementById("head-img1").src = s;
+				}, function(e) {
+					document.getElementById("head-img1").src = '../img/doctor.jpeg';
+				})
+			}else{
+				document.getElementById("head-img1").src = '../img/doctor.jpeg';
+			}
+		}
+		
+		//上传头像图片 
+        function uploadHead(imgPath) { 
+            console.log("imgPath = " + imgPath); 
+//          mainImage.src = imgPath; 
+//          mainImage.style.width = "60px"; 
+//          mainImage.style.height = "60px"; 
+            
+ 			var image = new Image(); 
+            image.src = imgPath;
+            image.onload = function() {
+            	//转成base64
+           		 var imgData = getBase64Image(image); 
+           		 var user_phone = plus.storage.getItem('user_phone');
+                /*在这里调用上传接口*/ 
+                mui.ajax('http://'+serverName+'/health/management/Application/index.php/Connector/User/headimg', { 
+                    data: { 
+                    	 user_phone:user_phone,
+                         imgData:imgData
+                    }, 
+                    dataType: 'json', 
+                    type: 'post', 
+                    timeout: 10000, 
+                    success: function(data) {
+                        plus.nativeUI.toast('上传成功'); 
+                    }, 
+                    error: function(xhr, type, errorThrown) { 
+                        mui.toast('网络异常，请稍后再试！'); 
+                    } 
+                }); 
+            } 
+   		}
+        
+        //将图片压缩转成base64 
+        function getBase64Image(img) { 
+            var canvas = document.createElement("canvas"); 
+            var width = img.width; 
+            var height = img.height; 
+            // calculate the width and height, constraining the proportions 
+            if (width > height) { 
+                if (width > 100) { 
+                    height = Math.round(height *= 100 / width); 
+                    width = 100; 
+                } 
+            } else { 
+                if (height > 100) { 
+                    width = Math.round(width *= 100 / height); 
+                    height = 100; 
+                } 
+            } 
+            canvas.width = width;   /*设置新的图片的宽度*/ 
+            canvas.height = height; /*设置新的图片的长度*/ 
+            var ctx = canvas.getContext("2d"); 
+            ctx.drawImage(img, 0, 0, width, height); /*绘图*/ 
+            var dataURL = canvas.toDataURL("image/png", 0.8); 
+            return dataURL.replace("data:image/png;base64,", ""); 
+        }  
 
 	    </script>
 	</body>

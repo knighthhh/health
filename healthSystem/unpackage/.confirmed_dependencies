@@ -6,7 +6,14 @@
 			"js/mui.min.js",
 			"css/iconfont.css",
 			"css/mui.min.css",
-			"css/iconfont_money.css"
+			"css/iconfont_money.css",
+			"fonts/iconfont_money.ttf",
+			"fonts/iconfont_foot.ttf",
+			"fonts/iconfont.ttf",
+			"css/iconfont_foot.css"
+		],
+		"refer": [
+			"finddoctor/officeHP.html"
 		]
 	},
 	"index.html": {
@@ -37,7 +44,8 @@
 			"js/common.js",
 			"js/mui.min.js",
 			"css/app.css",
-			"css/mui.min.css"
+			"css/mui.min.css",
+			"fonts/mui.ttf"
 		]
 	},
 	"main/subindex.html": {
@@ -55,13 +63,17 @@
 			"fonts/iconfont.ttf",
 			"img/jkzx.jpg",
 			"img/jiankang.jpeg",
-			"css/iconfont_foot.css"
+			"css/iconfont_foot.css",
+			"js/common.js",
+			"js/mui.min.js"
 		],
 		"refer": [
 			"finddoctor/docHP.html",
 			"finddoctor/hosHP.html",
 			"main/search/search.html",
-			"finddoctor/doclist.html"
+			"finddoctor/doclist.html",
+			"finddoctor/search_doctor_yy.html",
+			"finddoctor/search_doctor.html"
 		]
 	},
 	"mine/Mine.html": {
@@ -76,7 +88,12 @@
 		],
 		"refer": [
 			"mine/account.html",
-			"login/login.html"
+			"login/login.html",
+			"mine/about.html",
+			"mine/general.html",
+			"mine/feedback.html",
+			"mine/recharge.html",
+			"mine/follow.html"
 		]
 	},
 	"healthfile/Health_File.html": {
@@ -87,10 +104,17 @@
 			"fonts/iconfont_health_file.ttf",
 			"css/health_file.css",
 			"js/mui.min.js",
-			"css/mui.min.css"
+			"css/mui.min.css",
+			"css/iconfont_foot.css"
 		],
 		"refer": [
-			"healthfile/know_contents.html"
+			"healthfile/know_contents.html",
+			"healthfile/My_file.html",
+			"healthfile/Health_record.html",
+			"healthfile/medDiary.html",
+			"healthfile/Family_history.html",
+			"healthfile/Friends_file.html",
+			"healthfile/History_todoc.html"
 		]
 	},
 	"inquiry/Inquiry.html": {
@@ -103,10 +127,14 @@
 			"fonts/iconfont_inquiry.ttf",
 			"css/iconfont_foot.css",
 			"css/header.css",
-			"fonts/mui.ttf"
+			"fonts/mui.ttf",
+			"fonts/iconfont_foot.ttf"
 		],
 		"refer": [
-			"inquiry/mydoctor.html"
+			"inquiry/mydoctor.html",
+			"finddoctor/search_doctor.html",
+			"inquiry/select_file.html",
+			"inquiry/fast_question.html"
 		]
 	},
 	"login/login.html": {
@@ -148,6 +176,9 @@
 			"fonts/iconfont_mine.ttf",
 			"css/iconfont_account.css",
 			"img/doctor.jpeg"
+		],
+		"refer": [
+			"mine/reset_name.html"
 		]
 	},
 	"finddoctor/docHP.html": {
@@ -161,13 +192,20 @@
 			"css/iconfont.css",
 			"img/doctor.jpeg",
 			"css/iconfont_foot.css"
+		],
+		"refer": [
+			"finddoctor/zixun.html"
 		]
 	},
 	"main/search/search.html": {
 		"resources": [
 			"css/search.css",
 			"css/search_history.css",
-			"css/search_info.css"
+			"css/search_info.css",
+			"js/common.js",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css"
 		],
 		"refer": [
 			"main/search/search2.html"
@@ -176,16 +214,37 @@
 	"main/search/search2.html": {
 		"resources": [
 			"main/search/search_info.html",
-			"js/webviewGroup.js"
+			"js/webviewGroup.js",
+			"js/common.js",
+			"css/search.css",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"css/search_history.css",
+			"css/search_info.css"
 		],
 		"refer": [
-			"main/search/search_info.html"
+			"main/search/search_info.html",
+			"main/search/search.html",
+			"main/search/search_info_dt.html",
+			"main/search/search_info_hp.html",
+			"main/search/search_info_ks.html",
+			"main/search/search_info_jb.html"
 		]
 	},
 	"main/search/search_info.html": {
 		"resources": [
 			"css/iconfont_se.css",
-			"fonts/iconfont_se.ttf"
+			"fonts/iconfont_se.ttf",
+			"fonts/iconfont_money.ttf",
+			"css/iconfont_money.css",
+			"img/doctor.jpeg",
+			"js/common.js",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"css/search_history.css",
+			"css/search_info.css"
 		],
 		"refer": [
 			"finddoctor/docHP.html"
@@ -221,7 +280,12 @@
 			"css/health_file.css",
 			"css/search_info.css",
 			"css/iconfont_money.css",
-			"img/doctor.jpeg"
+			"img/doctor.jpeg",
+			"css/iconfont_se.css",
+			"fonts/iconfont_se.ttf"
+		],
+		"refer": [
+			"finddoctor/docHP.html"
 		]
 	},
 	"im/im-chat.html": {
@@ -235,6 +299,236 @@
 			"css/app.css",
 			"fonts/mui.ttf",
 			"css/mui.min.css"
+		]
+	},
+	"finddoctor/zixun.html": {
+		"resources": [
+			"js/common.js",
+			"css/mydoctor.css",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"css/zixun.css",
+			"css/fast_question.css"
+		]
+	},
+	"healthfile/My_file.html": {
+		"resources": [
+			"img/person_background.png",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"img/inquiry.jpg",
+			"css/heathfile.css"
+		],
+		"refer": [
+			"healthfile/myfile_person_edit.html"
+		]
+	},
+	"healthfile/medDiary.html": {
+		"resources": [
+			"js/mui.picker.min.js",
+			"css/iconfont_account.css"
+		]
+	},
+	"healthfile/Health_record.html": {
+		"resources": [
+			"fonts/iconfont_health_record.ttf",
+			"css/iconfont_health_record.css",
+			"css/mui.calendar.css"
+		]
+	},
+	"healthfile/History_todoc.html": {
+		"resources": [
+			"js/common.js"
+		]
+	},
+	"finddoctor/search_doctor.html": {
+		"resources": [
+			"css/find_doctor.css",
+			"css/app.css",
+			"css/iconfont_health_file.css",
+			"fonts/iconfont_health_file.ttf",
+			"css/iconfont.css",
+			"fonts/iconfont.ttf",
+			"css/health_file.css",
+			"js/common.js",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css"
+		],
+		"refer": [
+			"finddoctor/search_doctor_xm.html",
+			"finddoctor/search_doctor_jb.html",
+			"finddoctor/search_doctor_yy.html",
+			"finddoctor/doclist.html"
+		]
+	},
+	"finddoctor/search_doctor_xm.html": {
+		"resources": [
+			"css/mui.indexedlist.css",
+			"js/mui.indexedlist.js"
+		]
+	},
+	"finddoctor/search_doctor_jb.html": {
+		"refer": [
+			"finddoctor/illHP.html"
+		]
+	},
+	"finddoctor/illHP.html": {
+		"resources": [
+			"fonts/iconfont_money.ttf",
+			"img/finddoctor.jpg",
+			"img/hospital.png",
+			"css/iconfont_se.css",
+			"css/search_info.css",
+			"css/iconfont_money.css",
+			"fonts/iconfont_se.ttf",
+			"img/doctor.jpeg"
+		]
+	},
+	"finddoctor/search_doctor_yy.html": {
+		"resources": [
+			"js/city.data.js",
+			"css/mui.picker.min.css",
+			"js/mui.picker.min.js",
+			"css/iconfont_se.css",
+			"css/search_info.css",
+			"fonts/iconfont_se.ttf",
+			"js/common.js",
+			"js/mui.min.js",
+			"css/app.css",
+			"fonts/mui.ttf",
+			"css/mui.min.css"
+		]
+	},
+	"finddoctor/officeHP.html": {
+		"resources": [
+			"css/find_doctor.css",
+			"js/common.js",
+			"js/mui.min.js",
+			"css/app.css",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"css/health_file.css",
+			"css/search_info.css",
+			"css/iconfont_money.css",
+			"fonts/iconfont_money.ttf",
+			"css/iconfont_se.css",
+			"fonts/iconfont_se.ttf"
+		]
+	},
+	"mine/reset_name.html": {
+		"resources": [
+			"js/common.js",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css"
+		]
+	},
+	"mine/about.html": {
+		"resources": [
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"img/doctor.jpeg"
+		]
+	},
+	"mine/feedback.html": {
+		"resources": [
+			"css/feedback.css",
+			"js/common.js"
+		]
+	},
+	"mine/general.html": {
+		"resources": [
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css"
+		]
+	},
+	"mine/follow.html": {
+		"resources": [
+			"fonts/iconfont_account.ttf",
+			"css/iconfont_account.css"
+		]
+	},
+	"main/search/search_info_ks.html": {
+		"resources": [
+			"js/common.js",
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"css/search_info.css",
+			"css/iconfont.css",
+			"fonts/iconfont.ttf",
+			"css/iconfont_se.css",
+			"fonts/iconfont_se.ttf",
+			"fonts/iconfont_money.ttf",
+			"css/iconfont_money.css"
+		]
+	},
+	"main/search/search_info_dt.html": {
+		"resources": [
+			"css/iconfont_money.css"
+		]
+	},
+	"main/search/search_info_hp.html": {
+		"resources": [
+			"js/common.js",
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"css/iconfont_se.css",
+			"css/search_info.css",
+			"fonts/iconfont_se.ttf"
+		]
+	},
+	"main/search/search_info_jb.html": {
+		"resources": [
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"css/iconfont_se.css",
+			"css/search_info.css",
+			"css/iconfont_money.css",
+			"fonts/iconfont_money.ttf",
+			"js/common.js",
+			"fonts/iconfont_se.ttf"
+		]
+	},
+	"inquiry/select_file.html": {
+		"resources": [
+			"js/common.js",
+			"js/mui.picker.min.js",
+			"css/mydoctor.css",
+			"css/mui.picker.min.css",
+			"css/fast_question.css"
+		]
+	},
+	"inquiry/fast_question.html": {
+		"resources": [
+			"js/feedback_mydoctor.js",
+			"img/choose_photos.png",
+			"js/common.js",
+			"css/mydoctor.css",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"css/zixun.css",
+			"css/fast_question.css"
+		],
+		"refer": [
+			"inquiry/question_over.html"
+		]
+	},
+	"inquiry/question_over.html": {
+		"resources": [
+			"js/common.js",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"css/fast_question.css"
+		],
+		"refer": [
+			"inquiry/Inquiry.html"
 		]
 	}
 }

@@ -24,13 +24,13 @@
 			mui.plusReady(function() {
 				var self = plus.webview.currentWebview();
 				var searchtext = self.searchtext;
-//				var searchtext2 = document.getElementById("searchtext2");
+
 				//监听该页面的搜索按钮
-				search2.addEventListener('tap',function(){
+				document.getElementById("search2").addEventListener('tap',function(){
 					mui.openWindow({
 						url: 'search.html',
 						id: 'search',
-						//preload: true,
+						///preload: true,
 						show: {
 							aniShow: 'pop-in'
 						},
@@ -41,6 +41,7 @@
 					setTimeout(function(){
 						self.close();	
 					},1000);
+				//mui.back();
 				});
 				var group = new webviewGroup("viewgroup", {
 					items: [{

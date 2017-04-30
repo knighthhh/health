@@ -20,10 +20,11 @@ class HosController extends Controller{
     //获得医院详情
      public function getHosDetail(){
         $hos_id = I('get.hos_id');
+        //$hos_id = 53;
         $model = D('Admin/hospital_info');
         $info = $model -> getHosDetail($hos_id);
         $info['hos_introduce'] = htmlspecialchars_decode($info['hos_introduce']);
-        //dump($info);die;
+        
         echo json_encode($info);
     }
 

@@ -201,4 +201,56 @@ class DocController extends Controller{
 		}
 		echo json_encode($res);
 	}
+	
+	//修改用户名
+    public function reset_name(){
+    	$data['doc_phone']=I('post.doc_phone');
+		$save['doc_name']=I('post.doc_name');
+		$mess=M('doctor_info')->where($data)->save($save);
+		if($mess){
+			$res['result']=1;
+			$res['data']='恭喜！修改成功';
+		}else{
+			$res['result']=0;
+			$res['data']='修改失败，请检查您的网络';
+		}
+		echo json_encode($res);
+    }
+    
+     //通过旧密码修改新密码
+    public function reset_password(){
+    	$data['doc_phone']=I('post.doc_phone');
+		$data['doc_password']=md5(I('post.doc_password').C('MD5_KEY'));
+		$mess=M('doctor_info')->where($data)->find();
+		if($mess){
+			$saveres['doc_password']=md5($_POST['new_doc_password'].C('MD5_KEY'));;
+			$jieguo=M('doctor_info')->where($data)->save($saveres);
+			if($jieguo){
+				$res['result']=1;
+				$res['data']='恭喜！修改成功';
+			}else{
+				$res['result']=0;
+				$res['data']='修改失败，请检查您的网络';
+			}
+		}else{
+			$res['result']=0;
+			$res['data']='旧密码错误';
+		}
+		echo json_encode($res);
+    }
+    
+    //修改咨询费用
+    public function reset_fee(){
+    	$data['doc_phone']=I('post.doc_phone');
+		$saveres['doc_fee']=I('post.doc_fee');
+		$mess=M('doctor_info')->where($data)->save($saveres);
+		if($mess){
+			$res['result']=1;
+			$res['data']='恭喜！修改成功';
+		}else{
+			$res['result']=0;
+			$res['data']='旧密码错误';
+		}
+		echo json_encode($res);
+    }
 }

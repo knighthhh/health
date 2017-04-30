@@ -125,12 +125,12 @@ class DoctorController extends Controller
                             break;
                         case '5':
                         if($v1){
-                        	$info[$k]['doc_introduce'] = $v1;
+                        	$info[$k]['doc_address'] = $v1;
                         }
                             break;
                         case '6':
                         if($v1){
-                        	$info[$k]['doc_address'] = $v1;
+                        	$info[$k]['doc_introduce'] = $v1;
                         }
                             break;
                         default:

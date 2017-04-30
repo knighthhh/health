@@ -4,6 +4,7 @@ namespace Connector\Controller;
 use Think\Controller;
 
 class SearchController extends Controller{
+	//查找医院
 	function searchhos(){
 		$searchtext=I('post.searchtext');
 		$ic = C('IMAGE_CONFIG');
@@ -85,17 +86,52 @@ class SearchController extends Controller{
 	//搜索科室
 	function searchdep(){
 		$searchtext = I('post.searchtext');
+		$ic = C('IMAGE_CONFIG');
 		if($searchtext){
 			$res = M('department_info')
-			 ->field("a.*,b.hos_name,c.dep_introduce")
+			 ->field("a.*,b.*,c.*")
 	         ->alias('a')
-			 ->join('__HOS_DEP__ c on a.dep_id=c.dep_id','LEFT')
+			 ->join('__DOCTOR_INFO__ c on a.dep_id=c.depa_id','LEFT')
 	         ->join('__HOSPITAL_INFO__ b on b.hos_id=c.hos_id','LEFT')
 	         ->where(array(
 	            'a.dep_name' => array('like', "%$searchtext%")
 	         ))
 	         ->select();
 	         
+	        for($i=0;$i<count($res);$i++){
+				 $res[$i]['doc_img'] = $ic['viewPath'].$res[$i]['doc_img'];
+			}
+			
+			if($res){
+				
+			}else{
+				$res['result']=0;
+			}
+		}else{
+			$res['result']=0;
+		}
+		echo json_encode($res);
+	}
+
+	//搜索疾病
+	function search_illness(){
+		$searchtext = I('post.searchtext');
+		$ic = C('IMAGE_CONFIG');
+		if($searchtext){
+			$res = M('department_info')
+			 ->field("a.*,b.*,c.*")
+	         ->alias('a')
+			 ->join('__DOCTOR_INFO__ c on a.dep_id=c.depa_id','LEFT')
+	         ->join('__HOSPITAL_INFO__ b on b.hos_id=c.hos_id','LEFT')
+	         ->where(array(
+	            'c.doc_especial' => array('like', "%$searchtext%")
+	         ))
+	         ->select();
+	         
+	        for($i=0;$i<count($res);$i++){
+				 $res[$i]['doc_img'] = $ic['viewPath'].$res[$i]['doc_img'];
+			}
+			
 			if($res){
 				
 			}else{
@@ -134,5 +170,8 @@ class SearchController extends Controller{
 		}
 		echo json_encode($res);
 	}
+	
+	//搜索疾病
+	
 	
 }

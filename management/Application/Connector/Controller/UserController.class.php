@@ -180,17 +180,20 @@ class UserController extends Controller{
 		echo json_encode($res);
 	}
 
-	//获取知识推送列表
-	public function getKnowList()
-	{
-		$model = D('health_know');
-		$data = $model->select();
-		foreach ($data as $k => $v) {
-			$data[$k]['know_content'] = htmlspecialchars_decode($v['know_content']);
-		}
-		//dump($data);die;
-		echo json_encode($data);
-	}
+
+    //获取知识推送列表
+    public function getKnowList()
+    {
+        $model = D('health_know');
+        $data  = $model
+        ->order('know_see desc')
+        ->limit(5)
+        ->select();
+        foreach ($data as $k => $v) {
+            $data[$k]['know_content'] = htmlspecialchars_decode($v['know_content']);
+        }
+        echo json_encode($data);
+    }
 
 	//找回密码
 	public function forgetpwd(){
@@ -290,4 +293,154 @@ class UserController extends Controller{
             echo json_encode($result);
         }
     }
+    
+    //修改用户名
+    public function reset_name(){
+    	$data['user_phone']=I('post.user_phone');
+		$save['user_name']=I('post.user_name');
+		$mess=M('user_info')->where($data)->save($save);
+		if($mess){
+			$res['result']=1;
+			$res['data']='恭喜！修改成功';
+		}else{
+			$res['result']=0;
+			$res['data']='修改失败，请检查您的网络';
+		}
+		echo json_encode($res);
+    }
+    
+    //通过旧密码修改新密码
+    public function reset_password(){
+    	$data['user_phone']=I('post.user_phone');
+		$data['user_password']=md5(I('post.user_password').C('MD5_KEY'));
+		$mess=M('user_info')->where($data)->find();
+		if($mess){
+			$saveres['user_password']=md5($_POST['new_user_password'].C('MD5_KEY'));
+			$jieguo=M('user_info')->where($data)->save($saveres);
+			if($jieguo){
+				$res['result']=1;
+				$res['data']='恭喜！修改成功';
+			}else{
+				$res['result']=0;
+				$res['data']='修改失败，请检查您的网络';
+			}
+		}else{
+			$res['result']=0;
+			$res['data']='旧密码错误';
+		}
+		echo json_encode($res);
+    }
+    
+    //关注医生
+    public function attention_doc(){
+    	$data1['doc_phone']=I('post.doc_phone');
+    	$data2['user_phone']=I('post.user_phone');
+		//我关注的医生表查询记录
+		$mess=M('attention_doc')
+			   ->where(array(
+		            'doc_phone' => array('eq', $data1['doc_phone']),
+		            'user_phone' => array('eq', $data2['user_phone'])
+		         ))
+		       ->find();
+		//没有记录，添加关注，有记录，不添加新的关注
+		if($mess){
+			$res['result']=0;
+			$res['data']='您已关注过';
+		}else{
+			//关注表添加记录
+			$data3['doc_phone']=$data1['doc_phone'];
+			$data3['user_phone']=$data2['user_phone'];
+			$data3['atten_time']=date('Y-m-d H:i:s');
+			M('attention_doc')->add($data3);
+			
+			//医生关注量加1
+			$findres=M('doctor_info')->where($data1)->find();
+			$save1['doc_attention']=$findres['doc_attention']+1;
+			$jieguo=M('doctor_info')->where($data1)->save($save1);
+			if($jieguo){
+				$res['result']=1;
+				$res['data']='关注成功';
+			}else{
+				$res['result']=0;
+				$res['data']='关注失败,请检查您的网络';
+			}
+		}     
+		echo json_encode($res);
+    }
+    
+    //关注医院
+    public function attention_hos(){
+    	$data1['hos_id']=I('post.hos_id');
+    	$data2['user_phone']=I('post.user_phone');
+		//我关注的医生表查询记录
+		$mess=M('attention_hos')
+			   ->where(array(
+		            'hos_id' => array('eq', $data1['hos_id']),
+		            'user_phone' => array('eq', $data2['user_phone'])
+		         ))
+		       ->find();
+		//没有记录，添加关注，有记录，不添加新的关注
+		if($mess){
+			$res['result']=0;
+			$res['data']='您已关注过';
+		}else{
+			//关注表添加记录
+			$data3['hos_id']=$data1['hos_id'];
+			$data3['user_phone']=$data2['user_phone'];
+			$data3['time']=date('Y-m-d H:i:s');
+			M('attention_hos')->add($data3);
+			
+			//医生关注量加1
+			$findres=M('hospital_info')->where($data1)->find();
+			$save1['hos_attention']=$findres['hos_attention']+1;
+			$jieguo=M('hospital_info')->where($data1)->save($save1);
+			if($jieguo){
+				$res['result']=1;
+				$res['data']='关注成功';
+			}else{
+				$res['result']=0;
+				$res['data']='关注失败,请检查您的网络';
+			}
+		}     
+		echo json_encode($res);
+    }
+    
+    //获取关注的医生
+    public function get_attention_doc(){
+    	$data['user_phone'] = I('post.user_phone');
+    	$res = M('attention_doc')
+    		 ->field("a.doc_phone,b.doc_name,b.doc_id")
+	         ->alias('a')
+			 ->join('__DOCTOR_INFO__ b on b.doc_phone=a.doc_phone','LEFT')
+			 ->where($data)
+			 ->select();
+			 
+    	if($res){
+    		
+    	}else{
+    		$res['result']=0;
+    		$res['data']='暂时无关注的医生';
+    	}
+    	echo json_encode($res);
+    }
+    
+    //获取关注的医院
+    public function get_attention_hos(){
+    	$data['user_phone'] = I('post.user_phone');
+    	$res = M('attention_hos')
+    		 ->field("a.hos_id,b.hos_name")
+	         ->alias('a')
+			 ->join('__HOSPITAL_INFO__ b on b.hos_id=a.hos_id','LEFT')
+			 ->where($data)
+			 ->select();
+			 
+    	if($res){
+    		
+    	}else{
+    		$res['result']=0;
+    		$res['data']='暂时无关注的医院';
+    	}
+    	echo json_encode($res);
+    }
+    
 }
