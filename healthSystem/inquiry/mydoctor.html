@@ -11,7 +11,12 @@
     <link rel="stylesheet" type="text/css" href="../css/mydoctor.css"/>
     <script type="text/javascript" src="../js/common.js"> </script>
     <script type="text/javascript">
-    	mui.init();
+    	mui.init({
+    		preloadPages:[{
+    			url:'/finddoctor/docHP.html',
+    			id :'docHP.html'
+    		}]
+    	});
     	mui.plusReady(function(){ 
     		var user_phone = plus.storage.getItem('user_phone');
 			//获取消息列表
@@ -49,8 +54,25 @@
 					plus.nativeUI.toast("请检查您的网络");
 				}
 			})
-    		
-    		//批量监听医生列表
+    		var docHP = null;
+//  		//批量监听医生列表
+//  		mui('#mydoclist').on('tap', '.mui-table-view-cell', function() {
+//				var docID = this.getAttribute('id');
+//						//获得医生详情页面
+//						if(!docHP){
+//							docHP = plus.webview.getWebviewById('docHP.html');
+//						}
+//						//通知自定义事件
+//						mui.fire(docHP,'docID',{
+//							docID:docID
+//						});
+//						mui.openWindow({
+//							id:'docHP.html',
+//							show:{
+//								aniShow:'pop-in'
+//							}
+//						});
+//         	});
     		mui('#mydoclist').on('tap', '.mui-btn', function() {
 				var doc_phone = this.getAttribute('id');
 				mui.openWindow({

@@ -54,8 +54,12 @@
 						for(j=0;j<data[i].child.length;j++){
 							item = item + '<a class="mui-control-item" href="#'+data[i].child[j].dep_id+'">'+data[i].child[j].dep_name+'</a>';
 							item2 = item2 + '<div id="'+data[i].child[j].dep_id+'" class="mui-control-content"><ul class="mui-table-view">';
-							for(k=0;k<data[i].child[j].sick.length;k++){
+							if(data[i].child[j].sick!==null){
+								for(k=0;k<data[i].child[j].sick.length;k++){
 								item2 = item2 + '<li sickID="'+data[i].child[j].sick[k].illness_id+'" class="mui-table-view-cell">'+data[i].child[j].sick[k].illness_name+'</li>';
+								}
+							}else{
+								item2 = item2 + '<p class="mui-table-view-cell">暂无</p>';
 							}
 							item2 = item2 + '</ul></div>';
 						}

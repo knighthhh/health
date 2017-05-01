@@ -110,7 +110,7 @@ class HealthController extends Controller
         //dump($data);die;
         echo json_encode($data);
     }
-
+    //添加历史就诊记录
     public function uploadHis()
     {
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -297,4 +297,5 @@ class HealthController extends Controller
                 echo $result['res'];
             }
     }
+
 }

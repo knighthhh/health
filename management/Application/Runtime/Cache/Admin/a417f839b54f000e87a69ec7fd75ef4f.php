@@ -43,7 +43,7 @@
       </ul> 
       </div>
     <div class="body-content">
-    <form method="post" class="form-x" action="/health/management/Application/index.php/Admin/Relative/add/user_id/1" name="fileUploadForm" enctype="multipart/form-data">
+    <form method="post" class="form-x" action="/health/management/Application/index.php/Admin/Relative/add/user_id/" name="fileUploadForm" enctype="multipart/form-data">
     <div class="div_tab" style="display:block;">  
      <div class="form-group">
         <div class="label">

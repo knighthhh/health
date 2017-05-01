@@ -27,17 +27,19 @@ class SickController extends Controller{
             }
             $k++;
         }
+        //dump($data);die;
         echo json_encode($data);
     }
 
     public function getSickDetail()
     {
         $illnessID = I('get.illnessID');
-        //$illnessID = 1;
+        //$illnessID = 13;
         $model = D('illness');
         //获得对应疾病详情
         $data = $model->find($illnessID);
         $data['illness_introduce'] = htmlspecialchars_decode($data['illness_introduce']);
+        //dump($data);die;
         //获得对应科室ID
         $depID = $data['two_depa_id'];
         //获得科室下热门医生

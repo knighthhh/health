@@ -28,6 +28,7 @@ class UserInfoModel extends Model{
 			$ret  = uploadOne('user_img','User');
 			$data['user_img'] = $ret['images'][0];
 		}
+        $data['user_password']  = md5(123456);
 		$data['user_city'] = $_POST['prov']." ".$_POST['city']." ".$_POST['dist'];
 		$data['user_time'] = date('Y-m-d H:i:s');
 	}
@@ -54,9 +55,48 @@ class UserInfoModel extends Model{
 
     protected function _before_delete($option){
     	$user_id = $option['where']['user_id'];
-        //删除原来硬盘上的图片
+        //删除原来硬盘上的用户头像
         $oldPath = $this->field("user_img")->find($user_id);
         delImg($oldPath);
+        //删除该用户的亲友档案
+        $relative = D('relative_info');
+        $relative->where(array(
+            'user_id' => array('eq',$user_id)
+            ))->delete();
+        //删除该用户的历史就诊记录
+        $seedoc = D('see_doc_case');
+        $data = $seedoc->field('seecase_id')->where(array(
+            'user_id' => array('eq',$user_id)
+            ))->select();
+        //删除硬盘上的检查和处方图片
+        foreach ($data as $k => $v) {
+            $seecase_id = $v['seecase_id'];
+            // 删除硬盘上处方图片
+            $pageModel = D('page_img');
+            $oldPath = $pageModel->field("page_img_path")->where(array(
+                'seecase_id' => array('eq',$seecase_id)
+                ))->find();
+            delImg($oldPath);
+            //删除数据库中的处方图片
+            $pageModel->where(array(
+                'seecase_id' => array('eq',$seecase_id)
+                ))->delete();
+            // 删除硬盘上检查图片
+            $checkModel = D('check_img');
+            $oldPath = $checkModel->field("check_img_path")->where(array(
+                'seecase_id' => array('eq',$seecase_id)
+                ))->find();
+            delImg($oldPath);
+            //删除数据库中的检查图片
+            $checkModel->where(array(
+                'seecase_id' => array('eq',$seecase_id)
+                ))->delete();
+        }
+        //从数据库中将历史就诊记录删除
+        $seedoc->where(array(
+            'user_id' => array('eq',$user_id)
+            ))->delete();
+
     }
 }
 

@@ -149,7 +149,7 @@
 	    		</tr>
 	    		<tr>
 	    			<td>创建时间：</td>
-	    			<td><?php echo $v['hos_name']; ?></td>
+	    			<td><?php echo $v['time']; ?></td>
 	    		</tr>
     		</table>
        		</div>

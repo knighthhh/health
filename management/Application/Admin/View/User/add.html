@@ -94,14 +94,6 @@
       </div>
       <div class="form-group">
         <div class="label">
-          <label>用户密码：</label>
-        </div>
-        <div class="field">
-          <input type="text" class="input w50" value="" name="user_password" />
-        </div>
-      </div>
-      <div class="form-group">
-        <div class="label">
           <label>性别：</label>
         </div>
         <div class="field">
