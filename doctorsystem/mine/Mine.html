@@ -50,6 +50,7 @@
 			var feedback = document.getElementById('feedback');
 			var about = document.getElementById('about');
 			var general = document.getElementById('general');
+			var my_ziliao = document.getElementById("my_ziliao");
 			account.addEventListener('tap',function(event){
 				mui.openWindow({
 					url: 'account.html',
@@ -102,6 +103,19 @@
 					}
 				});
 			},false);
+//			my_ziliao.addEventListener('tap',function(event){
+//				mui.openWindow({
+//					url: 'my_ziliao.html',
+//					id: 'my_ziliao',
+//					preload: true,
+//					show: {
+//						aniShow: 'pop-in'
+//					},
+//					waiting: {
+//						autoShow: false
+//					}
+//				});
+//			},false);
 			
 			//已经登录了的显示个人信息
 			var doc_phone = plus.storage.getItem('doc_phone');
@@ -182,6 +196,11 @@
 									<table><td><span class="iconfont icon-fankui m3"></span>
 									意见反馈</td></table></a>
 							</li>
+							<!--<li class="mui-table-view-cell">
+								<a id="my_ziliao" class="mui-navigate-right">
+									<table><td><span class="iconfont icon-fankui"></span>
+									我的资料</td></table></a>
+							</li>--> 
 							<li class="mui-table-view-cell">
 								<a id="about" class="mui-navigate-right">
 								<table>

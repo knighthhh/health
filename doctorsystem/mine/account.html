@@ -78,7 +78,7 @@
       				success:function(data){
 						document.getElementById("doc_name").innerHTML=data.doc_name;
 						document.getElementById("doc_phone").innerHTML=doc_phone;
-						document.getElementById("money").innerHTML=data.doc_fee+'/每小时';
+//						document.getElementById("money").innerHTML=data.doc_fee+'/每小时'; 
 						document.getElementById("head-img1").src=data.doc_img;	
       				},
       				error:function(){
@@ -121,11 +121,11 @@
 								<a><span class="iconfont icon-mima i4"></span>
 									密码<span class="mui-pull-right">*****</span></a>
 							</li>
-							<li id="pay" class="mui-table-view-cell">
+							<!--<li id="pay" class="mui-table-view-cell">
 								<a><span class="iconfont icon-jinqian1 i2"></span>
 									咨询费用<span id="money" class="mui-pull-right"></span></a>
 							</li>
-												
+												-->
 						</ul>			
 				</div>
 				<script>
@@ -371,25 +371,25 @@
 			})
 			
 			//修改费用
-			var moneybtn = document.getElementById("pay");
-			moneybtn.addEventListener('tap',function(){
-				mui.openWindow({
-					url: 'reset_fee.html',
-					id: 'reset_fee',
-					extras:{
-						doc_phone:doc_phone
-					},
-					show: {
-						aniShow: 'pop-in'
-					},
-					styles: {
-						popGesture: 'hide'
-					},
-					waiting: {
-						autoShow: false
-					}
-				});
-			})
+//			var moneybtn = document.getElementById("pay");
+//			moneybtn.addEventListener('tap',function(){
+//				mui.openWindow({
+//					url: 'reset_fee.html',
+//					id: 'reset_fee',
+//					extras:{
+//						doc_phone:doc_phone
+//					},
+//					show: {
+//						aniShow: 'pop-in'
+//					},
+//					styles: {
+//						popGesture: 'hide'
+//					},
+//					waiting: {
+//						autoShow: false
+//					}
+//				});
+//			})
 			
 			var files=[];
 			// 上传文件
