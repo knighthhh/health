@@ -5,7 +5,7 @@ use Think\Controller;
 /*
 *  意见反馈管理
 */
-class FeedbackController extends Controller
+class FeedbackController extends BaseController
 {
 	public function listFeedb()
 	{

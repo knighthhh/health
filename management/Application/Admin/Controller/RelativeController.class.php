@@ -5,7 +5,7 @@ use Think\Controller;
 /*
 *  亲友信息管理
 */
-class RelativeController extends Controller
+class RelativeController extends BaseController
 {
 	public function listRela()
 	{

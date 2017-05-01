@@ -5,7 +5,7 @@ use Think\Controller;
 /*
 *  健康知识管理
 */
-class KnowledgeController extends Controller
+class KnowledgeController extends BaseController
 {
 	public function listKnow()
 	{

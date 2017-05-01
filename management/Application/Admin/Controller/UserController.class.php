@@ -1,11 +1,11 @@
-<?php
+s<?php
 namespace Admin\Controller;
 
 use Think\Controller;
 /*
 *  用户信息管理
 */
-class UserController extends Controller
+class UserController extends BaseController
 {
 	public function listUser()
 	{
