@@ -224,7 +224,8 @@
 							  mui.openWindow({  
 							    id:'docHP.html',
 							    show:{
-							    	aniShow:'pop-in',  									event:'loaded',//页面显示时机，默认为titleUpdate事件时显示
+							    	aniShow:'pop-in',  									
+							    	event:'loaded',//页面显示时机，默认为titleUpdate事件时显示
     							}
 							 });
 							});  
@@ -235,7 +236,7 @@ function searchwin(){
 	var w = plus.webview.create( "search/search.html" );
 	w.show("pop-in");
 //	w.show("slide-in-right");
-	document.getElementById("search").focus();
+	//document.getElementById("search").focus();
 }
 	</script>
 		<!-- 头部  包含搜索-->
