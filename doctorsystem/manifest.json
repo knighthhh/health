@@ -361,7 +361,8 @@
 					"mine/feedback.html",
 					"mine/about.html",
 					"login/login.html",
-					"mine/general.html"
+					"mine/general.html",
+					"mine/my_ziliao.html"
 				],
 				"priority": 0
 			},
@@ -896,7 +897,9 @@
 					"css/iconfont_money.css",
 					"css/iconfont_foot.css"
 				],
-				"refer": [],
+				"refer": [
+					"main/modify.html"
+				],
 				"priority": 0
 			},
 			"message/Message.html": {
@@ -1000,6 +1003,29 @@
 				"refer": [
 					"message/chat.html"
 				],
+				"priority": 0
+			},
+			"mine/my_ziliao.html": {
+				"resources": [
+					"css/iconfont_mine.css",
+					"css/mui.min.css",
+					"css/iconfont_account.css",
+					"css/iconfont_money.css",
+					"fonts/iconfont_money.ttf",
+					"fonts/iconfont_account.ttf",
+					"js/common.js",
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"fonts/iconfont_mine.ttf"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"main/modify.html": {
+				"resources": [
+					"css/fast_question.css"
+				],
+				"refer": [],
 				"priority": 0
 			}
 		},
