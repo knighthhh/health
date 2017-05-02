@@ -69,7 +69,7 @@
 					},false);
 					findhos.addEventListener('tap',function(event){
 						mui.openWindow({
-							url: '../finddoctor/search_doctor_yy.html',
+							url: '../finddoctor/findhos.html',
 							id: 'findhos',
 							preload: true,
 							show: {
@@ -229,6 +229,13 @@
 							 });
 							});  
 						},'json');
+						//获取在线医生
+						mui.post('http://'+serverName+'/health/management/application/index.php/Connector/Doc/get_online_doc',{
+							},function(data){
+								document.getElementById("online_doc").innerHTML = data.result;
+							},'json'
+						);
+					
 				});
 				
 function searchwin(){
@@ -354,7 +361,7 @@ function searchwin(){
 
 					<div  id="box-b-a" class="box-b-a"  style="background: #fff;">						
 								<img class="" src="../img/finddoctor.jpg"/>
-				    			<span class="mui-slider-indicator" style="">在线医生：<span>500</span></span>
+				    			<span class="mui-slider-indicator" style="">在线医生：<span id="online_doc">500</span></span>
 		   			 </div>
 		   			 
 				</div>
@@ -369,7 +376,7 @@ function searchwin(){
 							    		<img class="" src="../img/jkzx.jpg"/>
 							    </div>
 								</a>
-				   </div>	
+				  </div>	  
 			</div>
 		
 	<!--三宫格找医生医院-->	 

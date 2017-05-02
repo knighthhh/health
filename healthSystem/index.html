@@ -35,7 +35,6 @@
 				// 监听点击消息事件
 			    plus.push.addEventListener( "click", function( msg ) {
 			        // 判断是从本地创建还是离线推送的消息
-			        plus.webview.getWebviewById('inquiry/mydoctor.html').reload();
 			        mui.openWindow({
 						url: 'im/im-chat.html',
 						id: 'im-chat',
@@ -52,6 +51,7 @@
 							autoShow: false
 						}
 					});
+					plus.webview.getWebviewById('inquiry/mydoctor.html').reload();
 			    }, false );
 				
 			    //获取当前页面所属的Webview窗口对象
@@ -59,7 +59,6 @@
 			    //获取推送所要用的CID
 			    user_cid = plus.push.getClientInfo().clientid;
 			    plus.storage.setItem('user_cid',user_cid);
-			    alert(user_cid);
 			    for (var i = 0; i < 4; i++) {
 			        //创建webview子页
 			        var sub = plus.webview.create(
@@ -130,33 +129,7 @@
 				    activeTab = targetTab;
 				});
 				
-				//需要验证登录后才可以打开'我的'网页，否则回到登录页面（回退效果很明显）
-				var mine = document.getElementById("mine");
-				mine.addEventListener('tap',function(){
-					if(islogin()){
-			   			//已经登录，取个人数据
-			   			
-			   		}else{
-			   			plus.ui.toast("请先登录");
-			   			mui.openWindow({
-							url: '/login/login.html',
-							id: 'login',
-							show: {
-								aniShow: 'pop-in'
-							},
-							styles: {
-								popGesture: 'hide'
-							},
-							waiting: {
-								autoShow: false
-							}
-						});
-//						setTimeout(function(){
-//							var self = plus.webview.currentWebview();
-//							self.close();	
-//						},1000);
-			   		}
-				});
+				
 			
 			});
 		</script> 

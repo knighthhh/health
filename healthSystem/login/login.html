@@ -91,7 +91,7 @@
 			var user_passwordBox = doc.getElementById('user_password');
 			var regButton = doc.getElementById('reg');
 			var forgetButton = doc.getElementById('forgetPassword');
-			
+			var user_cid = plus.push.getClientInfo().clientid;
 			//登录验证
 			loginButton.addEventListener('tap',function(event){
 				if(user_phoneBox.value.length!=11){
@@ -106,7 +106,8 @@
       			mui.ajax('http://'+serverName+'/health/management/Application/index.php/Connector/User/login',{
       				data:{
       					user_phone:user_phoneBox.value,
-      					user_password:user_passwordBox.value
+      					user_password:user_passwordBox.value,
+      					user_cid:user_cid
       				},
       				dataType:'json',
       				type:'POST',

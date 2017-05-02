@@ -281,22 +281,22 @@
 					error:function(){
 					}
 				})
-				//发送推送给患者
-				mui.ajax('http://'+serverName+'/health/management/Application/Connector/push/push_user.php',{
-					data:{
-						doc_phone:doc_phone,
-						user_phone:user_phone
-					},
-					dataType:'json',
-					type:'POST',
-					timeout:10000,
-					success:function(data){
-						//{"reslut":1}表示成功
-						
-					},
-					error:function(){
-					}
-				})
+//				//发送推送给患者
+//				mui.ajax('http://'+serverName+'/health/management/Application/Connector/push/push_user.php',{
+//					data:{
+//						doc_phone:doc_phone,
+//						user_phone:user_phone
+//					},
+//					dataType:'json',
+//					type:'POST',
+//					timeout:10000,
+//					success:function(data){
+//						//{"reslut":1}表示成功
+//						
+//					},
+//					error:function(){
+//					}
+//				})
 				
 				//刷新我的患者列表
 				plus.webview.getWebviewById('message/Message.html').reload();

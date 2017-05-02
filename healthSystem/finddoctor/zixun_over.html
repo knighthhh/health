@@ -69,23 +69,24 @@
   			})
 			var over = document.getElementById("over");
 			over.addEventListener('tap',function(){
-				mui.openWindow({
-					url: 'docHP.html', 
-					id: 'docHP',
-					show: {
-						aniShow: 'pop-in'
-					},
-					styles: {
-						popGesture: 'hide'
-					},
-					waiting: {
-						autoShow: true
-					}
-				});
-				setTimeout(function(){
-//					var self = plus.webview.currentWebview();
-					self.close();	 
-				},1000);
+				mui.back();
+//				mui.openWindow({
+//					url: 'docHP.html', 
+//					id: 'docHP',
+//					show: {
+//						aniShow: 'pop-in'
+//					},
+//					styles: {
+//						popGesture: 'hide'
+//					},
+//					waiting: {
+//						autoShow: true
+//					}
+//				});
+//				setTimeout(function(){
+////					var self = plus.webview.currentWebview();
+//					self.close();	 
+//				},1000);
 			})
     	})
     </script>

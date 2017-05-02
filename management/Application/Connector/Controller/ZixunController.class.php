@@ -50,6 +50,7 @@ class ZixunController extends Controller{
 	         ->where(array(
 	            'a.user_phone' => array(eq, $data['user_phone'])
 	         ))
+			 ->order('id desc')
 	         ->find();
 			 
 		//图片处理
