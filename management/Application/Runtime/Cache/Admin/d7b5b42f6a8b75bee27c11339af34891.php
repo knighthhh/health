@@ -102,12 +102,23 @@
       </div>
       <div class="form-group">
         <div class="label">
+          <label>医院图标：</label>
+        </div>
+        <div class="field">
+          <input type="file" id="fileUpload2" name="hos_navigate_img" class="input tips" style="display:none;width:25%; float:left;"  value=""  data-toggle="hover" data-place="right" data-image=""  />
+          <div id="filePath2" style="float:left;line-height:40px;" ></div>
+          <input type="button" id="upload2" class="button bg-blue margin-left upload" value="+ 浏览上传"  style="float:left;">
+          <div class="tipss">图片格式：jpg，jpeg，gif，png</div>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="label">
           <label>院内导航图片：</label>
         </div>
         <div class="field">
-          <input type="file" id="fileUpload" name="hos_navigate_img" class="input tips" style="display:none;width:25%; float:left;"  value=""  data-toggle="hover" data-place="right" data-image=""  />
+          <input type="file" id="fileUpload" name="hos_daohang" class="input tips" style="display:none;width:25%; float:left;"  value=""  data-toggle="hover" data-place="right" data-image=""  />
           <div id="filePath" style="float:left;line-height:40px;" ></div>
-          <input type="button" class="button bg-blue margin-left upload" value="+ 浏览上传"  style="float:left;">
+          <input type="button" id="upload" class="button bg-blue margin-left upload" value="+ 浏览上传"  style="float:left;">
           <div class="tipss">图片格式：jpg，jpeg，gif，png</div>
         </div>
       </div>
@@ -161,14 +172,22 @@
           });
   
   //院内导航图上传按钮处理
-  $(".upload").click(function(){
-    console.log("Sd");
+  $("#upload").click(function(){
     $("#fileUpload").click();
   });
   $("#fileUpload").change(function(){
     var path = $(this).val();
     var filename = path.substring(path.lastIndexOf("\\")+1);
     $("#filePath").text(filename);
+  });
+   //医院图标上传按钮处理
+  $("#upload2").click(function(){
+    $("#fileUpload2").click();
+  });
+  $("#fileUpload2").change(function(){
+    var path = $(this).val();
+    var filename = path.substring(path.lastIndexOf("\\")+1);
+    $("#filePath2").text(filename);
   });
 
   //切换表单

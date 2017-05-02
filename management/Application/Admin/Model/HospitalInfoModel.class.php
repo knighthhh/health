@@ -41,10 +41,15 @@ class HospitalInfoModel extends Model
      */
     protected function _before_insert(&$data, $option)
     {
-        /*上传院内导航图*/
+        /*上传医院图标*/
         if ($_FILES['hos_navigate_img']['error'] == 0) {
             $ret                      = uploadOne('hos_navigate_img', 'Hospital');
             $data['hos_navigate_img'] = $ret['images'][0];
+        }
+        /*上传院内导航图*/
+        if ($_FILES['hos_daohang']['error'] == 0) {
+            $ret                      = uploadOne('hos_daohang', 'Hospital');
+            $data['hos_daohang'] = $ret['images'][0];
         }
         $data['hos_address'] = $_POST['prov']." ".$_POST['city']." ".$_POST['dist'];
         $data['hos_time'] = date('Y-m-d H:i:s'); //插入添加时间到数据库
@@ -109,7 +114,19 @@ class HospitalInfoModel extends Model
             $oldPath = $this->field("hos_navigate_img")->find($id);
             delImg($oldPath);
         }
-        
+          /*更新医院图标*/
+        if ($_FILES['hos_daohang']['error'] == 0) {
+            $ret = uploadOne('hos_daohang', 'Hospital');
+            if ($ret['ok'] == 1) {
+                $data['hos_daohang'] = $ret['images'][0];
+            } else {
+                $this->error = $ret['error'];
+                return false;
+            }
+            /*删除原来的图片*/
+            $oldPath = $this->field("hos_daohang")->find($id);
+            delImg($oldPath);
+        }
         /*添加新的医院图片*/
         if (isset($_FILES['hos_img'])) {
             $img = array();
@@ -166,6 +183,9 @@ class HospitalInfoModel extends Model
             'hos_id' => array('eq',$id)
             ))->delete();
         
+        /*删除硬盘上医院图标*/
+        $oldPath = $this->field("hos_daohang")->find($id);
+        delImg($oldPath);
         /*删除硬盘上院内导航图*/
         $oldPath = $this->field("hos_navigate_img")->find($id);
         delImg($oldPath);

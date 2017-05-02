@@ -24,7 +24,8 @@ class HosController extends Controller{
         $model = D('Admin/hospital_info');
         $info = $model -> getHosDetail($hos_id);
         $info['hos_introduce'] = htmlspecialchars_decode($info['hos_introduce']);
-        
+        $ic = C('IMAGE_CONFIG');
+        $info['hos_daohang'] = $ic['viewPath'].$info['hos_daohang'];
         echo json_encode($info);
     }
 

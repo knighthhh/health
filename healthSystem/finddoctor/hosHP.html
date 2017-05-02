@@ -207,8 +207,7 @@
 							//医院轮播图
 							var hosimg = '';
 							for(i = 0; i < data.length; i++) {
-								hosimg = hosimg + '<div class="mui-slider-item"><img data-preview-src="" data-preview-group="1" src="' + data[i].hos_img + '"></div>';
-
+								hosimg = hosimg + '<div class="mui-slider-item"><img data-preview-src="" data-preview-group="'+(i+2)+'" src="' + data[i].hos_img + '"></div>';
 							}
 
 							slider1.innerHTML = hosimg;
@@ -233,6 +232,7 @@
 						mui.get('http://' + serverName + '/health/management/Application/index.php/Connector/hos/getHosDetail', {
 							hos_id: hos_id
 						}, function(data) {
+							//console.log(data.hos_daohang);
 							longitude = data.hos_longitude;
 							latitude = data.hos_latitude;
 							hos_name = data.hos_name;
@@ -243,11 +243,12 @@
 							title = title + '<h1 class="mui-title" style="color: #FFFFFF;">' + data.hos_name + '</h1>';
 							hosTitle.innerHTML = title;
 							//简介
+							document.getElementById("daohangtu").src = data.hos_daohang;
 							var li = '';
 							li = li + '<li class="mui-table-view-cell"><a class="mui-navigate-right"><span class="iconfont icon-yanke1 tu-wu "></span><p align="center">' + data.hos_address_detail +
 								'</p></a></li><li class="mui-table-view-cell mui-disabled"><span class="iconfont icon-yanke1 tu-wu "></span><p align="center">' + data.hos_level +
 								'</p></li><li class="mui-table-view-cell mui-disabled"><span class="iconfont icon-yanke1 tu-wu "></span><p align="center">热门程度：' + data.hos_hot +
-								'</p></li><li id="intro1" class="mui-table-view-cell"><a class="mui-navigate-right"><span class="iconfont icon-yanke1 tu-wu "></span><p align="center">医院介绍</p></a></li>';
+								'</p></li><li id="intro1" class="mui-table-view-cell"><a class="mui-navigate-right"><span class="iconfont icon-yanke1 tu-wu "></span><p align="center">医院介绍</p></a></li><li id="daohang" class="mui-table-view-cell"><a class="mui-navigate-right"><span class="iconfont icon-yanke1 tu-wu "></span><p align="center">院内导航图</p></a></li>';
 							hosInfo.innerHTML = li;
 
 						}, 'json');
@@ -298,6 +299,11 @@
 							}
 						});
 
+					});
+					//查看院内导航图
+					mui("#hosInfo").on('tap','#daohang',function(e){
+						var daohangtu = document.getElementById("daohangtu");
+						mui.trigger(daohangtu,'tap');
 					});
 					//查看医院简介	
 					mui('#hosInfo').on('tap', '#intro1', function(e) {
@@ -364,6 +370,8 @@
 			<!--轮播图-->
 			<div class="box-c ">
 				<p class="box-c-p ">- 简介 -</p>
+				<!--导航图-->
+				<img id="daohangtu" data-preview-src="" data-preview-group="1" src="" style="display: none;"/>
 				<ul id="hosInfo" class="mui-table-view jianjie"></ul>
 			</div>
 
