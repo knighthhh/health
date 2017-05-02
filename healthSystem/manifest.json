@@ -821,7 +821,8 @@
 					"css/iconfont_account.css"
 				],
 				"refer": [
-					"healthfile/write_diary.html"
+					"healthfile/write_diary.html",
+					"healthfile/write_diary2.html"
 				],
 				"priority": 0
 			},
@@ -1208,6 +1209,17 @@
 				"refer": [
 					"inquiry/Inquiry.html"
 				],
+				"priority": 0
+			},
+			"healthfile/write_diary2.html": {
+				"resources": [
+					"js/mui.picker.min.js",
+					"js/mui.min.js",
+					"css/mui.min.css",
+					"css/mui.picker.min.css",
+					"css/heathfile.css"
+				],
+				"refer": [],
 				"priority": 0
 			}
 		},

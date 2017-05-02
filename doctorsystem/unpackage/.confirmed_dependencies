@@ -56,7 +56,9 @@
 		],
 		"refer": [
 			"login/login.html",
-			"mine/account.html"
+			"mine/account.html",
+			"mine/general.html",
+			"mine/about.html"
 		]
 	},
 	"healthfile/Health_File.html": {
@@ -270,6 +272,11 @@
 		],
 		"refer": [
 			"message/chat.html"
+		]
+	},
+	"mine/about.html": {
+		"resources": [
+			"css/mui.min.css"
 		]
 	}
 }
