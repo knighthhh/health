@@ -64,7 +64,7 @@ class DocController extends Controller{
                 //echo $v1['firstCharter'];
             }
         }
-		$firstCharter = getFirstCharter("sdas");
+		//dump($info);die;
         echo json_encode($info);
     }
 
