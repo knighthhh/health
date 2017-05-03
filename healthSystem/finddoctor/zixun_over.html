@@ -49,12 +49,14 @@
     	mui.plusReady(function(){
     		var self = plus.webview.currentWebview();
     		var doc_phone = self.doc_phone;
+    		var zixun_id = self.zixun_id;
     		var user_phone = plus.storage.getItem('user_phone');
     		//给医生发送推送
 			mui.ajax('http://'+serverName+'/health/management/Application/Connector/push/push_doc.php',{
   				data:{
 					doc_phone:doc_phone,
-					user_phone:user_phone
+					user_phone:user_phone,
+					zixun_id:zixun_id
   				},
   				dataType:'json',
   				type:'POST',
@@ -67,26 +69,13 @@
 //					plus.nativeUI.toast("请检查您的网络");
   				}
   			})
+			
+			
+			
+			//返回按钮监听
 			var over = document.getElementById("over");
 			over.addEventListener('tap',function(){
 				mui.back();
-//				mui.openWindow({
-//					url: 'docHP.html', 
-//					id: 'docHP',
-//					show: {
-//						aniShow: 'pop-in'
-//					},
-//					styles: {
-//						popGesture: 'hide'
-//					},
-//					waiting: {
-//						autoShow: true
-//					}
-//				});
-//				setTimeout(function(){
-////					var self = plus.webview.currentWebview();
-//					self.close();	 
-//				},1000);
 			})
     	})
     </script>

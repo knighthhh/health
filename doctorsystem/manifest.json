@@ -327,7 +327,8 @@
 					"fonts/mui.ttf",
 					"css/mui.min.css",
 					"js/common.js",
-					"img/finddoctor.jpg"
+					"img/finddoctor.jpg",
+					"img/logo.png"
 				],
 				"refer": [
 					"index.html",
@@ -909,7 +910,8 @@
 				],
 				"refer": [
 					"main/modify.html",
-					"main/homepage_deit.html"
+					"main/homepage_deit.html",
+					"main/xiaoxi.html"
 				],
 				"priority": 0
 			},
@@ -923,7 +925,9 @@
 					"js/common.js"
 				],
 				"refer": [
-					"message/chat.html"
+					"message/chat.html",
+					"message/user_dangan.html",
+					"message/respon_type.html"
 				],
 				"priority": 0
 			},
@@ -937,7 +941,8 @@
 					"fonts/mui.ttf",
 					"css/mui.min.css",
 					"img/finddoctor.jpg",
-					"js/common.js"
+					"js/common.js",
+					"img/user.jpg"
 				],
 				"refer": [],
 				"priority": 0
@@ -1048,6 +1053,84 @@
 					"js/common.js"
 				],
 				"refer": [],
+				"priority": 0
+			},
+			"message/user_dangan.html": {
+				"resources": [
+					"js/mui.zoom.js",
+					"js/common.js",
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"js/mui.previewimage.js",
+					"css/heathfile.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"message/respon_type.html": {
+				"resources": [
+					"js/common.js",
+					"js/mui.min.js",
+					"css/mui.min.css",
+					"css/header.css"
+				],
+				"refer": [
+					"message/chat.html",
+					"message/kcf.html"
+				],
+				"priority": 0
+			},
+			"message/kcf.html": {
+				"resources": [
+					"js/common.js",
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"css/fast_question.css",
+					"css/zixun.css"
+				],
+				"refer": [
+					"message/kcf_over.html"
+				],
+				"priority": 0
+			},
+			"message/kcf_over.html": {
+				"resources": [
+					"js/common.js",
+					"js/mui.min.js",
+					"css/mui.min.css",
+					"css/fast_question.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"main/xiaoxi.html": {
+				"resources": [
+					"js/common.js",
+					"js/mui.min.js",
+					"css/mui.min.css",
+					"css/header.css"
+				],
+				"refer": [
+					"zixun/new_zixun.html",
+					"main/see_xiaoxi.html"
+				],
+				"priority": 0
+			},
+			"main/see_xiaoxi.html": {
+				"resources": [
+					"fonts/mui.ttf",
+					"js/mui.zoom.js",
+					"js/common.js",
+					"js/mui.min.js",
+					"css/mui.min.css",
+					"js/mui.previewimage.js",
+					"css/heathfile.css"
+				],
+				"refer": [
+					"message/chat.html"
+				],
 				"priority": 0
 			}
 		},

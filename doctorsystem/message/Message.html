@@ -38,10 +38,11 @@
 					if(data.result!=0){
 						var s="";
 						for(var i=0;i<data.length;i++){
-							s+="<li id='"+data[i]['user_phone']+"' class='mui-table-view-cell  '><a class='mui-navigate-right' ><div class='mui-row'><div class='mui-pull-left mui-col-xs-3 '>";
-							s+="<img src='"+data[i]['user_img']+"' style='width: 100%' /></div><div class='mui-col-xs-9 sick'>";
+							s+="<li id='"+data[i]['user_phone']+"' class='mui-table-view-cell  '><a ><div class='mui-row'><div class='mui-pull-left mui-col-xs-3 '>";
+							s+="<img src='"+data[i]['user_img']+"' style='width: 100%' /></div><div class='mui-col-xs-6 sick'>";
 							s+="<p><span>患者姓名：</span> <span>"+data[i]['user_name']+"</span></p>";
-							s+="<p><span>电话：</span> <span>"+data[i]['user_phone']+"</span></p></div></div></a></li>";
+							s+="<p><span>电话：</span> <span>"+data[i]['user_phone']+"</span></p></div>";
+							s+="<div class='mui-col-xs-3 sick'><button id='"+data[i]['user_phone']+"' type='button' class=' mui-btn-outlined public-color' style='color: #FFFFFF;'>回复</button>&nbsp;<button id='"+data[i]['user_phone']+"' type='button' class='mui-btn  public-color' style='color: #FFFFFF;'>档案</button></div></div></a></li>";
 						}
 						var patient =document.getElementById("patient");
 						patient.innerHTML = s;
@@ -54,12 +55,30 @@
 				}
 			})
 			
-			//批量监听患者消息列表
-			mui('#patient').on('tap', '.mui-table-view-cell', function() {
+			//批量监听回复按钮
+			mui('#patient').on('tap', '.mui-btn-outlined', function() {
 				var user_phone = this.getAttribute('id');
 				mui.openWindow({
-					url: 'chat.html',
-					id: 'chat',
+					url: 'respon_type.html',
+					id: 'respon_type',
+					extras:{
+						user_phone:user_phone
+					},
+					show: {
+						aniShow: 'pop-in'
+					},
+					waiting: {
+						autoShow: false
+					}
+				});
+			}); 
+			
+			//批量监听档案按钮
+			mui('#patient').on('tap', '.mui-btn', function() {
+				var user_phone = this.getAttribute('id');
+				mui.openWindow({
+					url: 'user_dangan.html',
+					id: 'user_dangan',
 					extras:{
 						user_phone:user_phone
 					},
@@ -77,24 +96,31 @@
 
 	<body>
 		<header class="mui-bar mui-bar-nav public-color">
-			<h1 class="mui-title" style="color: #FFFFFF;">消息列表</h1>
+			<h1 class="mui-title" style="color: #FFFFFF;">患者列表</h1>
 		</header>
 		<div class="mui-content">
 			<div class="list">
 				<ul id="patient" class="mui-table-view mui-table-view-chevron">
 					<!--<li id="" class="mui-table-view-cell  ">
-						<a class="mui-navigate-right" >
+						<a class="" >
 							<div class="mui-row">
+								
 								<div class="mui-pull-left mui-col-xs-3 ">
 									<img src="../img/doctor.jpeg" style="width: 100%" />
 								</div>
-								<div class="mui-col-xs-9 sick">
-									<p><span>姓名：</span> <span></span></p>
-									<p><span>电话：</span> <span></span></p>
+								<div class="mui-col-xs-6 sick">
+									<p><span>姓名：手动阀</span> <span></span></p>
+									<p><span>电话：2343254</span> <span></span></p>
 								</div>
+								<div class="mui-col-xs-3 sick">
+									<button type="button" class="mui-btn  mui-btn-outlined public-color" style="color: #FFFFFF;">回复</button>
+									<button type="button" class="mui-btn  mui-btn-outlined public-color" style="color: #FFFFFF;">档案</button>
+								</div>
+								
 							</div>
 						</a>
 					</li>-->
+					
 				</ul>
 			</div>
 		</div>

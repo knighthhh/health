@@ -24,7 +24,8 @@ class HosController extends Controller{
         $model = D('Admin/hospital_info');
         $info = $model -> getHosDetail($hos_id);
         $info['hos_introduce'] = htmlspecialchars_decode($info['hos_introduce']);
-        
+        $ic = C('IMAGE_CONFIG');
+        $info['hos_daohang'] = $ic['viewPath'].$info['hos_daohang'];
         echo json_encode($info);
     }
 
@@ -84,7 +85,7 @@ class HosController extends Controller{
         if($town=='全部'){
             $res=  D('hospital_info')->select();
         }else{
-            $town = mb_substr($town,0,-1);
+            $town = mb_substr($town,0,-1,'utf-8');
             $data['hos_address'] = array('like',"%$town%");
             $res=  D('hospital_info')->where($data)->select();
         } 

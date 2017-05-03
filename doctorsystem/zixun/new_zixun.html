@@ -6,7 +6,6 @@
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 		<!--<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-status-bar-style" content="black">-->
-		<script src="../js/mui.min.js"></script>
 		<link href="../css/mui.min.css" rel="stylesheet" />
 		<link rel="stylesheet" type="text/css" href="../css/heathfile.css" />
 		<script type="text/javascript" src="../js/mui.min.js"></script>
@@ -220,6 +219,7 @@
 		mui.plusReady(function() {
 			var self = plus.webview.currentWebview();
 			var user_phone = self.user_phone; 
+			var zixun_id = self.zixun_id; 
 			var doc_phone = plus.storage.getItem('doc_phone');
 			//获取患者咨询信息
 			mui.ajax('http://'+serverName+'/health/management/Application/index.php/Connector/Zixun/getzixun',{	
@@ -237,17 +237,19 @@
 					document.getElementById("zixun_text").innerHTML=data.zixun_text;
 					
 					//图片展示
-					var s="";
-					for(var i=0;i<data.img.length;i++){
-						s+="<img src='"+data.img[i]+"' data-preview-src='' data-preview-group='1' />";
+					if(data.img){
+						var s="";
+						for(var i=0;i<data.img.length;i++){
+							s+="<img src='"+data.img[i]+"' data-preview-src='' data-preview-group='1' />";
+						}
+						document.getElementById("zixun_img").innerHTML = s;
 					}
-					document.getElementById("zixun_img").innerHTML = s;
 				},
 				error:function(){
 //					plus.nativeUI.toast("请检查您的网络");
 				}
 			})
-			//回复
+			//回复按钮
 			var huifu = document.getElementById("huifu");
 			huifu.addEventListener('tap',function(){
 				mui.openWindow({
@@ -308,7 +310,22 @@
 				},10000);
 			});
 			
-			//暂不处理
+			//修改推送消息为已读
+			mui.ajax('http://'+serverName+'/health/management/Application/index.php/Connector/Zixun/save_read',{	
+				data:{
+					zixun_id:zixun_id
+				},
+				dataType:'json',
+				type:'POST',
+				timeout:10000,
+				success:function(data){
+					//{"reslut":1}表示成功
+				},
+				error:function(){
+				}
+			})
+			
+			//暂不处理按钮
 			var ignore = document.getElementById("ignore");
 			ignore.addEventListener('tap',function(){
 				mui.back();

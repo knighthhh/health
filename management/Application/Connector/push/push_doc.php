@@ -20,6 +20,7 @@ define('MASTERSECRET','ztLAA3yBp86MVqiWI3lYN9');
 //把医生的CID查询出来
 $doc_phone = $_POST['doc_phone'];
 $user_phone = $_POST['user_phone'];
+$zixun_id = $_POST['zixun_id'];
 $mysql_server_name="localhost"; //数据库服务器名称
 $mysql_username="root"; // 连接数据库用户名
 $mysql_password="root"; // 连接数据库密码
@@ -520,8 +521,10 @@ function IGtTransmissionTemplateDemo(){
     $template->set_appkey(APPKEY);//应用appkey
     $template->set_transmissionType(1);//透传消息类型
     global $user_phone;
+    global $zixun_id;
 //  $jsontext = '{"title":"通知标题","content":"通知内容","payload":"通知去干嘛这里可以自定义"}';
-    $jsontext = '{title:"掌上健康",content:"您有新的患者咨询",payload:"'.$user_phone.'"}';
+//  $jsontext = '{title:"掌上健康",content:"您有新的患者咨询",payload:"'.$user_phone.'"}';
+ $jsontext = '{title:"掌上健康",content:"您有新的患者咨询",payload:{"content":"'.$user_phone.'","zixun_id":"'.$zixun_id.'"}}';
 //  $jsontext = '{title:"掌上健康",content:"您有新的患者咨询",payload:"{id:"'.$user_phone.'"}"}';
     $template->set_transmissionContent($jsontext);//透传内容
     //$template->set_duration(BEGINTIME,ENDTIME); //设置ANDROID客户端在此时间区间内展示消息

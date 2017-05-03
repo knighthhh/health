@@ -9,30 +9,22 @@
     	<link rel="stylesheet" type="text/css" href="../css/iconfont_foot.css"/>
     	<link rel="stylesheet" type="text/css" href="../css/iconfont_money.css"/>
 		<script src="../js/mui.min.js"></script>
+		<script src="../js/mui.zoom.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/mui.previewimage.js" type="text/javascript" charset="utf-8"></script>
 		<script src="../js/common.js"></script>
 		<link rel="stylesheet" href="../css/souye.css" />
-		<!--<script type="text/javascript" src="js/souye.js" ></script>-->
-		<script type="text/javascript" charset="utf-8">  
+		<link rel="stylesheet" type="text/css" href="../css/preImage.css"/>
+		<script type="text/javascript" charset="utf-8">
             window.onload=function(){
-//          	speed=20
-//			   	demo2.innerHTML=demo1.innerHTML
-//			    function Marquee(){
-//			    if(demo2.offsetTop-demo.scrollTop<=0)
-//			    demo.scrollTop-=demo1.offsetHeight
-//			    else{
-//			    demo.scrollTop++
-//			    }
-//			    }
-//			    var MyMar=setInterval(Marquee,speed)
-//			    demo.onmouseover=function() {clearInterval(MyMar)}
-//			    demo.onmouseout=function() {MyMar=setInterval(Marquee,speed)}
-    
+
+        		mui.previewImage();
+            	
 				var doc_phone=null;
         		var doc_name=null;
         		var user_phone = null;
-        		
+
             	mui.plusReady(function(){ user_phone = plus.storage.getItem('user_phone');});
-            		 
+            		
             		//添加detailPage自定义事件监听
 					window.addEventListener('docID',function(event){
 				 	//获得医生ID参数
@@ -45,6 +37,7 @@
             			var li = '';
             			li = li+'<li class="mui-table-view-cell"><div><img class="mui-pull-left" style="width:80px;height:80px;border-radius:100px;" src="'+data.doc_img+'"></div><div style="float:left;margin-left:20px" class=""><h4>'+data.doc_name+
             			'</h4><p>所属医院：'+data.hos_name+'</p><p>擅长: '+data.doc_especial+'</p><p>关注量: '+data.doc_attention+'</p></div></li>';
+
             			docInfo.innerHTML = li ;
             			
             			//显示医生简介
@@ -85,6 +78,26 @@
 			  				}
 			  			})
             		}
+            		
+            		//医生简介详情
+            		document.getElementById("doc_introduce").addEventListener('tap',function(){
+            			mui.openWindow({
+							url: 'doc_brief.html', 
+							id: 'doc_brief',
+							extras:{
+							    doc_id:doc_id
+							},
+							show: {
+								aniShow: 'pop-in'
+							},
+							styles: {
+								popGesture: 'hide'
+							},
+							waiting: {
+								autoShow: true
+							}
+						});
+            		});
             		
             		//咨询按钮监听
             		var zixun = document.getElementById("zixun");
@@ -179,13 +192,14 @@
 <div class="mui-content">
 	<ul id="docInfo" class="mui-table-view mui-table-view">			
 	</ul>
-	<div class="box-c ">
+	
+	<div  class="box-c ">
 		<p class="box-c-p ">- 医生简介 -</p>	
 		<ul class="mui-table-view jianjie">
 			<li class="mui-table-view-cell">
 				<a class="mui-navigate">
 					<div id="doc_introduce" class="box-c-a-r" >
-						<p style="font-size: 15px;text-align: center;"></p>
+						<!--<p style="font-size: 15px;text-align: center;"></p>-->
 					</div>
 				</a>
 			</li>
@@ -193,7 +207,7 @@
 	</div>
 	
 	<div class="box-c ">
-		<p class="box-c-p ">- 患者评价(1) -</p>	
+		<p class="box-c-p ">- 患者评价 -</p>	
 		<ul id="pingjia" class="mui-table-view jianjie">
 			<!--<li class="mui-table-view-cell">
 				<a class="mui-navigate-right">

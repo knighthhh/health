@@ -100,6 +100,13 @@
 				_self.close("auto");
 
 			}
+			function searchwin(){
+				var w = plus.webview.create( "search.html" );
+				w.show("pop-in");
+				mui.back();
+			//	w.show("slide-in-right");
+				//document.getElementById("search").focus();
+			}
 		</script>
 	</head>
 
@@ -111,7 +118,7 @@
 
 			<div  id="searchtext2" class="search"> 
 				<div class="mui-input-row mui-search">
-					<input  class=" mui-input-clear" type="search" name="search" value="" placeholder="搜疾病，医生，医院，科室" />
+					<input  class=" mui-input-clear" type="search" name="search" onclick="searchwin()" value="" placeholder="搜疾病，医生，医院，科室" />
 				</div>
 			</div>
 		</header>

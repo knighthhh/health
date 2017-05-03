@@ -34,24 +34,44 @@
 			mui.plusReady(function() {
 				// 监听点击消息事件
 			    plus.push.addEventListener( "click", function( msg ) {
-			        // 判断是从本地创建还是离线推送的消息
-			        mui.openWindow({
-						url: 'im/im-chat.html',
-						id: 'im-chat',
-						extras:{
-							doc_phone:msg.payload,
-						},
-						show: {
-							aniShow: 'pop-in'
-						},
-						styles: {
-							popGesture: 'hide'
-						},
-						waiting: {
-							autoShow: false
-						}
-					});
-					plus.webview.getWebviewById('inquiry/mydoctor.html').reload();
+			    	//区分处方推送和咨询推送
+			    	if(msg.content == '您咨询的医生给你开了处方'){
+			    		mui.openWindow({
+							url: 'finddoctor/zixun_new_chufang.html',
+							id: 'zixun_new_chufang',
+							extras:{
+								doc_phone:msg.payload,
+							},
+							show: {
+								aniShow: 'pop-in'
+							},
+							styles: {
+								popGesture: 'hide'
+							},
+							waiting: {
+								autoShow: false
+							}
+						});
+			    	}else{
+			    		 mui.openWindow({
+							url: 'im/im-chat.html',
+							id: 'im-chat',
+							extras:{
+								doc_phone:msg.payload,
+							},
+							show: {
+								aniShow: 'pop-in'
+							},
+							styles: {
+								popGesture: 'hide'
+							},
+							waiting: {
+								autoShow: false
+							}
+						});
+						plus.webview.getWebviewById('inquiry/mydoctor.html').reload();
+			    	}
+			       
 			    }, false );
 				
 			    //获取当前页面所属的Webview窗口对象

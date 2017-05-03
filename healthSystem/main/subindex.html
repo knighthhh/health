@@ -110,7 +110,7 @@
 						for(i=0;i<data.length;i++){
 							//console.log(data[i].hos_navigate_img);
 							item = item+'<div hos-id='+data[i].hos_id+' class="box-d-a"><div class="box-d-a-l"><img style="width:60px;height:70px" src="'+data[i].hos_navigate_img+'" /></div><div class="box-d-a-r"><h4>'+data[i].hos_name+'</h4><p>'+data[i].hos_level+'</p><span style="font-size: 13px;color: #666;">'+data[i].hos_address+
-							'</span><span style="color:#05B19F;"></span><span style="float: right;padding-right: 10px;color:#666;font-size: 11px;">赞100</span></div></div>'
+							'</span><span style="color:#05B19F;"></span><span style="float: right;padding-right: 10px;color:#666;font-size: 11px;">关注量：'+data[i].hos_attention+'</span></div></div>'
 						}
 						demo4.innerHTML = item;
 						//滚动列表
@@ -173,7 +173,7 @@
 							for(i=0;i<data.length;i++){
 								item2 = item2+'<div doc-id='+data[i].doc_id+' class="box-c-a"><div class="box-c-a-l"><img style="width:55px;height:55px;border-radius:100px;margin-left:5px;margin-top:6px" src="'+data[i].doc_img+'" /></div><div class="box-c-a-r"><h4>'+data[i].doc_name+'  '+data[i].hos_name+'</h4><p style="font-size: 13px;">擅长：'+data[i].doc_especial+
 								'</p><span class="mui-icon iconfont icon-jinqian1" style="font-size: 13px;color: #666;"></span><span style="font-size: 13px;color:#05B19F;">'+data[i].doc_fee+
-								'/次</span><span class="mui-icon iconfont icon-pinglun2" style="font-size: 13px;color: #666;"></span><span style="font-size: 13px;color:#05B19F;">100</span><span class="mui-icon iconfont icon-dianzan1" style="font-size: 13px;color: #666;"></span><span style="font-size: 13px;color:#05B19F;">'+data[i].doc_attention+
+								'/次</span><span class="mui-icon iconfont icon-pinglun2" style="font-size: 13px;color: #666;"></span><span style="font-size: 13px;color:#05B19F;">'+data[i].doc_rece+'</span><span class="mui-icon iconfont icon-dianzan1" style="font-size: 13px;color: #666;"></span><span style="font-size: 13px;color:#05B19F;">'+data[i].doc_attention+
 								'</span></div></div>';
 							
 							}
@@ -224,7 +224,8 @@
 							  mui.openWindow({  
 							    id:'docHP.html',
 							    show:{
-							    	aniShow:'pop-in',  									event:'loaded',//页面显示时机，默认为titleUpdate事件时显示
+							    	aniShow:'pop-in',  									
+							    	event:'loaded',//页面显示时机，默认为titleUpdate事件时显示
     							}
 							 });
 							});  
@@ -242,7 +243,7 @@ function searchwin(){
 	var w = plus.webview.create( "search/search.html" );
 	w.show("pop-in");
 //	w.show("slide-in-right");
-	document.getElementById("search").focus();
+	//document.getElementById("search").focus();
 }
 	</script>
 		<!-- 头部  包含搜索-->

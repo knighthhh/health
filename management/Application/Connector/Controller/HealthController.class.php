@@ -91,7 +91,7 @@ class HealthController extends Controller
         //dump($data);die;
         echo json_encode($data);
     }
-
+ 
      //获取问诊中的亲友姓名
     public function getAskRelaName()
     {
@@ -310,8 +310,69 @@ class HealthController extends Controller
 	         ->where(array(
 	            'a.user_phone' => array('eq', $user_phone)
 	         ))
+			 ->order('id desc')
 	         ->select();
 		echo json_encode($jieguo);
 	}
+
+    //获取用户健康记录
+    public function getRecord(){
+        $user_phone = I('get.user_phone');
+        $time = I('get.date');
+        //先根据用户手机获得用户ID
+        $model   = D('user_info');
+        $user_id = $model->field("user_id")->where(array(
+            'user_phone' => array('eq', $user_phone),
+        ))->find();
+        //
+        $recordModel = D('standard');
+        $data = $recordModel->where(array(
+            'user_id' => array('eq',$user_id['user_id']),
+            'time'  => array('like',"$time")
+            ))->find();
+        if($data){
+            $data['time'] = $time;
+            echo json_encode($data);
+        }else{
+            $data['result'] = 0;
+            echo json_encode($data);
+        }
+        
+    }
+
+    //添加用户健康记录
+    public function addRecord(){
+        $user_phone = I('post.user_phone');
+        $time = I('post.time');
+         //先根据用户手机获得用户ID
+        $model   = D('user_info');
+        $user_id = $model->field("user_id")->where(array(
+            'user_phone' => array('eq', $user_phone),
+        ))->find();
+        $_POST['user_id'] = $user_id['user_id'];
+        $model = D('standard');
+        $res = $model->where(array(
+            'time' => array('like',"$time")
+            ))->find();
+        if(!$res){
+            if($model->create(I('post.'),1)){
+                if($model->add()){
+                    $data['result'] = 1;
+                }
+            }else{
+                $data['result'] = 0;
+            }
+        }else{
+            $_POST['stan_id'] = $res['stan_id'];
+            if($model->create(I('post.'),1)){
+                if($model->save()){
+                    $data['result'] = 1;
+                }
+            }else{
+                $data['result'] = 0;
+            }
+        }
+        echo json_encode($data);
+    }
 
 }
