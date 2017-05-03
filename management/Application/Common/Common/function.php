@@ -166,73 +166,108 @@ function getFirstCharter($str)
     return null;
 }
 
-function uploadExcel($excelName,$dirName)
-    {
-       header("Content-Type:text/html;charset=utf-8");
-        $upload = new \Think\Upload(array(
-        'rootPath' => './Public/Uploads/'
-         ));// 实例化上传类
-        $upload->maxSize   =     3145728 ;// 设置附件上传大小
-        $upload->exts      =     array('xls', 'xlsx');// 设置附件上传类
-        $upload->savePath  =      $dirName.'/'; // 设置附件上传目录
-        // 上传文件
-        //dump($excelName);die;
-        $info   =   $upload->uploadOne($_FILES[$excelName]);
-        //dump($info);die;
-        $filename = './Public/Uploads/'.$info['savepath'].$info['savename'];
-        $exts = $info['ext'];
-        //print_r($info);exit;
-        if(!$info) {// 上传错误提示错误信息
-            echo $upload->getError();
-          }else{// 上传成功
-            return import_excel($filename, $exts);
+function uploadExcel($excelName, $dirName)
+{
+    header("Content-Type:text/html;charset=utf-8");
+    $upload = new \Think\Upload(array(
+        'rootPath' => './Public/Uploads/',
+    )); // 实例化上传类
+    $upload->maxSize  = 3145728; // 设置附件上传大小
+    $upload->exts     = array('xls', 'xlsx'); // 设置附件上传类
+    $upload->savePath = $dirName . '/'; // 设置附件上传目录
+    // 上传文件
+    //dump($excelName);die;
+    $info = $upload->uploadOne($_FILES[$excelName]);
+    //dump($info);die;
+    $filename = './Public/Uploads/' . $info['savepath'] . $info['savename'];
+    $exts     = $info['ext'];
+    //print_r($info);exit;
+    if (!$info) {
+// 上传错误提示错误信息
+        echo $upload->getError();
+    } else {
+// 上传成功
+        return import_excel($filename, $exts);
 
-        }
+    }
+}
+
+function import_excel($filename, $exts = 'xls')
+{
+    //导入PHPExcel类库，因为PHPExcel没有用命名空间，只能inport导入
+    import("Org.Util.PHPExcel");
+    //创建PHPExcel对象，注意，不能少了\
+    $PHPExcel = new \PHPExcel();
+    //如果excel文件后缀名为.xls，导入这个类
+    if ($exts == 'xls') {
+        import("Org.Util.PHPExcel.Reader.Excel5");
+        $PHPReader = new \PHPExcel_Reader_Excel5();
+    } else if ($exts == 'xlsx') {
+        import("Org.Util.PHPExcel.Reader.Excel2007");
+        $PHPReader = new \PHPExcel_Reader_Excel2007();
     }
 
-function import_excel($filename, $exts='xls')
-    {
-        //导入PHPExcel类库，因为PHPExcel没有用命名空间，只能inport导入
-        import("Org.Util.PHPExcel");
-        //创建PHPExcel对象，注意，不能少了\
-        $PHPExcel=new \PHPExcel();
-        //如果excel文件后缀名为.xls，导入这个类
-        if($exts == 'xls'){
-            import("Org.Util.PHPExcel.Reader.Excel5");
-            $PHPReader=new \PHPExcel_Reader_Excel5();
-        }else if($exts == 'xlsx'){
-            import("Org.Util.PHPExcel.Reader.Excel2007");
-            $PHPReader=new \PHPExcel_Reader_Excel2007();
-        }
-
-
-        //载入文件
-        $PHPExcel=$PHPReader->load($filename);
-        //获取表中的第一个工作表，如果要获取第二个，把0改为1，依次类推
-        $currentSheet=$PHPExcel->getSheet(0);
-        //获取总列数
-        $allColumn=$currentSheet->getHighestColumn();
-        //获取总行数
-        $allRow=$currentSheet->getHighestRow();
-        //将遍历结果拼成数组
-        $data = array();
-        //循环获取表中的数据，$currentRow表示当前行，从哪行开始读取数据，索引值从0开始
-        for($currentRow=2;$currentRow<=$allRow;$currentRow++){
-            $i = 0;
-            //从哪列开始，A表示第一列
-            for($currentColumn='A';$currentColumn<=$allColumn;$currentColumn++){
-                //数据坐标
-                $address=$currentColumn.$currentRow;
-                //读取到的数据，保存到数组$arr中
-                $cell =$currentSheet->getCell($address)->getValue();
-                //$cell = $data[$currentRow][$currentColumn];
-                if($cell instanceof PHPExcel_RichText){
-                    $cell  = $cell->__toString();
-                }
-                $data[$currentRow-2][$i] = $cell;
-                $i++;
+    //载入文件
+    $PHPExcel = $PHPReader->load($filename);
+    //获取表中的第一个工作表，如果要获取第二个，把0改为1，依次类推
+    $currentSheet = $PHPExcel->getSheet(0);
+    //获取总列数
+    $allColumn = $currentSheet->getHighestColumn();
+    //获取总行数
+    $allRow = $currentSheet->getHighestRow();
+    //将遍历结果拼成数组
+    $data = array();
+    //循环获取表中的数据，$currentRow表示当前行，从哪行开始读取数据，索引值从0开始
+    for ($currentRow = 2; $currentRow <= $allRow; $currentRow++) {
+        $i = 0;
+        //从哪列开始，A表示第一列
+        for ($currentColumn = 'A'; $currentColumn <= $allColumn; $currentColumn++) {
+            //数据坐标
+            $address = $currentColumn . $currentRow;
+            //读取到的数据，保存到数组$arr中
+            $cell = $currentSheet->getCell($address)->getValue();
+            //$cell = $data[$currentRow][$currentColumn];
+            if ($cell instanceof PHPExcel_RichText) {
+                $cell = $cell->__toString();
             }
-
+            $data[$currentRow - 2][$i] = $cell;
+            $i++;
         }
-        return $data;
+
     }
+    return $data;
+}
+
+/**
+ * @param lat 纬度 lon 经度 raidus 单位米
+ * return minLat,minLng,maxLat,maxLng
+ */
+
+function getAround($lat, $lon, $raidus)
+{
+    $PI = 3.14159265;
+
+    $latitude  = $lat;
+    $longitude = $lon;
+
+    $degree     = (24901 * 1609) / 360.0;
+    $raidusMile = $raidus;
+
+    $dpmLat    = 1 / $degree;
+    $radiusLat = $dpmLat * $raidusMile;
+    $minLat    = $latitude - $radiusLat;
+    $maxLat    = $latitude + $radiusLat;
+
+    $mpdLng    = $degree * cos($latitude * ($PI / 180));
+    $dpmLng    = 1 / $mpdLng;
+    $radiusLng = $dpmLng * $raidusMile;
+    $minLng    = $longitude - $radiusLng;
+    $maxLng    = $longitude + $radiusLng;
+// echo $minLat."#".$maxLat."@".$minLng."#".$maxLng;
+    $data           = array();
+    $data['minLat'] = $minLat;
+    $data['maxLat'] = $maxLat;
+    $data['minLng'] = $minLng;
+    $data['maxLng'] = $maxLng;
+    return $data;
+}

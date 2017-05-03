@@ -1,7 +1,7 @@
 
 
 
-var serverName = '192.168.1.103:80';
+var serverName = '10.77.117.237:88';
 
 //判断是否登录了
 function islogin(){

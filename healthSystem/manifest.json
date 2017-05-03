@@ -547,7 +547,8 @@
 					"fonts/mui.ttf",
 					"css/mui.min.css",
 					"img/hospital.png",
-					"js/common.js"
+					"js/common.js",
+					"js/immersed.js"
 				],
 				"refer": [
 					"finddoctor/hosHP.html"
@@ -678,7 +679,10 @@
 					"js/common.js",
 					"css/preImage.css",
 					"js/mui.zoom.js",
-					"js/mui.previewimage.js"
+					"js/mui.previewimage.js",
+					"fonts/iconfont_money.ttf",
+					"fonts/iconfont_foot.ttf",
+					"fonts/iconfont.ttf"
 				],
 				"refer": [
 					"im/im-chat.html",

@@ -9,12 +9,38 @@ class HosController extends Controller{
     	$model = D('Hospital_info');
         $ic = C('IMAGE_CONFIG');
         //dump($ic['viewPath']);
-    	$data = $model->select();
+         /*排序*/
+        $orderby = "hos_attention";
+        $orderway = "desc";
+    	$data = $model->order("$orderby $orderway")->limit(4)->select();
         for ($i=0; $i <count($data) ; $i++) { 
             $data[$i]['hos_navigate_img'] = $ic['viewPath'].$data[$i]['hos_navigate_img'];
         }
         //dump($data);die;
     	echo json_encode($data);
+    }
+
+    //获得附近医院列表
+    public function getNearbyHos(){
+        //获得用户当前位置经纬度
+        $lat = I('get.lat');
+        $lng = I('get.longt');
+        //echo json_encode($_GET);die;
+        $model = D('Hospital_info');
+        $ic = C('IMAGE_CONFIG');
+        //获得该用户半径10千米范围内的经纬度
+        $res = getAround($lat,$lng,10000);
+        //dump($res);die;
+        //dump($ic['viewPath']);
+        $data = $model->where(array(
+            'hos_longitude' => array('between',$res['minLng'].",".$res['maxLng']),
+            'hos_latitude' => array('between',$res['minLat'].",".$res['maxLat'])
+            ))->select();
+        for ($i=0; $i <count($data) ; $i++) { 
+            $data[$i]['hos_navigate_img'] = $ic['viewPath'].$data[$i]['hos_navigate_img'];
+        }
+        //dump($data);die;
+        echo json_encode($data);
     }
 
     //获得医院详情

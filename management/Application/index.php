@@ -6,7 +6,11 @@ define("APP_DEBUG",true);
 
 
 
-define("SITE_URL", "http://192.168.1.103:80");
+
+
+define("SITE_URL", "http://10.77.117.237:88");
+
+
 
 
 define("CSS_URL", "/health/management/Application/Public/Home/css/");
