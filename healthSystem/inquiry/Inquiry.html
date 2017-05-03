@@ -11,7 +11,7 @@
     <link rel="stylesheet" type="text/css" href="../css/inquiry.css"/>
     <link rel="stylesheet" type="text/css" href="../css/iconfont_inquiry.css"/>
 </head>
-
+	<script type="text/javascript" src="../js/common.js"></script>
 	<script type="text/javascript">
 		mui.init();
 		mui.plusReady(function() {
@@ -19,17 +19,32 @@
 					var finddoctor = document.getElementById('finddoctor');
 					var mydoctor = document.getElementById('mydoctor');
 					fastask.addEventListener('tap',function(event){
-						mui.openWindow({
-							url: 'fast_question.html',
-							id: 'fast_question',
-							preload: true,
-							show: {
-								aniShow: 'pop-in'
-							},
-							waiting: {
-								autoShow: false
-							}
-						});
+						if(islogin()){
+							mui.openWindow({
+								url: 'fast_question.html',
+								id: 'fast_question',
+								preload: true,
+								show: {
+									aniShow: 'pop-in'
+								},
+								waiting: {
+									autoShow: false
+								}
+							});
+						}else{
+							mui.openWindow({
+								url: '/login/login.html',
+								id: 'login',
+								preload: true,
+								show: {
+									aniShow: 'pop-in'
+								},
+								waiting: {
+									autoShow: false
+								}
+							});
+							plus.nativeUI.toast("请先登录");
+						}
 					},false);
 					finddoctor.addEventListener('tap',function(event){
 						mui.openWindow({
@@ -45,17 +60,33 @@
 						});
 					},false);
 					mydoctor.addEventListener('tap',function(event){
-						mui.openWindow({
-							url: 'mydoctor.html',
-							id: 'mydoctor',
-							preload: true,
-							show: {
-								aniShow: 'pop-in'
-							},
-							waiting: {
-								autoShow: false
-							}
-						});
+						if(islogin()){
+							mui.openWindow({
+								url: 'mydoctor.html',
+								id: 'mydoctor',
+								preload: true,
+								show: {
+									aniShow: 'pop-in'
+								},
+								waiting: {
+									autoShow: false
+								}
+							});
+						}else{
+							mui.openWindow({
+								url: '/login/login.html',
+								id: 'login',
+								preload: true,
+								show: {
+									aniShow: 'pop-in'
+								},
+								waiting: {
+									autoShow: false
+								}
+							});
+							plus.nativeUI.toast("请先登录");
+						}
+						
 					},false);
 					
 				});

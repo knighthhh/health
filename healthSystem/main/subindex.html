@@ -69,7 +69,7 @@
 					},false);
 					findhos.addEventListener('tap',function(event){
 						mui.openWindow({
-							url: '../finddoctor/search_doctor_yy.html',
+							url: '../finddoctor/findhos.html',
 							id: 'findhos',
 							preload: true,
 							show: {
@@ -110,7 +110,7 @@
 						for(i=0;i<data.length;i++){
 							//console.log(data[i].hos_navigate_img);
 							item = item+'<div hos-id='+data[i].hos_id+' class="box-d-a"><div class="box-d-a-l"><img style="width:60px;height:70px" src="'+data[i].hos_navigate_img+'" /></div><div class="box-d-a-r"><h4>'+data[i].hos_name+'</h4><p>'+data[i].hos_level+'</p><span style="font-size: 13px;color: #666;">'+data[i].hos_address+
-							'</span><span style="color:#05B19F;"></span><span style="float: right;padding-right: 10px;color:#666;font-size: 11px;">赞100</span></div></div>'
+							'</span><span style="color:#05B19F;"></span><span style="float: right;padding-right: 10px;color:#666;font-size: 11px;">关注量：'+data[i].hos_attention+'</span></div></div>'
 						}
 						demo4.innerHTML = item;
 						//滚动列表
@@ -173,7 +173,7 @@
 							for(i=0;i<data.length;i++){
 								item2 = item2+'<div doc-id='+data[i].doc_id+' class="box-c-a"><div class="box-c-a-l"><img style="width:55px;height:55px;border-radius:100px;margin-left:5px;margin-top:6px" src="'+data[i].doc_img+'" /></div><div class="box-c-a-r"><h4>'+data[i].doc_name+'  '+data[i].hos_name+'</h4><p style="font-size: 13px;">擅长：'+data[i].doc_especial+
 								'</p><span class="mui-icon iconfont icon-jinqian1" style="font-size: 13px;color: #666;"></span><span style="font-size: 13px;color:#05B19F;">'+data[i].doc_fee+
-								'/次</span><span class="mui-icon iconfont icon-pinglun2" style="font-size: 13px;color: #666;"></span><span style="font-size: 13px;color:#05B19F;">100</span><span class="mui-icon iconfont icon-dianzan1" style="font-size: 13px;color: #666;"></span><span style="font-size: 13px;color:#05B19F;">'+data[i].doc_attention+
+								'/次</span><span class="mui-icon iconfont icon-pinglun2" style="font-size: 13px;color: #666;"></span><span style="font-size: 13px;color:#05B19F;">'+data[i].doc_rece+'</span><span class="mui-icon iconfont icon-dianzan1" style="font-size: 13px;color: #666;"></span><span style="font-size: 13px;color:#05B19F;">'+data[i].doc_attention+
 								'</span></div></div>';
 							
 							}
@@ -230,6 +230,13 @@
 							 });
 							});  
 						},'json');
+						//获取在线医生
+						mui.post('http://'+serverName+'/health/management/application/index.php/Connector/Doc/get_online_doc',{
+							},function(data){
+								document.getElementById("online_doc").innerHTML = data.result;
+							},'json'
+						);
+					
 				});
 				
 function searchwin(){
@@ -355,7 +362,7 @@ function searchwin(){
 
 					<div  id="box-b-a" class="box-b-a"  style="background: #fff;">						
 								<img class="" src="../img/finddoctor.jpg"/>
-				    			<span class="mui-slider-indicator" style="">在线医生：<span>500</span></span>
+				    			<span class="mui-slider-indicator" style="">在线医生：<span id="online_doc">500</span></span>
 		   			 </div>
 		   			 
 				</div>
@@ -370,7 +377,7 @@ function searchwin(){
 							    		<img class="" src="../img/jkzx.jpg"/>
 							    </div>
 								</a>
-				   </div>	
+				  </div>	  
 			</div>
 		
 	<!--三宫格找医生医院-->	 

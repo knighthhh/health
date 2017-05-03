@@ -91,7 +91,7 @@ class HealthController extends Controller
         //dump($data);die;
         echo json_encode($data);
     }
-
+ 
      //获取问诊中的亲友姓名
     public function getAskRelaName()
     {
@@ -297,6 +297,23 @@ class HealthController extends Controller
                 echo $result['res'];
             }
     }
+	
+	//获取线上就诊记录
+	public function get_online_vis(){
+		$user_phone = I('post.user_phone');
+		$jieguo = M('zixun')
+	         ->field("a.*,b.hos_name,c.dep_name,d.doc_name")
+	         ->alias('a')
+			 ->join('__DOCTOR_INFO__ d on d.doc_phone=a.doc_phone','LEFT')
+	         ->join('__HOSPITAL_INFO__ b on b.hos_id=d.hos_id','LEFT')
+			 ->join('__DEPARTMENT_INFO__ c on c.dep_id=d.depa_id','LEFT')
+	         ->where(array(
+	            'a.user_phone' => array('eq', $user_phone)
+	         ))
+			 ->order('id desc')
+	         ->select();
+		echo json_encode($jieguo);
+	}
 
     //获取用户健康记录
     public function getRecord(){

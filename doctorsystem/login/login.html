@@ -112,7 +112,6 @@
 			//获取推送所要用的CID
 		    doc_cid = plus.push.getClientInfo().clientid;
 		    plus.storage.setItem('doc_cid',doc_cid);
-		    alert(doc_cid);
 		    
 			var loginButton = doc.getElementById('login');
 			var doc_phoneBox = doc.getElementById('doc_phone');
@@ -151,6 +150,7 @@
       						plus.webview.show('../index.html');
       						plus.webview.getWebviewById('mine/Mine.html').reload();
       						plus.webview.getWebviewById('message/Message.html').reload();
+      						plus.webview.getWebviewById('main/docHomepage.html').reload();
 							setTimeout(function(){
 								var self = plus.webview.currentWebview();
 								self.close();	
@@ -195,7 +195,7 @@
 		</header>
 		<div class="mui-content">
 			<div class="app-img">
-				<img src="../img/finddoctor.jpg"/>
+				<img src="../img/logo.png"/>
 			</div>
 			<form id='login-form' class="mui-input-group mui-card login-form">
 				<div class="mui-input-row">

@@ -47,6 +47,7 @@ class InquiryController extends Controller{
 	         ->field("a.*,b.*")
 	         ->alias('a')
 	         ->join('__USER_INFO__ b on a.user_phone=b.user_phone','LEFT')
+			 ->order('id desc')
 	         ->select();
 	         
 	    for($i=0;$i<count($res);$i++){

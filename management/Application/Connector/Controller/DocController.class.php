@@ -257,4 +257,30 @@ class DocController extends Controller{
 		}
 		echo json_encode($res);
     }
+	
+	//修改我的资料
+	public function reset_ziliao(){
+    	$data['doc_phone']=I('post.doc_phone');
+		$saveres['doc_age']=I('post.doc_age');
+		$saveres['doc_zhiye']=I('post.doc_zhiye');
+		$saveres['doc_fee']=I('post.doc_fee');
+		$saveres['doc_especial']=I('post.doc_especial');
+		$saveres['doc_introduce']=I('post.doc_introduce');
+		$mess=M('doctor_info')->where($data)->save($saveres);
+		if($mess){
+			$res['result']=1;
+			$res['data']='恭喜！修改成功';
+		}else{
+			$res['result']=0;
+			$res['data']='旧密码错误';
+		}
+		echo json_encode($res);
+    }
+	
+	//获取在线医生
+	public function get_online_doc(){
+		$findres=M('doctor_info')->select();
+		$res['result']= count($findres);
+		echo json_encode($res);
+	}
 }

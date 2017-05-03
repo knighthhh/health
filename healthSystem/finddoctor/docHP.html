@@ -16,21 +16,9 @@
 		<link rel="stylesheet" type="text/css" href="../css/preImage.css"/>
 		<script type="text/javascript" charset="utf-8">
             window.onload=function(){
+
         		mui.previewImage();
             	
-            	speed=20
-			   	demo2.innerHTML=demo1.innerHTML
-			    function Marquee(){
-			    if(demo2.offsetTop-demo.scrollTop<=0)
-			    demo.scrollTop-=demo1.offsetHeight
-			    else{
-			    demo.scrollTop++
-			    }
-			    }
-			    var MyMar=setInterval(Marquee,speed)
-			    demo.onmouseover=function() {clearInterval(MyMar)}
-			    demo.onmouseout=function() {MyMar=setInterval(Marquee,speed)}
-    
 				var doc_phone=null;
         		var doc_name=null;
         		var user_phone = null;
@@ -47,19 +35,50 @@
             		},function(data){
             			var docInfo = document.getElementById('docInfo');
             			var li = '';
-            			li = li+'<li class="mui-table-view-cell"><div><img data-preview-src="" data-preview-group="1" class="mui-pull-left" style="width:80px;height:80px;border-radius:100px;" src="'+data.doc_img+'"></div><div style="float:left;margin-left:20px" class=""><h4>'+data.doc_name+
-            			'</h4><p>所属医院：'+data.hos_name+'</p><p>擅长: '+data.doc_especial+'</p><p>热度: '+data.doc_hot+'</p></div></li>';
+            			li = li+'<li class="mui-table-view-cell"><div><img class="mui-pull-left" style="width:80px;height:80px;border-radius:100px;" src="'+data.doc_img+'"></div><div style="float:left;margin-left:20px" class=""><h4>'+data.doc_name+
+            			'</h4><p>所属医院：'+data.hos_name+'</p><p>擅长: '+data.doc_especial+'</p><p>关注量: '+data.doc_attention+'</p></div></li>';
+
             			docInfo.innerHTML = li ;
             			
             			//显示医生简介
-//          			var doc_introduce = document.getElementById("doc_introduce");
-//          			var s="";
-//          			s = "<p style='font-size: 15px;text-align: center;'>"+data.doc_introduce+"</p>";
-//						doc_introduce.innerHTML = s;
+            			var doc_introduce = document.getElementById("doc_introduce");
+            			var s="";
+            			s = "<p style='font-size: 15px;text-align: center;'>"+data.doc_introduce+"</p>";
+						doc_introduce.innerHTML = s;
 						doc_phone = data.doc_phone;
 						doc_name = data.doc_name;
 						
+						//显示评价
+						get_pingjia();
             		},'json');
+            		
+            		//患者评价详情（因为获取不到doc_phone）,封装后使用
+            		function get_pingjia(){
+            			mui.ajax('http://'+serverName+'/health/management/Application/index.php/Connector/User/get_pingjia',{
+			  				data:{
+								doc_phone:doc_phone
+			  				},
+			  				dataType:'json',
+			  				type:'POST',
+			  				timeout:10000,
+			  				success:function(data){
+			  					var s="";
+			  					if(data['result']!=0){
+			  						for(var i=0;i<data.length;++i){
+				  						s+="<li class='mui-table-view-cell'><a class='mui-navigate-right'><div class='box-c-a-r'>";
+				  						s+="<h4>"+data[i].user_name+"</h4>";
+				  						s+="<p style='font-size: 15px;'>"+data[i].pingjia_text+"</p>";
+				  						s+="</div><p>"+data[i].time+"</p></a></li>";
+				  					}
+			  					}
+			  					document.getElementById("pingjia").innerHTML = s;
+			  				},
+			  				error:function(){
+								plus.nativeUI.toast("请检查您的网络");
+			  				}
+			  			})
+            		}
+            		
             		//医生简介详情
             		document.getElementById("doc_introduce").addEventListener('tap',function(){
             			mui.openWindow({
@@ -79,47 +98,81 @@
 							}
 						});
             		});
+            		
             		//咨询按钮监听
             		var zixun = document.getElementById("zixun");
             		zixun.addEventListener('tap',function(){
-            			mui.openWindow({
-							url: 'zixun.html', 
-							id: 'zixun',
-							extras:{
-							    doc_phone:doc_phone
-							},
-							show: {
-								aniShow: 'pop-in'
-							},
-							styles: {
-								popGesture: 'hide'
-							},
-							waiting: {
-								autoShow: true
-							}
-						});
+            			if(islogin()){
+            				mui.openWindow({
+								url: 'zixun.html', 
+								id: 'zixun',
+								extras:{
+								    doc_phone:doc_phone
+								},
+								show: {
+									aniShow: 'pop-in'
+								},
+								styles: {
+									popGesture: 'hide'
+								},
+								waiting: {
+									autoShow: true
+								}
+							});
+            			}else{
+            				mui.openWindow({
+								url: '/login/login.html',
+								id: 'login',
+								preload: true,
+								show: {
+									aniShow: 'pop-in'
+								},
+								waiting: {
+									autoShow: false
+								}
+							});
+							plus.nativeUI.toast("请先登录");
+            			}
             		});
             		
             		//关注按钮监听
             		var attention = document.getElementById("attention");
             		attention.addEventListener('tap',function(){
-            			mui.ajax('http://'+serverName+'/health/management/Application/index.php/Connector/User/attention_doc',{
-			  				data:{
-								doc_phone:doc_phone,
-								user_phone:user_phone
-			  				},
-			  				dataType:'json',
-			  				type:'POST',
-			  				timeout:10000,
-			  				success:function(data){
-			  					//{"reslut":1}表示成功
-			  					plus.nativeUI.toast(data.data);
-			  					
-			  				},
-			  				error:function(){
-								plus.nativeUI.toast("请检查您的网络");
-			  				}
-			  			})
+            			var attention_html=document.getElementById("docInfo").getElementsByTagName('p')[2];
+            			if(islogin()){
+            				mui.ajax('http://'+serverName+'/health/management/Application/index.php/Connector/User/attention_doc',{
+				  				data:{
+									doc_phone:doc_phone,
+									user_phone:user_phone
+				  				},
+				  				dataType:'json',
+				  				type:'POST',
+				  				timeout:10000,
+				  				success:function(data){
+				  					//{"reslut":1}表示成功
+				  					plus.nativeUI.toast(data.data);
+				  					var newnum = parseInt(attention_html.innerHTML.substring(4)) + 1
+				  					attention_html.innerHTML = "关注量：" + newnum;
+				  				},
+				  				error:function(){
+									plus.nativeUI.toast("请检查您的网络");
+				  				}
+				  			})
+            			}else{
+            				mui.openWindow({
+								url: '/login/login.html',
+								id: 'login',
+								preload: true,
+								show: {
+									aniShow: 'pop-in'
+								},
+								waiting: {
+									autoShow: false
+								}
+							});
+							plus.nativeUI.toast("请先登录");
+            			}
+            			
             		});
 				});
          }   	
@@ -139,23 +192,24 @@
 <div class="mui-content">
 	<ul id="docInfo" class="mui-table-view mui-table-view">			
 	</ul>
-	<div id="doc_introduce" class="box-c ">
+	
+	<div  class="box-c ">
 		<p class="box-c-p ">- 医生简介 -</p>	
-		<!--<ul class="mui-table-view jianjie">
+		<ul class="mui-table-view jianjie">
 			<li class="mui-table-view-cell">
 				<a class="mui-navigate">
 					<div id="doc_introduce" class="box-c-a-r" >
-						<p style="font-size: 15px;text-align: center;">王哲医生sdaflksajdflk给我家老人看病态度非常好，医德高尚。</p>
+						<!--<p style="font-size: 15px;text-align: center;"></p>-->
 					</div>
 				</a>
 			</li>
-		</ul>						-->
+		</ul>						
 	</div>
 	
 	<div class="box-c ">
-		<p class="box-c-p ">- 患者评价(1) -</p>	
-		<ul class="mui-table-view jianjie">
-			<li class="mui-table-view-cell">
+		<p class="box-c-p ">- 患者评价 -</p>	
+		<ul id="pingjia" class="mui-table-view jianjie">
+			<!--<li class="mui-table-view-cell">
 				<a class="mui-navigate-right">
 					<div class="box-c-a-r" >
 						<h4>冠心病做支架手术</h4>
@@ -164,11 +218,11 @@
 					</div>
 					<p >2014.09</p>
 				</a>
-			</li>
+			</li>-->
 		</ul>						
 	</div>
 	
-		<div class="box-c">
+		<!--<div class="box-c">
 		<p class="box-c-p">- 问诊记录 -</p>
 			<div id="demo" style="overflow:hidden; position:relative; height:180px;width:100%;">
 				<div id="demo1">
@@ -204,7 +258,7 @@
 					</div>
 				</div>	
 				<div id="demo2"></div>
-			</div>	
+			</div>	-->
 			
 	</div>
 

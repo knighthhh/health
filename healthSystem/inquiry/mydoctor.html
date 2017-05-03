@@ -42,6 +42,7 @@
 //							s+="<span class='iconfont icon-dianzan i-color'></span><span class='icon-title'>"+data[i].doc_hot+"</span>";
 							s+="&nbsp&nbsp&nbsp<span class='iconfont icon-guanzhu1 i-color'></span><span class='icon-title'> "+data[i].doc_attention+"</span>";
 							s+="<span><button id='"+data[i].doc_phone+"' type='button' class='mui-btn mui-btn-success mui-btn-outlined mui-pull-right consult_button'>去咨询</button></span>";
+							s+="<span><button id='"+data[i].doc_phone+"' type='button' class='mui-btn mui-btn-yellow mui-btn-outlined mui-pull-right consult_button'>评价</button></span>";
 						} 
 						var mydoclist =document.getElementById("mydoclist");
 						mydoclist.innerHTML = s;
@@ -73,7 +74,7 @@
 //							}
 //						});
 //         	});
-    		mui('#mydoclist').on('tap', '.mui-btn', function() {
+    		mui('#mydoclist').on('tap', '.mui-btn-success', function() {
 				var doc_phone = this.getAttribute('id');
 				mui.openWindow({
 					url: '/im/im-chat.html', 
@@ -92,6 +93,26 @@
 					}
 				});
 			}); 
+			//评价按钮监听
+			mui('#mydoclist').on('tap', '.mui-btn-yellow', function() {
+				var doc_phone = this.getAttribute('id');
+				mui.openWindow({
+					url: 'access.html', 
+					id: 'access',
+					extras:{
+					    doc_phone:doc_phone
+					},
+					show: {
+						aniShow: 'pop-in'
+					},
+					styles: {
+						popGesture: 'hide'
+					},
+					waiting: {
+						autoShow: true
+					}
+				});
+			});
     	})
     </script> 
 </head>

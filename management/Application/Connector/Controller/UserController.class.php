@@ -111,6 +111,7 @@ class UserController extends Controller
                 $res['im_token']   = $mess['im_token'];
                 //$res['user_name']=$mess['user_name'];
 
+                $token['user_cid']   = $_POST['user_cid'];
                 $token['user_token'] = $res['user_token'];
                 $token['token_time'] = date('Y-m-d H:i:s');
                 $token['login_time'] = date('Y-m-d H:i:s');
@@ -561,6 +562,65 @@ class UserController extends Controller
     	}
     	echo json_encode($res);
     }
+	
+	//提交评价
+	public function set_pingjia(){
+		$data['user_phone'] = I('post.user_phone');
+		$data['doc_phone'] = I('post.doc_phone');
+		$data['pingjia_text'] = I('post.pingjia_text');
+		$data['time']=date('Y-m-d H-i-s');
+		$mess=M('pingjia')
+			   ->where(array(
+		            'user_phone' => array('eq', $data['user_phone']),
+		            'doc_phone' => array('eq', $data['doc_phone'])
+		         ))
+		       ->find();
+		//评价过，覆盖之前的
+		if($mess){
+			$jieguo = M('pingjia')
+					->where(array(
+				            'user_phone' => array('eq', $data['user_phone']),
+				            'doc_phone' => array('eq', $data['doc_phone'])
+				         ))
+				     ->save($data);
+		}else{
+			//没有评价过，添加新纪录
+			$jieguo = M('pingjia')->add($data);
+		}
+		
+		if($jieguo){
+			$res['result']=1;
+			$res['data']='评价成功';
+		}else{
+			$res['result']=0;
+			$res['data']='请检查您的网络';
+		}
+		echo json_encode($res);
+		
+	}
+	
+	//获取评价
+	public function get_pingjia(){
+		$data['doc_phone'] = I('post.doc_phone');
+		$res = M('pingjia')
+				->field("a.*,b.user_name")
+		        ->alias('a')
+				->join('__USER_INFO__ b on b.user_phone=a.user_phone','LEFT')
+				->where(array('doc_phone' => array('eq', $data['doc_phone'])))
+				->select();
+		//对名字处理
+		for($i=0;$i<count($res);++$i){
+			$res[$i]['user_name']=mb_substr($res[$i]['user_name'], 0,1,'utf-8').'**';
+		}
+		if($res){
+		}else{
+			$res['result']=0;
+		}
+		echo json_encode($res);
+	}
+	
+	//获取问诊记录
+	
     
 }
 
