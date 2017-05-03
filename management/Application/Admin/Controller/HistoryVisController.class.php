@@ -5,7 +5,7 @@ use Think\Controller;
 /*
 *  历史就诊记录管理
 */
-class HistoryVisController extends Controller
+class HistoryVisController extends BaseController
 {
 	public function listHis()
 	{

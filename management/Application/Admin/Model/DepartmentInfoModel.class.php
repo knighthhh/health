@@ -68,7 +68,12 @@ class DepartmentInfoModel extends Model
     }
 
     protected function _before_delete($option){
-       
+       $dep_id = $option['where']['dep_id'];
+       $model = D('illness');
+       $model->where(array(
+        'two_depa_id' => array('eq',$dep_id)
+        ))->delete();
+
     }
 
     /*医院科室管理*/

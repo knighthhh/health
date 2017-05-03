@@ -48,9 +48,9 @@
 			mui.plusReady(function () {
 				//获得当前医院ID
 				var self = plus.webview.currentWebview();
-				var hosID = self.hos_id;
+				var hos_id = self.hos_id;
 				mui.get('http://'+serverName+'/health/management/Application/index.php/Connector/hos/getHosDetail',{
-						hos_id:hosID
+						hos_id:hos_id
 				},function(data){
 						document.getElementById("title").innerHTML = data.hos_name;
 						document.getElementById("text").innerHTML = data.hos_introduce;

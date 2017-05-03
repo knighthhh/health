@@ -5,7 +5,7 @@ use Think\Controller;
 /*
 *  医院信息管理
 */
-class HospitalController extends Controller
+class HospitalController extends BaseController
 {
     public function listHos()
     {

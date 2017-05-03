@@ -5,7 +5,7 @@ use Think\Controller;
 /*
 *  医生信息管理
 */
-class DoctorController extends Controller
+class DoctorController extends BaseController
 {
 	public function listDoc()
 	{

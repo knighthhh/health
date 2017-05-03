@@ -4,7 +4,7 @@ use Think\Controller;
 /*
 *  疾病管理
 */
-class IllnessController extends Controller
+class IllnessController extends BaseController
 {
 	public function listSick(){
 		$model=D('illness');

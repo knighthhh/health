@@ -7,6 +7,8 @@
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 		<link rel="stylesheet" type="text/css" href="../css/mui.min.css"/>
     	<link rel="stylesheet" href="../css/iconfont_mine.css" />
+
+    	
 		<style>		
 			.mui-table-view {
 				margin-top: 20px;
@@ -40,6 +42,7 @@
 		});
 	</script>
 	<script type="text/javascript">
+		
 		mui.plusReady(function() {
 			var account = document.getElementById('account');
 			var recharge = document.getElementById('recharge');
@@ -58,10 +61,9 @@
 					waiting: {
 						autoShow: false
 					}
-				});
-				
+				}); 
 			},false);
-			recharge.addEventListener('tap',function(event){
+			recharge.addEventListener ('tap',function(event){
 				mui.openWindow({
 					url: 'recharge.html',
 					id: 'recharge',

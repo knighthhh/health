@@ -5,7 +5,7 @@ use Think\Controller;
 /*
 *  科室管理
 */
-class DepartmentController extends Controller
+class DepartmentController extends BaseController
 {
 
 

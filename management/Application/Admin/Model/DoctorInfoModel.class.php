@@ -87,10 +87,11 @@ class DoctorInfoModel extends Model
         $data['doc_time'] = date('Y-m-d H:i:s');
     }
 
-    protected function _before_delete($option){
+    public function _before_delete($option){
         $doc_id = $option['where']['doc_id'];
         //删除原来硬盘上的图片
         $oldPath = $this->field("doc_img")->find($doc_id);
+        //dump($oldPath);die;
         delImg($oldPath);
 
         // //删除该医生的登录账号密码
