@@ -173,6 +173,7 @@
 							var demo1 = document.getElementById("demo1");
 							var item2= '';
 							for(i=0;i<data.length;i++){
+								//alert(data[i].hos_name);
 								item2 = item2+'<div doc-id='+data[i].doc_id+' class="box-c-a"><div class="box-c-a-l"><img style="width:55px;height:55px;border-radius:100px;margin-left:5px;margin-top:6px" src="'+data[i].doc_img+'" /></div><div class="box-c-a-r"><h4>'+data[i].doc_name+'  '+data[i].hos_name+'</h4><p style="font-size: 13px;">擅长：'+data[i].doc_especial+
 								'</p><span class="mui-icon iconfont icon-jinqian1" style="font-size: 13px;color: #666;"></span><span style="font-size: 13px;color:#05B19F;">'+data[i].doc_fee+
 								'/次</span><span class="mui-icon iconfont icon-pinglun2" style="font-size: 13px;color: #666;"></span><span style="font-size: 13px;color:#05B19F;">'+data[i].doc_rece+'</span><span class="mui-icon iconfont icon-dianzan1" style="font-size: 13px;color: #666;"></span><span style="font-size: 13px;color:#05B19F;">'+data[i].doc_attention+

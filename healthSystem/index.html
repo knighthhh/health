@@ -149,6 +149,26 @@
 				    activeTab = targetTab;
 				});
 				
+				//我的  没登录要返回登录
+				var mine = document.getElementById("mine");
+				mine.addEventListener('tap',function(){
+					if(islogin()){
+						
+					}else{
+						mui.openWindow({
+							url: '/login/login.html',
+							id: 'login',
+							preload: true,
+							show: {
+								aniShow: 'pop-in'
+							},
+							waiting: {
+								autoShow: false
+							}
+						});
+						plus.nativeUI.toast("请先登录");
+					}
+				})
 				
 			
 			});

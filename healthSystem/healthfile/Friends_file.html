@@ -44,7 +44,7 @@
 						        </a>
 							</li>
 					    </ul>
-				<div id="friendfile_add" class="submit" id="add_outline">
+				<div id="friendfile_add" class="submit">
 					<span class="mui-btn mui-btn-success ">
 							添加亲友档案
 					</span>
@@ -60,46 +60,60 @@
 	    	mui.init();
 	    		mui.plusReady(function() {
 	    			if(islogin()){
-	    			var user_phone = plus.storage.getItem('user_phone');
-	    			mui.get('http://' + serverName + '/health/management/Application/index.php/Connector/User/getRelaData',{
-	    					user_phone:user_phone
-	    				},function(data){
-	    					var relative = document.getElementById("relative");
-	    					var r = '';
-	    					for(var i=0;i<data.length;i++){
-	    						r = r + '<li relaID="'+data[i].relative_id+'" class="mui-table-view-cell mui-media">';
-						        r = r + '<a class="mui-navigate-right"><img class="mui-media-object mui-pull-left" src="../img/inquiry.jpg">';
-						        r = r + '<div class="mui-media-body"><p>'+data[i].relative_name+'</p><p>与本人关系:<span>'+data[i].relative_relation+'</span></p></div></a></li>';
-	    					}
-	    					relative.innerHTML = r;
-	    				},'json'
-	    			);
-					//var friendfile_detail= document.getElementById('relative');	
-					var friendfile_add= document.getElementById('friendfile_add');	
-					mui('#relative').on('tap','li',function(e){
-						var relative_id = this.getAttribute('relaID');
-						mui.openWindow({
-							url: 'Friend_file_detail.html',
-							id: 'Friend_file_detail',
-							extras:{
-								relative_id:relative_id
-							},
-							show: {
-								aniShow: 'pop-in'
-							},
-							waiting: {
-								autoShow: false
-							}
+		    			var user_phone = plus.storage.getItem('user_phone');
+		    			mui.get('http://' + serverName + '/health/management/Application/index.php/Connector/User/getRelaData',{
+		    					user_phone:user_phone
+		    				},function(data){
+		    					var relative = document.getElementById("relative");
+		    					var r = '';
+		    					for(var i=0;i<data.length;i++){
+		    						r = r + '<li relaID="'+data[i].relative_id+'" class="mui-table-view-cell mui-media">';
+							        r = r + '<a class="mui-navigate-right"><img class="mui-media-object mui-pull-left" src="../img/inquiry.jpg">';
+							        r = r + '<div class="mui-media-body"><p>'+data[i].relative_name+'</p><p>与本人关系:<span>'+data[i].relative_relation+'</span></p></div></a></li>';
+		    					}
+		    					relative.innerHTML = r;
+		    				},'json'
+		    			);
+						//var friendfile_detail= document.getElementById('relative');	
+						var friendfile_add= document.getElementById('friendfile_add');	
+						mui('#relative').on('tap','li',function(e){
+							var relative_id = this.getAttribute('relaID');
+							mui.openWindow({
+								url: 'Friend_file_detail.html',
+								id: 'Friend_file_detail',
+								extras:{
+									relative_id:relative_id
+								},
+								show: {
+									aniShow: 'pop-in'
+								},
+								waiting: {
+									autoShow: false
+								}
+							});
 						});
-					});
 					
-					friendfile_add.addEventListener('tap',function(event){
+						friendfile_add.addEventListener('tap',function(event){
+							console.log("asas");
+							mui.openWindow({
+								url: 'Friend_file_add.html',
+								id: 'Friend_file_add',
+								extras:{
+									user_phone:user_phone
+								},
+								show: {
+									aniShow: 'pop-in'
+								},
+								waiting: {
+									autoShow: false
+								}
+							});
+						},false);
+					}else{
 						mui.openWindow({
-							url: 'Friend_file_add.html',
-							id: 'Friend_file_add',
-							extras:{
-								user_phone:user_phone
-							},
+							url: '/login/login.html',
+							id: 'login',
+							preload: true,
 							show: {
 								aniShow: 'pop-in'
 							},
@@ -107,7 +121,7 @@
 								autoShow: false
 							}
 						});
-					},false);
+						plus.nativeUI.toast("请先登录");
 					}
 				});
 

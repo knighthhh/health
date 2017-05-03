@@ -6,8 +6,7 @@ define("APP_DEBUG",true);
 
 
 
-//define("SITE_URL", "http://192.168.43.193:88");
-define("SITE_URL", "http://10.77.117.237:88");
+define("SITE_URL", "http://10.77.117.199:80");
 
 
 
