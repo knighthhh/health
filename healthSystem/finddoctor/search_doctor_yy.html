@@ -27,6 +27,7 @@
 			var depID = self.depID;
 			//从疾病详情页面跳转过来
 			if(depID){
+				console.log("asdsd");
 				mui.get('http://' + serverName + '/health/management/Application/index.php/Connector/Hos/getDepHos',{
 						depID:depID
 				},function(data){
@@ -49,10 +50,9 @@
 					var lat = codns.latitude;//获取到当前位置的纬度；
 					var longt = codns.longitude;//获取到当前位置的经度
 					var address = position.address;
-//					console.log(JSON.stringify(address));
-					document.getElementById("showUserPicker").innerText = address.province + address.city;
+					document.getElementById("showUserPicker").innerText = address.province +'　'+address.city;
 					//从数据库取出医院数据
-					plus.nativeUI.showWaiting();
+					
 					mui.get('http://' + serverName + '/health/management/Application/index.php/Connector/Hos/getNearbyHos',{
 							lat:lat,
 							longt:longt
@@ -127,6 +127,7 @@
 						})(mui, document);
 				}
 				//获取位置信息
+				plus.nativeUI.showWaiting();
 				plus.geolocation.getCurrentPosition( geoInf, function ( e ) {
 					plus.nativeUI.alert( "获取位置信息失败："+e.message );
 				}, {geocode:true} );
