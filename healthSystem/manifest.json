@@ -1080,7 +1080,8 @@
 					"css/health_file.css",
 					"css/search_info.css",
 					"css/iconfont_money.css",
-					"css/iconfont_se.css"
+					"css/iconfont_se.css",
+					"fonts/iconfont_se.ttf"
 				],
 				"refer": [
 					"finddoctor/docHP.html"

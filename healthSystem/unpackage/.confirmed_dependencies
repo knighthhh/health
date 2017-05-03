@@ -367,7 +367,11 @@
 			"css/mui.min.css",
 			"css/health_file.css",
 			"css/iconfont_se.css",
-			"css/search_info.css"
+			"css/search_info.css",
+			"fonts/iconfont_money.ttf",
+			"fonts/mui.ttf",
+			"css/iconfont_money.css",
+			"fonts/iconfont_se.ttf"
 		],
 		"refer": [
 			"finddoctor/docHP.html"
@@ -475,7 +479,11 @@
 			"img/hospital.png",
 			"css/iconfont_se.css",
 			"css/search_info.css",
-			"img/doctor.jpeg"
+			"img/doctor.jpeg",
+			"fonts/iconfont_money.ttf",
+			"img/finddoctor.jpg",
+			"css/iconfont_money.css",
+			"fonts/iconfont_se.ttf"
 		]
 	},
 	"healthfile/outline_edit.html": {
