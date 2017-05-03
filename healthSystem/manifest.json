@@ -308,7 +308,8 @@
 					"js/common.js",
 					null,
 					"img/hos.jpg",
-					"img/jkzx.jpg"
+					"img/jkzx.jpg",
+					"js/immersed.js"
 				],
 				"refer": [
 					"main/hosHP.html",
@@ -546,7 +547,8 @@
 					"fonts/mui.ttf",
 					"css/mui.min.css",
 					"img/hospital.png",
-					"js/common.js"
+					"js/common.js",
+					"js/immersed.js"
 				],
 				"refer": [
 					"finddoctor/hosHP.html"
@@ -677,7 +679,10 @@
 					"js/common.js",
 					"css/preImage.css",
 					"js/mui.zoom.js",
-					"js/mui.previewimage.js"
+					"js/mui.previewimage.js",
+					"fonts/iconfont_money.ttf",
+					"fonts/iconfont_foot.ttf",
+					"fonts/iconfont.ttf"
 				],
 				"refer": [
 					"im/im-chat.html",
@@ -812,7 +817,8 @@
 					"css/heathfile.css",
 					"css/mui.calendar.css",
 					"js/mui.picker.min.js",
-					"css/iconfont_account.css"
+					"css/iconfont_account.css",
+					"js/common.js"
 				],
 				"refer": [
 					"healthfile/write_diary.html"
@@ -942,7 +948,9 @@
 					"css/heathfile.css",
 					"js/common.js",
 					"img/1.jpg",
-					"fonts/mui.ttf"
+					"fonts/mui.ttf",
+					"js/mui.zoom.js",
+					"js/mui.previewimage.js"
 				],
 				"refer": [
 					"healthfile/outline_edit.html",
@@ -1279,7 +1287,8 @@
 					"css/mui.picker.min.css",
 					"css/iconfont_se.css",
 					"css/search_info.css",
-					"fonts/iconfont_se.ttf"
+					"fonts/iconfont_se.ttf",
+					"fonts/mui.ttf"
 				],
 				"refer": [
 					"finddoctor/findhos_name.html"

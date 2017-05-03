@@ -8,7 +8,11 @@ class DocController extends Controller{
 	public function getHotDoc(){
     	$model = D('Admin/doctor_info');
         $ic = C('IMAGE_CONFIG');
-    	$data = $model -> getHotDoc();
+    	//$data = $model -> getHotDoc();
+    	 /*排序*/
+        $orderby = "doc_attention";
+        $orderway = "desc";
+    	$data = $model->order("$orderby $orderway")->limit(8)->select();
         for ($i=0; $i <count($data) ; $i++) { 
             $data[$i]['doc_img'] = $ic['viewPath'].$data[$i]['doc_img'];
         }
