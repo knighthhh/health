@@ -16,6 +16,22 @@ class FeedbackController extends BaseController
 		$this->display();
 	}
 
+	public function listAnalyze()
+	{
+		$userModel = D('user_info');
+		$user = $userModel->count();
+		$docModel = D('doctor_info');
+		$doc = $docModel->count();
+
+		//$info = $model->search();
+		//dump($info);die;
+		$this->assign(array(
+			'doc' => $doc,
+			'user' => $user
+			));
+		$this->display();
+	}
+
 	public function add()
 	{
 		$model = D('feedback');

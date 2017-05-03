@@ -40,8 +40,8 @@
   <ul> 
     <li><a href="/health/management/Application/index.php/Admin/Knowledge/listKnow" target="right"><span class="icon-caret-right"></span>健康知识</a></li>
     <!-- <li><a href="/health/management/Application/index.php/Admin/Knowledge/listKnow" target="right"><span class="icon-caret-right"></span>新闻管理</a></li>
-    <li><a href="/health/management/Application/index.php/Admin/Slider/listSlider" target="right"><span class="icon-caret-right"></span>首页轮播图</a></li>
-    <li><a href="/health/management/Application/index.php/Admin/Slider/listSlider" target="right"><span class="icon-caret-right"></span>统计分析</a></li>-->
+    <li><a href="/health/management/Application/index.php/Admin/Slider/listSlider" target="right"><span class="icon-caret-right"></span>首页轮播图</a></li>-->
+    <li><a href="/health/management/Application/index.php/Admin/feedback/listAnalyze" target="right"><span class="icon-caret-right"></span>统计分析</a></li>
     <li><a href="/health/management/Application/index.php/Admin/feedback/listFeedb" target="right"><span class="icon-caret-right"></span>意见反馈</a></li>
   </ul>
 </div>
