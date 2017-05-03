@@ -12,7 +12,8 @@
 	</head>
 
 	<body>
-		<script src="../js/mui.min.js"></script>
+	<script src="../js/mui.min.js"></script>
+	<script src="../js/immersed.js" type="text/javascript" charset="utf-8"></script>
 	<script src="../js/souye.js" ></script>
 	<script src="../js/common.js"></script>
 	<script type="text/javascript">
@@ -36,14 +37,19 @@
 				 	var find = document.getElementById("box-b-a");
 					var finddoctor = document.getElementById('finddoctor');
 					var findhos = document.getElementById('findhos');
-					
-					
+					function geoInf( position ) {
+						var address = position.address;
+						var city = address.city.substring(0,address.city.length-1);
+						document.getElementById("city").innerText = city;
+					}
+					plus.geolocation.getCurrentPosition( geoInf, function ( e ) {
+						plus.nativeUI.alert( "获取位置信息失败："+e.message );
+					}, {geocode:true} );
 					//找医生点击事件
 					find.addEventListener('tap',function(){
 						mui.openWindow({
 							url: '../finddoctor/search_doctor.html',
 							id: 'findoctor',
-							preload: true,
 							show: {
 								aniShow: 'pop-in'
 							},
@@ -58,7 +64,6 @@
 						mui.openWindow({
 							url: '../finddoctor/search_doctor.html',
 							id: 'findoctor',
-							preload: true,
 							show: {
 								aniShow: 'pop-in'
 							},
@@ -69,9 +74,8 @@
 					},false);
 					findhos.addEventListener('tap',function(event){
 						mui.openWindow({
-							url: '../finddoctor/findhos.html',
+							url: '../finddoctor/search_hos.html',
 							id: 'findhos',
-							preload: true,
 							show: {
 								aniShow: 'pop-in'
 							},
@@ -124,8 +128,6 @@
 					   	}
 					   	}
 					   	var MyMar2=setInterval(Marquee2,speed2)
-//					   	demo3.onmouseover=function() {clearInterval(MyMar2)}
-//					   	demo3.onmouseout=function() {MyMar2=setInterval(Marquee2,speed2)}
 						//点击热门医院跳转至详情
 							var detailPage = null;
 							//添加列表项的点击事件
@@ -248,14 +250,15 @@ function searchwin(){
 	</script>
 		<!-- 头部  包含搜索-->
 	<header id="header" class="mui-bar mui-bar-nav public-color">
-	    <a class=" mui-icon mui-icon-bars mui-pull-left"></a>
-	    <a class=" mui-icon mui-icon-chat mui-pull-right "style="color: #FFFFFF;"></a>
+	    <a id="city" style="margin-top: 5px;font-size: 15px;" class=" mui-icon mui-pull-left city">定位中</a>
+	    <a class=" mui-icon mui-icon-chat mui-pull-right "style="color: #FFFFFF;margin-left: 30px;"></a>
 	    <!--删掉了mui-action-back-->
 	    <div id="search" class="search">
 	    	<!--<div class="mui-input-row mui-search">
 	    		<input class=" mui-input-clear" type="search" name="search" id="search" onclick="searchwin()" placeholder="搜疾病，医生，医院，科室" />
 	    	</div>-->
 	    	<img src="../img/search1.png" style="display: inherit; margin: auto; width: 100%;height: 42px;" onclick="searchwin()" />
+
 	    </div>   
 	</header>
 	<!-- 头部 -->
