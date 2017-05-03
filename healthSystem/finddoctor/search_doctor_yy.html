@@ -14,6 +14,7 @@
 	</head>
 	<script type="text/javascript" src="../js/mui.min.js"></script>
 	<script src="../js/common.js"></script>
+	<script src="../js/immersed.js" type="text/javascript" charset="utf-8"></script>
 	<script type="text/javascript">
 		mui.init({
 			preloadPages: [{
@@ -24,6 +25,7 @@
 		mui.plusReady(function() {
 			var self = plus.webview.currentWebview();
 			var depID = self.depID;
+			//从疾病详情页面跳转过来
 			if(depID){
 				mui.get('http://' + serverName + '/health/management/Application/index.php/Connector/Hos/getDepHos',{
 						depID:depID
@@ -42,19 +44,92 @@
 					},'json'
 				);
 			}else{
-				mui.getJSON('http://' + serverName + '/health/management/Application/index.php/Connector/Hos/getHos', {}, function(data) {
-					//获得服务器响应
-					var listHos = document.getElementById("listHos");
-					var item = '';
-					for(i = 0; i < data.length; i++) {
-						//console.log(data[i].hos_navigate_img);
-						item = item + '<li hos-id="' + data[i].hos_id + '" class="mui-table-view-cell mui-media" id="hosHP"><a><div class="mui-row "><div class="mui-pull-left mui-col-xs-3 " ><img style="width:60px;height:60px;" src="' + data[i].hos_navigate_img +
-							'" style="width: 100%" /></div><div class="mui-col-xs-9"><h4 class="hp_title">' + data[i].hos_name + '</h4><p class="mui-ellipsis"><span class="iconfont icon-iconaddress i-color"></span><span class="icon-title">' + data[i].hos_address +
-							'</span></p><p><span class="iconfont icon-dengji i-color"></span><span class="icon-title">' + data[i].hos_level +
-							' </span><span class="iconfont icon-guanzhu1 i-color"></span> <span class="icon-title">' + data[i].hos_hot + '</span></p></div></div></a></li>';
-					}
-					listHos.innerHTML = item;
-				});
+				function geoInf( position ) {
+					var codns = position.coords;//获取地理坐标信息；
+					var lat = codns.latitude;//获取到当前位置的纬度；
+					var longt = codns.longitude;//获取到当前位置的经度
+					var address = position.address;
+//					console.log(JSON.stringify(address));
+					document.getElementById("showUserPicker").innerText = address.province + address.city;
+					//从数据库取出医院数据
+					plus.nativeUI.showWaiting();
+					mui.get('http://' + serverName + '/health/management/Application/index.php/Connector/Hos/getNearbyHos',{
+							lat:lat,
+							longt:longt
+						},function(data){
+							//获得服务器响应
+							var listHos = document.getElementById("listHos");
+							var item = '';
+							for(i = 0; i < data.length; i++) {
+								//console.log(data[i].hos_navigate_img);
+								item = item + '<li hos-id="' + data[i].hos_id + '" class="mui-table-view-cell mui-media" id="hosHP"><a><div class="mui-row "><div class="mui-pull-left mui-col-xs-3 " ><img style="width:60px;height:60px;" src="' + data[i].hos_navigate_img +
+									'" style="width: 100%" /></div><div class="mui-col-xs-9"><h4 class="hp_title">' + data[i].hos_name + '</h4><p class="mui-ellipsis"><span class="iconfont icon-iconaddress i-color"></span><span class="icon-title">' + data[i].hos_address +
+									'</span></p><p><span class="iconfont icon-dengji i-color"></span><span class="icon-title">' + data[i].hos_level +
+									' </span><span class="iconfont icon-guanzhu1 i-color"></span> <span class="icon-title">' + data[i].hos_hot + '</span></p></div></div></a></li>';
+							}
+							listHos.innerHTML = item;
+							plus.nativeUI.closeWaiting();
+						},'json');
+						(function($, doc) {
+							$.init();
+							$.ready(function() {
+								//普通示例
+				
+								//-----------------------------------------
+								//					//级联示例
+								var cityPicker = new $.PopPicker({
+									layer: 2
+								});
+								cityPicker.setData(cityData);
+								var showCityPickerButton = doc.getElementById('showUserPicker');
+				
+								showCityPickerButton.addEventListener('tap', function(event) {
+									cityPicker.show(function(items) {
+										if(items[1].text=='全部'){
+											showCityPickerButton.innerText = items[1].text;
+										}else{
+											showCityPickerButton.innerText = items[0].text + " " + items[1].text;
+										}
+										//选择对应地区的医生 
+										mui.ajax('http://' + serverName + '/health/management/Application/index.php/Connector/Hos/hosDoc', {
+											data: {
+												province: items[0].text,
+												town: items[1].text
+											},
+											dataType: 'json',
+											type: 'post',
+											timeout: 10000,
+											success: function(data) {
+												if(data.result == 0) {
+													var s = "";
+													var listHos = document.getElementById("listHos");
+													listHos.innerHTML = s;
+												} else {
+													var s = "";
+													for(var i = 0; i < data.length; i++) {
+														s = s + '<li hos-id="' + data[i].hos_id + '" class="mui-table-view-cell mui-media" id="hosHP"><a><div class="mui-row "><div class="mui-pull-left mui-col-xs-3 " ><img style="width:60px;height:60px;" src="' + data[i].hos_navigate_img +
+															'" style="width: 100%" /></div><div class="mui-col-xs-9"><h4 class="hp_title">' + data[i].hos_name + '</h4><p class="mui-ellipsis"><span class="iconfont icon-iconaddress i-color"></span><span class="icon-title">' + data[i].hos_address +
+															'</span></p><p><span class="iconfont icon-dengji i-color"></span><span class="icon-title">' + data[i].hos_level +
+															' </span><span class="iconfont icon-guanzhu1 i-color"></span> <span class="icon-title">' + data[i].hos_hot + '</span></p></div></div></a></li>';
+													}
+													var listHos = document.getElementById("listHos");
+													listHos.innerHTML = s;
+												}
+				
+											},
+											error: function() {}
+										});
+										//返回 false 可以阻止选择框的关闭
+										//return false;
+									});
+								}, false);
+							});
+						})(mui, document);
+				}
+				//获取位置信息
+				plus.geolocation.getCurrentPosition( geoInf, function ( e ) {
+					plus.nativeUI.alert( "获取位置信息失败："+e.message );
+				}, {geocode:true} );
 			}
 			
 
@@ -100,61 +175,61 @@
 	<script src="../js/mui.picker.min.js"></script>
 	<script src="../js/city.data.js" type="text/javascript" charset="utf-8"></script>
 	<script>
-		(function($, doc) {
-			$.init();
-			$.ready(function() {
-				//普通示例
-
-				//-----------------------------------------
-				//					//级联示例
-				var cityPicker = new $.PopPicker({
-					layer: 2
-				});
-				cityPicker.setData(cityData);
-				var showCityPickerButton = doc.getElementById('showUserPicker');
-
-				showCityPickerButton.addEventListener('tap', function(event) {
-					cityPicker.show(function(items) {
-						if(items[1].text=='全部'){
-							showCityPickerButton.innerText = items[1].text;
-						}else{
-							showCityPickerButton.innerText = items[0].text + " " + items[1].text;
-						}
-						//选择对应地区的医生 
-						mui.ajax('http://' + serverName + '/health/management/Application/index.php/Connector/Hos/hosDoc', {
-							data: {
-								province: items[0].text,
-								town: items[1].text
-							},
-							dataType: 'json',
-							type: 'post',
-							timeout: 10000,
-							success: function(data) {
-								if(data.result == 0) {
-									var s = "";
-									var listHos = document.getElementById("listHos");
-									listHos.innerHTML = s;
-								} else {
-									var s = "";
-									for(var i = 0; i < data.length; i++) {
-										s = s + '<li hos-id="' + data[i].hos_id + '" class="mui-table-view-cell mui-media" id="hosHP"><a><div class="mui-row "><div class="mui-pull-left mui-col-xs-3 " ><img style="width:60px;height:60px;" src="' + data[i].hos_navigate_img +
-											'" style="width: 100%" /></div><div class="mui-col-xs-9"><h4 class="hp_title">' + data[i].hos_name + '</h4><p class="mui-ellipsis"><span class="iconfont icon-iconaddress i-color"></span><span class="icon-title">' + data[i].hos_address +
-											'</span></p><p><span class="iconfont icon-dengji i-color"></span><span class="icon-title">' + data[i].hos_level +
-											' </span><span class="iconfont icon-guanzhu1 i-color"></span> <span class="icon-title">' + data[i].hos_hot + '</span></p></div></div></a></li>';
-									}
-									var listHos = document.getElementById("listHos");
-									listHos.innerHTML = s;
-								}
-
-							},
-							error: function() {}
-						});
-						//返回 false 可以阻止选择框的关闭
-						//return false;
-					});
-				}, false);
-			});
-		})(mui, document);
+//		(function($, doc) {
+//			$.init();
+//			$.ready(function() {
+//				//普通示例
+//
+//				//-----------------------------------------
+//				//					//级联示例
+//				var cityPicker = new $.PopPicker({
+//					layer: 2
+//				});
+//				cityPicker.setData(cityData);
+//				var showCityPickerButton = doc.getElementById('showUserPicker');
+//
+//				showCityPickerButton.addEventListener('tap', function(event) {
+//					cityPicker.show(function(items) {
+//						if(items[1].text=='全部'){
+//							showCityPickerButton.innerText = items[1].text;
+//						}else{
+//							showCityPickerButton.innerText = items[0].text + " " + items[1].text;
+//						}
+//						//选择对应地区的医生 
+//						mui.ajax('http://' + serverName + '/health/management/Application/index.php/Connector/Hos/hosDoc', {
+//							data: {
+//								province: items[0].text,
+//								town: items[1].text
+//							},
+//							dataType: 'json',
+//							type: 'post',
+//							timeout: 10000,
+//							success: function(data) {
+//								if(data.result == 0) {
+//									var s = "";
+//									var listHos = document.getElementById("listHos");
+//									listHos.innerHTML = s;
+//								} else {
+//									var s = "";
+//									for(var i = 0; i < data.length; i++) {
+//										s = s + '<li hos-id="' + data[i].hos_id + '" class="mui-table-view-cell mui-media" id="hosHP"><a><div class="mui-row "><div class="mui-pull-left mui-col-xs-3 " ><img style="width:60px;height:60px;" src="' + data[i].hos_navigate_img +
+//											'" style="width: 100%" /></div><div class="mui-col-xs-9"><h4 class="hp_title">' + data[i].hos_name + '</h4><p class="mui-ellipsis"><span class="iconfont icon-iconaddress i-color"></span><span class="icon-title">' + data[i].hos_address +
+//											'</span></p><p><span class="iconfont icon-dengji i-color"></span><span class="icon-title">' + data[i].hos_level +
+//											' </span><span class="iconfont icon-guanzhu1 i-color"></span> <span class="icon-title">' + data[i].hos_hot + '</span></p></div></div></a></li>';
+//									}
+//									var listHos = document.getElementById("listHos");
+//									listHos.innerHTML = s;
+//								}
+//
+//							},
+//							error: function() {}
+//						});
+//						//返回 false 可以阻止选择框的关闭
+//						//return false;
+//					});
+//				}, false);
+//			});
+//		})(mui, document);
 	</script>
 
 </html>
