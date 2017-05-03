@@ -843,7 +843,8 @@
 			},
 			"mine/about.html": {
 				"resources": [
-					"img/doctor.jpeg"
+					"img/doctor.jpeg",
+					"css/mui.min.css"
 				],
 				"refer": [],
 				"priority": 0

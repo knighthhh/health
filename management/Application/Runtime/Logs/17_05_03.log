@@ -6800,3 +6800,375 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTrace [ RunTime:0.000068s ]
 INFO: [ app_end ] --END-- [ RunTime:0.000163s ]
 
+[ 2017-05-03T22:22:42+08:00 ] 10.77.117.199 /health/management/Application/index.php/Connector/User/login
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000627s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000078s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000075s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000182s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000105s ]
+SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.021278s ]
+SQL: SELECT * FROM `user_info` WHERE ( `user_phone` = '15768653949' ) AND ( `user_token` = 'c8549eaefc252ae58ec1b252795c21b9' ) LIMIT 1   [ RunTime:0.001133s ]
+SQL: UPDATE `user_info` SET `user_token`='ee95dc57e92c63cb2570772194e5b57f',`token_time`='2017-05-03 22:22:42',`login_time`='2017-05-03 22:22:42' WHERE ( `user_phone` = '15768653949' ) AND ( `user_token` = 'c8549eaefc252ae58ec1b252795c21b9' ) [ RunTime:0.042001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000066s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000160s ]
+
+[ 2017-05-03T22:22:43+08:00 ] 10.77.117.199 /health/management/Application/index.php/Connector/User/getKnowList
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000509s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000062s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000068s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000154s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000081s ]
+SQL: SHOW COLUMNS FROM `health_know` [ RunTime:0.005558s ]
+SQL: SELECT * FROM `health_know` ORDER BY know_see desc LIMIT 5   [ RunTime:0.001706s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000097s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000275s ]
+
+[ 2017-05-03T22:22:44+08:00 ] 10.77.117.199 /health/management/Application/index.php/Connector/Hos/getHotHos
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000695s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000076s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000124s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001342s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000093s ]
+SQL: SHOW COLUMNS FROM `hospital_info` [ RunTime:0.009303s ]
+SQL: SELECT * FROM `hospital_info` ORDER BY hos_attention desc LIMIT 4   [ RunTime:0.000838s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000060s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000147s ]
+
+[ 2017-05-03T22:22:45+08:00 ] 10.77.117.199 /health/management/Application/index.php/Connector/Doc/getHotDoc
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000681s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000056s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000068s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000155s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000069s ]
+NOTIC: [2048] Declaration of Admin\Model\DoctorInfoModel::_after_insert() should be compatible with that of Think\Model::_after_insert() E:\WWW\health\management\Application\Admin\Model\DoctorInfoModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `doctor_info` [ RunTime:0.010017s ]
+SQL: SELECT a.*,b.hos_name FROM doctor_info a LEFT JOIN hospital_info b on a.hos_id=b.hos_id ORDER BY doc_attention desc LIMIT 8   [ RunTime:0.003007s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000162s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000364s ]
+
+[ 2017-05-03T22:22:46+08:00 ] 10.77.117.199 /health/management/application/index.php/Connector/Doc/get_online_doc
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000502s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000049s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000065s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000153s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000189s ]
+SQL: SHOW COLUMNS FROM `doctor_info` [ RunTime:0.004504s ]
+SQL: SELECT * FROM `doctor_info`  [ RunTime:0.000766s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000058s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000146s ]
+
+[ 2017-05-03T22:22:47+08:00 ] 10.77.117.199 /health/management/Application/index.php/Connector/User/getuserInfo
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000706s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000078s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000111s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000257s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000078s ]
+SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.023629s ]
+SQL: SELECT * FROM `user_info` WHERE ( `user_phone` = '15768653949' ) LIMIT 1   [ RunTime:0.000740s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000083s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000202s ]
+
+[ 2017-05-03T22:24:02+08:00 ] 10.77.117.199 /health/management/Application/index.php/Connector/Hos/getNearbyHos?lat=23.034124&longt=114.416948
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000530s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000044s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000070s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000156s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000052s ]
+SQL: SHOW COLUMNS FROM `hospital_info` [ RunTime:0.009452s ]
+SQL: SELECT * FROM `hospital_info` WHERE (  (`hos_longitude` BETWEEN '114.31931121528' AND '114.51458478472' ) ) AND (  (`hos_latitude` BETWEEN '22.944271602779' AND '23.123976397221' ) )  [ RunTime:0.000712s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000084s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000198s ]
+
+[ 2017-05-03T22:24:08+08:00 ] 10.77.117.199 /health/management/Application/index.php/Connector/Hos/getHotHos
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000466s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000044s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000066s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000150s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000051s ]
+SQL: SHOW COLUMNS FROM `hospital_info` [ RunTime:0.004356s ]
+SQL: SELECT * FROM `hospital_info` ORDER BY hos_attention desc LIMIT 4   [ RunTime:0.000662s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000059s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000145s ]
+
+[ 2017-05-03T22:35:56+08:00 ] 10.77.117.199 /health/management/Application/index.php/Connector/Zixun/mydoclist
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000501s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000053s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000073s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000187s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000087s ]
+SQL: SHOW COLUMNS FROM `my_doc` [ RunTime:0.008368s ]
+NOTIC: [8] Use of undefined constant eq - assumed 'eq' E:\WWW\health\management\Application\Connector\Controller\ZixunController.class.php 第 91 行.
+SQL: SELECT a.*,b.* FROM my_doc a LEFT JOIN user_info b on a.user_phone=b.user_phone WHERE ( a.doc_phone = 'null' )  [ RunTime:0.002022s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000136s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000331s ]
+
+[ 2017-05-03T22:35:56+08:00 ] 10.77.117.199 /health/management/Application/index.php/Connector/Doc/getDocDetail?doc_id=null
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000458s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000048s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000068s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000154s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000063s ]
+NOTIC: [2048] Declaration of Admin\Model\DoctorInfoModel::_after_insert() should be compatible with that of Think\Model::_after_insert() E:\WWW\health\management\Application\Admin\Model\DoctorInfoModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `doctor_info` [ RunTime:0.010452s ]
+SQL: SELECT a.*,b.hos_name,c.dep_name FROM doctor_info a LEFT JOIN hospital_info b on a.hos_id=b.hos_id LEFT JOIN department_info c on a.depa_id=c.dep_id WHERE ( `doc_id` = 'null' ) LIMIT 1   [ RunTime:0.002237s ]
+NOTIC: [8] Undefined index: doc_img E:\WWW\health\management\Application\Connector\Controller\DocController.class.php 第 34 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000115s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000290s ]
+
+[ 2017-05-03T22:35:56+08:00 ] 10.77.117.199 /health/management/Application/index.php/Connector/Inquiry/getInquiry
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000767s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000063s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000072s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000173s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000060s ]
+SQL: SHOW COLUMNS FROM `inquiry` [ RunTime:0.004274s ]
+SQL: SELECT a.*,b.* FROM inquiry a LEFT JOIN user_info b on a.user_phone=b.user_phone ORDER BY id desc  [ RunTime:0.004540s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000055s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000140s ]
+
+[ 2017-05-03T22:35:56+08:00 ] 10.77.117.199 /health/management/Application/index.php/Connector/User/getKnowList
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000711s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000070s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000087s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000200s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000088s ]
+SQL: SHOW COLUMNS FROM `health_know` [ RunTime:0.003882s ]
+SQL: SELECT * FROM `health_know` ORDER BY know_see desc LIMIT 5   [ RunTime:0.000786s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000057s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000164s ]
+
+[ 2017-05-03T22:35:57+08:00 ] 10.77.117.199 /health/management/application/index.php/Connector/Doc/get_online_doc
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000472s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000047s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000063s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000148s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000051s ]
+SQL: SHOW COLUMNS FROM `doctor_info` [ RunTime:0.030990s ]
+SQL: SELECT * FROM `doctor_info`  [ RunTime:0.001815s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000118s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000320s ]
+
+[ 2017-05-03T22:35:57+08:00 ] 10.77.117.199 /health/management/Application/index.php/Connector/Hos/getHotHos
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000695s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000072s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000112s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000256s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000075s ]
+SQL: SHOW COLUMNS FROM `hospital_info` [ RunTime:0.028913s ]
+SQL: SELECT * FROM `hospital_info` ORDER BY hos_attention desc LIMIT 4   [ RunTime:0.000994s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000074s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000205s ]
+
+[ 2017-05-03T22:35:57+08:00 ] 10.77.117.199 /health/management/Application/index.php/Connector/Doc/getHotDoc
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000685s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000081s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000870s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001160s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000086s ]
+NOTIC: [2048] Declaration of Admin\Model\DoctorInfoModel::_after_insert() should be compatible with that of Think\Model::_after_insert() E:\WWW\health\management\Application\Admin\Model\DoctorInfoModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `doctor_info` [ RunTime:0.028351s ]
+SQL: SELECT a.*,b.hos_name FROM doctor_info a LEFT JOIN hospital_info b on a.hos_id=b.hos_id ORDER BY doc_attention desc LIMIT 8   [ RunTime:0.001499s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000121s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000311s ]
+
+[ 2017-05-03T22:36:10+08:00 ] 10.77.117.199 /health/management/Application/index.php/Connector/Doc/login
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.001078s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000092s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000143s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000324s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000107s ]
+SQL: SHOW COLUMNS FROM `doctor_info` [ RunTime:0.009355s ]
+SQL: SELECT * FROM `doctor_info` WHERE ( `doc_phone` = '15768651577' ) AND ( `doc_password` = 'e10adc3949ba59abbe56e057f20f883e' ) LIMIT 1   [ RunTime:0.001210s ]
+SQL: UPDATE `doctor_info` SET `doc_cid`='4bfb9fcaa51777c66b3e3bd5f008de99',`doc_token`='c2c4d4384b9863e38eb6dc28d3caa962',`im_token`='TGCr8U/aanMoKmVewgCoogw5f5aZvT5xw3JgzbRIqa+66NbwxcXwPdsGna/u5DsarmWzKc2/cx0kuqWCW/noviZI661vKPv0',`token_time`='2017-05-03 22:36:10' WHERE ( `doc_phone` = '15768651577' ) AND ( `doc_password` = 'e10adc3949ba59abbe56e057f20f883e' ) [ RunTime:0.036635s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000079s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000189s ]
+
+[ 2017-05-03T22:36:11+08:00 ] 10.77.117.199 /health/management/Application/index.php/Connector/Zixun/mydoclist
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000663s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000065s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000091s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000212s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000071s ]
+SQL: SHOW COLUMNS FROM `my_doc` [ RunTime:0.007721s ]
+NOTIC: [8] Use of undefined constant eq - assumed 'eq' E:\WWW\health\management\Application\Connector\Controller\ZixunController.class.php 第 91 行.
+SQL: SELECT a.*,b.* FROM my_doc a LEFT JOIN user_info b on a.user_phone=b.user_phone WHERE ( a.doc_phone = '15768651577' )  [ RunTime:0.002001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000140s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000321s ]
+
+[ 2017-05-03T22:36:13+08:00 ] 10.77.117.199 /health/management/Application/index.php/Connector/Doc/getDocDetail?doc_id=20
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000459s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000052s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000089s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000179s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000126s ]
+NOTIC: [2048] Declaration of Admin\Model\DoctorInfoModel::_after_insert() should be compatible with that of Think\Model::_after_insert() E:\WWW\health\management\Application\Admin\Model\DoctorInfoModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `doctor_info` [ RunTime:0.010042s ]
+SQL: SELECT a.*,b.hos_name,c.dep_name FROM doctor_info a LEFT JOIN hospital_info b on a.hos_id=b.hos_id LEFT JOIN department_info c on a.depa_id=c.dep_id WHERE ( `doc_id` = '20' ) LIMIT 1   [ RunTime:0.004732s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000261s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000555s ]
+
+[ 2017-05-03T22:36:14+08:00 ] 10.77.117.199 /health/management/Application/index.php/Connector/Doc/getDocDetail?doc_id=20
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000449s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000072s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000066s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000146s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000076s ]
+NOTIC: [2048] Declaration of Admin\Model\DoctorInfoModel::_after_insert() should be compatible with that of Think\Model::_after_insert() E:\WWW\health\management\Application\Admin\Model\DoctorInfoModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `doctor_info` [ RunTime:0.004446s ]
+SQL: SELECT a.*,b.hos_name,c.dep_name FROM doctor_info a LEFT JOIN hospital_info b on a.hos_id=b.hos_id LEFT JOIN department_info c on a.depa_id=c.dep_id WHERE ( `doc_id` = '20' ) LIMIT 1   [ RunTime:0.000767s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000054s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000138s ]
+
+[ 2017-05-03T22:37:21+08:00 ] 10.77.117.199 /health/management/Application/index.php/Connector/Sick/getSick
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000562s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000056s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000082s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000183s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000062s ]
+SQL: SHOW COLUMNS FROM `department_info` [ RunTime:0.005415s ]
+SQL: SHOW COLUMNS FROM `illness` [ RunTime:0.009707s ]
+SQL: SELECT * FROM `department_info` WHERE ( `parent_id` = 0 )  [ RunTime:0.000614s ]
+SQL: SELECT * FROM `department_info`  [ RunTime:0.000464s ]
+SQL: SELECT * FROM `department_info`  [ RunTime:0.000488s ]
+SQL: SELECT * FROM `department_info`  [ RunTime:0.000360s ]
+SQL: SELECT * FROM `department_info`  [ RunTime:0.000390s ]
+SQL: SELECT * FROM `department_info`  [ RunTime:0.000357s ]
+SQL: SELECT * FROM `illness` WHERE ( `two_depa_id` = '6' )  [ RunTime:0.000465s ]
+SQL: SELECT * FROM `illness` WHERE ( `two_depa_id` = '7' )  [ RunTime:0.000368s ]
+SQL: SELECT * FROM `illness` WHERE ( `two_depa_id` = '8' )  [ RunTime:0.000399s ]
+SQL: SELECT * FROM `illness` WHERE ( `two_depa_id` = '9' )  [ RunTime:0.000411s ]
+SQL: SELECT * FROM `illness` WHERE ( `two_depa_id` = '11' )  [ RunTime:0.000355s ]
+SQL: SELECT * FROM `illness` WHERE ( `two_depa_id` = '13' )  [ RunTime:0.000629s ]
+SQL: SELECT * FROM `illness` WHERE ( `two_depa_id` = '12' )  [ RunTime:0.000759s ]
+SQL: SELECT * FROM `illness` WHERE ( `two_depa_id` = '14' )  [ RunTime:0.000795s ]
+SQL: SELECT * FROM `illness` WHERE ( `two_depa_id` = '10' )  [ RunTime:0.000770s ]
+SQL: SELECT * FROM `illness` WHERE ( `two_depa_id` = '15' )  [ RunTime:0.000773s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000117s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000317s ]
+
+[ 2017-05-03T22:37:25+08:00 ] 10.77.117.199 /health/management/Application/index.php/Connector/Sick/getSickDetail?illnessID=1
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000405s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000052s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000065s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000143s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000052s ]
+SQL: SHOW COLUMNS FROM `illness` [ RunTime:0.008198s ]
+SQL: SELECT * FROM `illness` WHERE ( `illness_id` = 1 ) LIMIT 1   [ RunTime:0.000894s ]
+SQL: SHOW COLUMNS FROM `doctor_info` [ RunTime:0.009383s ]
+SQL: SELECT a.*,b.hos_name,c.dep_name FROM doctor_info a LEFT JOIN hospital_info b on a.hos_id=b.hos_id LEFT JOIN department_info c on a.depa_id=c.dep_id WHERE ( a.depa_id = '6' )  [ RunTime:0.001382s ]
+NOTIC: [8] Undefined offset: 2 E:\WWW\health\management\Application\Connector\Controller\SickController.class.php 第 58 行.
+NOTIC: [8] Undefined offset: 3 E:\WWW\health\management\Application\Connector\Controller\SickController.class.php 第 58 行.
+NOTIC: [8] Undefined offset: 4 E:\WWW\health\management\Application\Connector\Controller\SickController.class.php 第 58 行.
+SQL: SHOW COLUMNS FROM `hospital_info` [ RunTime:0.008354s ]
+SQL: SELECT a.hos_id,a.hos_name,a.hos_address,a.hos_level,a.hos_navigate_img FROM hospital_info a LEFT JOIN hos_dep b on a.hos_id = b.hos_id WHERE ( b.dep_id = '6' )  [ RunTime:0.001602s ]
+NOTIC: [8] Undefined offset: 5 E:\WWW\health\management\Application\Connector\Controller\SickController.class.php 第 73 行.
+SQL: SHOW COLUMNS FROM `health_know` [ RunTime:0.007693s ]
+SQL: SELECT * FROM `health_know`  [ RunTime:0.001658s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000189s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000531s ]
+
