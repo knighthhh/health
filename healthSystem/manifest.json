@@ -183,29 +183,29 @@
 				"ios": {
 					"iphone": {
 						"default": "", /*iPhone3启动图片选，分辨率：320x480*/
-						"retina35": "C:/Users/eric/Documents/Tencent Files/775340093/FileRecv/qidong.png",/*3.5英寸设备(iPhone4)启动图片，分辨率：640x960*/
-						"retina40": "C:/Users/eric/Desktop/qidong.png",/*4.0 英寸设备(iPhone5/iPhone5s)启动图片，分辨率：640x1136*/
+						"retina35": "C:/Users/knight/Desktop/qidong.png",/*3.5英寸设备(iPhone4)启动图片，分辨率：640x960*/
+						"retina40": "C:/Users/knight/Desktop/qidong.png",/*4.0 英寸设备(iPhone5/iPhone5s)启动图片，分辨率：640x1136*/
 						"retina47": "",/*4.7 英寸设备(iPhone6)启动图片，分辨率：750x1334*/
 						"retina55": "",/*5.5 英寸设备(iPhone6 Plus)启动图片，分辨率：1242x2208*/
 						"retina55l": ""
 					},
 					"ipad": {
 						"portrait": "", /*iPad竖屏启动图片，分辨率：768x1004*/
-						"portrait-retina": "C:/Users/eric/Desktop/qidong.png",/*iPad高分屏竖屏图片，分辨率：1536x2008*/
-						"landscape": "C:/Users/eric/Desktop/qidong.png", /*iPad横屏启动图片，分辨率：1024x748*/
-						"landscape-retina": "C:/Users/eric/Desktop/qidong.png", /*iPad高分屏横屏启动图片，分辨率：2048x1496*/
-						"portrait7": "C:/Users/eric/Desktop/qidong.png", /*iPad iOS7竖屏启动图片，分辨率：768x1024*/
-						"portrait-retina7": "C:/Users/eric/Desktop/qidong.png",/*iPad iOS7高分屏竖屏图片，分辨率：1536x2048*/
-						"landscape7": "C:/Users/eric/Desktop/qidong.png", /*iPad iOS7横屏启动图片，分辨率：1024x768*/
-						"landscape-retina7": "C:/Users/eric/Desktop/qidong.png"
+						"portrait-retina": "C:/Users/knight/Desktop/qidong.png",/*iPad高分屏竖屏图片，分辨率：1536x2008*/
+						"landscape": "C:/Users/knight/Desktop/qidong.png", /*iPad横屏启动图片，分辨率：1024x748*/
+						"landscape-retina": "C:/Users/knight/Desktop/qidong.png", /*iPad高分屏横屏启动图片，分辨率：2048x1496*/
+						"portrait7": "C:/Users/knight/Desktop/qidong.png", /*iPad iOS7竖屏启动图片，分辨率：768x1024*/
+						"portrait-retina7": "C:/Users/knight/Desktop/qidong.png",/*iPad iOS7高分屏竖屏图片，分辨率：1536x2048*/
+						"landscape7": "C:/Users/knight/Desktop/qidong.png", /*iPad iOS7横屏启动图片，分辨率：1024x768*/
+						"landscape-retina7": "C:/Users/knight/Desktop/qidong.png"
 					}
 				},
 				"android": {
 					"mdpi": "", /*普通屏启动图片，分辨率：240x282*/
 					"ldpi": "", /*大屏启动图片，分辨率：320x442*/
 					"hdpi": "C:/Users/eric/Desktop/qidong.png", /*高分屏启动图片，分辨率：480x762*/
-					"xhdpi": "C:/Users/eric/Desktop/qidong.png", /*720P高分屏启动图片，分辨率：720x1242*/
-					"xxhdpi": "C:/Users/eric/Desktop/qidong.png"
+					"xhdpi": "C:/Users/knight/Desktop/qidong.png", /*720P高分屏启动图片，分辨率：720x1242*/
+					"xxhdpi": "C:/Users/knight/Desktop/qidong.png"
 				}
 			}
 		}
@@ -308,8 +308,9 @@
 					"js/common.js",
 					null,
 					"img/hos.jpg",
-					"img/jkzx.jpg",
-					"js/immersed.js"
+					"js/immersed.js",
+					"img/search1.png",
+					"img/jkzx.jpg"
 				],
 				"refer": [
 					"main/hosHP.html",
@@ -320,7 +321,8 @@
 					"finddoctor/hosHP.html",
 					"main/docHP.html",
 					"finddoctor/doclist.html",
-					"finddoctor/findhos.html"
+					"finddoctor/findhos.html",
+					"finddoctor/search_hos.html"
 				],
 				"priority": 0
 			},
@@ -607,7 +609,8 @@
 					"css/iconfont_foot.css",
 					"js/common.js",
 					"js/mui.zoom.js",
-					"js/mui.previewimage.js"
+					"js/mui.previewimage.js",
+					"css/iconfont_hos.css"
 				],
 				"refer": [
 					"maps/maps_map.html",
@@ -821,7 +824,8 @@
 					"js/common.js"
 				],
 				"refer": [
-					"healthfile/write_diary.html"
+					"healthfile/write_diary.html",
+					"healthfile/write_diary2.html"
 				],
 				"priority": 0
 			},
@@ -848,7 +852,8 @@
 				"resources": [
 					"css/mui.min.css",
 					"css/heathfile.css",
-					"js/mui.min.js"
+					"js/mui.min.js",
+					"js/common.js"
 				],
 				"refer": [],
 				"priority": 0
@@ -999,7 +1004,8 @@
 				],
 				"refer": [
 					"healthfile/Friend_file_detail.html",
-					"healthfile/Friend_file_add.html"
+					"healthfile/Friend_file_add.html",
+					"login/login.html"
 				],
 				"priority": 0
 			},
@@ -1329,6 +1335,58 @@
 					"css/mui.min.css",
 					"js/mui.previewimage.js",
 					"css/heathfile.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"healthfile/write_diary2.html": {
+				"resources": [
+					"css/mui.picker.min.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"finddoctor/search_hos.html": {
+				"resources": [
+					"fonts/iconfont_hos.ttf",
+					"js/common.js",
+					"js/mui.min.js",
+					"css/app.css",
+					"css/mui.min.css",
+					"css/health_file.css",
+					"css/iconfont_hos.css"
+				],
+				"refer": [
+					"finddoctor/search_hos_xm.html",
+					"finddoctor/search_doctor_yy.html",
+					"finddoctor/search_hos_yy.html"
+				],
+				"priority": 0
+			},
+			"finddoctor/search_hos_xm.html": {
+				"resources": [
+					"js/common.js",
+					"js/mui.min.js",
+					"css/app.css",
+					"css/mui.min.css",
+					"css/mui.indexedlist.css",
+					"js/mui.indexedlist.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"finddoctor/search_hos_yy.html": {
+				"resources": [
+					"js/common.js",
+					"js/mui.picker.min.js",
+					"js/mui.min.js",
+					"css/app.css",
+					"css/mui.min.css",
+					"js/city.data.js",
+					"css/mui.picker.min.css",
+					"css/iconfont_se.css",
+					"css/search_info.css",
+					"js/immersed.js"
 				],
 				"refer": [],
 				"priority": 0

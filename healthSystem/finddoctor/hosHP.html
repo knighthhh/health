@@ -6,9 +6,11 @@
 		<title></title>
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 		<link href="../css/mui.min.css" rel="stylesheet" />
+				<link rel="stylesheet" type="text/css" href="../css/iconfont_hos.css"/>
 		<link rel="stylesheet" type="text/css" href="../css/iconfont.css" />
-		<link rel="stylesheet" type="text/css" href="../css/iconfont_foot.css" />
-		<link rel="stylesheet" type="text/css" href="../css/iconfont_money.css" />
+<!--		<link rel="stylesheet" type="text/css" href="../css/iconfont_money.css" />-->
+		<!--<link rel="stylesheet" type="text/css" href="../css/iconfont_hos.css"/>-->
+
 		<style>
 			.jianjie p {
 				float: right;
@@ -245,10 +247,10 @@
 							//简介
 							document.getElementById("daohangtu").src = data.hos_daohang;
 							var li = '';
-							li = li + '<li class="mui-table-view-cell"><a class="mui-navigate-right"><span class="iconfont icon-yanke1 tu-wu "></span><p align="center">' + data.hos_address_detail +
-								'</p></a></li><li class="mui-table-view-cell mui-disabled"><span class="iconfont icon-yanke1 tu-wu "></span><p align="center">' + data.hos_level +
-								'</p></li><li class="mui-table-view-cell mui-disabled"><span class="iconfont icon-yanke1 tu-wu "></span><p align="center">关注度：' + data.hos_attention +
-								'</p></li><li id="intro1" class="mui-table-view-cell"><a class="mui-navigate-right"><span class="iconfont icon-yanke1 tu-wu "></span><p align="center">医院介绍</p></a></li><li id="daohang" class="mui-table-view-cell"><a class="mui-navigate-right"><span class="iconfont icon-yanke1 tu-wu "></span><p align="center">院内导航图</p></a></li>';
+							li = li + '<li class="mui-table-view-cell"><a class="mui-navigate-right"><span class="iconfont icon-dizhi tu-wu "></span><p align="center">' + data.hos_address_detail +
+								'</p></a></li><li class="mui-table-view-cell mui-disabled"><span class="iconfont icon-iconfont176huiyuandengjieps tu-er "></span><p align="center">' + data.hos_level +
+								'</p></li><li class="mui-table-view-cell mui-disabled"><span class="iconfont icon-chakantieziguanzhu tu-liu "></span><p align="center">关注度：' + data.hos_attention +
+								'</p></li><li id="intro1" class="mui-table-view-cell"><a class="mui-navigate-right"><span class="iconfont icon-intro tu-san "></span><p align="center">医院介绍</p></a></li><li id="daohang" class="mui-table-view-cell"><a class="mui-navigate-right"><span class="iconfont icon-daohangtubiao tu-er "></span><p align="center">院内导航图</p></a></li>';
 							hosInfo.innerHTML = li;
 
 						}, 'json');
@@ -358,6 +360,7 @@
 	</header>
 
 	<body>
+
 		<!--轮播图-->
 		<div class="mui-content">
 			<div id="slider" class="mui-slider">
