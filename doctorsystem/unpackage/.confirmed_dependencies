@@ -103,7 +103,8 @@
 			"js/mui.min.js",
 			"fonts/mui.ttf",
 			"css/mui.min.css",
-			"img/finddoctor.jpg"
+			"img/finddoctor.jpg",
+			"img/logo.png"
 		],
 		"refer": [
 			"login/forget_password.html"
@@ -169,10 +170,22 @@
 			"css/souye.css",
 			"css/iconfont.css",
 			"css/iconfont_money.css",
-			"css/iconfont_foot.css"
+			"css/iconfont_foot.css",
+			"img/test.jpg",
+			"img/person_background.png",
+			"img/jiankang2.jpeg",
+			"img/inquiry.jpg",
+			"js/souye.js",
+			"img/jiankang.jpeg",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"js/common.js"
 		],
 		"refer": [
-			"main/modify.html"
+			"main/modify.html",
+			"main/homepage_deit.html",
+			"main/xiaoxi.html"
 		]
 	},
 	"message/Message.html": {
@@ -185,7 +198,9 @@
 			"js/common.js"
 		],
 		"refer": [
-			"message/chat.html"
+			"message/chat.html",
+			"message/user_dangan.html",
+			"message/respon_type.html"
 		]
 	},
 	"message/chat.html": {
@@ -198,7 +213,8 @@
 			"fonts/mui.ttf",
 			"css/mui.min.css",
 			"img/finddoctor.jpg",
-			"js/common.js"
+			"js/common.js",
+			"img/user.jpg"
 		],
 		"refer": []
 	},
@@ -303,6 +319,85 @@
 		"resources": [
 			"css/fast_question.css"
 >>>>>>> 4b8660357e5e392b7024ed3935673079f8f195cc
+		]
+	},
+	"main/homepage_deit.html": {
+		"resources": [
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"css/heathfile.css",
+			"js/common.js"
+		]
+	},
+	"message/user_dangan.html": {
+		"resources": [
+			"js/mui.zoom.js",
+			"js/common.js",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"js/mui.previewimage.js",
+			"css/heathfile.css"
+		]
+	},
+	"message/respon_type.html": {
+		"resources": [
+			"js/common.js",
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"css/header.css"
+		],
+		"refer": [
+			"message/chat.html",
+			"message/kcf.html"
+		]
+	},
+	"message/kcf.html": {
+		"resources": [
+			"js/common.js",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"css/fast_question.css",
+			"css/zixun.css"
+		],
+		"refer": [
+			"message/kcf_over.html"
+		]
+	},
+	"message/kcf_over.html": {
+		"resources": [
+			"js/common.js",
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"css/fast_question.css"
+		]
+	},
+	"main/xiaoxi.html": {
+		"resources": [
+			"js/common.js",
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"css/header.css"
+		],
+		"refer": [
+			"zixun/new_zixun.html",
+			"main/see_xiaoxi.html"
+		]
+	},
+	"main/see_xiaoxi.html": {
+		"resources": [
+			"fonts/mui.ttf",
+			"js/mui.zoom.js",
+			"js/common.js",
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"js/mui.previewimage.js",
+			"css/heathfile.css"
+		],
+		"refer": [
+			"message/chat.html"
 		]
 	}
 }

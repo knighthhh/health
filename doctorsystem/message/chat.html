@@ -299,7 +299,7 @@
 	<body contextmenu="return false;">
 		<header class="mui-bar mui-bar-nav">
 			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
-			<h1 class="mui-title">chat (聊天窗口)</h1>
+			<h1 class="mui-title">实时咨询</h1>
 		</header>
 		<pre id='h'></pre>
 		<script id='msg-template' type="text/template">
@@ -308,7 +308,7 @@
 					<% if(item.sender=='self' ) { %>
 						<i class="msg-user mui-icon mui-icon-person"></i>
 					<% } else { %>
-						<img class="msg-user-img" src="../img/finddoctor.jpg" alt="" />
+						<img class="msg-user-img" src="../img/user.jpg" alt="" />
 					<% } %>
 					<div class="msg-content">
 						<div class="msg-content-inner">
@@ -374,6 +374,7 @@
 				//$.plusReady=function(fn){fn();};
 				$.plusReady(function() {
 					var self = plus.webview.currentWebview();
+					var doc_phone = plus.storage.getItem('doc_phone');
 					var user_phone = self.user_phone;
 //					var doc_name = self.doc_name;
 					var im_token = plus.storage.getItem('im_token');
@@ -398,11 +399,7 @@
 							//alert("ll");
 						}
 					};
-					var record = [{
-						sender: user_phone,
-						type: 'text',
-						content: '医生你好，我是'+user_phone+'患者'
-					}]; 
+					var record = []; 
 					var ui = {
 						body: doc.querySelector('body'),
 						footer: doc.querySelector('footer'),
@@ -473,6 +470,23 @@
 						//展示消息
 						record.push(msg);
 						bindMsgList();
+						
+						//发送推送给患者
+						mui.ajax('http://'+serverName+'/health/management/Application/Connector/push/push_user.php',{
+							data:{
+								doc_phone:doc_phone,
+								user_phone:user_phone
+							},
+							dataType:'json',
+							type:'POST',
+							timeout:10000,
+							success:function(data){
+								//{"reslut":1}表示成功
+								
+							},
+							error:function(){
+							}
+						})
 					};
 					//mui原本和机器人对话的函数
 					var toRobot = function(info) {

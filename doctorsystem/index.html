@@ -34,12 +34,14 @@
 			//所有的plus-*方法写在mui.plusReady中或者后面。
 			mui.plusReady(function() {
 				plus.push.addEventListener( "click", function( msg ) {
+					eval("var json_info = "+msg.payload);
 			        // 判断是从本地创建还是离线推送的消息
 			        mui.openWindow({
 						url: 'zixun/new_zixun.html',
 						id: 'new_zixun',
 						extras:{
-							user_phone:msg.payload
+							user_phone:json_info.content,
+							zixun_id:json_info.zixun_id
 						},
 						show: {
 							aniShow: 'pop-in'

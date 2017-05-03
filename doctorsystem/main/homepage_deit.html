@@ -18,34 +18,37 @@
 			
 			<div class="friendadd">
 				<form class="mui-input-group public-edit outline_add">
-					<div class="mui-input-row">
+
+					<!--<div class="mui-input-row">
 						<label>姓名：</label>
 						<input class="mui-input-clear" type="text">
 					</div>
 					<div class="mui-input-row">
 						<label>性别：</label>
 						<input class="mui-input-clear"  type="text">
-					</div>
+
+					</div>-->
 					<div class="mui-input-row">
 						<label>年龄：</label>
-						<input class="mui-input-clear"  type="text">
+						<input  id="doc_age" class="mui-input-clear"  type="text">
 					</div>
 					<div class="mui-input-row">
 						<label>执业点：</label>
-						<input class="mui-input-clear"  type="text">
+						<input id="doc_zhiye" class="mui-input-clear"  type="text">
 					</div>
-					<div class="mui-input-row">
-						<label>所属科室：</label>
+					<!--<div class="mui-input-row">
+						<label>所属医院：</label>
 						<input class="mui-input-clear"  type="text">
 					</div>
 					
 					<div class="mui-input-row">
-						<label>工作职务：</label>
+
+						<label>所属科室：</label>
 						<input class="mui-input-clear"  type="text">
-					</div>
+					</div>-->
 					<div class="mui-input-row">
 						<label>咨询价格：</label>
-						<input class="mui-input-clear"  type="text">
+						<input id="doc_fee" class="mui-input-clear"  type="text">
 					</div>
 					
 					
@@ -53,22 +56,24 @@
 					<div class="infor">
 						
 							<label>擅长：</label>
-							
-						
-						 <textarea id="textarea" rows="5" placeholder="填写我的擅长" ></textarea>
+						 <textarea id="doc_especial" rows="5" placeholder="填写我的擅长" ></textarea>
 					</div>	
 					
 					
 				<div class="infor">
 						
 							<label>个人介绍：</label>
-						 <textarea id="textarea" rows="5" placeholder="我的介绍" ></textarea>
+
+						 <textarea id="doc_introduce" rows="5" placeholder="我的介绍" ></textarea>
+
 					</div>	
 					
 
 					
 					<div class="mui-button-row">
-						<button type="button" class="mui-btn mui-btn-primary" onclick="return false;">确认</button>&nbsp;&nbsp;
+
+						<button id="submit" type="button" class="mui-btn mui-btn-primary" >确认</button>&nbsp;&nbsp;
+
 						<button type="button" class="mui-btn mui-btn-danger" onclick="return false;">取消</button>
 					</div>
 				</form>
@@ -86,8 +91,45 @@
 		
 		
 		<script src="../js/mui.min.js"></script>
+
+		<script src="../js/common.js"></script>
 		<script type="text/javascript">
-			mui.init()
+			mui.init();
+			mui.plusReady(function(){
+				var doc_phone = plus.storage.getItem('doc_phone');
+				var submitbtn = document.getElementById("submit");
+				submitbtn.addEventListener('tap',function(){
+					var doc_age = document.getElementById("doc_age").value;
+					var doc_zhiye = document.getElementById("doc_zhiye").value;
+					var doc_fee = document.getElementById("doc_fee").value;
+					var doc_especial = document.getElementById("doc_especial").value;
+					var doc_introduce = document.getElementById("doc_introduce").value;
+					
+					mui.ajax('http://'+serverName+'/health/management/Application/index.php/Connector/Doc/reset_ziliao',{
+      				data:{
+      					doc_phone:doc_phone,
+      					doc_age:doc_age,
+      					doc_zhiye:doc_zhiye,
+      					doc_fee:doc_fee,
+      					doc_especial:doc_especial,
+      					doc_introduce:doc_introduce
+      				},
+      				dataType:'json',
+      				type:'POST',
+      				timeout:10000,
+      				success:function(data){
+      					if(data.result == 1){
+      						plus.nativeUI.toast("修改成功");
+      						mui.back();
+      					}
+      				},
+      				error:function(){
+      					plus.nativeUI.toast("请检查您的网络");
+      				}
+      			})
+				})
+			})
+
 		</script>
 	</body>
 

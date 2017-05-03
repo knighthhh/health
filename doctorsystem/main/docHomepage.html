@@ -1,179 +1,243 @@
 <!doctype html>
 <html>
+
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 		<link href="../css/mui.min.css" rel="stylesheet" />
-		<link rel="stylesheet" type="text/css" href="../css/iconfont.css"/>
-    	<link rel="stylesheet" type="text/css" href="../css/iconfont_foot.css"/>
-    	<link rel="stylesheet" type="text/css" href="../css/iconfont_money.css"/>
 		<link rel="stylesheet" type="text/css" href="../css/heathfile.css"/>
-		<script src="../js/mui.min.js"></script>
-		<script src="../js/common.js"></script>
-		<link rel="stylesheet" href="../css/souye.css" />
-		<!--<script type="text/javascript" src="js/souye.js" ></script>-->
-		<script type="text/javascript" charset="utf-8">  
-            window.onload=function(){
-            	speed=20
-			   	demo2.innerHTML=demo1.innerHTML
-			    function Marquee(){
-			    if(demo2.offsetTop-demo.scrollTop<=0)
-			    demo.scrollTop-=demo1.offsetHeight
-			    else{
-			    demo.scrollTop++
-			    }
-			    }
-			    var MyMar=setInterval(Marquee,speed)
-			    demo.onmouseover=function() {clearInterval(MyMar)}
-			    demo.onmouseout=function() {MyMar=setInterval(Marquee,speed)}
+		<link rel="stylesheet" type="text/css" href="../css/souye.css"/>
+	    <script src="../js/souye.js" type="text/javascript" charset="utf-8"></script>
+	    <style type="text/css">
+			.person-detail {
+				text-indent: 2em;
+			}
+			.headline{
+				color: #78E067;
+				font-size: medium;
+				font-family: "microsoft yahei";
+			}
+			.doc_detail{
+				color: #6C6C6C;
+			}
 			
-            	mui.plusReady(function(){
-            		var self = plus.webview.currentWebview();
-            		//获得当前医生ID
-            		var doc_id = self.doc_id;
-            		//console.log(doc_id);
-            		//添加detailPage自定义事件监听
-					//window.addEventListener('detailPage',function(event){
-				 	//获得医生ID参数
-				 	//var doc_id = event.detail.doc_id;
-				  	//根据id向服务器请求医生详情
-				  	
-//				  	mui.get('http://'+serverName+'/health/management/Application/index.php/Connector/Doc/getDocDetail',{
-//          			doc_id:doc_id
-//          		},function(data){
-//          			var docInfo = document.getElementById('docInfo');
-//          			var li = '';
-//          			li = li+'<li class="mui-table-view-cell"><div><img class="mui-pull-left" style="width:80px;height:80px;border-radius:100px;" src="'+data.doc_img+'"></div><div style="float:left;margin-left:20px" class=""><h4>'+data.doc_name+
-//          			'</h4><p>所属医院：'+data.hos_name+'</p><p>擅长: '+data.doc_especial+'</p><p>热度: '+data.doc_hot+'</p></div></li>';
-//          			docInfo.innerHTML = li ;
-//          			//关闭等待框
-//				   		plus.nativeUI.closeWaiting();
-//				    	//显示当前页面
-//				    	mui.currentWebview.show('pop-in',400);
-//          		},'json');
-            //});
-            var docpage= document.getElementById('docpage');
-					docpage.addEventListener('tap',function(event){
-						mui.openWindow({
-							url: 'modify.html',
-							id: 'modify',
-							preload: true,
-							show: {
-								aniShow: 'pop-in'
-							},
-							waiting: {
-								autoShow: false
-							}
-						});
-					},false);	
-				});
-         }   	
-        </script> 
+	    </style>
 	</head>
-	<header class="mui-bar mui-bar-nav public-color">
-	    <h1 class="mui-title" style="color: #FFFFFF;">医生主页</h1>
-	</header>
+	
+
 	<body>
+		<header class="mui-bar mui-bar-nav public-color">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		    <h1 class="mui-title">我的主页</h1>
+		      <a id="xiaoxi" class=" mui-icon mui-icon-chat mui-pull-right "style="color: #FFFFFF;"></a>
+		</header>
 		
+		<div class="mui-content">
+			<!--轮播图-->
+		<!--<div id="slider" class="mui-slider" >
+		  <div class="mui-slider-group mui-slider-loop">
+		    <div class="mui-slider-item mui-slider-item-duplicate">
+		      <a href="#">
+		        <img src="../img/jiankang2.jpeg">
+		      </a>
+		    </div>
+		    <div class="mui-slider-item">
+		      <a href="#">
+		        <img src="../img/jiankang2.jpeg">
+		      </a>
+		    </div>
+		    <div class="mui-slider-item">
+		      <a href="#">
+		        <img src="../img/jiankang.jpeg">
+		      </a>
+		    </div>
+		    <div class="mui-slider-item">
+		      <a href="#">
+		        <img src="../img/test.jpg">
+		      </a>
+		    </div>
+		    <div class="mui-slider-item">
+		      <a href="#">
+		        <img src="../img/jiankang2.jpeg">
+		      </a>
+		    </div>
+		    <div class="mui-slider-item mui-slider-item-duplicate">
+		      <a href="#">
+		        <img src="../img/jiankang.jpeg">
+		      </a>
+		    </div>
+		  </div>
+		  <div class="mui-slider-indicator">
+		    <div class="mui-indicator mui-active"></div>
+		    <div class="mui-indicator"></div>
+		    <div class="mui-indicator"></div>
+		    <div class="mui-indicator"></div>
+		  </div>
+		</div>-->
 		
-		<!--轮播图-->
-<div class="mui-content">
-	<ul class="mui-table-view mui-table-view-chevron">
-			<li class="mui-table-view-cell">
-				<a class="mui-navigate-right" id="docpage">
-					<img class="mui-pull-left" style="width:80px;height:80px;border-radius:100px;" src="../img/finddoctor.jpg">
+	<!--轮播图-->
+			<div class="person_info">
 				
-				<div style="float:left;margin-left:20px" class="">
-					<h4>黄辉煌</h4>
-            			<p>所属医院：东华医院</p>
-            			<p>擅长: 骨科</p>
-            			<p>热度: 23</p>
+					<ul class="mui-table-view">
+					    <li class="mui-table-view-cell mui-media">
+					        <a href="javascript:;">
+					            <img id="doc_img" class="mui-pull-left" src="../img/inquiry.jpg">
+					            <div class="mui-media-body">
+					              		<span id="doc_name" class="name"></span> 
+					              	<hr style="border:1px dashed #CCCCCC ">
+					                <p class='mui-ellipsis'>性别：<span id="doc_sex"></span></p>
+					                <p class='mui-ellipsis'>本人电话：<span id="doc_phone"></span></p>
+					                <!--<p class='mui-ellipsis'>出生日期：<span>2010-10-10</span></p>-->
+					                
+					            </div>
+					        </a>
+					    </li> 
+					</ul>
+				
+			</div>
+
+				<div class="doc_detail">
+					  <ul class="mui-table-view">
+						<li class="mui-table-view-cell headcolor">
+				           <p class="headline" >个人介绍</p>      
+				        </li>
+				        <ul class="mui-table-view mui-table-view-chevron">
+						        <li class="mui-table-view-cell">
+						           <p class="person-detail" id="doc_introduce"></p>
+						        </li>   
+						       
+				       		</ul>
+				    </ul>
+				    <ul class="mui-table-view">
+						<li class="mui-table-view-cell headcolor">
+				           <p class="headline">我的信息</p>      
+				        </li>
+				        <ul class="mui-table-view mui-table-view-chevron">
+						        <li class="mui-table-view-cell">
+						           <span >
+						           	所属医院：
+						           </span>
+						           <span id="hos_name" >
+						           </span>
+						           
+						           
+						        </li>
+						        
+						         <li class="mui-table-view-cell">
+						           
+							           <span id="">
+							           	所属科室：
+							           </span>
+							           <span id="dep_name">
+						           	   </span>
+						           
+						           
+						        </li>
+						         <li class="mui-table-view-cell">
+							           	<span id="">
+							           	执业点：
+							           </span>
+							           <span id="doc_zhiye">
+							           </span>
+						             
+						        </li>
+						        <li class="mui-table-view-cell">			        	
+						        	   <span id="">
+							           擅长：
+							           </span>
+							           <span id="doc_especial">
+							           </span>       
+						        </li>
+						        <li class="mui-table-view-cell">			        	
+						        	   <span id="">
+							           支付宝账号：
+							           </span>
+							           <span id="doc_alipay">
+							           </span>       
+						        </li>
+						         <li class="mui-table-view-cell">			        	
+						        	   <span id="">
+							           咨询费用：
+							           </span>
+							           <span id="doc_fee">
+							           </span>     
+							           /小时
+						        </li>
+						       
+						      
+				       		</ul>
+				    </ul>
 				</div>
-				</a>
-			</li>
-			</ul>
-	<ul id="docInfo" class="mui-table-view mui-table-view">			
-	</ul>
-	<div class="box-c ">
-		<p class="box-c-p ">- 患者评价(1) -</p>	
-						
-				<ul class="mui-table-view jianjie">
-					
-					
-					<li class="mui-table-view-cell">
-						<a class="mui-navigate-right">
-						<div class="box-c-a-r" >
-							<h4>冠心病做支架手术</h4>
-							<p style="font-size: 13px;">王**先生</p>
-							<p style="font-size: 15px;text-align: center;">王哲医生给我家老人看病态度非常好，医德高尚。</p>
-						</div>
-						<p >2014.09</p>
-						
-						</a>
-					</li>
-				</ul>						
-	</div>
-	
-		<div class="box-c">
-		<p class="box-c-p">- 问诊记录 -</p>
-			<div id="demo" style="overflow:hidden; position:relative; height:180px;width:100%;">
-				<div id="demo1">
-					<div class="box-c-a">
-						<div class="box-c-a-l">
-							<img src="../img/doctor.jpeg" />
-						</div>
-						<div class="box-c-a-r">
-							<h4>王哲医生  惠州第一人民医院</h4>
-							<p style="font-size: 13px;">接诊了王**患者</p>
-							
-						</div>
-					</div>
-					
-					<div class="box-c-a">
-						<div class="box-c-a-l">
-							<img src="../img/doctor.jpeg" />
-						</div>
-						<div class="box-c-a-r">
-							<h4 >王哲医生  惠州第一人民医院</h4>
-							<p style="font-size: 13px;">接诊了姚**患者</p>
-							
-						</div>
-					</div>
-					<div class="box-c-a">
-						<div class="box-c-a-l">
-							<img src="../img/doctor.jpeg" />
-						</div>
-						<div class="box-c-a-r">
-							<h4 >王哲医生  惠州第一人民医院</h4>
-							<p style="font-size: 13px;">接诊了黄**患者</p>
-						</div>
-					</div>
-				</div>	
-				<div id="demo2"></div>
-			</div>	
-			
-	</div>
-
-
-	
-	
-	
-	
-	
-	
-	
-	
-</div>
-<!--热门医生医院滚动-->
-	
-	
-		<div class="mui-card-footer" >
-			<button type="button" class="mui-btn public-color mui-pull-left" style="color: #FFFFFF;margin-left: 20%;">咨询</button>
-			
-			<button type="button" class="mui-btn public-color mui-pull-right" style="color: #FFFFFF;margin-right: 20% ;">关注</button>
+				<button id="reset" type="button" class="mui-btn mui-btn-success mui-btn-block">修改我的资料</button>	
 		</div>
 		
+		
+		
+		
+		<script src="../js/mui.min.js"></script>
+		<script src="../js/common.js"></script>
+		<script type="text/javascript">
+	    	mui.init();
+			mui.plusReady(function() {
+				var doc_id = plus.storage.getItem('doc_id');
+				var resetbtn = document.getElementById("reset");
+				//修改按钮监听
+				resetbtn.addEventListener('tap',function(){
+					mui.openWindow({
+						url: 'homepage_deit.html',
+						id: 'homepage_deit',
+						preload: true,
+						show: {
+							aniShow: 'pop-in'
+						},
+						styles: {
+							popGesture: 'hide'
+						},
+						waiting: {
+							autoShow: false
+						}
+					});
+				})
+				
+				//消息按钮监听
+				var xiaoxibtn = document.getElementById("xiaoxi");
+				xiaoxibtn.addEventListener('tap',function(){
+					mui.openWindow({
+						url: 'xiaoxi.html',
+						id: 'xiaoxi',
+						preload: true,
+						show: {
+							aniShow: 'pop-in'
+						},
+						styles: {
+							popGesture: 'hide'
+						},
+						waiting: {
+							autoShow: false
+						}
+					});
+				})
+				
+				//取个人数据
+				mui.get('http://'+serverName+'/health/management/Application/index.php/Connector/Doc/getDocDetail',{
+        			doc_id:doc_id 
+        		},function(data){
+					document.getElementById("doc_name").innerHTML = data.doc_name;
+					document.getElementById("doc_sex").innerHTML = data.doc_sex;
+					document.getElementById("doc_phone").innerHTML = plus.storage.getItem('doc_phone');
+					document.getElementById("doc_img").src = data.doc_img;
+					document.getElementById("doc_introduce").innerHTML = data.doc_introduce;
+					document.getElementById("hos_name").innerHTML = data.hos_name;
+					document.getElementById("dep_name").innerHTML = data.dep_name;
+					document.getElementById("doc_zhiye").innerHTML = data.doc_zhiye;
+					document.getElementById("doc_especial").innerHTML = data.doc_especial;
+					document.getElementById("doc_alipay").innerHTML = data.doc_alipay;
+					document.getElementById("doc_fee").innerHTML = data.doc_fee;
+        		},'json');
+			});
+
+	</script>
 	</body>
 
 </html>

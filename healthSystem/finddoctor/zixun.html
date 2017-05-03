@@ -124,27 +124,6 @@
 		 		var submitbtn = document.getElementById("submitbtn");
 		 		submitbtn.addEventListener('tap',function(){
 		 			upload(); 
-		 			mui.openWindow({
-						url: 'zixun_over.html', 
-						id: 'zixun_over',
-						extras:{
-						    doc_phone:doc_phone,
-//						    doc_name:doc_name 
-						},
-						show: {
-							aniShow: 'pop-in'
-						},
-						styles: {
-							popGesture: 'hide'
-						},
-						waiting: {
-							autoShow: true
-						}
-					});
-					setTimeout(function(){
-//						var self = plus.webview.currentWebview();
-						self.close();	 
-					},1000);
 		 		})
 		 		
 		 		
@@ -155,14 +134,36 @@
 			var files=[];
 			// 上传文件
 			function upload(){
+				//把咨询信息写入咨询表
 				var task=plus.uploader.createUpload('http://'+serverName+'/health/management/Application/index.php/Connector/Zixun/zixun',
 					{method:"POST"},
 					function(t,status){ //上传完成
 						if(status==200){
-//							eval("var json_info ="+t.responseText);
-//							alert(json_info.illness); 
+							eval("var json_info ="+t.responseText);
+							var zixun_id = json_info.zixun_id; 
+							mui.openWindow({
+								url: 'zixun_over.html', 
+								id: 'zixun_over',
+								extras:{
+								    doc_phone:doc_phone,
+								    zixun_id:zixun_id 
+								},
+								show: {
+									aniShow: 'pop-in'
+								},
+								styles: {
+									popGesture: 'hide'
+								},
+								waiting: {
+									autoShow: true
+								}
+							});
+							setTimeout(function(){
+		//						var self = plus.webview.currentWebview();
+								self.close();	 
+							},2000);
 						}else{
-							
+							plus.nativeUI.toast("提交失败，请检查您的网络");
 						}
 					}
 				);
@@ -178,6 +179,7 @@
 				task.addData("zixun_illness",illness.value);
 				task.addData("see_doc",res);  
 				task.addData("zixun_text",textarea.value);
+				task.addData("read","否");
 				task.addData("uid",getUid());
 				for(var i=0;i<files.length;i++){
 					var f=files[i];

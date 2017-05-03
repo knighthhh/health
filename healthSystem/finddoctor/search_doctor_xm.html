@@ -46,10 +46,10 @@
 						for(j=0;j<data[i].doc.length;j++){
 							item = item + '<li data-tags="asd" doc_id="'+data[i].doc[j].doc_id+'" class="mui-table-view-cell mui-indexed-list-item">'+data[i].doc[j].doc_name+'</li>';
 					}
-					//console.log(data.length);
 					}
 					nav.innerHTML = item;
 					charter.innerHTML = item2;
+					
 					var header = document.querySelector('header.mui-bar');
 					var list = document.getElementById('list');
 					//calc hieght

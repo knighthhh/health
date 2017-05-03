@@ -35,7 +35,7 @@
 						var s="";
 						for(var i=0;i<data.length;i++){
 							s+="<li inqu_id='"+data[i]['id']+"' class='mui-table-view-cell' time='"+data[i]['time']+"' user_phone='"+data[i]['user_phone']+"'><a class='mui-navigate-right' ><div class='mui-row'><div class='mui-pull-left mui-col-xs-3 '>";
-							s+="<img src='"+data[i]['user_img']+"' style='width: 100%' /></div><div class='mui-col-xs-9 sick'>";
+							s+="<img src='"+data[i]['user_img']+"' style='width: 100%;border-radius: 50%' /></div><div class='mui-col-xs-9 sick'>";
 							s+="<p><span>患者姓名：</span> <span>"+data[i]['user_name']+"</span></p>";
 							s+="<p><span>咨询疾病：</span> <span>"+data[i]['zixun_illness']+"</span></p>";
 							s+="<p><span>电话：</span> <span>"+data[i]['user_phone']+"</span></p></div></div></a></li>";
@@ -79,13 +79,13 @@
 	    <h1 class="mui-title" style="color: #FFFFFF;">问诊列表</h1>
 	</header>
 		<div class="mui-content">
-			<div class="list">
+			<div class="list mui-card">
 					<ul id="patient" class="mui-table-view mui-table-view-chevron">
 						<!--<li class="mui-table-view-cell mui-media ">		
 									<a class="mui-navigate-right" id="patient" >
 										<div class="mui-row">
 											<div class="mui-pull-left mui-col-xs-3 " >
-												<img src="../img/doctor.jpeg" style="width: 100%" />
+												<img src="../img/finddoctor.jpg" style="width: 100%;border-radius: 50%;" />
 											</div>					
 											<div class="mui-col-xs-9 sick">
 													<p><span>患者：</span> <span>姚先生</span></p>
@@ -95,6 +95,7 @@
 												
 									</a>
 							</li>	-->
+							
 					</ul>
 			</div>
 		</div>

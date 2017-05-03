@@ -85,7 +85,7 @@ class HosController extends Controller{
         if($town=='全部'){
             $res=  D('hospital_info')->select();
         }else{
-            $town = mb_substr($town,0,-1);
+            $town = mb_substr($town,0,-1,'utf-8');
             $data['hos_address'] = array('like',"%$town%");
             $res=  D('hospital_info')->where($data)->select();
         } 
