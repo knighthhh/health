@@ -24,11 +24,11 @@
         		var user_phone = null;
 
             	mui.plusReady(function(){ user_phone = plus.storage.getItem('user_phone');});
-            		
+            		var doc_id = null;
             		//添加detailPage自定义事件监听
 					window.addEventListener('docID',function(event){
 				 	//获得医生ID参数
-				 	var doc_id = event.detail.docID;
+				 	doc_id = event.detail.docID;
 				  	//根据id向服务器请求医生详情
 				  	mui.get('http://'+serverName+'/health/management/Application/index.php/Connector/Doc/getDocDetail',{
             			doc_id:doc_id
@@ -63,7 +63,6 @@
 			  				timeout:10000,
 			  				success:function(data){
 			  					var s="";
-			  					console.log(JSON.stringify(data));
 			  					if(data['result']!=0){
 			  						for(var i=0;i<data.length;++i){
 				  						s+="<li class='mui-table-view-cell'><a class='mui-navigate-right'><div class='box-c-a-r'>";
@@ -80,25 +79,7 @@
 			  			})
             		}
             		
-            		//医生简介详情
-            		document.getElementById("doc_introduce").addEventListener('tap',function(){
-            			mui.openWindow({
-							url: 'doc_brief.html', 
-							id: 'doc_brief',
-							extras:{
-							    doc_id:doc_id
-							},
-							show: {
-								aniShow: 'pop-in'
-							},
-							styles: {
-								popGesture: 'hide'
-							},
-							waiting: {
-								autoShow: true
-							}
-						});
-            		});
+            		
             		
             		//咨询按钮监听
             		var zixun = document.getElementById("zixun");
@@ -176,6 +157,26 @@
             			
             		});
 				});
+				//医生简介详情
+            		document.getElementById("doc_introduce").addEventListener('tap',function(){
+            			console.log(doc_id);
+            			mui.openWindow({
+							url: 'doc_brief.html', 
+							id: 'doc_brief',
+							extras:{
+							    doc_id:doc_id
+							},
+							show: {
+								aniShow: 'pop-in'
+							},
+							styles: {
+								popGesture: 'hide'
+							},
+							waiting: {
+								autoShow: true
+							}
+						});
+            		});
          }   	
         </script> 
 	</head>

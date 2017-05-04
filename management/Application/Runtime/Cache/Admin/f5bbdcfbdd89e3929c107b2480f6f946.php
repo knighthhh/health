@@ -22,7 +22,7 @@
 </style>
 </head>
 <body>
-<form method="post" action="/health/management/Application/index.php/Admin/User/listUser" id="listform">
+<form method="post" action="/health/management/Application/index.php/Admin/User/listUser/p/3.html" id="listform">
   <div class="panel admin-panel">
     <div class="panel-head"><strong class="icon-reorder"> 内容列表</strong></div>
     <div class="padding border-bottom">
