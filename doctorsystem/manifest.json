@@ -182,30 +182,24 @@
 			"splashscreen": {
 				"ios": {
 					"iphone": {
-						"default": "", /*iPhone3启动图片选，分辨率：320x480*/
-						"retina35": "C:/Users/eric/Desktop/qidong.png",/*3.5英寸设备(iPhone4)启动图片，分辨率：640x960*/
-						"retina40": "C:/Users/eric/Desktop/qidong.png",/*4.0 英寸设备(iPhone5/iPhone5s)启动图片，分辨率：640x1136*/
-						"retina47": "C:/Users/eric/Desktop/qidong.png",/*4.7 英寸设备(iPhone6)启动图片，分辨率：750x1334*/
-						"retina55": "C:/Users/eric/Desktop/qidong.png",/*5.5 英寸设备(iPhone6 Plus)启动图片，分辨率：1242x2208*/
-						"retina55l": "C:/Users/eric/Desktop/qidong.png"
+						"default": ""
 					},
 					"ipad": {
-						"portrait": "C:/Users/eric/Desktop/qidong.png", /*iPad竖屏启动图片，分辨率：768x1004*/
+						 /*iPad竖屏启动图片，分辨率：768x1004*/
 						"portrait-retina": "",/*iPad高分屏竖屏图片，分辨率：1536x2008*/
-						"landscape": "C:/Users/eric/Desktop/qidong.png", /*iPad横屏启动图片，分辨率：1024x748*/
+						 /*iPad横屏启动图片，分辨率：1024x748*/
 						"landscape-retina": "", /*iPad高分屏横屏启动图片，分辨率：2048x1496*/
-						"portrait7": "C:/Users/eric/Desktop/qidong.png", /*iPad iOS7竖屏启动图片，分辨率：768x1024*/
+						 /*iPad iOS7竖屏启动图片，分辨率：768x1024*/
 						"portrait-retina7": "",/*iPad iOS7高分屏竖屏图片，分辨率：1536x2048*/
-						"landscape7": "", /*iPad iOS7横屏启动图片，分辨率：1024x768*/
-						"landscape-retina7": "C:/Users/eric/Desktop/qidong.png"
+						"landscape7": ""
 					}
 				},
 				"android": {
 					"mdpi": "", /*普通屏启动图片，分辨率：240x282*/
 					"ldpi": "", /*大屏启动图片，分辨率：320x442*/
-					"hdpi": "C:/Users/eric/Desktop/qidong.png", /*高分屏启动图片，分辨率：480x762*/
-					"xhdpi": "C:/Users/eric/Desktop/qidong.png", /*720P高分屏启动图片，分辨率：720x1242*/
-					"xxhdpi": "C:/Users/eric/Desktop/qidong.png"
+					"hdpi": "C:/Users/eric/Desktop/qidong2.png", /*高分屏启动图片，分辨率：480x762*/
+					"xhdpi": "C:/Users/eric/Desktop/qidong2.png", /*720P高分屏启动图片，分辨率：720x1242*/
+					"xxhdpi": "C:/Users/eric/Desktop/qidong2.png"
 				}
 			}
 		}
@@ -843,7 +837,8 @@
 			},
 			"mine/about.html": {
 				"resources": [
-					"img/doctor.jpeg"
+					"img/doctor.jpeg",
+					"css/mui.min.css"
 				],
 				"refer": [],
 				"priority": 0

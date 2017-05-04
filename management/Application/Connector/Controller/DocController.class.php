@@ -12,7 +12,11 @@ class DocController extends Controller{
     	 /*排序*/
         $orderby = "doc_attention";
         $orderway = "desc";
-    	$data = $model->order("$orderby $orderway")->limit(8)->select();
+    	$data = $model
+    	->field('a.*,b.hos_name')
+    	->alias('a')
+    	->join('__HOSPITAL_INFO__ b on a.hos_id=b.hos_id','LEFT')
+    	->order("$orderby $orderway")->limit(8)->select();
         for ($i=0; $i <count($data) ; $i++) { 
             $data[$i]['doc_img'] = $ic['viewPath'].$data[$i]['doc_img'];
         }

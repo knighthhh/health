@@ -127,9 +127,21 @@
 	    <script type="text/javascript">
 	    	mui.init();
 			mui.plusReady(function() {
-					
-					
-					
+					var write= document.getElementById('write');	
+					write.addEventListener('tap',function(event){
+						mui.openWindow({
+							url: 'write_diary2.html',
+							id: 'write_diary2',
+							preload: true,
+							show: {
+								aniShow: 'pop-in'
+							},
+							waiting: {
+								autoShow: false
+							}
+						});
+					},false);
+		
 				});
 
 	</script>

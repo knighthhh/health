@@ -67,7 +67,7 @@
       </ul> 
       </div>
     <div class="body-content">
-    <form method="post" class="form-x" action="/health/management/Application/index.php/Admin/hospital/edit/id/53" name="fileUploadForm" enctype="multipart/form-data">
+    <form method="post" class="form-x" action="/health/management/Application/index.php/Admin/hospital/edit/id/57" name="fileUploadForm" enctype="multipart/form-data">
     <input type="hidden" name="hos_id" value="<?php echo $data['hos_id']; ?>" />
     <div class="div_tab" style="display:block;">  
       <div class="form-group">
@@ -128,7 +128,7 @@
       </div>
       <div class="form-group">
         <div class="label" style="margin-top: 30px;">
-          <label>院内导航图片：</label>
+          <label>医院图标：</label>
         </div>
         <!-- 显示图片 -->
         <span><?php showImage($data['hos_navigate_img'],120,80); ?></span>
@@ -136,6 +136,19 @@
           <input type="file" id="fileUpload" name="hos_navigate_img" class="input tips" style="display:none;width:25%; float:left;"  value=""  data-toggle="hover" data-place="right" data-image=""  />
           <div id="filePath" style="float:left;line-height:40px;" ></div>
           <input type="button" class="button bg-blue margin-left" id="upload" value="+ 浏览上传"  style="float:left;">
+          <div class="tipss">图片格式：jpg，jpeg，gif，png</div>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="label" style="margin-top: 30px;">
+          <label>院内导航图片：</label>
+        </div>
+        <!-- 显示图片 -->
+        <span><?php showImage($data['hos_daohang'],120,80); ?></span>
+        <div style="margin-left: 125px;margin-top: 10px" class="field">
+          <input type="file" id="fileUpload2" name="hos_daohang" class="input tips" style="display:none;width:25%; float:left;"  value=""  data-toggle="hover" data-place="right" data-image=""  />
+          <div id="filePath2" style="float:left;line-height:40px;" ></div>
+          <input type="button" class="button bg-blue margin-left" id="upload2" value="+ 浏览上传"  style="float:left;">
           <div class="tipss">图片格式：jpg，jpeg，gif，png</div>
         </div>
       </div>
@@ -193,7 +206,7 @@
           initialFrameHeight:"400"
           });
 
-  //院内导航图上传按钮处理
+  //医院图标上传按钮处理
   $("#upload").click(function(){
     $("#fileUpload").click();
   });
@@ -202,6 +215,16 @@
     var filename = path.substring(path.lastIndexOf("\\")+1);
     $("#filePath").text(filename);
   });
+ //院内导航图上传按钮处理
+  $("#upload2").click(function(){
+    $("#fileUpload2").click();
+  });
+  $("#fileUpload2").change(function(){
+    var path = $(this).val();
+    var filename = path.substring(path.lastIndexOf("\\")+1);
+    $("#filePath2").text(filename);
+  });
+  
 
   //切换表单
   $("#nav li").click(function(){
