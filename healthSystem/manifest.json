@@ -645,7 +645,8 @@
 					"js/common.js",
 					"js/mui.zoom.js",
 					"js/mui.previewimage.js",
-					"css/iconfont_hos.css"
+					"css/iconfont_hos.css",
+					"fonts/iconfont_hos.ttf"
 				],
 				"refer": [
 					"maps/maps_map.html",
@@ -1105,7 +1106,8 @@
 					"js/mui.min.js",
 					"css/mui.min.css",
 					"css/heathfile.css",
-					"fonts/mui.ttf"
+					"fonts/mui.ttf",
+					"js/common.js"
 				],
 				"refer": [],
 				"priority": 0
@@ -1122,7 +1124,8 @@
 					"css/health_file.css",
 					"css/search_info.css",
 					"css/iconfont_money.css",
-					"css/iconfont_se.css"
+					"css/iconfont_se.css",
+					"fonts/iconfont_se.ttf"
 				],
 				"refer": [
 					"finddoctor/docHP.html"
@@ -1343,7 +1346,8 @@
 					"js/common.js",
 					"js/mui.min.js",
 					"css/app.css",
-					"css/mui.min.css"
+					"css/mui.min.css",
+					"fonts/mui.ttf"
 				],
 				"refer": [],
 				"priority": 0

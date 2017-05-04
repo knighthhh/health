@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 [ 2017-05-04T08:11:28+08:00 ] 172.17.32.112 /health/management/Application/index.php/Connector/User/login
 INFO: [ app_init ] --START--
 INFO: [ app_init ] --END-- [ RunTime:0.013783s ]
@@ -18019,4 +18020,940 @@ SQL: SELECT a.*,b.user_name FROM pingjia a LEFT JOIN user_info b on b.user_phone
 INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTrace [ RunTime:0.000039s ]
 INFO: [ app_end ] --END-- [ RunTime:0.000095s ]
+
+=======
+[ 2017-05-04T22:49:32+08:00 ] 192.168.43.193 /health/management/Application/index.php/Admin/feedback/listAnalyze
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000446s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000032s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000053s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000121s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000077s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.002566s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `user_info` LIMIT 1   [ RunTime:0.000341s ]
+NOTIC: [2048] Declaration of Admin\Model\DoctorInfoModel::_after_insert() should be compatible with Think\Model::_after_insert($data, $options) D:\xampp\htdocs\health\management\Application\Admin\Model\DoctorInfoModel.class.php 第 126 行.
+SQL: SHOW COLUMNS FROM `doctor_info` [ RunTime:0.002313s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `doctor_info` LIMIT 1   [ RunTime:0.000348s ]
+NOTIC: [2048] Declaration of Admin\Model\HospitalInfoModel::_after_insert() should be compatible with Think\Model::_after_insert($data, $options) D:\xampp\htdocs\health\management\Application\Admin\Model\HospitalInfoModel.class.php 第 256 行.
+SQL: SHOW COLUMNS FROM `hospital_info` [ RunTime:0.002253s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `hospital_info` LIMIT 1   [ RunTime:0.000417s ]
+INFO: [ view_begin ] --START--
+INFO: [ view_begin ] --END-- [ RunTime:0.000031s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000105s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000209s ]
+NOTIC: [8] Undefined variable: page D:\xampp\htdocs\health\management\Application\Runtime\Cache\Admin\9e56ec1137c188becfef8858d3e35167.php 第 51 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.010859s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010970s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000020s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000079s ]
+INFO: [ view_end ] --START--
+INFO: [ view_end ] --END-- [ RunTime:0.000022s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000057s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000117s ]
+
+[ 2017-05-04T22:49:44+08:00 ] 192.168.43.193 /health/management/Application/index.php/Admin/feedback/listAnalyze
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000459s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000036s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000060s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000139s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000040s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.002800s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `user_info` LIMIT 1   [ RunTime:0.000347s ]
+NOTIC: [2048] Declaration of Admin\Model\DoctorInfoModel::_after_insert() should be compatible with Think\Model::_after_insert($data, $options) D:\xampp\htdocs\health\management\Application\Admin\Model\DoctorInfoModel.class.php 第 126 行.
+SQL: SHOW COLUMNS FROM `doctor_info` [ RunTime:0.002608s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `doctor_info` LIMIT 1   [ RunTime:0.016357s ]
+NOTIC: [2048] Declaration of Admin\Model\HospitalInfoModel::_after_insert() should be compatible with Think\Model::_after_insert($data, $options) D:\xampp\htdocs\health\management\Application\Admin\Model\HospitalInfoModel.class.php 第 256 行.
+SQL: SHOW COLUMNS FROM `hospital_info` [ RunTime:0.007656s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `hospital_info` LIMIT 1   [ RunTime:0.002024s ]
+INFO: [ view_begin ] --START--
+INFO: [ view_begin ] --END-- [ RunTime:0.000035s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000102s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000194s ]
+NOTIC: [8] Undefined variable: page D:\xampp\htdocs\health\management\Application\Runtime\Cache\Admin\9e56ec1137c188becfef8858d3e35167.php 第 51 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.009721s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009829s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000021s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000077s ]
+INFO: [ view_end ] --START--
+INFO: [ view_end ] --END-- [ RunTime:0.000024s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000058s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000117s ]
+
+[ 2017-05-04T22:50:06+08:00 ] 192.168.43.193 /health/management/Application/index.php/Admin/feedback/listAnalyze
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000438s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000042s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000060s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000139s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000056s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.002240s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `user_info` LIMIT 1   [ RunTime:0.000264s ]
+NOTIC: [2048] Declaration of Admin\Model\DoctorInfoModel::_after_insert() should be compatible with Think\Model::_after_insert($data, $options) D:\xampp\htdocs\health\management\Application\Admin\Model\DoctorInfoModel.class.php 第 126 行.
+SQL: SHOW COLUMNS FROM `doctor_info` [ RunTime:0.002897s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `doctor_info` LIMIT 1   [ RunTime:0.000392s ]
+NOTIC: [2048] Declaration of Admin\Model\HospitalInfoModel::_after_insert() should be compatible with Think\Model::_after_insert($data, $options) D:\xampp\htdocs\health\management\Application\Admin\Model\HospitalInfoModel.class.php 第 256 行.
+SQL: SHOW COLUMNS FROM `hospital_info` [ RunTime:0.007952s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `hospital_info` LIMIT 1   [ RunTime:0.000347s ]
+INFO: [ view_begin ] --START--
+INFO: [ view_begin ] --END-- [ RunTime:0.000033s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000088s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000172s ]
+NOTIC: [8] Undefined variable: page D:\xampp\htdocs\health\management\Application\Runtime\Cache\Admin\9e56ec1137c188becfef8858d3e35167.php 第 51 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.008444s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008555s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000022s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000109s ]
+INFO: [ view_end ] --START--
+INFO: [ view_end ] --END-- [ RunTime:0.000022s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000053s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000106s ]
+
+[ 2017-05-04T22:50:17+08:00 ] 192.168.43.193 /health/management/Application/index.php/Admin/feedback/listAnalyze
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000417s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000039s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000061s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000136s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000051s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.002535s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `user_info` LIMIT 1   [ RunTime:0.000372s ]
+NOTIC: [2048] Declaration of Admin\Model\DoctorInfoModel::_after_insert() should be compatible with Think\Model::_after_insert($data, $options) D:\xampp\htdocs\health\management\Application\Admin\Model\DoctorInfoModel.class.php 第 126 行.
+SQL: SHOW COLUMNS FROM `doctor_info` [ RunTime:0.002676s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `doctor_info` LIMIT 1   [ RunTime:0.000372s ]
+NOTIC: [2048] Declaration of Admin\Model\HospitalInfoModel::_after_insert() should be compatible with Think\Model::_after_insert($data, $options) D:\xampp\htdocs\health\management\Application\Admin\Model\HospitalInfoModel.class.php 第 256 行.
+SQL: SHOW COLUMNS FROM `hospital_info` [ RunTime:0.002227s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `hospital_info` LIMIT 1   [ RunTime:0.000738s ]
+INFO: [ view_begin ] --START--
+INFO: [ view_begin ] --END-- [ RunTime:0.000039s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000102s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000201s ]
+NOTIC: [8] Undefined variable: page D:\xampp\htdocs\health\management\Application\Runtime\Cache\Admin\9e56ec1137c188becfef8858d3e35167.php 第 51 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.008922s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009038s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000022s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000079s ]
+INFO: [ view_end ] --START--
+INFO: [ view_end ] --END-- [ RunTime:0.000024s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000055s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000110s ]
+
+[ 2017-05-04T22:50:24+08:00 ] 192.168.43.193 /health/management/Application/index.php/Admin/feedback/listAnalyze
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000394s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000035s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000057s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000131s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000048s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.006244s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `user_info` LIMIT 1   [ RunTime:0.000546s ]
+NOTIC: [2048] Declaration of Admin\Model\DoctorInfoModel::_after_insert() should be compatible with Think\Model::_after_insert($data, $options) D:\xampp\htdocs\health\management\Application\Admin\Model\DoctorInfoModel.class.php 第 126 行.
+SQL: SHOW COLUMNS FROM `doctor_info` [ RunTime:0.007214s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `doctor_info` LIMIT 1   [ RunTime:0.005267s ]
+NOTIC: [2048] Declaration of Admin\Model\HospitalInfoModel::_after_insert() should be compatible with Think\Model::_after_insert($data, $options) D:\xampp\htdocs\health\management\Application\Admin\Model\HospitalInfoModel.class.php 第 256 行.
+SQL: SHOW COLUMNS FROM `hospital_info` [ RunTime:0.004772s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `hospital_info` LIMIT 1   [ RunTime:0.000501s ]
+INFO: [ view_begin ] --START--
+INFO: [ view_begin ] --END-- [ RunTime:0.000031s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000099s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000216s ]
+NOTIC: [8] Undefined variable: page D:\xampp\htdocs\health\management\Application\Runtime\Cache\Admin\9e56ec1137c188becfef8858d3e35167.php 第 51 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.009624s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009737s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000020s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000077s ]
+INFO: [ view_end ] --START--
+INFO: [ view_end ] --END-- [ RunTime:0.000022s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000055s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000109s ]
+
+[ 2017-05-04T22:50:30+08:00 ] 192.168.43.193 /health/management/Application/index.php/Admin/feedback/listAnalyze
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000427s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000042s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000057s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000133s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000041s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.020738s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `user_info` LIMIT 1   [ RunTime:0.018687s ]
+NOTIC: [2048] Declaration of Admin\Model\DoctorInfoModel::_after_insert() should be compatible with Think\Model::_after_insert($data, $options) D:\xampp\htdocs\health\management\Application\Admin\Model\DoctorInfoModel.class.php 第 126 行.
+SQL: SHOW COLUMNS FROM `doctor_info` [ RunTime:0.031209s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `doctor_info` LIMIT 1   [ RunTime:0.029031s ]
+NOTIC: [2048] Declaration of Admin\Model\HospitalInfoModel::_after_insert() should be compatible with Think\Model::_after_insert($data, $options) D:\xampp\htdocs\health\management\Application\Admin\Model\HospitalInfoModel.class.php 第 256 行.
+SQL: SHOW COLUMNS FROM `hospital_info` [ RunTime:0.027535s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `hospital_info` LIMIT 1   [ RunTime:0.011535s ]
+INFO: [ view_begin ] --START--
+INFO: [ view_begin ] --END-- [ RunTime:0.000028s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000104s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000202s ]
+NOTIC: [8] Undefined variable: page D:\xampp\htdocs\health\management\Application\Runtime\Cache\Admin\9e56ec1137c188becfef8858d3e35167.php 第 51 行.
+INFO: Run Behavior\ParseTemplate [ RunTime:0.008728s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008829s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000021s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000071s ]
+INFO: [ view_end ] --START--
+INFO: [ view_end ] --END-- [ RunTime:0.000020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000055s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000106s ]
+
+[ 2017-05-04T22:50:50+08:00 ] 192.168.43.193 /health/management/Application/index.php/Admin/feedback/listAnalyze
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000618s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000040s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000071s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000141s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000126s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.002432s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `user_info` LIMIT 1   [ RunTime:0.000378s ]
+NOTIC: [2048] Declaration of Admin\Model\DoctorInfoModel::_after_insert() should be compatible with Think\Model::_after_insert($data, $options) D:\xampp\htdocs\health\management\Application\Admin\Model\DoctorInfoModel.class.php 第 126 行.
+SQL: SHOW COLUMNS FROM `doctor_info` [ RunTime:0.002550s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `doctor_info` LIMIT 1   [ RunTime:0.001028s ]
+NOTIC: [2048] Declaration of Admin\Model\HospitalInfoModel::_after_insert() should be compatible with Think\Model::_after_insert($data, $options) D:\xampp\htdocs\health\management\Application\Admin\Model\HospitalInfoModel.class.php 第 256 行.
+SQL: SHOW COLUMNS FROM `hospital_info` [ RunTime:0.003587s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `hospital_info` LIMIT 1   [ RunTime:0.000254s ]
+INFO: [ view_begin ] --START--
+INFO: [ view_begin ] --END-- [ RunTime:0.000021s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000105s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000198s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.007793s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007893s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000018s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000068s ]
+INFO: [ view_end ] --START--
+INFO: [ view_end ] --END-- [ RunTime:0.000021s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000051s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000101s ]
+
+[ 2017-05-04T22:51:05+08:00 ] 192.168.43.193 /health/management/Application/index.php/Admin/feedback/listAnalyze
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000427s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000044s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000056s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000125s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000037s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.002422s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `user_info` LIMIT 1   [ RunTime:0.000306s ]
+NOTIC: [2048] Declaration of Admin\Model\DoctorInfoModel::_after_insert() should be compatible with Think\Model::_after_insert($data, $options) D:\xampp\htdocs\health\management\Application\Admin\Model\DoctorInfoModel.class.php 第 126 行.
+SQL: SHOW COLUMNS FROM `doctor_info` [ RunTime:0.002297s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `doctor_info` LIMIT 1   [ RunTime:0.000372s ]
+NOTIC: [2048] Declaration of Admin\Model\HospitalInfoModel::_after_insert() should be compatible with Think\Model::_after_insert($data, $options) D:\xampp\htdocs\health\management\Application\Admin\Model\HospitalInfoModel.class.php 第 256 行.
+SQL: SHOW COLUMNS FROM `hospital_info` [ RunTime:0.002618s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `hospital_info` LIMIT 1   [ RunTime:0.000305s ]
+INFO: [ view_begin ] --START--
+INFO: [ view_begin ] --END-- [ RunTime:0.000029s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000090s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000179s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.008346s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008459s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000018s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000064s ]
+INFO: [ view_end ] --START--
+INFO: [ view_end ] --END-- [ RunTime:0.000020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000048s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000099s ]
+
+[ 2017-05-04T22:52:27+08:00 ] 192.168.43.193 /health/management/Application/index.php/Admin/feedback/listAnalyze
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000524s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000049s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000056s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000122s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000034s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.002109s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `user_info` LIMIT 1   [ RunTime:0.000254s ]
+NOTIC: [2048] Declaration of Admin\Model\DoctorInfoModel::_after_insert() should be compatible with Think\Model::_after_insert($data, $options) D:\xampp\htdocs\health\management\Application\Admin\Model\DoctorInfoModel.class.php 第 126 行.
+SQL: SHOW COLUMNS FROM `doctor_info` [ RunTime:0.002427s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `doctor_info` LIMIT 1   [ RunTime:0.000286s ]
+NOTIC: [2048] Declaration of Admin\Model\HospitalInfoModel::_after_insert() should be compatible with Think\Model::_after_insert($data, $options) D:\xampp\htdocs\health\management\Application\Admin\Model\HospitalInfoModel.class.php 第 256 行.
+SQL: SHOW COLUMNS FROM `hospital_info` [ RunTime:0.001468s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `hospital_info` LIMIT 1   [ RunTime:0.000220s ]
+INFO: [ view_begin ] --START--
+INFO: [ view_begin ] --END-- [ RunTime:0.000018s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000085s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000167s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.008197s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008297s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000019s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000073s ]
+INFO: [ view_end ] --START--
+INFO: [ view_end ] --END-- [ RunTime:0.000023s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000057s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000158s ]
+
+[ 2017-05-04T22:52:45+08:00 ] 192.168.43.193 /health/management/Application/index.php/Admin/feedback/listAnalyze
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000417s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000040s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000055s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000128s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000045s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.002961s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `user_info` LIMIT 1   [ RunTime:0.000362s ]
+NOTIC: [2048] Declaration of Admin\Model\DoctorInfoModel::_after_insert() should be compatible with Think\Model::_after_insert($data, $options) D:\xampp\htdocs\health\management\Application\Admin\Model\DoctorInfoModel.class.php 第 126 行.
+SQL: SHOW COLUMNS FROM `doctor_info` [ RunTime:0.002444s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `doctor_info` LIMIT 1   [ RunTime:0.000340s ]
+NOTIC: [2048] Declaration of Admin\Model\HospitalInfoModel::_after_insert() should be compatible with Think\Model::_after_insert($data, $options) D:\xampp\htdocs\health\management\Application\Admin\Model\HospitalInfoModel.class.php 第 256 行.
+SQL: SHOW COLUMNS FROM `hospital_info` [ RunTime:0.002330s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `hospital_info` LIMIT 1   [ RunTime:0.000326s ]
+INFO: [ view_begin ] --START--
+INFO: [ view_begin ] --END-- [ RunTime:0.000031s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000104s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000202s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.008498s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008601s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000019s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000082s ]
+INFO: [ view_end ] --START--
+INFO: [ view_end ] --END-- [ RunTime:0.000022s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000112s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000175s ]
+
+[ 2017-05-04T22:53:13+08:00 ] 192.168.43.193 /health/management/Application/index.php/Admin/feedback/listAnalyze
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000450s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000048s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000056s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000142s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000047s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.003858s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `user_info` LIMIT 1   [ RunTime:0.000611s ]
+NOTIC: [2048] Declaration of Admin\Model\DoctorInfoModel::_after_insert() should be compatible with Think\Model::_after_insert($data, $options) D:\xampp\htdocs\health\management\Application\Admin\Model\DoctorInfoModel.class.php 第 126 行.
+SQL: SHOW COLUMNS FROM `doctor_info` [ RunTime:0.002864s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `doctor_info` LIMIT 1   [ RunTime:0.000390s ]
+NOTIC: [2048] Declaration of Admin\Model\HospitalInfoModel::_after_insert() should be compatible with Think\Model::_after_insert($data, $options) D:\xampp\htdocs\health\management\Application\Admin\Model\HospitalInfoModel.class.php 第 256 行.
+SQL: SHOW COLUMNS FROM `hospital_info` [ RunTime:0.002365s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `hospital_info` LIMIT 1   [ RunTime:0.000344s ]
+INFO: [ view_begin ] --START--
+INFO: [ view_begin ] --END-- [ RunTime:0.000037s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000094s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000183s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.009027s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009161s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000028s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000096s ]
+INFO: [ view_end ] --START--
+INFO: [ view_end ] --END-- [ RunTime:0.000026s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000074s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000136s ]
+
+[ 2017-05-04T23:24:13+08:00 ] 192.168.43.193 /health/management/Application/index.php/Admin/User/listUser
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000483s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000032s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000063s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000150s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000158s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.004291s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `user_info` LIMIT 1   [ RunTime:0.000391s ]
+SQL: SELECT * FROM `user_info` LIMIT 0,5   [ RunTime:0.000863s ]
+INFO: [ view_begin ] --START--
+INFO: [ view_begin ] --END-- [ RunTime:0.000036s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000153s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000275s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.202843s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.202952s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000020s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000079s ]
+INFO: [ view_end ] --START--
+INFO: [ view_end ] --END-- [ RunTime:0.000072s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000066s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000284s ]
+
+[ 2017-05-04T23:24:16+08:00 ] 192.168.43.193 /health/management/Application/index.php/Admin/User/listUser/p/2.html
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000589s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000037s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000062s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000155s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000043s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.002471s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `user_info` LIMIT 1   [ RunTime:0.000676s ]
+SQL: SELECT * FROM `user_info` LIMIT 5,5   [ RunTime:0.000605s ]
+INFO: [ view_begin ] --START--
+INFO: [ view_begin ] --END-- [ RunTime:0.000037s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000161s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000269s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.014020s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014129s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000023s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000092s ]
+INFO: [ view_end ] --START--
+INFO: [ view_end ] --END-- [ RunTime:0.000043s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000067s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000135s ]
+
+[ 2017-05-04T23:24:17+08:00 ] 192.168.43.193 /health/management/Application/index.php/Admin/User/listUser/p/3.html
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000410s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000025s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000038s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000082s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000039s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\health\management\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.002255s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `user_info` LIMIT 1   [ RunTime:0.000346s ]
+SQL: SELECT * FROM `user_info` LIMIT 10,5   [ RunTime:0.000605s ]
+INFO: [ view_begin ] --START--
+INFO: [ view_begin ] --END-- [ RunTime:0.000035s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000167s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000292s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.012471s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012587s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000020s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000070s ]
+INFO: [ view_end ] --START--
+INFO: [ view_end ] --END-- [ RunTime:0.000040s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000060s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000111s ]
+
+>>>>>>> 741c883325173382dee9043654d45564db374e4b
+[ 2017-05-04T23:49:56+08:00 ] 172.17.32.112 /health/management/Application/index.php/Connector/User/login
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000327s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000030s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000045s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000104s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000052s ]
+SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.008537s ]
+SQL: SELECT * FROM `user_info` WHERE ( `user_phone` = '15768653949' ) AND ( `user_token` = '017f849c943f7843b7b93e333859524e' ) LIMIT 1   [ RunTime:0.001517s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000073s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000179s ]
+
+[ 2017-05-04T23:49:57+08:00 ] 172.17.32.112 /health/management/Application/index.php/Connector/User/getKnowList
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000581s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000062s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000087s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000197s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000103s ]
+SQL: SHOW COLUMNS FROM `health_know` [ RunTime:0.005262s ]
+SQL: SELECT * FROM `health_know` ORDER BY know_see desc LIMIT 5   [ RunTime:0.001379s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000073s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000203s ]
+
+[ 2017-05-04T23:49:58+08:00 ] 172.17.32.112 /health/management/Application/index.php/Connector/Hos/getHotHos
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000596s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000061s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000087s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000197s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000079s ]
+SQL: SHOW COLUMNS FROM `hospital_info` [ RunTime:0.004244s ]
+SQL: SELECT * FROM `hospital_info` ORDER BY hos_attention desc LIMIT 4   [ RunTime:0.000755s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000047s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000120s ]
+
+[ 2017-05-04T23:49:59+08:00 ] 172.17.32.112 /health/management/Application/index.php/Connector/Doc/getHotDoc
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000589s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000062s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000087s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000198s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000055s ]
+NOTIC: [2048] Declaration of Admin\Model\DoctorInfoModel::_after_insert() should be compatible with that of Think\Model::_after_insert() D:\WWW\health\management\Application\Admin\Model\DoctorInfoModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `doctor_info` [ RunTime:0.005911s ]
+SQL: SELECT a.*,b.hos_name FROM doctor_info a LEFT JOIN hospital_info b on a.hos_id=b.hos_id ORDER BY doc_attention desc LIMIT 8   [ RunTime:0.001639s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000073s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000192s ]
+
+[ 2017-05-04T23:50:25+08:00 ] 172.17.32.112 /health/management/Application/index.php/Connector/User/getKnowList
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000493s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000059s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000084s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000188s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000082s ]
+SQL: SHOW COLUMNS FROM `health_know` [ RunTime:0.005245s ]
+SQL: SELECT * FROM `health_know` ORDER BY know_see desc LIMIT 5   [ RunTime:0.001073s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000075s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000204s ]
+
+[ 2017-05-04T23:50:26+08:00 ] 172.17.32.112 /health/management/Application/index.php/Connector/Hos/getHotHos
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000501s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000061s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000087s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000199s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000077s ]
+SQL: SHOW COLUMNS FROM `hospital_info` [ RunTime:0.005537s ]
+SQL: SELECT * FROM `hospital_info` ORDER BY hos_attention desc LIMIT 4   [ RunTime:0.000843s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000071s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000181s ]
+
+[ 2017-05-04T23:50:27+08:00 ] 172.17.32.112 /health/management/Application/index.php/Connector/Doc/getHotDoc
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000495s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000060s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000141s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000257s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000081s ]
+NOTIC: [2048] Declaration of Admin\Model\DoctorInfoModel::_after_insert() should be compatible with that of Think\Model::_after_insert() D:\WWW\health\management\Application\Admin\Model\DoctorInfoModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `doctor_info` [ RunTime:0.005473s ]
+SQL: SELECT a.*,b.hos_name FROM doctor_info a LEFT JOIN hospital_info b on a.hos_id=b.hos_id ORDER BY doc_attention desc LIMIT 8   [ RunTime:0.001087s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000076s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000211s ]
+
+[ 2017-05-04T23:50:45+08:00 ] 172.17.32.112 /health/management/application/index.php/Connector/Depa/getdepname
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000791s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000061s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000082s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000191s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000031s ]
+SQL: SHOW COLUMNS FROM `department_info` [ RunTime:0.005019s ]
+SQL: SELECT * FROM `department_info` WHERE ( `dep_id` = '2' ) LIMIT 1   [ RunTime:0.000698s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000071s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000173s ]
+
+[ 2017-05-04T23:50:46+08:00 ] 172.17.32.112 /health/management/application/index.php/Connector/Depa/getalldoc
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000500s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000031s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000042s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000100s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000079s ]
+SQL: SHOW COLUMNS FROM `department_info` [ RunTime:0.005317s ]
+SQL: SELECT * FROM `department_info` LIMIT 1   [ RunTime:0.000795s ]
+SQL: SHOW COLUMNS FROM `doctor_info` [ RunTime:0.006665s ]
+SQL: SELECT a.*,b.hos_name,c.dep_name FROM doctor_info a LEFT JOIN hospital_info b on a.hos_id=b.hos_id LEFT JOIN department_info c on a.depa_id=c.dep_id WHERE ( c.parent_id = '2' )  [ RunTime:0.001232s ]
+SQL: SELECT a.*,b.hos_name,c.dep_name FROM doctor_info a LEFT JOIN hospital_info b on a.hos_id=b.hos_id LEFT JOIN department_info c on a.depa_id=c.dep_id WHERE ( a.depa_id = '2' )  [ RunTime:0.000733s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000074s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000259s ]
+
+[ 2017-05-04T23:51:03+08:00 ] 172.17.32.112 /health/management/Application/index.php/Connector/Doc/getDocDetail?doc_id=43
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000601s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000061s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000087s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000196s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000078s ]
+NOTIC: [2048] Declaration of Admin\Model\DoctorInfoModel::_after_insert() should be compatible with that of Think\Model::_after_insert() D:\WWW\health\management\Application\Admin\Model\DoctorInfoModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `doctor_info` [ RunTime:0.005740s ]
+SQL: SELECT a.*,b.hos_name,c.dep_name FROM doctor_info a LEFT JOIN hospital_info b on a.hos_id=b.hos_id LEFT JOIN department_info c on a.depa_id=c.dep_id WHERE ( `doc_id` = '43' ) LIMIT 1   [ RunTime:0.001008s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000070s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000175s ]
+
+[ 2017-05-04T23:51:04+08:00 ] 172.17.32.112 /health/management/Application/index.php/Connector/User/get_pingjia
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000495s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000060s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000080s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000189s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000085s ]
+SQL: SHOW COLUMNS FROM `pingjia` [ RunTime:0.005419s ]
+SQL: SELECT a.*,b.user_name FROM pingjia a LEFT JOIN user_info b on b.user_phone=a.user_phone WHERE ( `doc_phone` = '12768653949' )  [ RunTime:0.000972s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000072s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000180s ]
+
+[ 2017-05-04T23:51:17+08:00 ] 172.17.32.112 /health/management/Application/index.php/Connector/Doc/getDocDetail?doc_id=43
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000604s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000088s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000087s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000196s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000061s ]
+NOTIC: [2048] Declaration of Admin\Model\DoctorInfoModel::_after_insert() should be compatible with that of Think\Model::_after_insert() D:\WWW\health\management\Application\Admin\Model\DoctorInfoModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `doctor_info` [ RunTime:0.005916s ]
+SQL: SELECT a.*,b.hos_name,c.dep_name FROM doctor_info a LEFT JOIN hospital_info b on a.hos_id=b.hos_id LEFT JOIN department_info c on a.depa_id=c.dep_id WHERE ( `doc_id` = '43' ) LIMIT 1   [ RunTime:0.000878s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000069s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000176s ]
+
+[ 2017-05-04T23:51:31+08:00 ] 172.17.32.112 /health/management/Application/index.php/Connector/Doc/getDocDetail?doc_id=43
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000526s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000065s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000087s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000205s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000062s ]
+NOTIC: [2048] Declaration of Admin\Model\DoctorInfoModel::_after_insert() should be compatible with that of Think\Model::_after_insert() D:\WWW\health\management\Application\Admin\Model\DoctorInfoModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `doctor_info` [ RunTime:0.005949s ]
+SQL: SELECT a.*,b.hos_name,c.dep_name FROM doctor_info a LEFT JOIN hospital_info b on a.hos_id=b.hos_id LEFT JOIN department_info c on a.depa_id=c.dep_id WHERE ( `doc_id` = '43' ) LIMIT 1   [ RunTime:0.000837s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000071s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000178s ]
+
+[ 2017-05-04T23:51:43+08:00 ] 172.17.32.112 /health/management/Application/index.php/Connector/Doc/getDocDetail?doc_id=43
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000489s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000060s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000085s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000196s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000039s ]
+NOTIC: [2048] Declaration of Admin\Model\DoctorInfoModel::_after_insert() should be compatible with that of Think\Model::_after_insert() D:\WWW\health\management\Application\Admin\Model\DoctorInfoModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `doctor_info` [ RunTime:0.006089s ]
+SQL: SELECT a.*,b.hos_name,c.dep_name FROM doctor_info a LEFT JOIN hospital_info b on a.hos_id=b.hos_id LEFT JOIN department_info c on a.depa_id=c.dep_id WHERE ( `doc_id` = '43' ) LIMIT 1   [ RunTime:0.000898s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000070s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000176s ]
+
+[ 2017-05-04T23:52:43+08:00 ] 172.17.32.112 /health/management/Application/index.php/Connector/Doc/getDocDetail?doc_id=43
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000301s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000031s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000044s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000099s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000032s ]
+NOTIC: [2048] Declaration of Admin\Model\DoctorInfoModel::_after_insert() should be compatible with that of Think\Model::_after_insert() D:\WWW\health\management\Application\Admin\Model\DoctorInfoModel.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `doctor_info` [ RunTime:0.005699s ]
+SQL: SELECT a.*,b.hos_name,c.dep_name FROM doctor_info a LEFT JOIN hospital_info b on a.hos_id=b.hos_id LEFT JOIN department_info c on a.depa_id=c.dep_id WHERE ( `doc_id` = '43' ) LIMIT 1   [ RunTime:0.000897s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000071s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000181s ]
+
+[ 2017-05-04T23:52:59+08:00 ] 172.17.32.112 /health/management/Application/index.php/Connector/User/login
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000497s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000059s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000080s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000189s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000081s ]
+SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.005547s ]
+SQL: SELECT * FROM `user_info` WHERE ( `user_phone` = '15768653949' ) AND ( `user_password` = 'e10adc3949ba59abbe56e057f20f883e' ) LIMIT 1   [ RunTime:0.000988s ]
+SQL: UPDATE `user_info` SET `user_cid`='f18d226202d1199f5ea6b79a8d5a2992',`user_token`='f4af1573b3c40a190ef96c2da852ea6d',`token_time`='2017-05-04 23:52:59',`login_time`='2017-05-04 23:52:59' WHERE ( `user_phone` = '15768653949' ) AND ( `user_password` = 'e10adc3949ba59abbe56e057f20f883e' ) [ RunTime:0.035828s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000075s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000182s ]
+
+[ 2017-05-04T23:53:01+08:00 ] 172.17.32.112 /health/management/Application/index.php/Connector/User/getuserInfo
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000490s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000031s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000044s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000101s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000061s ]
+SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.005679s ]
+SQL: SELECT * FROM `user_info` WHERE ( `user_phone` = '15768653949' ) LIMIT 1   [ RunTime:0.000812s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000071s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000202s ]
+
+[ 2017-05-04T23:53:39+08:00 ] 172.17.32.112 /health/management/Application/index.php/Connector/Zixun/zixun
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000264s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000030s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000043s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000104s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000039s ]
+SQL: SHOW COLUMNS FROM `zixun` [ RunTime:0.005136s ]
+SQL: INSERT INTO `zixun` (`doc_phone`,`user_phone`,`zixun_illness`,`see_doc`,`zixun_text`,`read`,`time`) VALUES ('12768653949','15768653949','','�\�','','�\�','2017-05-04 23:53:38') [ RunTime:0.037052s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000076s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000188s ]
+
+[ 2017-05-04T23:55:25+08:00 ] 172.17.32.112 /health/management/Application/index.php/Connector/Zixun/mydoclist
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000680s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000061s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000083s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000197s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000077s ]
+SQL: SHOW COLUMNS FROM `my_doc` [ RunTime:0.002960s ]
+NOTIC: [8] Use of undefined constant eq - assumed 'eq' D:\WWW\health\management\Application\Connector\Controller\ZixunController.class.php 第 117 行.
+SQL: SELECT a.*,b.*,c.*,d.* FROM my_doc a LEFT JOIN doctor_info b on a.doc_phone=b.doc_phone LEFT JOIN hospital_info c on b.hos_id=c.hos_id LEFT JOIN department_info d on b.depa_id=d.dep_id WHERE ( a.user_phone = '15768653949' )  [ RunTime:0.000616s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000037s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000092s ]
+
+[ 2017-05-04T23:57:19+08:00 ] 172.17.32.112 /health/management/Application/index.php/Connector/User/getUserData?user_phone=15768653949
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000514s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000061s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000087s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000198s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000082s ]
+SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.005569s ]
+SQL: SELECT * FROM `user_info` WHERE ( `user_phone` = '15768653949' ) LIMIT 1   [ RunTime:0.000893s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000073s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000375s ]
+
+[ 2017-05-04T23:57:23+08:00 ] 172.17.32.112 /health/management/Application/index.php/Connector/User/getUserData?user_phone=15768653949
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000529s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000060s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000087s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000195s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000084s ]
+SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.005518s ]
+SQL: SELECT * FROM `user_info` WHERE ( `user_phone` = '15768653949' ) LIMIT 1   [ RunTime:0.000783s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000072s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000178s ]
+
+[ 2017-05-04T23:57:31+08:00 ] 172.17.32.112 /health/management/Application/index.php/Connector/Health/getHisRelaName?user_phone=15768653949
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000581s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000062s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000086s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000195s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000054s ]
+SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.008966s ]
+SQL: SELECT `user_id` FROM `user_info` WHERE ( `user_phone` = '15768653949' ) LIMIT 1   [ RunTime:0.000516s ]
+SQL: SHOW COLUMNS FROM `relative_info` [ RunTime:0.005400s ]
+SQL: SELECT `relative_id`,`relative_name` FROM `relative_info` WHERE ( `user_id` = '43' )  [ RunTime:0.000762s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000071s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000172s ]
+
+[ 2017-05-04T23:57:33+08:00 ] 172.17.32.112 /health/management/Application/index.php/Connector/Health/get_online_vis
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000336s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000031s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000043s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000098s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000085s ]
+SQL: SHOW COLUMNS FROM `zixun` [ RunTime:0.005346s ]
+SQL: SELECT a.*,b.hos_name,c.dep_name,d.doc_name FROM zixun a LEFT JOIN doctor_info d on d.doc_phone=a.doc_phone LEFT JOIN hospital_info b on b.hos_id=d.hos_id LEFT JOIN department_info c on c.dep_id=d.depa_id WHERE ( a.user_phone = '15768653949' ) ORDER BY id desc  [ RunTime:0.005993s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000096s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000212s ]
+
+[ 2017-05-04T23:57:34+08:00 ] 172.17.32.112 /health/management/Application/index.php/Connector/Health/getHisVis?relative_id=0&user_phone=15768653949
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000384s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000032s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000046s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000108s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000090s ]
+SQL: SHOW COLUMNS FROM `user_info` [ RunTime:0.005395s ]
+SQL: SELECT `user_id` FROM `user_info` WHERE ( `user_phone` = '15768653949' ) LIMIT 1   [ RunTime:0.000606s ]
+SQL: SHOW COLUMNS FROM `see_doc_case` [ RunTime:0.004962s ]
+SQL: SELECT a.* FROM see_doc_case a WHERE ( a.relative_id = '0' ) AND ( a.user_id = '43' )  [ RunTime:0.000704s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\WWW\health\management\Application\Connector\Controller\HealthController.class.php 第 30 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000071s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000174s ]
+
+[ 2017-05-04T23:57:35+08:00 ] 172.17.32.112 /health/management/Application/index.php/Connector/Chufang/get_user_chufang
+INFO: [ app_init ] --START--
+INFO: [ app_init ] --END-- [ RunTime:0.000307s ]
+INFO: [ path_info ] --START--
+INFO: [ path_info ] --END-- [ RunTime:0.000030s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000042s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000097s ]
+INFO: [ action_begin ] --START--
+INFO: [ action_begin ] --END-- [ RunTime:0.000063s ]
+SQL: SHOW COLUMNS FROM `chufang` [ RunTime:0.005725s ]
+NOTIC: [8] Use of undefined constant eq - assumed 'eq' D:\WWW\health\management\Application\Connector\Controller\ChufangController.class.php 第 95 行.
+SQL: SELECT * FROM `chufang` WHERE ( `user_phone` = '15768653949' ) ORDER BY cf_id desc  [ RunTime:0.000815s ]
+SQL: SHOW COLUMNS FROM `chufang_img` [ RunTime:0.004840s ]
+NOTIC: [8] Use of undefined constant eq - assumed 'eq' D:\WWW\health\management\Application\Connector\Controller\ChufangController.class.php 第 104 行.
+SQL: SELECT * FROM `chufang_img` WHERE ( `cf_id` = '10' )  [ RunTime:0.000714s ]
+NOTIC: [8] Use of undefined constant eq - assumed 'eq' D:\WWW\health\management\Application\Connector\Controller\ChufangController.class.php 第 104 行.
+SQL: SELECT * FROM `chufang_img` WHERE ( `cf_id` = '9' )  [ RunTime:0.000431s ]
+NOTIC: [8] Use of undefined constant eq - assumed 'eq' D:\WWW\health\management\Application\Connector\Controller\ChufangController.class.php 第 104 行.
+SQL: SELECT * FROM `chufang_img` WHERE ( `cf_id` = '8' )  [ RunTime:0.000420s ]
+NOTIC: [8] Use of undefined constant eq - assumed 'eq' D:\WWW\health\management\Application\Connector\Controller\ChufangController.class.php 第 104 行.
+SQL: SELECT * FROM `chufang_img` WHERE ( `cf_id` = '7' )  [ RunTime:0.000729s ]
+NOTIC: [8] Use of undefined constant eq - assumed 'eq' D:\WWW\health\management\Application\Connector\Controller\ChufangController.class.php 第 104 行.
+SQL: SELECT * FROM `chufang_img` WHERE ( `cf_id` = '6' )  [ RunTime:0.000535s ]
+NOTIC: [8] Use of undefined constant eq - assumed 'eq' D:\WWW\health\management\Application\Connector\Controller\ChufangController.class.php 第 104 行.
+SQL: SELECT * FROM `chufang_img` WHERE ( `cf_id` = '5' )  [ RunTime:0.000477s ]
+NOTIC: [8] Use of undefined constant eq - assumed 'eq' D:\WWW\health\management\Application\Connector\Controller\ChufangController.class.php 第 104 行.
+SQL: SELECT * FROM `chufang_img` WHERE ( `cf_id` = '4' )  [ RunTime:0.000503s ]
+NOTIC: [8] Use of undefined constant eq - assumed 'eq' D:\WWW\health\management\Application\Connector\Controller\ChufangController.class.php 第 104 行.
+SQL: SELECT * FROM `chufang_img` WHERE ( `cf_id` = '3' )  [ RunTime:0.000395s ]
+NOTIC: [8] Use of undefined constant eq - assumed 'eq' D:\WWW\health\management\Application\Connector\Controller\ChufangController.class.php 第 104 行.
+SQL: SELECT * FROM `chufang_img` WHERE ( `cf_id` = '2' )  [ RunTime:0.000392s ]
+NOTIC: [8] Use of undefined constant eq - assumed 'eq' D:\WWW\health\management\Application\Connector\Controller\ChufangController.class.php 第 104 行.
+SQL: SELECT * FROM `chufang_img` WHERE ( `cf_id` = '1' )  [ RunTime:0.000432s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000072s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000177s ]
 

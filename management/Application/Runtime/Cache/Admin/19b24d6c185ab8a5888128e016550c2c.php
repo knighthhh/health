@@ -29,7 +29,7 @@
 <div class="panel admin-panel">
     <div class="panel-head"><strong class="icon-reorder"> 内容列表</strong></div>
     <div class="body-content">
-    <form method="post" class="form-x" action="/health/management/Application/index.php/Admin/Department/edit/dep_id/10" name="fileUploadForm" enctype="multipart/form-data">
+    <form method="post" class="form-x" action="/health/management/Application/index.php/Admin/Department/edit/dep_id/11" name="fileUploadForm" enctype="multipart/form-data">
     <input type="hidden" name="dep_id" value="<?php echo I('get.dep_id'); ?>">
     <div class="div_tab" style="display:block;">  
       <div class="form-group">

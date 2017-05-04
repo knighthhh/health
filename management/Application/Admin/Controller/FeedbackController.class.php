@@ -22,12 +22,14 @@ class FeedbackController extends BaseController
 		$user = $userModel->count();
 		$docModel = D('doctor_info');
 		$doc = $docModel->count();
-
+		$hosModel = D('hospital_info');
+		$hos = $hosModel->count();
 		//$info = $model->search();
 		//dump($info);die;
 		$this->assign(array(
 			'doc' => $doc,
-			'user' => $user
+			'user' => $user,
+			'hos'  => $hos
 			));
 		$this->display();
 	}
