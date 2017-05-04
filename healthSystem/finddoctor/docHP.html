@@ -48,6 +48,9 @@
 						doc_phone = data.doc_phone;
 						doc_name = data.doc_name;
 						
+						//显示咨询金钱
+						document.getElementById("zixun").innerHTML = "咨询("+data.doc_fee+"/小时)";
+						
 						//显示评价
 						get_pingjia();
             		},'json');
@@ -104,8 +107,8 @@
             		zixun.addEventListener('tap',function(){
             			if(islogin()){
             				mui.openWindow({
-								url: 'zixun.html', 
-								id: 'zixun',
+								url: 'pay.html', 
+								id: 'pay',
 								extras:{
 								    doc_phone:doc_phone
 								},
@@ -276,9 +279,9 @@
 	
 	
 		<div class="mui-card-footer" >
-			<button id="zixun" type="button" class="mui-btn public-color mui-pull-left" style="color: #FFFFFF;margin-left: 20%;">咨询</button>
+			<button id="zixun" type="button" class="mui-btn public-color mui-pull-left" style="color: #FFFFFF;margin-left: 10%;width: 120px;">咨询</button>
 			
-			<button id="attention" type="button" class="mui-btn public-color mui-pull-right" style="color: #FFFFFF;margin-right: 20% ;">关注</button>
+			<button id="attention" type="button" class="mui-btn public-color mui-pull-right" style="color: #FFFFFF;margin-right: 10% ; width: 120px;">关注</button>
 		</div>
 		
 	</body>
