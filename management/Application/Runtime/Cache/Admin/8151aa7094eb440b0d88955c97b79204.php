@@ -22,12 +22,13 @@
 </style>
 </head>
 <body>
-<form method="post" action="/health/management/Application/index.php/Admin/Doctor/listDoc/hos_id/57.html" id="listform">
+<form method="post" action="/health/management/Application/index.php/Admin/Doctor/listDoc/hos_id/64.html" id="listform">
   <div class="panel admin-panel">
     <div class="panel-head"><strong class="icon-reorder"> 内容列表</strong></div>
     <div class="padding border-bottom">
       <ul class="search" style="padding-left:10px;">
-        <li> <a class="button border-green icon-plus-square-o" href="/health/management/Application/index.php/Admin/Doctor/add/hos_id/<?php echo I('hos_id'); ?>"> 添加医生</a> </li>
+        <li> <a class="button border-green icon-plus-square-o" href="/health/management/Application/index.php/Admin/Doctor/add/hos_id/<?php echo I('hos_id'); ?>"> 添加医生</a> 
+        <a class="button border-green icon-plus-square-o" href="/health/management/Application/index.php/Admin/Doctor/uploadExcel/hos_id/<?php echo I('hos_id'); ?>"> 批量导入</a></li>
         <li>搜索：</li>
         <li>首页
           <select name="s_ishome" class="input" onchange="changesearch()" style="width:60px; line-height:17px; display:inline-block">

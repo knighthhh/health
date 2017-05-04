@@ -27,7 +27,6 @@
 			var depID = self.depID;
 			//从疾病详情页面跳转过来
 			if(depID){
-				console.log("asdsd");
 				mui.get('http://' + serverName + '/health/management/Application/index.php/Connector/Hos/getDepHos',{
 						depID:depID
 				},function(data){

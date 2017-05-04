@@ -197,9 +197,10 @@
 				"android": {
 					"mdpi": "", /*普通屏启动图片，分辨率：240x282*/
 					"ldpi": "", /*大屏启动图片，分辨率：320x442*/
-					"hdpi": "C:/Users/Administrator/Desktop/QQ图片20170504004913.png", /*高分屏启动图片，分辨率：480x762*/
-					"xhdpi": "C:/Users/Administrator/Desktop/QQ图片20170504004913.png", /*720P高分屏启动图片，分辨率：720x1242*/
-					"xxhdpi": "C:/Users/Administrator/Desktop/QQ图片20170504004913.png"
+					"hdpi": "C:/Users/eric/Desktop/qidong2.png", /*高分屏启动图片，分辨率：480x762*/
+					"xhdpi": "C:/Users/eric/Desktop/qidong2.png", /*720P高分屏启动图片，分辨率：720x1242*/
+					"xxhdpi": "C:/Users/eric/Desktop/qidong2.png"
+
 				}
 			}
 		}
