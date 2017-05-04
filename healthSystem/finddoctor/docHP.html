@@ -63,6 +63,7 @@
 			  				timeout:10000,
 			  				success:function(data){
 			  					var s="";
+			  					console.log(JSON.stringify(data));
 			  					if(data['result']!=0){
 			  						for(var i=0;i<data.length;++i){
 				  						s+="<li class='mui-table-view-cell'><a class='mui-navigate-right'><div class='box-c-a-r'>";

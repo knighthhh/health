@@ -233,12 +233,12 @@
 							 });
 							});  
 						},'json');
-						//获取在线医生
-						mui.post('http://'+serverName+'/health/management/application/index.php/Connector/Doc/get_online_doc',{
-							},function(data){
-								document.getElementById("online_doc").innerHTML = data.result;
-							},'json'
-						);
+//						//获取在线医生
+//						mui.post('http://'+serverName+'/health/management/application/index.php/Connector/Doc/get_online_doc',{
+//							},function(data){
+//								document.getElementById("online_doc").innerHTML = data.result;
+//							},'json'
+//						);
 					
 				});
 				
@@ -367,7 +367,7 @@ function searchwin(){
 
 					<div  id="box-b-a" class="box-b-a"  style="background: #fff;">						
 								<img class="" src="../img/finddoctor.jpg"/>
-				    			<span class="mui-slider-indicator" style="">在线医生：<span id="online_doc">500</span></span>
+				    			
 		   			 </div>
 		   			 
 				</div>

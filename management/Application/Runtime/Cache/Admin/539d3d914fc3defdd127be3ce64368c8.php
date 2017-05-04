@@ -40,7 +40,7 @@
       </ul> 
       </div>
     <div class="body-content">
-    <form method="post" class="form-x" action="/health/management/Application/index.php/Admin/Doctor/uploadExcel/hos_id/64" name="fileUploadForm" enctype="multipart/form-data">
+    <form method="post" class="form-x" action="/health/management/Application/index.php/Admin/Doctor/uploadExcel/hos_id/55" name="fileUploadForm" enctype="multipart/form-data">
     
       <div class="form-group">
         <div class="label">

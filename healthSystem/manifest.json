@@ -203,9 +203,7 @@
 				"android": {
 					"mdpi": "", /*普通屏启动图片，分辨率：240x282*/
 					"ldpi": "", /*大屏启动图片，分辨率：320x442*/
-					"hdpi": "C:/Users/eric/Desktop/qidong.png", /*高分屏启动图片，分辨率：480x762*/
-					"xhdpi": "C:/Users/knight/Desktop/qidong.png", /*720P高分屏启动图片，分辨率：720x1242*/
-					"xxhdpi": "C:/Users/knight/Desktop/qidong.png"
+					"hdpi": "C:/Users/Administrator/Desktop/QQ图片20170504004913.png","xhdpi":"C:/Users/Administrator/Desktop/QQ图片20170504004913.png","xxhdpi":"C:/Users/Administrator/Desktop/QQ图片20170504004913.png"
 				}
 			}
 		}
@@ -610,7 +608,8 @@
 					"js/common.js",
 					"js/mui.zoom.js",
 					"js/mui.previewimage.js",
-					"css/iconfont_hos.css"
+					"css/iconfont_hos.css",
+					"fonts/iconfont_hos.ttf"
 				],
 				"refer": [
 					"maps/maps_map.html",

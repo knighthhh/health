@@ -41,7 +41,7 @@
       </ul> 
       </div>
     <div class="body-content">
-    <form method="post" class="form-x" action="/health/management/Application/index.php/Admin/doctor/edit/doc_id/46/hos_id/64" name="fileUploadForm" enctype="multipart/form-data">
+    <form method="post" class="form-x" action="/health/management/Application/index.php/Admin/doctor/edit/doc_id/55/hos_id/64" name="fileUploadForm" enctype="multipart/form-data">
     <input type="hidden" name="doc_id" value="<?php echo I('get.doc_id'); ?>">
     <input type="hidden" name="hos_id" value="<?php echo I('get.hos_id'); ?>">
     <div class="div_tab" style="display:block;">  
