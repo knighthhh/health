@@ -19,8 +19,8 @@
 					        <li id="family_detail" class="mui-table-view-cell mui-media">
 						        <a class="mui-navigate-right">
 						            <div class="mui-media-body">
-						                <h4 id="relation">张三</h4>
-						                <p>所患疾病:<span id="sick"></span></p>
+						                <h4 id="relation">加载中</h4>
+						                <p>所患疾病:<span id="sick">加载中</span></p>
 						            </div>
 						        </a>
 							</li>
@@ -154,9 +154,11 @@
 					},function(data){
 						var relative = document.getElementById("relative");
 						var f = '';
-						if(data.reslut == 0){
+						if(data.result == 0){
 							plus.nativeUI.toast("还未添加家族史信息");
-							return false;
+							f += ' <li class="mui-table-view-cell mui-media"><a class="mui-navigate-right">';
+							f += '<div class="mui-media-body"><h4 id="relation">暂无</h4>';
+							f += '<p>病史:<span id="sick">暂无</span></p></div></a></li>';
 						}
 						for(var i=0;i<data.length;i++){
 							f += ' <li Fid="'+data[i].id+'" class="mui-table-view-cell mui-media"><a class="mui-navigate-right">';

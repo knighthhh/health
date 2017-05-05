@@ -2,7 +2,7 @@
 
 
 //var serverName = '192.168.43.193:88';
-var serverName = '172.17.32.112:88';
+var serverName = '114.115.143.74:80';
 //var serverName = '10.77.117.237:88';
 
  				  

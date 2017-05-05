@@ -118,7 +118,7 @@
 				"maps": {
 					"baidu": {
 						"appkey_ios": "ka2CZkCx5itOXmDnY8L6bsflccOeSU9X",
-						"appkey_android": "vbaaHpBxea5ZncZ0QhxlWVgI6r9LhyHN",
+						"appkey_android": "GUjG7LuLMf2AbBQaVEfZstGms17a7LEN",
 						"appkey": "",
 						"description": ""
 					}
@@ -197,9 +197,9 @@
 				"android": {
 					"mdpi": "", /*普通屏启动图片，分辨率：240x282*/
 					"ldpi": "", /*大屏启动图片，分辨率：320x442*/
-					"hdpi": "C:/Users/eric/Desktop/qidong2.png", /*高分屏启动图片，分辨率：480x762*/
-					"xhdpi": "C:/Users/eric/Desktop/qidong2.png", /*720P高分屏启动图片，分辨率：720x1242*/
-					"xxhdpi": "C:/Users/eric/Desktop/qidong2.png"
+					"hdpi": "C:/Users/eric/Desktop/qidong_doc.png", /*高分屏启动图片，分辨率：480x762*/
+					"xhdpi": "C:/Users/eric/Desktop/qidong_doc.png", /*720P高分屏启动图片，分辨率：720x1242*/
+					"xxhdpi": "C:/Users/eric/Desktop/qidong_doc.png"
 
 				}
 			}
